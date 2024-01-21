@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S fcitx5-chinese-addons fcitx5-im feh firefox git noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols python-pywal vim xorg-xrandr
+sudo pacman -S fcitx5-chinese-addons fcitx5-im feh firefox git neofetch noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols python-pywal vim xorg-xrandr
 
 mkdir ~/.local/src && cd ~/.local/src
 git clone https://git.suckless.org/dwm
@@ -15,8 +15,8 @@ vim ~/.xinitrc # xrandr,wal,exec
 vim ~/.bashrc # (cat ~/.cache/wal/sequences &)
 vim ~/.bash_profile # startx at login
 
-sudo pacman -S aria2 base-devel bc btop cmatrix dictd feh git links mpv neofetch nnn pianobar
-
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+sudo pacman -S aria2 base-devel bc btop cmatrix dictd links mpv nnn pianobar
