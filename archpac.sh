@@ -12,5 +12,5 @@ cd ~/.local/src/st && sudo make clean install
 
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 vim ~/.xinitrc # xrandr,wal,exec
-vim ~/.bashrc # (cat ~/.cache/wal/sequences &)
-vim ~/.bash_profile # startx at login
+vim ~/.bash_profile # add ~/.local/bin path and startx at login
+vim ~/.bashrc (cat ~/.cache/wal/sequences &)
