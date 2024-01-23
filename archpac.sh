@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S base-devel btop cmatrix fcitx5-chinese-addons fcitx5-im firefox git maim man-db mpv neofetch nnn noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv ttf-nerd-fonts-symbols python-pywal vim xdotool xwallpaper xorg-xrandr zathura zathura-pdf-mupdf
+sudo pacman -S base-devel btop cmatrix fcitx5-chinese-addons fcitx5-im firefox git maim man-db mpv neofetch nnn noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv ttf-nerd-fonts-symbols pianobar python-pywal vim xdotool xwallpaper xorg-xrandr zathura zathura-pdf-mupdf
 
 mkdir ~/.local/src && cd ~/.local/src
 git clone https://git.suckless.org/dwm
