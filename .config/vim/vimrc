@@ -7,7 +7,7 @@ autocmd VimLeave * mksession! $HOME/.config/vim/session.vim
 colorscheme desert
 filetype indent on
 filetype plugin on
-syntax enable
+syntax on
 
 let $LANG='en'
 set autoindent
@@ -38,6 +38,7 @@ set nobackup
 set noerrorbells
 set noswapfile
 set nowritebackup
+set number
 set scrolloff=6
 set shiftwidth=4
 set showmatch
