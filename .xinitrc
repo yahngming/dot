@@ -1,5 +1,5 @@
-xrandr --output HDMI-1 --auto &
-wal -i ~/Pictures/wallpapers &
+xrandr --dpi 96
+wal -i ~/.config/wallpapers &
 xcompmgr &
 dwmblocks &
 exec dwm
