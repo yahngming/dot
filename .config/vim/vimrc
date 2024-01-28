@@ -19,7 +19,7 @@ set cursorline
 set encoding=utf8
 set expandtab
 set ffs=unix,dos,mac
-set foldcolumn=1
+set foldcolumn=0
 set hidden
 set hlsearch
 set history=500
