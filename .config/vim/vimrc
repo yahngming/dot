@@ -1,8 +1,6 @@
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePre * :%s/\s\+$//e
-autocmd FileType markdown setlocal spell
-autocmd GUIEnter * set visualbell t_vb= | simalt ~x
+autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimLeave * mksession! $HOME/.config/vim/session.vim
 colorscheme desert
 filetype indent on
@@ -12,12 +10,16 @@ syntax on
 let $LANG='en'
 set autoindent
 set autoread
+set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamed
+set cmdheight=1
 set complete+=kspell
 set cursorline
 set encoding=utf8
 set expandtab
+set ffs=unix,dos,mac
+set foldcolumn=1
 set guifont=Consolas:h10.5
 set guifontwide=NSimsun
 set guioptions+=a
@@ -28,22 +30,29 @@ set guioptions-=m
 set guioptions-=r
 set hidden
 set hlsearch
+set history=500
 set ignorecase
 set incsearch
 set langmenu=en
 set laststatus=2
 set lazyredraw
 set linebreak
+set magic
+set mat=2
 set nobackup
 set noerrorbells
 set noswapfile
 set nowritebackup
 set number
+set regexpengine=0
+set ruler
 set scrolloff=6
 set shiftwidth=4
 set showmatch
 set showtabline=2
 set smartcase
+set smartindent
+set smarttab
 set statusline=
 set statusline+=%1*\(%n)%m\ %<%F\ %*
 set statusline+=%2*\ %y\ %*
@@ -51,11 +60,15 @@ set statusline+=%3*%=
 set statusline+=%4*\ %{&ff}\ %*
 set statusline+=%5*\ %{''.(&fenc!=''?&fenc:&enc).''}\ %*
 set statusline+=%6*\ %c,%l/%L\ %*
+set t_Co=256
 set t_vb=
 set tabstop=4
+set tm=500
+set tw=500
 set visualbell
 set whichwrap+=<,>,[,]
 set wildmenu
+set wrap
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
@@ -72,6 +85,8 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 map <Space> <Leader>
+nnoremap <M-j> mz:m+<cr>`z
+nnoremap <M-k> mz:m-2<cr>`z
 nnoremap <F11> :source $HOME/.config/vim/session.vim<CR>
 nnoremap <F12> :args $MYVIMRC $HOME/.config/vim/vimrc \| tab all<CR>
 nnoremap <F7> :setlocal spell!<CR>
