@@ -15,7 +15,6 @@ set backspace=indent,eol,start
 set clipboard=unnamed
 set cmdheight=1
 set complete+=kspell
-set cursorline
 set encoding=utf8
 set expandtab
 set ffs=unix,dos,mac
@@ -32,6 +31,7 @@ set linebreak
 set magic
 set mat=2
 set nobackup
+set nocompatible
 set noerrorbells
 set noswapfile
 set nowritebackup
@@ -46,12 +46,11 @@ set smartcase
 set smartindent
 set smarttab
 set statusline=
-set statusline+=%1*\(%n)%m\ %<%F\ %*
-set statusline+=%2*\ %y\ %*
-set statusline+=%3*%=
-set statusline+=%4*\ %{&ff}\ %*
-set statusline+=%5*\ %{''.(&fenc!=''?&fenc:&enc).''}\ %*
-set statusline+=%6*\ %c,%l/%L\ %*
+set statusline+=%c,%l/%L,%p
+set statusline+=%=
+set statusline+=%m%r%y
+set statusline+=\[%{&fileformat}\]
+set statusline+=\[%{&fileencoding?&fileencoding:&encoding}\]
 set t_Co=256
 set t_vb=
 set tabstop=4
@@ -62,6 +61,7 @@ set whichwrap+=<,>,[,]
 set wildmenu
 set wrap
 
+highlight statusline ctermbg=2 ctermfg=0
 highlight User1 guifg=#ffdad8  guibg=#880c0e
 highlight User2 guifg=#000000  guibg=#f4905c
 highlight User3 guifg=#292b00  guibg=#f4f597
