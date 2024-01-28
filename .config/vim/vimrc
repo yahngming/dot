@@ -27,6 +27,7 @@ set langmenu=en
 set laststatus=2
 set lazyredraw
 set linebreak
+set listchars=space:·
 set magic
 set mat=2
 set nobackup
@@ -78,6 +79,7 @@ map <C-k> <C-W>k
 map <C-l> <C-W>l
 map <Space> <Leader>
 nnoremap <F7> :setlocal spell!<CR>
+nnoremap <F8> :set list!<CR>
 nnoremap <F11> :source $HOME/.config/vim/session.vim<CR>
 nnoremap <F12> :args $HOME/.config/vim/vimrc \| tab all<CR>
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
