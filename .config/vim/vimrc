@@ -49,8 +49,9 @@ set statusline=
 set statusline+=%#Visual#
 set statusline+=\ %{mode()}\ 
 set statusline+=%#Nontext#
-set statusline+=\ %F%y\[%{&fileencoding}\]%r%m
+set statusline+=\ %F%y%r%m\ 
 set statusline+=%=
+set statusline+=\ %{&fileencoding}\ 
 set statusline+=%#Visual#
 set statusline+=\ %p%%\ %l/%L,%c\ 
 set t_Co=256
