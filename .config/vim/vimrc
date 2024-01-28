@@ -1,5 +1,4 @@
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-autocmd BufWritePre * :%s/\s\+$//e
 autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimLeave * mksession! $HOME/.config/vim/session.vim
 colorscheme desert
@@ -33,6 +32,7 @@ set mat=2
 set nobackup
 set nocompatible
 set noerrorbells
+set noshowmode
 set noswapfile
 set nowritebackup
 set number
@@ -46,11 +46,13 @@ set smartcase
 set smartindent
 set smarttab
 set statusline=
-set statusline+=%c,%l/%L,%p
+set statusline+=%#Visual#
+set statusline+=\ %{mode()}\ 
+set statusline+=%#Nontext#
+set statusline+=\ %F%y\[%{&fileencoding}\]%r%m
 set statusline+=%=
-set statusline+=%m%r%y
-set statusline+=\[%{&fileformat}\]
-set statusline+=\[%{&fileencoding?&fileencoding:&encoding}\]
+set statusline+=%#Visual#
+set statusline+=\ %p%%\ %l/%L,%c\ 
 set t_Co=256
 set t_vb=
 set tabstop=4
@@ -61,7 +63,6 @@ set whichwrap+=<,>,[,]
 set wildmenu
 set wrap
 
-highlight statusline ctermbg=2 ctermfg=0
 highlight User1 guifg=#ffdad8  guibg=#880c0e
 highlight User2 guifg=#000000  guibg=#f4905c
 highlight User3 guifg=#292b00  guibg=#f4f597
