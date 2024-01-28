@@ -11,7 +11,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
-set clipboard=unnamed
+set clipboard=unnamedplus
 set cmdheight=1
 set complete+=kspell
 set encoding=utf8
@@ -65,23 +65,16 @@ set whichwrap+=<,>,[,]
 set wildmenu
 set wrap
 
-highlight User1 guifg=#ffdad8  guibg=#880c0e
-highlight User2 guifg=#000000  guibg=#f4905c
-highlight User3 guifg=#292b00  guibg=#f4f597
-highlight User4 guifg=#112605  guibg=#aefe7b
-highlight User5 guifg=#051d00  guibg=#7dcc7d
-highlight User6 guifg=#ffffff  guibg=#5b7fbb
-
 map ; :
 map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 map <Space> <Leader>
-nnoremap <F7> :setlocal spell!<CR>
-nnoremap <F8> :set list!<CR>
-nnoremap <F11> :source $HOME/.config/vim/session.vim<CR>
-nnoremap <F12> :args $HOME/.config/vim/vimrc \| tab all<CR>
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
-nnoremap j gj
-nnoremap k gk
+noremap <F7> :setlocal spell!<CR>
+noremap <F8> :set list!<CR>
+noremap <F11> :source $HOME/.config/vim/session.vim<CR>
+noremap <F12> :args $HOME/.config/vim/vimrc \| tab all<CR>
+noremap <silent> <Esc><Esc> :nohlsearch<CR>
+noremap j gj
+noremap k gk
