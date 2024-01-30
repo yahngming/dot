@@ -1,4 +1,6 @@
 #!/bin/sh
 
-wal -i $(find ~/.config/wallpapers | shuf -n 1)
+paper=$(find ~/.config/wallpapers | shuf -n 1)
+xwallpaper --zoom $paper
+wal -i $paper
 xdotool key super+F5
