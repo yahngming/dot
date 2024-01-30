@@ -1,4 +1,4 @@
 #!/bin/sh
 
-wal -i ~/.config/wallpapers
+wal -i $(find ~/.config/wallpapers | shuf -n 1)
 xdotool key super+F5
