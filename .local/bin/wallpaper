@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wal -i ~/.config/wallpapers
+xdotool key super+F5
