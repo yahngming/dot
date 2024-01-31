@@ -1,1 +1,3 @@
-# linux
+# DOT
+
+Linux dotfiles repo 
