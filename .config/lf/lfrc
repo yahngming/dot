@@ -90,8 +90,8 @@ cmd trash %set -f; mv $fx ~/.trash
 # }}
 
 # use '<delete>' key for either 'trash' or 'delete' command
-# map <delete> trash
 # map <delete> delete
+map <delete> $trash $f
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
