@@ -1,8 +1,10 @@
 #!/bin/sh
 
-curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/configs -o ~/.local/bin/configs
-curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/wallpaper -o ~/.local/bin/wallpaper
-
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/bash/bash_profile -o ~/.config/bash/bash_profile
+curl https://raw.githubusercontent.com/yahngming/dot/main/.config/lf/colors -o ~/.config/lf/colors
+curl https://raw.githubusercontent.com/yahngming/dot/main/.config/lf/icons -o ~/.config/lf/icons
+curl https://raw.githubusercontent.com/yahngming/dot/main/.config/lf/lfrc -o ~/.config/lf/lfrc
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/vim/vimrc -o ~/.config/vim/vimrc
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/xorg/xinitrc -o ~/.config/xorg/xinitrc
+curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/configs -o ~/.local/bin/configs
+curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/wallpaper -o ~/.local/bin/wallpaper
