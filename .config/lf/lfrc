@@ -29,6 +29,9 @@ set icons
 # enable borders
 set drawbox
 
+# mouse support
+set mouse
+
 # define previewer
 set previewer ctpv
 set cleaner ctpvclear
@@ -40,6 +43,9 @@ map <enter> shell
 
 # show the result of execution of previous commands
 map ` !true
+
+# toggle hidden
+map . set hidden!
 
 # execute current file (must be executable)
 map x $$f
