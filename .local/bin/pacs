@@ -1,3 +1,8 @@
 #!/bin/sh
 
 sudo pacman -S bat base-devel btop chafa cmatrix fcitx5-chinese-addons fcitx5-im firefox git lf libreoffice-fresh maim man-db neofetch neomutt noto-fonts noto-fonts-cjk noto-fonts-emoji poppler trash-cli ttf-nerd-fonts-symbols python-pywal vim xdotool xwallpaper xorg-xrandr
+
+git clone https://github.com/yahngming/dwm
+git clone https://github.com/yahngming/dmenu
+git clone https://github.com/yahngming/st
+git clone https://github.com/NikitaIvanovV/ctpv
