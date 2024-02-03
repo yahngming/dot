@@ -3,4 +3,4 @@ wallpaper &
 xcompmgr &
 fcitx5 &
 dwmblocks &
-exec dwm
+exec dwm > /dev/null 2>&1
