@@ -12,7 +12,7 @@ set scrolloff 6
 &ctpvquit $id
 
 map <enter> shell
-map <delete> &trash $f
+map <delete> %trash-put $fx
 map ` !true
 map . set hidden!
 map x $$f
@@ -20,6 +20,13 @@ map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
 map a :push %mkdir<space>
+map f $vi $(fzf)
+
+# define a smart 'cd' command
+cmd z %{{
+	result="$(zoxide query --exclude $PWD $@ | sed 's/\\/\\\\/g;s/"/\\"/g')"
+	lf -remote "send $id cd \"$result\""
+}}
 
 # define a custom 'open' command
 cmd open &{{
