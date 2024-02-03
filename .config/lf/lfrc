@@ -20,27 +20,12 @@ map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
 map a push :%mkdir<space>
-map zx push :scd<space>
-map zz :fcd
+map zz push :zz<space>
 
 # define a smart 'cd' command
-cmd scd ${{
+cmd zz ${{
 	result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
 	lf -remote "send $id cd \"$result\""
-}}
-
-# define a fuzzy 'cd' command
-cmd fcd ${{
-    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location')"
-    if [ -n "$res" ]; then
-        if [ -d "$res" ]; then
-            cmd="cd"
-        else
-            cmd="select"
-        fi
-        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
-        lf -remote "send $id $cmd \"$res\""
-    fi
 }}
 
 # define a custom 'open' command
