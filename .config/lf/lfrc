@@ -19,12 +19,17 @@ map x $$f
 map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
-map a :push %mkdir<space>
-map f $vi $(fzf)
+map a push :%mkdir<space>
+map f $vim $(fzf)
+map zi push :zi<space>
 
 # define a smart 'cd' command
 cmd z %{{
 	result="$(zoxide query --exclude $PWD $@ | sed 's/\\/\\\\/g;s/"/\\"/g')"
+	lf -remote "send $id cd \"$result\""
+}}
+cmd zi ${{
+	result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
 	lf -remote "send $id cd \"$result\""
 }}
 
