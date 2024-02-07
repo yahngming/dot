@@ -32,7 +32,7 @@ ram() {
 cud() {
   pkg=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l)
   if [ -z "$pkg" ]; then
-    printf "  Fully Updated"
+    printf ""
   else
     printf "  $pkg"" updates"
   fi
@@ -48,5 +48,5 @@ net() {
 while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && pkg=$(cud)
   interval=$((interval + 1))
-  sleep 1 && xprop -root -set WM_NAME "$pkg $(cpu) $(ram) $(clk)"
+  sleep 1 && xprop -root -set WM_NAME "$pkg $(cpu) $(ram) $(net) $(brt) $(bat) $(clk)"
 done
