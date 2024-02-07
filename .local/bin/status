@@ -56,7 +56,7 @@ vol() {
   vol="${vol#Volume: }"
   vol="$(printf "%.0f" "$(cut "$vol" ".")")"
   printf " 󰕾 "
-  printf " $vol% "
+  printf " $vol "
 }
 
 pkg_updates() {
