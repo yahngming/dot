@@ -14,8 +14,8 @@ brt() {
 }
 
 clk() {
-	printf " 󱑆 "
-	printf " $(date '+%H:%M') "
+  printf " 󱑆 "
+  printf " $(date '+%H:%M') "
 }
 
 cpu() {
@@ -39,14 +39,19 @@ cud() {
 }
 
 net() {
-	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf " 󰤨 %s" " Connected" ;;
-	down) printf " 󰤭 %s" " Disconnected" ;;
-	esac
+  case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+  up) printf " 󰤨 %s" " Connected" ;;
+  down) printf " 󰤭 %s" " Disconnected" ;;
+  esac
+}
+
+vol() {
+  printf " 󰕾 "
+  printf " $(wpctl get-volume @DEFAULT_AUDIO_SINK@)% "
 }
 
 while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && pkg=$(cud)
   interval=$((interval + 1))
-  sleep 1 && xprop -root -set WM_NAME "$pkg $(cpu) $(ram) $(net) $(brt) $(bat) $(clk)"
+  sleep 1 && xprop -root -set WM_NAME "$pkg $(cpu) $(ram) $(net) $(brt) $(bat) $(vol) $(clk)"
 done
