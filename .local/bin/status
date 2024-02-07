@@ -1,9 +1,8 @@
 #!/bin/sh
 
 bat() {
-  bat="$(cat /sys/class/power_supply/BAT1/capacity)"
   printf "  "
-  printf " $bat"
+  printf " $(cat /sys/class/power_supply/BAT0/capacity)"
 }
 
 brt() {
@@ -17,9 +16,8 @@ clk() {
 }
 
 cpu() {
-  cpu=$(grep -o "^[^ ]*" /proc/loadavg)
   printf "  "
-  printf " $cpu"
+  printf " $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
 }
 
 cut() {
@@ -30,7 +28,7 @@ cut() {
 
 ram() {
   printf "  "
-  printf " $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+  printf " $(free -h | awk '(NR==2){ print $4 }' | sed s/i//g)"
 }
 
 net() {
