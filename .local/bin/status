@@ -3,9 +3,9 @@
 interval=0
 
 bat() {
-  get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
+  bat="$(cat /sys/class/power_supply/BAT1/capacity)"
   printf "  "
-  printf " $get_capacity"
+  printf " $bat"
 }
 
 brt() {
@@ -19,9 +19,15 @@ clk() {
 }
 
 cpu() {
-  cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
+  cpu=$(grep -o "^[^ ]*" /proc/loadavg)
   printf "  "
-  printf " $cpu_val"
+  printf " $cpu"
+}
+
+cut() {
+  IFS=$2
+  set -- $1
+  printf '%s' "$@"
 }
 
 ram() {
@@ -29,10 +35,10 @@ ram() {
   printf " $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
-cud() {
+pkg() {
   pkg=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l)
   if [ -z "$pkg" ]; then
-    printf ""
+    printf "  Fully Updated"
   else
     printf "  $pkg"" updates"
   fi
@@ -46,12 +52,15 @@ net() {
 }
 
 vol() {
+  vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
+  vol="$(vol#Volume: )"
+  vol="$(printf "%.0f" "$(cut "$vol" ".")")"
   printf " 󰕾 "
-  printf " $(wpctl get-volume @DEFAULT_AUDIO_SINK@)% "
+  printf " $vol "
 }
 
 while true; do
-  [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && pkg=$(cud)
+  [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && pkg=$(pkg)
   interval=$((interval + 1))
   sleep 1 && xprop -root -set WM_NAME "$pkg $(cpu) $(ram) $(net) $(brt) $(bat) $(vol) $(clk)"
 done
