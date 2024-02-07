@@ -1,36 +1,10 @@
 #!/bin/sh
 
-# ^c$var^ = fg color
-# ^b$var^ = bg color
-
-# colors
-black=#1e222a
-green=#7eca9c
-white=#abb2bf
-grey=#282c34
-blue=#7aa2f7
-red=#d47d85
-darkblue=#668ee3
-
-interval=0
-
 cpu() {
   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
 
-  printf "^c$black^ ^b$green^ CPU"
-  printf "^c$white^ ^b$grey^ $cpu_val"
-}
-
-pkg_updates() {
-  #updates=$({ timeout 20 doas xbps-install -un 2>/dev/null || true; } | wc -l) # void
-  updates=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l) # arch
-  # updates=$({ timeout 20 aptitude search '~U' 2>/dev/null || true; } | wc -l)  # apt (ubuntu, debian etc)
-
-  if [ -z "$updates" ]; then
-    printf "  ^c$green^    Fully Updated"
-  else
-    printf "  ^c$green^    $updates"" updates"
-  fi
+  printf " CPU"
+  printf " $cpu_val"
 }
 
 battery() {
@@ -44,8 +18,8 @@ brightness() {
 }
 
 mem() {
-  printf "^c$blue^^b$black^  "
-  printf "^c$blue^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+  printf "  "
+  printf " $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
 wlan() {
@@ -56,8 +30,8 @@ wlan() {
 }
 
 clock() {
-	printf "^c$black^ ^b$darkblue^ 󱑆 "
-	printf "^c$black^^b$blue^ $(date '+%H:%M')  "
+	printf " 󱑆 "
+	printf " $(date '+%H:%M')  "
 }
 
 while true; do
