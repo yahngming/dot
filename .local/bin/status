@@ -1,20 +1,25 @@
 #!/bin/sh
 
-cpu() {
-  cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
-
-  printf " CPU"
-  printf " $cpu_val"
-}
-
 battery() {
   get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
-  printf "^c$blue^   $get_capacity"
+  printf "  "
+  printf " $get_capacity"
 }
 
 brightness() {
-  printf "^c$red^   "
-  printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
+  printf "  "
+  printf " %.0f\n" $(cat /sys/class/backlight/*/brightness)
+}
+
+clock() {
+	printf " 󱑆 "
+	printf " $(date '+%H:%M') "
+}
+
+cpu() {
+  cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
+  printf "  "
+  printf " $cpu_val"
 }
 
 mem() {
@@ -24,14 +29,9 @@ mem() {
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$black^ ^b$blue^ 󰤨 ^d^%s" " ^c$blue^Connected" ;;
-	down) printf "^c$black^ ^b$blue^ 󰤭 ^d^%s" " ^c$blue^Disconnected" ;;
+	up) printf " 󰤨 %s" " Connected" ;;
+	down) printf " 󰤭 %s" " Disconnected" ;;
 	esac
-}
-
-clock() {
-	printf " 󱑆 "
-	printf " $(date '+%H:%M')  "
 }
 
 while true; do
