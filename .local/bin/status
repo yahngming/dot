@@ -1,17 +1,19 @@
 #!/bin/sh
 
-battery() {
+interval=0
+
+bat() {
   get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
   printf "  "
   printf " $get_capacity"
 }
 
-brightness() {
+brt() {
   printf "  "
   printf " %.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
-clock() {
+clk() {
 	printf " 󱑆 "
 	printf " $(date '+%H:%M') "
 }
@@ -22,12 +24,21 @@ cpu() {
   printf " $cpu_val"
 }
 
-mem() {
+ram() {
   printf "  "
   printf " $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
-wlan() {
+pkg() {
+  updates=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l)
+  if [ -z "$updates" ]; then
+    printf "  Fully Updated"
+  else
+    printf "  $updates"" updates"
+  fi
+}
+
+net() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
 	up) printf " 󰤨 %s" " Connected" ;;
 	down) printf " 󰤭 %s" " Disconnected" ;;
@@ -35,5 +46,7 @@ wlan() {
 }
 
 while true; do
-  sleep 1 && xprop -root -set WM_NAME "$(cpu) $(mem) $(clock)"
+  [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
+  interval=$((interval + 1))
+  sleep 1 && xprop -root -set WM_NAME "$updates $(cpu) $(mem) $(clock)"
 done
