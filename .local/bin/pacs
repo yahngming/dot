@@ -6,4 +6,6 @@ sudo pacman -S android-tools bat btop chafa cmatrix figlet fzf lf libreoffice-fr
 git clone https://github.com/yahngming/dwm
 git clone https://github.com/yahngming/dmenu
 git clone https://github.com/yahngming/st
+git clone https://github.com/yahngming/slock
+git clone https://git.suckless.org/xssstate
 git clone https://github.com/NikitaIvanovV/ctpv
