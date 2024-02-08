@@ -30,6 +30,7 @@ set linebreak
 set listchars=space:·
 set magic
 set mat=2
+set mouse=a
 set nobackup
 set nocompatible
 set noerrorbells
