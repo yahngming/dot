@@ -3,5 +3,6 @@ wallpaper &
 xcompmgr &
 fcitx5 &
 status &
+xset s 600 &
 xsidle slock &
 startwm
