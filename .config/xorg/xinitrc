@@ -1,8 +1,8 @@
 xrandr --output Virtual-1 --mode 1920x1080 &
-wallpaper &
+rice &
 xcompmgr &
 fcitx5 &
-status &
+tray &
 xset s 600 &
 xsidle slock &
 startwm
