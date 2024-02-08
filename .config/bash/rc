@@ -1,4 +1,4 @@
-PS1="\u@\h \w> "
+PS1='\u@\h \w> '
 
 eval "$(zoxide init bash)"
 eval "$(thefuck --alias)"
