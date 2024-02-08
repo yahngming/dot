@@ -1,6 +1,7 @@
 #!/bin/sh
 
-curl https://raw.githubusercontent.com/yahngming/dot/main/.config/bash/bash_profile -o ~/.config/bash/bash_profile
+curl https://raw.githubusercontent.com/yahngming/dot/main/.config/bash/profile -o ~/.config/bash/profile
+curl https://raw.githubusercontent.com/yahngming/dot/main/.config/bash/bashrc -o ~/.config/bash/bashrc
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/fontconfig/fonts.conf -o ~/.config/fontconfig/fonts.conf
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/lf/lfrc -o ~/.config/lf/lfrc
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/vim/vimrc -o ~/.config/vim/vimrc
