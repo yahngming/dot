@@ -1,3 +1,3 @@
-# DOT
+# dot
 
 Linux dotfiles
