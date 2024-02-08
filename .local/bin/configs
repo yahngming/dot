@@ -6,4 +6,4 @@ curl https://raw.githubusercontent.com/yahngming/dot/main/.config/lf/lfrc -o ~/.
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/vim/vimrc -o ~/.config/vim/vimrc
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/xorg/xinitrc -o ~/.config/xorg/xinitrc
 curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/configs -o ~/.local/bin/configs
-curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/status -o ~/.local/bin/status
+curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/xtray -o ~/.local/bin/xtray
