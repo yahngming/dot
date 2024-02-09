@@ -4,6 +4,7 @@ export BROWSER="firefox"
 export EDITOR="vim"
 export GTK_IM_MODULE=fcitx
 export HISTCONTROL="erasedups:ignorespace"
+export OPENER='gio'
 export PATH="${PATH}:${HOME}/.local/bin"
 export QT_IM_MODULE=fcitx
 export TERMINAL="st"
