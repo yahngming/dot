@@ -10,6 +10,7 @@ curl https://raw.githubusercontent.com/yahngming/dot/main/.config/vim/vimrc -o ~
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/xorg/xinitrc -o ~/.config/xorg/xinitrc
 curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/configs -o ~/.local/bin/configs
 curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/startwm -o ~/.local/bin/startwm
-curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/xsidle -o ~/.local/bin/xsidle
+curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/xidle -o ~/.local/bin/xidle
+curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/xkey -o ~/.local/bin/xkey
 curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/xtray -o ~/.local/bin/xtray
 curl https://raw.githubusercontent.com/yahngming/dot/main/.local/bin/xwall -o ~/.local/bin/xwall
