@@ -1,7 +1,7 @@
 #!/bin/sh
 
-sudo pacman -S base-devel fcitx5-chinese-addons fcitx5-im firefox git imlib2 libxft noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols python-pywal vim xcompmgr xdotool xwallpaper xorg-xrandr
-sudo pacman -S android-tools bat btop chafa cmatrix figlet fzf lf libreoffice-fresh maim man-db mpv neofetch neomutt pianobar poppler rsync thefuck trash-cli xclip zoxide
+sudo pacman -S base-devel fcitx5-chinese-addons fcitx5-im firefox git imlib2 lf libxft noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols python-pywal vim xcompmgr xdotool xwallpaper xorg-xrandr
+sudo pacman -S android-tools bat btop chafa cmatrix figlet fzf libreoffice-fresh maim man-db mpv neofetch neomutt pianobar poppler rsync thefuck trash-cli xclip zoxide
 
 git clone https://github.com/yahngming/dwm
 git clone https://github.com/yahngming/dmenu
