@@ -15,8 +15,8 @@ map <enter> shell
 map <delete> %trash-put $fx
 map ` !true
 map . set hidden!
-map o &gio open $f
-map O $gio open --ask $f
+map o &mimeopen $f
+map O $mimeopen --ask $f
 map p :paste; clear
 map a push %mkdir<space>
 map x $$f
