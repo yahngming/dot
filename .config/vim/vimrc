@@ -1,6 +1,6 @@
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd FocusGained,BufEnter * silent! checktime
-autocmd VimLeave * mksession! $HOME/.config/vim/session.vim
+autocmd VimLeave * mksession! ~/.vim/session.vim
 filetype indent on
 filetype plugin on
 syntax on
@@ -38,6 +38,7 @@ set noswapfile
 set nowritebackup
 set number
 set regexpengine=0
+set relativenumber
 set ruler
 set scrolloff=6
 set shiftwidth=4
@@ -60,6 +61,7 @@ set t_vb=
 set tabstop=4
 set tm=500
 set tw=500
+set viminfo='10,<100,:100,%,n~/.vim/viminfo
 set visualbell
 set whichwrap+=<,>,[,]
 set wildmenu
