@@ -1,11 +1,12 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export PATH="${PATH}:${HOME}/.local/bin"
-export EDITOR="vim"
-export TERMINAL="st"
 export BROWSER="firefox"
+export EDITOR="vim"
 export GTK_IM_MODULE=fcitx
+export HISTCONTROL="erasedups:ignorespace"
+export PATH="${PATH}:${HOME}/.local/bin"
 export QT_IM_MODULE=fcitx
+export TERMINAL="st"
 export XMODIFIERS=@im=fcitx
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
