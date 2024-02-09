@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -S base-devel bat fcitx5-chinese-addons fcitx5-im firefox git imlib2 lf libxft man-db noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols poppler python-pywal vim xcompmgr xdotool xwallpaper xorg-xrandr
+sudo pacman -S base-devel bat fcitx5-chinese-addons fcitx5-im firefox git imlib2 lf libxft man-db noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols poppler python-pywal ueberzug vim xcompmgr xdotool xwallpaper xorg-xrandr
 sudo pacman -S android-tools btop chafa cmatrix figlet fzf libreoffice-fresh maim mpv neofetch neomutt pianobar rsync thefuck trash-cli xclip zoxide
 
 git clone https://github.com/yahngming/dwm
