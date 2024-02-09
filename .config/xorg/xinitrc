@@ -1,8 +1,9 @@
+xkey &
 xrandr --output Virtual-1 --mode 1920x1080 &
 xcompmgr &
 xwall &
 xtray &
 xset s 600 &
-xsidle slock &
+xidle slock &
 fcitx5 &
 startwm
