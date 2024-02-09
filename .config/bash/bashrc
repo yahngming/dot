@@ -1,11 +1,10 @@
 [[ $- != *i* ]] && return
 
-PS1='\u@\h \w> '
-
-eval "$(zoxide init bash)"
-eval "$(thefuck --alias)"
-
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias ..='cd ..'
+
+PS1='\u@\h \w> '
 
 (cat ~/.cache/wal/sequences &)
