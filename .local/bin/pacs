@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo pacman -S base-devel firefox git man-db noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv ttf-nerd-fonts-symbols python-pywal vim xcompmgr xdotool xwallpaper xorg-xrandr // base
-sudo pacman -S atool bat ffmpegthumbnailer glow lf libreoffice-fresh poppler trash-cli ueberzug // system
+sudo pacman -S atool bat ffmpegthumbnailer glow lf libreoffice-fresh trash-cli ueberzug // system
 sudo pacman -S android-tools btop cmatrix figlet fzf maim mpv neofetch neomutt pianobar rsync thefuck xclip zoxide // tools
 sudo pacman -S fcitx5-chinese-addons fcitx5-im // ime
 
