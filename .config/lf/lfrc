@@ -1,15 +1,13 @@
-set cleaner ctpvclear
+set cleaner ~/.config/lf/clear_img.sh
 set cursorpreviewfmt ""
 set drawbox
 set icons
 set ifs "\n"
 set mouse
-set previewer ctpv
+set previewer ~/.config/lf/previewer.sh
 set shell sh
 set shellopts '-eu'
 set scrolloff 6
-&ctpv -s $id
-&ctpvquit $id
 
 map <enter> shell
 map <delete> %trash-put $fx
