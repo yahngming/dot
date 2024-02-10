@@ -1,11 +1,11 @@
 #!/bin/sh
 
-case "$(printf "⚿ lock\n⏾ sleep\n↺ reboot\n⏻ shutdown\n⛒ quit\n♽ refresh" | dmenu -i -p 'Action: ')" in
-	'⚿ lock') slock ;;
-	'⏾ sleep') slock systemctl suspend ;;
-	'↺ reboot') systemctl reboot ;;
-	'⏻ shutdown') systemctl poweroff ;;
-	"⛒ quit") kill -TERM "$(wmpid)" ;;
-	"♽ refresh") kill -HUP "$(wmpid)" ;;
+case "$(printf " lock\n󰒲 sleep\n reboot\n󰐥 shutdown\n󰅖 quit\n refresh" | dmenu )" in
+	' lock') slock ;;
+	'󰒲 sleep') slock systemctl suspend ;;
+	' reboot') systemctl reboot ;;
+	'󰐥 shutdown') systemctl poweroff ;;
+	"󰅖 quit") kill -TERM "$(wmpid)" ;;
+	" refresh") kill -HUP "$(wmpid)" ;;
 	*) exit 1 ;;
 esac
