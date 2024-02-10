@@ -1,6 +1,6 @@
 #!/bin/sh
 
-wallpaper=$(find ~/.config/wallpapers | shuf -n 1)
+wallpaper=$(find ~/.local/share/wallpapers | shuf -n 1)
 xwallpaper --zoom $wallpaper
 wal -n -i $wallpaper
 xdotool key super+F5
