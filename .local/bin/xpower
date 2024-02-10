@@ -1,11 +1,10 @@
 #!/bin/sh
 
-case "$(printf " lock\n󰒲 sleep\n reboot\n󰐥 shutdown\n󰅖 quit\n refresh" | dmenu )" in
+case "$(printf " lock\n󰤄 sleep\n reboot\n󰤆 shutdown\n󱎝 refresh" | dmenu )" in
 	' lock') slock ;;
-	'󰒲 sleep') slock systemctl suspend ;;
+	'󰤄 sleep') slock systemctl suspend ;;
 	' reboot') systemctl reboot ;;
-	'󰐥 shutdown') systemctl poweroff ;;
-	"󰅖 quit") kill -TERM "$(wmpid)" ;;
-	" refresh") kill -HUP "$(wmpid)" ;;
+	'󰤆 shutdown') systemctl poweroff ;;
+	"󱎝 refresh") kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
 	*) exit 1 ;;
 esac
