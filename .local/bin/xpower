@@ -7,9 +7,9 @@ esac
 
 case "$(printf "⚿ lock\n⏾ sleep\n↺ reboot\n⏻ shutdown\n⛒ quit\n♽ refresh" | dmenu -i -p 'Action: ')" in
 	'⚿ lock') slock ;;
-	'⏾ sleep') slock $ctl suspend -i ;;
-	'↺ reboot') $ctl reboot -i ;;
-	'⏻ shutdown') $ctl poweroff -i ;;
+	'⏾ sleep') slock $ctl suspend ;;
+	'↺ reboot') $ctl reboot ;;
+	'⏻ shutdown') $ctl poweroff ;;
 	"⛒ quit") kill -TERM "$(wmpid)" ;;
 	"♽ refresh") kill -HUP "$(wmpid)" ;;
 	*) exit 1 ;;
