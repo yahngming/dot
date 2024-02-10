@@ -5,6 +5,6 @@ alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias ..='cd ..'
 
-PS1='\u@\h \w> '
+PS1='\u@\h:\w> '
 
 (cat ~/.cache/wal/sequences &)
