@@ -74,15 +74,10 @@ map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
-map <A-e> :tabnew<CR>
-map <A-j> gt
-map <A-k> gT
-map <A-w> :tabclose<CR>
 map <Space> <Leader>
 map <Leader>q :q!<CR>
 map <Leader>w :w!<CR>
 map <Leader>. :set list!<CR>
-map <Leader>cd :cd %:p:h<CR>:pwd<CR>
 map <Leader>rc :args $HOME/.config/vim/vimrc \| tab all<CR>
 map <Leader>sc :setlocal spell!<CR>
 map <Leader>ss :source $HOME/.config/vim/session.vim<CR>
@@ -91,3 +86,7 @@ imap jk <Esc>
 imap kj <Esc>
 noremap j gj
 noremap k gk
+noremap <Down> :tabclose<CR>
+noremap <Left> gT
+noremap <Right> gt
+noremap <Up> :tabnew<CR>
