@@ -80,10 +80,10 @@ map <Leader>tc :tabclose<CR>
 map <Leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<CR>/
 map <Leader>tn :tabnew<CR>
 map <Leader>tt :tabnext<CR>
-noremap <M-j> mz:m+<CR>`z
-noremap <M-k> mz:m-2<CR>`z
-map <Leader>q :q!<CR>
-map <Leader>w :w!<CR>
+nmap <M-j> mz:m+<CR>`z
+nmap <M-k> mz:m-2<CR>`z
+nmap <Leader>q :q!<CR>
+nmap <Leader>w :w!<CR>
 noremap <F7> :setlocal spell!<CR>
 noremap <F8> :set list!<CR>
 noremap <F11> :source $HOME/.config/vim/session.vim<CR>
