@@ -3,7 +3,7 @@
 export BROWSER="firefox"
 export EDITOR="vim"
 export GTK_IM_MODULE=fcitx
-export HISTCONTROL="erasedups:ignorespace"
+export HISTCONTROL="ignoreboth:erasedups"
 export PATH="${HOME}/.local/bin:${PATH}"
 export QT_IM_MODULE=fcitx
 export TERMINAL="st"
