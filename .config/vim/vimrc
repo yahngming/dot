@@ -80,3 +80,4 @@ noremap <F12> :args $HOME/.config/vim/vimrc \| tab all<CR>
 noremap <silent> <Esc><Esc> :nohlsearch<CR>
 noremap j gj
 noremap k gk
+inoremap jk <Esc>
