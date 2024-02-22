@@ -64,17 +64,26 @@ set tw=500
 set viminfo='10,<100,:100,%,n~/.vim/viminfo
 set visualbell
 set whichwrap+=<,>,[,]
+set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
 set wildmenu
 set wrap
 
 map ; :
+map 0 ^
 map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 map <Space> <Leader>
-noremap <Leader>q :q!<CR>
-noremap <Leader>w :w!<CR>
+map <Leader>cd :cd %:p:h<CR>:pwd<CR>
+map <Leader>tc :tabclose<CR>
+map <Leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<CR>/
+map <Leader>tn :tabnew<CR>
+map <Leader>tt :tabnext<CR>
+noremap <M-j> mz:m+<CR>`z
+noremap <M-k> mz:m-2<CR>`z
+map <Leader>q :q!<CR>
+map <Leader>w :w!<CR>
 noremap <F7> :setlocal spell!<CR>
 noremap <F8> :set list!<CR>
 noremap <F11> :source $HOME/.config/vim/session.vim<CR>
@@ -83,3 +92,7 @@ noremap <silent> <Esc><Esc> :nohlsearch<CR>
 noremap j gj
 noremap k gk
 inoremap jk <Esc>
+inoremap kj <Esc>
+vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+vnoremap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
+vnoremap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
