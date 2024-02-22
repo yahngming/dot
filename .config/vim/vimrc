@@ -80,19 +80,15 @@ map <Leader>tc :tabclose<CR>
 map <Leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<CR>/
 map <Leader>tn :tabnew<CR>
 map <Leader>tt :tabnext<CR>
-nmap <M-j> mz:m+<CR>`z
-nmap <M-k> mz:m-2<CR>`z
-nmap <Leader>q :q!<CR>
-nmap <Leader>w :w!<CR>
-noremap <F7> :setlocal spell!<CR>
-noremap <F8> :set list!<CR>
-noremap <F11> :source $HOME/.config/vim/session.vim<CR>
-noremap <F12> :args $HOME/.config/vim/vimrc \| tab all<CR>
-noremap <silent> <Esc><Esc> :nohlsearch<CR>
+map <Leader>q :q!<CR>
+map <Leader>w :w!<CR>
+map <Leader>sc :setlocal spell!<CR>
+map <Leader>sl :set list!<CR>
+map <Leader>ss :source $HOME/.config/vim/session.vim<CR>
+map <Leader>sv :args $HOME/.config/vim/vimrc \| tab all<CR>
+map <silent> <Esc><Esc> :nohlsearch<CR>
 noremap j gj
 noremap k gk
 inoremap jk <Esc>
 inoremap kj <Esc>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
-vnoremap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
