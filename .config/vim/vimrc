@@ -73,6 +73,8 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 map <Space> <Leader>
+noremap <Leader>q :q!<CR>
+noremap <Leader>w :w!<CR>
 noremap <F7> :setlocal spell!<CR>
 noremap <F8> :set list!<CR>
 noremap <F11> :source $HOME/.config/vim/session.vim<CR>
