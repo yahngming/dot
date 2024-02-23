@@ -4,7 +4,7 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -lahF --group-directories-first'
 alias ..='cd ..'
-alias -='cd -'
+alias ,,='cd -'
 
 PS1='\[\033[0;32m\]\u@\h:\[\033[0;31m\]\w>\[\033[00m\] '
 
