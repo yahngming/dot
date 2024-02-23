@@ -1,10 +1,10 @@
-set cleaner ctpvclear
+set cleaner ~/.config/lf/cleaner
 set cursorpreviewfmt ""
 set drawbox
 set icons
 set ifs "\n"
 set mouse
-set previewer ctpv
+set previewer ~/.config/lf/previewer
 set shell sh
 set shellopts '-eu'
 set scrolloff 6
