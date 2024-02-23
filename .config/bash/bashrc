@@ -1,11 +1,11 @@
 [[ $- != *i* ]] && return
 
 alias ..='cd ..'
-alias ,,='cd -'
+alias ..='cd ..'
 alias grep='grep --color=auto'
-alias ls='ls --color=auto'
-alias ll='ls -lahF --group-directories-first'
 alias lf='lfuz'
+alias ll='ls -lahF --group-directories-first'
+alias ls='ls --color=auto'
 
 PS1='\[\033[0;32m\]\u@\h:\[\033[0;31m\]\w>\[\033[00m\] '
 
