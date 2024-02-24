@@ -1,6 +1,6 @@
 [[ $- != *i* ]] && return
 
-alias ..='cd ..'
+alias ,,='cd -'
 alias ..='cd ..'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
