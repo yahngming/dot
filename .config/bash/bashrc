@@ -2,7 +2,9 @@
 
 alias ..='cd ..'
 alias ..='cd ..'
+alias diff='diff --color=auto'
 alias grep='grep --color=auto'
+alias ip='ip --color=auto'
 alias lf='lfuz'
 alias ll='ls -lahF --group-directories-first'
 alias ls='ls --color=auto'
