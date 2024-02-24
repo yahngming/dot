@@ -8,6 +8,7 @@ alias ip='ip --color=auto'
 alias lf='lfuz'
 alias ll='ls -lahF --group-directories-first'
 alias ls='ls --color=auto'
+alias vim='vim -u ~/.config/vim/vimrc'
 
 PS1='\[$(tput sc; tput setaf 3; printf "%*s" $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] '
 
