@@ -70,6 +70,11 @@ set wrap
 
 map ; :
 map 0 ^
+map <C-h> :<C-w>h
+map <C-j> :<C-w>j
+map <C-k> :<C-w>k
+map <C-l> :<C-w>l
+map <C-n> :NERDTree<CR>
 map <Space> <Leader>
 map <Leader>q :q!<CR>
 map <Leader>w :w!<CR>
