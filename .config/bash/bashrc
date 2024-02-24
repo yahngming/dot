@@ -9,7 +9,7 @@ alias lf='lfuz'
 alias ll='ls -lahF --group-directories-first'
 alias ls='ls --color=auto'
 
-PS1='\[$(tput setaf 3)\]\[$(tput sc; printf "%*s" $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] '
+PS1='\[$(tput sc; tput setaf 3; printf "%*s" $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] '
 
 if [ -f ~/.cache/wal/sequences ]; then
     (cat ~/.cache/wal/sequences &)
