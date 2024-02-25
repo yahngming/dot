@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cp ~/.local/src/dot/.local/bin/configs ~/.local/bin
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/bash/bashrc -o ~/.config/bash/bashrc
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/bash/profile -o ~/.config/bash/profile
 curl https://raw.githubusercontent.com/yahngming/dot/main/.config/fontconfig/fonts.conf -o ~/.config/fontconfig/fonts.conf
