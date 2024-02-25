@@ -2,3 +2,4 @@
 
 cp -r ~/.local/src/dot/.config/ ~/
 cp -r ~/.local/src/dot/.local/ ~/
+chmod +x ~/.local/bin/*
