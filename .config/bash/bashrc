@@ -10,7 +10,6 @@ alias ip='ip --color=auto'
 alias lf='lfuz'
 alias ll='ls -lahF --group-directories-first'
 alias ls='ls --color=auto'
-alias vim='vim -u ~/.config/vim/vimrc'
 
 eval "$(zoxide init bash)"
 
