@@ -12,4 +12,3 @@
 - st https://github.com/yahngming/st
 - slock https://github.com/yahngming/slock
 - xssstate https://git.suckless.org/xssstate
-- ctpv https://github.com/NikitaIvanovV/ctpv
