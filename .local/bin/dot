@@ -1,8 +1,5 @@
 #!/bin/sh
 
-cd ~/.local/src/dot
-git pull
-cd - 1> /dev/null
 cp -r ~/.local/src/dot/.config/ ~/
 cp -r ~/.local/src/dot/.local/ ~/
 chmod +x ~/.local/bin/* 2> /dev/null
