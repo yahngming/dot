@@ -1,5 +1,8 @@
 #!/bin/sh
 
+cd ~/.local/src/dot
+git pull
+cd -
 cp -r ~/.local/src/dot/.config/ ~/
 cp -r ~/.local/src/dot/.local/ ~/
 chmod +x ~/.local/bin/*
