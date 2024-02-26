@@ -1,51 +1,51 @@
 #!/bin/sh
 
 bat() {
-  printf "  "
-  printf " $(cat /sys/class/power_supply/BAT0/capacity)"
+	printf "  "
+	printf " $(cat /sys/class/power_supply/BAT0/capacity)"
 }
 
 brt() {
-  printf "  "
-  printf " %.0f\n" $(cat /sys/class/backlight/*/brightness)
+	printf "  "
+	printf " %.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
 clk() {
-  printf " 󱑆 "
-  printf " $(date '+%H:%M') "
+	printf " 󱑆 "
+	printf " $(date '+%H:%M') "
 }
 
 cpu() {
-  printf "  "
-  printf " $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
+	printf "  "
+	printf " $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
 }
 
 cut() {
-  IFS=$2
-  set -- $1
-  printf '%s' "$@"
+	IFS=$2
+	set -- $1
+	printf '%s' "$@"
 }
 
 ram() {
-  printf "  "
-  printf " $(free -h | awk '(NR==2){ print $4 }' | sed s/i//g)"
+	printf "  "
+	printf " $(free -h | awk '(NR==2){ print $4 }' | sed s/i//g)"
 }
 
 net() {
-  case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-  up) printf " 󰤨 %s" " Connected" ;;
-  down) printf " 󰤭 %s" " Disconnected" ;;
-  esac
+	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+		up) printf " 󰤨 %s" " Connected" ;;
+		down) printf " 󰤭 %s" " Disconnected" ;;
+	esac
 }
 
 vol() {
-  vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
-  vol="${vol#Volume: }"
-  vol="$(printf "%.0f" "$(cut "$vol" ".")")"
-  printf " 󰕾 "
-  printf " $vol "
+	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
+	vol="${vol#Volume: }"
+	vol="$(printf "%.0f" "$(cut "$vol" ".")")"
+	printf " 󰕾 "
+	printf " $vol "
 }
 
 while true; do
-  sleep 1 && xprop -root -set WM_NAME "$(cpu) $(ram) $(net) $(brt) $(bat) $(vol) $(clk)"
+	sleep 1 && xprop -root -set WM_NAME "$(cpu) $(ram) $(net) $(brt) $(bat) $(vol) $(clk)"
 done
