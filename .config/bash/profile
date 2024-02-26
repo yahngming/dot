@@ -10,5 +10,5 @@ export TERMINAL="st"
 export XMODIFIERS=@im=fcitx
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec startx ~/.config/xorg/xinitrc
+	exec startx ~/.config/xorg/xinitrc
 fi
