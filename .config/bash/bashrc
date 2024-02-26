@@ -13,5 +13,5 @@ alias ls='ls --color=auto'
 eval "$(zoxide init bash)"
 
 if [ -f ~/.cache/wal/sequences ]; then
-    (cat ~/.cache/wal/sequences &)
+	(cat ~/.cache/wal/sequences &)
 fi
