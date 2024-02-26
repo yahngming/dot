@@ -2,10 +2,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimLeave * mksession! ~/.vim/session.vim
+
 filetype indent on
 filetype plugin on
-syntax on
-
 let $LANG='en'
 set autoindent
 set autoread
@@ -67,6 +66,7 @@ set whichwrap+=<,>,[,]
 set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
 set wildmenu
 set wrap
+syntax on
 
 map ; :
 map 0 ^
