@@ -1,8 +1,12 @@
 [[ $- != *i* ]] && return
 
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+	source /usr/share/git/completion/git-prompt.sh
+fi
+
 PS1='\[$(tput sc; tput setaf 3; printf "%*s" $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] '
 
-alias ,,='cd -'
+alias ,,='cd - >/dev/null'
 alias ..='cd ..'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
