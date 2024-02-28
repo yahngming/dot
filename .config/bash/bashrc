@@ -4,7 +4,7 @@
 
 PS1='\[$(tput sc; tput setaf 3; printf "%*s" $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] '
 
-alias ,,='cd - >/dev/null'
+alias ,,='cd - >/dev/null 2>&1'
 alias ..='cd ..'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
