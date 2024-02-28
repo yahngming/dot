@@ -8,13 +8,13 @@
 - st https://github.com/yahngming/st
 - slock https://github.com/yahngming/slock
 - xssstate https://git.suckless.org/xssstate
-- ctpv https://github.com/NikitaIvanovV/ctpv
 
 ### fonts:
 - noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols
 
 ### file manager:
 - atool bat exiftool ffmpegthumbnailer git-delta glow jq lf ueberzug
+- ctpv https://github.com/NikitaIvanovV/ctpv
 
 ### utils:
 - android-tools btop cmatrix figlet fzf maim man-db mpv neofetch neomutt nsxiv pianobar rsync trash-cli xclip zoxide
