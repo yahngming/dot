@@ -3,4 +3,4 @@
 wallpaper=$(find ~/.local/share/wallpapers | shuf -n 1)
 xwallpaper --zoom $wallpaper
 wal -n -i $wallpaper
-xdotool key super+F5
+xdo key_press super+F5
