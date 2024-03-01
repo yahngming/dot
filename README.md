@@ -17,7 +17,7 @@
 - ctpv https://github.com/NikitaIvanovV/ctpv
 
 ### utils:
-- android-tools btop cmatrix figlet fzf maim man-db mpv neofetch neomutt nsxiv pianobar rsync trash-cli xclip zoxide
+- android-tools btop cmatrix cmus figlet fzf maim man-db mpv neofetch neomutt nsxiv rsync trash-cli xclip zoxide
 
 ### gui:
 - firefox libreoffice-fresh
