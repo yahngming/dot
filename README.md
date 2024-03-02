@@ -13,7 +13,7 @@
 - noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols
 
 ### file manager:
-- atool bat exiftool ffmpegthumbnailer git-delta glow jq lf ueberzug
+- atool bat ffmpegthumbnailer git-delta glow jq lf perl-image-exiftool ueberzug
 - ctpv https://github.com/NikitaIvanovV/ctpv
 
 ### utils:
