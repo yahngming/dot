@@ -8,13 +8,13 @@
 - st https://github.com/yahngming/st
 - slock https://github.com/yahngming/slock
 - xssstate https://git.suckless.org/xssstate
+- yay https://aur.archlinux.org/yay.git
 
 ### fonts:
 - noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols
 
 ### file manager:
-- atool bat ffmpegthumbnailer git-delta glow jq lf perl-image-exiftool ueberzug
-- ctpv https://github.com/NikitaIvanovV/ctpv
+- atool bat ctpv ffmpegthumbnailer git-delta glow jq lf perl-image-exiftool ueberzug
 
 ### utils:
 - android-tools btop cmatrix cmus figlet fzf lolcat maim man-db mpv neofetch neomutt nsxiv rsync trash-cli xclip zoxide
