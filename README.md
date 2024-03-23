@@ -22,5 +22,8 @@
 ### gui:
 - firefox libreoffice-fresh
 
+### gaming:
+- steam
+
 ### ime:
 - fcitx5-chinese-addons fcitx5-im
