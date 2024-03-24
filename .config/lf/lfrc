@@ -1,9 +1,12 @@
 set cleaner ctpvclear
 set cursorpreviewfmt ""
+set dircounts
 set drawbox
 set icons
 set ifs "\n"
+set info size
 set mouse
+set period 1
 set previewer ctpv
 set shell sh
 set shellopts '-eu'
@@ -15,8 +18,7 @@ map <enter> shell
 map <delete> %trash-put $fx
 map ` !true
 map . set hidden!
-map o &mimeopen $f
-map O $mimeopen --ask $f
+map o open
 map p :paste; clear
 map a push %mkdir<space>
 map x $$f
