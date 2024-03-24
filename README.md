@@ -14,10 +14,10 @@
 - noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols
 
 ### file manager:
-- atool bat ctpv ffmpegthumbnailer git-delta glow jq lf perl-file-mimeinfo perl-image-exiftool poppler ueberzug
+- atool bat ctpv ffmpegthumbnailer git-delta glow jq lf perl-file-mimeinfo perl-image-exiftool poppler trash-cli ueberzug
 
 ### utils:
-- android-tools btop cmatrix cmus figlet fzf lolcat maim man-db mpv neofetch neomutt nsxiv rsync trash-cli xclip zoxide
+- android-tools btop cmatrix cmus figlet fzf lolcat maim man-db mpv neofetch neomutt nsxiv rsync xclip zoxide
 
 ### gui:
 - firefox libreoffice-fresh
