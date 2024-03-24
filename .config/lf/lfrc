@@ -16,9 +16,9 @@ set scrolloff 6
 
 map <enter> shell
 map <delete> %trash-put $fx
+map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
-map o open
 map p :paste; clear
 map a push %mkdir<space>
 map x $$f
