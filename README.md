@@ -2,7 +2,7 @@
 
 ### dependencies:
 
-- git gvim polkit python-pywal xcape xcompmgr xdo xwallpaper xorg-xrandr
+- git gvim imlib2 polkit python-pywal xcape xcompmgr xdo xwallpaper xorg-xrandr
 - dwm https://github.com/yahngming/dwm
 - dmenu https://github.com/yahngming/dmenu
 - st https://github.com/yahngming/st
