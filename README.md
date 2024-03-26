@@ -17,7 +17,7 @@
 - atool bat ctpv ffmpegthumbnailer git-delta glow jq lf perl-file-mimeinfo perl-image-exiftool poppler trash-cli ueberzug
 
 ### utils:
-- android-tools btop cmatrix cmus figlet fzf lolcat maim man-db mpv neofetch neomutt nsxiv rsync xclip zoxide
+- android-tools btop cmatrix cmus figlet fzf lolcat maim man-db mpv neofetch neomutt nsxiv pyradio rsync xclip zoxide
 
 ### gui:
 - firefox libreoffice-fresh
