@@ -27,3 +27,6 @@
 
 ### ime:
 - fcitx5-chinese-addons fcitx5-im
+
+### laptop:
+- auto-cpufreq
