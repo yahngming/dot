@@ -47,5 +47,5 @@ vol() {
 }
 
 while true; do
-	sleep 1 && xprop -root -set WM_NAME "$(cpu) $(ram) $(net) $(brt) $(bat) $(vol) $(clk)"
+	sleep 1 && xprop -root -set WM_NAME "$(vol) $(clk)"
 done
