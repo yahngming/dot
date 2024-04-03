@@ -1,14 +1,15 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export BROWSER="firefox"
-export EDITOR="vim"
+export BROWSER=firefox
+export EDITOR=vim
 export GTK_IM_MODULE=fcitx
 export HISTCONTROL="ignoreboth:erasedups"
-export OPENER="mimeopen"
-export PAGER="bat"
+export OPENER=mimeopen
+export PAGER=bat
 export PATH="${HOME}/.local/bin:${PATH}"
 export QT_IM_MODULE=fcitx
-export TERMINAL="st"
+export QT_STYLE_OVERRIDE=adwaita-dark
+export TERMINAL=st
 export XMODIFIERS=@im=fcitx
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
