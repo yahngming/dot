@@ -8,7 +8,7 @@ export OPENER=mimeopen
 export PAGER=bat
 export PATH="${HOME}/.local/bin:${PATH}"
 export QT_IM_MODULE=fcitx
-export QT_STYLE_OVERRIDE=adwaita-dark
+export QT_STYLE_OVERRIDE=Breeze-Dark
 export TERMINAL=st
 export XMODIFIERS=@im=fcitx
 
