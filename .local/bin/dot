@@ -2,5 +2,5 @@
 
 cp -r ~/.local/src/dot/. ~/
 rm -rf ~/.git
-rm README.MD
+rm ~/README.MD
 chmod +x ~/.local/bin/* 2> /dev/null
