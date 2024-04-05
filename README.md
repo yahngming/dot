@@ -1,6 +1,6 @@
 # dotfiles
 
-### dependencies:
+### base:
 
 - git gvim imlib2 polkit python-pywal xcape xcompmgr xdo xwallpaper xorg-xrandr
 - dwm https://github.com/yahngming/dwm
@@ -13,20 +13,13 @@
 ### fonts:
 - noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols
 
-### file manager:
+### tui:
 - atool bat ctpv ffmpegthumbnailer git-delta glow jq lf perl-file-mimeinfo perl-image-exiftool poppler trash-cli ueberzug
-
-### utils:
 - android-tools baca-ereader-git btop cmatrix cmus figlet fzf lolcat maim man-db mpv neofetch nsxiv rsync xclip zoxide
+- auto-cpufreq
 
 ### gui:
-- firefox libreoffice-fresh nekoray
-
-### gaming:
-- steam
+- firefox libreoffice-fresh nekoray steam
 
 ### ime:
 - fcitx5-chinese-addons fcitx5-im
-
-### laptop:
-- auto-cpufreq
