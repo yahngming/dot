@@ -9,7 +9,7 @@ export OPENER="mimeopen"
 export PAGER="bat"
 export PATH="$HOME/.local/bin:$PATH"
 export QT_IM_MODULE="fcitx"
-export QT_QPA_PLATFORMTHEME="gtk2"
+export QT_STYLE_OVERRIDE="Windows"
 export TERMINAL="st"
 export XMODIFIERS="@im=fcitx"
 
