@@ -1,10 +1,10 @@
 #!/bin/sh
 
-case "$(printf " lock\n󰤄 sleep\n reboot\n󰤆 shutdown\n󱎝 logout" | dmenu )" in
+case "$(printf " lock\n󰤄 sleep\n reboot\n󰤆 shutdown\n󰗽 logout" | dmenu )" in
 	' lock') slock ;;
 	'󰤄 sleep') slock systemctl suspend ;;
 	' reboot') systemctl reboot ;;
 	'󰤆 shutdown') systemctl poweroff ;;
-	"󱎝 logout") pkill dwm ;;
+	"󰗽 logout") pkill dwm ;;
 	*) exit 1 ;;
 esac
