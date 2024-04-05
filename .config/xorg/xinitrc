@@ -1,11 +1,11 @@
-xrandr --output Virtual-1 --mode 1920x1080 &
+xrandr --output Virtual-1 --mode 1920x1080
+xcompmgr &
+xwall &
 xkey &
 xtray &
 xset s 600 &
 xidle slock &
 fcitx5 &
-xcompmgr &
-xwall &
 session=${1:-dwm}
 case $session in
 	dwm      ) exec dwm;;
