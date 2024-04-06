@@ -3,13 +3,11 @@
 export BROWSER="firefox"
 export EDITOR="vim"
 export GTK_IM_MODULE="fcitx"
-export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc"
 export HISTCONTROL="ignoreboth:erasedups"
 export OPENER="mimeopen"
 export PAGER="bat"
 export PATH="$HOME/.local/bin:$PATH"
 export QT_IM_MODULE="fcitx"
-export QT_STYLE_OVERRIDE="Windows"
 export TERMINAL="st"
 export XMODIFIERS="@im=fcitx"
 
