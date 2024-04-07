@@ -14,6 +14,3 @@
 - android-tools auto-cpufreq baca-ereader-git btop cmatrix cmus figlet fzf lolcat maim man-db mpv neofetch nsxiv rsync xclip zoxide
 - emby-theater firefox libreoffice-fresh nekoray steam
 - fcitx5-chinese-addons fcitx5-im
-
-### postinstall:
-- mkdir -p ~/.local/src ~/Pictures/wallpapers
