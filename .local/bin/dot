@@ -1,6 +1,5 @@
 #!/bin/sh
 
 cp -r ~/.local/src/dot/. ~/
-rm -rf ~/.git
-rm ~/README.md
+rm -rf ~/.git ~/README.md
 chmod +x ~/.local/bin/* 2> /dev/null
