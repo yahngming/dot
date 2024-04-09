@@ -1,11 +1,11 @@
 #!/bin/sh
 
-case "$(printf " top\n lock\n󰤄 sleep\n reboot\n󰤆 shutdown\n󰗽 logout" | dmenu )" in
+case "$(printf " top\n lock\n󰤄 sleep\n󰗽 logout\n reboot\n󰤆 shutdown" | dmenu )" in
 	' top') $TERMINAL -e btop ;;
 	' lock') slock ;;
 	'󰤄 sleep') slock systemctl suspend ;;
+	"󰗽 logout") pkill dwm ;;
 	' reboot') systemctl reboot ;;
 	'󰤆 shutdown') systemctl poweroff ;;
-	"󰗽 logout") pkill dwm ;;
 	*) exit 1 ;;
 esac
