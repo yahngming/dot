@@ -1214,6 +1214,3 @@ user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
-
-// OVERRIDE
-user_pref("keyword.enabled", true);
