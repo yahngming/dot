@@ -19,10 +19,10 @@
         "; filament start gcode\n; G1 Z0.1 ;move z\n; G92 Z0 ;zero z\n"
     ],
     "hot_plate_temp": [
-        "70"
+        "60"
     ],
     "hot_plate_temp_initial_layer": [
-        "70"
+        "60"
     ],
     "nozzle_temperature": [
         "210"
