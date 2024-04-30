@@ -1,0 +1,10 @@
+{
+    "filament_settings_id": [
+        "PLA"
+    ],
+    "from": "User",
+    "inherits": "My Generic PLA",
+    "is_custom_defined": "0",
+    "name": "PLA",
+    "version": ""
+}
