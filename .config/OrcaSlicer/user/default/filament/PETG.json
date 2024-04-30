@@ -12,7 +12,7 @@
         "PETG"
     ],
     "filament_start_gcode": [
-        "; filament start gcode\n; G1 Z1.5 ;move z\n; G92 Z0 ;zero z\n"
+        "; filament start gcode\n; G1 Z0.1 ;move z\n; G92 Z0 ;zero z\n"
     ],
     "from": "User",
     "hot_plate_temp": [
@@ -25,10 +25,10 @@
     "is_custom_defined": "0",
     "name": "PETG",
     "nozzle_temperature": [
-        "220"
+        "210"
     ],
     "nozzle_temperature_initial_layer": [
-        "220"
+        "210"
     ],
     "reduce_fan_stop_start_freq": [
         "0"
