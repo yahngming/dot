@@ -19,7 +19,7 @@
         "5000"
     ],
     "machine_start_gcode": "M107 ;fan off\nG21 ;metric\nG90 ;absolute positioning\nG28 ;home\nM82 ;absolute extrusion\nG92 E0 ;zero extruder\nM83 ;relative extrusion\nM190 S[first_layer_bed_temperature] ;bed temp\nM109 S[first_layer_temperature] ; head temp",
-    "name": "RepRap",
+    "name": "RepRap 0.4 nozzle",
     "print_host": "3DPRINTER",
     "printable_area": [
         "89.6575x7.84402",
@@ -96,8 +96,8 @@
         "90x-2.20436e-14"
     ],
     "printable_height": "200",
-    "printer_settings_id": "RepRap",
-    "printhost_apikey": "",
+    "printer_settings_id": "RepRap 0.4 nozzle",
+    "printhost_apikey": "3876D5B3A8F44D4AB66A4EF870D8A39F",
     "retraction_length": [
         "6"
     ],
