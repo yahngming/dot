@@ -6,6 +6,12 @@
     "inherits": "My Generic TPU",
     "is_custom_defined": "0",
     "name": "TPU",
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
     "nozzle_temperature": [
         "200"
     ],
