@@ -1,0 +1,40 @@
+{
+    "fan_cooling_layer_time": [
+        "20"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_settings_id": [
+        "PETG"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n; G1 Z1.5 ;move z\n; G92 Z0 ;zero z\n"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "70"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "70"
+    ],
+    "inherits": "My Generic PETG",
+    "is_custom_defined": "0",
+    "name": "PETG",
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
+    ],
+    "slow_down_layer_time": [
+        "15"
+    ],
+    "version": "1.9.0.2"
+}
