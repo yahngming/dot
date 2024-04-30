@@ -1,0 +1,16 @@
+{
+    "filament_settings_id": [
+        "TPU"
+    ],
+    "from": "User",
+    "inherits": "My Generic TPU",
+    "is_custom_defined": "0",
+    "name": "TPU",
+    "nozzle_temperature": [
+        "200"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "200"
+    ],
+    "version": ""
+}
