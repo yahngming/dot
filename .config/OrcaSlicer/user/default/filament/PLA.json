@@ -7,16 +7,16 @@
     "is_custom_defined": "0",
     "name": "PLA",
     "hot_plate_temp": [
-        "60"
+        "50"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "50"
     ],
     "nozzle_temperature": [
-        "200"
+        "210"
     ],
     "nozzle_temperature_initial_layer": [
-        "200"
+        "210"
     ],    
     "version": ""
 }
