@@ -4,8 +4,8 @@
         "source": "~/.config/fastfetch/logo.txt",
         "type": "file",
         "color": {
-            "1": "white",
-            "2": "red"
+            "1": "red",
+            "2": "white"
         }
     },
     "display": {
