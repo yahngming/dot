@@ -14,4 +14,4 @@ alias ls='ls --color=auto'
 
 eval "$(zoxide init bash)"
 [[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
-neofetch | lolcat
+fastfetch | lolcat
