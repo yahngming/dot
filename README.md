@@ -11,6 +11,6 @@
 - xssstate https://git.suckless.org/xssstate
 - yay https://aur.archlinux.org/yay.git
 - atool bat ctpv ffmpegthumbnailer git-delta glow jq lf perl-file-mimeinfo perl-image-exiftool poppler trash-cli ueberzug
-- android-tools bc btop cmatrix cmus figlet fzf lolcat maim man-db mpv fastfetch nsxiv rsync xclip zoxide
+- android-tools bc btop cmatrix cmus fastfetch figlet fzf lolcat maim man-db mpv nsxiv rsync xclip zoxide
 - emby-theater firefox libreoffice-fresh nekoray steam
 - fcitx5-chinese-addons fcitx5-im
