@@ -10,7 +10,7 @@
         }
     },
     "display": {
-        "pipe": false
+        "pipe": true
     },
     "modules": [
         "title",
