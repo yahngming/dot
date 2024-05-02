@@ -13,29 +13,15 @@
         "pipe": false
     },
     "modules": [
-        {
-            "type": "os",
-            "format": "{3} {12}"
-        },
+        "os",
         "kernel",
         "uptime",
         "packages",
         "shell",
-        {
-            "type": "display",
-            "compactType": "original",
-            "key": "Resolution"
-        },
         "wm",
         "terminal",
-        {
-            "type": "terminalfont",
-            "format": "{/2}{-}{/}{2}{?3} {3}{?}"
-        },
         "cpu",
-        {
-            "type": "gpu",
-            "key": "GPU"
+        "gpu"
         }
     ]
 }
