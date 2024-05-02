@@ -5,4 +5,4 @@ git pull
 cp -r ~/.local/src/dot/. ~/
 rm -rf ~/.git ~/README.md
 chmod +x ~/.local/bin/* 2> /dev/null
-cd -
+cd - >/dev/null 2>&1
