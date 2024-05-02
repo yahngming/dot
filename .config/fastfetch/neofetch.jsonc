@@ -9,6 +9,9 @@
             "3": "38;2;23;147;209"
         }
     },
+    "display": {
+        "pipe": false
+    },
     "modules": [
         "title",
         "separator",
