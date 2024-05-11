@@ -1,14 +1,21 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+export ALL_PROXY=$PROXY
+export all_proxy=$PROXY
 export BROWSER="firefox"
 export EDITOR="vim"
+export FTP_PROXY=$PROXY
+export ftp_proxy=$PROXY
 export GTK_IM_MODULE="fcitx"
 export HISTCONTROL="ignoreboth:erasedups"
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=$http_proxy
+export HTTP_PROXY=$PROXY
+export http_proxy=$PROXY
+export HTTPS_PROXY=$PROXY
+export https_proxy=$PROXY
 export OPENER="mimeopen"
 export PAGER="bat"
 export PATH="$HOME/.local/bin:$PATH"
+export PROXY="http://127.0.0.1:7890"
 export QT_IM_MODULE="fcitx"
 export QT_STYLE_OVERRIDE="Windows"
 export TERMINAL="st"
