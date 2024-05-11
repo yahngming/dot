@@ -1,9 +1,12 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+export ALL_PROXY=$HTTP_PROXY
 export BROWSER="firefox"
 export EDITOR="vim"
 export GTK_IM_MODULE="fcitx"
 export HISTCONTROL="ignoreboth:erasedups"
+export HTTP_PROXY="http://127.0.0.1:7890"
+export HTTPS_PROXY=$HTTP_PROXY
 export OPENER="mimeopen"
 export PAGER="bat"
 export PATH="$HOME/.local/bin:$PATH"
