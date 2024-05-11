@@ -1,25 +1,29 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export ALL_PROXY=$PROXY
-export all_proxy=$PROXY
+export HISTCONTROL="ignoreboth:erasedups"
+export PATH="$HOME/.local/bin:$PATH"
+
 export BROWSER="firefox"
 export EDITOR="vim"
+export OPENER="mimeopen"
+export PAGER="bat"
+export TERMINAL="st"
+
+export QT_STYLE_OVERRIDE="Windows"
+
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export XMODIFIERS="@im=fcitx"
+
+export PROXY="http://127.0.0.1:7890"
+export ALL_PROXY=$PROXY
+export all_proxy=$PROXY
 export FTP_PROXY=$PROXY
 export ftp_proxy=$PROXY
-export GTK_IM_MODULE="fcitx"
-export HISTCONTROL="ignoreboth:erasedups"
 export HTTP_PROXY=$PROXY
 export http_proxy=$PROXY
 export HTTPS_PROXY=$PROXY
 export https_proxy=$PROXY
-export OPENER="mimeopen"
-export PAGER="bat"
-export PATH="$HOME/.local/bin:$PATH"
-export PROXY="http://127.0.0.1:7890"
-export QT_IM_MODULE="fcitx"
-export QT_STYLE_OVERRIDE="Windows"
-export TERMINAL="st"
-export XMODIFIERS="@im=fcitx"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	exec startx ~/.config/xorg/xinitrc dwm
