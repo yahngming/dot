@@ -15,26 +15,6 @@ export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 export XMODIFIERS="@im=fcitx"
 
-export PROXY="http://127.0.0.1:7890"
-export ALL_PROXY=$PROXY
-export all_proxy=$PROXY
-export FTP_PROXY=$PROXY
-export ftp_proxy=$PROXY
-export HTTP_PROXY=$PROXY
-export http_proxy=$PROXY
-export HTTPS_PROXY=$PROXY
-export https_proxy=$PROXY
-
-gsettings set org.gnome.system.proxy mode 'manual' 
-gsettings set org.gnome.system.proxy.http host '127.0.0.1'
-gsettings set org.gnome.system.proxy.http port 7890
-gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
-gsettings set org.gnome.system.proxy.ftp port 7890
-gsettings set org.gnome.system.proxy.https host '127.0.0.1'
-gsettings set org.gnome.system.proxy.https port 7890
-gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
-gsettings set org.gnome.system.proxy.socks port 7891
-
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	exec startx ~/.config/xorg/xinitrc dwm
 fi
