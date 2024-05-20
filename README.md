@@ -2,7 +2,7 @@
 
 ### dependencies:
 
-- bc btop cmus fastfetch git gvim imlib2 lf libxss lolcat polkit python-pywal xcape xcompmgr xdo xwallpaper xorg-xrandr zoxide
+- bc btop cmus emby-theater fastfetch firefox git gvim imlib2 lf libxss lolcat polkit python-pywal steam xcape xcompmgr xdo xwallpaper xorg-xrandr zoxide
 - noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols
 - dwm https://github.com/yahngming/dwm
 - dmenu https://github.com/yahngming/dmenu
@@ -11,6 +11,5 @@
 - xssstate https://git.suckless.org/xssstate
 - yay https://aur.archlinux.org/yay.git
 - atool bat ctpv ffmpegthumbnailer git-delta glow jq perl-file-mimeinfo perl-image-exiftool poppler trash-cli ueberzug
-- android-tools clash cmatrix figlet fzf maim man-db mpv nsxiv rsync xclip
-- emby-theater firefox libreoffice-fresh steam
+- android-tools clash cmatrix figlet fzf libreoffice-fresh maim man-db mpv nsxiv rsync xclip
 - fcitx5-chinese-addons fcitx5-im
