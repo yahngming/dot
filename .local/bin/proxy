@@ -1,3 +1,5 @@
+#!/bin/sh
+
 export PROXY="http://127.0.0.1:7890"
 export ALL_PROXY=$PROXY
 export all_proxy=$PROXY
