@@ -11,4 +11,5 @@
 - mkdir ~/.local/src && cd ~/.local/src
 - git clone https://github.com/yahngming/dot
 - cd ~/.local/src/dot/.local/bin && bash post
-- curl -o ~/.config/clash/config.yaml path/to/clash
+- curl -o ~/.config/clash/config.yaml *path/to/clash*
+- reboot
