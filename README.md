@@ -8,8 +8,10 @@ atool bat bc btop clash cmus ctpv dmenu dwm emby-theater eza fastfetch fcitx5-ch
 android-tools cmatrix figlet freecad keepassxc libreoffice-fresh maim man-db mpv nsxiv orca-slicer rsync sdrpp-git xclip
 
 ### post-install:
+```
 mkdir ~/.local/src && cd ~/.local/src
 git clone https://github.com/yahngming/dot
 cd ~/.local/src/dot/.local/bin && bash post
 curl -o ~/.config/clash/config.yaml *path/to/clash*
 reboot
+```
