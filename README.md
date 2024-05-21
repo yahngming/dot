@@ -10,4 +10,4 @@
 - slock https://github.com/yahngming/slock
 - yay https://aur.archlinux.org/yay.git
 - ctpv        
-- android-tools cmatrix figlet freecad libreoffice-fresh maim man-db mpv nsxiv orca-slicer rsync sdrpp-git xclip
+- android-tools cmatrix figlet freecad keepassxc libreoffice-fresh maim man-db mpv nsxiv orca-slicer rsync sdrpp-git xclip
