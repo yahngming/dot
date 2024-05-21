@@ -8,7 +8,7 @@
 - dmenu https://github.com/yahngming/dmenu
 - st https://github.com/yahngming/st
 - slock https://github.com/yahngming/slock
-- xssstate https://git.suckless.org/xssstate
+- xssstate https://github.com/yahngming/xssstate
 - yay https://aur.archlinux.org/yay.git
 - atool bat ctpv ffmpegthumbnailer git-delta glow jq perl-file-mimeinfo perl-image-exiftool poppler trash-cli ueberzug
 - android-tools cmatrix figlet fzf libreoffice-fresh maim man-db mpv nsxiv rsync xclip
