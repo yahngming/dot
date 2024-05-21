@@ -2,7 +2,7 @@
 
 ### dependencies:
 
-- bat bc btop clash cmus emby-theater fastfetch fd firefox fzf git gvim imlib2 lf libxss lolcat polkit python-pywal steam xcape xcompmgr xdo xwallpaper xorg-xrandr zoxide
+- bat bc btop clash cmus emby-theater eza fastfetch fd firefox fzf git gvim imlib2 lf libxss lolcat polkit python-pywal steam xcape xcompmgr xdo xwallpaper xorg-xrandr zoxide
 - noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols
 - dwm https://github.com/yahngming/dwm
 - dmenu https://github.com/yahngming/dmenu
