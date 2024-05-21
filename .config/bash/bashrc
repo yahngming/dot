@@ -12,6 +12,8 @@ alias ip='ip --color=auto'
 alias ll='ls -lahF --group-directories-first'
 alias ls='ls --color=auto'
 
+eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
+
 [[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
 fastfetch | lolcat
