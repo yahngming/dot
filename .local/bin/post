@@ -7,3 +7,8 @@ git clone https://github.com/yahngming/dmenu
 git clone https://github.com/yahngming/st
 git clone https://github.com/yahngming/slock
 git clone https://aur.archlinux.org/yay.git
+cd ~/.local/src/dwm && sudo make clean install
+cd ~/.local/src/dmenu && sudo make clean install
+cd ~/.local/src/st && sudo make clean install
+cd ~/.local/src/slock && sudo make clean install
+cd ~/.local/src/yay && makepkg -si
