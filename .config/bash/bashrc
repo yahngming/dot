@@ -2,13 +2,13 @@
 
 [[ -f /usr/share/git/completion/git-prompt.sh ]] && . /usr/share/git/completion/git-prompt.sh
 
-PS1='\[$(tput sc; tput setaf 3; printf "%*s" $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] '
+PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
 
-alias ,,='cd - >/dev/null 2>&1'
-alias ..='cd ..'
-alias cd='z'
-alias ll='eza --all --color=auto --git --git-repos --group-directories-first --icons=auto --long'
-alias ls='eza --color=auto --group-directories-first --icons=auto --no-filesize --no-permissions --no-time --no-user'
+alias ,,="cd - >/dev/null 2>&1"
+alias ..="cd .."
+alias cd="z"
+alias ll="eza --all --color=auto --git --git-repos --group-directories-first --icons=auto --long"
+alias ls="eza --color=auto --group-directories-first --icons=auto --no-filesize --no-permissions --no-time --no-user"
 
 _fzf_compgen_path() {
   fd --hidden --follow --exclude ".git" . "$1"
@@ -23,10 +23,10 @@ _fzf_comprun() {
   shift
 
   case "$command" in
-    cd)           fzf --preview 'eza --color=auto --tree {} | head -200'  "$@" ;;
+    cd)           fzf --preview "eza --color=auto --tree {} | head -200"  "$@" ;;
     export|unset) fzf --preview "eval 'echo \$'{}"                        "$@" ;;
-    ssh)          fzf --preview 'dig {}'                                  "$@" ;;
-    *)            fzf --preview 'bat --color=auto --number {}'            "$@" ;;
+    ssh)          fzf --preview "dig {}"                                  "$@" ;;
+    *)            fzf --preview "bat --color=auto --number {}"            "$@" ;;
   esac
 }
 
