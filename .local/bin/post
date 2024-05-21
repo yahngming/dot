@@ -13,3 +13,4 @@ cd ~/.local/src/st && sudo make clean install
 cd ~/.local/src/slock && sudo make clean install
 cd ~/.local/src/yay && makepkg -si
 yay -S ctpv
+bash ~/.local/src/dot/.local/bin/dot
