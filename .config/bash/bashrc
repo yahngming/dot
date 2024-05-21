@@ -11,11 +11,11 @@ alias ll="eza --all --color=always --git --git-repos --group-directories-first -
 alias ls="eza --color=always --group-directories-first --icons=always --no-filesize --no-permissions --no-time --no-user"
 
 _fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
+  fd --exclude ".git" . "$1" --follow --hidden
 }
 
 _fzf_compgen_dir() {
-  fd --type directory --hidden --follow --exclude ".git" . "$1"
+  fd --exclude ".git" . "$1" --follow --hidden --type directory
 }
 
 _fzf_comprun() {
