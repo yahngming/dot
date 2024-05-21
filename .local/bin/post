@@ -13,5 +13,5 @@ cd ~/.local/src/st && sudo make clean install
 cd ~/.local/src/slock && sudo make clean install
 cd ~/.local/src/yay && makepkg -si
 yay -S ctpv
-mkdir -p ~/Pictures/wallpapers && curl -o ~/Pictures/wallpapers/default.png https://w.wallhaven.cc/full/wy/wallhaven-wyr2lr.png
+mkdir -p ~/Pictures/wallpapers
 bash ~/.local/src/dot/.local/bin/dot
