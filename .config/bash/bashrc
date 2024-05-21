@@ -6,11 +6,8 @@ PS1='\[$(tput sc; tput setaf 3; printf "%*s" $COLUMNS $(__git_ps1); tput rc)\]\[
 
 alias ,,='cd - >/dev/null 2>&1'
 alias ..='cd ..'
-alias diff='diff --color=auto'
-alias grep='grep --color=auto'
-alias ip='ip --color=auto'
-alias ll='ls -lahF --group-directories-first'
-alias ls='ls --color=auto'
+alias ll='eza --all --color=auto --git --git-repos --group-directories-first --icons=auto --long'
+alias ls='eza --color=auto --group-directories-first --icons=auto --no-filesize --no-permissions --no-time --no-user'
 
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
