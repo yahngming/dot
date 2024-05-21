@@ -24,9 +24,9 @@ _fzf_comprun() {
 
   case "$command" in
     cd)           fzf --preview "eza --color=always --tree {} | head -200" "$@" ;;
-    export|unset) fzf --preview "eval 'echo \$'{}"                         "$@" ;;
-    ssh)          fzf --preview "dig {}"                                   "$@" ;;
-    *)            fzf --preview "bat --color=always --number {}"           "$@" ;;
+    export|unset) fzf --preview "eval 'echo \$'{}" "$@" ;;
+    ssh)          fzf --preview "dig {}" "$@" ;;
+    *)            fzf --preview "if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {};" "$@" ;;
   esac
 }
 
