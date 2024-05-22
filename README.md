@@ -7,7 +7,7 @@ sudo pacman -S git && mkdir -p ~/.local/src && cd ~/.local/src && git clone http
 
 ### system proxy:
 ```sh
-curl -Lo ~/.config/clash/config.yaml path/to/clash
+curl -Lo ~/.config/clash/config.yaml https://path/to/clash
 ```
 
 ### other applications:
