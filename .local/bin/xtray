@@ -42,7 +42,7 @@ vol() {
 	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 	vol="${vol#Volume: }"
 	vol="$(printf "%.0f" "$(cut "$vol" ".")")"
-	printf " 󰕾 "
+	printf " 󰕾 "
 	printf " $vol "
 }
 
