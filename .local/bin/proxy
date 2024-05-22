@@ -11,7 +11,6 @@ if pidof clash >/dev/null; then
 	done
 	echo "Proxy Off"
 else
-	clash &
 	for envar in $PROXY_ENV; do
 		export $envar="http://${PROXY_HOST}:${PROXY_PORT}"
 	done
