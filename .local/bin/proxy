@@ -1,13 +1,7 @@
 #!/bin/sh
 
-   proxy_value="http://127.0.0.1:7890"
-   no_proxy_value="localhost,127.0.0.1,LocalAddress,LocalDomain.com"
-   PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
-   for envar in $PROXY_ENV
-   do
-      export $envar=$proxy_value
-   done
-   for envar in "no_proxy NO_PROXY"
-   do
-      export $envar=$no_proxy_value
-   done
+PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
+for envar in $PROXY_ENV
+do
+	export $envar="http://127.0.0.1:7890"
+done
