@@ -4,13 +4,16 @@ PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP
 PROXY_HOST="127.0.0.1"
 PROXY_PORT="7890"
 
-if $ALL_PROXY; then
-	for envar in $PROXY_ENV; do
+if $ALL_PROXY
+then
+	for envar in $PROXY_ENV
+	do
 		unset $envar
 	done
 	echo "Proxy Off"
 else
-	for envar in $PROXY_ENV; do
+	for envar in $PROXY_ENV
+	do
 		export $envar="http://${PROXY_HOST}:${PROXY_PORT}"
 	done
 	echo "Proxy On"
