@@ -36,15 +36,14 @@ proxy(){
 	PROXY_PORT="7890"
 	if $all_proxy; then
 		for envar in $PROXY_ENV; do
-			export $envar="http://${PROXY_HOST}:${PROXY_PORT}"
-		done
-		echo "Proxy On"
-	else
-		for envar in $PROXY_ENV; do
 			unset $envar
-			echo $envar
 		done
 		echo "Proxy Off"
+	else
+		for envar in $PROXY_ENV; do
+			export $envar="http://$PROXY_HOST:$PROXY_PORT"
+		done
+		echo "Proxy On"
 	fi
 }
 
