@@ -1,14 +1,7 @@
 [[ $- != *i* ]] && return
 
 [[ -f /usr/share/git/completion/git-prompt.sh ]] && . /usr/share/git/completion/git-prompt.sh
-
-PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
-
-alias ,,="cd - >/dev/null 2>&1"
-alias ..="cd .."
-alias cd="z"
-alias ll="eza --all --color=always --git --git-repos --group-directories-first --icons=always --long"
-alias ls="eza --color=always --group-directories-first --icons=always --no-filesize --no-permissions --no-time --no-user"
+[[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
 
 _fzf_compgen_path() {
 	fd --exclude ".git" . "$1" --follow --hidden
@@ -58,8 +51,15 @@ proxy(){
 	fi
 }
 
+PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
+
+alias ,,="cd - >/dev/null 2>&1"
+alias ..="cd .."
+alias cd="z"
+alias ll="eza --all --color=always --git --git-repos --group-directories-first --icons=always --long"
+alias ls="eza --color=always --group-directories-first --icons=always --no-filesize --no-permissions --no-time --no-user"
+
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
-[[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
 fastfetch | lolcat
