@@ -13,6 +13,6 @@ cd ~/.local/src/st && sudo make clean install
 cd ~/.local/src/slock && sudo make clean install
 cd ~/.local/src/yay && makepkg -si
 yay -S ctpv
-mkdir -p ~/.config/clash && curl -o ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
-mkdir -p ~/Pictures/wallpapers && curl -o ~/Pictures/wallpapers/default.png https://w.wallhaven.cc/full/wy/wallhaven-wyr2lr.png
+mkdir -p ~/.config/clash && curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
+mkdir -p ~/Pictures/wallpapers && curl -Lo ~/Pictures/wallpapers/default.png https://w.wallhaven.cc/full/wy/wallhaven-wyr2lr.png
 bash ~/.local/src/dot/.local/bin/dot
