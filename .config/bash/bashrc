@@ -39,7 +39,7 @@ proxy(){
 		for envar in $PROXY_ENV; do
 			export $envar="http://$PROXY_HOST:$PROXY_PORT"
 		done
-		gsettings set org.gnome.system.proxy mode "manual"
+		gsettings set org.gnome.system.proxy mode 'manual'
 		gsettings set org.gnome.system.proxy.ftp host $PROXY_HOST
 		gsettings set org.gnome.system.proxy.ftp port $PROXY_PORT
 		gsettings set org.gnome.system.proxy.http host $PROXY_HOST
@@ -53,7 +53,7 @@ proxy(){
 		for envar in $PROXY_ENV; do
 			unset $envar
 		done
-		gsettings set org.gnome.system.proxy mode "none"
+		gsettings set org.gnome.system.proxy mode 'none'
 		echo "Proxy Off"
 	fi
 }
