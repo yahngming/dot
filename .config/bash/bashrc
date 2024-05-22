@@ -34,7 +34,7 @@ proxy(){
 	PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
 	PROXY_HOST="127.0.0.1"
 	PROXY_PORT="7890"
-	if [[ "$all_proxy"=="" ]]; then
+	if [[ -z "$ALL_PROXY" ]]; then
 		for envar in $PROXY_ENV; do
 			export $envar="http://$PROXY_HOST:$PROXY_PORT"
 		done
