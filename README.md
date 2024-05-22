@@ -12,7 +12,8 @@ android-tools cmatrix figlet freecad keepassxc libreoffice-fresh maim man-db mpv
 
 ### post-install:
 ```
-mkdir ~/.local/src && cd ~/.local/src && git clone https://github.com/yahngming/dot
+sudo pacman -S git
+mkdir -p ~/.local/src && cd ~/.local/src && git clone https://github.com/yahngming/dot
 bash ~/.local/src/dot/.local/bin/post
 curl -o ~/.config/clash/config.yaml path/to/clash
 reboot
