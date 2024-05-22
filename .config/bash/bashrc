@@ -11,23 +11,48 @@ alias ll="eza --all --color=always --git --git-repos --group-directories-first -
 alias ls="eza --color=always --group-directories-first --icons=always --no-filesize --no-permissions --no-time --no-user"
 
 _fzf_compgen_path() {
-  fd --exclude ".git" . "$1" --follow --hidden
+	fd --exclude ".git" . "$1" --follow --hidden
 }
 
 _fzf_compgen_dir() {
-  fd --exclude ".git" . "$1" --follow --hidden --type directory
+	fd --exclude ".git" . "$1" --follow --hidden --type directory
 }
 
 _fzf_comprun() {
-  local command=$1
-  shift
+	local command=$1
+	shift
 
-  case "$command" in
-    cd)           fzf --preview "eza --color=always --tree {} | head -200" "$@" ;;
-    export|unset) fzf --preview "eval 'echo \$'{}" "$@" ;;
-    ssh)          fzf --preview "dig {}" "$@" ;;
-    *)            fzf --preview "if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi" "$@" ;;
-  esac
+	case "$command" in
+		cd)           fzf --preview "eza --color=always --tree {} | head -200" "$@" ;;
+		export|unset) fzf --preview "eval 'echo \$'{}" "$@" ;;
+		ssh)          fzf --preview "dig {}" "$@" ;;
+		*)            fzf --preview "if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi" "$@" ;;
+	esac
+}
+
+proxy(){
+	PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
+	PROXY_HOST="127.0.0.1"
+	PROXY_PORT="7890"
+	if $all_proxy; then
+		for envar in $PROXY_ENV; do
+			export $envar="http://$PROXY_HOST:$PROXY_PORT"
+		done
+		echo "Proxy On"
+	else
+		for envar in $PROXY_ENV; do
+			unset $envar
+		done
+		echo "Proxy Off"
+	fi
+}
+
+clrProxy(){
+    PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
+    for envar in $PROXY_ENV
+    do
+       unset $envar
+    done
 }
 
 eval "$(fzf --bash)"
