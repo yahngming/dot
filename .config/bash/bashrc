@@ -38,22 +38,22 @@ proxy(){
 	if [[ -z "$ALL_PROXY" ]]; then
 		for envar in $PROXY_ENV; do
 			export $envar="http://$PROXY_HOST:$PROXY_PORT"
-			gsettings set org.gnome.system.proxy mode "manual"
-			gsettings set org.gnome.system.proxy.ftp host $PROXY_HOST
-			gsettings set org.gnome.system.proxy.ftp port $PROXY_PORT
-			gsettings set org.gnome.system.proxy.http host $PROXY_HOST
-			gsettings set org.gnome.system.proxy.http port $PROXY_PORT
-			gsettings set org.gnome.system.proxy.https host $PROXY_HOST
-			gsettings set org.gnome.system.proxy.https port $PROXY_PORT
-			gsettings set org.gnome.system.proxy.socks host $PROXY_HOST
-			gsettings set org.gnome.system.proxy.socks port $SOCKS_PORT
 		done
+		gsettings set org.gnome.system.proxy mode "manual"
+		gsettings set org.gnome.system.proxy.ftp host $PROXY_HOST
+		gsettings set org.gnome.system.proxy.ftp port $PROXY_PORT
+		gsettings set org.gnome.system.proxy.http host $PROXY_HOST
+		gsettings set org.gnome.system.proxy.http port $PROXY_PORT
+		gsettings set org.gnome.system.proxy.https host $PROXY_HOST
+		gsettings set org.gnome.system.proxy.https port $PROXY_PORT
+		gsettings set org.gnome.system.proxy.socks host $PROXY_HOST
+		gsettings set org.gnome.system.proxy.socks port $SOCKS_PORT
 		echo "Proxy On"
 	else
 		for envar in $PROXY_ENV; do
 			unset $envar
-			gsettings set org.gnome.system.proxy mode "none"
 		done
+		gsettings set org.gnome.system.proxy mode "none"
 		echo "Proxy Off"
 	fi
 }
