@@ -11,7 +11,7 @@ brt() {
 }
 
 clk() {
-	printf " 󱑆 "
+	printf " 󱑆󰥔 "
 	printf " $(date '+%H:%M') "
 }
 
