@@ -6,7 +6,6 @@ xtray &
 xset s 600 &
 xidle slock &
 fcitx5 &
-clash &
 session=${1:-dwm}
 case $session in
 	dwm      ) exec dwm;;
