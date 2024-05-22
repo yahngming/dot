@@ -4,8 +4,7 @@ PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP
 PROXY_HOST="127.0.0.1"
 PROXY_PORT="7890"
 
-if pidof clash >/dev/null; then
-	kill $(pidof clash)
+if $ALL_PROXY; then
 	for envar in $PROXY_ENV; do
 		unset $envar
 	done
