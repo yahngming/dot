@@ -1,27 +1,13 @@
 #!/bin/sh
 
-assignProxy(){
+   proxy_value="http://127.0.0.1:7890"
+   no_proxy_value="localhost,127.0.0.1,LocalAddress,LocalDomain.com"
    PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
    for envar in $PROXY_ENV
    do
-      export $envar=$1
+      export $envar=$proxy_value
    done
    for envar in "no_proxy NO_PROXY"
    do
-      export $envar=$2
+      export $envar=$no_proxy_value
    done
-}
-
-clrProxy(){
-    PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
-    for envar in $PROXY_ENV
-    do
-       unset $envar
-    done
-}
-
-myProxy(){
-   proxy_value="http://127.0.0.1:7890"
-   no_proxy_value="localhost,127.0.0.1,LocalAddress,LocalDomain.com"
-   assignProxy $proxy_value $no_proxy_value
-}
