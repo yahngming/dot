@@ -1,0 +1,18 @@
+#!/bin/bash
+
+PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
+PROXY_ADD="http://127.0.0.1:7890"
+
+if pidof clash >/dev/null; then
+	kill $(pidof clash)
+	for envar in $PROXY_ENV; do
+		unset $envar
+	done
+	echo "Proxy Off"
+else
+	clash &
+	for envar in $PROXY_ENV; do
+		export $envar=$PROXY_ADD
+	done
+	echo "Proxy On"
+fi
