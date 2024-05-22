@@ -42,17 +42,10 @@ proxy(){
 	else
 		for envar in $PROXY_ENV; do
 			unset $envar
+			echo $envar
 		done
 		echo "Proxy Off"
 	fi
-}
-
-clrProxy(){
-    PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
-    for envar in $PROXY_ENV
-    do
-       unset $envar
-    done
 }
 
 eval "$(fzf --bash)"
