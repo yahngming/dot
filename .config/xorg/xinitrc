@@ -9,9 +9,9 @@ fcitx5 &
 clash &
 session=${1:-dwm}
 case $session in
-	dwm          ) exec dwm ;;
-	gnome        ) exec gnome-session ;;
-	kde          ) exec startplasma-x11 ;;
-	xfce         ) exec startxfce4 ;;
-	*            ) exec $1 ;;
+	dwm   ) exec dwm ;;
+	gnome ) exec gnome-session ;;
+	kde   ) exec startplasma-x11 ;;
+	xfce  ) exec startxfce4 ;;
+	*     ) exec $1 ;;
 esac
