@@ -14,3 +14,7 @@ curl -Lo ~/.config/clash/config.yaml https://path/to/clash
 ```sh
 yay -S android-tools cmatrix figlet freecad keepassxc libreoffice-fresh maim man-db mpv nsxiv orca-slicer rsync sdrpp-git xclip
 ```
+
+### chrome os:
+```sh
+sudo apt install bat eza fastfetch fd fzf git gvim lolcat zoxide
