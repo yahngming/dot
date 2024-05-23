@@ -11,14 +11,19 @@ sudo apt install git && mkdir -p ~/.local/src && cd ~/.local/src && git clone ht
 ```
 
 ### chromeos fonts:
-chrome-untrusted://terminal/html/nassh_preferences_editor.html
-```sh
+open chrome-untrusted://terminal/html/nassh_preferences_editor.html
+Put this in "Custom CSS" field:
+```
 @font-face {
     font-family: "Symbols Nerd Font";
     src: url("https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/NerdFontsSymbolsOnly/SymbolsNerdFont-Regular.ttf");
     font-weight: normal;
     font-style: normal;
 }
+```
+Prepend this in "Text font family" field:
+```
+"Symbols Nerd Font",
 ```
 
 ### system proxy:
