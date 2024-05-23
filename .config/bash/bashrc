@@ -25,22 +25,11 @@ _fzf_comprun() {
 
 proxy(){
 	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
-	PROXY_HOST="127.0.0.1"
-	PROXY_PORT="7890"
-	SOCKS_PORT="7891"
 	if [[ -z "$ALL_PROXY" ]]; then
 		for envar in $PROXY_ENV; do
-			export $envar="http://$PROXY_HOST:$PROXY_PORT"
+			export $envar="http://127.0.0.1:7890"
 		done
 		gsettings set org.gnome.system.proxy mode 'manual'
-		gsettings set org.gnome.system.proxy.ftp host $PROXY_HOST
-		gsettings set org.gnome.system.proxy.ftp port $PROXY_PORT
-		gsettings set org.gnome.system.proxy.http host $PROXY_HOST
-		gsettings set org.gnome.system.proxy.http port $PROXY_PORT
-		gsettings set org.gnome.system.proxy.https host $PROXY_HOST
-		gsettings set org.gnome.system.proxy.https port $PROXY_PORT
-		gsettings set org.gnome.system.proxy.socks host $PROXY_HOST
-		gsettings set org.gnome.system.proxy.socks port $SOCKS_PORT
 		echo "Proxy On"
 	else
 		for envar in $PROXY_ENV; do
