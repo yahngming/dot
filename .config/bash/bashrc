@@ -72,4 +72,8 @@ alias ls="eza --color=always --group-directories-first --icons=always --no-files
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
-fastfetch | lolcat
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+	exec startx ~/.config/xorg/xinitrc dwm
+else
+	fastfetch | lolcat
+fi
