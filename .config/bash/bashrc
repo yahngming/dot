@@ -15,10 +15,10 @@ _fzf_comprun() {
 	local command=$1
 	shift
 	case "$command" in
-		cd)           fzf --preview "eza --color=always --tree {} | head -200" "$@" ;;
-		export|unset) fzf --preview "eval 'echo \$'{}" "$@" ;;
-		ssh)          fzf --preview "dig {}" "$@" ;;
-		*)            fzf --preview "if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi" "$@" ;;
+		cd           ) fzf --preview "eza --color=always --tree {} | head -200" "$@" ;;
+		export|unset ) fzf --preview "eval 'echo \$'{}" "$@" ;;
+		ssh          ) fzf --preview "dig {}" "$@" ;;
+		*            ) fzf --preview "if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi" "$@" ;;
 	esac
 }
 
