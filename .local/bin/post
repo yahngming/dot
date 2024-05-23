@@ -24,7 +24,6 @@ arch() {
 	gsettings set org.gnome.system.proxy.https port 7890
 	gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.socks port 7891
-	bash ~/.local/src/dot/.local/bin/dot
 }
 
 chromeos() {
@@ -41,5 +40,13 @@ chromeos() {
 	ln -s ~/.local/src/fzf/bin/* ~/.local/bin
 }
 
-distro=${1:-arch}
+help() {
+	echo "Usage: post [options]"
+	echo "        help            print this message"
+	echo "        arch            run post install script on Arch"
+	echo "        chromeos        run post install script on ChromeOS"
+}
+
+distro=${1:-help}
 $distro
+bash ~/.local/src/dot/.local/bin/dot
