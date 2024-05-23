@@ -15,4 +15,12 @@ cd ~/.local/src/yay && makepkg -si
 yay -S ctpv
 mkdir -p ~/.config/clash && curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 mkdir -p ~/Pictures/wallpapers && curl -Lo ~/Pictures/wallpapers/default.png https://w.wallhaven.cc/full/wy/wallhaven-wyr2lr.png
+gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
+gsettings set org.gnome.system.proxy.ftp port 7890
+gsettings set org.gnome.system.proxy.http host '127.0.0.1'
+gsettings set org.gnome.system.proxy.http port 7890
+gsettings set org.gnome.system.proxy.https host '127.0.0.1'
+gsettings set org.gnome.system.proxy.https port 7890
+gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
+gsettings set org.gnome.system.proxy.socks port 7891
 bash ~/.local/src/dot/.local/bin/dot
