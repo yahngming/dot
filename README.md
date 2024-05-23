@@ -22,5 +22,5 @@ wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sud
 echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 sudo apt update
-sudo apt install bat eza fastfetch fd-find fzf git gvim lolcat zoxide
+sudo apt install bat eza fastfetch fd-find fzf git vim lolcat zoxide
 ln -s $(which fdfind) ~/.local/bin/fd
