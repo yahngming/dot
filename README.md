@@ -25,6 +25,7 @@ sudo apt update
 sudo apt install bat eza fastfetch fd-find lolcat vim
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.local/src/fzf && ~/.local/src/fzf/install
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+ln -s /usr/bin/batcat ~/.local/bin/bat
 ln -s $(which fdfind) ~/.local/bin/fd
 ln -s ~/.local/src/fzf/bin/* ~/.local/bin
 ```
