@@ -26,3 +26,4 @@ sudo apt install bat eza fastfetch fd-find git vim lolcat
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.local/src/fzf && ~/.local/src/fzf/install
 ln -s $(which fdfind) ~/.local/bin/fd
+ln -s ~/.local/src/fzf/bin/* ~/.local/bin
