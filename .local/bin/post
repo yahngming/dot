@@ -1,26 +1,34 @@
 #!/bin/sh
 
-sudo pacman -Syu --needed atool base-devel bat bc btop clash cmus emby-theater eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fzf git git-delta glow gvim imlib2 jq lf libxss lolcat noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols perl-file-mimeinfo perl-image-exiftool polkit poppler python-pywal steam trash-cli ueberzug xcape xcompmgr xdo xorg-xrandr xssstate xwallpaper zoxide
-cd ~/.local/src
-git clone https://github.com/yahngming/dwm
-git clone https://github.com/yahngming/dmenu
-git clone https://github.com/yahngming/st
-git clone https://github.com/yahngming/slock
-git clone https://aur.archlinux.org/yay.git
-cd ~/.local/src/dwm && sudo make clean install
-cd ~/.local/src/dmenu && sudo make clean install
-cd ~/.local/src/st && sudo make clean install
-cd ~/.local/src/slock && sudo make clean install
-cd ~/.local/src/yay && makepkg -si
-yay -S ctpv
-mkdir -p ~/.config/clash && curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
-mkdir -p ~/Pictures/wallpapers && curl -Lo ~/Pictures/wallpapers/default.png https://w.wallhaven.cc/full/wy/wallhaven-wyr2lr.png
-gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
-gsettings set org.gnome.system.proxy.ftp port 7890
-gsettings set org.gnome.system.proxy.http host '127.0.0.1'
-gsettings set org.gnome.system.proxy.http port 7890
-gsettings set org.gnome.system.proxy.https host '127.0.0.1'
-gsettings set org.gnome.system.proxy.https port 7890
-gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
-gsettings set org.gnome.system.proxy.socks port 7891
-bash ~/.local/src/dot/.local/bin/dot
+arch() {
+	sudo pacman -Syu --needed atool base-devel bat bc btop clash cmus emby-theater eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fzf git git-delta glow gvim imlib2 jq lf libxss lolcat noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols perl-file-mimeinfo perl-image-exiftool polkit poppler python-pywal steam trash-cli ueberzug xcape xcompmgr xdo xorg-xrandr xssstate xwallpaper zoxide
+	cd ~/.local/src
+	git clone https://github.com/yahngming/dwm
+	git clone https://github.com/yahngming/dmenu
+	git clone https://github.com/yahngming/st
+	git clone https://github.com/yahngming/slock
+	git clone https://aur.archlinux.org/yay.git
+	cd ~/.local/src/dwm && sudo make clean install
+	cd ~/.local/src/dmenu && sudo make clean install
+	cd ~/.local/src/st && sudo make clean install
+	cd ~/.local/src/slock && sudo make clean install
+	cd ~/.local/src/yay && makepkg -si
+	yay -S ctpv
+	mkdir -p ~/.config/clash && curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
+	mkdir -p ~/Pictures/wallpapers && curl -Lo ~/Pictures/wallpapers/default.png https://w.wallhaven.cc/full/wy/wallhaven-wyr2lr.png
+	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
+	gsettings set org.gnome.system.proxy.ftp port 7890
+	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
+	gsettings set org.gnome.system.proxy.http port 7890
+	gsettings set org.gnome.system.proxy.https host '127.0.0.1'
+	gsettings set org.gnome.system.proxy.https port 7890
+	gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
+	gsettings set org.gnome.system.proxy.socks port 7891
+	bash ~/.local/src/dot/.local/bin/dot
+}
+
+chromeos() {
+}
+
+distro=${1:-arch}
+$distro
