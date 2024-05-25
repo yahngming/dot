@@ -15,7 +15,7 @@ chrome-untrusted://terminal/html/nassh_preferences_editor.html
 ```
 @font-face {
   font-family: "Symbols Nerd Font";
-  src: url("https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/NerdFontsSymbolsOnly/SymbolsNerdFont-Regular.ttf");
+  src: url("https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts/patched-fonts/NerdFontsSymbolsOnly/SymbolsNerdFont-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
