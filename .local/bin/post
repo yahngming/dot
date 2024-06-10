@@ -37,6 +37,7 @@ chromeos() {
 	sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
 	sudo apt update
 	sudo apt install bat eza fastfetch fd-find lolcat vim
+	sudo apt install --install-recommends winehq-stable
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.local/src/fzf && ~/.local/src/fzf/install
 	curl -sSfL https://cdn.jsdelivr.net/gh/ajeetdsouza/zoxide/install.sh | sh
 	ln -s /usr/bin/batcat ~/.local/bin/bat
