@@ -16,7 +16,6 @@ arch() {
 	yay -S ctpv
 	mkdir -p ~/.config/clash && curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 	mkdir -p ~/Pictures/wallpapers && curl -Lo ~/Pictures/wallpapers/arch.png https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
-	mkdir -p ~/Pictures/wallpapers && curl -Lo ~/Pictures/wallpapers/thinkpad.png https://i.imgur.com/1k4iugT.png
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
