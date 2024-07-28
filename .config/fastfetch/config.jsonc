@@ -8,6 +8,9 @@
             "2": "green",
             "3": "blue",
             "4": "white"
+        },
+        "padding": {
+            "left": 1
         }
     },
     "display": {
