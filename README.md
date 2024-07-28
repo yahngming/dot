@@ -26,7 +26,12 @@ chrome-untrusted://terminal/html/nassh_preferences_editor.html
 curl -Lo ~/.config/clash/config.yaml https://path/to/clash
 ```
 
+### password database:
+```sh
+curl -Lo ~/.config/keepassxc/passwords.kdbx https://path/to/keepass
+```
+
 ### other applications:
 ```sh
-android-tools cmatrix figlet freecad keepassxc libreoffice-fresh maim man-db mpv nsxiv orca-slicer rclone rsync sdrpp-git xclip
+android-tools cmatrix figlet freecad libreoffice-fresh maim man-db mpv nsxiv orca-slicer rclone rsync sdrpp-git xclip
 ```
