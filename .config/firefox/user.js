@@ -1265,3 +1265,6 @@ user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
+// override
+user_pref("privacy.resistFingerprinting.letterboxing", false);
