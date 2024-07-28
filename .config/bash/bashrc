@@ -60,8 +60,6 @@ PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[
 
 alias ,,="cd - >/dev/null 2>&1"
 alias ..="cd .."
-alias dosbox="dosbox -conf ~/.config/dosbox/dosbox.conf"
-alias firefox="firefox -profile ~/.config/firefox"
 alias ll="eza --all --color=always --git --git-repos --group-directories-first --icons=always --long"
 
 eval "$(fzf --bash)"
