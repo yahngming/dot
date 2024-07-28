@@ -4,8 +4,10 @@
         "source": "~/.config/fastfetch/thinkpad.txt",
         "type": "file",
         "color": {
-            "1": "red",
-            "2": "white"
+            "1": "white",
+            "2": "grey",
+            "3": "yellow",
+            "4": "red"
         }
     },
     "display": {
