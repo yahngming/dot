@@ -57,5 +57,5 @@ help() {
 	echo "  chromeos        run post install script on ChromeOS"
 }
 
-distro=${1:-exit}
+distro=${1:-help}
 $distro
