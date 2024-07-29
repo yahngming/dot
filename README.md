@@ -7,7 +7,7 @@ bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/.local/bin/post) arch
 
 ### chromeos post:
 ```sh
-sudo apt install git && mkdir -p ~/.local/src && cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/post chromeos
+bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/.local/bin/post) chromeos
 ```
 
 ### chromeos fonts:
