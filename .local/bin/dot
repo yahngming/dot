@@ -3,6 +3,6 @@
 cd ~/.local/src/dot
 git pull
 cp -r ~/.local/src/dot/. ~/
-rm -rf ~/.git ~/README.md
+rm -rf ~/.git ~/README.md ~/postinstall.sh
 chmod +x ~/.local/bin/* 2> /dev/null
 cd - >/dev/null 2>&1
