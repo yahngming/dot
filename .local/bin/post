@@ -7,6 +7,7 @@ arch() {
 	mkdir -p ~/Pictures/screenshots
 	mkdir -p ~/Pictures/wallpapers
 	cd ~/.local/src
+	git clone https://github.com/yahngming/dot
 	git clone https://github.com/yahngming/dwm
 	git clone https://github.com/yahngming/dmenu
 	git clone https://github.com/yahngming/st
