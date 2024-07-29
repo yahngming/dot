@@ -2,12 +2,12 @@
 
 ### arch post:
 ```sh
-bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/.local/bin/post) arch
+bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) arch
 ```
 
 ### chromeos post:
 ```sh
-bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/.local/bin/post) chromeos
+bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) chromeos
 ```
 
 ### chromeos fonts:
