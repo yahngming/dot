@@ -2,7 +2,7 @@
 
 ### arch post:
 ```sh
-bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/.local/bin/post)
+bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/.local/bin/post) arch
 ```
 
 ### chromeos post:
