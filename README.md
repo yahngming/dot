@@ -2,7 +2,7 @@
 
 ### arch post:
 ```sh
-sudo pacman -S git && mkdir -p ~/.local/src && cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/post arch
+bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/.local/bin/post)
 ```
 
 ### chromeos post:
