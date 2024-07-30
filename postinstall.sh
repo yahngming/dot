@@ -1,7 +1,7 @@
 #!/bin/sh
 
 arch() {
-	sudo pacman --sync --needed --refresh --sysupgrade atool base-devel bat bc btop clash cmus emby-theater eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fzf git git-delta glow gvim imlib2 jq keepassxc lf libxss lolcat maim man-db mpv noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv ttf-nerd-fonts-symbols perl-file-mimeinfo perl-image-exiftool polkit poppler python-pywal steam trash-cli ueberzug xcape xclip xcompmgr xdo xorg-xrandr xssstate xwallpaper zoxide
+	sudo pacman -Syu atool base-devel bat bc btop clash cmus emby-theater eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fzf git git-delta glow gvim imlib2 jq keepassxc lf libxss lolcat maim man-db mpv noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv ttf-nerd-fonts-symbols perl-file-mimeinfo perl-image-exiftool polkit poppler python-pywal steam trash-cli ueberzug xcape xclip xcompmgr xdo xorg-xrandr xssstate xwallpaper zoxide
 	mkdir -p ~/.config/clash
 	mkdir -p ~/.local/src
 	mkdir -p ~/Pictures/screenshots
