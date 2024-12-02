@@ -27,8 +27,9 @@ cut() {
 }
 
 net() {
+	SSID="$(iw dev "${1:?}" info | grep ssid | cut -d ' ' -f2- )"
 	case "$(cat /sys/class/net/ens*/operstate 2>/dev/null)" in
-		up   ) printf " 󰤨 %s" " Connected" ;;
+		up   ) printf " 󰤨 %s" " $SSID" ;;
 		down ) printf " 󰤭 %s" " Disconnected" ;;
 	esac
 }
