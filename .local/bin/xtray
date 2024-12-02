@@ -1,13 +1,13 @@
 #!/bin/sh
 
 bat() {
-	printf "  "
-	printf " $(cat /sys/class/power_supply/BAT0/capacity)"
+	bat="$(cat /sys/class/power_supply/BAT0/capacity)"
+	[ "$bat" ] && printf "  %s"  " $bat "
 }
 
 brt() {
-	printf "  "
-	printf " %.0f\n" $(cat /sys/class/backlight/*/brightness)
+	brt="$(cat /sys/class/backlight/*/brightness)"
+	[ "$brt" ] && printf "  %.0f\n"  " $brt "
 }
 
 clk() {
