@@ -28,7 +28,7 @@ cut() {
 
 net() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-		up   ) printf " 󰤨 %s" " Connected" ;;
+		up   ) printf " 󰤨 %s" " $(iw dev "${1:?}" info | grep ssid | cut -d ' ' -f2- ) " ;;
 		down ) printf " 󰤭 %s" " Disconnected" ;;
 	esac
 }
