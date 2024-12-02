@@ -26,13 +26,8 @@ cut() {
 	printf '%s' "$@"
 }
 
-ram() {
-	printf "  "
-	printf " $(free -h | awk '(NR==2){ print $4 }' | sed s/i//g)"
-}
-
 net() {
-	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+	case "$(cat /sys/class/net/ens*/operstate 2>/dev/null)" in
 		up   ) printf " 󰤨 %s" " Connected" ;;
 		down ) printf " 󰤭 %s" " Disconnected" ;;
 	esac
@@ -47,5 +42,5 @@ vol() {
 }
 
 while true; do
-	sleep 1 && xprop -root -set WM_NAME "$(vol) $(clk)"
+	sleep 1 && xprop -root -set WM_NAME "$(net) $(vol) $(clk)"
 done
