@@ -25,8 +25,6 @@ arch() {
 chromeos() {
 	sudo apt install git
 	mkdir -p ~/.local/src
-	cd ~/.local/src
-	git clone https://github.com/yahngming/dot
 	sudo dpkg --add-architecture i386
 	sudo mkdir -pm755 /etc/apt/keyrings
 	wget -qO- https://cdn.jsdelivr.net/gh/eza-community/eza/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
@@ -42,7 +40,7 @@ chromeos() {
 	ln -s /usr/bin/batcat ~/.local/bin/bat
 	ln -s $(which fdfind) ~/.local/bin/fd
 	ln -s ~/.local/src/fzf/bin/* ~/.local/bin
-	bash ~/.local/src/dot/.local/bin/dot
+	cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/dot
 }
 
 help() {
