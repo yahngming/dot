@@ -16,8 +16,8 @@ clk() {
 }
 
 cpu() {
-	printf "  "
-	printf " $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
+	cpu="$(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
+	[ "$cpu" ] && printf "  %s" " $cpu "
 }
 
 cut() {
@@ -27,8 +27,9 @@ cut() {
 }
 
 net() {
+	net="$(iw dev "${1:?}" info | grep ssid | cut -d ' ' -f2- )"
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-		up   ) printf " 󰤨 %s" " $(iw dev "${1:?}" info | grep ssid | cut -d ' ' -f2- ) " ;;
+		up   ) printf " 󰤨 %s" " $net " ;;
 		down ) printf " 󰤭 %s" " Disconnected " ;;
 	esac
 }
