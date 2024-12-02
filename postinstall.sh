@@ -2,11 +2,7 @@
 
 arch() {
 	sudo pacman -Syu aerc atool base-devel bat bc btop clash cmus eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fzf git git-delta glow gvim imlib2 jq keepassxc less lf libxss lolcat maim man-db mpv noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv ttf-nerd-fonts-symbols perl-file-mimeinfo perl-image-exiftool polkit poppler python-pywal steam trash-cli ueberzug xcape xclip xcompmgr xdo xorg-xrandr xssstate xwallpaper zoxide
-	mkdir -p ~/.config/clash
-	mkdir -p ~/.local/src
-	mkdir -p ~/Pictures/screenshots
-	mkdir -p ~/Pictures/wallpapers
-	cd ~/.local/src
+	mkdir -p ~/Pictures/screenshots && mkdir -p ~/.local/src && cd ~/.local/src
 	git clone https://github.com/yahngming/dot
 	git clone https://github.com/yahngming/dwm
 	git clone https://github.com/yahngming/dmenu
@@ -19,8 +15,8 @@ arch() {
 	cd ~/.local/src/slock && sudo make clean install
 	cd ~/.local/src/yay && makepkg -si
 	yay -S ctpv
-	cd ~/.config/clash && curl -LO https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
-	cd ~/Pictures/wallpapers && curl -LO https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
+	mkdir -p ~/.config/clash && cd ~/.config/clash && curl -LO https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
+	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -LO https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
