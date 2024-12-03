@@ -28,5 +28,5 @@ curl -Lo ~/.config/clash/config.yaml https://path/to/clash
 
 ### other applications:
 ```sh
-android-tools cmatrix emby-theater figlet freecad libreoffice-fresh orca-slicer rclone rsync sdrpp-git
+android-tools cmatrix emby-theater figlet freecad keepassxc libreoffice-fresh orca-slicer rclone rsync sdrpp-git
 ```
