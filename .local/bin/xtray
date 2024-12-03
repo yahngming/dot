@@ -11,8 +11,7 @@ brt() {
 }
 
 clk() {
-	printf " 󰥔 "
-	printf " $(date '+%H:%M') "
+	printf " 󰥔 %s"  " $(date '+%H:%M') "
 }
 
 cpu() {
@@ -24,6 +23,11 @@ cut() {
 	IFS=$2
 	set -- $1
 	printf '%s' "$@"
+}
+
+gpu() {
+	gpu="$(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
+	[ "$gpu" ] && printf "  %s" " $gpu "
 }
 
 net() {
@@ -38,10 +42,9 @@ vol() {
 	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 	vol="${vol#Volume: }"
 	vol="$(printf "%.0f" "$(cut "$vol" ".")")"
-	printf " 󰕾 "
-	printf " $vol "
+	printf " 󰕾 %s"  " $vol "
 }
 
 while true; do
-	sleep 1 && xprop -root -set WM_NAME "$(cpu) $(bat) $(net) $(vol) $(clk)"
+	sleep 0.5 && xprop -root -set WM_NAME "$(cpu) $(gpu) $(bat) $(net) $(vol) $(clk)"
 done
