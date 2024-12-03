@@ -9,6 +9,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd ~/.local/src/slock && sudo make clean install
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd ~/.local/src/yay && makepkg -si
 	yay -S ctpv
+ 	yay -S newsraft
 	mkdir -p ~/.config/clash && cd ~/.config/clash && curl -LO https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -LO https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
