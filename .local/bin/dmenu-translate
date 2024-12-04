@@ -47,9 +47,9 @@ load_config() {
 
 	# Default values
 	: "${TRANS_LANGS:=:zh :en}"
-	: "${DMENU_TEXT:=${DMENU} -i -p 'Translate: Text'}"
-	: "${DMENU_LANG:=${DMENU} -i -p 'Translate: Into'}"
-	: "${DMENU_NEXT:=${DMENU} -i -p 'Translate: Next?'}"
+	: "${DMENU_TEXT:=${DMENU} -p 'Translate: Text'}"
+	: "${DMENU_LANG:=${DMENU} -p 'Translate: Into'}"
+	: "${DMENU_NEXT:=${DMENU} -p 'Translate: Next?'}"
 }
 
 formatmenu() {
