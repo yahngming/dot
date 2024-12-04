@@ -35,11 +35,10 @@ load_config() {
 	fi
 
 	# Default values
-	: "${TRANS_LANGS:=:zh :en :ja}"
+	: "${TRANS_LANGS:=:zh :ja :en}"
 	: "${DMENU_TEXT:=${DMENU}}"
 	: "${DMENU_LANG:=${DMENU}}"
 	: "${DMENU_NEXT:=${DMENU}}"
-	: "${ALWAYS_COPY:=true}"
 }
 
 formatmenu() {
