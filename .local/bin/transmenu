@@ -77,7 +77,7 @@ save_file() (
 )
 
 open_term() {
-	${TERMINAL} -e ${PAGER:-'less -R'} "$(save_file "$1")"
+	${TERMINAL} -e ${PAGER:-'less'} -R "$(save_file "$1")"
 }
 
 get_text() {
