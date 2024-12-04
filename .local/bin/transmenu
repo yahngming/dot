@@ -25,13 +25,13 @@ load_config() {
 		: "${CLIP_PASTE_CLIP:=wl-paste}"
 		: "${CLIP_PASTE_PRIM:=wl-paste -p}"
 		: "${DMENU:=wmenu}"
-		: "${TERMINAL=foot}"
+		: "${TERMINAL:=foot}"
 	else
 		: "${CLIP_COPY:=xclip -i -r -selection clipboard}"
 		: "${CLIP_PASTE_CLIP:=xclip -o -selection clipboard}"
 		: "${CLIP_PASTE_PRIM:=xclip -o -selection primary}"
 		: "${DMENU:=dmenu}"
-		: "${TERMINAL=st}"
+		: "${TERMINAL:=st}"
 	fi
 
 	# Default values
