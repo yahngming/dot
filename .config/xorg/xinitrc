@@ -1,13 +1,13 @@
 xrandr --output Virtual1 --mode 1920x1080 --rate 100
 clash &
 fcitx5 &
+keyboard &
+statusbar &
+wallpaper &
 xcompmgr &
-xidle slock &
-xkey &
 xrdb -merge ~/.config/xorg/xresources &
 xset s 600 &
-xtray &
-xwall &
+xsidle slock &
 session=${1:-dwm}
 case $session in
 	dwm   ) exec dwm ;;
