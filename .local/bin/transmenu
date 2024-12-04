@@ -123,7 +123,7 @@ target="$(lang_menu | eval "$DMENU_LANG" "$@")" || exit 0
 }
 
 # Translate text
-translation="$(trans -brief "$target" "$text")"
+translation="$(trans -b "$target" "$text")"
 [ -z "$translation" ] && err 'Failed to translate'
 
 case "$(choose_next "$translation" "$@")" in
