@@ -57,6 +57,7 @@ clip_menu() {
 
 lang_menu() {
 	echo "$TRANS_LANGS" | sed 's/\s\+/\n/g' | sed '/:/!s/^/:/'
+	echo '[Define]'
 }
 
 choose_next() {
