@@ -66,11 +66,7 @@ choose_next() {
 	if [ -n "$ALWAYS_COPY" ]; then
 		echo 'Copy'
 	else
-		eval "$DMENU_NEXT" "$@" <<-EOF
-			Copy: $(formatmenu "$t")
-			Copy temp file name
-			View
-		EOF
+		echo 'View'
 	fi
 }
 
@@ -81,7 +77,7 @@ save_file() (
 )
 
 open_term() {
-	${TERMINAL} -e ${PAGER:-'less'} -R "$(save_file "$1")"
+	${TERMINAL} -e ${PAGER:-'less -R'} "$(save_file "$1")"
 }
 
 get_text() {
