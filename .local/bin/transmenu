@@ -74,7 +74,7 @@ choose_next() {
 }
 
 save_file() (
-	tmp="$(mktemp --tmpdir 'dmenu-translate.XXXXXX')"
+	tmp="$(mktemp --tmpdir 'transmenu.XXXXXX')"
 	echo "$1" > "$tmp"
 	echo "$tmp"
 )
@@ -116,7 +116,7 @@ text="$(get_text "$text" "$clip_menu")"
 target="$(lang_menu | eval "$DMENU_LANG" "$@")" || exit 0
 
 # Translate text
-translation="$(trans "$target" "$text")"
+translation="$(trans -brief "$target" "$text")"
 [ -z "$translation" ] && err 'Failed to translate'
 
 case "$(choose_next "$translation" "$@")" in
@@ -128,4 +128,4 @@ esac
 
 echo "$output" | eval "$CLIP_COPY" || err 'Failed to copy! Is CLIP_COPY setting set properly?'
 
-notify-send 'dmenu-translate' 'Translation copied to clipboard!'
+notify-send 'transmenu' 'Translation copied to clipboard!'
