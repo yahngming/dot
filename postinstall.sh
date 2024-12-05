@@ -7,6 +7,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd ~/.local/src/dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd ~/.local/src/st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd ~/.local/src/slock && sudo make clean install
+	cd ~/.local/src && git clone https://github.com/yahngming/herbe && cd ~/.local/src/herbe && sudo make clean install
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd ~/.local/src/yay && makepkg -si
 	yay -S ctpv
  	yay -S newsraft
