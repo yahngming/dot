@@ -10,7 +10,7 @@ bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) arch
 bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) chromeos
 ```
 
-### chromeos fonts:
+### chromeos font:
 chrome-untrusted://terminal/html/nassh_preferences_editor.html
 ```
 @font-face {
@@ -26,7 +26,9 @@ chrome-untrusted://terminal/html/nassh_preferences_editor.html
 curl -Lo ~/.config/clash/config.yaml https://path/to/clash
 ```
 
-### other applications:
+### other packages:
 ```sh
-android-tools cmatrix emby-theater figlet freecad keepassxc libreoffice-fresh orca-slicer rclone rsync sdrpp-git
+sudo pacman -S android-tools emby-theater freecad keepassxc libreoffice-fresh rclone rsync
+yay orca-slicer
+yay sdrpp-git
 ```
