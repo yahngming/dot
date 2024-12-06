@@ -29,6 +29,6 @@ curl -Lo ~/.config/clash/config.yaml https://path/to/clash
 ### other packages:
 ```sh
 sudo pacman -S android-tools emby-theater freecad keepassxc libreoffice-fresh rclone rsync
-yay orca-slicer
-yay sdrpp-git
+yay -S orca-slicer
+yay -S sdrpp-git
 ```
