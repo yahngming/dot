@@ -1,8 +1,10 @@
 #!/bin/sh
 
 case $(file --mime-type -Lb "$@") in
+	audio/*  ) mpv "$@" ;;
+	image/*  ) nsxiv "$@" ;;
 	text/*   ) bat --paging always "$@" ;;
-	images/* ) nsxiv "$@" ;;
+	video/*  ) mpv "$@" ;;
 	*office* ) libreoffice "$@" ;;
 	*        ) /usr/bin/xdg-open "$@" ;;
 esac
