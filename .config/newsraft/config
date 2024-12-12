@@ -1,1 +1,1 @@
-bind V exec mimeopen "%l"
+bind O exec mimeopen "%l"
