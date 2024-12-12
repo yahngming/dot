@@ -35,7 +35,7 @@ cmd zz ${{
 # define a custom 'open' command
 cmd open &{{
 	case $(file --mime-type -Lb $f) in
-		text/* ) lf -remote "send $id \$$PAGER \$fx" ;;
+		text/* ) lf -remote "send $id \$$VIEWER \$fx" ;;
 		*      ) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done ;;
 	esac
 }}
