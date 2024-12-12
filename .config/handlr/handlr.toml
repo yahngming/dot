@@ -6,4 +6,4 @@ regexes = ['(https://)?(www\.)?youtu(be\.com|\.be)/*.']
 [[handlers]]
 exec = "nsxiv-url %u"
 terminal = true
-regexes = ['(https?:\/\/.*\.(?:png|jpg))']
+regexes = ['(https?:\/\/.*\.(?:gif|jpeg|jpg|png))']
