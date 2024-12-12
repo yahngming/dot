@@ -20,7 +20,7 @@ map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
 map a push %mkdir<space>
-map o open
+map o &handlr open $f
 map p :paste; clear
 map x $$f
 map X !$f
