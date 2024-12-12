@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 cache_dir="${TMPDIR:-/tmp}/nsxiv"
 
