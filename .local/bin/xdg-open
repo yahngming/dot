@@ -1,9 +1,10 @@
 #!/bin/sh
 
 case $(file --mime-type -Lb "$@") in
-	image/*  ) nsxiv "$@" ;;
+	audio/*  ) mpv --audio-display=no "$@" ;;
+	image/*  ) setsid -f nsxiv -aio 2>/dev/null "$@" ;;
 	text/*   ) bat --paging always "$@" ;;
-	video/*  ) mpv "$@" ;;
-	*office* ) libreoffice "$@" ;;
+	video/*  ) setsid -f mpv -quiet >/dev/null 2>&1 "$@" ;;
+	*office* ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
 	*        ) /usr/bin/xdg-open "$@" ;;
 esac
