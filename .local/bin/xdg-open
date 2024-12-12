@@ -4,24 +4,16 @@ file=$(basename "$@")
 extn="${file##*.}"
 extp="*${extn}*"
 
-images="png jpg gif JPG"
-movies="mp4 avi ogm mkv webm flv"
-audios="mp3 ogg flac"
-ftmods="MOD XM mod xm"
-otmods="s3m it"
+images="png jpg gif jpeg"
+medias="mp3 ogg flac mp4 avi ogm mkv webm flv"
+office="pdf docx xlsx pttx"
 
 if [[ $images = $extp ]]; then
-        sxiv "$@"
-elif [[ $movies = $extp ]]; then
-        mplayer "$@"
-elif [[ $audios = $extp ]]; then
-        mplayer "$@"
-elif [[ $ftmods = $extp ]]; then
-        ft2-clone "$@" &
-elif [[ $otmods = $extp ]]; then
-        modplug123 "$@"
-elif [[ "$extn" = "pdf" ]]; then
-        xpdf "$@"
+	nsxiv "$@"
+elif [[ $medias = $extp ]]; then
+	mpv "$@"
+elif [[ $office = $extp ]]; then
+	libreoffice "$@"
 else
-        /usr/bin/xdg-open "$@"
+	/usr/bin/xdg-open "$@"
 fi
