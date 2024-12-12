@@ -5,4 +5,4 @@ regexes = ['(https://)?(www\.)?youtu(be\.com|\.be)/*.']
 
 exec = "nsxiv-url %u"
 terminal = true
-regexes = ['/(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg))/i']
+regexes = ['/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|png|svg))/i']
