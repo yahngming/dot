@@ -41,7 +41,7 @@ proxy(){
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
 export HISTCONTROL="ignoreboth:erasedups"
-export BROWSER="firefox"
+export BROWSER="firefox --profile ~/.config/firefox"
 export EDITOR="vim"
 export LESS="-R"
 export OPENER="mimeopen"
