@@ -4,14 +4,11 @@ file=$(basename "$@")
 extn="${file##*.}"
 extp="*${extn}*"
 
-images="png jpg gif jpeg"
-medias="mp3 ogg flac mp4 avi ogm mkv webm flv"
-office="pdf docx xlsx pttx"
+images="gif jpeg jpg png"
+office="docx pdf pttx xlsx"
 
 if [[ $images = $extp ]]; then
 	nsxiv "$@"
-elif [[ $medias = $extp ]]; then
-	mpv "$@"
 elif [[ $office = $extp ]]; then
 	libreoffice "$@"
 else
