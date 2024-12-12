@@ -1,16 +1,8 @@
 #!/bin/sh
 
-file=$(basename "$@")
-extn="${file##*.}"
-extp="*${extn}*"
-
-images="gif jpeg jpg png"
-office="docx pdf pttx xlsx"
-
-if [[ $images = $extp ]]; then
-	nsxiv "$@"
-elif [[ $office = $extp ]]; then
-	libreoffice "$@"
-else
-	/usr/bin/xdg-open "$@"
-fi
+case $(file --mime-type -Lb "$@") in
+	text/* ) bat --paging always "$@";;
+	images/* ) nsxiv "$@";;
+	*office* ) libreoffice "$@";;
+	* ) /usr/bin/xdg-open "$@";;
+esac
