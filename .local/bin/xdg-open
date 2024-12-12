@@ -2,7 +2,7 @@
 
 case $(file --mime-type -Lb "$@") in
 	audio/*  ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
-	image/*  ) setsid -f nsxiv 2>/dev/null "$@" ;;
+	image/*  ) nsxiv "$@" ;;
 	text/*   ) bat --paging always "$@" ;;
 	video/*  ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
 	*office* ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
