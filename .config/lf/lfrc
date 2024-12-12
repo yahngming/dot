@@ -19,8 +19,9 @@ map <delete> %trash-put $fx
 map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
-map p :paste; clear
 map a push %mkdir<space>
+map o open
+map p :paste; clear
 map x $$f
 map X !$f
 map zz push :zz<space>
