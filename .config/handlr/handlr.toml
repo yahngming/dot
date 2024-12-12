@@ -1,0 +1,4 @@
+[[handlers]]
+exec = "mpv %u"
+terminal = true
+regexes = ['(https://)?(www\.)?youtu(be\.com|\.be)/*.']
