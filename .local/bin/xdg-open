@@ -1,7 +1,6 @@
 #!/bin/sh
 
 case $(file --mime-type -Lb "$@") in
-	audio/*  ) mpv "$@" ;;
 	image/*  ) nsxiv "$@" ;;
 	text/*   ) bat --paging always "$@" ;;
 	video/*  ) mpv "$@" ;;
