@@ -3,6 +3,7 @@ exec = "mpv %u"
 terminal = true
 regexes = ['(https://)?(www\.)?youtu(be\.com|\.be)/*.']
 
+[[handlers]]
 exec = "nsxiv-url %u"
 terminal = true
 regexes = ['/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|png|svg))/i']
