@@ -43,7 +43,7 @@ proxy(){
 export HISTCONTROL="ignoreboth:erasedups"
 export BROWSER="firefox --profile $HOME/.config/firefox"
 export EDITOR="vim"
-export LESS="-R"
+export LESS="-IR"
 export OPENER="xdg-open"
 export PAGER="less"
 export TERMINAL="st"
