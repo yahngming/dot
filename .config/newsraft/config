@@ -1,1 +1,1 @@
-bind O exec mimeopen "%l"
+bind o exec $OPENER "%l"
