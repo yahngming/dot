@@ -20,7 +20,7 @@ map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
 map a push %mkdir<space>
-map o open
+map o &$OPENER $f
 map p :paste; clear
 map x $$f
 map X !$f
@@ -35,7 +35,7 @@ cmd zz ${{
 # define a custom 'open' command
 cmd open &{{
 	case $(file --mime-type -Lb $f) in
-		text/* ) lf -remote "send $id \$$VIEWER \$fx" ;;
+		text/* ) lf -remote "send $id \$$PAGER \$fx" ;;
 		*      ) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done ;;
 	esac
 }}
