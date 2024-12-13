@@ -2,9 +2,10 @@
 
 case $(file --mime-type -Lb "$@") in
 	audio/*  ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
-	image/*  ) nsxiv "$@" ;;
+	image/*  ) setsid -f nsxiv >/dev/null 2>&1  "$@" ;;
 	text/*   ) bat --paging always "$@" ;;
 	video/*  ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
 	*office* ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
+	*stream* ) bat --paging always "$@" ;;
 	*        ) /usr/bin/xdg-open "$@" ;;
 esac
