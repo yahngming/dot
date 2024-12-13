@@ -1,12 +1,11 @@
 #!/bin/sh
 
 case $(file --mime-type -Lb "$@") in
-	application/octet-stream ) vim "$@" ;;
-	application/pdf          ) setsid -f mupdf >/dev/null 2>&1 "$@" ;;
-	audio/*                  ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
-	image/*                  ) setsid -f nsxiv >/dev/null 2>&1  "$@" ;;
-	text/*                   ) bat --paging always "$@" ;;
-	video/*                  ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
-	*office*                 ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
-	*                        ) /usr/bin/xdg-open "$@" ;;
+	application/pdf ) setsid -f mupdf >/dev/null 2>&1 "$@" ;;
+	audio/*         ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
+	image/*         ) setsid -f nsxiv >/dev/null 2>&1  "$@" ;;
+	text/*          ) bat --paging always "$@" ;;
+	video/*         ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
+	*office*        ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
+	*               ) /usr/bin/xdg-open "$@" ;;
 esac
