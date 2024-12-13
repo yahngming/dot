@@ -1,7 +1,7 @@
 #!/bin/sh
 
 arch() {
-	sudo pacman -Syu aerc atool base-devel bat bc btop clash cmus eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fzf git git-delta glow gvim imlib2 jq less lf libreoffice-fresh libxss lolcat maim man-db mpv noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv openssh pass perl-image-exiftool polkit poppler python-pywal steam translate-shell trash-cli ttf-nerd-fonts-symbols ueberzug xcape xclip xcompmgr xdo xorg-xrandr xssstate xwallpaper zoxide
+	sudo pacman -Syu aerc atool base-devel bat bc btop clash cmus eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fzf git git-delta glow gvim imlib2 jq less lf libreoffice-fresh libxss lolcat maim man-db mpv noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv openssh pass perl-image-exiftool polkit poppler python-pywal steam translate-shell trash-cli ttf-nerd-fonts-symbols ueberzug xcape xclip xcompmgr xdo xorg-xrandr xssstate xwallpaper zathura zoxide
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd ~/.local/src/dwm && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd ~/.local/src/dmenu && sudo make clean install
