@@ -2,7 +2,7 @@
 
 case $(file --mime-type -Lb "$@") in
 	application/octet-stream ) bat --paging always "$@" ;;
-	application/pdf          ) setsid -f mupdf $fx >/dev/null 2>&1 ;;
+	application/pdf          ) setsid -f mupdf >/dev/null 2>&1 "$@" ;;
 	audio/*                  ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
 	image/*                  ) setsid -f nsxiv >/dev/null 2>&1  "$@" ;;
 	text/*                   ) bat --paging always "$@" ;;
