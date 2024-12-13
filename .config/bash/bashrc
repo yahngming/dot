@@ -60,7 +60,7 @@ export XMODIFIERS="@im=fcitx"
 
 PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
 
-alias gvim.desktop="vim"
+alias gvim="vim"
 alias ll="eza --all --color=always --git --git-repos --group-directories-first --icons=always --long"
 
 eval "$(fzf --bash)"
