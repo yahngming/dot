@@ -33,7 +33,7 @@ cmd zz ${{
 }}
 
 # define a custom 'open' command
-cmd open &{{
+cmd open ${{
 	$OPENER $f
 }}
 
