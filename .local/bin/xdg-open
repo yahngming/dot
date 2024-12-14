@@ -9,9 +9,8 @@ case $(file --mime-type -Lb "$@") in
 	*html*                                 ) w3m "$@" ;;
 	*json*|*xml*                           ) bat --paging always "$@" ;;
 	*markdown*                             ) glow --pager "$@" ;;
-	audio/*                                ) mpv --force-window "$@" ;;
+	audio/*|video/*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$@" ;;
 	image/*                                ) setsid -f nsxiv >/dev/null 2>&1  "$@" ;;
 	text/*                                 ) bat --paging always "$@" ;;
-	video/*                                ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
 	*                                      ) /usr/bin/xdg-open "$@" ;;
 esac
