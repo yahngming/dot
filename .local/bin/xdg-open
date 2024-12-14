@@ -5,7 +5,6 @@ case $(file --mime-type -Lb "$@") in
 	*diff*                                 ) delta --paging always < "$@" ;;
 	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
 	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
-	*font*                                 ) setsid -f fontimage >/dev/null 2>&1 "$@" ;;
 	*html*                                 ) w3m "$@" ;;
 	*json*|*xml*                           ) bat --paging always "$@" ;;
 	*markdown*                             ) glow --pager "$@" ;;
