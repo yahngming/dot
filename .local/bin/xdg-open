@@ -1,10 +1,16 @@
 #!/bin/sh
 
 case $(file --mime-type -Lb "$@") in
-	application/octet-stream|application/json|text/* ) bat --paging always "$@" ;;
-	application/pdf ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
-	image/* ) setsid -f nsxiv >/dev/null 2>&1  "$@" ;;
-	video/* ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
-	*office* ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
-	* ) /usr/bin/xdg-open "$@" ;;
+	*archive*|*compress*|*tar*|*rar*|*zip* ) als --page "$@" ;;
+	*diff*                                 ) delta --paging always "$@" ;;
+	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
+	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
+	*font*                                 ) setsid -f fontimage >/dev/null 2>&1 "$@" ;;
+	*html*                                 ) setsid -f w3m >/dev/null 2>&1 "$@" ;;
+	*json*|*xml*                           ) bat --paging always "$@" ;;
+	*markdown*                             ) glow --pager "$@" ;;
+	image/*                                ) setsid -f nsxiv >/dev/null 2>&1  "$@" ;;
+	text/*                                 ) bat --paging always "$@" ;;
+	video/*                                ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
+	*                                      ) /usr/bin/xdg-open "$@" ;;
 esac
