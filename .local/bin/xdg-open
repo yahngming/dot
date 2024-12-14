@@ -11,6 +11,6 @@ case $(file --mime-type -Lb "$@") in
 	*markdown*                             ) glow --pager "$@" ;;
 	image/*                                ) setsid -f nsxiv >/dev/null 2>&1  "$@" ;;
 	text/*                                 ) bat --paging always "$@" ;;
-	video/*                                ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
+	audio/*|video/*                        ) setsid -f mpv >/dev/null 2>&1 "$@" ;;
 	*                                      ) /usr/bin/xdg-open "$@" ;;
 esac
