@@ -2,7 +2,7 @@
 
 case $(file --mime-type -Lb "$@") in
 	*archive*|*compress*|*tar*|*rar*|*zip* ) als --page "$@" ;;
-	*diff*                                 ) delta --paging always "$@" ;;
+	*diff*                                 ) delta --paging always < "$@" ;;
 	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
 	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
 	*font*                                 ) setsid -f fontimage >/dev/null 2>&1 "$@" ;;
