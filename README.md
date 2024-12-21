@@ -23,6 +23,8 @@ chrome-untrusted://terminal/html/nassh_preferences_editor.html
 
 ### system proxy:
 ```sh
+mkdir -p ~/.config/clash
+curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 curl -Lo ~/.config/clash/config.yaml https://path/to/clash
 ```
 
