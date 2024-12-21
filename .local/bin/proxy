@@ -1,0 +1,16 @@
+proxy(){
+	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
+	if [[ -z "$ALL_PROXY" ]]; then
+		for envar in $PROXY_ENV; do
+			export $envar="http://127.0.0.1:7890"
+		done
+		gsettings set org.gnome.system.proxy mode 'manual'
+		echo "Proxy On"
+	else
+		for envar in $PROXY_ENV; do
+			unset $envar
+		done
+		gsettings set org.gnome.system.proxy mode 'none'
+		echo "Proxy Off"
+	fi
+}
