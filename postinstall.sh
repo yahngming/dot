@@ -4,6 +4,7 @@ arch() {
 	sudo pacman -Syu aerc atool base-devel bat bc btop clash cmus dante eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fontforge fzf git git-delta glow gvim jq less lf libreoffice-fresh lolcat maim man-db mpv noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv openssh pass perl-image-exiftool polkit poppler python-pywal steam translate-shell trash-cli ttf-nerd-fonts-symbols ueberzugpp w3m xcape xclip xcompmgr xdo xorg-xrandr xssstate xwallpaper zathura-pdf-poppler zoxide
  	mkdir -p ~/.config/clash
 	mkdir -p ~/.local/src
+	mkdir -p ~/Pictures/wallpapers
 	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd ~/.local/src/dwm && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd ~/.local/src/dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd ~/.local/src/st && sudo make clean install
@@ -12,6 +13,7 @@ arch() {
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd ~/.local/src/yay && makepkg -si
 	yay -S ctpv
  	yay -S newsraft
+	curl -Lo  ~/Pictures/wallpapers/arch.png https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
