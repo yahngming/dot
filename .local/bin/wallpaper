@@ -1,5 +1,8 @@
 #!/bin/sh
 
+if [ ! -d "~/Pictures/wallpapers" ]; then
+	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -LO https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
+fi
 wallpaper=$(find ~/Pictures/wallpapers/* | shuf -n 1)
 xwallpaper --zoom $wallpaper
 wal -n -i $wallpaper
