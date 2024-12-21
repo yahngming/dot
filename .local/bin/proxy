@@ -1,4 +1,4 @@
-proxy(){
+switch(){
 	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 	if [[ -z "$ALL_PROXY" ]]; then
 		for envar in $PROXY_ENV; do
@@ -14,3 +14,9 @@ proxy(){
 		echo "Proxy Off"
 	fi
 }
+
+update(){
+	mkdir -p ~/.config/clash
+	curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
+}
+
