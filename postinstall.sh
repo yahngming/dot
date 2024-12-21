@@ -11,7 +11,6 @@ arch() {
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd ~/.local/src/yay && makepkg -si
 	yay -S ctpv
  	yay -S newsraft
-	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -LO https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
