@@ -16,7 +16,6 @@ arch() {
  	yay -S newsraft
 	curl -Lo ~/.config/firefox/prefsCleaner.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
 	curl -Lo ~/.config/firefox/updater.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
-	curl -Lo ~/.config/firefox/user.js https://cdn.jsdelivr.net/gh/arkenfox/user.js/user.js
 	curl -Lo ~/Pictures/wallpapers/arch.png https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
  	chmod +x ~/.config/firefox/*.sh
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
