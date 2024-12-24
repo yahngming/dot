@@ -22,10 +22,11 @@ arch() {
 	gsettings set org.gnome.system.proxy.https port 7890
 	gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.socks port 7891
+	curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 	curl -Lo ~/.config/firefox/prefsCleaner.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
 	curl -Lo ~/.config/firefox/updater.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
 	curl -Lo ~/Pictures/wallpapers/arch.png https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
-	cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/dot
+	cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/dot && ~/.config/firefox/updater.sh
 }
 
 chromeos() {
