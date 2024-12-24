@@ -14,10 +14,6 @@ arch() {
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd ~/.local/src/yay && makepkg -si
 	yay -S ctpv
  	yay -S newsraft
-	curl -Lo ~/.config/firefox/prefsCleaner.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
-	curl -Lo ~/.config/firefox/updater.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
-	curl -Lo ~/Pictures/wallpapers/arch.png https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
- 	chmod +x ~/.config/firefox/*.sh
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
@@ -26,6 +22,10 @@ arch() {
 	gsettings set org.gnome.system.proxy.https port 7890
 	gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.socks port 7891
+	curl -Lo ~/.config/firefox/prefsCleaner.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
+	curl -Lo ~/.config/firefox/updater.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
+	curl -Lo ~/Pictures/wallpapers/arch.png https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
+ 	chmod +x ~/.config/firefox/*.sh
 	cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/dot
 }
 
