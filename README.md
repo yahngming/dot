@@ -22,6 +22,18 @@ chrome-untrusted://terminal/html/nassh_preferences_editor.html
 ```
 
 ### other packages:
+restore gpg keys and initiate pass
+```sh
+gpg --import
+gpg --edit-key
+pass init
+pass git init
+pass git remote add
+pass git pull
+```
+
+
+### other packages:
 ```sh
 sudo pacman -S android-tools emby-theater freecad keepassxc rclone rsync
 yay -S orca-slicer
