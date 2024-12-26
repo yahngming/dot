@@ -1,7 +1,6 @@
 #!/bin/sh
 
-cd ~/.local/src/clash && git pull
-cp -r ~/.local/src/clash/clash ~/.config/clash/config.yaml
+cd ~/.local/src/clash && git pull && cp -r ~/.local/src/clash/clash ~/.config/clash/config.yaml
 cd ~/.local/src/dot && git pull
 cp -r ~/.local/src/dot/. ~/
 chmod +x ~/.local/bin/* 2> /dev/null
