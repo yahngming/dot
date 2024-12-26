@@ -2,18 +2,19 @@
 
 arch() {
 	sudo pacman -Syu aerc atool base-devel bat bc btop clash cmus dante eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fontforge fzf git git-delta glow gvim jq less lf libreoffice-fresh lolcat maim man-db mpv noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv openssh pass perl-image-exiftool polkit poppler python-pywal steam translate-shell trash-cli ttf-nerd-fonts-symbols ueberzugpp w3m xcape xclip xcompmgr xdo xorg-xrandr xssstate xwallpaper zathura-pdf-poppler zoxide
- 	mkdir -p ~/.config/clash
-	mkdir -p ~/.config/firefox
 	mkdir -p ~/.local/src
-	mkdir -p ~/Pictures/wallpapers
-	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd ~/.local/src/dwm && sudo make clean install
-	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd ~/.local/src/dmenu && sudo make clean install
-	cd ~/.local/src && git clone https://github.com/yahngming/st && cd ~/.local/src/st && sudo make clean install
-	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd ~/.local/src/slock && sudo make clean install
-	cd ~/.local/src && git clone https://github.com/yahngming/herbe && cd ~/.local/src/herbe && sudo make clean install
-	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd ~/.local/src/yay && makepkg -si
+ 	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
+	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd dwm && sudo make clean install
+	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
+	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
+	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
+	cd ~/.local/src && git clone https://github.com/yahngming/herbe && cd herbe && sudo make clean install
+	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 	yay -S ctpv
  	yay -S newsraft
+	mkdir -p ~/.config/clash && cd ~/.config/clash && curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
+	mkdir -p ~/.config/firefox && cd ~/.config/firefox && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh && chmod +x *.sh && ./updater.sh
+	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
@@ -22,17 +23,12 @@ arch() {
 	gsettings set org.gnome.system.proxy.https port 7890
 	gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.socks port 7891
-	curl -Lo ~/.config/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
-	curl -Lo ~/.config/firefox/prefsCleaner.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
-	curl -Lo ~/.config/firefox/updater.sh https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
-	curl -Lo ~/Pictures/wallpapers/arch.png https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
- 	chmod +x ~/.config/firefox/*.sh
-	cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/dot && ~/.config/firefox/updater.sh
 }
 
 chromeos() {
 	sudo apt install git
 	mkdir -p ~/.local/src
+	cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/dot
 	sudo dpkg --add-architecture i386
 	sudo mkdir -pm755 /etc/apt/keyrings
 	wget -qO- https://cdn.jsdelivr.net/gh/eza-community/eza/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
@@ -48,7 +44,6 @@ chromeos() {
 	ln -s /usr/bin/batcat ~/.local/bin/bat
 	ln -s $(which fdfind) ~/.local/bin/fd
 	ln -s ~/.local/src/fzf/bin/* ~/.local/bin
-	cd ~/.local/src && git clone https://github.com/yahngming/dot && bash ~/.local/src/dot/.local/bin/dot
 }
 
 help() {
