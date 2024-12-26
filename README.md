@@ -1,13 +1,13 @@
 # dotfiles
 
-### pre install:
-```sh
-git clone https://gist.github.com/yahngming/$ID ~/.local/src/clash
-```
-
-### arch post:
+### arch:
+post
 ```sh
 bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) arch
+```
+clash:
+```sh
+git clone https://gist.github.com/yahngming/$ID ~/.local/src/clash
 ```
 
 ### chromeos post:
