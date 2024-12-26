@@ -1,6 +1,6 @@
 # dotfiles
 
-### arch:
+## arch:
 post
 ```sh
 bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) arch
