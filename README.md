@@ -2,7 +2,7 @@
 
 ### pre install:
 ```sh
-git clone https://gist.github.com/yahngming/#ID ~/.local/src/clash
+git clone https://gist.github.com/yahngming/$ID ~/.local/src/clash
 ```
 
 ### arch post:
