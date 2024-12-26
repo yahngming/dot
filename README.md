@@ -1,5 +1,10 @@
 # dotfiles
 
+### pre install:
+```sh
+git clone https://gist.github.com/yahngming/#ID ~/.local/src/clash
+```
+
 ### arch post:
 ```sh
 bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) arch
@@ -29,11 +34,6 @@ pass init
 pass git init
 pass git remote add
 pass git pull
-```
-
-### clash config:
-```sh
-git clone https://gist.github.com/yahngming/#ID ~/.local/src/clash
 ```
 
 ### other packages:
