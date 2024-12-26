@@ -21,8 +21,7 @@ chrome-untrusted://terminal/html/nassh_preferences_editor.html
 }
 ```
 
-### other packages:
-restore gpg keys and initiate pass
+### pass init:
 ```sh
 gpg --import
 gpg --edit-key
@@ -32,6 +31,10 @@ pass git remote add
 pass git pull
 ```
 
+### clash config:
+```sh
+git clone https://gist.github.com/yahngming/#ID ~/.local/src/clash
+```
 
 ### other packages:
 ```sh
