@@ -18,6 +18,12 @@ pass git init
 pass git remote add
 pass git pull
 ```
+other packages
+```sh
+sudo pacman -S android-tools emby-theater freecad keepassxc rclone rsync
+yay -S orca-slicer
+yay -S sdrpp-git
+```
 
 ## chromeos
 post install
@@ -32,11 +38,4 @@ chrome-untrusted://terminal/html/nassh_preferences_editor.html
   font-weight: normal;
   font-style: normal;
 }
-```
-
-## other packages:
-```sh
-sudo pacman -S android-tools emby-theater freecad keepassxc rclone rsync
-yay -S orca-slicer
-yay -S sdrpp-git
 ```
