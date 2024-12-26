@@ -11,12 +11,11 @@ git clone https://gist.github.com/$GISTID ~/.local/src/clash
 ```
 pass init
 ```sh
-gpg --import
-gpg --edit-key
+gpg -a --export-secret-keys > myprivatekeys.asc
+gpg --import myprivatekeys.asc
+gpg --edit-key $ID
 pass init
-pass git init
-pass git remote add
-pass git pull
+pass git clone
 ```
 other packages
 ```sh
