@@ -1,21 +1,29 @@
 # dotfiles
 
-## arch:
-post
+## arch
+post install
 ```sh
 bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) arch
 ```
-clash:
+clash config
 ```sh
 git clone https://gist.github.com/yahngming/$ID ~/.local/src/clash
 ```
+pass init
+```sh
+gpg --import
+gpg --edit-key
+pass init
+pass git init
+pass git remote add
+pass git pull
+```
 
-### chromeos post:
+## chromeos
+post install
 ```sh
 bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) chromeos
 ```
-
-### chromeos font:
 chrome-untrusted://terminal/html/nassh_preferences_editor.html
 ```
 @font-face {
@@ -26,17 +34,7 @@ chrome-untrusted://terminal/html/nassh_preferences_editor.html
 }
 ```
 
-### pass init:
-```sh
-gpg --import
-gpg --edit-key
-pass init
-pass git init
-pass git remote add
-pass git pull
-```
-
-### other packages:
+## other packages:
 ```sh
 sudo pacman -S android-tools emby-theater freecad keepassxc rclone rsync
 yay -S orca-slicer
