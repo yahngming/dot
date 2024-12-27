@@ -1,5 +1,6 @@
 #!/bin/sh
 
+setleds -D +num
 setxkbmap -option ctrl:swapcaps
 xcape -e 'Caps_Lock=Escape'
 xset -q | grep -q "Caps Lock:\s*on" && xdo key_press -k 66; sleep 0.2; xdo key_release -k 66
