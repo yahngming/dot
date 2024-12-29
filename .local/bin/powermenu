@@ -4,7 +4,7 @@ case "$(printf " top\n lock\n󰤄 sleep\n󰗽 logout\n reboot\n󰤆 shu
 	' top'      ) $TERMINAL -e btop ;;
 	' lock'     ) slock ;;
 	'󰤄 sleep'    ) slock systemctl suspend ;;
-	"󰗽 logout"   ) pkill dwm ;;
+	"󰗽 logout"   ) pkill -KILL -u $USER ;;
 	' reboot'   ) systemctl reboot ;;
 	'󰤆 shutdown' ) systemctl poweroff ;;
 	*            ) exit 1 ;;
