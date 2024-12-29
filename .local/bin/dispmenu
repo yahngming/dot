@@ -56,7 +56,7 @@ screens=$(echo "$displays" | awk '/ connected/ {print $1}')
 { onescreen "$screens"; postrun; notify-send "Only one screen detected." "Using it in its optimal settings...";  exit ;}
 
 # Get user choice including multi-monitor and manual selection.
-chosen=$(printf "%s\\nmulti-monitor\\nmanual selection" "$screens" | dmenu -i -p "Select display arangement:") &&
+chosen=$(printf "%s\\nmulti-monitor\\nmanual selection" "$screens" | dmenu -p "Select display arangement:") &&
 case "$chosen" in
 	"manual selection") arandr ; exit ;;
 	"multi-monitor") multimon ;;
