@@ -42,7 +42,7 @@ onescreen() { # If only one output available or chosen.
 }
 
 postrun() { # Stuff to run to clean up.
-	wallpaper
+	wallpaper &
 }
 
 # Get all possible displays.
