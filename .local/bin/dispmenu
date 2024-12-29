@@ -1,5 +1,9 @@
 #!/bin/sh
 
+onescreen() { # If only one output available or chosen.
+	xrandr --output "$1" --auto --scale 1.0x1.0 $(echo "$displays" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -)
+}
+
 twoscreen() { # If multi-monitor is selected and there are two screens.
 	mirror=$(printf "no\\nyes" | dmenu -p "Mirror displays?")
 	if [ "$mirror" = "yes" ]; then
@@ -17,7 +21,7 @@ twoscreen() { # If multi-monitor is selected and there are two screens.
 	else
 		primary=$(echo "$screens" | dmenu -p "Select primary display:")
 		secondary=$(echo "$screens" | grep -v ^"$primary"$)
-		direction=$(printf "left\\nright" | dmenu -p "Which side of $primary should $secondary be on?")
+		direction=$(printf "left\\nright" | dmenu -p "$secondary is on the:")
 		xrandr --output "$primary" --auto --scale 1.0x1.0 --output "$secondary" --"$direction"-of "$primary" --auto --scale 1.0x1.0
 	fi
 }
@@ -25,7 +29,7 @@ twoscreen() { # If multi-monitor is selected and there are two screens.
 morescreen() { # If multi-monitor is selected and there are more than two screens.
 	primary=$(echo "$screens" | dmenu -p "Select primary display:")
 	secondary=$(echo "$screens" | grep -v ^"$primary"$ | dmenu -p "Select secondary display:")
-	direction=$(printf "left\\nright" | dmenu -p "Which side of $primary should $secondary be on?")
+	direction=$(printf "left\\nright" | dmenu -p "$secondary is on the:")
 	tertiary=$(echo "$screens" | grep -v ^"$primary"$ | grep -v ^"$secondary"$ | dmenu -p "Select third display:")
 	xrandr --output "$primary" --auto --output "$secondary" --"$direction"-of "$primary" --auto --output "$tertiary" --"$(printf "left\\nright" | grep -v "$direction")"-of "$primary" --auto
 }
@@ -35,10 +39,6 @@ multimon() { # Multi-monitor handler.
 		2) twoscreen ;;
 		*) morescreen ;;
 	esac
-}
-
-onescreen() { # If only one output available or chosen.
-	xrandr --output "$1" --auto --scale 1.0x1.0 $(echo "$displays" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -)
 }
 
 postrun() { # Stuff to run to clean up.
@@ -55,7 +55,7 @@ screens=$(echo "$displays" | awk '/ connected/ {print $1}')
 [ "$(echo "$screens" | wc -l)" -lt 2 ] &&
 { onescreen "$screens"; postrun; exit ;}
 
-# Get user choice including multi-monitor and manual selection.
+# Main menu.
 chosen=$(printf "%s\\nMulti-monitor" "$screens" | dmenu) &&
 case "$chosen" in
 	"Multi-monitor") multimon ;;
