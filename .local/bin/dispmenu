@@ -42,7 +42,7 @@ onescreen() { # If only one output available or chosen.
 }
 
 postrun() { # Stuff to run to clean up.
-	wallpaper &
+	wallpaper >/dev/null 2>&1
 }
 
 # Get all possible displays.
@@ -53,13 +53,12 @@ screens=$(echo "$displays" | awk '/ connected/ {print $1}')
 
 # If there's only one screen.
 [ "$(echo "$screens" | wc -l)" -lt 2 ] &&
-{ onescreen "$screens"; postrun; notify-send "Only one screen detected." "Using it in its optimal settings...";  exit ;}
+{ onescreen "$screens"; postrun; exit ;}
 
 # Get user choice including multi-monitor and manual selection.
-chosen=$(printf "%s\\nmulti-monitor\\nmanual selection" "$screens" | dmenu -p "Select display arangement:") &&
+chosen=$(printf "%s\\nMulti-monitor" "$screens" | dmenu) &&
 case "$chosen" in
-	"manual selection") arandr ; exit ;;
-	"multi-monitor") multimon ;;
+	"Multi-monitor") multimon ;;
 	*) onescreen "$chosen" ;;
 esac
 
