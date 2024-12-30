@@ -1,11 +1,13 @@
 clash &
 fcitx5 &
-keyboard &
+setleds -D +num &
+setxkbmap -option ctrl:nocaps,shift:both_capslock &
 statusbar &
 wallpaper &
+xcape &
 xcompmgr &
 xrdb -merge ~/.config/xorg/xresources &
-xset s 600 &
+xset r rate 500 50 s 600 &
 xsidle slock &
 session=${1:-dwm}
 case $session in
