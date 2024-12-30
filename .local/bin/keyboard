@@ -3,6 +3,4 @@
 setleds -D +num
 setxkbmap -option ctrl:nocaps,shift:both_capslock
 xcape -e 'Caps_Lock=Escape'
-xmodmap ~/.config/xorg/xmodmap
-xset -q | grep -q "Caps Lock:\s*on" && xdo key_press -k 66; sleep 0.2; xdo key_release -k 66
 xset r rate 300 50
