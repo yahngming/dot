@@ -2,5 +2,5 @@
 
 setleds -D +num
 setxkbmap -option ctrl:nocaps,shift:both_capslock
-xcape -e 'Caps_Lock=Escape'
+xcape
 xset r rate 300 50
