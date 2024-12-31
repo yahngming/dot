@@ -2,7 +2,7 @@
 
 # Browse for mDNS/DNS-SD services using the Avahi daemon...
 srvname=$(avahi-browse _smb._tcp -t | awk '{print $4}' | dmenu) || exit 1
-notify-send "Searching for network shares..." "Please wait..."
+notify-send "Searching for network shares..."
 
 # Choose share disk...
 share=$(smbclient -L "$srvname" -N | grep Disk | awk '{print $1}' | dmenu) || exit 1
