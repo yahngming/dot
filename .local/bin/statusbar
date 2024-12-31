@@ -1,13 +1,8 @@
 #!/bin/sh
 
 bat() {
-	bat="$(cat /sys/class/power_supply/BAT0/capacity)"
+	bat="$(cat /sys/class/power_supply/BAT0/capacity)%"
 	[ "$bat" ] && printf " 󰁹 %s"  " $bat "
-}
-
-brt() {
-	brt="$(cat /sys/class/backlight/*/brightness)"
-	[ "$brt" ] && printf "  %.0f\n"  " $brt "
 }
 
 clk() {
