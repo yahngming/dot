@@ -21,10 +21,10 @@ iwd_dmenu() {
         get_network_info "iwctl station ${interface} get-networks"
 
         # user can choose network to connect to
-        network="$(show_menu 'Connect' "${network_names}")"
+        network="$(show_menu '' "${network_names}")"
 
         # if network starts with '> ' it means user is already on that network
-        case "${network}" in '> '*) herbe 'Already connected to this network' & return ;; esac
+        case "${network}" in '> '*) notify-send 'Already connected.' & return ;; esac
 
         get_network_info 'iwctl known-networks list'
 
@@ -50,7 +50,7 @@ iwd_dmenu() {
     disconnect() {
         connected_network="$(iwctl station "${interface}" show | grep -i '\<Connected network\>' | awk '{ $1=""; $2=""; sub("  ", " "); { $1=$1; print } }')"
         if [ -n "${connected_network}" ]; then
-            answer="$(show_menu "Disconnect from ${connected_network}?" 'Yes' 'No')"
+            answer="$(show_menu '' "Disconnect from ${connected_network}" 'Cancel')"
             case "$(printf '%s\n' "${answer}" | tr '[:upper:]' '[:lower:]')" in
                 'yes') iwctl station "${interface}" disconnect ;;
                 'no')  return                                  ;;
@@ -64,10 +64,10 @@ iwd_dmenu() {
         # if there are known networks
         if [ -n "${network_names}" ]; then
             # get network
-            network="$(show_menu 'Forget' "${network_names}")"
+            network="$(show_menu '' "${network_names}")"
 
             # get confirmation
-            [ -n "${network}" ] && answer="$(show_menu "Forget ${network}?" 'Yes' 'No')"
+            [ -n "${network}" ] && answer="$(show_menu '' "Forget ${network}?" 'Cancel')"
 
             # forget if answer is yes
             [ "${answer}" = 'Yes' ] && iwctl known-networks "${network}" forget
