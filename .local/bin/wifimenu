@@ -106,7 +106,7 @@ iwd_dmenu() {
     }
 
     # hide input with dmenu -P flag
-    get_passphrase() { passphrase="$(dmenu -c -p 'Passphrase:' -P)" ; }
+    get_passphrase() { passphrase="$(dmenu -c -p 'Passphrase:')" ; }
 
     show_menu() {
         # first arg is prompt
