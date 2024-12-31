@@ -1,48 +1,11 @@
 #!/bin/sh
 
-server_name=$(avahi-browse _smb._tcp -t | awk '{print $4}' | sort -u | dmenu) || exit 1
-ip_address=$(avahi-resolve-address "$server_name" | awk '/address = / {print $3}')
-netbios_name=$(avahi-browse -rt _smb._tcp | grep "$server_name" | grep "hostname =" | awk -F'"' '{print $2}')
-
-if [[ -n "$netbios_name" ]]; then
-    server="$netbios_name.local"
-elif [[ -n "$ip_address" ]]; then
-    server="$ip_address"
-else
-    server="$server_name"
-fi
-
+server=$(avahi-browse _smb._tcp -t | awk '{print $4}' | sort -u | dmenu) || exit 1
 notify-send "Searching for network shares on $server..."
-
-shares=$(smbclient -N -L "$server" 2>/dev/null | grep "Disk" | awk '{print $1}' | sort -u)
-if [[ -z "$shares" ]]; then
-    notify-send "No shares found on $server."
-    exit 1
-fi
-share=$(printf "%s\n" "$shares" | dmenu) || exit 1
-
-servershare="//${server}/${share}"
-
+shares=$(smbclient -N -L "$server" | grep "Disk" | awk '{print $1}' | sort -u | dmenu) || exit 1
+servershare=//"$server".local/"$share"
+clientmount="$HOME/Mount/${server}/${share}"
 username=$(dmenu -p "Username:" < /dev/null) || exit 1
 password=$(dmenu -p "Password:" -P) || exit 1
-
-sambamount() {
-    clientmount="$HOME/Mount/${server}/${share}"
-    mkdir -p "$clientmount"
-
-    if clientmount=$(clientmount "$clientmount"); then
-        notify-send "$share already mounted at $clientmount."
-        exit 1
-    fi
-
-    sudo mount -t cifs "$servershare" "$clientmount" -o username="$username",password="$password"
-    if [[ $? -eq 0 ]]; then
-        notify-send "$share mounted at $clientmount."
-        exit 0
-    else
-        notify-send "Failed to mount $share. Check credentials or server availability."
-        exit 1
-    fi
-}
-
-sambamount
+sudo mount -m -t cifs "$servershare" "$clientmount" -o username="$username",password="$password"
+notify-send "$share mounted at $clientmount."
