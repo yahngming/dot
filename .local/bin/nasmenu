@@ -10,6 +10,9 @@ share=$(smbclient -L "$srvname" -N | grep Disk | awk '{print $1}' | dmenu) || ex
 # Format URL...
 share2mnt=//"$srvname".local/"$share"
 
+username=$(dmenu -p "Username:" < /dev/null)
+password=$(dmenu -p "Password:" -P)
+
 sharemount() {
 	mounted=$(mount -v | grep "$share2mnt") || ([ ! -d /mnt/"$share" ] && sudo mkdir /mnt/"$share")
 	[ -z "$mounted" ] && sudo mount -t cifs "$share2mnt" /mnt/"$share" -o username="$username",password="$password" && notify-send "$share mounted." && exit 0
