@@ -15,7 +15,7 @@ password=$(dmenu -p "Password:" -P) || exit 1
 
 sharemount() {
 	mounted=$(mount -v | grep "$share2mnt") || ([ ! -d /mnt/"$share" ] && sudo mkdir /mnt/"$share")
-	[ -z "$mounted" ] && sudo mount -t cifs "$share2mnt" /mnt/"$share" -o username=$username,password=$password && notify-send "$share mounted." && exit 0
+	[ -z "$mounted" ] && sudo mount -t cifs "$share2mnt" /mnt/"$share" -o username="$username",password="$password" && notify-send "$share mounted." && exit 0
 	notify-send "$share already mounted."; exit 1
 }
 
