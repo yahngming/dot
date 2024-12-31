@@ -60,10 +60,10 @@ chosen="$(echo "$alldrives" | dmenu -p "Mount which drive?" -i)"
 
 # Function for prompting user for a mountpoint.
 getmount(){
-	mp="$(find /mnt /media /mount /home -maxdepth 1 -type d 2>/dev/null | dmenu -i -p "Mount this drive where?")"
+	mp="$(find /mnt /media /mount /home -maxdepth 1 -type d 2>/dev/null | dmenu -p "Mount this drive where?")"
 	test -n "$mp"
 	if [ ! -d "$mp" ]; then
-		mkdiryn=$(printf "No\\nYes" | dmenu -i -p "$mp does not exist. Create it?")
+		mkdiryn=$(printf "No\\nYes" | dmenu -p "$mp does not exist. Create it?")
 		[ "$mkdiryn" = "Yes" ] && (mkdir -p "$mp" || sudo -A mkdir -p "$mp")
 	fi
 }
