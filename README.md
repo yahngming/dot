@@ -13,7 +13,8 @@ pass init
 ```sh
 gpg --import keys.asc
 gpg --list-keys
-gpg --edit-key $GPGID
+gpg --edit-key $KEYID
+gpg> trust
 git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
 other packages
