@@ -1,9 +1,9 @@
 #!/bin/sh
 
-case "$(printf "WLAN\nBT\nDisplays\nMount Samba\nMount USB\nUnmount USB" | dmenu)" in
+case "$(printf "WLAN\nBluetooth\nDisplays\nMount Samba\nMount USB\nUnmount USB" | dmenu)" in
 	'WLAN'        ) wifimenu ;;
-	'BT'          ) btmenu ;;
-	'Displays'    ) dispmenu ;;
+	'Bluetooth'   ) btmenu ;;
+	'Monitors'    ) dispmenu ;;
 	"Mount Samba" ) nasmenu ;;
 	'Mount USB'   ) mountmenu ;;
 	'Unmount USB' ) umountmenu ;;
