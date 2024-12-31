@@ -26,6 +26,7 @@ arch() {
 	gsettings set org.gnome.system.proxy.https port 7890
 	gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.socks port 7891
+ 	fcitx5-configtool
 }
 
 chromeos() {
