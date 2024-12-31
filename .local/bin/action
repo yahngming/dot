@@ -1,12 +1,12 @@
 #!/bin/sh
 
 case "$(printf "WLAN\nBluetooth\nDisplays\nMount Samba\nMount USB\nUnmount USB\nPassword Manager" | dmenu)" in
-	'WLAN'             ) wifimenu ;;
+	'WLAN'             ) wlanmenu ;;
 	'Bluetooth'        ) btmenu ;;
-	'Monitors'         ) dispmenu ;;
-	"Mount Samba"      ) sambamenu ;;
-	'Mount USB'        ) mountmenu ;;
-	'Unmount USB'      ) umountmenu ;;
+	'Displays'         ) dispmenu ;;
+	"Mount Samba"      ) mountsamba ;;
+	'Mount USB'        ) mountusb ;;
+	'Unmount USB'      ) unmountusb ;;
 	'Password Manager' ) passmenu ;;
 	*                  ) exit 1 ;;
 esac
