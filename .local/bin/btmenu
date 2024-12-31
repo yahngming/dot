@@ -49,7 +49,6 @@ toggle_scan() {
     else
         bluetoothctl --timeout 5 scan on &
         echo "Scanning..."
-        sleep 5
         show_menu
     fi
 }
