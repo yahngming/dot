@@ -7,5 +7,7 @@ servershare=//"$server".local/"$share"
 clientmount="$HOME/Mount/${server}/${share}"
 username=$(dmenu -p "Username:" < /dev/null) || exit 1
 password=$(dmenu -p "Password:" -P) || exit 1
-sudo mount --mkdir -t cifs "$servershare" "$clientmount" -o username="$username",password="$password"
+echo $servershare
+echo $clientmount
+sudo mount -m -t cifs "$servershare" "$clientmount" -o username="$username",password="$password"
 notify-send "$share mounted at $clientmount."
