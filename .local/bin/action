@@ -4,7 +4,7 @@ case "$(printf "WLAN\nBluetooth\nDisplays\nMount Samba\nMount USB\nUnmount USB\n
 	'WLAN'             ) wifimenu ;;
 	'Bluetooth'        ) btmenu ;;
 	'Monitors'         ) dispmenu ;;
-	"Mount Samba"      ) nasmenu ;;
+	"Mount Samba"      ) sambamenu ;;
 	'Mount USB'        ) mountmenu ;;
 	'Unmount USB'      ) umountmenu ;;
 	'Password Manager' ) passmenu ;;
