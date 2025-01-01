@@ -106,11 +106,11 @@ primary="$(get_selection)"
 clip_menu="$(clip_menu "$primary" "$clipboard")"
 
 # Enter text
-text="$(printf '%s' '$clip_menu' | eval '$DMENU_TEXT' '$@')" || exit 0
-text="$(get_text '$text' '$clip_menu')"
+text="$(printf '%s' $clip_menu | eval $DMENU_TEXT $@)" || exit 0
+text="$(get_text $text $clip_menu)"
 
 # Choose target language
-target="$(lang_menu | eval '$DMENU_LANG' '$@')" || exit 0
+target="$(lang_menu | eval $DMENU_LANG $@)" || exit 0
 
 # If Define chosen, define term and exit
 [ "$target" = '[Define]' ] && {
