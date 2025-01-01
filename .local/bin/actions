@@ -1,12 +1,12 @@
 #!/bin/sh
 
-case "$(printf "󰂰 Bluetooth\n󰍺 Displays\n Dotfiles\n Eject\n Passwords\n󰤆 Power\n󰡰 Samba\n System\n󱊞 USB\n󱚾 WLAN" | dmenu -g 3 -l 5)" in
-	'󰂰 Bluetooth' ) btmenu ;;
+case "$(printf " Bluetooth\n󰍺 Displays\n Dotfiles\n Eject\n Passwords\n Power\n󰡰 Samba\n System\n󱊞 USB\n󱚾 WLAN" | dmenu -g 3 -l 5)" in
+	' Bluetooth' ) btmenu ;;
 	'󰍺 Displays'  ) dispmenu ;;
 	' Dotfiles'  ) $TERMINAL -e dot ;;
 	' Eject'     ) umountusb ;;
 	' Passwords' ) passmenu ;;
-	'󰤆 Power'     ) powermenu ;;
+	' Power'     ) powermenu ;;
 	'󰡰 Samba'     ) mountsmb ;;
 	' System'    ) $TERMINAL -e btop ;;
 	'󱊞 USB'       ) mountusb ;;
