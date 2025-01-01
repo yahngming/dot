@@ -9,6 +9,6 @@ case "$(printf "WLAN\nBluetooth\nDisplays\nMount Samba\nMount USB\nUnmount USB\n
 	'Mount USB'        ) mountusb ;;
 	'Unmount USB'      ) umountusb ;;
 	'Password Manager' ) passmenu ;;
-	'Power'            ) powerbutton ;;
+	'Power'            ) powermenu ;;
 	*                  ) exit 1 ;;
 esac
