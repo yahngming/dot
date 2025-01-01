@@ -6,7 +6,7 @@ case "$(printf " Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwo
 	' Dotfiles'  ) $TERMINAL -e dot ;;
 	' Eject'     ) umountusb ;;
 	' Passwords' ) passmenu ;;
-	' Power'     ) powermenu ;;
+	' Power'     ) powermenu $@;;
 	'󰡰 Samba'     ) mountsmb ;;
 	' System'    ) $TERMINAL -e btop ;;
 	'󱊞 USB'       ) mountusb ;;
