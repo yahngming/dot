@@ -4,7 +4,7 @@ setleds -D +num &
 setxkbmap -option ctrl:nocaps,shift:both_capslock &
 statusbar &
 wallpaper &
-xcape &
+killall xcape 2>/dev/null ; xcape &
 xcompmgr &
 xrdb -merge ~/.config/xorg/xresources &
 xset r rate 500 50 s 600 &
