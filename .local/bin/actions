@@ -10,6 +10,6 @@ case "$(printf ' Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwo
 	'󰡰 Samba'     ) mountsmb ;;
 	' System'    ) $TERMINAL -e btop ;;
 	'󱊞 USB'       ) mountusb ;;
-	'󱚾 WLAN'      ) wlanmenu ;;
+	"󱚾 WLAN"      ) wlanmenu $@;;
 	*             ) exit 1 ;;
 esac
