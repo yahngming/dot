@@ -1,8 +1,8 @@
 #!/bin/sh
 
-case "$(printf " Tasks\n󰐥 Power\n󱚾 WLAN\n󰂱 Bluetooth\n󰍺 Displays\n󰡰 Samba\n󱊞 USB\n Eject\n Passwords" | dmenu -g 3 -l 5)" in
+case "$(printf " Tasks\n󰐦 Power\n󱚾 WLAN\n󰂱 Bluetooth\n󰍺 Displays\n󰡰 Samba\n󱊞 USB\n Eject\n Passwords" | dmenu -g 3 -l 5)" in
 	' Tasks'     ) $TERMINAL -e btop ;;
-	'󰐥 Power'     ) powermenu ;;
+	'󰐦 Power'     ) powermenu ;;
 	'󱚾 WLAN'      ) wlanmenu ;;
 	'󰂱 Bluetooth' ) btmenu ;;
 	'󰍺 Displays'  ) dispmenu ;;
