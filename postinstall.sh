@@ -10,7 +10,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/herbe && cd herbe && sudo make clean install
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-	yay -S ctpv
+	yay -S ctpv-git
  	yay -S newsraft
 	mkdir -p ~/.config/clash && cd ~/.config/clash && curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 	mkdir -p ~/.config/firefox && cd ~/.config/firefox && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh && chmod +x *.sh && ./updater.sh
