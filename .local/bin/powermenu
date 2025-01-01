@@ -1,9 +1,9 @@
 #!/bin/sh
 
-case "$(printf " lock\n󰤄 sleep\n󰗽 logout\n reboot\n󰤆 shutdown" | dmenu)" in
+case "$(printf ' lock\n󰤄 sleep\n󰗽 logout\n reboot\n󰤆 shutdown' | dmenu)" in
 	' lock'     ) slock ;;
 	'󰤄 sleep'    ) systemctl sleep ;;
-	"󰗽 logout"   ) pkill -KILL -u $USER ;;
+	'󰗽 logout'   ) pkill -KILL -u $USER ;;
 	' reboot'   ) systemctl reboot ;;
 	'󰤆 shutdown' ) systemctl poweroff ;;
 	*            ) exit 1 ;;
