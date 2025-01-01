@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$(printf "Task Manager\nWLAN\nBluetooth\nDisplays\nMount Samba\nMount USB\nUnmount USB\nPassword Manager\nPower" | dmenu)" in
+case "$(printf "Task Manager\nWLAN\nBluetooth\nDisplays\nMount Samba\nMount USB\nUnmount USB\nPassword Manager\nPower" | dmenu -g 5 -l 3)" in
 	'Task Manager'     ) $TERMINAL -e btop ;;
 	'WLAN'             ) wlanmenu ;;
 	'Bluetooth'        ) btmenu ;;
