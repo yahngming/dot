@@ -1,14 +1,14 @@
 #!/bin/sh
 
-case "$(printf " Task Manager\n󱚾 WLAN\n󰂳 Bluetooth\n󰍺 Displays\n󰡰 Mount Samba\n󱊞 Mount USB\n󱊟 Unmount USB\n Password Manager\n󰐥 Power" | dmenu -g 3 -l 5)" in
-	' Task Manager'     ) $TERMINAL -e btop ;;
-	'󱚾 WLAN'             ) wlanmenu ;;
-	'󰂳 Bluetooth'        ) btmenu ;;
-	'󰍺 Displays'         ) dispmenu ;;
-	"󰡰 Mount Samba"      ) mountsmb ;;
-	'󱊞 Mount USB'        ) mountusb ;;
-	'󱊟 Unmount USB'      ) umountusb ;;
-	' Password Manager' ) passmenu ;;
-	'󰐥 Power'            ) powermenu ;;
-	*                  ) exit 1 ;;
+case "$(printf " Tasks\n󱚾 WLAN\n󰂱 Bluetooth\n󰍺 Displays\n󰡰 Samba\n󱊞 USB\n󱊟 Eject\n Passwords\n󰐥 Power" | dmenu -g 3 -l 5)" in
+	' Tasks'     ) $TERMINAL -e btop ;;
+	'󱚾 WLAN'      ) wlanmenu ;;
+	'󰂱 Bluetooth' ) btmenu ;;
+	'󰍺 Displays'  ) dispmenu ;;
+	"󰡰 Samba"     ) mountsmb ;;
+	'󱊞 USB'       ) mountusb ;;
+	' Eject'     ) umountusb ;;
+	' Passwords' ) passmenu ;;
+	'󰐥 Power'     ) powermenu ;;
+	*             ) exit 1 ;;
 esac
