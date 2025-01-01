@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$(printf " Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwords\n Power\n󰡰 Samba\n System\n󱊞 USB\n󱚾 WLAN" | dmenu -g 3 -l 5)" in
+case "$(printf " Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwords\n Power\n󰡰 Samba\n System\n󱊞 USB\n󱚾 WLAN" | dmenu -g 3 -l 5 $@)" in
 	' Bluetooth' ) btmenu ;;
 	'󰍹 Display'   ) dispmenu ;;
 	' Dotfiles'  ) $TERMINAL -e dot ;;
