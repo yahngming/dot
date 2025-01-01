@@ -1,7 +1,6 @@
 #!/bin/sh
 
 case "$(printf " top\n lock\n󰤄 sleep\n󰗽 logout\n reboot\n󰤆 shutdown" | dmenu)" in
-	' top'      ) $TERMINAL -e btop ;;
 	' lock'     ) slock ;;
 	'󰤄 sleep'    ) systemctl sleep ;;
 	"󰗽 logout"   ) pkill -KILL -u $USER ;;
