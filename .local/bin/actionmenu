@@ -4,7 +4,7 @@ case "$(printf ' Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwo
 	" Bluetooth" ) btmenu ;;
 	"󰍹 Display"   ) dispmenu ;;
 	" Dotfiles"  ) $TERMINAL -e dot ;;
-	" Eject"     ) eject ;;
+	" Eject"     ) umountmenu ;;
 	" Passwords" ) passmenu ;;
 	" Power"     ) powermenu ;;
 	"󰡰 SMB"       ) smbmenu ;;
