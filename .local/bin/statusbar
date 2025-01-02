@@ -84,7 +84,7 @@ net() {
 }
 
 usb() {
-	usb="$(df -h | grep -q '/media/')"
+	usb="$(df -h | grep '/Mount')"
 	icon="󱇰" ;;
 	[ "$usb" ] && printf "$icon"
 }
