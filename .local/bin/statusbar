@@ -71,12 +71,12 @@ net() {
 		$((net <= -80)) ) icon="󰤯" ;;
 		$((net <= -70)) ) icon="󰤟" ;;
 		$((net <= -60)) ) icon="󰤢" ;;
-		$((net <= -30)) ) icon="󰤥" ;;
-		$((net >= -30)) ) icon="󰤨" ;;
+		$((net <= -50)) ) icon="󰤥" ;;
+		$((net >= -50)) ) icon="󰤨" ;;
 	esac
 	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
 		down ) printf " 󰤮 " ;;
-		up   ) printf " $icon " ;;
+		up   ) printf " $icon  󰈀 " ;;
 	esac
 	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
 		up   ) printf " 󰈀 " ;;
