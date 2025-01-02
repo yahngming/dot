@@ -56,12 +56,13 @@ cut() {
 }
 
 ime() {
+	icon=""
 	ime="$(fcitx5-remote)"
 	case 1 in
-		$((ime == 1)) ) icon="  en" ;;
-		$((ime == 2)) ) icon="  zh" ;;
+		$((ime == 1)) ) ime="en" ;;
+		$((ime == 2)) ) ime="zh" ;;
 	esac
-	[ "$ime" ] && printf " $icon "
+	[ "$ime" ] && printf " $icon  $ime "
 }
 
 net() {
