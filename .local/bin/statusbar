@@ -3,17 +3,17 @@
 bat() {
 	bat="$(cat /sys/class/power_supply/BAT0/capacity)"
 	case 1 in
-		$((bat >= 99)) ) icon="󰁹" ;;
-		$((bat >= 90)) ) icon="󰂂" ;;
-		$((bat >= 80)) ) icon="󰂁" ;;
-		$((bat >= 70)) ) icon="󰂀" ;;
-		$((bat >= 60)) ) icon="󰁿" ;;
-		$((bat >= 50)) ) icon="󰁾" ;;
-		$((bat >= 40)) ) icon="󰁽" ;;
-		$((bat >= 30)) ) icon="󰁼" ;;
-		$((bat >= 20)) ) icon="󰁻" ;;
-		$((bat >= 10)) ) icon="󰁺" ;;
 		$((bat <= 10)) ) icon="󰂃" ;;
+		$((bat <= 20)) ) icon="󰁺" ;;
+		$((bat <= 30)) ) icon="󰁻" ;;
+		$((bat <= 40)) ) icon="󰁼" ;;
+		$((bat <= 50)) ) icon="󰁽" ;;
+		$((bat <= 60)) ) icon="󰁾" ;;
+		$((bat <= 70)) ) icon="󰁿" ;;
+		$((bat <= 80)) ) icon="󰂀" ;;
+		$((bat <= 90)) ) icon="󰂁" ;;
+		$((bat <= 99)) ) icon="󰂂" ;;
+		$((bat >= 99)) ) icon="󰁹" ;;
 	esac
 	[ "$bat" ] && printf " $icon "
 }
@@ -21,19 +21,19 @@ bat() {
 clk() {
 	clk="$(date '+%I')"
 	case "$clk" in
-		"00") icon="󱑊" ;;
-		"01") icon="󱐿" ;;
-		"02") icon="󱑀" ;;
-		"03") icon="󱑁" ;;
-		"04") icon="󱑂" ;;
-		"05") icon="󱑃" ;;
-		"06") icon="󱑄" ;;
-		"07") icon="󱑅" ;;
-		"08") icon="󱑆" ;;
-		"09") icon="󱑇" ;;
-		"10") icon="󱑈" ;;
-		"11") icon="󱑉" ;;
-		"12") icon="󱑊" ;;
+		"00" ) icon="󱑊" ;;
+		"01" ) icon="󱐿" ;;
+		"02" ) icon="󱑀" ;;
+		"03" ) icon="󱑁" ;;
+		"04" ) icon="󱑂" ;;
+		"05" ) icon="󱑃" ;;
+		"06" ) icon="󱑄" ;;
+		"07" ) icon="󱑅" ;;
+		"08" ) icon="󱑆" ;;
+		"09" ) icon="󱑇" ;;
+		"10" ) icon="󱑈" ;;
+		"11" ) icon="󱑉" ;;
+		"12" ) icon="󱑊" ;;
 	esac
 	clk="$(date '+%H:%M')"
 	printf " $icon  $clk "
@@ -42,9 +42,9 @@ clk() {
 cpu() {
 	cpu="$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000))"
 	case 1 in
-		$((cpu >= 80)) ) icon="󱃂" ;;
-		$((cpu >= 40)) ) icon="󰔏" ;;
-		$((cpu >= 20)) ) icon="󱃃" ;;
+		$((cpu <= 40)) ) icon="󱃃" ;;
+		$((cpu <= 80)) ) icon="󰔏" ;;
+		$((cpu <= 99)) ) icon="󱃂" ;;
 	esac
 	[ "$cpu" ] && printf " $icon  $cpu°C "
 }
@@ -58,8 +58,8 @@ cut() {
 ime() {
 	ime="$(fcitx5-remote)"
 	case 1 in
-		$((ime == 1)) ) icon="" ;;
-		$((ime == 2)) ) icon="" ;;
+		$((ime == 1)) ) icon=" EN" ;;
+		$((ime == 2)) ) icon=" ZH" ;;
 	esac
 	[ "$ime" ] && printf " $icon "
 }
@@ -67,11 +67,11 @@ ime() {
 net() {
 	net="$(iwctl station wlan0 show | grep "^\s*RSSI" | awk '{print $2}')"
 	case 1 in
+		$((net <= -80)) ) icon="󰤯" ;;
+		$((net <= -70)) ) icon="󰤟" ;;
+		$((net <= -60)) ) icon="󰤢" ;;
+		$((net <= -30)) ) icon="󰤥" ;;
 		$((net >= -30)) ) icon="󰤨" ;;
-		$((net >= -60)) ) icon="󰤥" ;;
-		$((net >= -70)) ) icon="󰤢" ;;
-		$((net >= -80)) ) icon="󰤟" ;;
-		$((net >= -90)) ) icon="󰤯" ;;
 	esac
 	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
 		up   ) printf " $icon " ;;
@@ -88,9 +88,9 @@ vol() {
 	vol="${vol%' [MUTED]'}"
 	vol="$(printf "%.0f" "$(cut "$vol" ".")")"
 	case 1 in
+		$((vol <= 10)) ) icon="󰕿" ;;
+		$((vol <= 80)) ) icon="󰖀" ;;
 		$((vol >= 80)) ) icon="󰕾" ;;
-		$((vol >= 20)) ) icon="󰖀" ;;
-		$((vol >= 0)) ) icon="󰕿" ;;
 	esac
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
 		*MUTED* ) printf " 󰝟 " ;;
