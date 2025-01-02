@@ -15,7 +15,7 @@ bat() {
 		$((bat >= 10)) ) icon="󰁺" ;;
 		$((bat <= 10)) ) icon="󰂃" ;;
 	esac
-	[ "$bat" ] && printf " $icon  $bat%% "
+	[ "$bat" ] && printf " $icon "
 }
 
 clk() {
@@ -63,11 +63,12 @@ net() {
 		$((net >= -70)) ) icon="󰤢" ;;
 		$((net >= -80)) ) icon="󰤟" ;;
 		$((net >= -90)) ) icon="󰤯" ;;
+		$((net <= -90)) ) icon="󰤮" ;;
 	esac
 	net="$(iwctl station wlan0 show | grep "^\s*Connected network" | awk '{print $3}')"
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
 		up   ) printf " $icon  $net " ;;
-		down ) printf " 󰤮  Disconnected " ;;
+		down ) printf " $icon  $net " ;;
 	esac
 }
 
