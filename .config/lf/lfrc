@@ -14,16 +14,17 @@ set scrolloff 6
 &ctpv -s $id
 &ctpvquit $id
 
-map <enter> shell
+map <enter> open
 map <delete> %trash-put $fx
 map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
 map a push %mkdir<space>
-map o open
 map p :paste; clear
 map x $$f
 map X !$f
+map u extract
+map z zip
 map zz push :zz<space>
 
 # smart cd
