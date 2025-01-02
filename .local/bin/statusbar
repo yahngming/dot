@@ -59,14 +59,14 @@ ime() {
 	icon=""
 	ime="$(fcitx5-remote)"
 	case 1 in
-		$((ime == 1)) ) ime="en" ;;
-		$((ime == 2)) ) ime="zh" ;;
+		$((ime == 1)) ) ime="eng" ;;
+		$((ime == 2)) ) ime="cjk" ;;
 	esac
 	[ "$ime" ] && printf " $icon  $ime "
 }
 
 net() {
-	net="$(iwctl station wlan0 show | grep "^\s*RSSI" | awk '{print $2}')"
+	net="$(iwctl station wlan0 show | grep '^\s*RSSI' | awk '{print $2}')"
 	case 1 in
 		$((net <= -80)) ) icon="󰤯" ;;
 		$((net <= -70)) ) icon="󰤟" ;;
@@ -75,8 +75,8 @@ net() {
 		$((net >= -30)) ) icon="󰤨" ;;
 	esac
 	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-		up   ) printf " $icon " ;;
 		down ) printf " 󰤮 " ;;
+		up   ) printf " $icon " ;;
 	esac
 	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
 		up   ) printf " 󰈀 " ;;
