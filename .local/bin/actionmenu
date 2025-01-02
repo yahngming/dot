@@ -7,7 +7,7 @@ case "$(printf ' Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwo
 	" Eject"     ) umountmenu ;;
 	" Passwords" ) passmenu ;;
 	" Power"     ) powermenu ;;
-	"󰐪 Printer    ) $BROWSER --new-tab localhost:631 ;;
+	"󰐪 Printer"   ) $BROWSER --new-tab localhost:631 ;;
 	"󰡰 SMB"       ) smbmenu ;;
 	" System"    ) $TERMINAL -e btop ;;
 	"󱊞 USB"       ) usbmenu ;;
