@@ -19,7 +19,7 @@ function main() {
         var options = parseUdiskieInfo(blockDevices);
 
         if (Object.keys(options).length === 0) {
-            notifyIfErr(`Nothing to unmount / mount`);
+            notifyIfErr(`No device found.`);
             process.exit(0);
         }
 
@@ -63,15 +63,15 @@ function main() {
                         udiskieOpt += '--force';
                     }
                     //
-                    return runCommand(`udiskie-umount ${udiskieOpt} "${device.mountPath}" && notify-send "${device.mountPath} mounted."`, notifyIfErr);
+                    return runCommand(`udiskie-umount ${udiskieOpt} "${device.mountPath}" && notify-send "${device.mountPath} unmounted."`, notifyIfErr);
                 } else if (device.label) {
                     if (device.isLuks) {
                         udiskieOpt += '--recursive';
                     }
                     //
-                    return runCommand(`udiskie-mount ${udiskieOpt} "${device.devPath}"`, notifyIfErr);
+                    return runCommand(`udiskie-mount ${udiskieOpt} "${device.devPath}" && notify-send "${device.devPath} mounted."`, notifyIfErr);
                 } else {
-                    notifyIfErr(`Unknown device - aborting`);
+                    notifyIfErr(`Unknown device.`);
                 }
             });
         });
