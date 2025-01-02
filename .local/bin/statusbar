@@ -40,13 +40,13 @@ clk() {
 }
 
 cpu() {
-	cpu="$(cat /sys/class/thermal/thermal_zone0/temp)"
+	cpu="$(cat /sys/class/thermal/thermal_zone0/temp)/1000"
 	case 1 in
-		$((cpu >= 80000)) ) icon="󱃂" ;;
-		$((cpu >= 40000)) ) icon="󰔏" ;;
-		$((cpu >= 20000)) ) icon="󱃃" ;;
+		$((cpu >= 80)) ) icon="󱃂" ;;
+		$((cpu >= 40)) ) icon="󰔏" ;;
+		$((cpu >= 20)) ) icon="󱃃" ;;
 	esac
-	cpu="$(sed "s/000$/°C/" "$cpu")"
+#	cpu="$(sed "s/000$/°C/" "$cpu")"
 	[ "$cpu" ] && printf " $icon  $cpu "
 }
 
