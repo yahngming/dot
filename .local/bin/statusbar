@@ -15,7 +15,7 @@ bat() {
 		$((bat <= 99)) ) icon="󰂂" ;;
 		$((bat >= 99)) ) icon="󰁹" ;;
 	esac
-	[ "$bat" ] && printf " $icon "
+	[ "$bat" ] && printf "$icon"
 }
 
 clk() {
@@ -36,7 +36,7 @@ clk() {
 		"12" ) icon="󱑊" ;;
 	esac
 	clk="$(date '+%H:%M')"
-	printf " $icon  $clk "
+	printf "$icon $clk"
 }
 
 cpu() {
@@ -46,7 +46,7 @@ cpu() {
 		$((cpu <= 80)) ) icon="󰔏" ;;
 		$((cpu <= 99)) ) icon="󱃂" ;;
 	esac
-	[ "$cpu" ] && printf " $icon  $cpu°C "
+	[ "$cpu" ] && printf "$icon $cpu°C"
 }
 
 cut() {
@@ -62,7 +62,7 @@ ime() {
 		$((ime == 1)) ) ime="en" ;;
 		$((ime == 2)) ) ime="cjk" ;;
 	esac
-	[ "$ime" ] && printf " $icon  $ime "
+	[ "$ime" ] && printf "$icon $ime"
 }
 
 net() {
@@ -75,11 +75,11 @@ net() {
 		$((net >= -50)) ) icon="󰤨" ;;
 	esac
 	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-		down ) printf " 󰤮 " ;;
-		up   ) printf " $icon " ;;
+		down ) printf "󰤮" ;;
+		up   ) printf "$icon" ;;
 	esac
 	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
-		up   ) printf " 󰈀 " ;;
+		up   ) printf "󰈀" ;;
 	esac
 }
 
@@ -94,7 +94,7 @@ vol() {
 		$((vol >= 80)) ) icon="󰕾" ;;
 	esac
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
-		*MUTED* ) printf " 󰝟 " ;;
+		*MUTED* ) printf "󰝟" ;;
 		*       ) printf "$icon" ;;
 	esac
 }
