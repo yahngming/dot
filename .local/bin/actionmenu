@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$(printf ' Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwords\n Power\n󰐪 Printer\n󰌘 Proxy\n󰡰 SMB\n System\n󱊞 USB\n󱚾 WLAN' | dmenu -g 3 -l 5 $@)" in
+case "$(printf ' Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwords\n Power\n󰐪 Printer\n󰌘 Proxy\n󰡰 SMB\n System\n󰇧 Timezone\n󱊞 USB\n󱚾 WLAN' | dmenu -g 3 -l 5 $@)" in
 	" Bluetooth" ) btmenu ;;
 	"󰍹 Display"   ) dispmenu ;;
 	" Dotfiles"  ) $TERMINAL -e dot ;;
@@ -11,6 +11,7 @@ case "$(printf ' Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwo
 	"󰌘 Proxy"     ) $BROWSER --new-tab clash.razord.top ;;
 	"󰡰 SMB"       ) smbmenu ;;
 	" System"    ) $TERMINAL -e btop ;;
+	"󰇧 Timezone"  ) timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
 	"󱊞 USB"       ) usbmenu ;;
 	"󱚾 WLAN"      ) wlanmenu ;;
 	*             ) exit 1 ;;
