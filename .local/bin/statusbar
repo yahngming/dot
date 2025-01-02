@@ -83,6 +83,12 @@ net() {
 	esac
 }
 
+usb() {
+	usb="$(df -h | grep -q '/media/')"
+	icon="󱇰" ;;
+	[ "$usb" ] && printf "$icon"
+}
+
 vol() {
 	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 	vol="${vol#'Volume: '}"
@@ -100,5 +106,5 @@ vol() {
 }
 
 while true; do
-	sleep 0.5 && xprop -root -set WM_NAME " $(cpu)  $(ime)  $(bat)  $(net)  $(vol)  $(clk) "
+	sleep 0.5 && xprop -root -set WM_NAME " $(cpu)  $(ime)  $(usb)  $(bat)  $(net)  $(vol)  $(clk) "
 done
