@@ -11,7 +11,7 @@ case "$(printf ' Bluetooth\n󰍹 Display\n Dotfiles\n Eject\n Passwo
 	"󰌘 Proxy"     ) $BROWSER --new-tab clash.razord.top ;;
 	"󰡰 SMB"       ) smbmenu ;;
 	" System"    ) $TERMINAL -e btop ;;
-	"󰇧 Timezone"  ) timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
+	"󰇧 Timezone"  ) $TERMINAL -e timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
 	"󱊞 USB"       ) usbmenu ;;
 	"󱚾 WLAN"      ) wlanmenu ;;
 	*             ) exit 1 ;;
