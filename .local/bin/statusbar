@@ -75,9 +75,6 @@ net() {
 
 vol() {
 	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
-	case "$vol" in
-		*MUTED* ) printf " 󰝟 " ;;
-	esac
 	vol="${vol#'Volume: '}"
 	vol="${vol%' [MUTED]'}"
 	vol="$(printf "%.0f" "$(cut "$vol" ".")")"
@@ -87,7 +84,10 @@ vol() {
 		$((vol >= 1)) ) icon="󰕿" ;;
 		$((vol == 0)) ) icon="󰸈" ;;
 	esac
-	printf " $icon "
+	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
+		*MUTED* ) printf " 󰝟 " ;;
+		*       ) printf " $icon " ;;
+	esac
 }
 
 while true; do
