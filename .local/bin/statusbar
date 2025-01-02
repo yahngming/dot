@@ -31,7 +31,8 @@ net() {
 vol() {
 	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 	vol="${vol#Volume: }"
-	vol="$(printf '%.0f' '$(cut '$vol' '.')')"
+	vol="$(cut '$vol' '.')"
+	vol="$(printf '%.0f' '$vol')"
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
 		*MUTED* ) printf " 󰝟 %s"  " $vol " ;;
 		*       ) printf " 󰕾 %s"  " $vol " ;;
