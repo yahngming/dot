@@ -3,15 +3,40 @@
 bat() {
 	bat="$(cat /sys/class/power_supply/BAT0/capacity)"
 	case 1 in
-		$((bat >= 100)) ) icon="󰁹" ;;
+		$((bat = 100)) ) icon="󰁹" ;;
 		$((bat >= 90)) ) icon="󰂂" ;;
 		$((bat >= 80)) ) icon="󰂁" ;;
+		$((bat >= 70)) ) icon="󰂀" ;;
+		$((bat >= 60)) ) icon="󰁿" ;;
+		$((bat >= 50)) ) icon="󰁾" ;;
+		$((bat >= 40)) ) icon="󰁽" ;;
+		$((bat >= 30)) ) icon="󰁼" ;;
+		$((bat >= 20)) ) icon="󰁻" ;;
+		$((bat >= 10)) ) icon="󰁺" ;;
+		$((bat <= 10)) ) icon="󰂃" ;;
 	esac
 	[ "$bat" ] && printf " $icon  $bat%%"
 }
 
 clk() {
-	printf " 󰥔  %s " "$(date '+%H:%M')"
+	clk="$(date '+%I')"
+	case "$clk" in
+		"00") icon="🕛" ;;
+		"01") icon="🕐" ;;
+		"02") icon="🕑" ;;
+		"03") icon="🕒" ;;
+		"04") icon="🕓" ;;
+		"05") icon="🕔" ;;
+		"06") icon="🕕" ;;
+		"07") icon="🕖" ;;
+		"08") icon="🕗" ;;
+		"09") icon="🕘" ;;
+		"10") icon="🕙" ;;
+		"11") icon="🕚" ;;
+		"12") icon="🕛" ;;
+	esac
+	clk="$(date '+%H:%M')"
+	printf " $icon  $clk"
 }
 
 cpu() {
