@@ -61,7 +61,7 @@ ime() {
 		$((ime == 1)) ) icon="" ;;
 		$((ime == 2)) ) icon="" ;;
 	esac
-	printf " $icon "
+	[ "$ime" ] && printf " $icon "
 }
 
 net() {
