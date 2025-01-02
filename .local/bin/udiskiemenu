@@ -63,7 +63,7 @@ function main() {
                         udiskieOpt += '--force';
                     }
                     //
-                    return runCommand(`udiskie-umount ${udiskieOpt} "${device.mountPath}"`, notifyIfErr);
+                    return runCommand(`udiskie-umount ${udiskieOpt} "${device.mountPath}" && notify-send "${device.mountPath} mounted."`, notifyIfErr);
                 } else if (device.label) {
                     if (device.isLuks) {
                         udiskieOpt += '--recursive';
