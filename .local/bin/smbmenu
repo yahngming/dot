@@ -8,4 +8,4 @@ clientmount="/run/media/$USER/${server}/${share}"
 username=$(dmenu -p "Username:" < /dev/null) || exit 1
 password=$(dmenu -p "Password:" -P) || exit 1
 sudo -A mount -m -t cifs "$servershare" "$clientmount" -o username="$username",password="$password"
-notify-send "$share mounted at $clientmount."
+notify-send "$clientmount mounted."
