@@ -2,7 +2,7 @@
 
 bat() {
 	bat="$(cat /sys/class/power_supply/BAT0/capacity)"
-	case "$bat" in
+	case 1 in
 		$((bat >= 100)) ) icon="󰁹" ;;
 		$((bat >= 90)) ) icon="󰂂" ;;
 		$((bat >= 80)) ) icon="󰂁" ;;
