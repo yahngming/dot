@@ -76,7 +76,7 @@ net() {
 	esac
 	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
 		down ) printf " 󰤮 " ;;
-		up   ) printf " $icon  󰈀 " ;;
+		up   ) printf " $icon " ;;
 	esac
 	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
 		up   ) printf " 󰈀 " ;;
@@ -95,7 +95,7 @@ vol() {
 	esac
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
 		*MUTED* ) printf " 󰝟 " ;;
-		*       ) printf " $icon " ;;
+		*       ) printf "$icon" ;;
 	esac
 }
 
