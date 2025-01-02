@@ -63,24 +63,31 @@ net() {
 		$((net >= -70)) ) icon="󰤢" ;;
 		$((net >= -80)) ) icon="󰤟" ;;
 		$((net >= -90)) ) icon="󰤯" ;;
-		$((net <= -90)) ) icon="󰤮" ;;
 	esac
-	net="$(iwctl station wlan0 show | grep "^\s*Connected network" | awk '{print $3}')"
-	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-		up   ) printf " $icon  $net " ;;
-		down ) printf " $icon  $net " ;;
+	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
+		up   ) printf " $icon " ;;
+		down ) printf " 󰤮 " ;;
+	esac
+	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
+		up   ) printf " 󰈀 " ;;
 	esac
 }
 
 vol() {
 	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
+	case "$vol" in
+		*MUTED* ) printf " 󰝟 " ;;
+	esac
 	vol="${vol#'Volume: '}"
 	vol="${vol%' [MUTED]'}"
 	vol="$(printf "%.0f" "$(cut "$vol" ".")")"
-	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
-		*MUTED* ) printf " 󰝟  %s " "$vol" ;;
-		*       ) printf " 󰕾  %s " "$vol" ;;
+	case 1 in
+		$((vol >= 80)) ) icon="󰕾" ;;
+		$((vol >= 30)) ) icon="󰖀" ;;
+		$((vol >= 1)) ) icon="󰕿" ;;
+		$((vol == 0)) ) icon="󰸈" ;;
 	esac
+	printf " $icon "
 }
 
 while true; do
