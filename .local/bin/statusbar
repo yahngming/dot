@@ -7,7 +7,7 @@ bat() {
 		$((bat >= 90)) ) icon="󰂂" ;;
 		$((bat >= 80)) ) icon="󰂁" ;;
 	esac
-	[ "$bat" ] && printf " $icon  $bat%"
+	[ "$bat" ] && printf " $icon  $bat%%"
 }
 
 clk() {
