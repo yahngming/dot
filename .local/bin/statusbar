@@ -55,6 +55,15 @@ cut() {
 	printf '%s' "$@"
 }
 
+ime() {
+	ime="$(fcitx5-remote)"
+	case 1 in
+		$((ime == 1)) ) icon="" ;;
+		$((ime == 2)) ) icon="" ;;
+	esac
+	printf " $icon "
+}
+
 net() {
 	net="$(iwctl station wlan0 show | grep "^\s*RSSI" | awk '{print $2}')"
 	case 1 in
@@ -90,5 +99,5 @@ vol() {
 }
 
 while true; do
-	sleep 0.5 && xprop -root -set WM_NAME "$(cpu) $(bat) $(net) $(vol) $(clk)"
+	sleep 0.5 && xprop -root -set WM_NAME "$(cpu) $(ime) $(bat) $(net) $(vol) $(clk)"
 done
