@@ -59,7 +59,7 @@ ime() {
 	icon=""
 	ime="$(fcitx5-remote)"
 	case 1 in
-		$((ime == 1)) ) ime="eng" ;;
+		$((ime == 1)) ) ime="en" ;;
 		$((ime == 2)) ) ime="cjk" ;;
 	esac
 	[ "$ime" ] && printf " $icon  $ime "
