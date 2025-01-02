@@ -84,8 +84,8 @@ vol() {
 		$((vol >= 0)) ) icon="󰕿" ;;
 	esac
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
-		*MUTED* ) printf " 󰝟 $vol " ;;
-		*       ) printf " $icon $vol " ;;
+		*MUTED* ) printf " 󰝟 " ;;
+		*       ) printf " $icon " ;;
 	esac
 }
 
