@@ -2,16 +2,16 @@
 
 bat() {
 	bat="$(cat /sys/class/power_supply/BAT0/capacity)%"
-	[ "$bat" ] && printf " 󰁹 %s"  " $bat "
+	[ "$bat" ] && printf " 󰁹  %s " "$bat"
 }
 
 clk() {
-	printf " 󰥔 %s"  " $(date '+%H:%M') "
+	printf " 󰥔  %s " "$(date '+%H:%M')"
 }
 
 cpu() {
 	cpu="$(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
-	[ "$cpu" ] && printf " 󰔏 %s" " $cpu "
+	[ "$cpu" ] && printf " 󰔏  %s " "$cpu"
 }
 
 cut() {
@@ -23,8 +23,8 @@ cut() {
 net() {
 	net="$(iwctl station wlan0 show | grep "^\s*Connected network" | awk '{print $3}')"
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-		up   ) printf " 󰤨 %s" " $net " ;;
-		down ) printf " 󰤭 %s" " Disconnected " ;;
+		up   ) printf " 󰤨  %s " "$net" ;;
+		down ) printf " 󰤭  %s " "Disconnected" ;;
 	esac
 }
 
