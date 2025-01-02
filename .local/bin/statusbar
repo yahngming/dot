@@ -2,7 +2,12 @@
 
 bat() {
 	bat="$(cat /sys/class/power_supply/BAT0/capacity)%"
-	[ "$bat" ] && printf " 󰁹  %s " "$bat"
+	case "$bat" in
+		$((bat >= 100)) ) icon="󰁹" ;;
+		$((bat >= 90)) ) icon="󰂂" ;;
+		$((bat >= 80)) ) icon="󰂁" ;;
+	esac
+	[ "$bat" ] && printf " $icon  $bat"
 }
 
 clk() {
