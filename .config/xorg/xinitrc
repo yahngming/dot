@@ -5,6 +5,7 @@ setxkbmap -option ctrl:nocaps,shift:both_capslock &
 statusbar &
 wallpaper &
 killall xcape 2>/dev/null ; xcape &
+udiskie &
 xcompmgr &
 xrdb -merge ~/.config/xorg/xresources &
 xset r rate 500 50 s 600 &
