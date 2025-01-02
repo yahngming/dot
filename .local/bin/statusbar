@@ -40,7 +40,7 @@ clk() {
 }
 
 cpu() {
-	cpu="$(cat /sys/class/thermal/thermal_zone0/temp)/1000"
+	cpu="$((cat /sys/class/thermal/thermal_zone0/temp)/1000)"
 	case 1 in
 		$((cpu >= 80)) ) icon="󱃂" ;;
 		$((cpu >= 40)) ) icon="󰔏" ;;
