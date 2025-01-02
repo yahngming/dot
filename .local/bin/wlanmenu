@@ -52,8 +52,8 @@ iwd_dmenu() {
 		if [ -n "${connected_network}" ]; then
 			answer="$(show_menu '' "Disconnect from ${connected_network}" 'Cancel')"
 			case "$(printf '%s\n' "${answer}" | tr '[:upper:]' '[:lower:]')" in
-				'yes') iwctl station "${interface}" disconnect ;;
-				'no')  return ;;
+				'Cancel')  return ;;
+				*) iwctl station "${interface}" disconnect ;;
 			esac
 		fi
 	}
