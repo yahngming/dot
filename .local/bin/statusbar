@@ -59,6 +59,7 @@ ime() {
 	icon=""
 	ime="$(fcitx5-remote)"
 	case 1 in
+		$((ime == 0)) ) ime="en" ;;
 		$((ime == 1)) ) ime="en" ;;
 		$((ime == 2)) ) ime="cjk" ;;
 	esac
