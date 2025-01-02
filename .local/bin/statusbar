@@ -46,7 +46,7 @@ cpu() {
 		$((cpu >= 40000)) ) icon="󰔏" ;;
 		$((cpu >= 20000)) ) icon="󱃃" ;;
 	esac
-	cpu="$(sed 's/000$/°C/' '$cpu')"
+	cpu="$(sed "s/000$/°C/" "$cpu")"
 	[ "$cpu" ] && printf " $icon  $cpu "
 }
 
