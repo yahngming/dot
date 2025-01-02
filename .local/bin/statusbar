@@ -32,7 +32,10 @@ vol() {
 	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 	vol="${vol#Volume: }"
 	vol="$(printf "%.0f" "$(cut "$vol" ".")")"
-	printf " 󰕾 %s"  " $vol "
+	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
+		*MUTED* ) printf " 󰝟 %s"  " $vol "
+		*       ) printf " 󰕾 %s"  " $vol "
+	esac
 }
 
 while true; do
