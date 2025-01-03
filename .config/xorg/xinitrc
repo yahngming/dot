@@ -7,7 +7,6 @@ wallpaper &
 killall xcape 2>/dev/null ; xcape &
 udiskie &
 xcompmgr &
-xmodmap ~/.config/xorg/xmodmap &
 xrdb -merge ~/.config/xorg/xresources &
 xset r rate 500 50 s 600 &
 xsidle slock &
