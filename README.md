@@ -19,7 +19,7 @@ git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
 other packages
 ```sh
-sudo pacman -S android-tools emby-theater freecad keepassxc rclone rsync
+sudo pacman -S android-tools emby-theater freecad keepassxc rclone
 yay -S orca-slicer
 yay -S sdrpp-git
 ```
