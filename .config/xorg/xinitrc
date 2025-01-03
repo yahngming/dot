@@ -8,7 +8,7 @@ udiskie &
 xcompmgr &
 xrdb -merge ~/.config/xorg/xresources &
 xset r rate 500 50 s 200 600 &
-xss-lock -n cmatrix -- slock &
+xss-lock -n "sh -c cmatrix" -- slock &
 session=${1:-dwm}
 case $session in
 	dwm   ) exec dwm ;;
