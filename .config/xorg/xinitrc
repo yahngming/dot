@@ -1,10 +1,9 @@
 clash &
 fcitx5 &
+keymap &
 setleds -D +num &
-setxkbmap -option ctrl:nocaps,shift:both_capslock &
 statusbar &
 wallpaper &
-killall xcape 2>/dev/null ; xcape &
 udiskie &
 xcompmgr &
 xrdb -merge ~/.config/xorg/xresources &
