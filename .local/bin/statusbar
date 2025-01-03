@@ -39,6 +39,10 @@ clk() {
 	printf " $icon $clk "
 }
 
+cof() {
+	[ "$COFFEE" ] && printf " 󰅶 "
+}
+
 cpu() {
 	cpu="$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000))"
 	case 1 in
@@ -107,5 +111,5 @@ vol() {
 }
 
 while true; do
-	sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(bat)$(net)$(vol)$(clk)"
+	sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(cof)$(bat)$(net)$(vol)$(clk)"
 done
