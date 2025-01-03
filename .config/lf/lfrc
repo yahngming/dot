@@ -23,7 +23,7 @@ map a archive
 map u unarchive
 map x $$f
 map X !$f
-map md push %mkdir<space>
+map zd push %mkdir<space>
 map zz push :zoxide<space>
 
 cmd archive ${{
