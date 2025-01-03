@@ -2,6 +2,7 @@
 
 menu="\
  Bluetooth\n\
+󰅶 Caffeine\n\
 󰍹 Display\n\
  Dotfiles\n\
 󰌌 Keyboard\n\
@@ -9,7 +10,6 @@ menu="\
  Power\n\
 󰐪 Printer\n\
 󰌘 Proxy\n\
-󰌘 Screensaver\n\
 󰡰 SMB\n\
  System\n\
 󰇧 Timezone\n\
@@ -19,6 +19,7 @@ menu="\
 
 case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
 	*Bluetooth* ) btmenu ;;
+	*Caffeine*  ) coffee ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) $TERMINAL -e dot ;;
 	*Keyboard*  ) keymap ;;
@@ -26,7 +27,6 @@ case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
 	*Power*     ) powermenu ;;
 	*Printer*   ) $BROWSER --new-tab localhost:631 ;;
 	*Proxy*     ) $BROWSER --new-tab clash.razord.top ;;
-	*Caffeine*  ) coffee ;;
 	*SMB*       ) smbmenu ;;
 	*System*    ) $TERMINAL -e btop ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
