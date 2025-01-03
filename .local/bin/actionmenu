@@ -2,7 +2,6 @@
 
 menu="\
  Bluetooth\n\
-󰅶 Caffeine\n\
 󰍹 Display\n\
  Dotfiles\n\
 󰌌 Keyboard\n\
@@ -19,7 +18,6 @@ menu="\
 
 case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
 	*Bluetooth* ) btmenu ;;
-	*Caffeine*  ) coffee ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) $TERMINAL -e dot ;;
 	*Keyboard*  ) keymap ;;
