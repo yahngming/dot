@@ -17,7 +17,7 @@ menu="\
 󱚾 WLAN\n\
 "
 
-case $(printf "$menu" | dmenu -g 3 -l 5 -fn "symbol:size=28" "$@") in
+case $(printf "$menu" | dmenu -g 3 -l 5 -fn "$@") in
 	*Bluetooth* ) btmenu ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) $TERMINAL -e dot ;;
