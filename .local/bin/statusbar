@@ -64,8 +64,8 @@ dpm() {
 ime() {
 	case "$(fcitx5-remote -n)" in
 		*anthy*|*kkc*|*mozc*|*skk* ) ime="ja" ;;
-		*hangul*                   ) ime="kr" ;;
-		*bi*|*ma*|*pin*            ) ime="zh" ;;
+		*hangul*                   ) ime="ko" ;;
+		*bi*|*ma*|*pin*            ) ime="拼" ;;
 		*                          ) ime="en" ;;
 	esac
 	[ "$ime" ] && printf "  $ime "
