@@ -8,11 +8,11 @@ menu="\
 󰤆 shutdown\n\
 "
 
-case $(printf $menu | dmenu $@) in
-	" lock"     ) slock ;;
-	"󰤄 sleep"    ) systemctl sleep ;;
-	"󰗽 logout"   ) pkill -KILL -u $USER ;;
-	" reboot"   ) systemctl reboot ;;
-	"󰤆 shutdown" ) systemctl poweroff ;;
-	*            ) exit 1 ;;
+case $(printf "$menu" | dmenu "$@") in
+	*lock*     ) slock ;;
+	*sleep*    ) systemctl sleep ;;
+	*logout*   ) pkill -KILL -u $USER ;;
+	*reboot*   ) systemctl reboot ;;
+	*shutdown* ) systemctl poweroff ;;
+	*          ) exit 1 ;;
 esac
