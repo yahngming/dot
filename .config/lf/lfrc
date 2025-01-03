@@ -20,7 +20,6 @@ map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
 map a push %mkdir<space>
-map p :paste; clear
 map x $$f
 map X !$f
 map u extract
@@ -31,11 +30,6 @@ map zz push :zz<space>
 cmd zz ${{
 	result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
 	lf -remote "send $id cd \"$result\""
-}}
-
-# define a custom 'open' command
-cmd open ${{
-	$OPENER $f
 }}
 
 # cp progress
