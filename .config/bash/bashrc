@@ -22,6 +22,15 @@ _fzf_comprun() {
 	esac
 }
 
+coffee() {
+	xautolock -toggle
+	if [[ -z "$COFFEE" ]]; then
+		export $COFFEE="on"
+	else
+		unset $COFFEE
+	fi
+}
+
 proxy() {
 	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 	if [[ -z "$ALL_PROXY" ]]; then
