@@ -41,7 +41,7 @@ clk() {
 
 dpm() {
 	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
-		Disabled ) printf " 󰅶 " ;;
+		Disabled ) printf "  " ;;
 	esac
 }
 
