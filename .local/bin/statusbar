@@ -39,8 +39,10 @@ clk() {
 	printf " $icon $clk "
 }
 
-cof() {
-	[ "$COFFEE" ] && printf " 󰅶 "
+dpm() {
+	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
+		Disabled ) printf " 󰅶 " ;;
+	esac
 }
 
 cpu() {
@@ -111,5 +113,5 @@ vol() {
 }
 
 while true; do
-	sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(cof)$(bat)$(net)$(vol)$(clk)"
+	sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
 done
