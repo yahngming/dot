@@ -13,7 +13,8 @@ menu="\
  System\n\
 󰇧 Timezone\n\
 󱊞 USB\n\
-󱚾 WLAN"
+󱚾 WLAN\n\
+"
 
 case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
 	*Bluetooth* ) btmenu ;;
