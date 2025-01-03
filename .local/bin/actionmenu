@@ -14,8 +14,9 @@ menu="\
 󰇧 Timezone\n\
 󱊞 USB\n\
 󱚾 WLAN"
+
 case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
-	" Bluetooth" ) btmenu ;;
+	*Bluetooth* ) btmenu ;;
 	"󰍹 Display"   ) dispmenu ;;
 	" Dotfiles"  ) $TERMINAL -e dot ;;
 	"󰌌 Keyboard"  ) keymap ;;
