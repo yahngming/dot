@@ -1,6 +1,8 @@
 #!/bin/sh
 
-menu=" Bluetooth\n󰍹 Display\n Dotfiles\n󰌌 Keyboard\n Passwords\n Power\n󰐪 Printer\n󰌘 Proxy\n󰡰 SMB\n System\n󰇧 Timezone\n󱊞 USB\n󱚾 WLAN"
+menu=" \
+	 Bluetooth\n \
+	󰍹 Display\n Dotfiles\n󰌌 Keyboard\n Passwords\n Power\n󰐪 Printer\n󰌘 Proxy\n󰡰 SMB\n System\n󰇧 Timezone\n󱊞 USB\n󱚾 WLAN"
 case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
 	" Bluetooth" ) btmenu ;;
 	"󰍹 Display"   ) dispmenu ;;
