@@ -39,12 +39,6 @@ clk() {
 	printf " $icon $clk "
 }
 
-dpm() {
-	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
-		Disabled ) printf "  " ;;
-	esac
-}
-
 cpu() {
 	cpu="$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000))"
 	case 1 in
@@ -59,6 +53,12 @@ cut() {
 	IFS=$2
 	set -- $1
 	printf '%s' "$@"
+}
+
+dpm() {
+	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
+		Disabled ) printf "  " ;;
+	esac
 }
 
 ime() {
