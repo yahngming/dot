@@ -17,17 +17,17 @@ menu="\
 
 case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
 	*Bluetooth* ) btmenu ;;
-	"󰍹 Display"   ) dispmenu ;;
-	" Dotfiles"  ) $TERMINAL -e dot ;;
-	"󰌌 Keyboard"  ) keymap ;;
-	" Passwords" ) passmenu ;;
-	" Power"     ) powermenu ;;
-	"󰐪 Printer"   ) $BROWSER --new-tab localhost:631 ;;
-	"󰌘 Proxy"     ) $BROWSER --new-tab clash.razord.top ;;
-	"󰡰 SMB"       ) smbmenu ;;
-	" System"    ) $TERMINAL -e btop ;;
-	"󰇧 Timezone"  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
-	"󱊞 USB"       ) usbmenu ;;
-	"󱚾 WLAN"      ) wlanmenu ;;
-	*             ) exit 1 ;;
+	*Display*   ) dispmenu ;;
+	*Dotfiles*  ) $TERMINAL -e dot ;;
+	*Keyboard*  ) keymap ;;
+	*Passwords* ) passmenu ;;
+	*Power*     ) powermenu ;;
+	*Printer*   ) $BROWSER --new-tab localhost:631 ;;
+	*Proxy*     ) $BROWSER --new-tab clash.razord.top ;;
+	*SMB*       ) smbmenu ;;
+	*System*    ) $TERMINAL -e btop ;;
+	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
+	*USB*       ) usbmenu ;;
+	*WLAN*      ) wlanmenu ;;
+	*           ) exit 1 ;;
 esac
