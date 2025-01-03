@@ -1,6 +1,14 @@
 #!/bin/sh
 
-case "$(printf ' lock\n󰤄 sleep\n󰗽 logout\n reboot\n󰤆 shutdown' | dmenu $@)" in
+menu="\
+ lock\n\
+󰤄 sleep\n\
+󰗽 logout\n\
+ reboot\n\
+󰤆 shutdown\n\
+"
+
+case $(printf $menu | dmenu $@) in
 	" lock"     ) slock ;;
 	"󰤄 sleep"    ) systemctl sleep ;;
 	"󰗽 logout"   ) pkill -KILL -u $USER ;;
