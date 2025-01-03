@@ -62,14 +62,12 @@ dpm() {
 }
 
 ime() {
-	icon=""
-	ime="$(fcitx5-remote)"
-	case 1 in
-		$((ime == 0)) ) ime="en" ;;
-		$((ime == 1)) ) ime="en" ;;
-		$((ime == 2)) ) ime="cjk" ;;
+	case "$(fcitx5-remote -n)" in
+		*anthy*  ) ime="ja" ;;
+		*pinyin* ) ime="zh" ;;
+		*        ) ime="en" ;;
 	esac
-	[ "$ime" ] && printf " $icon $ime "
+	[ "$ime" ] && printf "  $ime "
 }
 
 net() {
@@ -92,8 +90,7 @@ net() {
 
 usb() {
 	usb="$(df -h | grep '/media/')"
-	icon="󱇰"
-	[ "$usb" ] && printf " $icon "
+	[ "$usb" ] && printf " 󱇰 "
 }
 
 vol() {
