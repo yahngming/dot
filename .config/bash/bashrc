@@ -25,9 +25,9 @@ _fzf_comprun() {
 coffee() {
 	xautolock -toggle
 	if [[ -z "$COFFEE" ]]; then
-		export $COFFEE="on"
+		export COFFEE="on"
 	else
-		unset $COFFEE
+		unset COFFEE
 	fi
 }
 
