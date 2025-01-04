@@ -11,8 +11,9 @@ menu="\
 󰐪 Printer\n\
 󰌘 Proxy\n\
 󰡰 SMB\n\
- System\n\
+ Tasks\n\
 󰇧 Timezone\n\
+󰚰 Update\n\
 󱊞 USB\n\
 󱚾 WLAN\n\
 "
@@ -28,8 +29,9 @@ case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
 	*Printer*   ) $BROWSER --new-tab localhost:631 ;;
 	*Proxy*     ) $BROWSER --new-tab clash.razord.top ;;
 	*SMB*       ) smbmenu ;;
-	*System*    ) $TERMINAL -e btop ;;
+	*Tasks*     ) $TERMINAL -e btop ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
+	*Update*    ) $TERMINAL -e yay ;;
 	*USB*       ) usbmenu ;;
 	*WLAN*      ) wlanmenu ;;
 	*           ) exit 1 ;;
