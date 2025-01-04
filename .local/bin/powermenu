@@ -8,7 +8,7 @@ menu="\
 󰤆 shutdown\n\
 "
 
-case $(printf "$menu" | dmenu -p "Power" "$@") in
+case $(printf "$menu" | dmenu "$@") in
 	*lock*     ) slock ;;
 	*sleep*    ) systemctl sleep ;;
 	*logout*   ) pkill -KILL -u $USER ;;
