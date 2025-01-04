@@ -4,7 +4,7 @@ server=$(avahi-browse _smb._tcp -t | awk '{print $4}' | sort -u | dmenu -noi -p 
 notify-send "Searching for network shares on $server..."
 share=$(smbclient -N -L "$server" | grep "Disk" | awk '{print $1}' | sort -u | dmenu -noi -p "Choose a share on $server:") || exit 1
 servershare="//${server}.local/${share}"
-clientmount="/run/media/$USER/${server}/${share}"
+clientmount="/run/mount/$USER/${server}/${share}"
 username=$(dmenu -p "Username:" < /dev/null) || exit 1
 password=$(dmenu -p "Password:" -P) || exit 1
 sudo -A mount -m -t cifs "$servershare" "$clientmount" -o username="$username",password="$password"
