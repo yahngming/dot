@@ -385,7 +385,7 @@ case "${dmenu_args[0]}" in
 		;;
 	*)
 		if [[ -z "$DMENU_BLUETOOTH_PROMPT" ]]; then
-			DMENU_BLUETOOTH_PROMPT="${dmenu_args[0]}"
+			DMENU_BLUETOOTH_PROMPT="Bluetooth Setting ${dmenu_args[0]}"
 			dmenu_args=("${dmenu_args[@]:1}")
 		fi
 		;;
