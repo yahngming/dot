@@ -13,7 +13,7 @@ iwd_dmenu() {
 
 			# user can connect, disconnect, or forget network
 			# don't care bout access points or other stuff
-			if ! show_menu 'WLAN' 'Connect' 'Disconnect' 'Forget'; then break; fi
+			if ! show_menu '' 'Connect' 'Disconnect' 'Forget'; then break; fi
 		done
 	}
 
@@ -68,8 +68,6 @@ iwd_dmenu() {
 
 			# get confirmation
 			[ -n "${network}" ] && answer="$(show_menu "Forget ${network}?" 'Cancel' 'Confirm')"
-
-			# forget if answer is yes
 			[ "${answer}" = "Confirm" ] && iwctl known-networks "${network}" forget
 		fi
 	}
