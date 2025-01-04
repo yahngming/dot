@@ -121,7 +121,7 @@ target="$(lang_menu | eval "$DMENU_LANG" '$@')" || exit 0
 
 # Translate text
 translation="$(trans "$target" "$text")"
-[ -z "$translation" ] && err 'Failed to translate'
+[ -z "$translation" ] && err 'Translation failed.'
 
 case "$(choose_next "$translation" "$@")" in
 	'View')                open_term "$translation"; exit 0 ;;
@@ -130,6 +130,6 @@ case "$(choose_next "$translation" "$@")" in
 	*)                     exit 0 ;;
 esac
 
-echo "$output" | eval "$CLIP_COPY" || err 'Failed to copy. Is CLIP_COPY setting set properly?'
+echo "$output" | eval "$CLIP_COPY" || err 'Copy failed.'
 
-notify-send 'Translation copied to clipboard.'
+notify-send 'Translation copied.'
