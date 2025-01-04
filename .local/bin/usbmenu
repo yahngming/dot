@@ -6,7 +6,7 @@ var spawn = require('child_process').spawn;
 var exec  = require('child_process').exec;
 
 var env       = process.env;
-var $LAUNCHER = env.UDISKIE_DMENU_LAUNCHER || 'dmenu -noi -p "USB"';
+var $LAUNCHER = env.UDISKIE_DMENU_LAUNCHER || 'dmenu -noi -p USB';
 
 main();
 
