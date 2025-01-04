@@ -56,7 +56,7 @@ screens=$(echo "$displays" | awk '/ connected/ {print $1}')
 { onescreen "$screens"; postrun; exit ;}
 
 # Main menu.
-chosen=$(printf "%s\\nMulti-monitor" "$screens" | dmenu -noi -p "Display") &&
+chosen=$(printf "%s\\nMulti-monitor" "$screens" | dmenu -noi -p "Choose a monitor:") &&
 case "$chosen" in
 	"Multi-monitor") multimon ;;
 	*) onescreen "$chosen" ;;
