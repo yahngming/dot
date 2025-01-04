@@ -25,20 +25,20 @@ load_config() {
 		: "${CLIP_PASTE_CLIP:=wl-paste}"
 		: "${CLIP_PASTE_PRIM:=wl-paste -p}"
 		: "${DMENU:=wmenu}"
-		: "${TERMINAL:=foot}"
+		: "${TERMINAL=foot}"
 	else
 		: "${CLIP_COPY:=xclip -i -r -selection clipboard}"
 		: "${CLIP_PASTE_CLIP:=xclip -o -selection clipboard}"
 		: "${CLIP_PASTE_PRIM:=xclip -o -selection primary}"
 		: "${DMENU:=dmenu}"
-		: "${TERMINAL:=st}"
+		: "${TERMINA=st}"
 	fi
 
 	# Default values
 	: "${TRANS_LANGS:=:zh :ja :en}"
-	: "${DMENU_TEXT:=${DMENU}}"
-	: "${DMENU_LANG:=${DMENU}}"
-	: "${DMENU_NEXT:=${DMENU}}"
+	: "${DMENU_TEXT:=${DMENU} -p 'From:'}"
+	: "${DMENU_LANG:=${DMENU} -p 'To:'}"
+	: "${DMENU_NEXT:=${DMENU} -p 'Options:'}"
 }
 
 formatmenu() {
@@ -65,6 +65,7 @@ choose_next() {
 	shift
 	if [ -n "$ALWAYS_COPY" ]; then
 		echo 'Copy'
+		echo 'View'
 	else
 		echo 'View'
 	fi
