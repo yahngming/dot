@@ -13,7 +13,7 @@ iwd_dmenu() {
 
 			# user can connect, disconnect, or forget network
 			# don't care bout access points or other stuff
-			if ! show_menu '' 'Connect' 'Disconnect' 'Forget'; then break; fi
+			if ! show_menu 'WLAN' 'Connect' 'Disconnect' 'Forget'; then break; fi
 		done
 	}
 
@@ -21,7 +21,7 @@ iwd_dmenu() {
 		get_network_info "iwctl station ${interface} get-networks"
 
 		# user can choose network to connect to
-		network="$(show_menu '' "${network_names}")"
+		network="$(show_menu 'Connect to:' "${network_names}")"
 
 		# if network starts with '> ' it means user is already on that network
 		case "${network}" in '> '*) notify-send 'Already connected.' & return ;; esac
@@ -50,10 +50,10 @@ iwd_dmenu() {
 	disconnect() {
 		connected_network="$(iwctl station "${interface}" show | grep -i '\<Connected network\>' | awk '{ $1=""; $2=""; sub("  ", " "); { $1=$1; print } }')"
 		if [ -n "${connected_network}" ]; then
-			answer="$(show_menu '' "Disconnect from ${connected_network}" 'Cancel')"
+			answer="$(show_menu "Disconnect from ${connected_network}?" 'Cancel' 'Confirm')"
 			case "$(printf '%s\n' "${answer}" | tr '[:upper:]' '[:lower:]')" in
-				'Cancel')  return ;;
-				*) iwctl station "${interface}" disconnect ;;
+				'Cancel'  ) return ;;
+				'Confirm' ) iwctl station "${interface}" disconnect ;;
 			esac
 		fi
 	}
@@ -64,13 +64,13 @@ iwd_dmenu() {
 		# if there are known networks
 		if [ -n "${network_names}" ]; then
 			# get network
-			network="$(show_menu '' "${network_names}")"
+			network="$(show_menu 'Forget:' "${network_names}")"
 
 			# get confirmation
-			[ -n "${network}" ] && answer="$(show_menu '' "Forget ${network}" 'Cancel')"
+			[ -n "${network}" ] && answer="$(show_menu "Forget ${network}?" 'Cancel' 'Confirm')"
 
 			# forget if answer is yes
-			[ "${answer}" = "Forget ${network}" ] && iwctl known-networks "${network}" forget
+			[ "${answer}" = "Confirm" ] && iwctl known-networks "${network}" forget
 		fi
 	}
 
@@ -119,7 +119,7 @@ iwd_dmenu() {
 				done)"
 
 		# print using dmenu
-		if ! answer="$(printf '%s\n' "${options}" | dmenu -l 10 -p "${prompt}")"; then return 1; fi
+		if ! answer="$(printf '%s\n' "${options}" | dmenu -noi -l 10 -p "${prompt}")"; then return 1; fi
 
 		# get user's answer
 		printf '%s\n' "${options}" | while read -r line; do
