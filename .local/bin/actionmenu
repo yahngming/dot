@@ -19,7 +19,7 @@ menu="\
 "
 
 case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
-	*Bluetooth* ) btmenu -noi -p Bluetooth;;
+	*Bluetooth* ) btmenu -noi;;
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) $TERMINAL -e dot ;;
@@ -32,7 +32,7 @@ case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
 	*Tasks*     ) $TERMINAL -e btop ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
 	*Update*    ) $TERMINAL -e yay ;;
-	*USB*       ) usbmenu -noi -p USB;;
+	*USB*       ) usbmenu -noi -p "Choose a device to mount/unmount:";;
 	*WLAN*      ) wlanmenu ;;
 	*           ) exit 1 ;;
 esac
