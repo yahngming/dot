@@ -20,6 +20,7 @@ arch() {
    	sudo systemctl enable bluetooth.service
    	sudo systemctl enable cups.service
    	sudo systemctl enable smb.service
+	gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
