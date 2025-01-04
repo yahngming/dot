@@ -311,7 +311,7 @@ run_dmenu() {
 			DMENU_BLUETOOTH_LAUNCHER="fuzzel --dmenu"
 			;;
 	esac
-	$DMENU_BLUETOOTH_LAUNCHER -noi -p "Bluetooth Setting" "${dmenu_args[@]}"
+	$DMENU_BLUETOOTH_LAUNCHER -noi -p "$DMENU_BLUETOOTH_PROMPT" "${dmenu_args[@]}"
 }
 
 print_help() {
