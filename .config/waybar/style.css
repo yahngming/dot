@@ -49,7 +49,6 @@ button:hover {
 	opacity: 0.8;
 	background-color: #64727D;
 	box-shadow: inset 0 -3px #ffffff;
-	transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.urgent {
