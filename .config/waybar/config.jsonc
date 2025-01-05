@@ -6,13 +6,8 @@
 		"hyprland/workspaces"
 	],
 
-	"modules-center": [
-		"hyprland/window"
-	],
-
 	"modules-right": [
 		"temperature",
-		"hyprland/language",
 		"battery",
 		"network",
 		"pulseaudio",
@@ -25,7 +20,7 @@
 		"all-outputs": "true",
 		"on-scroll-up": "hyprctl dispatch workspace e-1",
 		"on-scroll-down": "hyprctl dispatch workspace e+1",
-		"format": "{name}: {icon}",
+		"format": "{icon}",
 		"format-icons": {
 			"1": "󰣇",
 			"2": "",
@@ -37,10 +32,11 @@
 			"8": "󰎕",
 			"9": "󰖺",
 			"10": "󰖟",
+			"active": "",
 			"default": ""
 		},
 		"persistent-workspaces": {
-			"*": 10
+			"*": 9
 		}
 	},
 
