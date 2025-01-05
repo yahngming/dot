@@ -1,88 +1,88 @@
 {
-    "Radio": {
-        "AM": {
-            "FMIFNREnabled": false,
-            "bandwidth": 10000.0,
-            "carrierAgc": true,
-            "deempMode": "None",
-            "noiseBlankerEnabled": false,
-            "noiseBlankerLevel": 1.0,
-            "snapInterval": 1000.0,
-            "squelchEnabled": true,
-            "squelchLevel": -17.0
-        },
-        "CW": {
-            "FMIFNREnabled": false,
-            "bandwidth": 200.0,
-            "deempMode": "None",
-            "noiseBlankerEnabled": false,
-            "noiseBlankerLevel": 1.0,
-            "snapInterval": 10.0,
-            "squelchEnabled": false,
-            "squelchLevel": -100.0
-        },
-        "DSB": {
-            "FMIFNREnabled": false,
-            "bandwidth": 12000.0,
-            "deempMode": "None",
-            "noiseBlankerEnabled": false,
-            "noiseBlankerLevel": 1.0,
-            "snapInterval": 100.0,
-            "squelchEnabled": false,
-            "squelchLevel": -100.0
-        },
-        "FM": {
-            "FMIFNREnabled": true,
-            "bandwidth": 50000.0,
-            "deempMode": "None",
-            "noiseBlankerEnabled": false,
-            "noiseBlankerLevel": 1.0,
-            "snapInterval": 2500.0,
-            "squelchEnabled": false,
-            "squelchLevel": -100.0
-        },
-        "LSB": {
-            "FMIFNREnabled": false,
-            "bandwidth": 3000.0,
-            "deempMode": "None",
-            "noiseBlankerEnabled": false,
-            "noiseBlankerLevel": 1.0,
-            "snapInterval": 1000.0,
-            "squelchEnabled": true,
-            "squelchLevel": -100.0
-        },
-        "RAW": {
-            "FMIFNREnabled": false,
-            "bandwidth": 48000.0,
-            "noiseBlankerEnabled": false,
-            "noiseBlankerLevel": 1.0,
-            "snapInterval": 10000.0,
-            "squelchEnabled": false,
-            "squelchLevel": -100.0
-        },
-        "USB": {
-            "FMIFNREnabled": false,
-            "bandwidth": 3000.0,
-            "deempMode": "None",
-            "noiseBlankerEnabled": false,
-            "noiseBlankerLevel": 1.0,
-            "snapInterval": 1000.0,
-            "squelchEnabled": true,
-            "squelchLevel": -100.0
-        },
-        "WFM": {
-            "FMIFNREnabled": true,
-            "bandwidth": 200000.0,
-            "deempMode": "50us",
-            "lowPass": true,
-            "noiseBlankerEnabled": false,
-            "noiseBlankerLevel": 1.0,
-            "rds": false,
-            "snapInterval": 50000,
-            "squelchEnabled": true,
-            "squelchLevel": -17.0,
-            "stereo": true
-        },
-        "selectedDemodId": 1
-    }
+	"Radio": {
+		"AM": {
+			"FMIFNREnabled": false,
+			"bandwidth": 10000.0,
+			"carrierAgc": true,
+			"deempMode": "None",
+			"noiseBlankerEnabled": false,
+			"noiseBlankerLevel": 1.0,
+			"snapInterval": 1000.0,
+			"squelchEnabled": true,
+			"squelchLevel": -17.0
+		},
+		"CW": {
+			"FMIFNREnabled": false,
+			"bandwidth": 200.0,
+			"deempMode": "None",
+			"noiseBlankerEnabled": false,
+			"noiseBlankerLevel": 1.0,
+			"snapInterval": 10.0,
+			"squelchEnabled": false,
+			"squelchLevel": -100.0
+		},
+		"DSB": {
+			"FMIFNREnabled": false,
+			"bandwidth": 12000.0,
+			"deempMode": "None",
+			"noiseBlankerEnabled": false,
+			"noiseBlankerLevel": 1.0,
+			"snapInterval": 100.0,
+			"squelchEnabled": false,
+			"squelchLevel": -100.0
+		},
+		"FM": {
+			"FMIFNREnabled": true,
+			"bandwidth": 50000.0,
+			"deempMode": "None",
+			"noiseBlankerEnabled": false,
+			"noiseBlankerLevel": 1.0,
+			"snapInterval": 2500.0,
+			"squelchEnabled": false,
+			"squelchLevel": -100.0
+		},
+		"LSB": {
+			"FMIFNREnabled": false,
+			"bandwidth": 3000.0,
+			"deempMode": "None",
+			"noiseBlankerEnabled": false,
+			"noiseBlankerLevel": 1.0,
+			"snapInterval": 1000.0,
+			"squelchEnabled": true,
+			"squelchLevel": -100.0
+		},
+		"RAW": {
+			"FMIFNREnabled": false,
+			"bandwidth": 48000.0,
+			"noiseBlankerEnabled": false,
+			"noiseBlankerLevel": 1.0,
+			"snapInterval": 10000.0,
+			"squelchEnabled": false,
+			"squelchLevel": -100.0
+		},
+		"USB": {
+			"FMIFNREnabled": false,
+			"bandwidth": 3000.0,
+			"deempMode": "None",
+			"noiseBlankerEnabled": false,
+			"noiseBlankerLevel": 1.0,
+			"snapInterval": 1000.0,
+			"squelchEnabled": true,
+			"squelchLevel": -100.0
+		},
+		"WFM": {
+			"FMIFNREnabled": true,
+			"bandwidth": 200000.0,
+			"deempMode": "50us",
+			"lowPass": true,
+			"noiseBlankerEnabled": false,
+			"noiseBlankerLevel": 1.0,
+			"rds": false,
+			"snapInterval": 50000,
+			"squelchEnabled": true,
+			"squelchLevel": -17.0,
+			"stereo": true
+		},
+		"selectedDemodId": 1
+	}
 }
