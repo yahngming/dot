@@ -65,8 +65,8 @@
 		"format": "{icon}",
 		"format-ethernet": "󰈀",
 		"format-disconnected": "󰤮",
-		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
-		"tooltip-format": "{ifname} via {gwaddr}",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"tooltip-format": "{ifname} via {gwaddr}"
 	},
 
 	"pulseaudio": {
