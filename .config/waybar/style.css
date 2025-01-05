@@ -10,6 +10,7 @@ window#waybar {
 	background: transparent;
 	background-color: rgba(0,0,0,0.8);
 	border-bottom: 0px solid #ffffff;
+	opacity: 0.6;
 	transition-duration: .5s;
 	transition-property: background-color;
 }
@@ -69,7 +70,7 @@ workspaces {
     color: @color8;
     font-size:16px;
     font-weight:normal;
-    opacity:0.2;
+    opacity:0.8;
 }
 
 tooltip {
