@@ -11,15 +11,15 @@
 		"battery",
 		"network",
 		"pulseaudio",
-		"custom/power",
+		"power",
 		"clock"
 	],
 
 	"hyprland/workspaces": {
 		"active-only": false,
 		"all-outputs": true,
-		"on-scroll-up": "hyprctl dispatch workspace e-1",
-		"on-scroll-down": "hyprctl dispatch workspace e+1",
+		"on-scroll-up": "hyprctl dispatch workspace r-1",
+		"on-scroll-down": "hyprctl dispatch workspace r+1",
 		"format": "{icon}",
 		"format-icons": {
 			"1": "",
@@ -69,7 +69,7 @@
 		"format-icons": ["󰕿", "󰖀", "󰕾"],
 	},
 
-	"custom/power": {
+	"power": {
 		"format" : "󰤆",
 		"tooltip-format": "Left: Power menu\nRight: Lock screen",
 		"on-click": "powermenu",
