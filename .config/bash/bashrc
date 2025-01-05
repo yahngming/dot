@@ -66,7 +66,9 @@ alias ll="eza --all --color=always --git --git-repos --group-directories-first -
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" = 1 ]; then
+	exec Hyprland
+elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	exec startx ~/.config/xorg/xinitrc
 else
 	fastfetch | lolcat
