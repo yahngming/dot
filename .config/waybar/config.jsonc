@@ -6,6 +6,10 @@
 		"hyprland/workspaces"
 	],
 
+	"modules-center": [
+		"hyprland/window"
+	],
+
 	"modules-right": [
 		"temperature",
 		"hyprland/language",
@@ -18,21 +22,33 @@
 	],
 
 	"hyprland/workspaces": {
+		"all-outputs": "true",
 		"on-scroll-up": "hyprctl dispatch workspace e-1",
 		"on-scroll-down": "hyprctl dispatch workspace e+1",
 		"format": "{icon}",
 		"format-icons": {
-			"1": "",
-			"2": "",
-			"3": "",
-			"4": "",
-			"urgent": "",
-			"active": "",
-			"default": ""
+			"1": "󰣇",
+			"2": "",
+			"3": "",
+			"4": "󰎞",
+			"5": "",
+			"6": "󰥠",
+			"7": "󰇮",
+			"8": "󰎕",
+			"9": "󰖺",
+			"10": "󰖟"
+		},
+		"persistent-workspaces": {
+			"*": 10
 		}
 	},
 
 	"hyprland/window": {
+		"format": "👉 {}",
+		"rewrite": {
+			"(.*) — Mozilla Firefox": "🌎 $1",
+			"(.*) - fish": "> [$1]"
+		},
 		"separate-outputs": true
 	},
 
