@@ -28,13 +28,14 @@ button:hover {
 }
 
 #workspaces button {
-	margin: 4px 3px;
+	margin: 10px 10px;
 	border-radius: 15px;
 	border: 0px;
 	opacity: 0.7;
-	padding: 0 5px;
+	padding: 0 10px;
 	background-color: transparent;
 	color: #ffffff;
+	transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
@@ -49,6 +50,7 @@ button:hover {
 	opacity: 0.8;
 	background-color: #64727D;
 	box-shadow: inset 0 -3px #ffffff;
+	transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.urgent {
