@@ -36,8 +36,7 @@
 			"7": "󰇮",
 			"8": "󰎕",
 			"9": "󰖺",
-			"10": "󰖟",
-			"default": ""
+			"10": "󰖟"
 		},
 		"persistent-workspaces": {
 			"*": 10
@@ -63,10 +62,11 @@
 	},
 
 	"network": {
+		"format": "{icon}",
 		"format-ethernet": "󰈀",
-		"tooltip-format": "{ifname} via {gwaddr}",
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+		"tooltip-format": "{ifname} via {gwaddr}",
 	},
 
 	"pulseaudio": {
