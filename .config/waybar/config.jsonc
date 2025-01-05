@@ -40,12 +40,11 @@
 			"default": ""
 		},
 		"persistent-workspaces": {
-			"*": 5
+			"*": 10
 		}
 	},
 
 	"hyprland/window": {
-		"format": "> {}",
 		"separate-outputs": true
 	},
 
@@ -55,26 +54,20 @@
 	},
 
 	"temperature": {
-		"format": "{temperatureC}°C {icon}",
-		"format-icons": ["", "", ""]
+		"format": "{temperatureC}"
 	},
 
 	"battery": {
-		"format": "{capacity}% {icon}",
-		"format-full": "{capacity}% {icon}",
-		"format-charging": "{capacity}% ",
-		"format-plugged": "{capacity}% ",
-		"format-alt": "{time} {icon}",
+		"format": "{icon}",
 		"format-icons": ["", "", "", "", ""]
 	},
 
 	"network": {
-		"format-wifi": "{essid} ({signalStrength}%) ",
-		"format-ethernet": "{ipaddr}/{cidr} ",
-		"tooltip-format": "{ifname} via {gwaddr} ",
-		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "Disconnected ⚠",
-		"format-alt": "{ifname}: {ipaddr}/{cidr}"
+		"format-wifi": "",
+		"format-ethernet": "󰈀",
+		"tooltip-format": "{ifname} via {gwaddr}",
+		"format-disconnected": "󰤮"
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
 	},
 
 	"pulseaudio": {
