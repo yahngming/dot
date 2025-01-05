@@ -30,7 +30,7 @@ workspaces {
     border: 0px;
     font-weight: bold;
     font-style: normal;
-    opacity: 0.8;
+    opacity: 0.2;
     font-size: 16px;
     color: @color8;
 }
