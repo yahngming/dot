@@ -44,11 +44,7 @@
 	},
 
 	"hyprland/window": {
-		"format": "👉 {}",
-		"rewrite": {
-			"(.*) — Mozilla Firefox": "🌎 $1",
-			"(.*) - fish": "> [$1]"
-		},
+		"format": "> {}",
 		"separate-outputs": true
 	},
 
