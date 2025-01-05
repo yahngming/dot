@@ -35,7 +35,6 @@ button:hover {
 	padding: 0 10px;
 	background-color: transparent;
 	color: #ffffff;
-	transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
@@ -68,7 +67,7 @@ button:hover {
 #network,
 #pulseaudio,
 #wireplumber,
-#custom-media,
+#power,
 #tray,
 #mode,
 #idle_inhibitor,
