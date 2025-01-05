@@ -109,7 +109,5 @@ tooltip label {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-	padding: 0 10px;
 	color: @color8;
-	opacity: 0.7;
 }
