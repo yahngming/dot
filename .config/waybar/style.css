@@ -110,4 +110,5 @@ tooltip label {
 #power-profiles-daemon,
 #mpd {
 	color: @color8;
+	padding: 0px 10px;
 }
