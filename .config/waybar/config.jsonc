@@ -17,6 +17,7 @@
 	],
 
 	"hyprland/workspaces": {
+		"active-only": false,
 		"all-outputs": "true",
 		"on-scroll-up": "hyprctl dispatch workspace e-1",
 		"on-scroll-down": "hyprctl dispatch workspace e+1",
@@ -31,7 +32,13 @@
 			"7": "󰇮",
 			"8": "󰎕",
 			"9": "󰖺",
-			"10": "󰖟"
+			"10": "󰖟",
+			"urgent": "",
+			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 5
 		}
 	},
 
@@ -67,15 +74,9 @@
 	},
 
 	"custom/power": {
-		"format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+		"format" : "󰤆",
+		"tooltip-format": "Left: Power menu\nRight: Lock screen",
+		"on-click": "powermenu",
+		"on-click-right": "slock"
 	}
 }
