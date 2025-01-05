@@ -25,7 +25,7 @@
 		"all-outputs": "true",
 		"on-scroll-up": "hyprctl dispatch workspace e-1",
 		"on-scroll-down": "hyprctl dispatch workspace e+1",
-		"format": "{name}: {icon}",
+		"format": "{icon}",
 		"format-icons": {
 			"1": "󰣇",
 			"2": "",
@@ -36,10 +36,11 @@
 			"7": "󰇮",
 			"8": "󰎕",
 			"9": "󰖺",
-			"10": "󰖟"
+			"10": "󰖟",
+			"default": ""
 		},
 		"persistent-workspaces": {
-			"*": 10
+			"*": 5
 		}
 	},
 
