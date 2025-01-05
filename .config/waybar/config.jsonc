@@ -11,7 +11,7 @@
 		"battery",
 		"network",
 		"pulseaudio",
-		"power",
+		"custom/power",
 		"clock"
 	],
 
@@ -69,7 +69,7 @@
 		"format-icons": ["󰕿", "󰖀", "󰕾"],
 	},
 
-	"power": {
+	"custom/power": {
 		"format" : "󰤆",
 		"tooltip-format": "Left: Power menu\nRight: Lock screen",
 		"on-click": "powermenu",
