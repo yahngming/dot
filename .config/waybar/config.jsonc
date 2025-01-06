@@ -16,7 +16,8 @@
 		"format-icons": {
 			"active": "",
 			"default": "",
-			"empty": ""
+			"empty": "",
+			"hover": ""
 		},
 		"persistent-workspaces": {
 			"*": [ 1,2,3,4,5 ]
@@ -28,16 +29,8 @@
 	},
 
 	"clock": {
-		"format": "{:%I:%M:%S %p} ",
-		"interval": 1,   
-		"tooltip-format": "<tt>{calendar}</tt>",
-		"calendar": {
-			"format": {
-				"months": "<span color='#000000'><b>{}</b></span>",
-				"weekdays": "<span color='#000000'><b>{}</b></span>",
-				"today": "<span color='#000000'><b>{}</b></span>"
-			}
-		}
+		"format": "{:%I:%M %p} ",
+		"tooltip-format": "<tt>{calendar}</tt>"
 	},
 
 	"temperature": {
@@ -60,7 +53,7 @@
 	"pulseaudio": {
 		"format": "{icon}",
 		"format-muted": "󰝟",
-		"format-icons": ["󰕿", "󰖀", "󰕾"],
+		"format-icons": ["󰕿", "󰖀", "󰕾"]
 	},
 
 	"custom/power": {
