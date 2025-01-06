@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mkdir -p ~/Pictures/screenshots
-screenshot = "maim --hidecursor --select ~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png"
+screenshot="maim --hidecursor --select ~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png"
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	$screenshot
