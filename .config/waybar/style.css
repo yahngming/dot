@@ -41,7 +41,7 @@ tooltip {
 #battery:hover,
 #cpu:hover,
 #memory:hover,
-#puleaudio:hover,
+#pulseaudio:hover,
 #temperature:hover {
     transition: all .3s ease;
     color:@color0;
@@ -55,7 +55,7 @@ tooltip {
 #battery,
 #cpu,
 #memory,
-#puleaudio,
+#pulseaudio,
 #temperature {
     padding: 0px 5px;
     transition: all .3s ease; 
