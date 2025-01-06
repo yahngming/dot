@@ -1,3 +1,10 @@
 #!/bin/sh
 
-mkdir -p ~/Pictures/screenshots && maim --hidecursor --select ~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png | xclip -selection clipboard -target image/png
+mkdir -p ~/Pictures/screenshots
+screenshot = "maim --hidecursor --select ~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png"
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	$screenshot
+elif [ -n "$DISPLAY" ]; then
+	$screenshot | xclip -selection clipboard -target image/png
+fi
