@@ -8,7 +8,6 @@ menu="\
  IME\n\
 󰌌 Keyboard\n\
  Passwords\n\
- Power\n\
 󰐪 Printer\n\
 󰌘 Proxy\n\
 󰡰 SMB\n\
@@ -16,6 +15,7 @@ menu="\
 󰇧 Timezone\n\
 󰚰 Update\n\
 󱊞 USB\n\
+󰸉 Wallpaper\n\
 󱚾 WLAN\n\
 "
 
@@ -27,14 +27,13 @@ case $(printf "$menu" | dmenu -g 3 -l 6 "$@") in
 	*IME*       ) fcitx5-configtool ;;
 	*Keyboard*  ) keymap ;;
 	*Passwords* ) passmenu ;;
-	*Power*     ) powermenu ;;
 	*Printer*   ) $BROWSER --new-tab localhost:631 ;;
 	*Proxy*     ) $BROWSER --new-tab clash.razord.top ;;
 	*SMB*       ) smbmenu ;;
-	*Tasks*     ) $TERMINAL -e btop ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
 	*Update*    ) $TERMINAL -e yay ;;
 	*USB*       ) usbmenu -noi ;;
+	*Wallpaper* ) wallpaper ;;
 	*WLAN*      ) wlanmenu ;;
 	*           ) exit 1 ;;
 esac
