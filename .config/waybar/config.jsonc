@@ -35,11 +35,12 @@
 				"months": "<span color='#000000'><b>{}</b></span>",
 				"weekdays": "<span color='#000000'><b>{}</b></span>",
 				"today": "<span color='#000000'><b>{}</b></span>"
-			}
+			},
 		},
 		"actions": {
 			"on-click-right": "shift_down",
 			"on-click": "shift_up"
+		}
 	},
 
 	"temperature": {
