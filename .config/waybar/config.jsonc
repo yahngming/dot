@@ -40,7 +40,7 @@
 	},
 
 	"clock": {
-		"format": "{%H:%M}"
+		"tooltip-format": "<tt><small>{calendar}</small>"
 	},
 
 	"temperature": {
@@ -57,7 +57,7 @@
 		"format-ethernet": "󰈀",
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-		"tooltip-format": "{ifname} via {gwaddr}"
+		"tooltip-format": "{essid}"
 	},
 
 	"pulseaudio": {
