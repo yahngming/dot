@@ -16,8 +16,7 @@
 		"format-icons": {
 			"hover": "",
 			"active": "",
-			"empty": "",
-			"default": ""
+			"empty": ""
 		},
 		"persistent-workspaces": {
 			"*": [ 1,2,3,4,5 ]
