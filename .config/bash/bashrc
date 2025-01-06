@@ -54,7 +54,7 @@ export FZF_ALT_C_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix
 export FZF_CTRL_T_OPTS="--preview 'if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi'"
 export FZF_ALT_C_OPTS="--preview 'eza --color=always --tree {} | head -200'"
 export QT_STYLE_OVERRIDE="Windows"
-export GTK_IM_MODULE="xim"
+export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 export XMODIFIERS="@im=fcitx"
 
