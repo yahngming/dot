@@ -40,17 +40,14 @@ proxy() {
 }
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
-export MOZ_ENABLE_WAYLAND=1
 export BROWSER="firefox --profile $HOME/.config/firefox"
 export EDITOR="vim"
 export HISTCONTROL="ignoreboth:erasedups"
 export LESS="-IR"
-export MANAGER="$TERMINAL -e lf"
 export OPENER="xdg-open"
 export PAGER="less"
 export SUDO_ASKPASS="$HOME/.local/bin/sapmenu"
 export TERMINAL="st"
-export VISUAL="vim"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
 export FZF_CTRL_T_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type file"
 export FZF_ALT_C_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type directory"
