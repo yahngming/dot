@@ -3,11 +3,11 @@
 wallpaper=$(find ~/Pictures/wallpapers/* | shuf -n 1)
 wal -n -i $wallpaper
 
-if [ -n "${WAYLAND_DISPLAY}" ]; then
+if [ -n "$DISPLAY" ]; then
+	xwallpaper --zoom $wallpaper
+	xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
+else
 	hyprctl hyprpaper preload $wallpaper
 	hyprctl hyprpaper wallpaper ,$wallpaper
 	killall -SIGUSR2 waybar
-elif [ -n "$DISPLAY" ]; then
-	xwallpaper --zoom $wallpaper
-	xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
 fi
