@@ -3,8 +3,8 @@
 mkdir -p ~/Pictures/screenshots
 screenshot="maim --hidecursor --select ~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png"
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
+if [ -n $WAYLAND_DISPLAY ]; then
 	$screenshot | wl-copy
-elif [ -n "$DISPLAY" ]; then
+elif [ -n $DISPLAY ]; then
 	$screenshot | xclip -selection clipboard -target image/png
 fi
