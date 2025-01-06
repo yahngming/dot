@@ -1,6 +1,7 @@
 {
 	"layer": "top",
 	"position": "bottom",
+	"reload_style_on_change": true,
 
 	"modules-left": ["clock", "tray"],
 	"modules-center": ["hyprland/workspaces"],
@@ -15,10 +16,11 @@
 		"format-icons": {
 			"hover": "",
 			"active": "",
+			"empty": "",
 			"default": ""
 		},
 		"persistent-workspaces": {
-			"*": 5
+			"*": [ 1,2,3,4,5 ]
 		}
 	},
 
