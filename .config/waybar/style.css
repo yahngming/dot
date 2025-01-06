@@ -44,7 +44,7 @@ tooltip {
 #pulseaudio:hover,
 #temperature:hover {
     transition: all .3s ease;
-    color:@color0;
+    color: @color9;
 }
 
 #clock,
@@ -59,7 +59,7 @@ tooltip {
 #temperature {
     padding: 0px 5px;
     transition: all .3s ease; 
-    color: @color9;
+    color: @color7;
 }
 
 #workspaces {
