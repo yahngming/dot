@@ -30,7 +30,7 @@ window#waybar{
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
 tooltip {
-    background: alpha(@background,.3);
+    background: alpha(@background,.9);
 }
 
 #clock:hover,
@@ -59,7 +59,7 @@ tooltip {
 #temperature {
     padding: 0px 5px;
     transition: all .3s ease; 
-    color:@color7;
+    color: @color9;
 }
 
 #workspaces {
