@@ -58,8 +58,8 @@
 
 	"custom/power": {
 		"format" : "󰤆",
-		"tooltip-format": "Left: Power menu\nRight: Lock screen",
 		"on-click": "powermenu",
-		"on-click-right": "slock"
+		"on-click-right": "hyprlock"
+		"tooltip-format": "Left: Power menu\nRight: Lock screen",
 	}
 }
