@@ -42,27 +42,26 @@ tooltip {
 #cpu:hover,
 #memory:hover,
 #puleaudio:hover,
-#temperature:hover{
+#temperature:hover {
     transition: all .3s ease;
     color:@color0;
 }
 
-#custom-notification {
+#clock,
+#custom-pacman,
+#custom-notification,
+#bluetooth,
+#network,
+#battery,
+#cpu,
+#memory,
+#puleaudio,
+#temperature {
     padding: 0px 5px;
-    transition: all .3s ease;
+    transition: all .3s ease; 
     color:@color7;
 }
-#clock{
-    padding: 0px 5px;
-    color:@color7;
-    transition: all .3s ease;
-}
-#custom-pacman{
-    padding: 0px 5px;
-    transition: all .3s ease;
-    color:@color7;
 
-}
 #workspaces {
     padding: 0px 5px;
 }
@@ -98,41 +97,6 @@ tooltip {
     border: none;
     transition: all .5s ease;
 }
-#bluetooth{
-    padding: 0px 5px;
-    transition: all .3s ease;
-    color:@color7;
-
-}
-#network{
-    padding: 0px 5px;
-    transition: all .3s ease;
-    color:@color7;
-
-}
-#battery{
-    padding: 0px 5px;
-    transition: all .3s ease;
-    color:@color7;
-
-
-}
-#battery.charging {
-    color: #26A65B;
-}
-
-#battery.warning:not(.charging) {
-    color: #ffbe61;
-}
-
-#battery.critical:not(.charging) {
-    color: #f53c3c;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
 #group-expand{
     padding: 0px 5px;
     transition: all .3s ease; 
@@ -150,27 +114,13 @@ tooltip {
 #custom-colorpicker{
     padding: 0px 5px;
 }
-#cpu,#memory,#temperature{
-    padding: 0px 5px;
-    transition: all .3s ease; 
-    color:@color7;
-
-}
 #custom-endpoint{
     color:transparent;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
 
 }
-#tray{
-    padding: 0px 5px;
-    transition: all .3s ease; 
-
-}
-#tray menu * {
-    padding: 0px 5px;
-    transition: all .3s ease; 
-}
-
+#tray,
+#tray menu *,
 #tray menu separator {
     padding: 0px 5px;
     transition: all .3s ease; 
