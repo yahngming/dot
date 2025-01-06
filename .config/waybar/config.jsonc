@@ -2,7 +2,7 @@
 	"layer": "top",
 	"position": "bottom",
 
-	"modules-left": ["clock". "tray"],
+	"modules-left": ["clock", "tray"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["temperature", "battery", "network", "pulseaudio", "custom/power"],
 
