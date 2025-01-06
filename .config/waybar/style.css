@@ -2,8 +2,6 @@
 
 * {
 	font-family: symbol;
-	border: none;
-	border-radius: 0px;
 }
 
 window#waybar{
@@ -32,12 +30,23 @@ window#waybar{
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
 tooltip {
-    background:rgb(50,50,50)
+    background: alpha(@background,.3);
 }
-#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+
+#clock:hover,
+#custom-pacman:hover,
+#custom-notification:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#pauleaudio:hover,
+#temperature:hover{
     transition: all .3s ease;
     color:@color0;
 }
+
 #custom-notification {
     padding: 0px 5px;
     transition: all .3s ease;
