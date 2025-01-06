@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
+if [ -n $WAYLAND_DISPLAY ]; then
 	hyprctl dispatch dpms toggle
-elif [ -n "$DISPLAY" ]; then
+elif [ -n $DISPLAY ]; then
 	xautolock -toggle
 	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
 		Disabled ) xset +dpms ;;
