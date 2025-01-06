@@ -1,10 +1,10 @@
 #!/bin/sh
 
 mkdir -p ~/Pictures/screenshots
-screenshot="maim --hidecursor --select ~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png"
+screenshot="~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png"
 
 if [ -n $WAYLAND_DISPLAY ]; then
-	$screenshot | wl-copy
+	grim -g "$(slurp)" $screenshot | wl-copy
 elif [ -n $DISPLAY ]; then
-	$screenshot | xclip -selection clipboard -target image/png
+	maim --hidecursor --select $screenshot | xclip -selection clipboard -target image/png
 fi
