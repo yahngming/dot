@@ -5,6 +5,7 @@ menu="\
  Coffee\n\
 󰍹 Display\n\
  Dotfiles\n\
+ IME\n\
 󰌌 Keyboard\n\
  Passwords\n\
  Power\n\
@@ -18,11 +19,12 @@ menu="\
 󱚾 WLAN\n\
 "
 
-case $(printf "$menu" | dmenu -g 3 -l 5 "$@") in
+case $(printf "$menu" | dmenu -g 3 -l 6 "$@") in
 	*Bluetooth* ) btmenu -noi ;;
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) $TERMINAL -e dot ;;
+	*IME*       ) fcitx5-configtool ;;
 	*Keyboard*  ) keymap ;;
 	*Passwords* ) passmenu ;;
 	*Power*     ) powermenu ;;
