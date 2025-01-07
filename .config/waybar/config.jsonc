@@ -27,14 +27,12 @@
 
 	"custom/power": {
 		"format": "",
-		"on-click": "powermenu",
-		"on-click-right": "powermenu"
+		"on-click": "powermenu"
 	},
 
 	"custom/settings": {
 		"format": "",
-		"on-click": "settings",
-		"on-click-right": "settings"
+		"on-click": "settings"
 	},
 
 	"custom/weather": {
