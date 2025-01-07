@@ -39,8 +39,7 @@
 	"custom/weather": {
 		"format": "{}",
 		"interval": 3600,
-		"exec": "curl wttr.in/Shaoxing?format=%C%t%h",
-		"return-type": "json"
+		"exec": "curl wttr.in/@google.com?format=%C%t%h"
 	},
 
 	"hyprland/workspaces": {
