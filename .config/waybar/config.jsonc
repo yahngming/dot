@@ -55,7 +55,7 @@
 	},
 
 	"mpris": {
-		"format": "{status_icon}  {title} - {artist}",
+		"format": "{status_icon} {title} - {artist}",
 		"status-icons": {
 			"playing": "",
 			"default": ""
@@ -70,8 +70,8 @@
 		"format-ethernet": "󰈀",
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-		"tooltip-format": "{signaldBm}dBm @ {essid}",
-		"tooltip-format-ethernet": "{ifname}",
+		"tooltip-format": "󰒢 {signaldBm}dBm 󰀃 {essid}",
+		"tooltip-format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
 		"on-click-right": "wlanmenu"
 	},
 
