@@ -40,10 +40,9 @@
 		}
 	},
 
-	"custom/media": {
-		"exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}} - {{artist}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+	"mpris": {
 		"max-length": 60,
-		"format": "󰎈 {}",
+		"format": "{status_icon} {title} - {artist}",
 		"on-click": "playerctl play-pause",
 		"on-scroll-down": "playerctl volume .05-",
 		"on-scroll-up": "playerctl volume .05+",
