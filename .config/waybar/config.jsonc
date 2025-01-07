@@ -70,7 +70,7 @@
 		"format-ethernet": "󰈀",
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-		"tooltip-format": "{signaldBm} @ {essid} [{bandwidthUpBytes}/{bandwidthDownBytes}]",
+		"tooltip-format": "{signaldBm}dBm @ {essid}",
 		"tooltip-format-ethernet": "{ifname}",
 		"on-click-right": "wlanmenu"
 	},
