@@ -1,23 +1,20 @@
 {
+
 	"layer": "top",
 	"position": "bottom",
 	"reload_style_on_change": true,
 
-	"modules-left": ["clock", "tray"],
+	"modules-left": ["clock", "tray", "custom/media"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["temperature", "battery", "network", "pulseaudio", "custom/power"],
 
 	"hyprland/workspaces": {
-		"active-only": false,
 		"all-outputs": true,
 		"on-scroll-up": "hyprctl dispatch workspace e-1",
 		"on-scroll-down": "hyprctl dispatch workspace e+1",
 		"format": "{icon}",
 		"format-icons": {
-			"active": "",
-			"default": "",
-			"empty": "",
-			"hover": ""
+			"default": ""
 		},
 		"persistent-workspaces": {
 			"*": [ 1,2,3,4,5 ]
@@ -28,18 +25,34 @@
 		"separate-outputs": true
 	},
 
-	"clock": {
-		"format": "{:%I:%M %p} ",
-		"tooltip-format": "<tt>{calendar}</tt>"
-	},
-
-	"temperature": {
-		"format": "{temperatureC}"
-	},
-
 	"battery": {
 		"format": "{icon}",
 		"format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	},
+
+	"clock": {
+		"format": "{:%I:%M %p} ",
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"format": {
+				"today": "<b>{}</b>"
+			}
+		}
+	},
+
+	"custom/media": {
+		"exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+		"format": "<span>󰎈 {} 󰎈</span>",
+		"max-length": 40,
+		"on-click": "",
+		"return-type": "json"
+	},
+
+	"custom/power": {
+		"format" : "󰤆",
+		"on-click": "powermenu",
+		"on-click-right": "hyprlock",
+		"tooltip-format": "Left: Power menu\nRight: Lock screen"
 	},
 
 	"network": {
@@ -47,7 +60,9 @@
 		"format-ethernet": "󰈀",
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-		"tooltip-format": "{essid}"
+		"tooltip-format": "{essid}",
+		"tooltip-format-ethernet": "{ifname}",
+		"on-click": "wlanmenu"
 	},
 
 	"pulseaudio": {
@@ -56,10 +71,8 @@
 		"format-icons": ["󰕿", "󰖀", "󰕾"]
 	},
 
-	"custom/power": {
-		"format" : "󰤆",
-		"on-click": "powermenu",
-		"on-click-right": "hyprlock",
-		"tooltip-format": "Left: Power menu\nRight: Lock screen"
+	"temperature": {
+		"format": "{temperatureC}"
 	}
+
 }
