@@ -37,14 +37,16 @@ tooltip {
 #clock,
 #cpu,
 #custom-power,
+#idle_inhibitor,
 #memory,
 #mpris,
 #network,
+#pulseaudio,
+#pulseaudio-slider,
 #temperatur,
 #tray,
 #tray menu *,
-#tray menu separator,
-#wireplumber {
+#tray menu separator {
 	padding: 0px 5px;
 	transition: all .3s ease; 
 	color: @color7;
@@ -54,14 +56,16 @@ tooltip {
 #clock:hover,
 #cpu:hover,
 #custom-power:hover,
+#idle_inhibitor:hover,
 #memory:hover,
 #mpris:hover,
 #network:hover,
+#pulseaudio:hover,
+#pulseaudio-slider:hover,
 #temperature:hover,
 #tray:hover,
 #tray menu *:hover,
-#tray menu separator:hover,
-#wireplumber:hover {
+#tray menu separator:hover {
 	transition: all .3s ease;
 	color: @color9;
 }
@@ -122,4 +126,23 @@ tooltip {
 	color:transparent;
 	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
 
+}
+#pulseaudio-slider slider {
+	min-height: 0px;
+	min-width: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+#pulseaudio-slider trough {
+	min-height: 80px;
+	min-width: 10px;
+	border-radius: 5px;
+	background-color: black;
+}
+#pulseaudio-slider highlight {
+	min-width: 10px;
+	border-radius: 5px;
+	background-color: green;
 }
