@@ -43,7 +43,7 @@
 	"custom/media": {
 		"exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}} - {{artist}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
 		"max-length": 60,
-		"format": "{icon} <span>󰎈 {} 󰎈</span>",
+		"format": "<span>󰎈 {} 󰎈</span>",
 		"format-icons": {
 			"Paused": "<span> </span>",
 			"Playing": "<span>󰏥 </span>",
