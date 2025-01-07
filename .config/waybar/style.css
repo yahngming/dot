@@ -136,8 +136,7 @@ tooltip {
 	box-shadow: none;
 }
 #pulseaudio-slider trough {
-	min-height: 80px;
-	min-width: 10px;
+	min-width: 50px;
 	border-radius: 5px;
 	background-color: black;
 }
