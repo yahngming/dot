@@ -14,7 +14,7 @@
 	},
 
 	"clock": {
-		"format": "{:%I:%M %p} ",
+		"format": "{:%I:%M %p}",
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"on-scroll-up": "shift_up",
 		"on-scroll-down": "shift_down",
