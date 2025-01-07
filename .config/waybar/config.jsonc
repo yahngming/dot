@@ -44,7 +44,11 @@
 		"format": "{status_icon} {title} - {artist}",
 		"on-click": "playerctl play-pause",
 		"on-scroll-down": "playerctl volume .05-",
-		"on-scroll-up": "playerctl volume .05+"
+		"on-scroll-up": "playerctl volume .05+",
+		"status-icons": {
+			"playing": "󰏥",
+			"default": "󰐌"
+		},
 	},
 
 	"custom/power": {
