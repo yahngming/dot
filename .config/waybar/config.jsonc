@@ -36,7 +36,7 @@
 	},
 
 	"custom/weather": {
-		"exec": "curl wttr.in/Shaoxing?format=1",
+		"exec": "curl wttr.in/Shaoxing?format=%t",
 		"restart-interval": 3600
 	},
 
