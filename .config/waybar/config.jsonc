@@ -15,12 +15,16 @@
 	},
 
 	"clock": {
-		"format": "{:%I:%M %p UTC%z}",
-		"timezones": ["Asia/Taipei", "America/New_York", "America/Los_Angeles"],
+		"format": "{:%H:%M UTC%z}",
+		"timezones": ["", "America/New_York", "America/Los_Angeles"],
 		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"format": {
+				"today": "<b><u>{}</u></b>"
+			},
 		"actions": {
-			"on-click-forward": "tz_up",
 			"on-click-backward": "tz_down",
+			"on-click-forward": "tz_up",
 			"on-scroll-up": "shift_down",
 			"on-scroll-down": "shift_up"
 		}
