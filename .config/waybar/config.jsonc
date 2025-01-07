@@ -6,7 +6,7 @@
 
 	"modules-left": ["clock", "custom/weather", "mpris"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["tray", "temperature", "temperature#gpu", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
+	"modules-right": ["tray", "temperature", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
 
 	"battery": {
 		"format": "{icon}",
