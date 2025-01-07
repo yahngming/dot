@@ -21,7 +21,8 @@
 		"calendar": {
 			"format": {
 				"today": "<b><u>{}</u></b>"
-			},
+			}
+		},
 		"actions": {
 			"on-click-backward": "tz_down",
 			"on-click-forward": "tz_up",
