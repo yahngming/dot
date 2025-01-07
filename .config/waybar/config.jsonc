@@ -48,8 +48,8 @@
 	"mpris": {
 		"format": "{status_icon}  {title} - {artist}",
 		"on-click": "playerctl play-pause",
-		"on-scroll-up": "playerctl volume .05+",
-		"on-scroll-down": "playerctl volume .05-",
+		"on-scroll-up": "playerctl previous",
+		"on-scroll-down": "playerctl next",
 		"status-icons": {
 			"playing": "",
 			"default": ""
