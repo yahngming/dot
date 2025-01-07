@@ -21,9 +21,7 @@
 			"format": {
 				"today": "<b>{}</b>"
 			}
-		},
-		"on-scroll-up": "shift_up",
-		"on-scroll-down": "shift_down"
+		}
 	},
 
 	"custom/power": {
@@ -72,7 +70,7 @@
 		"format-ethernet": "󰈀",
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-		"tooltip-format": "{essid}",
+		"tooltip-format": "{signaldBm} @ {essid} [{bandwidthUpBytes}/{bandwidthDownBytes}]",
 		"tooltip-format-ethernet": "{ifname}",
 		"on-click-right": "wlanmenu"
 	},
@@ -81,7 +79,7 @@
 		"format": "{icon}",
 		"format-muted": "",
 		"format-icons": ["", "", ""],
-		"tooltip-format": "{volume}@{desc}"
+		"tooltip-format": "{volume} @ {desc}"
 	},
 
 	"temperature": {
