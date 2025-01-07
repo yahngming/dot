@@ -42,6 +42,7 @@ tooltip {
 #custom-pacman:hover,
 #custom-power:hover,
 #memory:hover,
+#mpris:hover,
 #network:hover,
 #pulseaudio:hover,
 #temperature:hover {
@@ -58,6 +59,7 @@ tooltip {
 #custom-power,
 #cpu,
 #memory,
+#mpris,
 #network,
 #pulseaudio,
 #temperature {
