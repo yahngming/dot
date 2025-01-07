@@ -4,9 +4,9 @@
 	"position": "bottom",
 	"reload_style_on_change": true,
 
-	"modules-left": ["clock", "tray", "pulseaudio/slider", "mpris"],
+	"modules-left": ["clock", "tray", "mpris"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["temperature", "idle_inhibitor", "battery", "network", "pulseaudio", "custom/power"],
+	"modules-right": ["temperature", "battery", "network", "pulseaudio", "custom/power"],
 
 	"battery": {
 		"format": "{icon}",
@@ -45,14 +45,6 @@
 		}
 	},
 
-	"idle_inhibitor": {
-		"format": "{icon}",
-		"format-icons": {
-			"activated": "",
-			"deactivated": ""
-		}
-	},
-
 	"mpris": {
 		"format": "{status_icon}  {title} - {artist}",
 		"on-click": "playerctl play-pause",
@@ -79,12 +71,6 @@
 		"format-muted": "󰝟",
 		"format-icons": ["󰕿", "󰖀", "󰕾"]
 	},
-
-"pulseaudio/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal"
-}
 
 	"temperature": {
 		"format": "{temperatureC}"
