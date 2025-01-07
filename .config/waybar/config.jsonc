@@ -26,15 +26,15 @@
 	},
 
 	"custom/power": {
-		"format" : "",
-		"on-click": "settings",
-		"on-click-right": "settings"
-	},
-
-	"custom/settings": {
 		"format" : "󰤆",
 		"on-click": "powermenu",
 		"on-click-right": "powermenu"
+	},
+
+	"custom/settings": {
+		"format" : "",
+		"on-click": "settings",
+		"on-click-right": "settings"
 	},
 
 	"hyprland/workspaces": {
