@@ -4,7 +4,7 @@
 	"position": "bottom",
 	"reload_style_on_change": true,
 
-	"modules-left": ["clock", "tray", "mpris"],
+	"modules-left": ["clock", "weather", "tray", "mpris"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["temperature", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
 
@@ -26,15 +26,20 @@
 	},
 
 	"custom/power": {
-		"format" : "",
+		"format": "",
 		"on-click": "powermenu",
 		"on-click-right": "powermenu"
 	},
 
 	"custom/settings": {
-		"format" : "",
+		"format": "",
 		"on-click": "settings",
 		"on-click-right": "settings"
+	},
+
+	"custom/weather": {
+		"exec": "curl wttr.in/Shaoxing?format=%c%t\n",
+		"restart-interval": 300
 	},
 
 	"hyprland/workspaces": {
