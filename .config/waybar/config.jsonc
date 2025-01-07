@@ -29,13 +29,13 @@
 	"custom/power": {
 		"format": "",
 		"tooltip": false,
-		"on-click": "powermenu"
+		"on-click-right": "powermenu"
 	},
 
 	"custom/settings": {
 		"format": "",
 		"tooltip": false,
-		"on-click": "settings"
+		"on-click-right": "settings"
 	},
 
 	"custom/weather": {
@@ -74,7 +74,7 @@
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 		"tooltip-format": "{essid}",
 		"tooltip-format-ethernet": "{ifname}",
-		"on-click": "wlanmenu"
+		"on-click-right": "wlanmenu"
 	},
 
 	"pulseaudio": {
