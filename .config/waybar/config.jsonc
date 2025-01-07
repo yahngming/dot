@@ -10,58 +10,61 @@
 
 	"battery": {
 		"format": "{icon}",
-		"format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		"format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"tooltip": false
 	},
 
 	"clock": {
 		"format": "{:%I:%M %p}",
 		"tooltip-format": "<tt>{calendar}</tt>",
-		"on-scroll-up": "shift_up",
-		"on-scroll-down": "shift_down",
 		"calendar": {
 			"format": {
 				"today": "<b>{}</b>"
 			}
-		}
+		},
+		"on-scroll-up": "shift_up",
+		"on-scroll-down": "shift_down"
 	},
 
 	"custom/power": {
 		"format": "",
+		"tooltip": false,
 		"on-click": "powermenu"
 	},
 
 	"custom/settings": {
 		"format": "",
+		"tooltip": false,
 		"on-click": "settings"
 	},
 
 	"custom/weather": {
-		"exec": "curl wttr.in/Shaoxing?format=%t",
-		"restart-interval": 3600
+		"interval": 3600,
+		"exec": "curl wttr.in/Shaoxing?format=%t"
 	},
 
 	"hyprland/workspaces": {
 		"all-outputs": true,
-		"on-scroll-up": "hyprctl dispatch workspace e-1",
-		"on-scroll-down": "hyprctl dispatch workspace e+1",
 		"format": "{icon}",
 		"format-icons": {
 			"default": ""
 		},
 		"persistent-workspaces": {
 			"*": [ 1,2,3,4,5 ]
-		}
+		},
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1"
 	},
 
 	"mpris": {
 		"format": "{status_icon}  {title} - {artist}",
-		"on-click": "playerctl play-pause",
-		"on-scroll-up": "playerctl previous",
-		"on-scroll-down": "playerctl next",
 		"status-icons": {
 			"playing": "",
 			"default": ""
-		}
+		},
+		"on-click": "playerctl play-pause",
+		"on-scroll-up": "playerctl previous",
+		"on-scroll-down": "playerctl next"
 	},
 
 	"network": {
@@ -77,11 +80,13 @@
 	"pulseaudio": {
 		"format": "{icon}",
 		"format-muted": "",
-		"format-icons": ["", "", ""]
+		"format-icons": ["", "", ""],
+		"tooltip-format": "{volume}@{desc}"
 	},
 
 	"temperature": {
-		"format": "{temperatureC}"
+		"format": "{temperatureC}",
+		"tooltip": false
 	},
 
 }
