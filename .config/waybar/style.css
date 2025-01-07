@@ -47,7 +47,6 @@ tooltip {
 #tray,
 #tray menu *,
 #tray menu separator {
-	spacing: 5px;
 	padding: 0px 5px;
 	transition: all .3s ease; 
 	color: @color7;
