@@ -6,7 +6,7 @@
 
 	"modules-left": ["clock", "tray", "mpris"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["temperature", "battery", "network", "pulseaudio", "custom/power"],
+	"modules-right": ["temperature", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
 
 	"battery": {
 		"format": "{icon}",
@@ -26,10 +26,15 @@
 	},
 
 	"custom/power": {
+		"format" : "",
+		"on-click": "settings",
+		"on-click-right": "settings"
+	},
+
+	"custom/settings": {
 		"format" : "󰤆",
 		"on-click": "powermenu",
-		"on-click-right": "hyprlock",
-		"tooltip-format": "Left: Power menu\nRight: Lock screen"
+		"on-click-right": "powermenu"
 	},
 
 	"hyprland/workspaces": {
