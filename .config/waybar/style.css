@@ -45,7 +45,8 @@ tooltip {
 #temperature,
 #tray,
 #tray menu *,
-#tray menu separator {
+#tray menu separator,
+#weather {
 	padding: 0px 5px;
 	transition: all .3s ease; 
 	color: @color7;
@@ -63,7 +64,8 @@ tooltip {
 #temperature:hover,
 #tray:hover,
 #tray menu *:hover,
-#tray menu separator:hover {
+#tray menu separator:hover,
+#weather:hover {
 	color: @color9;
 }
 
