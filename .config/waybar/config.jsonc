@@ -45,6 +45,14 @@
 		}
 	},
 
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+
 	"mpris": {
 		"format": "{status_icon}  {title} - {artist}",
 		"on-click": "playerctl play-pause",
@@ -53,7 +61,7 @@
 		"status-icons": {
 			"playing": "",
 			"default": ""
-		},
+		}
 	},
 
 	"network": {
@@ -66,14 +74,14 @@
 		"on-click": "wlanmenu"
 	},
 
-	"temperature": {
-		"format": "{temperatureC}"
-	},
-
-	"wireplumber": {
+	"pulseaudio": {
 		"format": "{icon}",
 		"format-muted": "󰝟",
 		"format-icons": ["󰕿", "󰖀", "󰕾"]
-	}
+	},
+
+	"temperature": {
+		"format": "{temperatureC}"
+	},
 
 }
