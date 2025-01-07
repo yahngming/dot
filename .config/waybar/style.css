@@ -44,6 +44,7 @@ tooltip {
 #network,
 #pulseaudio,
 #temperature,
+#temperature.gpu,
 #tray,
 #tray menu *,
 #tray menu separator {
@@ -63,6 +64,7 @@ tooltip {
 #network:hover,
 #pulseaudio:hover,
 #temperature:hover,
+#temperature.gpu:hover,
 #tray:hover,
 #tray menu *:hover,
 #tray menu separator:hover {
