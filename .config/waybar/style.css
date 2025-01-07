@@ -4,7 +4,7 @@
 	font-family: symbol;
 }
 
-window#waybar{
+window#waybar {
 	all: unset;
 }
 
@@ -34,8 +34,11 @@ tooltip {
 	background: alpha(@background,.9);
 }
 
+#clock {
+	color: @color3;
+}
+
 #battery,
-#clock,
 #cpu,
 #custom-power,
 #custom-settings,
