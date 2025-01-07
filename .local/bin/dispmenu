@@ -41,7 +41,7 @@ morescreen() { # If multi-monitor is selected and there are more than two screen
 
 multimon() { # Multi-monitor handler.
 	if [ -n $WAYLAND_DISPLAY ]; then
-		hyprctl keyword monitor ,preferred,auto,auto
+		hyprctl reload
 	elif [ -n $DISPLAY ]; then
 		case "$(echo "$screens" | wc -l)" in
 			2) twoscreen ;;
