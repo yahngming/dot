@@ -44,11 +44,6 @@
 		"exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}} - {{artist}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
 		"max-length": 60,
 		"format": "󰎈 {text}",
-		"format-icons": {
-			"Paused": "<span> </span>",
-			"Playing": "<span>󰏥 </span>",
-			"Stopped": "<span> </span>"
-		},
 		"on-click": "playerctl play-pause",
 		"on-scroll-down": "playerctl volume .05-",
 		"on-scroll-up": "playerctl volume .05+",
