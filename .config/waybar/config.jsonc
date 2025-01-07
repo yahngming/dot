@@ -37,9 +37,9 @@
 	},
 
 	"custom/weather": {
-		"format": "{temp_C}°C",
+		"format": "{}",
 		"interval": 3600,
-		"exec": "curl wttr.in/@google.com?format=j1",
+		"exec": "curl wttr.in/@google.com?format=%C%t%h",
 		"return-type": "json"
 	},
 
