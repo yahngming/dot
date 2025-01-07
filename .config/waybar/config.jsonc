@@ -38,8 +38,8 @@
 	},
 
 	"custom/weather": {
-		"exec": "curl wttr.in/Hangzhou?format=%c%t",
-		"restart-interval": 300
+		"exec": "curl wttr.in/Shaoxing?format=1",
+		"restart-interval": 3600
 	},
 
 	"hyprland/workspaces": {
