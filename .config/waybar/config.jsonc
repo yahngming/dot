@@ -6,7 +6,7 @@
 
 	"modules-left": ["clock", "custom/weather", "mpris"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["tray", "temperature", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
+	"modules-right": ["tray", "temperature", "temperature#gpu", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
 
 	"battery": {
 		"format": "{icon}",
@@ -78,10 +78,17 @@
 		"format": "{icon}",
 		"format-muted": "",
 		"format-icons": ["", "", ""],
-		"tooltip-format": "{volume} @ {desc}"
+		"tooltip-format": "󱄠 {volume}  󱡬 {desc}"
 	},
 
 	"temperature": {
+		"hwmon-path": ["/sys/class/thermal/thermal_zone0/temp"],
+		"format": "{temperatureC}",
+		"tooltip": false
+	},
+
+	"temperature#gpu": {
+		"hwmon-path": ["/sys/class/hwmon/hwmon7/temp1_input"],
 		"format": "{temperatureC}",
 		"tooltip": false
 	},
