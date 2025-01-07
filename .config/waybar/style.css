@@ -38,6 +38,7 @@ tooltip {
 #cpu,
 #custom-power,
 #custom-settings,
+#custom-weather,
 #memory,
 #mpris,
 #network,
@@ -45,8 +46,7 @@ tooltip {
 #temperature,
 #tray,
 #tray menu *,
-#tray menu separator,
-#weather {
+#tray menu separator {
 	padding: 0px 5px;
 	transition: all .3s ease; 
 	color: @color7;
@@ -57,6 +57,7 @@ tooltip {
 #cpu:hover,
 #custom-power:hover,
 #custom-settings:hover,
+#custom-weather:hover,
 #memory:hover,
 #mpris:hover,
 #network:hover,
@@ -64,8 +65,7 @@ tooltip {
 #temperature:hover,
 #tray:hover,
 #tray menu *:hover,
-#tray menu separator:hover,
-#weather:hover {
+#tray menu separator:hover {
 	color: @color9;
 }
 
