@@ -4,9 +4,9 @@
 	"position": "bottom",
 	"reload_style_on_change": true,
 
-	"modules-left": ["clock", "custom/weather", "tray", "mpris"],
+	"modules-left": ["clock", "custom/weather", "mpris"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["temperature", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
+	"modules-right": ["tray", "temperature", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
 
 	"battery": {
 		"format": "{icon}",
