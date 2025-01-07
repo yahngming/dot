@@ -3,7 +3,7 @@
 onescreen() { # If only one output available or chosen.
 	if [ -n $WAYLAND_DISPLAY ]; then
 		hyprctl keyword monitor $1,preferred,auto,auto
-		hyprctl keyword monitor $(echo "$displays" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -),disable
+		hyprctl keyword monitor $(echo "$displays" | grep -v "\b$1" | paste -sd ' ' -),disable
 	elif [ -n $DISPLAY ]; then
 		xrandr --output "$1" --auto --scale 1.0x1.0 $(echo "$displays" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -)
 	fi
