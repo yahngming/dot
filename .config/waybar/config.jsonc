@@ -4,7 +4,7 @@
 	"position": "bottom",
 	"reload_style_on_change": true,
 
-	"modules-left": ["clock", "weather", "tray", "mpris"],
+	"modules-left": ["clock", "custom/weather", "tray", "mpris"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["temperature", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
 
@@ -38,7 +38,7 @@
 	},
 
 	"custom/weather": {
-		"exec": "curl wttr.in/Hangzhou?format=%c%t\\n",
+		"exec": "curl wttr.in/Hangzhou?format=%c%t",
 		"restart-interval": 300
 	},
 
