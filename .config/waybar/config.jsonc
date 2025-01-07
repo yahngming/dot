@@ -16,13 +16,13 @@
 
 	"clock": {
 		"format": "{:%I:%M %p UTC%z}",
+		"timezones": ["Asia/Taipei", "America/New_York", "America/Los_Angeles"],
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"actions": {
-			"on-click-right": "mode",
 			"on-click-forward": "tz_up",
 			"on-click-backward": "tz_down",
-			"on-scroll-up": "shift_up",
-			"on-scroll-down": "shift_down"
+			"on-scroll-up": "shift_down",
+			"on-scroll-down": "shift_up"
 		}
 	},
 
