@@ -38,7 +38,7 @@
 	},
 
 	"custom/weather": {
-		"exec": "curl wttr.in/Shaoxing?format=%c%t\n",
+		"exec": "curl wttr.in/Hangzhou?format=%c%t\\n",
 		"restart-interval": 300
 	},
 
