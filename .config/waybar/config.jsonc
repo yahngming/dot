@@ -41,9 +41,9 @@
 	},
 
 	"custom/media": {
-		"exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-		"format": "<span>󰎈 {} 󰎈</span>",
-		"max-length": 40,
+		"exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}} - {{artist}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+		"format": "<span>󰎇 {}</span>",
+		"max-length": 60,
 		"on-click": "",
 		"return-type": "json"
 	},
