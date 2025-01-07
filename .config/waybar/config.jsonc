@@ -16,8 +16,8 @@
 
 	"clock": {
 		"format": "{:%I:%M %p}",
-		"format-alt": "{:%H:%M, UTC%Ez, %A, %B %d, %Y}",
-		"timezones": ["", "Asia/Taipei", "America/New_York", "America/Los_Angeles"],
+		"format-alt": "{:%H:%M UTC%Ez, %A, %B %d, %Y}",
+		"timezones": ["", "America/New_York", "America/Los_Angeles"],
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
 			"format": {
