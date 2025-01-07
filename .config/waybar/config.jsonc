@@ -15,7 +15,7 @@
 	},
 
 	"clock": {
-		"format": "{:%I:%M %p}",
+		"format": "{:%I:%M %p UTC%z}",
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
 			"format": {
@@ -39,7 +39,7 @@
 	"custom/weather": {
 		"format": "{}",
 		"interval": 3600,
-		"exec": "curl wttr.in/@google.com?format=%C%t%h"
+		"exec": "curl wttr.in/?format=%C+%t+%h+@+%l"
 	},
 
 	"hyprland/workspaces": {
