@@ -33,39 +33,37 @@ tooltip {
 	background: alpha(@background,.9);
 }
 
+#battery,
+#clock,
+#cpu,
+#custom-power,
+#memory,
+#mpris,
+#network,
+#temperatur,
+#tray,
+#tray menu *,
+#tray menu separator,
+#wireplumber {
+	padding: 0px 5px;
+	transition: all .3s ease; 
+	color: @color7;
+}
+
 #battery:hover,
-#bluetooth:hover,
 #clock:hover,
 #cpu:hover,
-#custom-media:hover,
-#custom-notification:hover,
-#custom-pacman:hover,
 #custom-power:hover,
 #memory:hover,
 #mpris:hover,
 #network:hover,
-#pulseaudio:hover,
-#temperature:hover {
+#temperature:hover,
+#tray:hover,
+#tray menu *:hover,
+#tray menu separator:hover,
+#wireplumber:hover {
 	transition: all .3s ease;
 	color: @color9;
-}
-
-#battery,
-#clock,
-#bluetooth,
-#custom-media,
-#custom-notification,
-#custom-pacman,
-#custom-power,
-#cpu,
-#memory,
-#mpris,
-#network,
-#pulseaudio,
-#temperature {
-	padding: 0px 5px;
-	transition: all .3s ease; 
-	color: @color7;
 }
 
 #workspaces {
@@ -124,10 +122,4 @@ tooltip {
 	color:transparent;
 	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
 
-}
-#tray,
-#tray menu *,
-#tray menu separator {
-	padding: 0px 5px;
-	transition: all .3s ease; 
 }
