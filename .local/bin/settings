@@ -1,5 +1,11 @@
 #!/bin/sh
 
+case "$MENU" in
+	dmenu  ) MENU="dmenu -g 3 -l 6" ;;
+	fuzzel ) MENU="fuzzel --dmenu" ;;
+	rofi   ) MENU="rofi -dmenu" ;;
+esac
+
 menu="\
  Bluetooth\n\
  Coffee\n\
@@ -18,7 +24,7 @@ menu="\
 󱚾 WLAN\n\
 "
 
-case $(printf "$menu" | dmenu -g 3 -l 6 "$@") in
+case $(printf "$menu" | $MENU "$@") in
 	*Bluetooth* ) btmenu -noi ;;
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
