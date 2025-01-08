@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ -n $WAYLAND_DISPLAY ]; then
+if [ -n "$WAYLAND_DISPLAY" ]; then
 	exit
-elif [ -n $DISPLAY ]; then
+elif [ -n "$DISPLAY" ]; then
 	setxkbmap -option ctrl:nocaps,shift:both_capslock
 	killall xcape 2>/dev/null ; xcape
 fi
