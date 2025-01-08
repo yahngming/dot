@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+case "$MENU" in
+	dmenu) menu="dmenu" ;;
+	fuzzel) menu="fuzzel --dmenu" ;;
+esac
+
 shopt -s nullglob globstar
 
 typeit=0
@@ -8,14 +13,9 @@ if [[ $1 == "--type" ]]; then
 	shift
 fi
 
-case "$MENU" in
-	dmenu) menu="dmenu" ;;
-	fuzzel) menu="fuzzel --dmenu" ;;
-esac
-
-if [[ -n $WAYLAND_DISPLAY ]]; then
+if [[ -n "$WAYLAND_DISPLAY" ]]; then
 	dotool="ydotool type --file -"
-elif [[ -n $DISPLAY ]]; then
+elif [[ -n "$DISPLAY" ]]; then
 	dotool="xdotool type --clearmodifiers --file -"
 else
 	echo "Error: No Wayland or X11 display detected" >&2
