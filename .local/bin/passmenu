@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 case "$MENU" in
-	dmenu  ) menu="dmenu" ;;
-	fuzzel ) menu="fuzzel --dmenu" ;;
-	rofi   ) menu="rofi -dmenu" ;;
+	dmenu  ) MENU="dmenu" ;;
+	fuzzel ) MENU="fuzzel --dmenu" ;;
+	rofi   ) MENU="rofi -dmenu" ;;
 esac
 
 shopt -s nullglob globstar
@@ -28,7 +28,7 @@ password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-password=$(printf '%s\n' "${password_files[@]}" | $menu "$@")
+password=$(printf '%s\n' "${password_files[@]}" | $MENU "$@")
 
 [[ -n $password ]] || exit
 
