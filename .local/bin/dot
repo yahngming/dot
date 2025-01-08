@@ -4,5 +4,5 @@ cd ~/.local/src/clash && git pull && cp ~/.local/src/clash/clash ~/.config/clash
 cd ~/.local/src/dot && git pull && cp -a ~/.local/src/dot/. ~/ && chmod +x ~/.local/bin/* && rm -rf ~/.git ~/postinstall.sh ~/README.md
 cd - >/dev/null 2>&1
 if [ -n $WAYLAND_DISPLAY ]; then
-	pkill waybar && hyprctl dispatch exec waybar
+	pkill waybar && hyprctl dispatch exec waybar >/dev/null 2>&1
 fi
