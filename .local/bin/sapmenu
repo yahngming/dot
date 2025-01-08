@@ -6,4 +6,4 @@ case "$MENU" in
 	rofi   ) MENU="rofi -dmenu -password -p" ;;
 esac
 
-$MENU "[sudo]password:"
+$MENU"[sudo]password:"
