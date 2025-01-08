@@ -301,7 +301,7 @@ show_menu() {
 
 # dmenu command to pipe into. Extra arguments to dmenu-bluetooth are passed through to dmenu. This
 # allows the user to set fonts, sizes, colours, etc.
-DMENU_BLUETOOTH_LAUNCHER="${DMENU_BLUETOOTH_LAUNCHER:-dmenu}"
+DMENU_BLUETOOTH_LAUNCHER="${MENU:-dmenu}"
 run_dmenu() {
 	case "$DMENU_BLUETOOTH_LAUNCHER" in
 		rofi)
