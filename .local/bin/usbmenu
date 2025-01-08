@@ -6,7 +6,11 @@ var spawn = require('child_process').spawn;
 var exec  = require('child_process').exec;
 
 var env       = process.env;
-var $LAUNCHER = env.UDISKIE_DMENU_LAUNCHER || 'dmenu';
+case "$MENU" in
+	dmenu  ) MENU="dmenu" ;;
+	fuzzel ) MENU="fuzzel --dmenu" ;;
+	rofi   ) MENU="rofi -dmenu" ;;
+esac
 
 main();
 
@@ -220,7 +224,7 @@ function runCommand(command, callback) {
 function getSelection(data, callback) {
     var stdout;
     var stderr
-    var dmenu = spawn($LAUNCHER, process.argv.slice(2));
+    var dmenu = spawn($MENU, process.argv.slice(2));
 
     dmenu.stdin.write(data);
     dmenu.stdin.end();
