@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ -n $WAYLAND_DISPLAY ]; then
+if [ -n "$WAYLAND_DISPLAY" ]; then
 	monitor=$(hyprctl activeworkspace | awk '/monitorID/{print $2}')
-elif [ -n $DISPLAY ]; then
+elif [ -n "$DISPLAY" ]; then
 	monitor=$(xrandr -q | awk '/ connected/ {print $1}')
 fi
 
