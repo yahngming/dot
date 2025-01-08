@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 case "$MENU" in
-	dmenu) menu="dmenu" ;;
-	fuzzel) menu="fuzzel --dmenu" ;;
+	dmenu  ) menu="dmenu" ;;
+	fuzzel ) menu="fuzzel --dmenu" ;;
+	rofi   ) menu="rofi -dmenu" ;;
 esac
 
 shopt -s nullglob globstar
