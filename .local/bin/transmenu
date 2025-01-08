@@ -19,6 +19,12 @@ check_dep trans https://github.com/soimort/translate-shell
 check_dep notify-send
 
 load_config() {
+	case "$MENU" in
+		dmenu  ) MENU="dmenu" ;;
+		fuzzel ) MENU="fuzzel --dmenu" ;;
+		rofi   ) MENU="rofi -dmenu" ;;
+	esac
+
 	# Check display server
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		: "${CLIP_COPY:=wl-copy -n}"
@@ -32,9 +38,9 @@ load_config() {
 
 	# Default values
 	: "${TRANS_LANGS:=:zh :ja :en}"
-	: "${DMENU_TEXT:=${DMENU} -p 'From:'}"
-	: "${DMENU_LANG:=${DMENU} -p 'To:'}"
-	: "${DMENU_NEXT:=${DMENU} -p 'Options:'}"
+	: "${DMENU_TEXT:=${MENU} -p 'From:'}"
+	: "${DMENU_LANG:=${MENU} -p 'To:'}"
+	: "${DMENU_NEXT:=${MENU} -p 'Options:'}"
 }
 
 formatmenu() {
