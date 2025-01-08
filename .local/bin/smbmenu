@@ -11,7 +11,7 @@ notify-send "Searching for network shares on $server..."
 share=$(smbclient -N -L "$server" | grep "Disk" | awk '{print $1}' | sort -u | $MENU -p "Choose a share on $server:") || exit 1
 servershare="//${server}.local/${share}"
 clientmount="/run/mount/$USER/${server}/${share}"
-username=$($MENU -p "Username:") || exit 1
-password=$($MENU -p "Password:") || exit 1
+username=$($MENU -p "Username:" < /dev/null) || exit 1
+password=$($MENU -p "Password:" < /dev/null) || exit 1
 sudo -A mount -m -t cifs "$servershare" "$clientmount" -o username="$username",password="$password"
 notify-send "$clientmount mounted."
