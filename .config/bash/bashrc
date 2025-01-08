@@ -57,7 +57,6 @@ export QT_STYLE_OVERRIDE="Windows"
 export SDL_IM_MODULE="fcitx"
 export SDL_VIDEODRIVER="wayland,x11"
 export SUDO_ASKPASS="$HOME/.local/bin/sapmenu"
-export TERMINAL="st"
 export XMODIFIERS="@im=fcitx"
 
 PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
@@ -66,6 +65,14 @@ alias ll="eza --all --color=always --git --git-repos --group-directories-first -
 
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	export MENU="fuzzel"
+	export TERMINAL="foot"
+elif [ -n "$DISPLAY" ]; then
+	export MENU="dmenu"
+	export TERMINAL="st"
+fi
 
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" = 1 ]; then
 	exec Hyprland
