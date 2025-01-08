@@ -59,13 +59,6 @@ export SDL_IM_MODULE="fcitx"
 export SDL_VIDEODRIVER="wayland,x11"
 export SUDO_ASKPASS="$HOME/.local/bin/sapmenu"
 export XMODIFIERS="@im=fcitx"
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	export MENU="fuzzel"
-	export TERMINAL="foot"
-elif [ -n "$DISPLAY" ]; then
-	export MENU="dmenu"
-	export TERMINAL="st"
-fi
 
 PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
 
@@ -75,8 +68,12 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" = 1 ]; then
+	export MENU="fuzzel"
+	export TERMINAL="foot"
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+	export MENU="dmenu"
+	export TERMINAL="st"
 	exec startx ~/.config/xorg/xinitrc
 else
 	fastfetch | lolcat
