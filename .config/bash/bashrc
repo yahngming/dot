@@ -40,6 +40,7 @@ proxy() {
 }
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
+
 export BROWSER="firefox --profile $HOME/.config/firefox"
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
@@ -58,14 +59,6 @@ export SDL_IM_MODULE="fcitx"
 export SDL_VIDEODRIVER="wayland,x11"
 export SUDO_ASKPASS="$HOME/.local/bin/sapmenu"
 export XMODIFIERS="@im=fcitx"
-
-PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
-
-alias ll="eza --all --color=always --git --git-repos --group-directories-first --icons=always --long"
-
-eval "$(fzf --bash)"
-eval "$(zoxide init bash)"
-
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	export MENU="fuzzel"
 	export TERMINAL="foot"
@@ -73,6 +66,13 @@ elif [ -n "$DISPLAY" ]; then
 	export MENU="dmenu"
 	export TERMINAL="st"
 fi
+
+PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
+
+alias ll="eza --all --color=always --git --git-repos --group-directories-first --icons=always --long"
+
+eval "$(fzf --bash)"
+eval "$(zoxide init bash)"
 
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" = 1 ]; then
 	exec Hyprland
