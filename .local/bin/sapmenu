@@ -1,9 +1,9 @@
 #!/bin/sh
 
 case "$MENU" in
-	dmenu  ) MENU="dmenu -P -p " ;;
-	fuzzel ) MENU="fuzzel --dmenu --password --prompt-only=" ;;
-	rofi   ) MENU="rofi -dmenu -password -p " ;;
+	dmenu  ) MENU="dmenu -P -p [sudo]password:" ;;
+	fuzzel ) MENU="fuzzel --dmenu --password --prompt-only=[sudo]password:" ;;
+	rofi   ) MENU="rofi -dmenu -password -p [sudo]password:" ;;
 esac
 
-$MENU"[sudo]password:"
+$MENU
