@@ -1,5 +1,11 @@
 #!/bin/sh
 
+case "$MENU" in
+	dmenu  ) MENU="dmenu" ;;
+	fuzzel ) MENU="fuzzel --dmenu" ;;
+	rofi   ) MENU="rofi -dmenu" ;;
+esac
+
 menu="\
  lock\n\
 󰤄 sleep\n\
@@ -8,7 +14,7 @@ menu="\
 󰤆 shutdown\n\
 "
 
-case $(printf "$menu" | dmenu "$@") in
+case $(printf "$menu" | $MENU "$@") in
 	*lock*     ) loginctl lock-session ;;
 	*sleep*    ) systemctl sleep ;;
 	*logout*   ) pkill -KILL -u $USER ;;
