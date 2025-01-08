@@ -1,11 +1,14 @@
 #!/bin/sh
 
-source ~/.cache/wal/colors.sh
-
 if [ -n $WAYLAND_DISPLAY ]; then
 	monitor=$(hyprctl activeworkspace | awk '/monitorID/{print $2}')
 elif [ -n $DISPLAY ]; then
 	monitor=$(xrandr -q | awk '/ connected/ {print $1}')
 fi
 
-/usr/local/bin/dmenu -m $monitor -nb $color0 -nf $color7 -sb $color1 -sf $color7 "$@"
+if [ -f ~/.cache/wal/colors.sh ]; then
+	source ~/.cache/wal/colors.sh
+	/usr/local/bin/dmenu -m $monitor -nb $color0 -nf $color7 -sb $color1 -sf $color7 "$@"
+else
+	/usr/local/bin/dmenu -m $monitor "$@"
+fi
