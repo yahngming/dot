@@ -20,18 +20,14 @@ check_dep notify-send
 
 load_config() {
 	# Check display server
-	if [ -n $WAYLAND_DISPLAY ]; then
+	if [ -n "$WAYLAND_DISPLAY" ]; then
 		: "${CLIP_COPY:=wl-copy -n}"
 		: "${CLIP_PASTE_CLIP:=wl-paste}"
 		: "${CLIP_PASTE_PRIM:=wl-paste -p}"
-		: "${DMENU:=dmenu}"
-		: "${TERMINAL=foot}"
 	else
 		: "${CLIP_COPY:=xclip -i -r -selection clipboard}"
 		: "${CLIP_PASTE_CLIP:=xclip -o -selection clipboard}"
 		: "${CLIP_PASTE_PRIM:=xclip -o -selection primary}"
-		: "${DMENU:=dmenu}"
-		: "${TERMINA=st}"
 	fi
 
 	# Default values
