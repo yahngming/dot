@@ -1,3 +1,9 @@
 #!/bin/sh
 
-dmenu -P -p "[sudo]password:"
+case "$MENU" in
+	dmenu  ) MENU="dmenu -P" ;;
+	fuzzel ) MENU="fuzzel --dmenu --password" ;;
+	rofi   ) MENU="rofi -dmenu -password" ;;
+esac
+
+$MENU -p "[sudo]password:"
