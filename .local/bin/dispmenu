@@ -1,16 +1,16 @@
 #!/bin/sh
 
 case "$MENU" in
-	dmenu) menu="dmenu -noi" ;;
-	fuzzel) menu="fuzzel --dmenu" ;;
-	rofi) menu="rofi -dmenu" ;;
+	dmenu  ) menu="dmenu -noi" ;;
+	fuzzel ) menu="fuzzel --dmenu" ;;
+	rofi   ) menu="rofi -dmenu" ;;
 esac
 
 onescreen() { # If only one output available or chosen.
-	if [ -n $WAYLAND_DISPLAY ]; then
+	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl keyword monitor $1,preferred,auto,auto
 		hyprctl keyword monitor $(echo "$screens" | grep -v "$1"),disable
-	elif [ -n $DISPLAY ]; then
+	elif [ -n "$DISPLAY" ]; then
 		xrandr --output "$1" --auto --scale 1.0x1.0 $(echo "$displays" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -)
 	fi
 }
@@ -46,9 +46,9 @@ morescreen() { # If multi-monitor is selected and there are more than two screen
 }
 
 multimon() { # Multi-monitor handler.
-	if [ -n $WAYLAND_DISPLAY ]; then
+	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl reload
-	elif [ -n $DISPLAY ]; then
+	elif [ -n "$DISPLAY" ]; then
 		case "$(echo "$screens" | wc -l)" in
 			2) twoscreen ;;
 			*) morescreen ;;
@@ -57,19 +57,19 @@ multimon() { # Multi-monitor handler.
 }
 
 postrun() { # Stuff to run to clean up.
-	if [ -n $WAYLAND_DISPLAY ]; then
+	if [ -n "$WAYLAND_DISPLAY" ]; then
 		exit
-	elif [ -n $DISPLAY ]; then
+	elif [ -n "$DISPLAY" ]; then
 		wallpaper
 	fi
 }
 
-if [ -n $WAYLAND_DISPLAY ]; then
+if [ -n "$WAYLAND_DISPLAY" ]; then
 	# Get all possible displays.
 	displays=$(hyprctl monitors all | grep "Monitor")
 	# Get all connected screens.
 	screens=$(echo "$displays" | awk '/Monitor/{print $2}')
-elif [ -n $DISPLAY ]; then
+elif [ -n "$DISPLAY" ]; then
 	# Get all possible displays.
 	displays=$(xrandr -q | grep "connected")
 	# Get all connected screens.
