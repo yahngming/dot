@@ -2,7 +2,7 @@
 
 case "$MENU" in
 	dmenu  ) MENU="dmenu -P -p [sudo]password:" ;;
-	fuzzel ) MENU="fuzzel --dmenu --password --prompt-only='[sudo]password:'" ;;
+	fuzzel ) MENU="fuzzel --dmenu --password --prompt-only=[sudo]password:" ;;
 	rofi   ) MENU="rofi -dmenu -password -p [sudo]password:" ;;
 esac
 
