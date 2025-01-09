@@ -40,7 +40,7 @@ proxy() {
 }
 
 setenv() {
-	case "$MENU" in
+	case "$LAUNCHER" in
 		dmenu  ) MENU="dmenu" ;;
 		fuzzel ) MENU="fuzzel --dmenu" ;;
 		rofi   ) MENU="rofi -dmenu" ;;
@@ -77,12 +77,12 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" = 1 ]; then
-	export MENU="walker"
+	export LAUNCHER="walker"
 	export TERMINAL="foot"
 	setenv
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-	export MENU="dmenu"
+	export LAUNCHER="dmenu"
 	export TERMINAL="st"
 	setenv
 	exec startx ~/.config/xorg/xinitrc
