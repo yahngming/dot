@@ -19,12 +19,6 @@ check_dep trans https://github.com/soimort/translate-shell
 check_dep notify-send
 
 load_config() {
-	case "$MENU" in
-		dmenu  ) MENU="dmenu" ;;
-		fuzzel ) MENU="fuzzel --dmenu" ;;
-		rofi   ) MENU="rofi -dmenu" ;;
-	esac
-
 	# Check display server
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		: "${CLIP_COPY:=wl-copy -n}"
