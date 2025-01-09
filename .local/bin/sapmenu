@@ -4,7 +4,7 @@ case "$MENU" in
 	dmenu    ) MENU="dmenu -P -p [sudo]password:" ;;
 	*fuzzel* ) MENU="fuzzel --dmenu --password --prompt-only=[sudo]password:" ;;
 	*rofi*   ) MENU="rofi -dmenu -password -p [sudo]password:" ;;
-	*walker* ) MENU="walker --dmenu --password -placeholder [sudo]password:" ;;
+	*walker* ) MENU="walker --dmenu --password --placeholder [sudo]password:" ;;
 esac
 
 $MENU
