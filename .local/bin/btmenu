@@ -262,10 +262,10 @@ show_menu() {
 
 		# Options passed to dmenu
 		[[ -n $devices ]] && devices_part="$devices\n$divider\n"
-		options="$devices_part$power\n$scan\n$pairable\n$discoverable\n$back"
+		options="$devices_part$power\n$scan\n$pairable\n$discoverable\n$exit"
 	else
 		power="Power: off"
-		options="$power\n$back"
+		options="$power\n$exit"
 	fi
 
 	# Open dmenu menu, read chosen option
@@ -282,11 +282,14 @@ show_menu() {
 		"$scan")
 			toggle_scan
 			;;
+		"$pairable")
+			toggle_pairable
+			;;
 		"$discoverable")
 			toggle_discoverable
 			;;
-		"$pairable")
-			toggle_pairable
+		"$exit")
+			exit
 			;;
 		*)
 			if [[ -n "$connected_icon" ]]; then
