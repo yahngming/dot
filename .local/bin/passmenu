@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-case "$MENU" in
-	dmenu  ) MENU="dmenu" ;;
-	fuzzel ) MENU="fuzzel --dmenu" ;;
-	rofi   ) MENU="rofi -dmenu" ;;
-esac
-
 shopt -s nullglob globstar
 
 typeit=0
