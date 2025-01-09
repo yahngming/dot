@@ -39,7 +39,7 @@ proxy() {
 	fi
 }
 
-setenv {
+setenv() {
 	case "$MENU" in
 		dmenu  ) MENU="dmenu" ;;
 		fuzzel ) MENU="fuzzel --dmenu" ;;
