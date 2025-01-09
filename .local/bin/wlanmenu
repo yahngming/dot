@@ -117,14 +117,14 @@ iwd_dmenu() {
 				done)"
 
 		# print using dmenu
-		if ! answer="$(printf '%s\n' "${options}" | $MENU -p "${prompt}")"; then exit; fi
+		if ! answer="$(printf '%s\n' "${options}" | $MENU -p "${prompt}")"; then return 1; fi
 
 		# get user's answer
 		printf '%s\n' "${options}" | while read -r line; do
 			if [ "${line}" = "${answer}" ]; then
 				# if answer is a function run it else just print it
 				cmd="$(printf '%s\n' "${answer}" | tr '[:upper:]' '[:lower:]')"
-				if command -v "${cmd}" >/dev/null 2>&1 && [ "${cmd}" != 'yes' ]; then "${cmd}"
+				if command -v "${cmd}" >/dev/null 2>&1 && [ "${cmd}" != 'Confirm' ]; then "${cmd}"
 				else printf '%s\n' "${answer}"
 				fi
 				break
