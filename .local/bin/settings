@@ -4,7 +4,7 @@ case "$MENU" in
 	dmenu  ) MENU="dmenu -g 3 -l 6" ;;
 	fuzzel ) MENU="fuzzel --dmenu" ;;
 	rofi   ) MENU="rofi -dmenu" ;;
-	walker ) MENU="walker --dmenu" ;;
+	walker ) MENU="walker --dmenu --keepsort" ;;
 esac
 
 menu="\
