@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -f ~/.cache/wal/colors.sh ]; then
+	source ~/.cache/wal/colors.sh
+	/usr/bin/fuzzel -b $color0 -t $color7 -s $color1 -S $color7 "$@"
+else
+	/usr/bin/fuzzel "$@"
+fi
