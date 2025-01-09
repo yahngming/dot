@@ -304,15 +304,7 @@ show_menu() {
 DMENU_BLUETOOTH_LAUNCHER="${MENU:-dmenu}"
 run_dmenu() {
 	case "$DMENU_BLUETOOTH_LAUNCHER" in
-		dmenu)
-			DMENU_BLUETOOTH_LAUNCHER="dmenu -noi"
-			;;
-		fuzzel)
-			DMENU_BLUETOOTH_LAUNCHER="fuzzel --dmenu"
-			;;
-		rofi)
-			DMENU_BLUETOOTH_LAUNCHER="rofi -dmenu"
-			;;
+		dmenu) DMENU_BLUETOOTH_LAUNCHER="dmenu -noi" ;;
 	esac
 	$DMENU_BLUETOOTH_LAUNCHER -p "$DMENU_BLUETOOTH_PROMPT" "${dmenu_args[@]}"
 }
