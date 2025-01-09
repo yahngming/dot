@@ -39,6 +39,15 @@ proxy() {
 	fi
 }
 
+setenv {
+	case "$MENU" in
+		dmenu  ) MENU="dmenu" ;;
+		fuzzel ) MENU="fuzzel --dmenu" ;;
+		rofi   ) MENU="rofi -dmenu" ;;
+		walker ) MENU="walker --dmenu --keepsort" ;;
+	esac
+}
+
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
 
 export BROWSER="firefox --profile $HOME/.config/firefox"
@@ -70,10 +79,12 @@ eval "$(zoxide init bash)"
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" = 1 ]; then
 	export MENU="walker"
 	export TERMINAL="foot"
+	setenv
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	export MENU="dmenu"
 	export TERMINAL="st"
+	setenv
 	exec startx ~/.config/xorg/xinitrc
 else
 	fastfetch | lolcat
