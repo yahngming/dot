@@ -41,10 +41,10 @@ proxy() {
 
 setenv() {
 	case "$LAUNCHER" in
-		dmenu  ) MENU="dmenu" ;;
-		fuzzel ) MENU="fuzzel --dmenu" ;;
-		rofi   ) MENU="rofi -dmenu" ;;
-		walker ) MENU="walker --dmenu --keepsort" ;;
+		dmenu  ) export MENU="dmenu" ;;
+		fuzzel ) export MENU="fuzzel --dmenu" ;;
+		rofi   ) export MENU="rofi -dmenu" ;;
+		walker ) export MENU="walker --dmenu --keepsort" ;;
 	esac
 }
 
