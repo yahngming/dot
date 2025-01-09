@@ -4,6 +4,7 @@ case "$MENU" in
 	dmenu  ) MENU="dmenu -noi" ;;
 	fuzzel ) MENU="fuzzel --dmenu" ;;
 	rofi   ) MENU="rofi -dmenu" ;;
+	walker ) MENU="walker --dmenu --keepsort" ;;
 esac
 
 onescreen() { # If only one output available or chosen.
