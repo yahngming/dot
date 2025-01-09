@@ -1,11 +1,5 @@
 #!/bin/sh
 
-case "$MENU" in
-	dmenu  ) MENU="dmenu" ;;
-	fuzzel ) MENU="fuzzel --dmenu" ;;
-	rofi   ) MENU="rofi -dmenu" ;;
-esac
-
 menu="\
  lock\n\
 󰤄 sleep\n\
