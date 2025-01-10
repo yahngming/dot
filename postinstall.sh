@@ -5,12 +5,12 @@ arch() {
 	sudo pacman -Syu foot fuzzel grim hypridle hyprland hyprlock hyprpaper slurp waybar wl-clipboard
 	sudo pacman -Syu maim xautolock xcape xclip xcompmgr xdo xorg-xrandr xwallpaper
 	mkdir -p ~/.local/src
+	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
 	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd dwm && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
-	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 	yay -S ctpv-git
  	yay -S newsraft
 	mkdir -p ~/.config/clash && cd ~/.config/clash && curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
