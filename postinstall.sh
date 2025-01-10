@@ -2,7 +2,7 @@
 
 arch() {
 	sudo pacman -Syu 7zip aerc atool base-devel bat bc bluez bluez-utils btop clash cmus cups dante eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fontforge fzf git git-delta glow gvim jq less lf libreoffice-fresh lolcat man-db mpv nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv openssh pass perl-image-exiftool polkit poppler python-pywal rsync samba steam translate-shell trash-cli ttf-nerd-fonts-symbols udiskie ueberzugpp unrar unzip w3m zathura-pdf-poppler zoxide
-	sudo pacman -Syu foot grim hypridle hyprland hyprlock hyprpaper slurp waybar wl-clipboard wofi
+	sudo pacman -Syu foot fuzzel grim hypridle hyprland hyprlock hyprpaper slurp waybar wl-clipboard
 	sudo pacman -Syu maim xautolock xcape xclip xcompmgr xdo xorg-xrandr xwallpaper
 	mkdir -p ~/.local/src
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
@@ -10,7 +10,6 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
-	cd ~/.local/src && git clone https://github.com/yahngming/herbe && cd herbe && sudo make clean install
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 	yay -S ctpv-git
  	yay -S newsraft
