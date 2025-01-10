@@ -4,11 +4,11 @@ wallpaper=$(find ~/Pictures/wallpapers/* | shuf -n 1)
 wal -n -i $wallpaper
 source ~/.cache/wal/colors.sh
 sed -i '/background = /s/.*/    background = "'$color0'"/' ~/.config/dunst/dunstrc
-sed -i '/foreground = /s/.*/    foreground = "'$color2'"/' ~/.config/dunst/dunstrc
+sed -i '/foreground = /s/.*/    foreground = "'$color7'"/' ~/.config/dunst/dunstrc
 sed -i '/frame_color = /s/.*/    frame_color = "'$color3'"/' ~/.config/dunst/dunstrc
 sed -i "s/background-color=.*/background-color=$color0/" "~/.config/mako/config"
 sed -i "s/border-color=.*/border-color=$color3/" "~/.config/mako/config"
-sed -i "s/text-color=.*/text-color=$color2/" "~/.config/mako/config"
+sed -i "s/text-color=.*/text-color=$color7/" "~/.config/mako/config"
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	hyprctl hyprpaper unload all
