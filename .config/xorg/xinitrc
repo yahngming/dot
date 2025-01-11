@@ -1,4 +1,5 @@
 clash &
+dunst &
 fcitx5 &
 keymap &
 setleds -D +num &
