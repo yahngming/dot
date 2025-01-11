@@ -1,3 +1,7 @@
+outer-margin=10
+border-size=0
 background-color=#285577FF
-text-color=#FFFFFFFF
 border-color=#4C7899FF
+text-color=#FFFFFFFF
+default-timeout=5000
+anchor=bottom-right
