@@ -6,9 +6,9 @@ source ~/.cache/wal/colors.sh
 sed -i '/background = /s/.*/    background = "'$color0'"/' '$HOME/.config/dunst/dunstrc'
 sed -i '/foreground = /s/.*/    foreground = "'$color7'"/' '$HOME/.config/dunst/dunstrc'
 sed -i '/frame_color = /s/.*/    frame_color = "'$color3'"/' '$HOME/.config/dunst/dunstrc'
-sed -i "s/background-color=.*/background-color=$color0/" "$HOME/.config/mako/config"
-sed -i "s/border-color=.*/border-color=$color3/" "$HOME/.config/mako/config"
-sed -i "s/text-color=.*/text-color=$color7/" "$HOME/.config/mako/config"
+sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
+sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
+sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	hyprctl hyprpaper unload all
