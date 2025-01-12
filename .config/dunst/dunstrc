@@ -1,8 +1,10 @@
 [global]
 	follow = keyboard
 	origin = bottom-right
+	offset = (10, 50)
 	transparency = 25
 	frame_width = 0
+	font = Monospace 12
 
 [urgency_low]
 	background = "#222222"
