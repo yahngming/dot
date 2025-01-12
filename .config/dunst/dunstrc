@@ -1,7 +1,7 @@
 [global]
 	follow = keyboard
 	origin = bottom-right
-	height = 300
+	height = (0, 300)
 	offset = (30, 50)
 	scale = 1.5
 	transparency = 25
