@@ -42,16 +42,20 @@ proxy() {
 setenv() {
 	case "$LAUNCHER" in
 		dmenu)
-			export MENU="dmenu" ;;
+			export MENU="dmenu"
+			;;
 		fuzzel)
-			export LAUNCHEROPT="--dmenu" ;;
-			export MENU="fuzzel --dmenu" ;;
+			export LAUNCHEROPT="--dmenu"
+			export MENU="fuzzel --dmenu"
+			;;
 		rofi)
-			export LAUNCHEROPT="-dmenu" ;;
-			export MENU="rofi -dmenu" ;;
+			export LAUNCHEROPT="-dmenu"
+			export MENU="rofi -dmenu"
+			;;
 		walker)
-			export LAUNCHEROPT="--dmenu --keepsort" ;;
-			export MENU="walker --dmenu --keepsort" ;;
+			export LAUNCHEROPT="--dmenu --keepsort"
+			export MENU="walker --dmenu --keepsort"
+			;;
 	esac
 }
 
