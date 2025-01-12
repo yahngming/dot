@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 case "$MENU" in
-	dmenu) opt="-noi -p Bluetooth" ;;
+	dmenu) opt="-noi" ;;
 esac
 
 # Constants
@@ -309,7 +309,7 @@ show_menu() {
 # dmenu command to pipe into. Extra arguments to dmenu-bluetooth are passed through to dmenu. This
 # allows the user to set fonts, sizes, colours, etc.
 run_dmenu() {
-	$MENU $opt "${dmenu_args[@]}"
+	$MENU $opt -p Bluetooth "${dmenu_args[@]}"
 }
 
 print_help() {
