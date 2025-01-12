@@ -35,7 +35,7 @@ case $(printf "$menu" | $MENU "$@") in
 	*SMB*       ) smbmenu ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
 	*Update*    ) $TERMINAL -e yay ;;
-	*USB*       ) usbmenu ;;
+	*USB*       ) usbmenu $LAUNCHEROPT;;
 	*Wallpaper* ) wallpaper ;;
 	*WLAN*      ) wlanmenu ;;
 	*           ) exit 1 ;;
