@@ -87,12 +87,12 @@ alias ll="eza --all --color=always --git --git-repos --group-directories-first -
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" = 1 ]; then
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	export LAUNCHER="fuzzel"
 	export TERMINAL="foot"
 	setenv
 	exec Hyprland
-elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export LAUNCHER="dmenu"
 	export TERMINAL="st"
 	setenv
