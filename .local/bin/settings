@@ -22,7 +22,7 @@ menu="\
 󱚾 WLAN\n\
 "
 
-case $(printf "$menu" | $MENU "$opt" "$@") in
+case $(printf "$menu" | $MENU $opt "$@") in
 	*Bluetooth* ) btmenu ;;
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
