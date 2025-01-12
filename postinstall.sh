@@ -1,9 +1,13 @@
 #!/bin/sh
 
 arch() {
-	sudo pacman -Syu 7zip aerc atool base-devel bat bc bluez bluez-utils btop clash cmus cups dante eza fastfetch fcitx5-chinese-addons fcitx5-im fd ffmpegthumbnailer firefox fontforge fzf git git-delta glow gvim jq less lf libreoffice-fresh lolcat man-db mpv nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji nsxiv openssh pass perl-image-exiftool polkit poppler python-pywal rsync samba steam translate-shell trash-cli ttf-nerd-fonts-symbols udiskie ueberzugpp unrar unzip w3m zathura-pdf-poppler zoxide
-	sudo pacman -Syu foot fuzzel grim hypridle hyprland hyprlock hyprpaper slurp waybar wl-clipboard
-	sudo pacman -Syu maim xautolock xcape xclip xcompmgr xdo xorg-xrandr xwallpaper
+	sudo pacman -Syu base-devel bluez bluez-utils cups git samba # base
+	sudo pacman -Syu 7zip aerc atool bat bc btop clash cmus dante eza fastfetch fd ffmpegthumbnailer fontforge fzf git-delta glow jq less lf lolcat man-db mpv nodejs nsxiv openssh pass perl-image-exiftool polkit poppler python-pywal rsync translate-shell trash-cli udiskie ueberzugpp unrar unzip w3m zathura-pdf-poppler zoxide # cli
+	sudo pacman -Syu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols # font
+	sudo pacman -Syu firefox gvim libreoffice-fresh steam # gui
+	sudo pacman -Syu fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
+	sudo pacman -Syu foot fuzzel grim hypridle hyprland hyprlock hyprpaper slurp waybar wl-clipboard # wayland
+	sudo pacman -Syu dunst maim xautolock xcape xclip xcompmgr xdo xorg-xrandr xwallpaper # xorg
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
