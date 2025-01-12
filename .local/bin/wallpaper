@@ -1,8 +1,9 @@
 #!/bin/sh
 
+source ~/.cache/wal/colors.sh
+
 wallpaper=$(find ~/Pictures/wallpapers/* | shuf -n 1)
 wal -n -i $wallpaper
-source ~/.cache/wal/colors.sh
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	hyprctl hyprpaper unload all
