@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 case "$MENU" in
-	dmenu) opt="-noi" ;;
+	dmenu) opt="-noi -p Bluetooth" ;;
 esac
 
 # Constants
@@ -308,12 +308,8 @@ show_menu() {
 
 # dmenu command to pipe into. Extra arguments to dmenu-bluetooth are passed through to dmenu. This
 # allows the user to set fonts, sizes, colours, etc.
-DMENU_BLUETOOTH_LAUNCHER="${MENU:-dmenu}"
 run_dmenu() {
-	case "$DMENU_BLUETOOTH_LAUNCHER" in
-		dmenu) DMENU_BLUETOOTH_LAUNCHER="dmenu" ;;
-	esac
-	$DMENU_BLUETOOTH_LAUNCHER $opt -p "$DMENU_BLUETOOTH_PROMPT" "${dmenu_args[@]}"
+	$MENU $opt "${dmenu_args[@]}"
 }
 
 print_help() {
@@ -330,13 +326,8 @@ print_help() {
 	echo "--status					print a short string about current bluetooth status and exit"
 	echo "--connected-icon [ICON]	 add icon on device list next to connected devices"
 	echo ""
-	echo "environment variables:"
-	echo "  DMENU_BLUETOOTH_PROMPT	dmenu prompt"
-	echo "  DMENU_BLUETOOTH_LAUNCHER  command to use instead of 'dmenu'"
-	echo ""
 	echo "Positional arguments have to be placed after all other arguments."
-	echo "A PROMPT positional argument will be interpreted as part of DMENU_ARGS if it starts with '-'. It won't be parsed if the DMENU_BLUETOOTH_PROMPT environment variable is set."
-	echo "Use the DMENU_BLUETOOTH_LAUNCHER environment variable to use launchers other than dmenu. Rofi, fuzzel, and any dmenu-compatible launchers are supported."
+	echo "A PROMPT positional argument will be interpreted as part of DMENU_ARGS if it starts with '-'."
 }
 
 command_present() {
