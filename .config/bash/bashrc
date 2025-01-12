@@ -88,7 +88,7 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" = 1 ]; then
-	export LAUNCHER="walker"
+	export LAUNCHER="fuzzel"
 	export TERMINAL="foot"
 	setenv
 	exec Hyprland
