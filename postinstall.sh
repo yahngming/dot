@@ -7,7 +7,7 @@ arch() {
 	sudo pacman -Syu firefox gvim libreoffice-fresh steam # gui
 	sudo pacman -Syu fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -Syu cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper slurp waybar wl-clipboard # wayland
-	sudo pacman -Syu dunst maim xautolock xcape xclip xcompmgr xdo xorg-server xorg-xrandr xwallpaper # xorg
+	sudo pacman -Syu dunst maim xautolock xcape xclip xcompmgr xdo xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
