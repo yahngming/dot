@@ -6,7 +6,7 @@ var spawn = require('child_process').spawn;
 var exec  = require('child_process').exec;
 
 var env       = process.env;
-var $LAUNCHER = env.MENU || 'dmenu -noi';
+var menu      = env.MENU || 'dmenu -noi';
 
 main();
 
@@ -220,7 +220,7 @@ function runCommand(command, callback) {
 function getSelection(data, callback) {
     var stdout;
     var stderr
-    var dmenu = spawn($LAUNCHER, process.argv.slice(2));
+    var dmenu = spawn(menu, process.argv.slice(2));
 
     dmenu.stdin.write(data);
     dmenu.stdin.end();
