@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+case "$MENU" in
+	dmenu) opt="-noi" ;;
+esac
+
 # Constants
 divider="---------"
 back="Back"
@@ -307,9 +311,9 @@ show_menu() {
 DMENU_BLUETOOTH_LAUNCHER="${MENU:-dmenu}"
 run_dmenu() {
 	case "$DMENU_BLUETOOTH_LAUNCHER" in
-		dmenu) DMENU_BLUETOOTH_LAUNCHER="dmenu -noi" ;;
+		dmenu) DMENU_BLUETOOTH_LAUNCHER="dmenu" ;;
 	esac
-	$DMENU_BLUETOOTH_LAUNCHER -p "$DMENU_BLUETOOTH_PROMPT" "${dmenu_args[@]}"
+	$DMENU_BLUETOOTH_LAUNCHER $opt -p "$DMENU_BLUETOOTH_PROMPT" "${dmenu_args[@]}"
 }
 
 print_help() {
