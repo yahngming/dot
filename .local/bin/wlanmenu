@@ -17,7 +17,7 @@ iwd_dmenu() {
 
 			# user can connect, disconnect, or forget network
 			# don't care bout access points or other stuff
-			if ! show_menu '' 'Connect' 'Disconnect' 'Forget'; then break; fi
+			if ! show_menu 'WLAN' 'Connect' 'Disconnect' 'Forget'; then break; fi
 		done
 	}
 
