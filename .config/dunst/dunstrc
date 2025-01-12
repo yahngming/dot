@@ -1,7 +1,9 @@
 [global]
 	follow = keyboard
 	origin = bottom-right
-	offset = (10, 50)
+	height = 300
+	offset = (30, 50)
+	scale = 1.5
 	transparency = 25
 	frame_width = 0
 	font = monospace 20
