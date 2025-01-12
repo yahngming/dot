@@ -2,8 +2,7 @@
 	follow = keyboard
 	origin = bottom-right
 	height = (0, 300)
-	offset = (30, 50)
-	scale = 1.5
+	offset = (30, 30)
 	transparency = 25
 	frame_width = 0
 	font = monospace 20
