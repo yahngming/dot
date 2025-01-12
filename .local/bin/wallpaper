@@ -17,8 +17,8 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 elif [ -n "$DISPLAY" ]; then
 	xwallpaper --zoom $wallpaper
 	xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
-	sed -i '/background = /s/.*/    background = "'$color0'"/' '~/.config/dunst/dunstrc'
-	sed -i '/foreground = /s/.*/    foreground = "'$color7'"/' '$HOME/.config/dunst/dunstrc'
+	sed -i '/background = /s/.*/    background = "'$color0'"/' "~/.config/dunst/dunstrc"
+	sed -i '/foreground = /s/.*/    foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
 	sed -i '/frame_color = /s/.*/    frame_color = "'$color3'"/' '$HOME/.config/dunst/dunstrc'
 	killall dunst && dunst &
 fi
