@@ -68,7 +68,8 @@
 		"format-icons": {
 			"activated": "󰴄",
 			"deactivated": "󰈈"
-		}
+		},
+		"tooltip": false
 	},
 
 	"mpris": {
