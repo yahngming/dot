@@ -46,6 +46,7 @@
 
 	"custom/weather": {
 		"format": "{}",
+		"tooltip": false,
 		"interval": 3600,
 		"exec": "curl wttr.in/?format=%C+%t"
 	},
