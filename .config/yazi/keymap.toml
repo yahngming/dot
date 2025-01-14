@@ -1,5 +1,5 @@
 [manager]
 
 prepend_keymap = [
-	{ on = [ "g", "m" ],       run = "cd /run/media",     desc = "Goto /run/media" },
+	{ on = [ "g", "m" ],       run = "cd /run/media/$USER",     desc = "Goto /run/media/$USER" },
 ]
