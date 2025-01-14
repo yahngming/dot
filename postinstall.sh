@@ -1,7 +1,7 @@
 #!/bin/sh
 
 arch() {
-	sudo pacman -Syu 7zip aerc atool base-devel bat bc bluez bluez-utils btop clash cmus cups dante eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-pywal rsync samba translate-shell trash-cli udiskie ueberzugpp unrar unzip w3m wireplumber zathura-pdf-poppler zoxide # base
+	sudo pacman -Syu 7zip aerc atool base-devel bat bc bluez bluez-utils btop clash cmus cups dante eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-pywal rclone rsync samba translate-shell trash-cli udiskie ueberzugpp unrar unzip w3m wireplumber zathura-pdf-poppler zoxide # base
 	sudo pacman -Syu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols # font
 	sudo pacman -Syu firefox gvim libreoffice-fresh steam # gui
 	sudo pacman -Syu fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
