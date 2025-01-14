@@ -7,7 +7,6 @@ esac
 menu="\
  Bluetooth\n\
  Cleanup\n\
-󰅟 Cloud\n\
  Coffee\n\
 󰍹 Display\n\
  Dotfiles\n\
@@ -27,7 +26,6 @@ menu="\
 case $(printf "$menu" | $MENU $opt "$@") in
 	*Bluetooth* ) btmenu ;;
 	*Cleanup*   ) $TERMINAL -e sudo pacman -Rns $(pacman -Qtdq) ;;
-	*Cloud*     ) $BROWSER --new-tab localhost:5572 ;;
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) $TERMINAL -e dot ;;
