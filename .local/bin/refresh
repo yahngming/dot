@@ -1,3 +1,4 @@
 #!/bin/sh
 
-wal -R
+cat ~/.cache/wal/sequences
+"$@"
