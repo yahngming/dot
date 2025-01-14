@@ -67,6 +67,7 @@ export QT_STYLE_OVERRIDE="Windows"
 export SDL_IM_MODULE="fcitx"
 export SDL_VIDEODRIVER="wayland,x11"
 export SUDO_ASKPASS="$HOME/.local/bin/sapmenu"
+export TUI="tui"
 export XMODIFIERS="@im=fcitx"
 
 PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
