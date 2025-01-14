@@ -21,10 +21,10 @@ map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
 map a archive
+map d %trash-put $fx
 map D delete
 map u unarchive
-map x $$f
-map X !$f
+map x cut
 map gm cd /run/media/$USER
 map zd push %mkdir<space>
 map zz push :zoxide<space>
