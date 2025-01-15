@@ -57,8 +57,9 @@ cut() {
 
 dpm() {
 	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
-		Disabled ) printf "  " ;;
+		Disabled ) icon="" ;;
 	esac
+	printf " $icon "
 }
 
 ime() {
@@ -81,12 +82,12 @@ net() {
 		$((net >= -50)) ) icon="󰤨" ;;
 	esac
 	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-		down ) printf " 󰤮 " ;;
-		up   ) printf " $icon " ;;
+		down ) icon="󰤮" ;;
 	esac
 	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
-		up   ) printf " 󰈀 " ;;
+		up   ) icon="󰈀" ;;
 	esac
+	[ "$net" ] && printf " $icon "
 }
 
 usb() {
@@ -105,9 +106,9 @@ vol() {
 		$((vol >= 80)) ) icon="󰕾" ;;
 	esac
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
-		*MUTED* ) printf " 󰝟 " ;;
-		*       ) printf " $icon " ;;
+		*MUTED* ) icon="󰝟" ;;
 	esac
+	[ "$vol" ] && printf " $icon "
 }
 
 while true; do
