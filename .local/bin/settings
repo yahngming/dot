@@ -11,6 +11,7 @@ menu="\
  Coffee\n\
 󰍹 Display\n\
  Dotfiles\n\
+󰊖 Gamemode\n\
 󰇧 IME\n\
 󰌌 Keyboard\n\
  Passwords\n\
@@ -31,6 +32,7 @@ case $(printf "$menu" | $MENU $opt "$@") in
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) $TERMINAL -e dot ;;
+	*Gamemode*  ) gamemode ;;
 	*IME*       ) fcitx5-configtool ;;
 	*Keyboard*  ) keymap ;;
 	*Passwords* ) passmenu ;;
