@@ -57,7 +57,8 @@ cut() {
 
 dpm() {
 	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
-		Disabled ) icon="" ;;
+		Disabled ) icon="󰴄" ;;
+		Enabled  ) icon="󰈈" ;;
 	esac
 	printf " $icon "
 }
@@ -85,7 +86,7 @@ net() {
 		down ) icon="󰤮" ;;
 	esac
 	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
-		up   ) icon="󰈀" ;;
+		*up*   ) icon="󰈀" ;;
 	esac
 	[ "$net" ] && printf " $icon "
 }
