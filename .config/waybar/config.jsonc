@@ -48,8 +48,8 @@
 		"format": "{}",
 		"tooltip": false,
 		"interval": 3,
-		"exec": "printf 󰕓",
-		"exec-if": "exit 0",
+		"exec": "printf '󰕓'",
+		"exec-if": "df -h | grep '/media/'",
 		"on-click": "usbmenu"
 	},
 
