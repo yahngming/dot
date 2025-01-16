@@ -11,7 +11,8 @@
 	"battery": {
 		"format": "{icon}",
 		"format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-		"tooltip": false
+		"tooltip": false,
+		"on-click": ""
 	},
 
 	"clock": {
@@ -35,13 +36,13 @@
 	"custom/power": {
 		"format": "",
 		"tooltip": false,
-		"on-click-right": "powermenu"
+		"on-click": "powermenu"
 	},
 
 	"custom/settings": {
 		"format": "",
 		"tooltip": false,
-		"on-click-right": "settings"
+		"on-click": "settings"
 	},
 
 	"custom/usb": {
@@ -50,14 +51,15 @@
 		"interval": 3,
 		"exec": "printf '󰕓'",
 		"exec-if": "df | grep '/media/' > /dev/null",
-		"on-click-right": "usbmenu"
+		"on-click": "usbmenu"
 	},
 
 	"custom/weather": {
 		"format": "{}",
 		"tooltip": false,
 		"interval": 3600,
-		"exec": "curl wttr.in/?format=%C+%t"
+		"exec": "curl wttr.in/?format=%C+%t",
+		"on-click": ""
 	},
 
 	"hyprland/workspaces": {
@@ -99,7 +101,7 @@
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 		"tooltip-format": "󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}",
-		"on-click-right": "wlanmenu"
+		"on-click": "wlanmenu"
 	},
 
 	"pulseaudio": {
@@ -116,14 +118,14 @@
 		"hwmon-path": ["/sys/class/thermal/thermal_zone0/temp"],
 		"format": "{temperatureC}",
 		"tooltip": false,
-		"on-click-right": "$TERMINAL -e $TUI btop"
+		"on-click": "$TERMINAL -e $TUI btop"
 	},
 
 	"temperature#gpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon7/temp1_input"],
 		"format": "{temperatureC}",
 		"tooltip": false,
-		"on-click-right": "$TERMINAL -e $TUI btop"
+		"on-click": "$TERMINAL -e $TUI btop"
 	},
 
 	"tray": {
