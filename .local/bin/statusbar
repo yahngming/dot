@@ -91,7 +91,7 @@ net() {
 
 usb() {
 	usb="$(df -h | grep '/media/')"
-	[ "$usb" ] && printf " 󱇰 "
+	[ "$usb" ] && printf " 󰕓 "
 }
 
 vol() {
