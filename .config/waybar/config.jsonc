@@ -36,13 +36,15 @@
 	"custom/power": {
 		"format": "",
 		"tooltip": false,
-		"on-click": "powermenu"
+		"on-click": "powermenu",
+		"on-click-right": "loginctl lock-session"
 	},
 
 	"custom/settings": {
 		"format": "",
 		"tooltip": false,
-		"on-click": "settings"
+		"on-click": "settings",
+		"on-click-right": "$TERMINAL -e dot"
 	},
 
 	"custom/usb": {
@@ -81,7 +83,8 @@
 			"activated": "󰴄",
 			"deactivated": "󰈈"
 		},
-		"tooltip": false
+		"tooltip": false,
+		"on-click-right": "$TERMINAL -e cmatrix"
 	},
 
 	"mpris": {
