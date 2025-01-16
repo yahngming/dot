@@ -106,7 +106,7 @@
 		"format": "{icon}",
 		"format-muted": "",
 		"format-icons": ["", "", ""],
-		"tooltip-format": "󱄠 {volume}  󱡬 {desc}",
+		"tooltip": false,
 		"on-click": "togglemute",
 		"on-scroll-up": "volup",
 		"on-scroll-down": "voldown"
