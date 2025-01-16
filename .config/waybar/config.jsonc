@@ -115,7 +115,8 @@
 	"temperature": {
 		"hwmon-path": ["/sys/class/thermal/thermal_zone0/temp"],
 		"format": "{temperatureC}",
-		"tooltip": false
+		"tooltip": false,
+		"on-click-right": "$TERMINAL -e $TUI btop"
 	},
 
 	"temperature#gpu": {
