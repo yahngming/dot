@@ -49,8 +49,8 @@
 		"tooltip": false,
 		"interval": 3,
 		"exec": "printf '󰕓'",
-		"exec-if": "df -h | grep '/media/'",
-		"on-click": "usbmenu"
+		"exec-if": "pgrep foot",
+		"on-click-right": "usbmenu"
 	},
 
 	"custom/weather": {
