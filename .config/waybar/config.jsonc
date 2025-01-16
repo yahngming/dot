@@ -84,7 +84,7 @@
 			"deactivated": "󰈈"
 		},
 		"tooltip": false,
-		"on-click-right": "$TERMINAL -e cmatrix"
+		"on-click-right": "$TERMINAL -F -e cmatrix"
 	},
 
 	"mpris": {
