@@ -49,7 +49,7 @@
 		"tooltip": false,
 		"interval": 3,
 		"exec": "printf '󰕓'",
-		"exec-if": "mount",
+		"exec-if": "df",
 		"on-click-right": "usbmenu"
 	},
 
