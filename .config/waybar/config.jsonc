@@ -49,7 +49,7 @@
 		"tooltip": false,
 		"interval": 3,
 		"exec": "printf '󰕓'",
-		"exec-if": "ifusb",
+		"exec-if": "pgrep foot",
 		"on-click-right": "usbmenu"
 	},
 
