@@ -11,4 +11,4 @@ vol="${vol#'Volume: '}"
 vol="${vol%' [MUTED]'}"
 vol="$(printf "%.0f" "$(cut "$vol" ".")")"
 
-notify-send -u low -h string:x-canonical-private-synchronous:volume -h int:value:$vol ""
+notify-send -u low -h string:x-canonical-private-synchronous:volume -h int:value:20
