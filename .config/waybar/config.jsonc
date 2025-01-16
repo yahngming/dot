@@ -47,8 +47,8 @@
 	"custom/usb": {
 		"format": "{}",
 		"tooltip": false,
-		"exec": "printf '󱇰'",
-		"exec-if": "df -h | grep '/media/'"
+		"exec": "printf '󰕓'",
+		"exec-if": "df -h | grep '/run/'"
 	},
 
 	"custom/weather": {
