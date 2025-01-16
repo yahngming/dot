@@ -1,4 +1,4 @@
 feeds-menu-paramount-explore true
-scrolloff 6
+scrolloff 0
 
 bind o exec $OPENER "%l"
