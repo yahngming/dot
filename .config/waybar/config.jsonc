@@ -48,7 +48,7 @@
 		"format": "{}",
 		"tooltip": false,
 		"exec": "printf '󰕓'",
-		"exec-if": "df -h | grep '/run/'"
+		"exec-if": "df -h | grep '/media/'"
 	},
 
 	"custom/weather": {
