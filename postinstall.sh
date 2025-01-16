@@ -16,15 +16,15 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
 	yay -S ctpv-git
  	yay -S newsraft
+	mkdir -p ~/.config/clash && cd ~/.config/clash && curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
+	mkdir -p ~/.config/firefox && cd ~/.config/firefox && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh && chmod +x *.sh && ./updater.sh
+	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
    	sudo systemctl enable avahi-daemon.service
    	sudo systemctl enable bluetooth.service
    	sudo systemctl enable cups.service
    	sudo systemctl enable smb.service
  	sudo cp -r ~/.config/getty\@.service.d/ /etc/systemd/system/
 	sudo sed -i 's/LOGIN_TIMEOUT.*/LOGIN_TIMEOUT 0/' /etc/login.defs
-	mkdir -p ~/.config/clash && cd ~/.config/clash && curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
-	mkdir -p ~/.config/firefox && cd ~/.config/firefox && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh && chmod +x *.sh && ./updater.sh
-	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
 	gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
