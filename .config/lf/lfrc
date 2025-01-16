@@ -25,7 +25,8 @@ map d %trash-put $fx
 map D delete
 map u unarchive
 map x cut
-map gm cd $HOME
+map gm cd /run/media
+map gt cd ~/.local/share/Trash
 map zd push %mkdir<space>
 map zz push :zoxide<space>
 
