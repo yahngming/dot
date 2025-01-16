@@ -1,3 +1,4 @@
 #!/bin/sh
 
 wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+notify-send -u low -h string:x-canonical-private-synchronous:volume "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
