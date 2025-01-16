@@ -49,7 +49,7 @@
 		"tooltip": false,
 		"interval": 3,
 		"exec": "printf '󰕓'",
-		"exec-if": "mount | grep media",
+		"exec-if": "mount",
 		"on-click-right": "usbmenu"
 	},
 
