@@ -1,5 +1,11 @@
 #!/bin/sh
 
+cut() {
+	IFS=$2
+	set -- $1
+	printf '%s' "$@"
+}
+
 vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 vol="${vol#'Volume: '}"
 vol="${vol%' [MUTED]'}"
