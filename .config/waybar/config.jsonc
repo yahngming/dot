@@ -47,6 +47,7 @@
 	"custom/usb": {
 		"format": "{}",
 		"tooltip": false,
+		"interval": 1,
 		"exec": "printf '󰕓'",
 		"exec-if": "df -h | grep '/media/'"
 	},
