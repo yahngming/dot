@@ -48,8 +48,8 @@
 		"format": "{}",
 		"tooltip": false,
 		"interval": 3,
-		"exec": "printf 󰕓",
-		"exec-if": "df | grep media",
+		"exec": "printf '󰕓'",
+		"exec-if": "mount | grep media",
 		"on-click-right": "usbmenu"
 	},
 
