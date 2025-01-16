@@ -49,7 +49,7 @@
 		"tooltip": false,
 		"interval": 3,
 		"exec": "printf 󰕓",
-		"exec-if": "df -h | grep /media/",
+		"exec-if": "exit 0",
 		"on-click": "usbmenu"
 	},
 
