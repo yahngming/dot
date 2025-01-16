@@ -13,6 +13,7 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 	sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
 	sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
 	sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
+	sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
 	makoctl reload
 elif [ -n "$DISPLAY" ]; then
 	xwallpaper --zoom $wallpaper
