@@ -1,8 +1,6 @@
 #!/bin/sh
 
-gamemode=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
-
-if [ "$gamemode" = 1 ] ; then
+if [ "$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')" = 1 ] ; then
 	hyprctl --batch "\
 		keyword general:gaps_in 0;\
 		keyword general:gaps_out 0;\
@@ -16,5 +14,4 @@ if [ "$gamemode" = 1 ] ; then
 		keyword animations:enabled 0"
 	exit
 fi
-
 hyprctl reload
