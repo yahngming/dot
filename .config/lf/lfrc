@@ -8,7 +8,7 @@ set info size
 set mouse
 set period 1
 set previewer ctpv
-set scrolloff 6
+set scrolloff 0
 set shell sh
 set shellopts '-eu'
 set sixel true
