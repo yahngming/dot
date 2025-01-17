@@ -60,7 +60,7 @@ multimon() { # Multi-monitor handler.
 }
 
 postrun() { # Stuff to run to clean up.
-	wallpaper
+	# wallpaper
 }
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
