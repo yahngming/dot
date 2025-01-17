@@ -7,6 +7,8 @@ esac
 onescreen() { # If only one output available or chosen.
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl keyword monitor "$1",highrr,auto,auto
+		echo $1
+		echo $screens
 		while IFS= read -r screen; do
 			if [[ "$screen" != "$1" ]]; then
 				hyprctl keyword monitor "$screen",disable
