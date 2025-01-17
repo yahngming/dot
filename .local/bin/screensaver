@@ -1,8 +1,9 @@
 #!/bin/sh
 
-case "$SAVER" in
-	asciiquarium ) pidof asciiquarium || $TERMINAL -F -e asciiquarium ;;
-	cbonsai      ) pidof cbonsai || $TERMINAL -F -e cbonsai ;;
-	cmatrix      ) pidof cmatrix || $TERMINAL -F -e cmatrix ;;
-	pipes.sh     ) pidof pipes.sh || $TERMINAL -F -e pipes.sh ;;
-esac
+screensavers=(\
+	"pidof asciiquarium || $TERMINAL -F -e asciiquarium"\
+	"pidof cmatrix || $TERMINAL -F -e cmatrix"\
+	"pidof pipes.sh || $TERMINAL -F -e pipes.sh"\
+)
+
+${screensavers[$(( $RANDOM % ${#screensavers[@]} ))]}
