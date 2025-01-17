@@ -10,6 +10,7 @@ screensavers=(
 
 for screensaver in "${screensavers[@]}"; do
 	if pgrep -fx "$screensaver" > /dev/null; then
+		pkill "$screensaver"
 		exit
 	fi
 done
