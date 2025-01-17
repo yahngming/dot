@@ -1,3 +1,8 @@
 #!/bin/sh
 
-pidof cmatrix || $TERMINAL -F -e cmatrix
+case "$SAVER" in
+	asciiquarium ) pidof asciiquarium || $TERMINAL -F -e asciiquarium ;;
+	cbonsai      ) pidof cbonsai || $TERMINAL -F -e cbonsai ;;
+	cmatrix      ) pidof cmatrix || $TERMINAL -F -e cmatrix ;;
+	pipes.sh     ) pidof pipes.sh || $TERMINAL -F -e pipes.sh ;;
+esac
