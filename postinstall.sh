@@ -1,12 +1,13 @@
 #!/bin/sh
 
 arch() {
-	sudo pacman -Syu 7zip aerc atool base-devel bat bc bluez bluez-utils brightnessctl btop clash cmus cups dante eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-pywal rclone ripgrep rsync samba translate-shell trash-cli udiskie ueberzugpp unrar unzip w3m wireplumber yazi zathura-pdf-poppler zoxide # base
-	sudo pacman -Syu noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols # font
-	sudo pacman -Syu firefox gvim libreoffice-fresh steam # gui
-	sudo pacman -Syu fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
-	sudo pacman -Syu cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper mako slurp waybar wl-clipboard xdg-desktop-portal-hyprland # wayland
-	sudo pacman -Syu dunst maim xautolock xcape xclip xcompmgr xdo xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
+	sudo pacman -S 7zip aerc atool base-devel bat bc bluez bluez-utils brightnessctl btop clash cmus cups dante eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-pywal rclone ripgrep rsync samba translate-shell trash-cli udiskie ueberzugpp unrar unzip w3m wireplumber yazi zathura-pdf-poppler zoxide # base
+	sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols # font
+	sudo pacman -S firefox gvim libreoffice-fresh steam # gui
+	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
+	sudo pacman -S asciiquarium ttysvr # screensaver
+	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper mako slurp waybar wl-clipboard xdg-desktop-portal-hyprland # wayland
+	sudo pacman -S dunst maim xautolock xcape xclip xcompmgr xdo xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
@@ -14,7 +15,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
-	yay -S asciiquarium cmatrix-git ctpv-git newsraft pipes.sh
+	yay -S cmatrix-git ctpv-git lavat-git newsraft
 	mkdir -p ~/.config/clash && cd ~/.config/clash && curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 	mkdir -p ~/.config/firefox && cd ~/.config/firefox && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh && curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh && chmod +x *.sh && ./updater.sh
 	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
