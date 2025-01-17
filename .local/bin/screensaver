@@ -2,8 +2,11 @@
 
 screensavers=(\
 	"$TERMINAL -F -e asciiquarium"\
+	"$TERMINAL -F -e cbonsai -l"\
 	"$TERMINAL -F -e cmatrix"\
+	"$TERMINAL -F -e lavat"\
 	"$TERMINAL -F -e pipes.sh"\
+	"$TERMINAL -F -e ttysvr"\
 )
 
 ${screensavers[$(($RANDOM%${#screensavers[@]}))]}
