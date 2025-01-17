@@ -2,7 +2,7 @@
 	follow = keyboard
 	origin = bottom-right
 	offset = (20, 80)
-	progress_bar_height = 10
+	progress_bar_height = 2
 	transparency = 20
 	frame_width = 0
 	font = monospace 20
