@@ -6,7 +6,7 @@ setleds -D +num &
 statusbar &
 udiskie &
 wallpaper &
-xautolock -time 3 -locker slock &
+xautolock -time 5 -locker locker -notify 120 -notifier "pgrep screensaver || screensaver" &
 xcompmgr &
 xinput set-prop 16 319 1 &
 xinput set-prop 16 348 1 &
