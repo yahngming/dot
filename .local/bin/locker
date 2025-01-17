@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	hyprlock
+elif [ -n "$DISPLAY" ]; then
+	loginctl lock-session
+fi
