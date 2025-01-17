@@ -9,7 +9,7 @@ menu="\
 "
 
 case $(printf "$menu" | $MENU "$@") in
-	*lock*     ) loginctl lock-session ;;
+	*lock*     ) locker ;;
 	*sleep*    ) systemctl sleep ;;
 	*logout*   ) pkill -KILL -u $USER ;;
 	*reboot*   ) systemctl reboot ;;
