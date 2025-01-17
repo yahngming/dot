@@ -7,9 +7,11 @@ esac
 onescreen() { # If only one output available or chosen.
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl keyword monitor $1,highrr,auto,auto
-		while read -r screen; do
-			hyprctl keyword monitor $screen,disable
-		done <<< $(echo "$screens" | grep -v "$1")
+		while IFS= read -r screen; do
+			if [[ "$screen" != "$1" ]]; then
+				hyprctl keyword monitor "$screen",disable
+			fi
+		done < <(echo "$screens")
 	elif [ -n "$DISPLAY" ]; then
 		xrandr --output "$1" --auto --scale 1.0x1.0 $(echo "$displays" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -)
 	fi
