@@ -8,4 +8,4 @@ screensavers=(\
 	"$TERMINAL -F -e ttysvr"\
 )
 
-${screensavers[$(($RANDOM%${#screensavers[@]}))]}
+killall screensaver && ${screensavers[$(($RANDOM%${#screensavers[@]}))]}
