@@ -5,5 +5,5 @@ screensavers=(\
 	"pidof cmatrix || $TERMINAL -F -e cmatrix"\
 	"pidof pipes.sh || $TERMINAL -F -e pipes.sh"\
 )
-
-${screensavers[$(( $RANDOM % ${#screensavers[@]} ))]}
+index=$(( $RANDOM % ${#screensavers[@]} ))
+echo $index
