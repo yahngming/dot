@@ -1,10 +1,9 @@
 #!/bin/sh
 
 screensavers=(\
-	"pidof asciiquarium || $TERMINAL -F -e asciiquarium"\
-	"pidof cmatrix || $TERMINAL -F -e cmatrix"\
-	"pidof pipes.sh || $TERMINAL -F -e pipes.sh"\
+	"$TERMINAL -F -e asciiquarium"\
+	"$TERMINAL -F -e cmatrix"\
+	"$TERMINAL -F -e pipes.sh"\
 )
-index=$(($RANDOM%${#screensavers[@]}))
-screensaver=${screensavers[$index]}
-${screensaver}
+
+$$ || ${screensavers[$(($RANDOM%${#screensavers[@]}))]}
