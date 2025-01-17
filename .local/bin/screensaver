@@ -1,11 +1,11 @@
 #!/bin/sh
 
-screensavers=(\
-	"$TERMINAL -F -e asciiquarium"\
-	"$TERMINAL -F -e cmatrix"\
-	"$TERMINAL -F -e lavat -c red -R 1 -k magenta"\
-	"$TERMINAL -F -e pipes -R"\
-	"$TERMINAL -F -e ttysvr"\
+screensavers=(
+	"$TERMINAL -F -e asciiquarium"
+	"$TERMINAL -F -e cmatrix"
+	"$TERMINAL -F -e lavat -c red -R 1 -k magenta"
+	"$TERMINAL -F -e pipes -R"
+	"$TERMINAL -F -e ttysvr"
 )
 
 for screensaver in "${screensavers[@]}"; do
@@ -14,4 +14,4 @@ for screensaver in "${screensavers[@]}"; do
 	fi
 done
 
-${screensavers[$(($RANDOM%${#screensavers[@]}))]}
+eval ${screensavers[$(($RANDOM%${#screensavers[@]}))]}
