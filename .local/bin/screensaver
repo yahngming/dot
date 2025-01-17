@@ -1,11 +1,11 @@
 #!/bin/sh
 
-screensavers=(\
-	"$TERMINAL -F -e asciiquarium"\
-	"$TERMINAL -F -e cmatrix"\
-	"$TERMINAL -F -e lavat -c red -R 1 -k magenta"\
-	"$TERMINAL -F -e pipes -R"\
-	"$TERMINAL -F -e ttysvr"\
-)
+screensavers=("asciiquarium" "cmatrix" "lavat" "pipes" "ttysvr")
 
-killall screensaver && ${screensavers[$(($RANDOM%${#screensavers[@]}))]}
+for screensaver in "${screensavers[@]}"; do
+	if pgrep -x "$screensaver" > /dev/null; then
+		exit
+	fi
+done
+
+$TERMINAL -F -e ${screensavers[$(($RANDOM%${#screensavers[@]}))]}
