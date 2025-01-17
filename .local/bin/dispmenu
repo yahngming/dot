@@ -6,11 +6,10 @@ esac
 
 onescreen() { # If only one output available or chosen.
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl keyword monitor "$1",highrr,0x0,auto
-		# hyprctl keyword monitor $(echo "$screens" | grep -v "$1"),disable
+		hyprctl keyword monitor "$1",highrr,auto,auto
 		for screen in $screens; do
 			if [[ "$screen" != "$1" ]]; then
-				hyprctl keyword monitor "$screen,disable"
+				hyprctl keyword monitor "$screen",disable
 			fi
 		done
 	elif [ -n "$DISPLAY" ]; then
@@ -60,8 +59,11 @@ multimon() { # Multi-monitor handler.
 }
 
 postrun() { # Stuff to run to clean up.
-	# wallpaper
-	exit
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		exit
+	elif [ -n "$DISPLAY" ]; then
+		wallpaper
+	fi
 }
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
