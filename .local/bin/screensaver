@@ -4,7 +4,7 @@ screensavers=(\
 	"$TERMINAL -F -e asciiquarium"\
 	"$TERMINAL -F -e cmatrix"\
 	"$TERMINAL -F -e lavat"\
-	"$TERMINAL -F -e pipes.sh"\
+	"$TERMINAL -F -e pipes"\
 	"$TERMINAL -F -e ttysvr"\
 )
 
