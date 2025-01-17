@@ -5,5 +5,5 @@ pgrep screensaver && screensaver
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	pidof hyprlock || hyprlock
 elif [ -n "$DISPLAY" ]; then
-	loginctl lock-session
+	pidof slock || slock
 fi
