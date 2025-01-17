@@ -48,7 +48,6 @@ morescreen() { # If multi-monitor is selected and there are more than two screen
 multimon() { # Multi-monitor handler.
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl reload
-		makoctl reload
 	elif [ -n "$DISPLAY" ]; then
 		case "$(echo "$screens" | wc -l)" in
 			2) twoscreen ;;
@@ -58,11 +57,7 @@ multimon() { # Multi-monitor handler.
 }
 
 postrun() { # Stuff to run to clean up.
-	if [ -n "$WAYLAND_DISPLAY" ]; then
-		makoctl reload
-	elif [ -n "$DISPLAY" ]; then
-		wallpaper
-	fi
+	wallpaper
 }
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
