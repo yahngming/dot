@@ -7,5 +7,4 @@ screensavers=(\
 )
 index=$(($RANDOM%${#screensavers[@]}))
 screensaver=${screensavers[$index]}
-echo $index
-echo $screensaver
+${screensaver}
