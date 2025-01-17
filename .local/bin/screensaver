@@ -6,4 +6,4 @@ screensavers=(\
 	"$TERMINAL -F -e pipes.sh"\
 )
 
-$$ || ${screensavers[$(($RANDOM%${#screensavers[@]}))]}
+[[ -z $$ ]] && ${screensavers[$(($RANDOM%${#screensavers[@]}))]}
