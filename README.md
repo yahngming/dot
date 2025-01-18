@@ -19,9 +19,8 @@ git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
 other packages
 ```sh
-sudo pacman -S android-tools emby-theater freecad keepassxc
-yay -S orca-slicer
-yay -S sdrpp-git
+sudo pacman -S android-tools emby-theater freecad keepassxc yazi
+yay -S minecraft-launcher orca-slicer sdrpp-git subconverter-bin
 ```
 
 ## chromeos
