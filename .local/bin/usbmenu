@@ -5,6 +5,7 @@ case "$MENU" in
 esac
 
 device=$(udiskie-info -a -o '{ui_label}' | $MENU $opt -p 'Select a drive:' | cut -d':' -f1)
+
 if [ -n "$device" ] ; then
 	if mount | grep "$device" ; then
 		udisksctl unmount -b ${device}
