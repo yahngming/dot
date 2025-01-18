@@ -1,5 +1,3 @@
 #!/bin/sh
 
-cat ~/.cache/wal/sequences
-
-eval "$@"
+$TERMINAL -e cat ~/.cache/wal/sequences; "$@"
