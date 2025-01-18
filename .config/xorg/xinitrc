@@ -5,6 +5,7 @@ keymap &
 setleds -D +num &
 statusbar &
 udiskie &
+unclutter &
 wallpaper &
 xautolock -time 10 -locker locker -notify 420 -notifier "pgrep screensaver || screensaver" &
 xcompmgr &
