@@ -1,3 +1,3 @@
 #!/bin/sh
 
-$TERMINAL -e "/bin/sh -c cat ~/.cache/wal/sequences; $@"
+$TERMINAL -e bash -c "cat ~/.cache/wal/sequences ; $@"
