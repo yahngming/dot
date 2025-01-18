@@ -1,1 +1,2 @@
+unbind common q
 bind common q quit
