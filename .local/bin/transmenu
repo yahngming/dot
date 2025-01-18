@@ -74,7 +74,7 @@ save_file() (
 )
 
 open_term() {
-	${TERMINAL} -e ${PAGER:-'less'} "$(save_file "$1")"
+	${TUI} ${PAGER:-'less'} "$(save_file "$1")"
 }
 
 get_text() {
