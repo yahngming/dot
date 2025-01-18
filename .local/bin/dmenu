@@ -1,4 +1,5 @@
 #!/bin/sh
 
 source ~/.cache/wal/colors.sh
+
 /usr/local/bin/dmenu -nb $color0 -nf $color7 -sb $color1 -sf $color7 "$@"
