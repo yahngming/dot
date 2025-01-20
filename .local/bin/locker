@@ -1,9 +1,0 @@
-#!/bin/sh
-
-pgrep screensaver && screensaver
-
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	pidof hyprlock || hyprlock
-elif [ -n "$DISPLAY" ]; then
-	pidof slock || slock
-fi
