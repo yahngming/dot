@@ -15,4 +15,4 @@ for screensaver in "${screensavers[@]}"; do
 	fi
 done
 
-"${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
+${screensavers[$(($RANDOM%${#screensavers[@]}))]}
