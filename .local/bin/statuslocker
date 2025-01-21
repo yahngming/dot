@@ -2,4 +2,4 @@
 
 source ~/.local/bin/status
 
-printf "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
+printf "$(bat)$(net)$(vol)"
