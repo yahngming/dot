@@ -1,12 +1,16 @@
 #!/bin/sh
 
-$TUI yay
+yay
 
+cd ~/.local/src/clash
+git pull
 mkdir -p ~/.config/clash
 cd ~/.config/clash
 curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
+cp ~/.local/src/clash/clash ./config.yaml
 
-mkdir -p ~/.config/firefox && cd ~/.config/firefox
+mkdir -p ~/.config/firefox
+cd ~/.config/firefox
 curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
 curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
 chmod +x *.sh
