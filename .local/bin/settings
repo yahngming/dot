@@ -40,7 +40,7 @@ case $(printf "$menu" | $MENU $opt "$@") in
 	*Proxy*     ) $BROWSER --new-tab clash.razord.top ;;
 	*SMB*       ) smbmenu ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
-	*Update*    ) $TUI yay ;;
+	*Update*    ) $TUI up ;;
 	*USB*       ) usbmenu ;;
 	*Wallpaper* ) wallpaper ;;
 	*WLAN*      ) wlanmenu ;;
