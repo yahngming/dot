@@ -11,7 +11,7 @@ xcompmgr &
 xinput set-prop 16 319 1 &
 xinput set-prop 16 348 1 &
 xset r rate 300 30 s 600 &
-xautolock -time 5 -locker slock &
+xautolock -time 5 -locker locker &
 
 session=${1:-dwm}
 case $session in
