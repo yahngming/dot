@@ -1,3 +1,9 @@
 #!/bin/sh
 
 $TUI yay
+mkdir -p ~/.config/firefox && cd ~/.config/firefox
+curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
+curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
+chmod +x *.sh
+./updater.sh
+./prefsCleaner.sh
