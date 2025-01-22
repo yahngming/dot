@@ -1,7 +1,6 @@
 {
 	"$schema": "https://cdn.jsdelivr.net/gh/fastfetch-cli/fastfetch/doc/json_schema.json",
 	"logo": {
-		"source": "~/.config/fastfetch/thinkpad.txt",
 		"color": {
 			"1": "red",
 			"2": "green",
