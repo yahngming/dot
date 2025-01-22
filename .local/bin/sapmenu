@@ -7,4 +7,4 @@ case "$LAUNCHER" in
 	walker ) opt="--dmenu --password --placeholder [sudo]password:" ;;
 esac
 
-$LAUNCHER "$opt"
+$LAUNCHER $opt
