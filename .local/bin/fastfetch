@@ -1,5 +1,7 @@
 #!/bin/sh
 
+shopt -s nocasematch
+
 case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
 	*thinkpad* ) opt="-l ~/.config/fastfetch/thinkpad.txt" ;;
 esac
