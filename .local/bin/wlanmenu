@@ -1,7 +1,7 @@
 #!/bin/sh
 
 case "$MENU" in
-	dmenu) opt="-noi" ;;
+	dmenu ) opt="-noi" ;;
 esac
 
 NEWLINE='
@@ -121,7 +121,7 @@ iwd_dmenu() {
 				done)"
 
 		# print using dmenu
-		if ! answer="$(printf '%s\n' "${options}" | $MENU $opt -p "${prompt}")"; then return 1; fi
+		if ! answer="$(printf '%s\n' "${options}" | $MENU "$opt" -p "${prompt}")"; then return 1; fi
 
 		# get user's answer
 		printf '%s\n' "${options}" | while read -r line; do
