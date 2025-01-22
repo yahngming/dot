@@ -4,6 +4,7 @@ shopt -s nocasematch
 
 case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
 	*thinkpad* ) opt="-l ~/.config/fastfetch/thinkpad.txt" ;;
+	*          ) opt="-l ~/.config/fastfetch/arch.txt" ;;
 esac
 
-/usr/bin/fastfetch $opt $@
+/usr/bin/fastfetch $opt "$@"
