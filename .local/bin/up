@@ -14,5 +14,5 @@ cd ~/.config/firefox
 curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
 curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
 chmod +x *.sh
-pgrep firefox || ./updater.sh
-pgrep firefox || ./prefsCleaner.sh
+pidof firefox || ./updater.sh
+pidof firefox || ./prefsCleaner.sh
