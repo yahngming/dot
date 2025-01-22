@@ -4,7 +4,7 @@ case "$MENU" in
 	dmenu ) opt="-noi" ;;
 esac
 
-if [ -z $(df | grep '/media/') ] ; then
+if [ -n "$(df | grep '/media/')" ] ; then
 	device=$(udiskie-info -a -o "{ui_label}" | $MENU $opt -p "Select a drive:" | cut -d":" -f1)
 else
 	notify-send "No device found."
