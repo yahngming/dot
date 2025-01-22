@@ -1,7 +1,7 @@
 #!/bin/sh
 
 case "$MENU" in
-	dmenu) opt="-noi" ;;
+	dmenu ) opt="-noi" ;;
 esac
 
 onescreen() { # If only one output available or chosen.
@@ -83,7 +83,7 @@ fi
 { onescreen "$screens"; postrun; exit ;}
 
 # Main menu.
-chosen=$(printf "%s\\nMulti-monitor" "$screens" | $MENU $opt -p "Choose a monitor:") &&
+chosen=$(printf "%s\\nMulti-monitor" "$screens" | $MENU "$opt" -p "Choose a monitor:") &&
 case "$chosen" in
 	"Multi-monitor") multimon ;;
 	*) onescreen "$chosen" ;;
