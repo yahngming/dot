@@ -55,10 +55,7 @@ iwd_dmenu() {
 		connected_network="$(iwctl station "${interface}" show | grep -i '\<Connected network\>' | awk '{ $1=""; $2=""; sub("  ", " "); { $1=$1; print } }')"
 		if [ -n "${connected_network}" ]; then
 			answer="$(show_menu "Disconnect from ${connected_network}?" 'Cancel' 'Confirm')"
-			case "$(printf '%s\n' "${answer}" | tr '[:upper:]' '[:lower:]')" in
-				'Cancel'  ) return ;;
-				'Confirm' ) iwctl station "${interface}" disconnect ;;
-			esac
+			[ "${answer}" = "Confirm" ] && iwctl station "${interface}" disconnect
 		fi
 	}
 
