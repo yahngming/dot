@@ -69,7 +69,7 @@ set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
 set wildmenu
 set wrap
 
-colorscheme default
+colorscheme slate
 filetype indent on
 filetype plugin on
 syntax on
