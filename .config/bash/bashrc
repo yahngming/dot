@@ -86,7 +86,7 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export LAUNCHER="dmenu"
 	export TERMINAL="st"
 	setenv
-	exec startx ~/.config/xorg/xinitrc dwm
+	exec startx ~/.config/xorg/xinitrc
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export LAUNCHER="xfce4-appfinder"
 	export TERMINAL="xfce4-terminal"
