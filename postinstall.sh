@@ -6,7 +6,7 @@ arch() {
 	sudo pacman -S firefox gvim libreoffice-fresh steam # gui
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper mako slurp waybar wl-clipboard xdg-desktop-portal-hyprland # wayland
-	sudo pacman -S dunst maim unclutter xautolock xcape xclip xcompmgr xdo xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
+	sudo pacman -S dunst maim unclutter xautolock xcape xclip xcompmgr xdo xfce4 xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
@@ -14,7 +14,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
-	yay -S ctpv-git newsraft
+	yay -S chicago95-theme ctpv-git newsraft
 	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
    	sudo systemctl enable avahi-daemon.service
    	sudo systemctl enable bluetooth.service
