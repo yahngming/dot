@@ -1,6 +1,6 @@
 #!/bin/sh
 
 case "$BROWSER" in
-	*firefox* ) firefox --profile "$HOME/.config/firefox" "$@" ;;
-	*         ) $BROWSER "$@" ;;
+	firefox ) firefox --profile "$HOME/.config/firefox" "$@" ;;
+	*       ) $BROWSER "$@" ;;
 esac
