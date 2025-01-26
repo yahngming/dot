@@ -3,6 +3,7 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimLeave * mksession! ~/.config/vim/session.vim
 
+colorscheme default
 filetype indent on
 filetype plugin on
 let $LANG='en'
@@ -12,6 +13,7 @@ set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set cmdheight=1
+set columns=100
 set complete+=kspell
 set encoding=utf8
 set ffs=unix,dos,mac
@@ -25,6 +27,7 @@ set langmenu=en
 set laststatus=2
 set lazyredraw
 set linebreak
+set lines=25
 set listchars=space:·,tab:>·
 set magic
 set mat=2
