@@ -63,7 +63,6 @@ export LESS="-IR"
 export OPENER="xdg-open"
 export PAGER="less"
 export QT_IM_MODULE="fcitx"
-export QT_STYLE_OVERRIDE="Windows"
 export SDL_IM_MODULE="fcitx"
 export SUDO_ASKPASS="$HOME/.local/bin/sapmenu"
 export TUI="tui"
@@ -78,20 +77,25 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-	export GTK_THEME="Adwaita-dark"
+	export GTK_THEME="Adwaita"
 	export LAUNCHER="fuzzel"
+	export QT_QPA_PLATFORMTHEME="gtk3"
+	export QT_STYLE_OVERRIDE="Fusion"
 	export TERMINAL="foot"
 	setenv
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export GTK_THEME="Adwaita-dark"
 	export LAUNCHER="dmenu"
+	export QT_QPA_PLATFORMTHEME="gtk3"
+	export QT_STYLE_OVERRIDE="Fusion"
 	export TERMINAL="st"
 	setenv
 	exec startx ~/.config/xorg/xinitrc
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export GTK_THEME="Chicago95"
 	export LAUNCHER="xfce4-appfinder"
+	export QT_STYLE_OVERRIDE="Windows"
 	export TERMINAL="xfce4-terminal"
 	setenv
 	exec startx ~/.config/xorg/xinitrc xfce
