@@ -81,8 +81,6 @@ if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	export LAUNCHER="fuzzel"
 	export QT_QPA_PLATFORMTHEME="gtk3"
 	export TERMINAL="foot"
-	gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
-	gsettings set org.gnome.desktop.interface icon-theme "Adwaita"
 	setenv
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
