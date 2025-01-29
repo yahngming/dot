@@ -1,3 +1,6 @@
 #!/bin/sh
 
-$TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences ; $@"
+case "$TERMINAL" in
+	*xfce* ) $TERMINAL -e "$@" ;;
+	*      ) $TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences ; $@" ;;
+esac
