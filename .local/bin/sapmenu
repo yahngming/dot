@@ -1,10 +1,10 @@
 #!/bin/sh
 
 case "$LAUNCHER" in
-	dmenu  ) opt="-P -p [sudo]password:" ;;
-	fuzzel ) opt="--dmenu --password --prompt-only=[sudo]password:" ;;
-	rofi   ) opt="-dmenu -password -p [sudo]password:" ;;
-	walker ) opt="--dmenu --password --placeholder [sudo]password:" ;;
+	fuzzel ) opt="--password --prompt-only=[sudo]password:" ;;
+	rofi   ) opt="-password -p [sudo]password:" ;;
+	walker ) opt="--password --placeholder [sudo]password:" ;;
+	*      ) opt="-P -p [sudo]password:" ;;
 esac
 
-$LAUNCHER $opt
+$MENU $opt
