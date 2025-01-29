@@ -93,7 +93,7 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 	gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
 	setenv
-	exec startx ~/.config/xorg/xinitrc
+	exec startx ~/.config/xorg/xinitrc dwm
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export GTK_THEME="Chicago95"
 	export LAUNCHER="xfce4-appfinder"
