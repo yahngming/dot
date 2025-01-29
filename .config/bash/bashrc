@@ -77,10 +77,11 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-	export GTK_THEME="Adwaita"
+	export GTK_THEME="Adwaita:dark"
 	export LAUNCHER="fuzzel"
 	export QT_QPA_PLATFORMTHEME="gtk3"
 	export TERMINAL="foot"
+	gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 	gsettings set org.gnome.desktop.interface icon-theme "Adwaita"
 	setenv
 	exec Hyprland
@@ -89,6 +90,7 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export LAUNCHER="dmenu"
 	export QT_QPA_PLATFORMTHEME="gtk3"
 	export TERMINAL="st"
+	gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 	gsettings set org.gnome.desktop.interface icon-theme "Adwaita"
 	setenv
 	exec startx ~/.config/xorg/xinitrc
@@ -97,6 +99,7 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export LAUNCHER="xfce4-appfinder"
 	export QT_STYLE_OVERRIDE="Windows"
 	export TERMINAL="xfce4-terminal"
+	gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
 	gsettings set org.gnome.desktop.interface icon-theme "Chicago95"
 	setenv
 	exec startx ~/.config/xorg/xinitrc xfce
