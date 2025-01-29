@@ -74,7 +74,7 @@ save_file() (
 )
 
 open_term() {
-	${TUI} "${PAGER:-'less'} '$(save_file "$1")'"
+	tui "${PAGER:-'less'} '$(save_file "$1")'"
 }
 
 get_text() {
