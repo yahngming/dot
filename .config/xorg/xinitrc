@@ -24,6 +24,9 @@ case $1 in
 		exec startplasma-x11
 		;;
 	xfce)
+		gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+		gsettings set org.gnome.desktop.interface gtk-theme 'Chicago95'
+		gsettings set org.gnome.desktop.interface icon-theme 'Chicago95'
 		exec startxfce4
 		;;
 esac
