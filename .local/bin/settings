@@ -27,11 +27,11 @@ menu="\
 
 case $(printf "$menu" | $MENU $opt "$@") in
 	*Bluetooth* ) btmenu ;;
-	*Cleanup*   ) $TUI "sudo pacman -Rns $(pacman -Qtdq)" ;;
-	*Cloud*     ) $TUI "rclone --progress copy ~/Documents disroot:/Documents" ;;
+	*Cleanup*   ) tui "sudo pacman -Rns $(pacman -Qtdq)" ;;
+	*Cloud*     ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
-	*Dotfiles*  ) $TUI "dot" ;;
+	*Dotfiles*  ) tui "dot" ;;
 	*Gamemode*  ) gamemode ;;
 	*IME*       ) fcitx5-configtool ;;
 	*Keyboard*  ) keymap ;;
@@ -40,7 +40,7 @@ case $(printf "$menu" | $MENU $opt "$@") in
 	*Proxy*     ) browser --new-tab clash.razord.top ;;
 	*SMB*       ) smbmenu ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
-	*Update*    ) $TUI "up" ;;
+	*Update*    ) tui "up" ;;
 	*USB*       ) usbmenu ;;
 	*Wallpaper* ) wallpaper ;;
 	*WLAN*      ) wlanmenu ;;
