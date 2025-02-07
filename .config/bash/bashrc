@@ -72,6 +72,7 @@ export XMODIFIERS="@im=fcitx"
 PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
 
 alias ll="eza --all --color=always --git --git-repos --group-directories-first --icons=always --long"
+alias sudo="sudo "
 
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
