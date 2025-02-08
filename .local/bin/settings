@@ -6,7 +6,6 @@ esac
 
 menu="\
  Bluetooth\n\
- Cleanup\n\
 󰅟 Cloud\n\
  Coffee\n\
 󰍹 Display\n\
@@ -27,7 +26,6 @@ menu="\
 
 case $(printf "$menu" | $MENU $opt "$@") in
 	*Bluetooth* ) btmenu ;;
-	*Cleanup*   ) tui "sudo pacman -Rns $(pacman -Qtdq)" ;;
 	*Cloud*     ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
