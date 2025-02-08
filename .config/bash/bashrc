@@ -100,7 +100,7 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export TERMINAL="xfce4-terminal"
 	export QT_STYLE_OVERRIDE="Windows"
 	gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-	gsettings set org.gnome.desktop.interface cursor-theme 'Chicago95'
+	gsettings set org.gnome.desktop.interface cursor-theme 'Chicago95 Standard Cursors'
 	gsettings set org.gnome.desktop.interface gtk-theme 'Chicago95'
 	gsettings set org.gnome.desktop.interface icon-theme 'Chicago95'
 	setenv
