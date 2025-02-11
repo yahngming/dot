@@ -86,7 +86,7 @@
 
 	"mpris": {
 		"format": "{status_icon} {title} - {artist}",
-		"max-length": 60,
+		"max-length": 10,
 		"status-icons": {
 			"playing": "",
 			"default": ""
