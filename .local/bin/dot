@@ -8,5 +8,6 @@ rm -rf ~/.git ~/postinstall.sh ~/README.md
 cd - >/dev/null 2>&1
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	killall waybar && hyprctl dispatch exec waybar >/dev/null 2>&1
+	killall waybar
+	hyprctl dispatch exec waybar >/dev/null 2>&1
 fi
