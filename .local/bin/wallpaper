@@ -6,10 +6,11 @@ wallpaper=$(find ~/Pictures/wallpapers/* | shuf -n 1)
 wal -n -i "$wallpaper"
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
+	killall hyprpaper
+	hyprctl dispatch exec hyprpaper
 	hyprctl hyprpaper unload all
 	hyprctl hyprpaper preload "$wallpaper"
 	hyprctl hyprpaper wallpaper ,"$wallpaper"
-	killall waybar && hyprctl dispatch exec waybar
 	sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
 	sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
 	sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
