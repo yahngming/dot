@@ -6,8 +6,6 @@ wallpaper=$(find ~/Pictures/wallpapers/* | shuf -n 1)
 wal -n -i "$wallpaper"
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	killall hyprpaper
-	hyprctl dispatch exec hyprpaper
 	hyprctl hyprpaper unload all
 	hyprctl hyprpaper preload "$wallpaper"
 	hyprctl hyprpaper wallpaper ,"$wallpaper"
