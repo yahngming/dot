@@ -54,7 +54,7 @@ setenv() {
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
 
-export BROWSER="firefox"
+export BROWSER="librewolf"
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
 export FZF_CTRL_T_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type file"
