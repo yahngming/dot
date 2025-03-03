@@ -9,5 +9,6 @@ cd - >/dev/null 2>&1
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	killall waybar
-	hyprctl dispatch exec waybar >/dev/null 2>&1
+	hyprctl dispatch exec waybar
+	pidof hyprpaper || hyprctl dispatch exec hyprpaper
 fi
