@@ -7,8 +7,8 @@ cd ~/.local/src/clash
 git pull
 mkdir -p ~/.config/clash
 cd ~/.config/clash
-curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 cp ~/.local/src/clash/clash ./config.yaml
+curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 
 if [ "$BROWSER" == "firefox" ]; then
 	mkdir -p ~/.config/firefox
