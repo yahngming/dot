@@ -16,6 +16,6 @@ if [ "$BROWSER" == "firefox" ]; then
 	curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
 	curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
 	chmod +x *.sh
-	pidof firefox || ./updater.sh
-	pidof firefox || ./prefsCleaner.sh
+	./updater.sh
+	./prefsCleaner.sh
 fi
