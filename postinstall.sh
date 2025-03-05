@@ -3,7 +3,7 @@
 arch() {
 	sudo pacman -S 7zip aerc atool base-devel bat bc bluez bluez-utils brightnessctl btop clash cmus cups dante eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-pywal rclone ripgrep rsync samba translate-shell trash-cli udiskie ueberzugpp unrar unzip w3m wireplumber zathura-pdf-poppler zoxide # base
 	sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols # font
-	sudo pacman -S firefox gvim libreoffice-fresh steam # gui
+	sudo pacman -S gvim libreoffice-fresh steam # gui
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper mako slurp waybar wl-clipboard xdg-desktop-portal-hyprland # wayland
 	sudo pacman -S dunst maim unclutter xautolock xcape xclip xcompmgr xdo xfce4 xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
@@ -14,7 +14,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
-	yay -S bibata-cursor-git chicago95-theme ctpv-git newsraft
+	yay -S bibata-cursor-git chicago95-theme ctpv-git google-chrome newsraft
 	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
    	sudo systemctl enable avahi-daemon.service
    	sudo systemctl enable bluetooth.service
