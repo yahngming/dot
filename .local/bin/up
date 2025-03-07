@@ -2,6 +2,7 @@
 
 yay
 sudo pacman -Rns $(pacman -Qtdq)
+sudo pacman -Sc
 
 cd ~/.local/src/clash
 git pull
