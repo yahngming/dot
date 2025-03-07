@@ -7,6 +7,21 @@ chmod +x ~/.local/bin/*
 rm -rf ~/.git ~/postinstall.sh ~/README.md
 cd - >/dev/null 2>&1
 
+cd ~/.local/src/sub
+git pull
+cp ~/.local/src/sub/clash ~/.config/clash/config.yaml
+cd - >/dev/null 2>&1
+
+if [ "$BROWSER" == "firefox" ]; then
+	cd ~/.config/firefox
+	curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
+	curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
+	chmod +x *.sh
+	./updater.sh
+	./prefsCleaner.sh
+	cd - >/dev/null 2>&1
+fi
+
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	killall waybar
 	hyprctl dispatch exec waybar >/dev/null 2>&1
