@@ -5,9 +5,9 @@ post install
 ```sh
 bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) arch
 ```
-clash config
+proxy config
 ```sh
-git clone https://gist.github.com/$GISTID ~/.local/src/clash
+git clone https://gist.github.com/$GISTID ~/.local/src/sub
 ```
 pass init
 ```sh
