@@ -4,11 +4,11 @@ yay
 sudo pacman -Rns $(pacman -Qtdq)
 sudo pacman -Sc
 
-cd ~/.local/src/clash
+cd ~/.local/src/sub
 git pull
 mkdir -p ~/.config/clash
 cd ~/.config/clash
-cp ~/.local/src/clash/clash ./config.yaml
+cp ~/.local/src/sub/clash ./config.yaml
 curl -O https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb
 
 if [ "$BROWSER" == "firefox" ]; then
