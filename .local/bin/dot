@@ -3,7 +3,7 @@
 cd ~/.local/src/dot
 git pull
 cp -a ~/.local/src/dot/. ~/
-chmod +x ~/.local/bin/*
+chmod +x ~/.local/bin/* ~/.config/firefox/*.sh
 rm -rf ~/.git ~/postinstall.sh ~/README.md
 cd - >/dev/null 2>&1
 
@@ -14,9 +14,6 @@ cd - >/dev/null 2>&1
 
 if [ "$BROWSER" == "firefox" ]; then
 	cd ~/.config/firefox
-	curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/prefsCleaner.sh
-	curl -O https://cdn.jsdelivr.net/gh/arkenfox/user.js/updater.sh
-	chmod +x *.sh
 	./updater.sh
 	./prefsCleaner.sh
 	cd - >/dev/null 2>&1
