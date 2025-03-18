@@ -54,6 +54,7 @@ setenv() {
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
 
+export all_proxy="127.0.0.1:7890"
 export BROWSER="chrome"
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
