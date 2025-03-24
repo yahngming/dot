@@ -10,7 +10,11 @@
 
 	"battery": {
 		"format": "{icon}",
-		"format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"format-charging": "{icon}",
+		"format-icons": {
+			"charging": ["󰂃", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+			"default": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		},
 		"tooltip": false,
 		"on-click": ""
 	},
