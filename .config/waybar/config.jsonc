@@ -111,8 +111,8 @@
 
 	"pulseaudio": {
 		"format": "{icon}",
-		"format-muted": "",
-		"format-icons": ["", "", ""],
+		"format-muted": "󰝟",
+		"format-icons": ["󰕿", "󰖀", "󰕾"],
 		"tooltip": false,
 		"on-click": "togglemute",
 		"on-scroll-up": "volup",
