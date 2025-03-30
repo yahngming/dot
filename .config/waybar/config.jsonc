@@ -112,7 +112,7 @@
 	"pulseaudio": {
 		"format": "{icon}",
 		"format-muted": "",
-		"format-icons": [" ", " ", ""],
+		"format-icons": ["", "", ""],
 		"tooltip": false,
 		"on-click": "togglemute",
 		"on-scroll-up": "volup",
