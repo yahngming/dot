@@ -1,5 +1,6 @@
 clash &
 keymap &
+rquickshare &
 setleds -D +num &
 unclutter &
 xinput set-prop 16 319 1 &
