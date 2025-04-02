@@ -4,6 +4,8 @@ case "$MENU" in
 	dmenu ) opt="-noi" ;;
 esac
 
+pidof udiskie || udiskie
+
 if [ -n "$(df | grep '/media/')" ] ; then
 	device=$(udiskie-info -a -o "{ui_label}" | $MENU $opt -p "Select a drive:" | cut -d":" -f1)
 else
