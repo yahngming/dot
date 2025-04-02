@@ -20,7 +20,7 @@ git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 other packages
 ```sh
 sudo pacman -S android-tools freecad keepassxc yazi
-yay -S gyroflow minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
+yay -S gyroflow minecraft-launcher orca-slicer-bin sdrpp-git subconverter-bin tsukimi-git
 ```
 
 ## chromeos
