@@ -34,8 +34,8 @@ case $(printf "$menu" | $MENU $opt "$@") in
 	*IME*       ) fcitx5-configtool ;;
 	*Keyboard*  ) keymap ;;
 	*Passwords* ) passmenu ;;
-	*Printer*   ) browser --new-tab localhost:631 ;;
-	*Proxy*     ) browser --new-tab clash.razord.top ;;
+	*Printer*   ) browser --new-tab http://localhost:631 ;;
+	*Proxy*     ) browser --new-tab https://clash.razord.top ;;
 	*SMB*       ) smbmenu ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
 	*Update*    ) tui "up" ;;
