@@ -83,13 +83,13 @@ tooltip {
 #workspaces button {
 	all: unset;
 	padding: 0px 5px;
-	color: rgba(0,0,0,0);
+	color: rgba(192, 192, 192, 0);
 	transition: all .5s ease;
 	text-shadow: 0px 0px 1px rgba(0, 0, 0, .5);
 }
 #workspaces button:hover {
 	transition: all .5s ease;
-	color: rgba(0,0,0,0);
+	color: rgba(192, 192, 192, 0);
 	text-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
 }
 #workspaces button.active {
@@ -98,12 +98,12 @@ tooltip {
 	transition: all .5s ease;
 }
 #workspaces button.empty {
-	color: rgba(0,0,0,0);
+	color: rgba(192, 192, 192, 0);
 	border: none;
 	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
 }
 #workspaces button.empty:hover {
-	color: rgba(0,0,0,0);
+	color: rgba(192, 192, 192, 0);
 	border: none;
 	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
 }
