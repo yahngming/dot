@@ -100,12 +100,12 @@ tooltip {
 #workspaces button.empty {
 	color: rgba(0, 0, 0, 0);
 	border: none;
-	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, .2);
 }
 #workspaces button.empty:hover {
 	color: rgba(0, 0, 0, 0);
 	border: none;
-	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, .5);
 }
 #workspaces button.empty.active {
 	color: @color9;
