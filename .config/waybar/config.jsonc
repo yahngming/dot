@@ -20,8 +20,7 @@
 	},
 
 	"bluetooth": {
-		"format": "",
-		"format-disabled": "",
+		"format-connected": "",
 		"tooltip-format": "{device_enumerate}",
 		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
 		"on-click": "btmenu"
