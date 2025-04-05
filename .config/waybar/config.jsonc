@@ -6,7 +6,7 @@
 
 	"modules-left": ["clock", "custom/weather", "mpris"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["tray", "temperature", "custom/usb", "idle_inhibitor", "battery", "network", "pulseaudio", "custom/settings", "custom/power"],
+	"modules-right": ["tray", "temperature", "custom/usb", "idle_inhibitor", "battery", "bluetooth", "network", "pulseaudio", "custom/settings", "custom/power"],
 
 	"battery": {
 		"format": "{icon}",
@@ -17,6 +17,12 @@
 		},
 		"tooltip": false,
 		"on-click": ""
+	},
+
+	"bluetooth": {
+		"format": " {status}",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+		"on-click": "btmenu"
 	},
 
 	"clock": {
