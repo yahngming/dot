@@ -39,6 +39,7 @@ tooltip {
 }
 
 #battery,
+#bluetooth,
 #cpu,
 #custom-power,
 #custom-settings,
@@ -59,6 +60,7 @@ tooltip {
 }
 
 #battery:hover,
+#bluetooth:hover,
 #clock:hover,
 #cpu:hover,
 #custom-power:hover,
