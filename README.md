@@ -19,7 +19,7 @@ git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
 other packages
 ```sh
-sudo pacman -S android-tools freecad keepassxc yazi
+sudo pacman -S freecad keepassxc yazi
 yay -S darktable-git davinci-resolve gyroflow minecraft-launcher orca-slicer-bin sdrpp-git subconverter-bin tsukimi-git
 ```
 
