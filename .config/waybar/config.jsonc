@@ -15,7 +15,7 @@
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 			"default": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 		},
-		"tooltip-format": "{capacity}%",
+		"tooltip-format": "{capacity}% {time}",
 		"on-click": ""
 	},
 
