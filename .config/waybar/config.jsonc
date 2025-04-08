@@ -15,7 +15,7 @@
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 			"default": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 		},
-		"tooltip-format": "{capacity}% {time}",
+		"tooltip-format": "{capacity}%",
 		"on-click": ""
 	},
 
@@ -23,7 +23,7 @@
 		"format": "",
 		"format-connected": "",
 		"tooltip-format": "{device_enumerate}",
-		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
+		"tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}%",
 		"on-click": "btmenu"
 	},
 
@@ -121,7 +121,7 @@
 		"format": "{icon}",
 		"format-muted": "",
 		"format-icons": ["", "", ""],
-		"tooltip": false,
+		"tooltip-format": "{volume}%",
 		"on-click": "togglemute",
 		"on-scroll-up": "volup",
 		"on-scroll-down": "voldown"
