@@ -7,6 +7,7 @@ esac
 menu="\
 modern\n\
 terminal\n\
+windows\n\
 "
 
 theme=$(printf "$menu" | $MENU $opt -p "Select theme:" "$@")
