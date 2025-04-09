@@ -9,7 +9,6 @@
 	"height": 41,
 	"modules-left": [
 		"custom/os_button",
-		"hyprland/workspaces",
 		"wlr/taskbar"
 	],
 	"modules-center": [],
@@ -37,7 +36,7 @@
 		"on-scroll-down": "hyprctl dispatch workspace r-1"
 	},
 	"custom/os_button": {
-		"format": "",
+		"format": "",
 		"on-click": "wofi --show drun",
 		"tooltip": false
 	},
