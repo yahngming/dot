@@ -256,11 +256,12 @@
 	},
 
 	"network": {
-		"format": "󰖩",
+		"format": "{icon}",
+		"format-ethernet": "󰈀",
+		"format-disconnected": "󰤮",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 		"on-click": "wlanmenu",
-		"interval": 1,
-		"min-length": 1,
-		"max-length": 1
+		"tooltip-format": "󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}"
 	},
 
 	"bluetooth": {
@@ -311,8 +312,6 @@
 		},
 		"tooltip-format": "Device: {desc}",
 		"on-click": "togglemute",
-		"on-scroll-up": "volup",
-		"on-scroll-down": "voldown",
 		"min-length": 6,
 		"max-length": 6
 	},
