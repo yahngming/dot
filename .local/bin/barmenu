@@ -6,10 +6,10 @@ terminal\n\
 "
 
 theme=$(printf "$menu" | $MENU -p "Select theme:" "$@")
-cat ~/.config/waybar/config-$theme.jsonc > ~/.config/waybar/config.jsonc
-cat ~/.config/waybar/style-$theme.css > ~/.config/waybar/style.css
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
+if [ -n "$WAYLAND_DISPLAY" ] && [ -n "$theme" ]; then
+	cat ~/.config/waybar/config-$theme.jsonc > ~/.config/waybar/config.jsonc
+	cat ~/.config/waybar/style-$theme.css > ~/.config/waybar/style.css
 	killall waybar
 	hyprctl dispatch exec waybar >/dev/null 2>&1
 fi
