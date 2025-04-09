@@ -211,50 +211,50 @@
 
 #custom-arrow2 {
 	font-size: 19pt;
-	color: @date;
-	background: @layout;
-}
-
-#custom-arrow3 {
-	font-size: 19pt;
 	color: @layout;
 	background: @battery;
 }
 
-#custom-arrow4 {
+#custom-arrow3 {
 	font-size: 19pt;
 	color: @battery;
 	background: @temp;
 }
 
-#custom-arrow5 {
+#custom-arrow4 {
 	font-size: 19pt;
 	color: @temp;
 	background: @cpu;
 }
 
-#custom-arrow6 {
+#custom-arrow5 {
 	font-size: 19pt;
 	color: @cpu;
 	background: @memory;
 }
 
-#custom-arrow7 {
+#custom-arrow6 {
 	font-size: 19pt;
 	color: @memory;
 	background: @network;
 }
 
-#custom-arrow8 {
+#custom-arrow7 {
 	font-size: 19pt;
 	color: @network;
 	background: @sound;
 }
 
-#custom-arrow9 {
+#custom-arrow8 {
 	font-size: 19pt;
 	color: @sound;
 	background: transparent;
+}
+
+#custom-arrow9 {
+	font-size: 19pt;
+	color: @date;
+	background: @layout;
 }
 
 #custom-arrow10 {
