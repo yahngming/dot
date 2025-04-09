@@ -241,19 +241,19 @@
 }
 
 #custom-arrow7 {
-	font-size: 16pt;
+	font-size: 11pt;
 	color: @memory;
 	background: @network;
 }
 
 #custom-arrow8 {
-	font-size: 17pt;
+	font-size: 19pt;
 	color: @network;
 	background: @sound;
 }
 
 #custom-arrow9 {
-	font-size: 18pt;
+	font-size: 20pt;
 	color: @sound;
 	background: transparent;
 }
