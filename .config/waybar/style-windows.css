@@ -111,7 +111,7 @@ tooltip label{
 }
 
 #cpu, #disk, #memory, #temperature {
-	padding:5px;
+	padding: 3px;
 }
 
 #temperature {
