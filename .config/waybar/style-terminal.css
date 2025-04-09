@@ -206,7 +206,7 @@
 #custom-arrow1 {
 	font-size: 19pt;
 	color: @time;
-	background: @date;
+	background: @layout;
 }
 
 #custom-arrow2 {
@@ -248,13 +248,13 @@
 #custom-arrow8 {
 	font-size: 19pt;
 	color: @sound;
-	background: transparent;
+	background: @date;
 }
 
 #custom-arrow9 {
 	font-size: 19pt;
 	color: @date;
-	background: @layout;
+	background: @transparent;
 }
 
 #custom-arrow10 {
