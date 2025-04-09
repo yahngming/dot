@@ -1,11 +1,15 @@
 #!/bin/sh
 
+case "$MENU" in
+	dmenu ) opt="-noi" ;;
+esac
+
 menu="\
 modern\n\
 terminal\n\
 "
 
-theme=$(printf "$menu" | $MENU -p "Select theme:" "$@")
+theme=$(printf "$menu" | $MENU $opt -p "Select theme:" "$@")
 
 if [ -n "$WAYLAND_DISPLAY" ] && [ -n "$theme" ]; then
 	cat ~/.config/waybar/config-$theme.jsonc > ~/.config/waybar/config.jsonc
