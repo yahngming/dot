@@ -30,6 +30,15 @@
 		"clock"
 	],
 
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "󰴄",
+			"deactivated": "󰈈"
+		},
+		"tooltip": false
+	},
+
 	"battery": {
 		"interval": 10,
 		"states": {
@@ -56,12 +65,6 @@
 		"format": "{:%I:%M %p}",
 		"format-alt": "{:%H:%M UTC%Ez, %A, %B %d, %Y}",
 		"timezones": ["", "America/New_York", "America/Los_Angeles"],
-		"tooltip-format": "<tt>{calendar}</tt>",
-		"calendar": {
-			"format": {
-				"today": "<b><u>{}</u></b>"
-			}
-		},
 		"actions": {
 			"on-click-backward": "tz_down",
 			"on-click-forward": "tz_up",
@@ -74,7 +77,6 @@
 		"interval": 5,
 		"tooltip": false,
 		"format": " {usage}%",
-		"format-alt": " {load}",
 		"states": {
 			"warning": 70,
 			"critical": 90
