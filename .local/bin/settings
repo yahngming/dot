@@ -5,6 +5,7 @@ case "$MENU" in
 esac
 
 menu="\
+ Bar\n\
  Bluetooth\n\
 󰅟 Cloud\n\
  Coffee\n\
@@ -25,6 +26,7 @@ menu="\
 "
 
 case $(printf "$menu" | $MENU $opt "$@") in
+	*Bar*       ) barmenu ;;
 	*Bluetooth* ) btmenu ;;
 	*Cloud*     ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
 	*Coffee*    ) coffee ;;
