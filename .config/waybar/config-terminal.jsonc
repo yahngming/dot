@@ -25,19 +25,10 @@
 		"custom/arrow3",
 		"battery",
 		"custom/arrow2",
-		"hyprland/language",
+		"clock#date",
 		"custom/arrow1",
-		"clock"
+		"clock#time"
 	],
-
-	"idle_inhibitor": {
-		"format": "{icon}",
-		"format-icons": {
-			"activated": "󰴄",
-			"deactivated": "󰈈"
-		},
-		"tooltip": false
-	},
 
 	"battery": {
 		"interval": 10,
@@ -61,16 +52,13 @@
 		"tooltip": false
 	},
 
-	"clock": {
+	"clock#date": {
+		"format": "{:%a, %b %d}",
+		"tooltip": false
+	},
+
+	"clock#time": {
 		"format": "{:%I:%M %p}",
-		"format-alt": "{:%H:%M UTC%Ez, %A, %B %d, %Y}",
-		"timezones": ["", "America/New_York", "America/Los_Angeles"],
-		"actions": {
-			"on-click-backward": "tz_down",
-			"on-click-forward": "tz_up",
-			"on-scroll-up": "shift_down",
-			"on-scroll-down": "shift_up"
-		},
 		"tooltip": false
 	},
 
@@ -84,8 +72,28 @@
 		}
 	},
 
-	"hyprland/language": {
-		"format": " {}",
+	"hyprland/window": {
+		"format": "{}",
+		"max-length": 99,
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+		"all-outputs": true,
+		"format": "{name}",
+		"persistent-workspaces": {
+			"*": [ 1,2,3,4,5 ]
+		},
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1"
+	},
+
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "󰴄",
+			"deactivated": "󰈈"
+		},
 		"tooltip": false
 	},
 
@@ -106,22 +114,6 @@
 		"format-disconnected": "No connection",
 		"format-alt": "󰩟 {ipaddr}/{cidr}",
 		"tooltip": false
-	},
-
-	"hyprland/window": {
-		"format": "{}",
-		"max-length": 99,
-		"tooltip": false
-	},
-
-	"hyprland/workspaces": {
-		"all-outputs": true,
-		"format": "{name}",
-		"persistent-workspaces": {
-			"*": [ 1,2,3,4,5 ]
-		},
-		"on-scroll-up": "hyprctl dispatch workspace e-1",
-		"on-scroll-down": "hyprctl dispatch workspace e+1"
 	},
 
 	"pulseaudio": {
