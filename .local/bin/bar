@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cat ~/.config/waybar/config-.jsonc > ~/.config/waybar/config.jsonc
+cat ~/.config/waybar/style-.css > ~/.config/waybar/style.css
