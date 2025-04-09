@@ -1,3 +1,4 @@
+		"tray",
 {
 	"layer": "bottom",
 	"position": "bottom",
@@ -46,11 +47,11 @@
 		"max-length": 10
 	},
 	"temperature": {
-		"hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
+		"hwmon-path": ["/sys/class/thermal/thermal_zone0/temp"],
 		"critical-threshold": 75,
 		"tooltip": false,
-		"format-critical": "({temperatureC}°C)",
-		"format": "({temperatureC}°C)"
+		"format-critical": "󰔏 {temperatureC}°C",
+		"format": "󰔏 {temperatureC}°C"
 	},
 	"disk": {
 		"interval": 30,
