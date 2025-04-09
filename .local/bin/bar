@@ -1,14 +1,11 @@
 #!/bin/sh
 
 menu="\
- lock\n\
-󰤄 sleep\n\
-󰗽 logout\n\
- reboot\n\
-󰤆 shutdown\n\
+modern\n\
+terminal\n\
 "
 
-$theme=$MENU
+theme=$(printf "$menu" | $MENU "$@")
 
 cat ~/.config/waybar/config-$theme.jsonc > ~/.config/waybar/config.jsonc
 cat ~/.config/waybar/style-$theme.css > ~/.config/waybar/style.css
