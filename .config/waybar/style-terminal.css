@@ -247,13 +247,13 @@
 }
 
 #custom-arrow8 {
-	font-size: 11pt;
+	font-size: 15pt;
 	color: @network;
 	background: @sound;
 }
 
 #custom-arrow9 {
-	font-size: 14pt;
+	font-size: 16pt;
 	color: @sound;
 	background: transparent;
 }
