@@ -193,12 +193,12 @@
 	margin-right: 5pt;
 }
 
-#clock.date {
+#idle_inhibitor {
 	background: @date;
 	color: @white;
 }
 
-#clock.time {
+#clock {
 	background: @time;
 	color: @black;
 }
