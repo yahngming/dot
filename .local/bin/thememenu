@@ -5,6 +5,8 @@ case "$MENU" in
 esac
 
 menu="\
+colorful\n\
+futuristic\n\
 modern\n\
 terminal\n\
 windows\n\
