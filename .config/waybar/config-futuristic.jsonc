@@ -10,56 +10,42 @@
 	"modules-left": [
 		"custom/ws",            // window icon
 		"custom/left1",
-
 		"hyprland/workspaces",  // workspaces
 		"custom/right1",
-
-		"custom/paddw",
-		"hyprland/window"       // window title
+		"custom/paddw"
 	],
 
 	"modules-center": [
 		"custom/paddc",
 		"custom/left2",
 		"temperature",          // temperature
-
 		"custom/left3",
 		"memory",               // memory
-
 		"custom/left4",
 		"cpu",                  // cpu
 		"custom/leftin1",
-
 		"custom/left5",
 		"custom/distro",        // distro icon
 		"custom/right2",
-
 		"custom/rightin1",
 		"idle_inhibitor",       // idle inhibitor
 		"clock#time",           // time
 		"custom/right3",
-
 		"clock#date",           // date
 		"custom/right4",
-
 		"network",              // wi-fi
 		"bluetooth",            // bluetooth
-		"custom/update",        // system update
 		"custom/right5"
 	],
 
 	"modules-right": [
 		"mpris",                // media info
-
 		"custom/left6",
 		"pulseaudio",           // output device
-
 		"custom/left7",
 		"backlight",            // brightness
-
 		"custom/left8",
 		"battery",              // battery
-
 		"custom/leftin2",
 		"custom/power"          // power button
 	],
@@ -269,10 +255,8 @@
 		"max-length": 8
 	},
 
-	"custom/wifi": {
-		"exec": "~/.config/waybar/scripts/wifi-status.sh",
-		"return-type": "json",
-		"format": "{}",
+	"network": {
+		"format": "󰖩",
 		"on-click": "wlanmenu",
 		"interval": 1,
 		"min-length": 1,
@@ -296,16 +280,6 @@
 			":: {device_alias}: 󱊣 {device_battery_percentage}%",
 		"on-click": "btmenu",
 		"interval": 1,
-		"min-length": 1,
-		"max-length": 1
-	},
-
-	"custom/update": {
-		"exec": "~/.config/waybar/scripts/system-update.sh",
-		"return-type": "json",
-		"format": "{}",
-		"on-click": "up",
-		"interval": 30,
 		"min-length": 1,
 		"max-length": 1
 	},
