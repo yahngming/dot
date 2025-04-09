@@ -35,14 +35,14 @@
 @define-color unfocused	@bg2;
 @define-color focused	@braqua;
 @define-color inactive	@purple;
+@define-color idle	@black;
 @define-color sound	@brpurple;
 @define-color network	@purple;
 @define-color memory	@braqua;
 @define-color cpu	@green;
 @define-color temp	@brgreen;
-@define-color layout	@bryellow;
 @define-color battery	@aqua;
-@define-color date	@black;
+@define-color date	@bryellow;
 @define-color time	@white;
 
 /* Reset all styles */
@@ -154,6 +154,15 @@
 	margin-left: 35pt;
 }
 
+#tray {
+	margin-right: 5pt;
+}
+
+#idle_inhibitor {
+	background: @idle;
+	color: @white;
+}
+
 #pulseaudio {
 	background: @sound;
 	color: @black;
@@ -179,26 +188,17 @@
 	color: @black;
 }
 
-#language {
-	background: @layout;
-	color: @black;
-}
-
 #battery {
 	background: @battery;
 	color: @white;
 }
 
-#tray {
-	margin-right: 5pt;
-}
-
-#idle_inhibitor {
+#clock.date {
 	background: @date;
-	color: @white;
+	color: @black;
 }
 
-#clock {
+#clock.time {
 	background: @time;
 	color: @black;
 }
@@ -206,12 +206,12 @@
 #custom-arrow1 {
 	font-size: 19pt;
 	color: @time;
-	background: @layout;
+	background: @date;
 }
 
 #custom-arrow2 {
 	font-size: 19pt;
-	color: @layout;
+	color: @date;
 	background: @battery;
 }
 
@@ -248,13 +248,13 @@
 #custom-arrow8 {
 	font-size: 19pt;
 	color: @sound;
-	background: @date;
+	background: @idle;
 }
 
 #custom-arrow9 {
 	font-size: 19pt;
-	color: @date;
-	background: @transparent;
+	color: @idle;
+	background: transparent;
 }
 
 #custom-arrow10 {
