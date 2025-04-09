@@ -11,6 +11,7 @@
 /* Styles */
 
 /* Colors (gruvbox) */
+@define-color dark	#282828e0;
 @define-color black	#282828;
 @define-color red	#cc241d;
 @define-color green	#98971a;
@@ -29,7 +30,7 @@
 @define-color white	#ebdbb2;
 @define-color bg2	#504945;
 
-
+@define-color bg 	@dark;
 @define-color warning 	@bryellow;
 @define-color critical	@red;
 @define-color mode	@black;
@@ -191,7 +192,7 @@
 }
 
 #tray {
-	background: @date;
+	background: @bg;
 }
 
 #clock.date {
