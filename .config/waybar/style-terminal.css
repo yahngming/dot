@@ -190,7 +190,7 @@
 }
 
 #tray {
-	background: @gray
+	background: @mode;
 }
 
 #clock.date {
