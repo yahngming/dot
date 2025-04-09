@@ -78,7 +78,7 @@
 		}
 	},
 
-	"sway/language": {
+	"hyprland/language": {
 		"format": " {}",
 		"min-length": 5,
 		"on-click": "swaymsg 'input * xkb_switch_layout next'",
@@ -104,18 +104,13 @@
 		"tooltip": false
 	},
 
-	"sway/mode": {
-		"format": "{}",
-		"tooltip": false
-	},
-
-	"sway/window": {
+	"hyprland/window": {
 		"format": "{}",
 		"max-length": 30,
 		"tooltip": false
 	},
 
-	"sway/workspaces": {
+	"hyprland/workspaces": {
 		"disable-scroll-wraparound": true,
 		"smooth-scrolling-threshold": 4,
 		"enable-bar-scroll": true,
