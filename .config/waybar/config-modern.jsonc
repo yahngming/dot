@@ -15,23 +15,22 @@
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
 			"default": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 		},
-		"tooltip-format": "{capacity}%",
-		"on-click": ""
+		"on-click": "",
+		"tooltip-format": "{capacity}%"
 	},
 
 	"bluetooth": {
 		"format": "",
 		"format-connected": "",
+		"on-click": "btmenu",
 		"tooltip-format": "{device_enumerate}",
-		"tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}%",
-		"on-click": "btmenu"
+		"tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}%"
 	},
 
 	"clock": {
 		"format": "{:%I:%M %p}",
 		"format-alt": "{:%H:%M UTC%Ez, %A, %B %d, %Y}",
 		"timezones": ["", "America/New_York", "America/Los_Angeles"],
-		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
 			"format": {
 				"today": "<b><u>{}</u></b>"
@@ -42,36 +41,37 @@
 			"on-click-forward": "tz_up",
 			"on-scroll-up": "shift_down",
 			"on-scroll-down": "shift_up"
-		}
+		},
+		"tooltip-format": "<tt>{calendar}</tt>"
 	},
 
 	"custom/power": {
 		"format": "",
-		"tooltip": false,
-		"on-click": "powermenu"
+		"on-click": "powermenu",
+		"tooltip": false
 	},
 
 	"custom/settings": {
 		"format": "",
-		"tooltip": false,
-		"on-click": "settings"
+		"on-click": "settings",
+		"tooltip": false
 	},
 
 	"custom/usb": {
 		"format": "{}",
-		"tooltip": false,
 		"interval": 3,
 		"exec": "printf '󰕓'",
 		"exec-if": "df | grep '/media/' > /dev/null",
-		"on-click": "usbmenu"
+		"on-click": "usbmenu",
+		"tooltip": false
 	},
 
 	"custom/weather": {
 		"format": "{}",
-		"tooltip": false,
 		"interval": 3600,
 		"exec": "curl wttr.in/?format=%C+%t",
-		"on-click": ""
+		"on-click": "",
+		"tooltip": false
 	},
 
 	"hyprland/workspaces": {
@@ -113,32 +113,32 @@
 		"format-ethernet": "󰈀",
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-		"tooltip-format": "󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}",
-		"on-click": "wlanmenu"
+		"on-click": "wlanmenu",
+		"tooltip-format": "󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}"
 	},
 
 	"pulseaudio": {
 		"format": "{icon}",
 		"format-muted": "",
 		"format-icons": ["", "", ""],
-		"tooltip-format": "{volume}%",
 		"on-click": "togglemute",
 		"on-scroll-up": "volup",
-		"on-scroll-down": "voldown"
+		"on-scroll-down": "voldown",
+		"tooltip-format": "{volume}%"
 	},
 
 	"temperature": {
 		"hwmon-path": ["/sys/class/thermal/thermal_zone0/temp"],
 		"format": "{temperatureC}",
-		"tooltip": false,
-		"on-click": "tui btop"
+		"on-click": "tui btop",
+		"tooltip": false
 	},
 
 	"temperature#gpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon7/temp1_input"],
 		"format": "{temperatureC}",
-		"tooltip": false,
-		"on-click": "tui btop"
+		"on-click": "tui btop",
+		"tooltip": false
 	},
 
 	"tray": {
