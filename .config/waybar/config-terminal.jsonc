@@ -4,28 +4,26 @@
 
 	"modules-left": [
 		"sway/mode",
-		"sway/workspaces",
+		"hyprland/workspaces",
 		"custom/arrow10",
 		"sway/window"
 	],
 
 	"modules-right": [
-		"custom/arrow9",
-		"pulseaudio",
-		"custom/arrow8",
-		"network",
-		"custom/arrow7",
-		"memory",
-		"custom/arrow6",
-		"cpu",
-		"custom/arrow5",
-		"temperature",
-		"custom/arrow4",
-		"battery",
-		"custom/arrow3",
-		"sway/language",
-		"custom/arrow2",
 		"tray",
+		"custom/arrow8",
+		"pulseaudio",
+		"custom/arrow7",
+		"network",
+		"custom/arrow6",
+		"memory",
+		"custom/arrow5",
+		"cpu",
+		"custom/arrow4",
+		"temperature",
+		"custom/arrow3",
+		"battery",
+		"custom/arrow2",
 		"clock#date",
 		"custom/arrow1",
 		"clock#time"
@@ -71,8 +69,8 @@
 	"cpu": {
 		"interval": 5,
 		"tooltip": false,
-		"format": " {usage}%",
-		"format-alt": " {load}",
+		"format": " {usage}%",
+		"format-alt": " {load}",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -88,7 +86,7 @@
 
 	"memory": {
 		"interval": 5,
-		"format": " {used:0.1f}G/{total:0.1f}G",
+		"format": " {used:0.1f}G/{total:0.1f}G",
 		"states": {
 			"warning": 70,
 			"critical": 90
