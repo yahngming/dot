@@ -1,4 +1,14 @@
 #!/bin/sh
 
-cat ~/.config/waybar/config-.jsonc > ~/.config/waybar/config.jsonc
-cat ~/.config/waybar/style-.css > ~/.config/waybar/style.css
+menu="\
+ lock\n\
+󰤄 sleep\n\
+󰗽 logout\n\
+ reboot\n\
+󰤆 shutdown\n\
+"
+
+$theme=$MENU
+
+cat ~/.config/waybar/config-$theme.jsonc > ~/.config/waybar/config.jsonc
+cat ~/.config/waybar/style-$theme.css > ~/.config/waybar/style.css
