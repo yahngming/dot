@@ -11,7 +11,7 @@
 	"modules-right": [
 		"tray",
 		"custom/arrow9",
-		"idle",
+		"idle_inhibitor",
 		"custom/arrow8",
 		"pulseaudio",
 		"custom/arrow7",
