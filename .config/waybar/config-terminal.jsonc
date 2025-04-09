@@ -11,26 +11,24 @@
 	"modules-right": [
 		"tray",
 		"custom/arrow9",
-		"pulseaudio",
+		"idle",
 		"custom/arrow8",
-		"network",
+		"pulseaudio",
 		"custom/arrow7",
-		"memory",
+		"network",
 		"custom/arrow6",
-		"cpu",
+		"memory",
 		"custom/arrow5",
-		"temperature",
+		"cpu",
 		"custom/arrow4",
-		"battery",
+		"temperature",
 		"custom/arrow3",
-		"hyprland/language",
+		"battery",
 		"custom/arrow2",
-		"clock#date",
+		"hyprland/language",
 		"custom/arrow1",
-		"clock#time"
+		"clock"
 	],
-
-	// Modules
 
 	"battery": {
 		"interval": 10,
@@ -54,17 +52,22 @@
 		"tooltip": false
 	},
 
-	"clock#time": {
-		"interval": 10,
-		"format": "{:%H:%M}",
-		"tooltip": false
-	},
-
-	"clock#date": {
-		"interval": 20,
-		"format": "{:%e %b %Y}",
-		"tooltip": false
-		//"tooltip-format": "{:%e %B %Y}"
+	"clock": {
+		"format": "{:%I:%M %p}",
+		"format-alt": "{:%H:%M UTC%Ez, %A, %B %d, %Y}",
+		"timezones": ["", "America/New_York", "America/Los_Angeles"],
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"format": {
+				"today": "<b><u>{}</u></b>"
+			}
+		},
+		"actions": {
+			"on-click-backward": "tz_down",
+			"on-click-forward": "tz_up",
+			"on-scroll-up": "shift_down",
+			"on-scroll-down": "shift_up"
+		}
 	},
 
 	"cpu": {
@@ -139,7 +142,7 @@
 	"temperature": {
 		"critical-threshold": 90,
 		"interval": 5,
-		"format": "{icon} {temperatureC}°",
+		"format": "{icon} {temperatureC}°C",
 		"format-icons": [
 			"",
 			"",
@@ -205,5 +208,3 @@
 		"tooltip": false
 	}
 }
-
-// vi:ft=jsonc
