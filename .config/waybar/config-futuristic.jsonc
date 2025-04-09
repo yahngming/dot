@@ -53,8 +53,8 @@
 	// <<--< Modules >-->>
 
 	"custom/ws": {
-		"format": " 󰍜 ",
-		"on-click": "thememenu",
+		"format": "  ",
+		"on-click": "settings",
 		"min-length": 3,
 		"max-length": 3
 	},
