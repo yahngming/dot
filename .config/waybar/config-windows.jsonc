@@ -29,12 +29,6 @@
 		"format-en": "ENG",
 		"format-cn": "CHI"
 	},
-	"hyprland/workspaces": {
-		"icon-size": 32,
-		"spacing": 16,
-		"on-scroll-up": "hyprctl dispatch workspace r+1",
-		"on-scroll-down": "hyprctl dispatch workspace r-1"
-	},
 	"custom/os_button": {
 		"format": "",
 		"on-click": "pkill $LAUNCHER || $LAUNCHER",
@@ -69,7 +63,7 @@
 	},
 	"wlr/taskbar": {
 		"format": "{icon} {title:.17}",
-		"icon-size": 28,
+		"icon-size": 24,
 		"spacing": 3,
 		"on-click-middle": "close",
 		"tooltip-format": "{title}",
@@ -152,6 +146,6 @@
 				""
 			]
 		},
-		"on-click": "pwvucontrol"
+		"on-click": "togglemute"
 	}
 }
