@@ -63,7 +63,7 @@
 	background: rgba(40, 40, 40, 0.8784313725); /* #282828e0 */
 	color: @white;
 	font-family: JetBrains Mono, Siji;
-	font-size: 10pt;
+	font-size: 12pt;
 	/*font-weight: bold;*/
 }
 
@@ -253,7 +253,7 @@
 }
 
 #custom-arrow9 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @sound;
 	background: transparent;
 }
