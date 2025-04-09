@@ -80,8 +80,7 @@
 
 	"hyprland/language": {
 		"format": " {}",
-		"min-length": 5,
-		"on-click": "swaymsg 'input * xkb_switch_layout next'",
+		"min-length": 10,
 		"tooltip": false
 	},
 
@@ -111,10 +110,13 @@
 	},
 
 	"hyprland/workspaces": {
-		"disable-scroll-wraparound": true,
-		"smooth-scrolling-threshold": 4,
-		"enable-bar-scroll": true,
-		"format": "{name}"
+		"all-outputs": true,
+		"format": "{name}",
+		"persistent-workspaces": {
+			"*": [ 1,2,3,4,5 ]
+		},
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1"
 	},
 
 	"pulseaudio": {
