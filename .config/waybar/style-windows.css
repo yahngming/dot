@@ -111,11 +111,10 @@ tooltip label{
 }
 
 #cpu, #disk, #memory, #temperature {
-	padding:3px;
+	padding:5px;
 }
 
 #temperature {
-	color: transparent;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #temperature.critical {
