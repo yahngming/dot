@@ -67,10 +67,8 @@
 	// <<--< Modules >-->>
 
 	"custom/ws": {
-		"exec": "~/.config/waybar/scripts/current-theme.sh",
-		"return-type": "json",
 		"format": " 󰍜 ",
-		"on-click": "~/.config/waybar/scripts/theme-switcher.sh",
+		"on-click": "thememenu",
 		"min-length": 3,
 		"max-length": 3
 	},
@@ -276,8 +274,7 @@
 		"exec": "~/.config/waybar/scripts/wifi-status.sh",
 		"return-type": "json",
 		"format": "{}",
-		"on-click": "~/.config/waybar/scripts/wifi-menu.sh",
-		"on-click-right": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
+		"on-click": "wlanmenu",
 		"interval": 1,
 		"min-length": 1,
 		"max-length": 1
@@ -300,8 +297,7 @@
 		"tooltip-format-enumerate-connected-battery": 
 			":: {device_alias}: 󱊣 {device_battery_percentage}%",
 
-		"on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
-		"on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
+		"on-click": "btmenu",
 		"interval": 1,
 		"min-length": 1,
 		"max-length": 1
@@ -311,7 +307,7 @@
 		"exec": "~/.config/waybar/scripts/system-update.sh",
 		"return-type": "json",
 		"format": "{}",
-		"on-click": "hyprctl dispatch exec '~/.config/waybar/scripts/system-update.sh up'",
+		"on-click": "up",
 		"interval": 30,
 		"min-length": 1,
 		"max-length": 1
@@ -347,9 +343,9 @@
 		},
 
 		"tooltip-format": "Device: {desc}",
-		"on-click": "~/.config/waybar/scripts/volume-control.sh -o m",
-		"on-scroll-up": "~/.config/waybar/scripts/volume-control.sh -o i",
-		"on-scroll-down": "~/.config/waybar/scripts/volume-control.sh -o d",
+		"on-click": "togglemute",
+		"on-scroll-up": "volup",
+		"on-scroll-down": "voldown",
 		"min-length": 6,
 		"max-length": 6
 	},
@@ -385,7 +381,7 @@
 		"format": " ",
 		"tooltip": false,
 		// "tooltip-format": "Power Menu",
-		"on-click": "~/.config/waybar/scripts/power-menu.sh"
+		"on-click": "powermenu"
 	},
 
 	// <<--< Padding >-->>
