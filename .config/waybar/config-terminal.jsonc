@@ -70,7 +70,8 @@
 			"on-click-forward": "tz_up",
 			"on-scroll-up": "shift_down",
 			"on-scroll-down": "shift_up"
-		}
+		},
+		"tooltip": false
 	},
 
 	"cpu": {
