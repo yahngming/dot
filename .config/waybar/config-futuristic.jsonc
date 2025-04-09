@@ -42,7 +42,7 @@
 		"clock#date",           // date
 		"custom/right4",
 
-		"custom/wifi",          // wi-fi
+		"network",              // wi-fi
 		"bluetooth",            // bluetooth
 		"custom/update",        // system update
 		"custom/right5"
