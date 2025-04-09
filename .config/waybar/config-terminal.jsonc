@@ -3,10 +3,9 @@
 	"position": "top",
 
 	"modules-left": [
-		"sway/mode",
 		"hyprland/workspaces",
 		"custom/arrow10",
-		"sway/window"
+		"hyprland/window"
 	],
 
 	"modules-right": [
