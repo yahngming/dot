@@ -76,6 +76,10 @@
 		}
 	},
 
+	"hyprland/window": {
+		"expand": true
+	},
+
 	"temperature": {
 		"critical-threshold": 90,
 		"interval": 5,
