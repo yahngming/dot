@@ -283,7 +283,7 @@ tooltip label {
 	margin-bottom: -2px;
 }
 
-/* Output Device */
+/* Volume */
 
 #custom-rightin1 {
 	color: @pulseaudio;
@@ -351,7 +351,7 @@ tooltip label {
 }
 #tray {
 	background: @tray;
-	padding-right: 5px;
+	padding-right: 10px;
 }
 #idle_inhibitor {
 	background: @tray;
@@ -369,8 +369,7 @@ tooltip label {
 }
 #network {
 	background: @tray;
-	padding-left: 5px;
-	padding-right: 8px;
+	padding-right: 5px;
 }
 #network:hover {
 	color: @hover-fg;
