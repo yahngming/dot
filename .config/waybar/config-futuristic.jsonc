@@ -172,7 +172,9 @@
 			"paused": "<span color='#b4befe'>\u200A\u200A󰏤\u2009\u2009</span>"
 		},
 		"tooltip-format": "Playing: {title} - {artist}",
-		"tooltip-format-paused": "Paused: {title} - {artist}"
+		"tooltip-format-paused": "Paused: {title} - {artist}",
+		"min-length": 6,
+		"max-length": 6
 	},
 
 	"tray": {
@@ -185,7 +187,9 @@
 			"activated": "󰴄",
 			"deactivated": "󰈈"
 		},
-		"start-activated": false
+		"start-activated": false,
+		"min-length": 1,
+		"max-length": 1
 	},
 
 	"bluetooth": {
@@ -215,7 +219,9 @@
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 		"on-click": "wlanmenu",
-		"tooltip-format": "󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}"
+		"tooltip-format": "󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}",
+		"min-length": 1,
+		"max-length": 1
 	},
 
 	"clock#date": {
@@ -238,8 +244,8 @@
 			"on-click": "mode",
 			"on-click-right": "mode"
 		},
-		"min-length": 8,
-		"max-length": 8
+		"min-length": 6,
+		"max-length": 6
 	},
 
 	"clock#time": {
@@ -253,7 +259,9 @@
 	"custom/power": {
 		"format": " ",
 		"tooltip": false,
-		"on-click": "powermenu"
+		"on-click": "powermenu",
+		"min-length": 1,
+		"max-length": 1
 	},
 
 	// <<--< Padding >-->>
