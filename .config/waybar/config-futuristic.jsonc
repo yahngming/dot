@@ -83,7 +83,7 @@
 	"temperature": {
 		"critical-threshold": 90,
 		"interval": 5,
-		"format": "{icon} {temperatureC}°C",
+		"format": "{icon} {temperatureC}°",
 		"format-icons": [
 			"",
 			"",
@@ -249,7 +249,7 @@
 	"clock#time": {
 		"format": "{:%I:%M %p}",
 		"tooltip": true,
-		"tooltip-format": "{:%H:%M UTC%Ez, %A}",
+		"tooltip-format": "{:%H:%M UTC%Ez}",
 		"min-length": 10,
 		"max-length": 10
 	},
