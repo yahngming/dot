@@ -42,7 +42,6 @@
 		"format-charging": " {capacity}% ({time})",
 		"format-charging-full": " {capacity}%",
 		"format-full": "{icon} {capacity}%",
-		"format-alt": "{icon} {power}W",
 		"format-icons": [
 			"",
 			"",
@@ -116,15 +115,14 @@
 		"interval": 5,
 		"format-wifi": " {essid} ({signalStrength}%)",
 		"format-ethernet": "󰈀 {ifname}",
-		"format-disconnected": "No connection",
-		"format-alt": "󰩟 {ipaddr}/{cidr}",
+		"format-disconnected": "󰌙 Disconnected",
 		"tooltip": false
 	},
 
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
 		"format-bluetooth": "{icon} {volume}%",
-		"format-muted": "",
+		"format-muted": " {volume}%",
 		"format-icons": {
 			"headphone": "",
 			"hands-free": "󱡏",
