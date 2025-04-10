@@ -173,8 +173,7 @@
 		},
 		"tooltip-format": "Playing: {title} - {artist}",
 		"tooltip-format-paused": "Paused: {title} - {artist}",
-		"min-length": 50,
-		"max-length": 50
+		"max-length": 30
 	},
 
 	"tray": {
@@ -187,9 +186,7 @@
 			"activated": "󰴄",
 			"deactivated": "󰈈"
 		},
-		"start-activated": false,
-		"min-length": 1,
-		"max-length": 1
+		"start-activated": false
 	},
 
 	"bluetooth": {
@@ -208,9 +205,7 @@
 		"tooltip-format-enumerate-connected-battery": 
 			":: {device_alias}: 󱊣 {device_battery_percentage}%",
 		"on-click": "btmenu",
-		"interval": 1,
-		"min-length": 1,
-		"max-length": 1
+		"interval": 1
 	},
 
 	"network": {
@@ -219,9 +214,7 @@
 		"format-disconnected": "󰤮",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 		"on-click": "wlanmenu",
-		"tooltip-format": "󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}",
-		"min-length": 1,
-		"max-length": 1
+		"tooltip-format": "󰕒 {bandwidthUpBytes}  󰇚 {bandwidthDownBytes}"
 	},
 
 	"clock#date": {
@@ -259,9 +252,7 @@
 	"custom/power": {
 		"format": " ",
 		"tooltip": false,
-		"on-click": "powermenu",
-		"min-length": 1,
-		"max-length": 1
+		"on-click": "powermenu"
 	},
 
 	// <<--< Padding >-->>
