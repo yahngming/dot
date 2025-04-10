@@ -291,6 +291,8 @@ tooltip label {
 }
 #pulseaudio {
 	background: @pulseaudio;
+	margin-left: -2px;
+	padding: 0 3px 0 0;
 }
 #pulseaudio:hover {
 	color: @hover-fg;
@@ -355,21 +357,18 @@ tooltip label {
 }
 #idle_inhibitor {
 	background: @tray;
-	padding-right: 5px;
 }
 #idle_inhibitor:hover {
 	color: @hover-fg;
 }
 #bluetooth {
 	background: @tray;
-	padding-right: 5px;
 }
 #bluetooth:hover {
 	color: @hover-fg;
 }
 #network {
 	background: @tray;
-	padding-right: 5px;
 }
 #network:hover {
 	color: @hover-fg;
@@ -405,7 +404,7 @@ tooltip label {
 }
 #clock.time {
 	background: @time;
-	margin-left: -2px;
+	margin-left: 2px;
 	padding: 0 3px 0 0;
 }
 
