@@ -167,7 +167,7 @@ tooltip label {
 #custom-left6,
 #custom-left7,
 #custom-left8 {
-	margin-bottom: -1px;
+	margin-bottom: 0px;
 	text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -176,7 +176,7 @@ tooltip label {
 #custom-right3,
 #custom-right4,
 #custom-right5 {
-	margin-bottom: -1px;
+	margin-bottom: 0px;
 	padding-right: 3px;
 	text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
 }
@@ -495,7 +495,7 @@ tooltip label {
 /* distro arrows override */
 #custom-left5,
 #custom-right2 {
-	font-size: 23px;
+	font-size: 23.5px;
 }
 
 /*
