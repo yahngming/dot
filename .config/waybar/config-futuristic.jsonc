@@ -13,7 +13,8 @@
 		"custom/left1",
 		"hyprland/workspaces",  // workspaces
 		"custom/right1",
-		"custom/paddw"
+		"custom/paddw",
+		"hyprland/window"       // window title
 	],
 
 	"modules-center": [
@@ -29,24 +30,24 @@
 		"custom/distro",        // distro icon
 		"custom/right2",
 		"custom/rightin1",
-		"idle_inhibitor",       // idle inhibitor
-		"clock#time",           // time
+		"pulseaudio",           // output device
 		"custom/right3",
-		"clock#date",           // date
+		"backlight",            // brightness
 		"custom/right4",
-		"network",              // wi-fi
-		"bluetooth",            // bluetooth
+		"battery",              // battery
 		"custom/right5"
 	],
 
 	"modules-right": [
 		"mpris",                // media info
 		"custom/left6",
-		"pulseaudio",           // output device
+		"idle_inhibitor",       // idle inhibitor
+		"bluetooth",            // bluetooth
+		"network",              // wi-fi
 		"custom/left7",
-		"backlight",            // brightness
+		"clock#date",           // date
 		"custom/left8",
-		"battery",              // battery
+		"clock#time",           // time
 		"custom/leftin2",
 		"custom/power"          // power button
 	],
