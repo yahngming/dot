@@ -173,7 +173,7 @@
 
 	"tray": {
 		"spacing": 5
-	}
+	},
 
 	"idle_inhibitor": {
 		"format": "{icon}",
