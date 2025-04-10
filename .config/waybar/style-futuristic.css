@@ -460,7 +460,7 @@ tooltip label {
 
 /* modules */
 * {
-	font-size: 14px;
+	font-size: 10px;
 }
 
 /* left and right arrows */
@@ -477,25 +477,25 @@ tooltip label {
 #custom-right3,
 #custom-right4,
 #custom-right5 {
-	font-size: 21.5px;
+	font-size: 14.68px;
 }
 
 /* left and right inverse */
 #custom-leftin1,
 #custom-leftin2,
 #custom-rightin1 {
-	font-size: 22.5px;
+	font-size: 15.5px;
 }
 
 /* distro icon */
 #custom-distro {
-	font-size: 21px;
+	font-size: 14.6px;
 }
 
 /* distro arrows override */
 #custom-left5,
 #custom-right2 {
-	font-size: 23.5px;
+	font-size: 15.68px;
 }
 
 /*
