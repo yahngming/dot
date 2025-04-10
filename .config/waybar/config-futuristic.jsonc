@@ -35,11 +35,13 @@
 		"backlight",            // brightness
 		"custom/right4",
 		"battery",              // battery
-		"custom/right5"
+		"custom/right5",
+		"custom/paddc"
 	],
 
 	"modules-right": [
 		"mpris",                // media info
+		"custom/paddw",
 		"custom/left6",
 		"tray",                 // tray
 		"idle_inhibitor",       // idle inhibitor
