@@ -1,4 +1,5 @@
 {
+
 	"layer": "bottom",
 	"position": "bottom",
 	"mod": "dock",
@@ -7,6 +8,7 @@
 	"margin-bottom": -1,
 	"passthrough": false,
 	"height": 41,
+
 	"modules-left": [
 		"custom/os_button",
 		"wlr/taskbar"
@@ -24,6 +26,7 @@
 		"hyprland/language",
 		"clock"
 	],
+
 	"hyprland/language": {
 		"format": "{}",
 		"format-en": "ENG",
@@ -148,4 +151,5 @@
 		},
 		"on-click": "togglemute"
 	}
+
 }
