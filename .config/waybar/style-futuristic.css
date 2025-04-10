@@ -143,15 +143,15 @@ tooltip label {
 #temperature,
 #memory,
 #cpu,
-#idle_inhibitor,
-#clock,
-#network,
-#bluetooth,
-#custom-update,
-#mpris,
 #pulseaudio,
 #backlight,
 #battery,
+#mpris,
+#idle_inhibitor,
+#bluetooth,
+#network,
+#clock,
+#custom-update,
 #custom-power {
 	opacity: 1;
 	color: @module-fg;
@@ -349,7 +349,7 @@ tooltip label {
 	padding-left: 3px;
 }
 #idle_inhibitor {
-	background: @time;
+	background: @tray;
 	padding: 0 0 0 7px;
 }
 #idle_inhibitor:hover {
