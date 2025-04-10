@@ -47,7 +47,7 @@
 @define-color active-fg       @crust;
 
 @define-color hover-bg        @surface0;
-@define-color hover-fg        alpha(@text, 0.75);
+@define-color         alpha(@text, 0.75);
 
 /* Module Colors */
 
@@ -268,6 +268,9 @@ tooltip label {
 #cpu {
 	background: @cpu;
 }
+#cpu:hover {
+	color: @hover-fg;
+}
 #custom-leftin1 {
 	color: @cpu;
 	margin-bottom: -1px;
@@ -288,6 +291,9 @@ tooltip label {
 	margin: 0 -1px -2px 0;
 	padding: 0 0 0 3px;
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+}
+#custom-distro:hover {
+	color: @hover-fg;
 }
 #custom-right2 {
 	color: @distro-bg;
@@ -404,9 +410,6 @@ tooltip label {
 }
 #clock.date {
 	background: @date;
-}
-#clock.date:hover {
-	color: @hover-fg;
 }
 
 /* Time */
