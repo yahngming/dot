@@ -247,7 +247,7 @@
 	},
 
 	"clock#time": {
-		"format": "{:%H:%M}",
+		"format": "{:%I:%M%p}",
 		"tooltip": true,
 		"tooltip-format": "{:%H:%M UTC%Ez, %A}",
 		"min-length": 6,
