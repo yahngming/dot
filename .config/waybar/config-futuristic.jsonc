@@ -77,7 +77,7 @@
 	},
 
 	"hyprland/window": {
-		"expand": true
+		"max-length": 35
 	},
 
 	"temperature": {
