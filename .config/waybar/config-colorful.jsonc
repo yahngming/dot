@@ -28,8 +28,7 @@
 		"format": "",
 		"format-alt": "{}<span color='orange'>[{time}]</span>",
 		"tooltip": true,
-		"tooltip-spacing": 20,
-		"on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
+		"tooltip-spacing": 20
 	},
 
 	"upower#headset": {
@@ -53,6 +52,7 @@
 	"custom/smallspacer":{
 		"format": " ",
 	},
+
 	"memory": {
 		"interval": 1,
 		"rotate": 270,
@@ -60,13 +60,13 @@
 		"format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
 		"max-length": 10
 	},
+
 	"cpu": {
 		"interval": 1,
 		"format": "{icon}",
 		"rotate": 270,
 		"format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
 	},
-
 
 	"mpris": {
 		"format": "{player_icon} {dynamic}",
@@ -81,6 +81,7 @@
 		},
 		// "ignored-players": ["firefox"]
 	},
+
 	"tray": {
 		"icon-size": 16,
 		"rotate": 0,
@@ -130,6 +131,7 @@
 		"max-length": 120,
 		"icon": false,
 		"icon-size": 13,
+		"tooltip": false
 	},
 
 	"custom/power": {
@@ -156,12 +158,13 @@
 
 	"wlr/workspaces": {
 		"persistent-workspaces": {
+			"1": [], // Always show a workspace with name '1', on all outputs if it does not exists
+			"2": [], // Always show a workspace with name '2', on all outputs if it does not exists
 			"3": [], // Always show a workspace with name '3', on all outputs if it does not exists
 			"4": ["eDP-1"], // Always show a workspace with name '4', on output 'eDP-1' if it does not exists
 			"5": ["eDP-1", "DP-2"] // Always show a workspace with name '5', on outputs 'eDP-1' and 'DP-2' if it does not exists
 		}
 	},
-
 
 	"cava": {
 		"cava_config": "~/.config/cava/config",
@@ -186,7 +189,7 @@
 	},
 	
 	"custom/script": {
-		"on-click": "~/.config/waybar/volume.sh toggle",
+		"on-click": "togglemute",
 		"format": ""
 	},
 
@@ -217,8 +220,8 @@
 		"rotate": 0,
 		"exec": "echo ; echo 󰟡 pick color",
 		"on-click": "hyprpicker",
-		"on-click-right": "themeswitch.sh -p",
-		"on-click-middle": "sleep 0.1 && themeselect.sh",
+		"on-click-right": "thememenu",
+		"on-click-middle": "sleep 0.1 && thememenu",
 		"interval": 86400, // once every day
 		"tooltip": true
 	},
@@ -227,11 +230,7 @@
 		"format": "{}",
 		"rotate": 0,
 		"exec": "echo ; echo 󰆊 switch wallpaper",
-		"on-click": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/skyway.jpg",
-		"on-click-right": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/cloud.png",
-		"on-click-middle": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/gradient.jpg",
-		"on-scroll-up": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/torvalds.png",
-		"on-scroll-down": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/night.png",
+		"on-click": "wallpaper",
 		"interval" : 86400, // once every day
 		"tooltip": true
 	},
@@ -309,7 +308,6 @@
 			"on-scroll-down": "shift_down"
 		}
 	},
-
 
 	"battery": {
 		"states": {
@@ -505,4 +503,5 @@
 		"device": "pulseaudio",
 		"scroll-step": 1,
 	},
+
 }
