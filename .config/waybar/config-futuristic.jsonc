@@ -85,7 +85,9 @@
 			"",
 			""
 		],
-		"tooltip": false
+		"tooltip": false,
+		"min-length": 6,
+		"max-length": 6
 	},
 
 	"memory": {
@@ -99,8 +101,8 @@
 		"tooltip": true,
 		"tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
 		"interval": 5,
-		"min-length": 7,
-		"max-length": 7
+		"min-length": 6,
+		"max-length": 6
 	},
 
 	"cpu": {
