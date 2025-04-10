@@ -112,7 +112,7 @@
 	},
 
 	"custom/distro": {
-		"format": "",
+		"format": " ",
 		"on-click": "pkill $LAUNCHER || $LAUNCHER",
 		"tooltip": false
 	},
@@ -178,8 +178,8 @@
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
-			"activated": "󰴄 ",
-			"deactivated": "󰈈 "
+			"activated": "󰴄",
+			"deactivated": "󰈈"
 		},
 		"start-activated": false
 	},
