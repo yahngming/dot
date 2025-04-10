@@ -53,8 +53,8 @@
 	// <<--< Modules >-->>
 
 	"custom/ws": {
-		"format": " 󰍜 ",
-		"on-click": "pkill $LAUNCHER || $LAUNCHER",
+		"format": "  ",
+		"on-click": "settings",
 		"min-length": 3,
 		"max-length": 3
 	},
@@ -110,6 +110,7 @@
 
 	"custom/distro": {
 		"format": " ",
+		"on-click": "pkill $LAUNCHER || $LAUNCHER",
 		"tooltip": false
 	},
 
