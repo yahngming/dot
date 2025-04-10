@@ -161,8 +161,8 @@
 		"tooltip-format": "Discharging: {time}",
 		"tooltip-format-charging": "Charging: {time}",
 		"interval": 1,
-		"min-length": 6,
-		"max-length": 6
+		"min-length": 7,
+		"max-length": 7
 	},
 
 	"mpris": {
@@ -247,11 +247,11 @@
 	},
 
 	"clock#time": {
-		"format": "{:%I:%M%p}",
+		"format": "{:%I:%M %p}",
 		"tooltip": true,
 		"tooltip-format": "{:%H:%M UTC%Ez, %A}",
-		"min-length": 6,
-		"max-length": 6
+		"min-length": 8,
+		"max-length": 8
 	},
 
 	"custom/power": {
