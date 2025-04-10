@@ -147,6 +147,7 @@ tooltip label {
 #backlight,
 #battery,
 #mpris,
+#tray,
 #idle_inhibitor,
 #bluetooth,
 #network,
@@ -348,33 +349,35 @@ tooltip label {
 	background: @main-bg;
 	padding-left: 3px;
 }
+#tray {
+	background: @tray;
+	padding-right: 5px;
+}
 #idle_inhibitor {
 	background: @tray;
-	padding: 0 0 0 7px;
+	padding-right: 5px;
 }
 #idle_inhibitor:hover {
 	color: @hover-fg;
 }
-#network {
-	padding-left: 5px;
-	padding-right: 8px;
-	background: @tray;
-}
-#network:hover {
-	color: @hover-fg;
-}
-
 #bluetooth {
-	padding-right: 5px;
 	background: @tray;
+	padding-right: 5px;
 }
 #bluetooth:hover {
 	color: @hover-fg;
 }
-
-#custom-update {
-	padding-right: 8px;
+#network {
 	background: @tray;
+	padding-left: 5px;
+	padding-right: 8px;
+}
+#network:hover {
+	color: @hover-fg;
+}
+#custom-update {
+	background: @tray;
+	padding-right: 8px;
 }
 #custom-update:hover {
 	color: @hover-fg;
