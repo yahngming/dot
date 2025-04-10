@@ -215,7 +215,7 @@
 	},
 
 	"clock#date": {
-		"format": "󰨳 {:%b-%d}",
+		"format": "{:%b %d}",
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
 			"mode": "month",
