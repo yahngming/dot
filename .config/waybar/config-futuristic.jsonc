@@ -53,8 +53,8 @@
 	// <<--< Modules >-->>
 
 	"custom/ws": {
-		"format": "  ",
-		"on-click": "settings",
+		"format": " 󰍜 ",
+		"on-click": "pkill $LAUNCHER || $LAUNCHER",
 		"min-length": 3,
 		"max-length": 3
 	},
@@ -68,105 +68,6 @@
 			"3": [],
 			"4": [],
 			"5": []
-		}
-	},
-
-	"hyprland/window": {
-		"format": "{}",
-		"tooltip": false,
-		"min-length": 5,
-
-		"rewrite": {
-			// Desktop
-			"": 
-				"<span foreground='#89b4fa'> </span> Hyprland",
-
-			// Terminal
-			"~": "  Terminal",
-			"zsh": "  Terminal",
-			"kitty": "  Terminal",
-
-			"tmux(.*)": 
-				"<span foreground='#a6e3a1'> </span> Tmux",
-
-			// Browser
-
-			"(.*)Mozilla Firefox": 
-				"<span foreground='#f38ba8'>󰈹 </span> Firefox",
-			"(.*) — Mozilla Firefox": 
-				"<span foreground='#f38ba8'>󰈹 </span> $1",
-
-			"(.*)Zen Browser": 
-				"<span foreground='#fab387'>󰺕 </span> Zen Browser",
-			"(.*) — Zen Browser": 
-				"<span foreground='#fab387'>󰺕 </span> $1",
-
-			// Development
-
-			"(.*) - Visual Studio Code": 
-				"<span foreground='#89b4fa'>󰨞 </span> $1",
-			"(.*)Visual Studio Code": 
-				"<span foreground='#89b4fa'>󰨞 </span> Visual Studio Code",
-
-			"nvim": 
-				"<span foreground='#a6e3a1'> </span> Neovim",
-			"nvim (.*)": 
-				"<span foreground='#a6e3a1'> </span> $1",
-
-			"vim": 
-				"<span foreground='#a6e3a1'> </span> Vim",
-			"vim (.*)": 
-				"<span foreground='#a6e3a1'> </span> $1",
-
-			// Media
-
-			"(.*)Spotify": 
-				"<span foreground='#a6e3a1'> </span> Spotify",
-			"(.*)Spotify Premium": 
-				"<span foreground='#a6e3a1'> </span> Spotify Premium",
-
-			"OBS(.*)": 
-				"<span foreground='#a6adc8'> </span> OBS Studio",
-
-			"VLC media player": 
-				"<span foreground='#fab387'>󰕼 </span> VLC Media Player",
-			"(.*) - VLC media player": 
-				"<span foreground='#fab387'>󰕼 </span> $1",
-
-			"(.*) - mpv": 
-				"<span foreground='#cba6f7'> </span> $1",
-
-			"qView": "  qView",
-
-			"(.*).jpg": "  $1.jpg",
-			"(.*).png": "  $1.png",
-			"(.*).svg": "  $1.svg",
-
-			// Social
-
-			"vesktop": 
-				"<span foreground='#89b4fa'> </span> Discord",
-
-			"• Discord(.*)": "Discord$1",
-			"(.*)Discord(.*)": 
-				"<span foreground='#89b4fa'> </span> $1Discord$2",
-
-			// Documents
-
-			"ONLYOFFICE Desktop Editors": 
-				"<span foreground='#f38ba8'> </span> OnlyOffice Desktop",
-
-			"(.*).docx": 
-				"<span foreground='#89b4fa'> </span> $1.docx",
-			"(.*).xlsx": 
-				"<span foreground='#a6e3a1'> </span> $1.xlsx",
-			"(.*).pptx": 
-				"<span foreground='#fab387'> </span> $1.pptx",
-			"(.*).pdf": 
-				"<span foreground='#f38ba8'> </span> $1.pdf",
-
-			// System
-			"Authenticate": "  Authenticate"
 		}
 	},
 
@@ -190,17 +91,17 @@
 			"critical": 90
 		},
 
-		"format": "󰘚 {percentage}%",
+		"format": " {percentage}%",
 		"format-critical": "󰀦 {percentage}%",
-		"tooltip": false,
-		// "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
+		"tooltip": true,
+		"tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
 		"interval": 5,
 		"min-length": 7,
 		"max-length": 7
 	},
 
 	"cpu": {
-		"format": "󰻠 {usage}%",
+		"format": " {usage}%",
 		"tooltip": false,
 		"interval": 5,
 		"min-length": 6,
@@ -215,18 +116,16 @@
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
-			"activated": "󰈈 ",
-			"deactivated": "󰈉 "
+			"activated": "󰴄 ",
+			"deactivated": "󰈈 "
 		},
-		"tooltip-format-activated": "Presentation Mode",
-		"tooltip-format-deactivated": "Idle Mode",
 		"start-activated": false
 	},
 
 	"clock#time": {
 		"format": "{:%H:%M}",
-		"tooltip": false,
-		// "tooltip-format": "Standard Time: {:%I:%M %p}",
+		"tooltip": true,
+		"tooltip-format": "Standard Time: {:%I:%M %p}",
 		"min-length": 6,
 		"max-length": 6
 	},
@@ -291,7 +190,7 @@
 		"player-icons": {
 			"default": "󰝚 ",
 			"spotify": "<span foreground='#a6e3a1'>󰓇 </span>",
-			"firefox": "<span foreground='#f38ba8'>󰗃 </span>"
+			"youtube": "<span foreground='#f38ba8'>󰗃 </span>"
 		},
 		"status-icons": {
 			"paused": "<span color='#b4befe'>\u200A\u200A󰏤\u2009\u2009</span>"
@@ -344,7 +243,6 @@
 	"custom/power": {
 		"format": " ",
 		"tooltip": false,
-		// "tooltip-format": "Power Menu",
 		"on-click": "powermenu"
 	},
 
