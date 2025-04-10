@@ -167,7 +167,7 @@ tooltip label {
 #custom-left6,
 #custom-left7,
 #custom-left8 {
-	margin-bottom: 0;
+	margin-bottom: -1px;
 	text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -176,7 +176,7 @@ tooltip label {
 #custom-right3,
 #custom-right4,
 #custom-right5 {
-	margin-bottom: 0;
+	margin-bottom: -1px;
 	padding-right: 3px;
 	text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
 }
