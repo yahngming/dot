@@ -173,7 +173,7 @@
 		},
 		"tooltip-format": "Playing: {title} - {artist}",
 		"tooltip-format-paused": "Paused: {title} - {artist}",
-		"max-length": 30
+		"expand": true
 	},
 
 	"tray": {
