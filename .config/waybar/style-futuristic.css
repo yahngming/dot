@@ -47,7 +47,7 @@
 @define-color active-fg       @crust;
 
 @define-color hover-bg        @surface0;
-@define-color         alpha(@text, 0.75);
+@define-color hover-fg        alpha(@text, 0.75);
 
 /* Module Colors */
 
