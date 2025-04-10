@@ -171,6 +171,10 @@
 		"tooltip-format-paused": "Paused: {title} - {artist}"
 	},
 
+	"tray": {
+		"spacing": 5
+	}
+
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
