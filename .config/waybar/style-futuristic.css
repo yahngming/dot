@@ -225,7 +225,7 @@ tooltip label {
 /* Temperature */
 
 #custom-paddc {
-	padding-right: 22px;
+	padding-left: 22px;
 }
 #custom-left2 {
 	color: @cpuinfo;
@@ -345,7 +345,7 @@ tooltip label {
 /* Media Info */
 
 #custom-paddc {
-	padding-left: 22px;
+	padding-right: 22px;
 }
 #mpris {
 	font-weight: normal;
