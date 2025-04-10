@@ -58,8 +58,8 @@
 	// <<--< Modules >-->>
 
 	"custom/ws": {
-		"format": "  ",
-		"on-click": "settings",
+		"format": "  ",
+		"on-click": "pkill $LAUNCHER || $LAUNCHER",
 		"min-length": 3,
 		"max-length": 3
 	},
@@ -115,13 +115,14 @@
 		"format": " {usage}%",
 		"tooltip": false,
 		"interval": 5,
+		"on-click": "tui btop",
 		"min-length": 6,
 		"max-length": 6
 	},
 
 	"custom/distro": {
 		"format": " ",
-		"on-click": "pkill $LAUNCHER || $LAUNCHER",
+		"on-click": "",
 		"tooltip": false
 	},
 
