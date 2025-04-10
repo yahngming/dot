@@ -250,8 +250,8 @@
 		"format": "{:%I:%M %p}",
 		"tooltip": true,
 		"tooltip-format": "{:%H:%M UTC%Ez, %A}",
-		"min-length": 8,
-		"max-length": 8
+		"min-length": 10,
+		"max-length": 10
 	},
 
 	"custom/power": {
