@@ -502,6 +502,6 @@
 		"rotate": 0,
 		"device": "pulseaudio",
 		"scroll-step": 1,
-	},
+	}
 
 }
