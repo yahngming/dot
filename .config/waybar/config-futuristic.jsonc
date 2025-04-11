@@ -82,13 +82,13 @@
 		"max-length": 35,
 		"tooltip-format": "{title}",
 		"rewrite": {
-			"(.*)@(.*):(.*)": "<span foreground='#a6e3a1'> </span> $3",
+			"(.*)@(.*):(.*)": "<span foreground='#90ee90'> </span> $3",
 			"(.*) Google Chrome": "<span foreground='#4c8bf5'> </span> $1 Chrome",
 			"(.*) LibreOffice Calc": "<span foreground='#217346'> </span> $1 Excel",
 			"(.*) LibreOffice Impress": "<span foreground='#d24726'> </span> $1 PowerPoint",
 			"(.*) LibreOffice Writer": "<span foreground='#2b579a'> </span> $1 Word",
-			"aerc": "<span foreground='#0072c6'>󰇮 </span> aerc",
-			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
+			"aerc": "<span foreground='#d44638'>󰇮 </span> aerc",
+			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
 			"Steam": "<span foreground='#2a475e'> </span> Steam"
 		}
 	},
