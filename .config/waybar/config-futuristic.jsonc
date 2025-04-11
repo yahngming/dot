@@ -86,10 +86,10 @@
 			"(.*) Google Chrome": "<span foreground='#4c8bf5'> </span> $1 Chrome",
 			"(.*) LibreOffice Calc": "<span foreground='#217346'> </span> $1 Excel",
 			"(.*) LibreOffice Impress": "<span foreground='#d24726'> </span> $1 PowerPoint",
-			"(.*) LibreOffice Writer": "<span foreground='#2b579a'> </span> $1 Word"
+			"(.*) LibreOffice Writer": "<span foreground='#2b579a'> </span> $1 Word",
 			"aerc": "<span foreground='#0072c6'>󰇮 </span> aerc",
 			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
-			"Steam": "<span foreground='#66c0f4'> </span> Steam",
+			"Steam": "<span foreground='#66c0f4'> </span> Steam"
 		}
 	},
 
