@@ -48,6 +48,7 @@
 @define-color active-fg       @bg;
 @define-color hover-fg        alpha(@fg, 0.75);
 @define-color module-fg       @fg;
+@define-color distro-fg       @gg;
 @define-color charging        @fg;
 
 * {
