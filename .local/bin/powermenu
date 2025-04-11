@@ -1,5 +1,7 @@
 #!/bin/sh
 
+pkill $LAUNCHER && exit
+
 menu="\
  lock\n\
 󰤄 sleep\n\
