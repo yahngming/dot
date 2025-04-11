@@ -1,8 +1,4 @@
 @import '../../.cache/wal/colors-waybar.css';
-
-@define-color fg              @foreground;
-@define-color bg              @background;
-
 @import '../../.config/wal/colorschemes/catppuccin-mocha.css';
 
 /* Main Colors */
