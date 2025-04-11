@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case "$MENU" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+catppuccin-latte\n\
+catppuccin-mocha\n\
+"
+
+color=$(printf "$menu" | $MENU $opt -p "Select colorscheme:" "$@")
+
+if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$color.css ]; then
+	cat ~/.config/wal/colorschemes/$color.css > ~/.config/waybar/color.css
+fi
