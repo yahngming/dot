@@ -97,6 +97,7 @@
 		"format": "{icon} {temperatureC}°",
 		"format-icons": ["", "", "", "", ""],
 		"tooltip": false,
+		"warning-threshold": 70,
 		"critical-threshold": 90,
 		"interval": 5,
 		"min-length": 6,
