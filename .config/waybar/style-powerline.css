@@ -24,13 +24,13 @@
 @define-color cpu             @surface0;
 @define-color distro-fg       @black;
 @define-color distro-bg       @overlay2;
-@define-color time            @surface0;
-@define-color date            @base;
-@define-color tray            @mantle;
-
-@define-color pulseaudio      @mantle;
+@define-color pulseaudio      @surface0;
 @define-color backlight       @base;
-@define-color battery         @surface0;
+@define-color battery         @mantle;
+
+@define-color tray            @mantle;
+@define-color date            @base;
+@define-color time            @surface0;
 @define-color power           @overlay2;
 
 /* State Colors */
