@@ -84,7 +84,7 @@
 		"rewrite": {
 			"(.*)@(.*):(.*)": "<span foreground='#a6e3a1'> </span> Terminal",
 			"aerc": "<span foreground='#0072c6'>󰇮 </span> aerc",
-			"cmus": "<span foreground='#1db954'>󰥠 </span> cmus",
+			"cmus v(.*)": "<span foreground='#1db954'>󰥠 </span> cmus",
 			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
 			"Steam": "<span foreground='#66c0f4'> </span> Steam",
 			"(.*)Google Chrome": "<span foreground='#4c8bf5'> </span> $1",
