@@ -239,6 +239,12 @@ tooltip label {
 	padding-left: 1px;
 	padding-right: 0;
 }
+#temperature.warning {
+	color: @warning;
+}
+#temperature.critical {
+	color: @critical;
+}
 
 /* Memory */
 
