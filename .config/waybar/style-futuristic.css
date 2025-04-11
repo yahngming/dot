@@ -317,6 +317,7 @@ tooltip label {
 }
 #pulseaudio {
 	background: @pulseaudio;
+	padding-right: -1px;
 }
 #pulseaudio:hover {
 	color: @hover-fg;
@@ -324,7 +325,6 @@ tooltip label {
 #custom-right3 {
 	color: @pulseaudio;
 	background: @backlight;
-	margin-left: -1px;
 }
 
 /* Brightness */
