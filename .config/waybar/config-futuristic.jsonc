@@ -81,16 +81,14 @@
 	"hyprland/window": {
 		"max-length": 35,
 		"rewrite": {
-			"aerc(.*)": "<span foreground='#89b4fa'>󰇮 </span> $1",
-			"cmus(.*)": "<span foreground='#a6e3a1'>󰥠 </span> $1",
-			"foot": "<span foreground='#a6e3a1'> </span> $1",
-			"LibreOffice": "<span foreground='#f38ba8'>󰏆 </span> $1",
-			"Steam": "<span foreground='#2a475e'> </span> $1",
+			"aerc(.*)": "<span foreground='#89b4fa'>󰇮 </span> aerc",
+			"cmus(.*)": "<span foreground='#a6e3a1'>󰥠 </span> cmus",
+			"foot": "<span foreground='#a6e3a1'> </span> foot",
+			"Steam": "<span foreground='#2a475e'> </span> Steam",
 			"(.*)Google Chrome": "<span foreground='#f38ba8'> </span> $1",
-			"(.*)LibreOffice Writer": "<span foreground='#2b579a'> </span> $1",
-			"(.*)LibreOffice Calc": "<span foreground='#217346'> </span> $1",
-			"(.*)LibreOffice Impress": "<span foreground='#d24726'> </span> $1",
-			"(.*)LibreOffice Drawer": "<span foreground='#f38ba8'> </span> $1"
+			"(.*)LibreOffice Writer": "<span foreground='#2b579a'> </span> $1 Word",
+			"(.*)LibreOffice Calc": "<span foreground='#217346'> </span> $1 Excel",
+			"(.*)LibreOffice Impress": "<span foreground='#d24726'> </span> $1 Powerpoint"
 		}
 	},
 
