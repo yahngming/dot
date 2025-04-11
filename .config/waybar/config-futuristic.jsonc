@@ -119,7 +119,7 @@
 	"custom/distro": {
 		"format": " ",
 		"tooltip": false,
-		"on-click": ""
+		"on-click": "wallpaper"
 	},
 
 	"pulseaudio": {
