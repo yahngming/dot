@@ -81,9 +81,16 @@
 	"hyprland/window": {
 		"max-length": 35,
 		"rewrite": {
-			"(.*) - Google Chrome": " $1",
-			"(.*) - Mozilla Firefox": "󰈹 $1",
-			"(.*)~": " $1"
+			"aerc(.*)": "<span foreground='#89b4fa'>󰇮 </span> $1",
+			"cmus(.*)": "<span foreground='#a6e3a1'>󰥠 </span> $1",
+			"foot": "<span foreground='#a6e3a1'> </span> $1",
+			"LibreOffice": "<span foreground='#f38ba8'>󰏆 </span> $1",
+			"vim(.*)": "<span foreground='#a6e3a1'> </span> $1",
+			"(.*)Google Chrome": "<span foreground='#f38ba8'> </span> $1",
+			"(.*)LibreOffice Writer": "<span foreground='#89b4fa'> </span> $1",
+			"(.*)LibreOffice Calc": "<span foreground='#a6e3a1'> </span> $1",
+			"(.*)LibreOffice Impress": "<span foreground='#fab387'> </span> $1",
+			"(.*)LibreOffice Drawer": "<span foreground='#f38ba8'> </span> $1"
 		}
 	},
 
