@@ -1,3 +1,4 @@
 #!/bin/sh
 
-pkill $LAUNCHER || [[ "$LAUNCHER" = "dmenu" ]] && dmenu_run "$@" || $LAUNCHER "$@"
+pkill $LAUNCHER && exit
+[[ "$LAUNCHER" = "dmenu" ]] && dmenu_run "$@" || $LAUNCHER "$@"
