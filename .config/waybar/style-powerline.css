@@ -44,6 +44,9 @@
 @define-color main-fg         @text;
 @define-color main-bg         @crust;
 @define-color main-br         @text;
+@define-color main-fg         @foreground;
+@define-color main-bg         @background;
+@define-color main-br         @foreground;
 
 @define-color active-bg       @overlay2;
 @define-color active-fg       @crust;
