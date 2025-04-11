@@ -123,7 +123,7 @@
 		"tooltip": false,
 		"tooltip-format": "CPU Frequency: {avg_frequency} GHz / {max_frequency} GHz",
 		"interval": 5,
-		"on-click": "[pgrep btop] && pkill btop || tui btop",
+		"on-click": "pgrep btop && pkill btop || tui btop",
 		"min-length": 6,
 		"max-length": 6
 	},
