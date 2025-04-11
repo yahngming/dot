@@ -1,53 +1,41 @@
 @import '../../.cache/wal/colors-waybar.css';
-
-@define-color red             #f38ba8;
-@define-color yellow          #f9e2af;
-@define-color text            #cdd6f4;
-@define-color overlay2        #9399b2;
-@define-color surface0        #313244;
-@define-color base            #1e1e2e;
-@define-color mantle          #181825;
-@define-color crust           #11111b;
-@define-color white           #ffffff;
-@define-color black           #000000;
+@import '../../.config/wal/colorschemes/colors.css';
 
 /* Main Colors */
 
 @define-color shadow          shade(@crust, 0.5);
-@define-color main-fg         @text;
+@define-color main-fg         @lightblue;
 @define-color main-bg         @crust;
-@define-color main-br         @text;
-
-@define-color active-bg       @overlay2;
+@define-color main-br         @lightblue;
+@define-color active-bg       @darkblue;
 @define-color active-fg       @crust;
-
-@define-color hover-bg        @surface0;
-@define-color hover-fg        alpha(@text, 0.75);
+@define-color hover-bg        @nightblue;
+@define-color hover-fg        alpha(@lightblue, 0.75);
 
 /* Module Colors */
 
-@define-color module-fg       @text;
+@define-color module-fg       @lightblue;
 @define-color workspaces      @mantle;
-
 @define-color temperature     @mantle;
-@define-color memory          @base;
-@define-color cpu             @surface0;
+@define-color memory          @blackblue;
+@define-color cpu             @nightblue;
 @define-color distro-fg       @black;
-@define-color distro-bg       @overlay2;
-@define-color pulseaudio      @surface0;
-@define-color backlight       @base;
+@define-color distro-bg       @darkblue;
+@define-color pulseaudio      @nightblue;
+@define-color backlight       @blackblue;
 @define-color battery         @mantle;
-
 @define-color tray            @mantle;
-@define-color date            @base;
-@define-color time            @surface0;
-@define-color power           @overlay2;
+@define-color date            @blackblue;
+@define-color time            @nightblue;
+@define-color power           @darkblue;
 
 /* State Colors */
 
 @define-color warning         @yellow;
 @define-color critical        @red;
-@define-color charging        @text;
+@define-color charging        @lightblue;
+
+/* Override Colors */
 
 @define-color shadow          shade(@background, 0.5);
 @define-color main-fg         @foreground;
@@ -56,9 +44,7 @@
 @define-color active-fg       @background;
 @define-color hover-fg        alpha(@foreground, 0.75);
 @define-color module-fg       @foreground;
-@define-color temperature     @color1;
-@define-color memory          @color2;
-@define-color cpu             @color7;
+@define-color charging        @foreground;
 
 * {
 	font-family: "JetBrainsMono Nerd Font";
