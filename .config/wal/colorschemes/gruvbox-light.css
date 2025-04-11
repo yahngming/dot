@@ -1,5 +1,5 @@
-@define-color fg              @foreground;
-@define-color bg              @background;
+@define-color fg              @background;
+@define-color bg              @foreground;
 @define-color gg              @color3;
 @define-color aqua            #689d6a;
 @define-color base            #fbf1c7;
