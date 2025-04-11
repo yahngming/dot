@@ -80,6 +80,7 @@
 
 	"hyprland/window": {
 		"max-length": 35,
+		"tooltip-format": "{title}",
 		"rewrite": {
 			"aerc": "<span foreground='#0072c6'>󰇮 </span> aerc",
 			"cmus(.*)": "<span foreground='#1db954'>󰥠 </span> cmus",
