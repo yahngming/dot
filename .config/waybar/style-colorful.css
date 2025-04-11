@@ -1,3 +1,6 @@
+@import '../../.cache/wal/colors-waybar.css';
+@import 'colors.css';
+
 /* Keyframes */
 
 @keyframes blink-critical {
