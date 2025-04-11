@@ -84,13 +84,7 @@
 
 	"temperature": {
 		"format": "{icon} {temperatureC}°",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		],
+		"format-icons": ["", "", "", "", ""],
 		"tooltip": false,
 		"critical-threshold": 90,
 		"interval": 5,
@@ -114,7 +108,7 @@
 
 	"cpu": {
 		"format": " {usage}%",
-		"tooltip": false,
+		"tooltip-format": "CPU Frequency: {avg_frequency} GHz / {max_frequency} GHz",
 		"interval": 5,
 		"on-click": "tui btop",
 		"min-length": 6,
@@ -145,8 +139,6 @@
 		"format": "{icon} {percent}%",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
 		"tooltip": false,
-		"on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
-		"on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
 		"min-length": 6,
 		"max-length": 6
 	},
