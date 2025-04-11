@@ -79,7 +79,12 @@
 	},
 
 	"hyprland/window": {
-		"max-length": 35
+		"max-length": 35,
+		"rewrite": {
+			"(.*) - Google Chrome": " $1",
+			"(.*) - Mozilla Firefox": "󰈹 $1",
+			"(.*)~": " $1"
+		}
 	},
 
 	"temperature": {
