@@ -1,5 +1,7 @@
 #!/bin/sh
 
+pgrep "$MENU" && pkill "$MENU" && exit
+
 case "$MENU" in
 	dmenu ) opt="-g 3 -l 6" ;;
 esac
