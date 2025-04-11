@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pkill "$MENU" && exit
+pkill "$LAUNCHER" && exit
 
 case "$MENU" in
 	dmenu ) opt="-g 3 -l 6" ;;
