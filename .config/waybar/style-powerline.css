@@ -44,9 +44,6 @@
 @define-color main-fg         @text;
 @define-color main-bg         @crust;
 @define-color main-br         @text;
-@define-color main-fg         @foreground;
-@define-color main-bg         @background;
-@define-color main-br         @foreground;
 
 @define-color active-bg       @overlay2;
 @define-color active-fg       @crust;
@@ -59,7 +56,7 @@
 @define-color module-fg       @text;
 @define-color workspaces      @mantle;
 
-@define-color cpuinfo         @mantle;
+@define-color temperature     @mantle;
 @define-color memory          @base;
 @define-color cpu             @surface0;
 @define-color distro-fg       @black;
@@ -78,6 +75,14 @@
 @define-color warning         @yellow;
 @define-color critical        @red;
 @define-color charging        @text;
+
+@define-color shadow          shade(@background, 0.5);
+@define-color main-fg         @foreground;
+@define-color main-bg         @background;
+@define-color main-br         @foreground;
+@define-color active-fg       @background;
+@define-color hover-fg        alpha(@foreground, 0.75);
+@define-color module-fg       @foreground;
 
 * {
 	font-family: "JetBrainsMono Nerd Font";
@@ -235,12 +240,12 @@ tooltip label {
 	padding-left: 22px;
 }
 #custom-left2 {
-	color: @cpuinfo;
+	color: @temperature;
 	background: @main-bg;
 	padding-left: 3px;
 }
 #temperature {
-	background: @cpuinfo;
+	background: @temperature;
 	padding-left: 1px;
 	padding-right: 0;
 }
@@ -255,7 +260,7 @@ tooltip label {
 
 #custom-left3 {
 	color: @memory;
-	background: @cpuinfo;
+	background: @temperature;
 	padding-left: 3px;
 }
 #memory {
