@@ -17,7 +17,7 @@ menu="\
 󰊖 Gamemode\n\
 󰇧 IME\n\
 󰌌 Keyboard\n\
- Passwords\n\
+ Password\n\
 󰐪 Printer\n\
 󰌘 Proxy\n\
 󰡰 SMB\n\
@@ -39,7 +39,7 @@ case $(printf "$menu" | $MENU $opt "$@") in
 	*Gamemode*  ) gamemode ;;
 	*IME*       ) fcitx5-configtool ;;
 	*Keyboard*  ) keymap ;;
-	*Passwords* ) passmenu ;;
+	*Password*  ) passmenu ;;
 	*Printer*   ) browser --new-tab http://localhost:631 ;;
 	*Proxy*     ) browser --new-tab https://clash.razord.top ;;
 	*SMB*       ) smbmenu ;;
