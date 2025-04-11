@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pkill btop || tui btop
