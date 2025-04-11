@@ -1,6 +1,9 @@
 @import '../../.cache/wal/colors-waybar.css';
 @import '../../.config/wal/colorschemes/catppuccin-latte.css';
 
+@define-color fg              @background;
+@define-color bg              @foreground;
+
 /* Main Colors */
 
 @define-color shadow          shade(@crust, 0.5);
