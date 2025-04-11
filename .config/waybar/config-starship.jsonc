@@ -131,7 +131,7 @@
 	"custom/distro": {
 		"format": " ",
 		"tooltip": false,
-		"on-click": "wallpaper"
+		"on-click": "settings"
 	},
 
 	"pulseaudio": {
