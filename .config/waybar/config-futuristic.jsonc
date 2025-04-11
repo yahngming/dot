@@ -81,14 +81,14 @@
 	"hyprland/window": {
 		"max-length": 35,
 		"rewrite": {
-			"aerc(.*)": "<span foreground='#89b4fa'>󰇮 </span> aerc",
-			"cmus(.*)": "<span foreground='#a6e3a1'>󰥠 </span> cmus",
+			"aerc": "<span foreground='#0072c6'>󰇮 </span> aerc",
+			"cmus(.*)": "<span foreground='#1db954'>󰥠 </span> cmus",
 			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
-			"Steam": "<span foreground='#2a475e'> </span> Steam",
-			"(.*)Google Chrome": "<span foreground='#f38ba8'> </span> $1",
-			"(.*)LibreOffice Writer": "<span foreground='#2b579a'> </span> $1<span>Word</span>",
+			"Steam": "<span foreground='#66c0f4'> </span> Steam",
+			"(.*)Google Chrome": "<span foreground='#4c8bf5'> </span> $1",
 			"(.*)LibreOffice Calc": "<span foreground='#217346'> </span> $1Excel",
-			"(.*)LibreOffice Impress": "<span foreground='#d24726'> </span> $1Powerpoint"
+			"(.*)LibreOffice Impress": "<span foreground='#d24726'> </span> $1PowerPoint"
+			"(.*)LibreOffice Writer": "<span foreground='#2b579a'> </span> $1Word",
 		}
 	},
 
