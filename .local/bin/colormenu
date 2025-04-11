@@ -7,6 +7,8 @@ esac
 menu="\
 catppuccin-latte\n\
 catppuccin-mocha\n\
+gruvbox-dark\n\
+gruvbox-light\n\
 "
 
 colors=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
