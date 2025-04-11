@@ -188,7 +188,7 @@
 	},
 
 	"custom/usb": {
-		"format": "{}",
+		"format": "󰕓",
 		"interval": 5,
 		"exec": "printf '󰕓'",
 		"exec-if": "df | grep '/media/' > /dev/null",
