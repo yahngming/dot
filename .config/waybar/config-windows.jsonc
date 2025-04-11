@@ -34,7 +34,7 @@
 	},
 	"custom/os_button": {
 		"format": "",
-		"on-click": "pkill $LAUNCHER || $LAUNCHER",
+		"on-click": "launcher",
 		"tooltip": false
 	},
 	"cpu": {
