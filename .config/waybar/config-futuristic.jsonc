@@ -89,7 +89,7 @@
 			"(.*) LibreOffice Writer": "<span foreground='#2b579a'> </span> $1 Word",
 			"aerc": "<span foreground='#0072c6'>󰇮 </span> aerc",
 			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
-			"Steam": "<span foreground='#66c0f4'> </span> Steam"
+			"Steam": "<span foreground='#1b2838'> </span> Steam"
 		}
 	},
 
