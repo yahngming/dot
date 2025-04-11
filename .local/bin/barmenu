@@ -5,10 +5,10 @@ case "$MENU" in
 esac
 
 menu="\
-colorful\n\
 icononly\n\
 modern\n\
 powerline\n\
+starship\n\
 windows\n\
 "
 
