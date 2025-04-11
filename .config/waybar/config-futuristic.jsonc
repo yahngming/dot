@@ -60,7 +60,7 @@
 
 	"custom/ws": {
 		"format": "  ",
-		"on-click": "pkill $LAUNCHER || $LAUNCHER",
+		"on-click": "launcher",
 		"tooltip": false,
 		"min-length": 3,
 		"max-length": 3
