@@ -2,10 +2,10 @@
 @define-color bg              @background;
 @define-color gg              @color3;
 @define-color aqua            #689d6a;
-@define-color bg0             #fbf1c7;
+@define-color base            #fbf1c7;
 @define-color bg0_h           #f9f5d7;
-@define-color bg1             #ebdbb2;
-@define-color bg2             #d5c4a1;
+@define-color mantle          #ebdbb2;
+@define-color surface0        #d5c4a1;
 @define-color bg3             #bdae93;
 @define-color bg4             #a89984;
 @define-color black           #000000;
