@@ -82,7 +82,7 @@
 		"max-length": 35,
 		"tooltip-format": "{title}",
 		"rewrite": {
-			"(.*)@(.*):(.*)": "<span foreground='#90ee90'> </span> $3",
+			"(.*)@(.*):(.*)": "<span foreground='#00ff2b'> </span> $3",
 			"(.*) Google Chrome": "<span foreground='#4c8bf5'> </span> $1 Chrome",
 			"(.*) LibreOffice Calc": "<span foreground='#217346'> </span> $1 Excel",
 			"(.*) LibreOffice Impress": "<span foreground='#d24726'> </span> $1 PowerPoint",
