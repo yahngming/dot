@@ -82,9 +82,8 @@
 		"max-length": 35,
 		"tooltip-format": "{title}",
 		"rewrite": {
-			"(.*)@(.*):(.*)": "<span foreground='#a6e3a1'> </span> Terminal",
+			"(.*)@(.*):(.*)": "<span foreground='#a6e3a1'> </span> $1",
 			"aerc": "<span foreground='#0072c6'>󰇮 </span> aerc",
-			"cmus v(.*)": "<span foreground='#1db954'>󰥠 </span> cmus",
 			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
 			"Steam": "<span foreground='#66c0f4'> </span> Steam",
 			"(.*)Google Chrome": "<span foreground='#4c8bf5'> </span> $1",
