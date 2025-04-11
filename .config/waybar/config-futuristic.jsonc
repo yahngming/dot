@@ -85,11 +85,11 @@
 			"cmus(.*)": "<span foreground='#a6e3a1'>󰥠 </span> $1",
 			"foot": "<span foreground='#a6e3a1'> </span> $1",
 			"LibreOffice": "<span foreground='#f38ba8'>󰏆 </span> $1",
-			"vim(.*)": "<span foreground='#a6e3a1'> </span> $1",
+			"Steam": "<span foreground='#2a475e'> </span> $1",
 			"(.*)Google Chrome": "<span foreground='#f38ba8'> </span> $1",
-			"(.*)LibreOffice Writer": "<span foreground='#89b4fa'> </span> $1",
-			"(.*)LibreOffice Calc": "<span foreground='#a6e3a1'> </span> $1",
-			"(.*)LibreOffice Impress": "<span foreground='#fab387'> </span> $1",
+			"(.*)LibreOffice Writer": "<span foreground='#2b579a'> </span> $1",
+			"(.*)LibreOffice Calc": "<span foreground='#217346'> </span> $1",
+			"(.*)LibreOffice Impress": "<span foreground='#d24726'> </span> $1",
 			"(.*)LibreOffice Drawer": "<span foreground='#f38ba8'> </span> $1"
 		}
 	},
