@@ -148,6 +148,7 @@ tooltip label {
 #battery,
 #mpris,
 #tray,
+#custom-usb,
 #idle_inhibitor,
 #bluetooth,
 #network,
@@ -374,6 +375,12 @@ tooltip label {
 #tray {
 	background: @tray;
 	padding-right: 10px;
+}
+#custom-usb {
+	background: @tray;
+}
+#custom-usb:hover {
+	color: @hover-fg;
 }
 #idle_inhibitor {
 	background: @tray;
