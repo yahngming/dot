@@ -44,14 +44,14 @@
 
 /* Override Colors */
 
-@define-color shadow          shade(@background, 0.5);
-@define-color main-fg         @foreground;
-@define-color main-bg         @background;
-@define-color main-br         @foreground;
-@define-color active-fg       @background;
-@define-color hover-fg        alpha(@foreground, 0.75);
-@define-color module-fg       @foreground;
-@define-color charging        @foreground;
+@define-color shadow          shade(@bg, 0.5);
+@define-color main-fg         @fg;
+@define-color main-bg         @bg;
+@define-color main-br         @fg;
+@define-color active-fg       @bg;
+@define-color hover-fg        alpha(@fg, 0.75);
+@define-color module-fg       @fg;
+@define-color charging        @fg;
 
 * {
 	font-family: "JetBrainsMono Nerd Font";
