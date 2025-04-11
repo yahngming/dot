@@ -188,12 +188,10 @@
 	},
 
 	"custom/usb": {
-		"format": "󰕓",
 		"interval": 5,
 		"exec": "printf '󰕓'",
 		"exec-if": "df | grep '/media/' > /dev/null",
-		"on-click": "usbmenu",
-		"tooltip": false
+		"on-click": "usbmenu"
 	},
 
 	"idle_inhibitor": {
