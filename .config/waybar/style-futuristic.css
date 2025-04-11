@@ -324,7 +324,7 @@ tooltip label {
 #custom-right3 {
 	color: @pulseaudio;
 	background: @backlight;
-	padding-left: -1px;
+	padding-left: 1px;
 }
 
 /* Brightness */
