@@ -1,5 +1,3 @@
-@import '../../../.cache/wal/colors-waybar.css';
-
 @define-color fg              @background;
 @define-color bg              @foreground;
 @define-color rosewater       #dc8a78;
