@@ -5,7 +5,7 @@
 @define-color base            #3c3836;
 @define-color bg0_h           #1d2021;
 @define-color bg3             #665c54;
-@define-color bg4             #7c6f64;
+@define-color overlay2        #7c6f64;
 @define-color black           #000000;
 @define-color blue            #458588;
 @define-color bright_aqua     #8ec07c;
@@ -24,8 +24,8 @@
 @define-color green           #98971a;
 @define-color mantle          #282828;
 @define-color orange          #d65d0e;
-@define-color overlay2        #d79921;
 @define-color purple          #b16286;
 @define-color red             #cc241d;
 @define-color surface0        #504945;
 @define-color white           #ffffff;
+@define-color yellow          #d79921;
