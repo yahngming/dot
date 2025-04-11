@@ -1,6 +1,6 @@
 {
 
-	"layer": "bottom",
+	"layer": "top",
 	"position": "bottom",
 	"mod": "dock",
 	"exclusive": true,
