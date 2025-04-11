@@ -6,9 +6,9 @@ esac
 
 menu="\
 colorful\n\
-futuristic\n\
+icononly\n\
 modern\n\
-terminal\n\
+powerline\n\
 windows\n\
 "
 
