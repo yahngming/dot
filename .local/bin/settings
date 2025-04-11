@@ -9,6 +9,7 @@ menu="\
  Bluetooth\n\
 󰅟 Cloud\n\
  Coffee\n\
+ Color\n\
 󰍹 Display\n\
  Dotfiles\n\
 󰊖 Gamemode\n\
@@ -18,7 +19,6 @@ menu="\
 󰐪 Printer\n\
 󰌘 Proxy\n\
 󰡰 SMB\n\
- Color\n\
 󰇧 Timezone\n\
 󰚰 Update\n\
 󱊞 USB\n\
