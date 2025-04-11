@@ -9,7 +9,7 @@ catppuccin-latte\n\
 catppuccin-mocha\n\
 "
 
-color=$(printf "$menu" | $MENU $opt -p "Select colorscheme:" "$@")
+color=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
 
 if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$color.css ]; then
 	cat ~/.config/wal/colorschemes/$color.css > ~/.config/waybar/color.css
