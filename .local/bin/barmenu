@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case "$MENU" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+colorful\n\
+icononly\n\
+modern\n\
+powerline\n\
+windows\n\
+"
+
+bar=$(printf "$menu" | $MENU $opt -p "Select bar:" "$@")
+
+if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$bar.jsonc ]; then
+	cat ~/.config/waybar/config-$bar.jsonc > ~/.config/waybar/config.jsonc
+	cat ~/.config/waybar/style-$bar.css > ~/.config/waybar/style.css
+	killall waybar
+	hyprctl dispatch exec waybar >/dev/null 2>&1
+fi
