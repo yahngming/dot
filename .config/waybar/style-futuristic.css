@@ -317,7 +317,7 @@ tooltip label {
 }
 #pulseaudio {
 	background: @pulseaudio;
-	padding-right: -1px;
+	margin-right: 1px;
 }
 #pulseaudio:hover {
 	color: @hover-fg;
