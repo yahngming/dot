@@ -129,7 +129,7 @@
 	},
 
 	"custom/distro": {
-		"format": "{text} ",
+		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
 		"on-click": "settings"
