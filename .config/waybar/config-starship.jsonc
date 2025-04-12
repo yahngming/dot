@@ -129,10 +129,9 @@
 	},
 
 	"custom/distro": {
-		"format": " ",
-		"tooltip": true,
-		"tooltip-format": "{text}",
-		"exec": "fortune",
+		"format": "{text} ",
+		"tooltip": false,
+		"exec": "logo",
 		"on-click": "settings"
 	},
 
