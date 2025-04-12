@@ -2,5 +2,5 @@
 
 logos=("󰣇" "󰨡" "󱍢" "" "" "" "" "" "" "" "󰯉" "" "" "" "" "" "" "" "" "" "" "" "")
 random_index=$((RANDOM % ${#logos[@]}))
-random_logo="${my_array[$random_index]}"
+random_logo="${logos[$random_index]}"
 echo "$random_logo"
