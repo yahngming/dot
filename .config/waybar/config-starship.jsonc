@@ -130,7 +130,9 @@
 
 	"custom/distro": {
 		"format": " ",
-		"tooltip": false,
+		"tooltip": true,
+		"tooltip-format": "{text}",
+		"exec": "fortune",
 		"on-click": "settings"
 	},
 
