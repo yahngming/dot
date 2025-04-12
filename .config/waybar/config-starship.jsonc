@@ -179,7 +179,7 @@
 		"format-paused": "{status_icon} {title} - {artist}",
 		"player-icons": {
 			"default": "󰝚 ",
-			"chromium": "<span foreground='#f38ba8'>󰗃 </span>",
+			"chromium": "<span foreground='#cd201f'>󰗃 </span>",
 			"spotify": "<span foreground='#a6e3a1'>󰓇 </span>"
 		},
 		"status-icons": {
