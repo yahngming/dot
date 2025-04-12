@@ -213,7 +213,7 @@
 	},
 
 	"bluetooth": {
-		"format": "󰂯",
+		"format": "󰂰",
 		"format-disabled": "󰂲",
 		"format-connected": "󰂱",
 		"format-connected-battery": "󰂱",
