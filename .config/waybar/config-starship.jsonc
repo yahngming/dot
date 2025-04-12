@@ -131,6 +131,8 @@
 	"custom/distro": {
 		"format": " ",
 		"tooltip": false,
+		"exec": "wallpaper",
+		"interval": 10,
 		"on-click": "settings"
 	},
 
