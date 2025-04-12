@@ -132,7 +132,7 @@
 		"format": " ",
 		"tooltip": false,
 		"exec": "wallpaper",
-		"interval": 10,
+		"interval": 3600,
 		"on-click": "settings"
 	},
 
