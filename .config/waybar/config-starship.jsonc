@@ -74,7 +74,11 @@
 			"2": [],
 			"3": [],
 			"4": [],
-			"5": []
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": []
 		}
 	},
 
@@ -87,7 +91,8 @@
 			"(.*) LibreOffice Calc": "<span foreground='#217346'> </span> $1 Excel",
 			"(.*) LibreOffice Impress": "<span foreground='#d24726'> </span> $1 PowerPoint",
 			"(.*) LibreOffice Writer": "<span foreground='#2b579a'> </span> $1 Word",
-			"aerc": "<span foreground='#d44638'>󰇮 </span> aerc",
+			"aerc": "<span foreground='#1db954'>󰥠 </span> Music",
+			"cmus": "<span foreground='#d44638'>󰇮 </span> Mail",
 			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
 			"Steam": "<span foreground='#2a475e'> </span> Steam"
 		}
