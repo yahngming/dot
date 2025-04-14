@@ -87,8 +87,8 @@
 			"(.*) LibreOffice Calc": "<span foreground='#217346'> </span> $1 Excel",
 			"(.*) LibreOffice Impress": "<span foreground='#d24726'> </span> $1 PowerPoint",
 			"(.*) LibreOffice Writer": "<span foreground='#2b579a'> </span> $1 Word",
-			"aerc": "<span foreground='#1db954'>󰇮 </span> Mail",
-			"cmus (.*)": "<span foreground='#d44638'>󰥠 </span> Music",
+			"aerc": "<span foreground='#d44638'>󰇮 </span> Mail",
+			"cmus (.*)": "<span foreground='#1db954'>󰥠 </span> Music",
 			"foot": "<span foreground='#a6e3a1'> </span> Terminal",
 			"Steam": "<span foreground='#2a475e'> </span> Steam"
 		}
