@@ -81,6 +81,7 @@
 	"hyprland/window": {
 		"max-length": 35,
 		"icon": true,
+		"icon-size": 24,
 		"tooltip-format": "{title}",
 		"rewrite": {
 			"(.*)@(.*):(.*)": "<span foreground='#00ff2b'> </span> $3",
