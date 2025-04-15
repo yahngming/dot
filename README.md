@@ -19,7 +19,7 @@ git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
 other packages
 ```sh
-yay -S davinci-resolve gyroflow-bin minecraft-launcher orca-slicer-bin sdrpp-git subconverter-bin tsukimi-git
+yay -S davinci-resolve gyroflow minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
 ```
 
 thinkpad specific
