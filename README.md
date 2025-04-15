@@ -22,6 +22,11 @@ other packages
 yay -S darktable-git davinci-resolve gyroflow minecraft-launcher orca-slicer-bin sdrpp-git subconverter-bin tsukimi-git
 ```
 
+thinkpad specific
+```sh
+yay -S intel-compute-runtime-legacy-bin
+```
+
 ## chromeos
 post install
 ```sh
