@@ -3,7 +3,7 @@
 arch() {
 	sudo pacman -S 7zip aerc android-tools atool base-devel bat bc bluez bluez-utils brightnessctl btop clash cmus cups dante eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-pywal rclone ripgrep rpi-imager rsync samba translate-shell trash-cli udiskie ueberzugpp unrar unzip w3m wireplumber zathura-pdf-poppler zoxide # base
 	sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols # font
-	sudo pacman -S freecad gvim hugin libreoffice-fresh steam # gui
+	sudo pacman -S blender freecad gvim hugin krita libreoffice-fresh steam # gui
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako slurp waybar wl-clipboard xdg-desktop-portal-hyprland # wayland
 	sudo pacman -S dunst maim unclutter xautolock xcape xclip xcompmgr xdo xfce4 xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
