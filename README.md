@@ -19,12 +19,7 @@ git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
 other packages
 ```sh
-yay -S davinci-resolve gyroflow minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
-```
-
-thinkpad specific
-```sh
-yay -S intel-compute-runtime-legacy-bin
+yay -S davinci-resolve gyroflow intel-compute-runtime-legacy-bin minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
 ```
 
 ## chromeos
