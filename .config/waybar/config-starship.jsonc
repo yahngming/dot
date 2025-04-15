@@ -82,21 +82,7 @@
 		"max-length": 35,
 		"icon": true,
 		"icon-size": 10,
-		"tooltip-format": "{title}",
-		"rewrite": {
-			"(.*)@(.*):(.*)": "<span foreground='#00ff2b'> </span> $3",
-			"DaVinci Resolve (.*)": "<span foreground='#9999ff'> </span> DaVinci Resolve $1",
-			"(.*)FreeCAD (.*)": "<span foreground='#ff585d'>󰻬 </span> $1 FreeCAD",
-			"(.*) Google Chrome": "<span foreground='#4c8bf5'> </span> $1 Chrome",
-			"(.*) LibreOffice Calc": "<span foreground='#217346'> </span> $1 Excel",
-			"(.*) LibreOffice Impress": "<span foreground='#d24726'> </span> $1 PowerPoint",
-			"(.*) LibreOffice Writer": "<span foreground='#2b579a'> </span> $1 Word",
-			"aerc": "<span foreground='#d44638'>󰇮 </span> aerc",
-			"cmus (.*)": "<span foreground='#1db954'>󰥠 </span> cmus",
-			"darktable": "<span foreground='#31a8ff'> </span> darktable",
-			"foot": "<span foreground='#a6e3a1'> </span> foot",
-			"Steam": "<span foreground='#2a475e'> </span> Steam"
-		}
+		"tooltip-format": "{title}"
 	},
 
 	"temperature": {
