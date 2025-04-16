@@ -22,6 +22,7 @@ menu="\
 󰌘 Proxy\n\
 󰡰 SMB\n\
 󰇧 Timezone\n\
+󰃢 Trash\n\
 󰚰 Update\n\
 󱊞 USB\n\
 󰸉 Wallpaper\n\
@@ -44,6 +45,7 @@ case $(printf "$menu" | $MENU $opt "$@") in
 	*Proxy*     ) browser --new-tab https://clash.razord.top ;;
 	*SMB*       ) smbmenu ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
+	*Trash*     ) tui "trash-empty" ;;
 	*Update*    ) tui "up" ;;
 	*USB*       ) usbmenu ;;
 	*Wallpaper* ) wallpaper ;;
