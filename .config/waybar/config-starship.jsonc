@@ -137,7 +137,7 @@
 		},
 		"tooltip": false,
 		"tooltip-format": "Device: {desc}",
-		"scroll-step": 5,
+		"scroll-step": 2,
 		"on-click": "togglemute",
 		"min-length": 6,
 		"max-length": 6
@@ -147,7 +147,7 @@
 		"format": "{icon} {percent}%",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
 		"tooltip": false,
-		"scroll-step": 5,
+		"scroll-step": 2,
 		"min-length": 6,
 		"max-length": 6
 	},
