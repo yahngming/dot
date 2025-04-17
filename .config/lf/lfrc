@@ -24,11 +24,13 @@ map a archive
 map d %trash-put $fx
 map D delete
 map u unarchive
+map V invert-below
 map x cut
 map gm cd /run/mount
 map gt cd ~/.local/share/Trash
 map gu cd /run/media
 map zd push %mkdir<space>
+map zf push %touch<space>
 map zz push :zoxide<space>
 
 cmd archive ${{
@@ -39,22 +41,56 @@ cmd archive ${{
 	rm -rf $1
 }}
 
+cmd pager ${{
+	if [ -f "$f" ]; then
+		$PAGER "$f"
+	elif [ -d "$f" ]; then
+		tree "$f" | $PAGER
+	fi
+}}
+
 cmd paste &{{
 	set -- $(cat ~/.local/share/lf/files)
 	mode="$1"
 	shift
 	case "$mode" in
-		copy )
+		copy)
 			rsync -av --ignore-existing --progress -- "$@" . |
 			stdbuf -i0 -o0 -e0 tr '\r' '\n' |
 			while IFS= read -r line; do
-				lf -remote "send $id echo $line"
+				line="$(printf '%s' "$line" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+				lf -remote "send $id echo \"$line\""
 			done
 			;;
-		move ) mv -n -- "$@" . ;;
+		move)
+			mv -n -- "$@" .
+			lf -remote "send clear"
+			;;
 	esac
-	rm ~/.local/share/lf/files
-	lf -remote "send clear"
+}}
+
+cmd rename ${{
+	old="$(mktemp)"
+	new="$(mktemp)"
+	if [ -n "$fs" ]; then
+		fs="$(basename -a -- $fs)"
+	else
+		fs="$(ls)"
+	fi
+	printf '%s\n' "$fs" > "$old"
+	printf '%s\n' "$fs" > "$new"
+	$EDITOR "$new"
+	[ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+	paste "$old" "$new" | while IFS= read -r names; do
+		src="$(printf '%s' "$names" | cut -f1)"
+		dst="$(printf '%s' "$names" | cut -f2)"
+		if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+			continue
+		fi
+		mv -- "$src" "$dst"
+	done
+	rm -- "$old" "$new"
+	lf -remote "send $id unselect"
 }}
 
 cmd unarchive ${{
