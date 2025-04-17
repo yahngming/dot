@@ -5,17 +5,23 @@ case "$MENU" in
 esac
 
 menu="\
-catppuccin-latte\n\
-catppuccin-mocha\n\
-gruvbox-dark\n\
+catppuccin-light\n\
+catppuccin-dark\n\
 gruvbox-light\n\
+gruvbox-dark\n\
 "
 
 colors=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
 
 case "$colors" in
-	*dark*  ) gsettings set org.gnome.desktop.interface color-scheme prefer-dark ;;
-	*light* ) gsettings set org.gnome.desktop.interface color-scheme prefer-light ;;
+	*dark*)
+		touch ~/.config/dark
+		gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+		;;
+	*light*)
+		rm ~/.config/dark
+		gsettings set org.gnome.desktop.interface color-scheme prefer-light
+		;;
 esac
 
 if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$colors.css ]; then
