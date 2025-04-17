@@ -21,13 +21,12 @@ map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
 map a archive
-map d %trash-put $fx
-map D delete
+map A unarchive
 map i pager
 map R bulk-rename
-map u unarchive
 map V invert-below
-map x cut
+map x %trash-put $fx
+map X delete
 map gm cd /run/mount
 map gt cd ~/.local/share/Trash
 map gu cd /run/media
