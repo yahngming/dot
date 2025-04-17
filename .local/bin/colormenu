@@ -13,6 +13,11 @@ gruvbox-light\n\
 
 colors=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
 
+case "$colors" in
+	*dark*  ) gsettings set org.gnome.desktop.interface color-scheme prefer-dark ;;
+	*light* ) gsettings set org.gnome.desktop.interface color-scheme prefer-light ;;
+esac
+
 if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$colors.css ]; then
 	cat ~/.config/wal/colorschemes/$colors.css > ~/.config/waybar/colors.css
 fi
