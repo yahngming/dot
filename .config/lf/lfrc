@@ -20,8 +20,6 @@ map <delete> %trash-put $fx
 map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
-map a archive
-map A unarchive
 map i pager
 map R bulk-rename
 map V invert-below
@@ -30,8 +28,10 @@ map X delete
 map gm cd /run/mount
 map gt cd ~/.local/share/Trash
 map gu cd /run/media
+map za push :archive<space>
 map zd push %mkdir<space>
 map zf push %touch<space>
+map zu unarchive
 map zz push :zoxide<space>
 
 cmd archive ${{
