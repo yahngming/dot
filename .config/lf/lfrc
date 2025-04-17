@@ -23,6 +23,8 @@ map . set hidden!
 map a archive
 map d %trash-put $fx
 map D delete
+map i pager
+map R bulk-rename
 map u unarchive
 map V invert-below
 map x cut
@@ -69,7 +71,7 @@ cmd paste &{{
 	esac
 }}
 
-cmd rename ${{
+cmd bulk-rename ${{
 	old="$(mktemp)"
 	new="$(mktemp)"
 	if [ -n "$fs" ]; then
