@@ -1,0 +1,6 @@
+[Unit]
+Description=Change wallpaper
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/wallpaper
