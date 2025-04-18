@@ -19,10 +19,12 @@ if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$colors.css ]; t
 		*dark*)
 			touch ~/.config/dark
 			gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+			gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 			;;
 		*light*)
 			rm ~/.config/dark
 			gsettings set org.gnome.desktop.interface color-scheme prefer-light
+			gsettings set org.gnome.desktop.interface gtk-theme Adwaita
 			;;
 	esac
 fi
