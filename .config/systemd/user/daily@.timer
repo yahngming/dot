@@ -1,10 +1,10 @@
 [Unit]
-Description=Sunset Timer for %i service
+Description=Daily Timer for %i service
 
 [Timer]
-OnCalendar=*-*-* 23:00:00
-AccuracySec=6h
+OnCalendar=daily
 RandomizedDelaySec=1h
+Persistent=true
 Unit=%i.service
 
 [Install]
