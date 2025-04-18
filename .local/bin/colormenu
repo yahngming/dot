@@ -16,19 +16,8 @@ colors=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
 if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$colors.css ]; then
 	cat ~/.config/wal/colorschemes/$colors.css > ~/.config/waybar/colors.css
 	case "$colors" in
-		*dark*)
-			touch ~/.config/dark
-			export COLOR_SCHEME="prefer-dark"
-			export GTK_THEME="Adwaita-dark"
-			export XCURSOR_THEME="Bibata-Modern-Ice"
-			setenv
-			;;
-		*light*)
-			rm ~/.config/dark
-			export COLOR_SCHEME="prefer-light"
-			export GTK_THEME="Adwaita"
-			export XCURSOR_THEME="Bibata-Modern-Classic"
-			setenv
-			;;
+		*dark*  ) touch ~/.config/dark ;;
+		*light* ) rm ~/.config/dark ;;
 	esac
+	darkmode
 fi
