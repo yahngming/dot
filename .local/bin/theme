@@ -1,4 +1,4 @@
-$!/bin/sh
+#!/bin/sh
 
 if [ "$XDG_VTNR" = 1 ]; then
 	if [ -f ~/.config/dark ]; then
