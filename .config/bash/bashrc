@@ -46,10 +46,6 @@ setenv() {
 		walker ) export MENU="walker --dmenu --keepsort" ;;
 		*      ) export MENU="dmenu" ;;
 	esac
-	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
-	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
-	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
-	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 }
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
@@ -82,20 +78,12 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-	if [ -f ~/.config/dark ]; then
-		export COLOR_SCHEME="prefer-dark"
-		export GTK_THEME="Adwaita-dark"
-		export XCURSOR_THEME="Bibata-Modern-Ice"
-	else
-		export COLOR_SCHEME="prefer-light"
-		export GTK_THEME="Adwaita"
-		export XCURSOR_THEME="Bibata-Modern-Classic"
-	fi
 	export ICON_THEME="Adwaita"
 	export LAUNCHER="fuzzel"
 	export TERMINAL="foot"
-	setenv
+	darkmode
 	proxy
+	setenv
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export COLOR_SCHEME="prefer-dark"
@@ -104,8 +92,9 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export LAUNCHER="dmenu"
 	export TERMINAL="st"
 	export XCURSOR_THEME="Bibata-Modern-Ice"
-	setenv
+	darkmode
 	proxy
+	setenv
 	exec startx ~/.config/xorg/xinitrc dwm
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export COLOR_SCHEME="prefer-light"
@@ -115,8 +104,9 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export QT_STYLE_OVERRIDE="Windows"
 	export TERMINAL="xfce4-terminal"
 	export XCURSOR_THEME="Chicago95 Standard Cursors"
-	setenv
+	darkmode
 	proxy
+	setenv
 	exec startx ~/.config/xorg/xinitrc xfce
 else
 	fastfetch | lolcat
