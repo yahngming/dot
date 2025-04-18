@@ -84,13 +84,13 @@ eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	if [ -f ~/.config/dark ]; then
-			export COLOR_SCHEME="prefer-dark"
-			export GTK_THEME="Adwaita-dark"
-			export XCURSOR_THEME="Bibata-Modern-Ice"
+		export COLOR_SCHEME="prefer-dark"
+		export GTK_THEME="Adwaita-dark"
+		export XCURSOR_THEME="Bibata-Modern-Ice"
 	else
-			export COLOR_SCHEME="prefer-light"
-			export GTK_THEME="Adwaita"
-			export XCURSOR_THEME="Bibata-Modern-Classic"
+		export COLOR_SCHEME="prefer-light"
+		export GTK_THEME="Adwaita"
+		export XCURSOR_THEME="Bibata-Modern-Classic"
 	fi
 	export ICON_THEME="Adwaita"
 	export LAUNCHER="fuzzel"
