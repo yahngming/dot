@@ -12,11 +12,6 @@ git pull
 cp ~/.local/src/sub/clash ~/.config/clash/config.yaml
 cd - >/dev/null 2>&1
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	killall waybar
-	hyprctl dispatch exec waybar >/dev/null 2>&1
-fi
-
 if [ "$BROWSER" == "firefox" ]; then
 	cd ~/.config/firefox
 	./updater.sh
