@@ -82,25 +82,22 @@ alias sudo="sudo "
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-	case [[ -f ~/.config/dark ]] in
-		true)
+if [[ -z "$DISPLAY" ]] && [[ "$XDG_VTNR" = 1 ]]; then
+	if [[ -f ~/.config/dark ]]; then
 			export COLOR_SCHEME="prefer-dark"
 			export GTK_THEME="Adwaita-dark"
 			export XCURSOR_THEME="Bibata-Modern-Ice"
-			;;
-		false)
+	else
 			export COLOR_SCHEME="prefer-light"
 			export GTK_THEME="Adwaita"
 			export XCURSOR_THEME="Bibata-Modern-Classic"
-			;;
-	esac
+	fi
 	export ICON_THEME="Adwaita"
 	export LAUNCHER="fuzzel"
 	export TERMINAL="foot"
 	setenv
 	exec Hyprland
-elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
+elif [[ -z "$DISPLAY" ]] && [[ "$XDG_VTNR" = 2 ]]; then
 	export COLOR_SCHEME="prefer-dark"
 	export GTK_THEME="Adwaita-dark"
 	export ICON_THEME="Adwaita"
@@ -109,7 +106,7 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export XCURSOR_THEME="Bibata-Modern-Ice"
 	setenv
 	exec startx ~/.config/xorg/xinitrc dwm
-elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
+elif [[ -z "$DISPLAY" ]] && [[ "$XDG_VTNR" = 3 ]]; then
 	export COLOR_SCHEME="prefer-light"
 	export GTK_THEME="Chicago95"
 	export ICON_THEME="Chicago95"
