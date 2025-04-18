@@ -9,3 +9,8 @@ else
 	export GTK_THEME="Adwaita"
 	export XCURSOR_THEME="Bibata-Modern-Classic"
 fi
+
+gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
+gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
+gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
+gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
