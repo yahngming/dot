@@ -11,7 +11,6 @@ menu="\
  Bluetooth\n\
 󰅟 Cloud\n\
  Coffee\n\
- Color\n\
 󰍹 Display\n\
  Dotfiles\n\
 󰊖 Gamemode\n\
@@ -21,6 +20,7 @@ menu="\
 󰐪 Printer\n\
 󰌘 Proxy\n\
 󰡰 SMB\n\
+ Theme\n\
 󰇧 Timezone\n\
 󰃢 Trash\n\
 󰚰 Update\n\
@@ -34,7 +34,6 @@ case $(printf "$menu" | $MENU $opt "$@") in
 	*Bluetooth* ) btmenu ;;
 	*Cloud*     ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
 	*Coffee*    ) coffee ;;
-	*Color*     ) colormenu ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) tui "dot" ;;
 	*Gamemode*  ) gamemode ;;
@@ -44,6 +43,7 @@ case $(printf "$menu" | $MENU $opt "$@") in
 	*Printer*   ) browser --new-tab http://localhost:631 ;;
 	*Proxy*     ) browser --new-tab https://clash.razord.top ;;
 	*SMB*       ) smbmenu ;;
+	*Theme*     ) thememenu ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
 	*Trash*     ) tui "trash-empty" ;;
 	*Update*    ) tui "up" ;;
