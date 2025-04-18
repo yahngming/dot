@@ -16,8 +16,8 @@ theme=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
 if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$theme.css ]; then
 	cat ~/.config/wal/colorschemes/$theme.css > ~/.config/waybar/colors.css
 	case "$theme" in
-		*dark*  ) touch ~/.config/dark ;;
-		*light* ) rm ~/.config/dark ;;
+		*dark*  ) touch -f ~/.config/dark ;;
+		*light* ) rm -f ~/.config/dark ;;
 	esac
 	theme
 fi
