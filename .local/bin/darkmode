@@ -1,17 +1,19 @@
 $!/bin/sh
 
-if [ -f ~/.config/dark ]; then
-	export COLOR_SCHEME="prefer-dark"
-	export GTK_THEME="Adwaita-dark"
-	export HYPRCURSOR_THEME="Bibata-Modern-Ice"
-	export ICON_THEME="Adwaita"
-	export XCURSOR_THEME="Bibata-Modern-Ice"
-else
-	export COLOR_SCHEME="prefer-light"
-	export GTK_THEME="Adwaita"
-	export HYPRCURSOR_THEME="Bibata-Modern-Classic"
-	export ICON_THEME="Adwaita"
-	export XCURSOR_THEME="Bibata-Modern-Classic"
+if [ "$XDG_VTNR" = 1 ]; then
+	if [ -f ~/.config/dark ]; then
+		export COLOR_SCHEME="prefer-dark"
+		export GTK_THEME="Adwaita-dark"
+		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
+		export ICON_THEME="Adwaita"
+		export XCURSOR_THEME="Bibata-Modern-Ice"
+	else
+		export COLOR_SCHEME="prefer-light"
+		export GTK_THEME="Adwaita"
+		export HYPRCURSOR_THEME="Bibata-Modern-Classic"
+		export ICON_THEME="Adwaita"
+		export XCURSOR_THEME="Bibata-Modern-Classic"
+	fi
 fi
 
 gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
