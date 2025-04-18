@@ -50,7 +50,6 @@ setenv() {
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
-	proxy
 }
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
@@ -96,6 +95,7 @@ if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	export LAUNCHER="fuzzel"
 	export TERMINAL="foot"
 	setenv
+	proxy
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export COLOR_SCHEME="prefer-dark"
@@ -105,6 +105,7 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
 	export TERMINAL="st"
 	export XCURSOR_THEME="Bibata-Modern-Ice"
 	setenv
+	proxy
 	exec startx ~/.config/xorg/xinitrc dwm
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export COLOR_SCHEME="prefer-light"
@@ -115,6 +116,7 @@ elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 	export TERMINAL="xfce4-terminal"
 	export XCURSOR_THEME="Chicago95 Standard Cursors"
 	setenv
+	proxy
 	exec startx ~/.config/xorg/xinitrc xfce
 else
 	fastfetch | lolcat
