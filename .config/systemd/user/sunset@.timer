@@ -1,5 +1,5 @@
 [Unit]
-Description=Dayly Timer for %i service
+Description=Sunset Timer for %i service
 
 [Timer]
 OnCalendar=*-*-* 19:00:00
