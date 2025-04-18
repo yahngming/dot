@@ -22,6 +22,7 @@ arch() {
    	sudo systemctl enable smb.service
  	sudo cp -r ~/.config/getty\@.service.d/ /etc/systemd/system/
 	sudo sed -i 's/LOGIN_TIMEOUT.*/LOGIN_TIMEOUT 0/' /etc/login.defs
+ 	systemctl --user enable daily@wallpaper.timer
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
