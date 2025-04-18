@@ -83,7 +83,7 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-	case [[ -f "~/.config/dark" ]] in
+	case [[ -f ~/.config/dark ]] in
 		true)
 			export COLOR_SCHEME="prefer-dark"
 			export GTK_THEME="Adwaita-dark"
