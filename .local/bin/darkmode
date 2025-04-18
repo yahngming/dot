@@ -14,6 +14,16 @@ if [ "$XDG_VTNR" = 1 ]; then
 		export ICON_THEME="Adwaita"
 		export XCURSOR_THEME="Bibata-Modern-Classic"
 	fi
+elif [ "$XDG_VTNR" = 2 ]; then
+	export COLOR_SCHEME="prefer-dark"
+	export GTK_THEME="Adwaita-dark"
+	export ICON_THEME="Adwaita"
+	export XCURSOR_THEME="Bibata-Modern-Ice"
+elif [ "$XDG_VTNR" = 3 ]; then
+	export COLOR_SCHEME="prefer-dark"
+	export GTK_THEME="Adwaita-dark"
+	export ICON_THEME="Adwaita"
+	export XCURSOR_THEME="Bibata-Modern-Ice"
 fi
 
 gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
