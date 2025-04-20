@@ -85,13 +85,22 @@ if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	setenv
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
+	export COLOR_SCHEME="prefer-dark"
+	export GTK_THEME="Adwaita-dark"
+	export ICON_THEME="Adwaita"
 	export LAUNCHER="dmenu"
 	export TERMINAL="st"
+	export XCURSOR_THEME="Bibata-Modern-Ice"
 	setenv
 	exec startx ~/.config/xorg/xinitrc dwm
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
+	export COLOR_SCHEME="prefer-light"
+	export GTK_THEME="Chicago95"
+	export ICON_THEME="Chicago95"
 	export LAUNCHER="xfce4-appfinder"
+	export QT_STYLE_OVERRIDE="Windows"
 	export TERMINAL="xfce4-terminal"
+	export XCURSOR_THEME="Chicago95 Standard Cursors"
 	setenv
 	exec startx ~/.config/xorg/xinitrc xfce
 else
