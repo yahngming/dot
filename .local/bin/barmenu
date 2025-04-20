@@ -18,5 +18,5 @@ if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$bar.jsonc ]; then
 	cat ~/.config/waybar/config-$bar.jsonc > ~/.config/waybar/config.jsonc
 	cat ~/.config/waybar/style-$bar.css > ~/.config/waybar/style.css
 	killall waybar
-	waybar
+	hyprctl dispatch exec waybar >/dev/null 2>&1
 fi
