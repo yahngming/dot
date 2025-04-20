@@ -1,14 +1,5 @@
 #!/bin/sh
 
-menu() {
-	case "$LAUNCHER" in
-		fuzzel ) export MENU="fuzzel --dmenu" ;;
-		rofi   ) export MENU="rofi -dmenu" ;;
-		walker ) export MENU="walker --dmenu --keepsort" ;;
-		*      ) export MENU="dmenu" ;;
-	esac
-}
-
 proxy() {
 	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 	for envar in $PROXY_ENV; do
@@ -61,4 +52,10 @@ theme() {
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+	case "$LAUNCHER" in
+		fuzzel ) export MENU="fuzzel --dmenu" ;;
+		rofi   ) export MENU="rofi -dmenu" ;;
+		walker ) export MENU="walker --dmenu --keepsort" ;;
+		*      ) export MENU="dmenu" ;;
+	esac
 }
