@@ -1,5 +1,24 @@
 #!/bin/sh
 
+_fzf_compgen_path() {
+	fd --exclude ".git" . "$1" --follow --hidden
+}
+
+_fzf_compgen_dir() {
+	fd --exclude ".git" . "$1" --follow --hidden --type directory
+}
+
+_fzf_comprun() {
+	local command=$1
+	shift
+	case "$command" in
+		cd           ) fzf --preview "eza --color=always --tree {} | head -200" "$@" ;;
+		export|unset ) fzf --preview "eval 'echo \$'{}" "$@" ;;
+		ssh          ) fzf --preview "dig {}" "$@" ;;
+		*            ) fzf --preview "if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi" "$@" ;;
+	esac
+}
+
 proxy() {
 	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 	for envar in $PROXY_ENV; do
