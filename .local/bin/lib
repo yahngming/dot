@@ -9,6 +9,10 @@ proxy() {
 }
 
 theme() {
+	case "$THEME" in
+		*dark*  ) touch -f ~/.config/dark ;;
+		*light* ) rm -f ~/.config/dark ;;
+	esac
 	if [ -f ~/.config/dark ]; then
 		export COLOR_SCHEME="prefer-dark"
 		export GTK_THEME="Adwaita-dark"
