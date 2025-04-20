@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/.local/bin/status
+source ~/.local/bin/lib
 
 while true; do
 	sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
