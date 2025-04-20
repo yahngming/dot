@@ -4,17 +4,15 @@ if [ "$XDG_VTNR" = 1 ]; then
 	if [ -f ~/.config/dark ]; then
 		export COLOR_SCHEME="prefer-dark"
 		export GTK_THEME="Adwaita-dark"
-		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
 		export ICON_THEME="Adwaita"
 		export XCURSOR_THEME="Bibata-Modern-Ice"
-		sed -i 's/Bibata-Modern.*/Bibata-Modern-Ice/' ~/.config/hypr/hyprland.conf
+		hyprctl setcursor Bibata-Modern-Ice 24
 	else
 		export COLOR_SCHEME="prefer-light"
 		export GTK_THEME="Adwaita"
-		export HYPRCURSOR_THEME="Bibata-Modern-Classic"
 		export ICON_THEME="Adwaita"
 		export XCURSOR_THEME="Bibata-Modern-Classic"
-		sed -i 's/Bibata-Modern.*/Bibata-Modern-Classic/' ~/.config/hypr/hyprland.conf
+		hyprctl setcursor Bibata-Modern-Classic 24
 	fi
 elif [ "$XDG_VTNR" = 2 ]; then
 	export COLOR_SCHEME="prefer-dark"
