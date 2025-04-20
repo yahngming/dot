@@ -89,34 +89,6 @@ net() {
 	[ "$net" ] && printf " $icon "
 }
 
-theme() {
-	case "$THEME" in
-		*dark* ) touch -f ~/.config/dark ;;
-		*      ) rm -f ~/.config/dark ;;
-	esac
-	if [ -f ~/.config/dark ]; then
-		export COLOR_SCHEME="prefer-dark"
-		export GTK_THEME="Adwaita-dark"
-		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
-		export ICON_THEME="Adwaita"
-		export XCURSOR_THEME="Bibata-Modern-Ice"
-	else
-		export COLOR_SCHEME="prefer-light"
-		export GTK_THEME="Adwaita"
-		export HYPRCURSOR_THEME="Bibata-Modern-Classic"
-		export ICON_THEME="Adwaita"
-		export XCURSOR_THEME="Bibata-Modern-Classic"
-	fi
-	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
-	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
-	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
-	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
-	if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$THEME.css ]; then
-		cat ~/.config/wal/colorschemes/$THEME.css > ~/.config/waybar/colors.css
-		hyprctl setcursor $HYPRCURSOR_THEME 24
-	fi
-}
-
 usb() {
 	usb="$(df | grep '/media/')"
 	[ "$usb" ] && printf " 󰕓 "
