@@ -1,6 +1,114 @@
 #!/bin/sh
 
-source ~/.local/bin/lib
+bat() {
+	bat="$(cat /sys/class/power_supply/BAT0/capacity)"
+	case 1 in
+		$((bat <= 10)) ) icon="󰂃" ;;
+		$((bat <= 20)) ) icon="󰁺" ;;
+		$((bat <= 30)) ) icon="󰁻" ;;
+		$((bat <= 40)) ) icon="󰁼" ;;
+		$((bat <= 50)) ) icon="󰁽" ;;
+		$((bat <= 60)) ) icon="󰁾" ;;
+		$((bat <= 70)) ) icon="󰁿" ;;
+		$((bat <= 80)) ) icon="󰂀" ;;
+		$((bat <= 90)) ) icon="󰂁" ;;
+		$((bat <= 99)) ) icon="󰂂" ;;
+		$((bat >= 99)) ) icon="󰁹" ;;
+	esac
+	[ "$bat" ] && printf " $icon "
+}
+
+clk() {
+	clk="$(date '+%I')"
+	case "$clk" in
+		"00" ) icon="󱑊" ;;
+		"01" ) icon="󱐿" ;;
+		"02" ) icon="󱑀" ;;
+		"03" ) icon="󱑁" ;;
+		"04" ) icon="󱑂" ;;
+		"05" ) icon="󱑃" ;;
+		"06" ) icon="󱑄" ;;
+		"07" ) icon="󱑅" ;;
+		"08" ) icon="󱑆" ;;
+		"09" ) icon="󱑇" ;;
+		"10" ) icon="󱑈" ;;
+		"11" ) icon="󱑉" ;;
+		"12" ) icon="󱑊" ;;
+	esac
+	clk="$(date '+%H:%M')"
+	printf " $icon $clk "
+}
+
+cpu() {
+	cpu="$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000))"
+	case 1 in
+		$((cpu <= 40)) ) icon="󱃃" ;;
+		$((cpu <= 80)) ) icon="󰔏" ;;
+		$((cpu <= 99)) ) icon="󱃂" ;;
+	esac
+	[ "$cpu" ] && printf " $icon $cpu°C "
+}
+
+cut() {
+	IFS=$2
+	set -- $1
+	printf '%s' "$@"
+}
+
+dpm() {
+	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
+		Disabled ) printf "  " ;;
+	esac
+}
+
+ime() {
+	case "$(fcitx5-remote -n)" in
+		*anthy*|*kkc*|*mozc*|*skk* ) ime="ja" ;;
+		*bi*|*ma*|*pin*            ) ime="zh" ;;
+		*hangul*                   ) ime="ko" ;;
+		*                          ) ime="en" ;;
+	esac
+	[ "$ime" ] && printf "  $ime "
+}
+
+net() {
+	net="$(iwctl station wlan0 show | grep '^\s*RSSI' | awk '{print $2}')"
+	case 1 in
+		$((net <= -80)) ) icon="󰤯" ;;
+		$((net <= -70)) ) icon="󰤟" ;;
+		$((net <= -60)) ) icon="󰤢" ;;
+		$((net <= -50)) ) icon="󰤥" ;;
+		$((net >= -50)) ) icon="󰤨" ;;
+	esac
+	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
+		down ) icon="󰤮" ;;
+	esac
+	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
+		*up* ) icon="󰈀" ;;
+	esac
+	[ "$net" ] && printf " $icon "
+}
+
+usb() {
+	usb="$(df | grep '/media/')"
+	[ "$usb" ] && printf " 󰕓 "
+}
+
+vol() {
+	vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
+	vol="${vol#'Volume: '}"
+	vol="${vol%' [MUTED]'}"
+	vol="$(printf "%.0f" "$(cut "$vol" ".")")"
+	case 1 in
+		$((vol <= 10)) ) icon="󰕿" ;;
+		$((vol <= 80)) ) icon="󰖀" ;;
+		$((vol >= 80)) ) icon="󰕾" ;;
+	esac
+	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
+		*MUTED* ) icon="󰝟" ;;
+	esac
+	[ "$vol" ] && printf " $icon "
+}
 
 while true; do
 	sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
