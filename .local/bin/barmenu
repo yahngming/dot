@@ -14,9 +14,7 @@ windows\n\
 
 bar=$(printf "$menu" | $MENU $opt -p "Select bar:" "$@")
 
-if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$bar.jsonc ]; then
-	cat ~/.config/waybar/config-$bar.jsonc > ~/.config/waybar/config.jsonc
-	cat ~/.config/waybar/style-$bar.css > ~/.config/waybar/style.css
+if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$bar.jsonc ] && [ -f ~/.config/waybar/style-$bar.css ]; then
 	killall waybar
 	waybar -c ~/.config/waybar/config-$bar.jsonc -s ~/.config/waybar/style-$bar.css
 fi
