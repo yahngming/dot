@@ -1,5 +1,0 @@
-#!/bin/sh
-
-source ~/.local/bin/lib
-
-printf "$(bat)$(net)$(vol)"
