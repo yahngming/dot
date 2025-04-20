@@ -1,28 +1,7 @@
 [[ $- != *i* ]] && return
-
 [[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
 [[ -f ~/.local/bin/lib ]] && . ~/.local/bin/lib
 [[ -f /usr/share/git/completion/git-prompt.sh ]] && . /usr/share/git/completion/git-prompt.sh
-
-_fzf_compgen_path() {
-	fd --exclude ".git" . "$1" --follow --hidden
-}
-
-_fzf_compgen_dir() {
-	fd --exclude ".git" . "$1" --follow --hidden --type directory
-}
-
-_fzf_comprun() {
-	local command=$1
-	shift
-	case "$command" in
-		cd           ) fzf --preview "eza --color=always --tree {} | head -200" "$@" ;;
-		export|unset ) fzf --preview "eval 'echo \$'{}" "$@" ;;
-		ssh          ) fzf --preview "dig {}" "$@" ;;
-		*            ) fzf --preview "if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi" "$@" ;;
-	esac
-}
-
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
 
 export BROWSER="chrome"
