@@ -1,7 +1,8 @@
 [[ $- != *i* ]] && return
 
-[[ -f /usr/share/git/completion/git-prompt.sh ]] && . /usr/share/git/completion/git-prompt.sh
+[[ -f ~/.local/bin/env ]] && . ~/.local/bin/env
 [[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
+[[ -f /usr/share/git/completion/git-prompt.sh ]] && . /usr/share/git/completion/git-prompt.sh
 
 _fzf_compgen_path() {
 	fd --exclude ".git" . "$1" --follow --hidden
@@ -20,63 +21,6 @@ _fzf_comprun() {
 		ssh          ) fzf --preview "dig {}" "$@" ;;
 		*            ) fzf --preview "if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi" "$@" ;;
 	esac
-}
-
-setenv() {
-	case "$XDG_VTNR" in
-		1)
-			export GUI="Hyprland"
-			export LAUNCHER="fuzzel"
-			export TERMINAL="foot"
-			if [ -f ~/.config/dark ]; then
-				export COLOR_SCHEME="prefer-dark"
-				export GTK_THEME="Adwaita-dark"
-				export HYPRCURSOR_THEME="Bibata-Modern-Ice"
-				export ICON_THEME="Adwaita"
-				export XCURSOR_THEME="Bibata-Modern-Ice"
-			else
-				export COLOR_SCHEME="prefer-light"
-				export GTK_THEME="Adwaita"
-				export HYPRCURSOR_THEME="Bibata-Modern-Classic"
-				export ICON_THEME="Adwaita"
-				export XCURSOR_THEME="Bibata-Modern-Classic"
-			fi
-			;;
-		2)
-			export COLOR_SCHEME="prefer-dark"
-			export GTK_THEME="Adwaita-dark"
-			export GUI="startx ~/.config/xorg/xinitrc dwm"
-			export ICON_THEME="Adwaita"
-			export LAUNCHER="dmenu"
-			export TERMINAL="st"
-			export XCURSOR_THEME="Bibata-Modern-Ice"
-			;;
-		3)
-			export COLOR_SCHEME="prefer-light"
-			export GTK_THEME="Chicago95"
-			export GUI="startx ~/.config/xorg/xinitrc xfce"
-			export ICON_THEME="Chicago95"
-			export LAUNCHER="xfce4-appfinder"
-			export QT_STYLE_OVERRIDE="Windows"
-			export TERMINAL="xfce4-terminal"
-			export XCURSOR_THEME="Chicago95 Standard Cursors"
-			;;
-	esac
-	case "$LAUNCHER" in
-		fuzzel ) export MENU="fuzzel --dmenu" ;;
-		rofi   ) export MENU="rofi -dmenu" ;;
-		walker ) export MENU="walker --dmenu --keepsort" ;;
-		*      ) export MENU="dmenu" ;;
-	esac
-	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
-	for envar in $PROXY_ENV; do
-		export $envar="http://127.0.0.1:7890"
-	done
-	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
-	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
-	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
-	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
-	gsettings set org.gnome.system.proxy mode "manual"
 }
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
@@ -109,7 +53,9 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ]; then
-	setenv
+	menu
+	proxy
+	theme
 	exec "$GUI"
 else
 	fastfetch | lolcat
