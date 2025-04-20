@@ -105,8 +105,8 @@ theme() {
 		*      ) export MENU="dmenu" ;;
 	esac
 	case "$THEME" in
-		*dark*  ) touch -f ~/.config/dark ;;
-		*light* ) rm -f ~/.config/dark ;;
+		*dark* ) touch -f ~/.config/dark ;;
+		*      ) rm -f ~/.config/dark ;;
 	esac
 	case "$XDG_VTNR" in
 		1)
