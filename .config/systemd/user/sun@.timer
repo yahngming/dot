@@ -1,0 +1,12 @@
+[Unit]
+Description=Sun Timer for %i service
+
+[Timer]
+OnCalendar=06,18:00
+OnStartupSec=1
+RandomizedDelaySec=1
+Persistent=true
+Unit=%i.service
+
+[Install]
+WantedBy=default.target
