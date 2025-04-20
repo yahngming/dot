@@ -1,5 +1,6 @@
 [[ $- != *i* ]] && return
 
+[[ -f ~/.local/bin/lib ]] && . ~/.local/bin/lib
 [[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
 [[ -f /usr/share/git/completion/git-prompt.sh ]] && . /usr/share/git/completion/git-prompt.sh
 
@@ -52,7 +53,8 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ]; then
-	darkmode
+	proxy
+	theme
 	exec "$GUI"
 else
 	fastfetch | lolcat
