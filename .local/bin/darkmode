@@ -1,0 +1,15 @@
+#!/bin/sh
+
+source ~/.local/bin/lib
+
+if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
+	mode="dark"
+	[[ -f ~/.config/dark ]] && exit
+else
+	mode="light"
+	[[ ! -f ~/.config/dark ]] && exit
+fi
+theme="catppuccin"
+THEME="$theme-$mode"
+
+theme
