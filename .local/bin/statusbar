@@ -110,6 +110,10 @@ vol() {
 	[ "$vol" ] && printf " $icon "
 }
 
-while true; do
-	sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
-done
+case "$GUI" in
+	*dwm*)
+		while true; do
+			sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
+		done
+		;;
+esac
