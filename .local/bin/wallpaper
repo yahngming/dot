@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/.cache/wal/colors.sh
+[[ -f ~/.cache/wal/colors.sh ]] && source ~/.cache/wal/colors.sh
 
 wallpaper=$(find ~/Pictures/wallpapers/* | shuf -n 1)
 wal -n -i "$wallpaper"
