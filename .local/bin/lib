@@ -1,10 +1,5 @@
 #!/bin/sh
 
-darkmode() {
-	if [[ "$(date +%H:%M)" > "18:00" ]] || [[ "$(date +%H:%M)" < "06:00" ]]; then
-		THEME
-}
-
 proxy() {
 	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 	for envar in $PROXY_ENV; do
@@ -14,22 +9,19 @@ proxy() {
 }
 
 theme() {
-	case "$THEME" in
-		*dark*)
-			export COLOR_SCHEME="prefer-dark"
-			export GTK_THEME="Adwaita-dark"
-			export HYPRCURSOR_THEME="Bibata-Modern-Ice"
-			export ICON_THEME="Adwaita"
-			export XCURSOR_THEME="Bibata-Modern-Ice"
-			;;
-		*)
-			export COLOR_SCHEME="prefer-light"
-			export GTK_THEME="Adwaita"
-			export HYPRCURSOR_THEME="Bibata-Modern-Classic"
-			export ICON_THEME="Adwaita"
-			export XCURSOR_THEME="Bibata-Modern-Classic"
-			;;
-	esac
+	if [ -f ~/.config/dark ]; then
+		export COLOR_SCHEME="prefer-dark"
+		export GTK_THEME="Adwaita-dark"
+		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
+		export ICON_THEME="Adwaita"
+		export XCURSOR_THEME="Bibata-Modern-Ice"
+	else
+		export COLOR_SCHEME="prefer-light"
+		export GTK_THEME="Adwaita"
+		export HYPRCURSOR_THEME="Bibata-Modern-Classic"
+		export ICON_THEME="Adwaita"
+		export XCURSOR_THEME="Bibata-Modern-Classic"
+	fi
 	case "$XDG_VTNR" in
 		1)
 			export GUI="Hyprland"
