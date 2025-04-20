@@ -107,7 +107,7 @@ vol() {
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
 		*MUTED* ) icon="󰝟" ;;
 	esac
-	[ "$vol" ] && printf " $icon "printf "$(bat)$(net)$(vol)"
+	[ "$vol" ] && printf " $icon "
 }
 
 case "$GUI" in
