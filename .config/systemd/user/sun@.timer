@@ -1,5 +1,5 @@
 [Unit]
-Description=Sun Timer for %i service
+Description=Sunrise and sunset timer for %i service
 
 [Timer]
 OnCalendar=06,18:00
