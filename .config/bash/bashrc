@@ -31,7 +31,7 @@ alias sudo="sudo "
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
-if [ -z "$DISPLAY" ]; then
+if [ -z "$DISPLAY" ] && [ -n "$GUI" ]; then
 	proxy
 	theme
 	exec "$GUI"
