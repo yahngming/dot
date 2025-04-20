@@ -3,8 +3,8 @@ Description=Sunrise and sunset timer for %i service
 
 [Timer]
 OnCalendar=06,18:00
-OnStartupSec=1
-RandomizedDelaySec=1
+OnStartupSec=3
+RandomizedDelaySec=3
 Persistent=true
 Unit=%i.service
 
