@@ -1,5 +1,5 @@
-@import url('../../.cache/wal/colors-waybar.css');
-@import url('colors.css');
+@import '/home/yahngming/.cache/wal/colors-waybar.css';
+@import 'colors.css';
 
 * {
 	font-family: "JetBrainsMono Nerd Font";
