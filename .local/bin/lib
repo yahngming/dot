@@ -28,7 +28,7 @@ proxy() {
 }
 
 theme() {
-	[[ -f ~/.config/wal/colorschemes/$THEME.css ]] && cp ~/.config/wal/colorschemes/$THEME.css ~/.cache/wal/colors-theme.css
+	[[ -f ~/.config/wal/colorschemes/$THEME.css ]] && cp ~/.config/wal/colorschemes/$THEME.css ~/.config/waybar/colors.css
 	case "$THEME" in
 		*dark*  ) touch -f ~/.config/dark ;;
 		*light* ) rm -f ~/.config/dark ;;
