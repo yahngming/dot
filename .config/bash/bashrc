@@ -1,6 +1,6 @@
 [[ $- != *i* ]] && return
 
-[[ -f ~/.local/bin/env ]] && . ~/.local/bin/env
+[[ -f ~/.local/bin/lib ]] && . ~/.local/bin/lib
 [[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
 [[ -f /usr/share/git/completion/git-prompt.sh ]] && . /usr/share/git/completion/git-prompt.sh
 
