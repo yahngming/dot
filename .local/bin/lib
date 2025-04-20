@@ -1,5 +1,18 @@
 #!/bin/sh
 
+darkmode() {
+	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
+		mode="dark"
+		[[ -f ~/.config/dark ]] && exit
+	else
+		mode="light"
+		[[ ! -f ~/.config/dark ]] && exit
+	fi
+	theme="catppuccin"
+	THEME="$theme-$mode"
+	theme
+}
+
 proxy() {
 	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 	for envar in $PROXY_ENV; do
