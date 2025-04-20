@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source ~/.local/bin/lib
+
 case "$MENU" in
 	dmenu ) opt="-noi" ;;
 esac
@@ -11,13 +13,6 @@ gruvbox-light\n\
 gruvbox-dark\n\
 "
 
-theme=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
+THEME=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
 
-if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$theme.css ]; then
-	cat ~/.config/wal/colorschemes/$theme.css > ~/.config/waybar/colors.css
-	case "$theme" in
-		*dark*  ) touch -f ~/.config/dark ;;
-		*light* ) rm -f ~/.config/dark ;;
-	esac
-	source ~/.local/bin/lib && theme && hyprctl setcursor $HYPRCURSOR_THEME 24
-fi
+theme
