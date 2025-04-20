@@ -3,7 +3,7 @@
 source ~/.local/bin/lib
 
 theme="catppuccin"
-if [ "$(date +%H:%M)" < "06:00" ] || [ "$(date +%H:%M)" > "18:00" ]; then
+if [ "$(date +%H:%M)" -lt "06:00" ] || [ "$(date +%H:%M)" -gt "18:00" ]; then
 	mode="dark"
 else
 	mode="light"
