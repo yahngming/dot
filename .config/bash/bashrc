@@ -82,6 +82,19 @@ eval "$(zoxide init bash)"
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 	export LAUNCHER="fuzzel"
 	export TERMINAL="foot"
+	if [ -f ~/.config/dark ]; then
+		export COLOR_SCHEME="prefer-dark"
+		export GTK_THEME="Adwaita-dark"
+		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
+		export ICON_THEME="Adwaita"
+		export XCURSOR_THEME="Bibata-Modern-Ice"
+	else
+		export COLOR_SCHEME="prefer-light"
+		export GTK_THEME="Adwaita"
+		export HYPRCURSOR_THEME="Bibata-Modern-Classic"
+		export ICON_THEME="Adwaita"
+		export XCURSOR_THEME="Bibata-Modern-Classic"
+	fi
 	setenv
 	exec Hyprland
 elif [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 2 ]; then
