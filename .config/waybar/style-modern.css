@@ -1,4 +1,4 @@
-@import '../../.cache/wal/colors-waybar.css';
+@import url("../../.cache/wal/colors-waybar.css");
 @import 'colors.css';
 
 * {
