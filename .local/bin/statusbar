@@ -107,7 +107,7 @@ vol() {
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
 		*MUTED* ) icon="󰝟" ;;
 	esac
-	[ "$vol" ] && printf " $icon "
+	[ "$vol" ] && printf " $icon "printf "$(bat)$(net)$(vol)"
 }
 
 case "$GUI" in
@@ -115,5 +115,8 @@ case "$GUI" in
 		while true; do
 			sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
 		done
+		;;
+	*)
+		printf "$(bat)$(net)$(vol)"
 		;;
 esac
