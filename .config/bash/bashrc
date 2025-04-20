@@ -34,7 +34,6 @@ eval "$(zoxide init bash)"
 if [ -z "$DISPLAY" ]; then
 	proxy
 	theme
-	darkmode
 	exec "$GUI"
 else
 	fastfetch | lolcat
