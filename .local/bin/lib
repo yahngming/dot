@@ -98,12 +98,6 @@ proxy() {
 }
 
 theme() {
-	case "$LAUNCHER" in
-		fuzzel ) export MENU="fuzzel --dmenu" ;;
-		rofi   ) export MENU="rofi -dmenu" ;;
-		walker ) export MENU="walker --dmenu --keepsort" ;;
-		*      ) export MENU="dmenu" ;;
-	esac
 	case "$THEME" in
 		*dark* ) touch -f ~/.config/dark ;;
 		*      ) rm -f ~/.config/dark ;;
@@ -146,6 +140,12 @@ theme() {
 			export TERMINAL="xfce4-terminal"
 			export XCURSOR_THEME="Chicago95 Standard Cursors"
 			;;
+	esac
+	case "$LAUNCHER" in
+		fuzzel ) export MENU="fuzzel --dmenu" ;;
+		rofi   ) export MENU="rofi -dmenu" ;;
+		walker ) export MENU="walker --dmenu --keepsort" ;;
+		*      ) export MENU="dmenu" ;;
 	esac
 	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
