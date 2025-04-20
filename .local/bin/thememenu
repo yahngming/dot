@@ -19,5 +19,5 @@ if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$theme.css ]; th
 		*dark*  ) touch -f ~/.config/dark ;;
 		*light* ) rm -f ~/.config/dark ;;
 	esac
-	source ~/.local/bin/env && theme && hyprctl setcursor $HYPRCURSOR_THEME 24
+	source ~/.local/bin/lib && theme && hyprctl setcursor $HYPRCURSOR_THEME 24
 fi
