@@ -72,7 +72,11 @@ setenv() {
 	for envar in $PROXY_ENV; do
 		export $envar="http://127.0.0.1:7890"
 	done
-	gsettings set org.gnome.system.proxy mode 'manual'
+	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
+	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
+	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
+	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+	gsettings set org.gnome.system.proxy mode "manual"
 }
 
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
