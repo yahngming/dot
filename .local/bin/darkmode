@@ -10,5 +10,4 @@ else
 fi
 THEME="$theme-$mode"
 
-proxy
 theme
