@@ -98,6 +98,16 @@ proxy() {
 }
 
 theme() {
+	case "$LAUNCHER" in
+		fuzzel ) export MENU="fuzzel --dmenu" ;;
+		rofi   ) export MENU="rofi -dmenu" ;;
+		walker ) export MENU="walker --dmenu --keepsort" ;;
+		*      ) export MENU="dmenu" ;;
+	esac
+	case "$THEME" in
+		*dark*  ) touch -f ~/.config/dark ;;
+		*light* ) rm -f ~/.config/dark ;;
+	esac
 	case "$XDG_VTNR" in
 		1)
 			export GUI="Hyprland"
@@ -141,12 +151,10 @@ theme() {
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
-	case "$LAUNCHER" in
-		fuzzel ) export MENU="fuzzel --dmenu" ;;
-		rofi   ) export MENU="rofi -dmenu" ;;
-		walker ) export MENU="walker --dmenu --keepsort" ;;
-		*      ) export MENU="dmenu" ;;
-	esac
+	if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/wal/colorschemes/$THEME.css ]; then
+		cat ~/.config/wal/colorschemes/$THEME.css > ~/.config/waybar/colors.css
+		hyprctl setcursor $HYPRCURSOR_THEME 24
+	fi
 }
 
 usb() {
