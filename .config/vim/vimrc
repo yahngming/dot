@@ -78,6 +78,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <C-n> :NERDTreeToggle<CR>
+map <C-z> u
 map <Space> <Leader>
 map <Leader>q :q!<CR>
 map <Leader>w :w!<CR>
