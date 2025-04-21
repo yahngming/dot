@@ -91,4 +91,3 @@ noremap <Down> :tabclose<CR>
 noremap <Left> gT
 noremap <Right> gt
 noremap <Up> :tabnew<CR>
-xnoremap <silent> y y:call system("wl-copy", @")<CR>
