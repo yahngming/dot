@@ -110,8 +110,8 @@ vol() {
 	[ "$vol" ] && printf " $icon "
 }
 
-case "$GUI" in
-	*dwm*)
+case "$DESKTOP" in
+	dwm)
 		while true; do
 			sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
 		done
