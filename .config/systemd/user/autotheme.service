@@ -1,0 +1,6 @@
+[Unit]
+Description=Auto theme switch
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/autotheme

@@ -1,6 +1,0 @@
-[Unit]
-Description=Change darkmode
-
-[Service]
-Type=oneshot
-ExecStart=%h/.local/bin/darkmode
