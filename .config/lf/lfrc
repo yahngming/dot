@@ -25,9 +25,9 @@ map R bulk-rename
 map V invert-below
 map x %trash-put $fx
 map X delete
-map gm cd $XDG_RUNTIME_DIR/gvfs
-map gt cd ~/.local/share/Trash
-map gu cd /run/media
+map gm chdir $XDG_RUNTIME_DIR/gvfs
+map gt chdir ~/.local/share/Trash
+map gu chdir /run/media
 map za push :archive<space>
 map zd push %mkdir<space>
 map zf push %touch<space>
@@ -40,6 +40,10 @@ cmd archive ${{
 	cp -r $fx $1
 	7z a $1.zip $1
 	rm -rf $1
+}}
+
+cmd chdir ${{
+	lf -remote "send $id cd $1"
 }}
 
 cmd pager ${{
