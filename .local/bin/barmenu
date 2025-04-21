@@ -12,7 +12,7 @@ starship\n\
 windows\n\
 "
 
-bar=$(printf "$menu" | $MENU $opt -p "Select bar:" "$@")
+bar=$(printf "$menu" | $MENU $opt -p "Bar style" "$@")
 
 if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$bar.jsonc ] && [ -f ~/.config/waybar/style-$bar.css ]; then
 	cp ~/.config/waybar/config-$bar.jsonc ~/.config/waybar/config.jsonc
