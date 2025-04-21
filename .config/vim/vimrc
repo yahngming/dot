@@ -2,6 +2,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimLeave * mksession! ~/.config/vim/session.vim
+augroup wl-clipboard
+	autocmd!
+	autocmd FocusLost * :call system('wl-copy --trim-newline', @+)
+	autocmd FocusGained * :let @+ = system('wl-paste -n')
+augroup END
 
 let $LANG='en'
 set autoindent
