@@ -253,6 +253,7 @@
 	},
 
 	"clock#time": {
+		"interval": 1,
 		"format": "{:%I:%M %p}",
 		"format-alt": "{:%T}",
 		"timezones": ["", "America/New_York", "America/Los_Angeles"],
