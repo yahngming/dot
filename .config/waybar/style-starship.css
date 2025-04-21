@@ -413,7 +413,6 @@ tooltip label {
 	color: @time;
 	background: @main-bg;
 	margin-bottom: -1px;
-	padding-left: 2px;
 }
 #custom-power {
 	color: @main-bg;
@@ -421,7 +420,7 @@ tooltip label {
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.6);
 	border-radius: 10px;
-	margin: 2px 4px 2px 0;
+	margin: 2px 4px 2px 4px;
 	padding: 0 6px 0 9px;
 }
 #custom-power:hover {
