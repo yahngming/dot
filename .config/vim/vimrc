@@ -2,11 +2,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimLeave * mksession! ~/.config/vim/session.vim
-augroup wl-clipboard
-	autocmd!
-	autocmd FocusLost * :call system('wl-copy --trim-newline', @+)
-	autocmd FocusGained * :let @+ = system('wl-paste -n')
-augroup END
 
 let $LANG='en'
 set autoindent
@@ -96,5 +91,5 @@ noremap <Down> :tabclose<CR>
 noremap <Left> gT
 noremap <Right> gt
 noremap <Up> :tabnew<CR>
-xnoremap <silent> <C-v> <C-U>:let @+=system("wl-paste --no-newline")<CR>p
+noremap <silent> <C-v> :let @+=system("wl-paste --no-newline")<CR>p
 xnoremap <silent> <C-c> y:call system("wl-copy --trim-newline", @+)<CR>
