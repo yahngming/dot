@@ -123,36 +123,16 @@ tooltip label {
 	padding: 0 4px;
 }
 
-#custom-ws:hover {
-	color: @hover-fg;
-}
-#window:hover {
-	color: @hover-fg;
-}
-#cpu:hover {
-	color: @hover-fg;
-}
-#custom-distro:hover {
-	color: @hover-fg;
-}
-#pulseaudio:hover {
-	color: @hover-fg;
-}
-#mpris:hover {
-	color: @hover-fg;
-}
-#custom-usb:hover {
-	color: @hover-fg;
-}
-#idle_inhibitor:hover {
-	color: @hover-fg;
-}
-#bluetooth:hover {
-	color: @hover-fg;
-}
-#network:hover {
-	color: @hover-fg;
-}
+#custom-ws:hover,
+#window:hover,
+#cpu:hover,
+#custom-distro:hover,
+#pulseaudio:hover,
+#mpris:hover,
+#custom-usb:hover,
+#idle_inhibitor:hover,
+#bluetooth:hover,
+#network:hover,
 #custom-power:hover {
 	color: @hover-fg;
 }
