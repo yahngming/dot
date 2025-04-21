@@ -129,7 +129,6 @@ tooltip label {
 #bluetooth,
 #network,
 #clock,
-#custom-update,
 #custom-power {
 	opacity: 1;
 	color: @module-fg;
@@ -378,15 +377,9 @@ tooltip label {
 }
 #network {
 	background: @tray;
-}
-#network:hover {
-	color: @hover-fg;
-}
-#custom-update {
-	background: @tray;
 	padding-right: 8px;
 }
-#custom-update:hover {
+#network:hover {
 	color: @hover-fg;
 }
 
