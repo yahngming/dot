@@ -12,5 +12,5 @@ password=$($MENU -p "Password:" < /dev/null) || exit 1
 servershare="smb://${server}.local/${share}"
 clientmount="$XDG_RUNTIME_DIR/gvfs/${server}/${share}"
 
-gio mount -m -t cifs "$servershare" "$clientmount" -o username="$username",password="$password"
+gio mount "$servershare" "$clientmount"
 notify-send "$clientmount mounted."
