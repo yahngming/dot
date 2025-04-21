@@ -48,14 +48,14 @@ theme() {
 			export TERMINAL="foot"
 			;;
 		2)
-			export GUI="startx ~/.config/xorg/xinitrc dwm"
+			export GUI="/usr/bin/startx ~/.config/xorg/xinitrc dwm"
 			export LAUNCHER="dmenu"
 			export TERMINAL="st"
 			;;
 		3)
 			export COLOR_SCHEME="prefer-light"
 			export GTK_THEME="Chicago95"
-			export GUI="startx ~/.config/xorg/xinitrc xfce"
+			export GUI="/usr/bin/startx ~/.config/xorg/xinitrc xfce"
 			export ICON_THEME="Chicago95"
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
