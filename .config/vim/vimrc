@@ -1,6 +1,8 @@
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd FocusGained,BufEnter * silent! checktime
+autocmd FocusGained * :let @+ = system('wl-paste --no-newline')
+autocmd FocusLost * :call system('wl-copy --trim-newline', @+)
 autocmd VimLeave * mksession! ~/.config/vim/session.vim
 
 let $LANG='en'
@@ -92,4 +94,4 @@ noremap <Left> gT
 noremap <Right> gt
 noremap <Up> :tabnew<CR>
 xnoremap <silent> <C-v> :r !wl-paste<CR><CR>
-xnoremap <silent> <C-c> y:call system("wl-copy --trim-newline", @*)<CR>
+xnoremap <silent> <C-c> y:call system("wl-copy --trim-newline", @+)<CR>
