@@ -362,7 +362,7 @@ tooltip label {
 }
 #network {
 	background: @tray;
-	padding-right: 3px;
+	padding-right: 10px;
 }
 #network:hover {
 	color: @hover-fg;
