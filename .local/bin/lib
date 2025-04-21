@@ -73,8 +73,8 @@ theme() {
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
 		hyprctl setcursor $HYPRCURSOR_THEME 24
 	fi
 }
