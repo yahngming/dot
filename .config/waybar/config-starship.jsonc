@@ -147,7 +147,7 @@
 		"format": "{icon} {percent}%",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
 		"tooltip": false,
-		"scroll-step": 2,
+		"scroll-step": 5,
 		"min-length": 6,
 		"max-length": 6
 	},
