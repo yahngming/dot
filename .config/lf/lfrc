@@ -25,7 +25,7 @@ map R bulk-rename
 map V invert-below
 map x %trash-put $fx
 map X delete
-map gm chdir $XDG_RUNTIME_DIR/gvfs
+map gm chdir \"$XDG_RUNTIME_DIR/gvfs\"
 map gt chdir ~/.local/share/Trash
 map gu chdir /run/media
 map za push :archive<space>
