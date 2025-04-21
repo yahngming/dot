@@ -12,10 +12,24 @@ Dark mode\n\
 Light mode\n\
 "
 
-case $(printf "$menu" | $MENU $opt "$@") in
-	*Auto*  ) darkmode ;;
-	*Dark*  ) touch -f ~/.config/dark ;;
-	*Light* ) rm -f ~/.config/dark ;;
-esac
+service="sun@darkmode.timer"
 
-theme
+case $(printf "$menu" | $MENU $opt "$@") in
+	*Auto*)
+		darkmode
+		systemctl --user start $service
+		systemctl --user enable $service
+		;;
+	*Dark*)
+		touch -f ~/.config/dark
+		theme
+		systemctl --user stop $service
+		systemctl --user disable $service
+		;;
+	*Light*)
+		rm -f ~/.config/dark
+		theme
+		systemctl --user stop $service
+		systemctl --user disable $service
+		;;
+esac
