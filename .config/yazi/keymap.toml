@@ -1,7 +1,7 @@
 [manager]
 
 prepend_keymap = [
-	{ on = [ "g", "m" ],       run = "cd /run/mount/$USER",         desc = "Goto /run/mount/$USER" },
+	{ on = [ "g", "m" ],       run = "cd /run/mount/$USER",         desc = "Goto $XDG_RUNTIME_DIR/gvfs" },
 	{ on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",     desc = "Goto ~/.local/share/Trash" },
 	{ on = [ "g", "u" ],       run = "cd /run/media/$USER",         desc = "Goto /run/media/$USER" },
 ]
