@@ -174,8 +174,6 @@ tooltip label {
 #custom-left1 {
 	color: @workspaces;
 	background: @main-bg;
-	margin-bottom: 0;
-	padding-left: 2px;
 }
 #workspaces {
 	background: @workspaces;
@@ -183,8 +181,6 @@ tooltip label {
 #custom-right1 {
 	color: @workspaces;
 	background: @main-bg;
-	text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
-	margin-bottom: 0;
 }
 
 /* Window */
@@ -192,8 +188,7 @@ tooltip label {
 #window {
 	font-weight: normal;
 	background-color: @main-bg;
-	padding-right: 8px;
-	padding-left: 8px;
+	padding: 0 8px;
 }
 #window:hover {
 	color: @hover-fg;
@@ -207,12 +202,9 @@ tooltip label {
 #custom-left2 {
 	color: @temperature;
 	background: @main-bg;
-	padding-left: 3px;
 }
 #temperature {
 	background: @temperature;
-	padding-left: 1px;
-	padding-right: 0;
 }
 #temperature.warning {
 	color: @warning;
@@ -226,12 +218,9 @@ tooltip label {
 #custom-left3 {
 	color: @memory;
 	background: @temperature;
-	padding-left: 3px;
 }
 #memory {
 	background: @memory;
-	padding-left: 1px;
-	padding-right: 0;
 }
 #memory.warning {
 	color: @warning;
@@ -245,7 +234,6 @@ tooltip label {
 #custom-left4 {
 	color: @cpu;
 	background: @memory;
-	padding-left: 3px;
 }
 #cpu {
 	background: @cpu;
@@ -265,7 +253,6 @@ tooltip label {
 	background: @main-bg;
 	text-shadow: none;
 	margin-bottom: -2px;
-	padding-left: 3px;
 }
 #custom-distro {
 	color: @distro-fg;
@@ -339,8 +326,7 @@ tooltip label {
 #mpris {
 	font-weight: normal;
 	background-color: @main-bg;
-	padding-right: 8px;
-	padding-left: 8px;
+	padding: 0 8px;
 }
 #mpris:hover {
 	color: @hover-fg;
@@ -351,7 +337,6 @@ tooltip label {
 #custom-left6 {
 	color: @tray;
 	background: @main-bg;
-	padding-left: 3px;
 }
 #tray {
 	background: @tray;
@@ -377,7 +362,7 @@ tooltip label {
 }
 #network {
 	background: @tray;
-	padding-right: 8px;
+	padding-right: 3px;
 }
 #network:hover {
 	color: @hover-fg;
@@ -388,7 +373,6 @@ tooltip label {
 #custom-left7 {
 	color: @date;
 	background: @tray;
-	padding-left: 2px;
 }
 #clock.date {
 	background: @date;
@@ -399,12 +383,9 @@ tooltip label {
 #custom-left8 {
 	color: @time;
 	background: @date;
-	padding-left: 2px;
 }
 #clock.time {
 	background: @time;
-	margin-left: -2px;
-	padding: 0 3px 0 0;
 }
 
 /* Power Button */
