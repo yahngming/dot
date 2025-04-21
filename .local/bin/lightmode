@@ -1,0 +1,8 @@
+#!/bin/sh
+
+source ~/.local/bin/lib
+
+rm -f ~/.config/dark
+theme
+systemctl --user stop sun@darkmode.timer
+systemctl --user disable sun@darkmode.timer
