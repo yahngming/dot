@@ -144,8 +144,8 @@ tooltip label {
 #custom-left7,
 #custom-left8 {
 	margin-bottom: 0px;
-	padding-left: 3px;
-	text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+	padding-left: 4px;
+	text-shadow: -3px 0 2px rgba(0, 0, 0, 0.5);
 }
 
 #custom-right1,
@@ -154,8 +154,8 @@ tooltip label {
 #custom-right4,
 #custom-right5 {
 	margin-bottom: 0px;
-	padding-right: 3px;
-	text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+	padding-right: 4px;
+	text-shadow: 3px 0 2px rgba(0, 0, 0, 0.5);
 }
 
 /* <<--< Modules >-->> */
