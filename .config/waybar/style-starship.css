@@ -413,6 +413,7 @@ tooltip label {
 	color: @time;
 	background: @main-bg;
 	margin-bottom: -1px;
+	padding-left: 2px;
 }
 #custom-power {
 	color: @main-bg;
