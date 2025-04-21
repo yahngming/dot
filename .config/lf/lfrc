@@ -26,8 +26,8 @@ map V invert-below
 map x %trash-put $fx
 map X delete
 map gm ${{lf -remote "send $id cd $XDG_RUNTIME_DIR/gvfs"}}
-map gt cd ~/.local/share/Trash
-map gu cd /run/media
+map gt ${{lf -remote "send $id cd $HOME/.local/share/Trash"}}
+map gu ${{lf -remote "send $id cd /run/media/$USER"}}
 map za push :archive<space>
 map zd push %mkdir<space>
 map zf push %touch<space>
