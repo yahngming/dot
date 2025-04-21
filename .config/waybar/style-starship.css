@@ -123,6 +123,40 @@ tooltip label {
 	padding: 0 4px;
 }
 
+#custom-ws:hover {
+	color: @hover-fg;
+}
+#window:hover {
+	color: @hover-fg;
+}
+#cpu:hover {
+	color: @hover-fg;
+}
+#custom-distro:hover {
+	color: @hover-fg;
+}
+#pulseaudio:hover {
+	color: @hover-fg;
+}
+#mpris:hover {
+	color: @hover-fg;
+}
+#custom-usb:hover {
+	color: @hover-fg;
+}
+#idle_inhibitor:hover {
+	color: @hover-fg;
+}
+#bluetooth:hover {
+	color: @hover-fg;
+}
+#network:hover {
+	color: @hover-fg;
+}
+#custom-power:hover {
+	color: @hover-fg;
+}
+
 #custom-left1,
 #custom-left2,
 #custom-left3,
@@ -153,9 +187,6 @@ tooltip label {
 #custom-ws {
 	background: @main-bg;
 }
-#custom-ws:hover {
-	color: @hover-fg;
-}
 
 /* Workspaces */
 
@@ -177,9 +208,6 @@ tooltip label {
 	font-weight: normal;
 	background-color: @main-bg;
 	padding: 0 8px;
-}
-#window:hover {
-	color: @hover-fg;
 }
 
 /* Temperature */
@@ -226,9 +254,6 @@ tooltip label {
 #cpu {
 	background: @cpu;
 }
-#cpu:hover {
-	color: @hover-fg;
-}
 #custom-leftin1 {
 	color: @cpu;
 	margin-bottom: -1px;
@@ -249,9 +274,6 @@ tooltip label {
 	padding: 0 9px 0 5px;
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }
-#custom-distro:hover {
-	color: @hover-fg;
-}
 #custom-right2 {
 	color: @distro-bg;
 	background: @main-bg;
@@ -267,9 +289,6 @@ tooltip label {
 }
 #pulseaudio {
 	background: @pulseaudio;
-}
-#pulseaudio:hover {
-	color: @hover-fg;
 }
 #custom-right3 {
 	color: @pulseaudio;
@@ -315,9 +334,6 @@ tooltip label {
 	background-color: @main-bg;
 	padding: 0 8px;
 }
-#mpris:hover {
-	color: @hover-fg;
-}
 
 /* Tray */
 
@@ -332,27 +348,15 @@ tooltip label {
 #custom-usb {
 	background: @tray;
 }
-#custom-usb:hover {
-	color: @hover-fg;
-}
 #idle_inhibitor {
 	background: @tray;
-}
-#idle_inhibitor:hover {
-	color: @hover-fg;
 }
 #bluetooth {
 	background: @tray;
 }
-#bluetooth:hover {
-	color: @hover-fg;
-}
 #network {
 	background: @tray;
 	padding-right: 10px;
-}
-#network:hover {
-	color: @hover-fg;
 }
 
 /* Date */
@@ -392,7 +396,6 @@ tooltip label {
 	padding: 0 6px 0 9px;
 }
 #custom-power:hover {
-	color: @hover-fg;
 	background: @hover-bg;
 	text-shadow: none;
 	box-shadow: none;
