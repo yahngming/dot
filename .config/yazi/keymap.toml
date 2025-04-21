@@ -1,7 +1,7 @@
 [manager]
 
 prepend_keymap = [
-	{ on = [ "g", "m" ],       run = "cd /run/mount/$USER",         desc = "Goto $XDG_RUNTIME_DIR/gvfs" },
-	{ on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",     desc = "Goto ~/.local/share/Trash" },
-	{ on = [ "g", "u" ],       run = "cd /run/media/$USER",         desc = "Goto /run/media/$USER" },
+	{ on = [ "g", "m" ],        run = "cd $XDG_RUNTIME_DIR/gvfs",           desc = "Open SMB mount" },
+	{ on = [ "g", "t" ],        run = "cd $HOME/.local/share/Trash",        desc = "Open trash bin" },
+	{ on = [ "g", "u" ],        run = "cd /run/media/$USER",                desc = "Open USB mount" },
 ]
