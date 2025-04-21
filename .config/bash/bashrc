@@ -34,7 +34,7 @@ eval "$(zoxide init bash)"
 if [ -z "$DISPLAY" ]; then
 	proxy
 	theme
-	$START
+	eval "$START"
 else
 	fastfetch | lolcat
 fi
