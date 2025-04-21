@@ -289,7 +289,6 @@ tooltip label {
 /* Battery */
 
 #battery {
-	color: @module-fg;
 	background: @battery;
 }
 #battery.warning {
