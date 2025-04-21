@@ -8,7 +8,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
-set clipboard^=unnamedplus
+set clipboard=unnamedplus
 set cmdheight=1
 set complete+=kspell
 set encoding=utf8
@@ -91,4 +91,4 @@ noremap <Down> :tabclose<CR>
 noremap <Left> gT
 noremap <Right> gt
 noremap <Up> :tabnew<CR>
-xnoremap <silent> y :call system("wl-copy --trim-newline", @")<CR>
+xnoremap <silent> y :w !wl-copy<CR><CR>
