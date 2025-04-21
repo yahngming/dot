@@ -10,7 +10,7 @@ share=$(smbclient -N -L "$server" | grep "Disk" | awk '{print $1}' | sort -u | $
 username=$($MENU -p "Username:" < /dev/null) || exit 1
 password=$($MENU -p "Password:" < /dev/null) || exit 1
 servershare="smb://${server}.local/${share}"
-clientmount="$XDG_RUNTIME_DIR/gvfs/smb-share:server=${server},share=${share}"
+clientmount="$XDG_RUNTIME_DIR/gvfs/smb-share:server=${server}.local,share=${share}"
 
 printf ${username}'\n\n'${password}'\n' | gio mount "$servershare"
 notify-send "$clientmount mounted."
