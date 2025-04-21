@@ -2,7 +2,7 @@
 
 @define-color fg              @background;
 @define-color bg              @foreground;
-@define-color gg              @color4;
+@define-color gg              @color3;
 @define-color rosewater       #dc8a78;
 @define-color flamingo        #dd7878;
 @define-color pink            #ea76cb;
@@ -29,5 +29,3 @@
 @define-color base            #eff1f5;
 @define-color mantle          #e6e9ef;
 @define-color crust           #dce0e8;
-@define-color white           #ffffff;
-@define-color black           #000000;
