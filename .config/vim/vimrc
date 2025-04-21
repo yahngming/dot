@@ -2,7 +2,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd FocusGained,BufEnter * silent! checktime
 autocmd FocusGained * :let @+ = system('wl-paste --no-newline')
-autocmd FocusLost * :call system("wl-copy --trim-newline", @+)<CR>
+autocmd FocusLost * :call system("wl-copy --trim-newline", @+)
 autocmd VimLeave * mksession! ~/.config/vim/session.vim
 
 let $LANG='en'
@@ -10,7 +10,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
-set clipboard=unnamedplus
+set clipboard=unnamed,unnamedplus
 set cmdheight=1
 set complete+=kspell
 set encoding=utf8
