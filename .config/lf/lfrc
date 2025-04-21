@@ -20,12 +20,12 @@ map <delete> %trash-put $fx
 map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
-map d %trash-put $fx
-map D delete
+map F filter
 map i pager
 map R bulk-rename
 map V invert-below
-map x cut
+map x %trash-put $fx
+map X delete
 map gm ${{lf -remote "send $id cd $XDG_RUNTIME_DIR/gvfs"}}
 map gt ${{lf -remote "send $id cd $HOME/.local/share/Trash"}}
 map gu ${{lf -remote "send $id cd /run/media/$USER"}}
