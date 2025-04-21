@@ -20,7 +20,8 @@ map <delete> %trash-put $fx
 map <s-delete> %rm -rf $fx
 map ` !true
 map . set hidden!
-map F filter
+map f filter
+map F setfilter
 map i pager
 map R bulk-rename
 map V invert-below
