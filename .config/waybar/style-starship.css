@@ -51,7 +51,7 @@
 
 window#waybar > box {
 	background-color: @main-bg;
-	padding: 2px;
+	padding: 1px;
 }
 
 /* <<--< Drop Shadow >-->> */
@@ -149,7 +149,7 @@ tooltip label {
 #custom-left8 {
 	margin-bottom: 0px;
 	padding-left: 4px;
-	text-shadow: -3px 0 2px rgba(0, 0, 0, 0.5);
+	text-shadow: -3px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #custom-right1,
@@ -159,7 +159,7 @@ tooltip label {
 #custom-right5 {
 	margin-bottom: 0px;
 	padding-right: 4px;
-	text-shadow: 3px 0 2px rgba(0, 0, 0, 0.5);
+	text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* <<--< Modules >-->> */
