@@ -1,7 +1,7 @@
 @import '/home/yahngming/.cache/wal/colors-waybar.css';
 
-@define-color fg              @foreground;
 @define-color bg              @background;
+@define-color fg              @foreground;
 @define-color gg              @color3;
 @define-color rosewater       #f5e0dc;
 @define-color flamingo        #f2cdcd;
