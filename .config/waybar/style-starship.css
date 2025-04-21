@@ -129,10 +129,12 @@ tooltip label {
 #custom-distro:hover,
 #pulseaudio:hover,
 #mpris:hover,
+#tray:hover,
 #custom-usb:hover,
 #idle_inhibitor:hover,
 #bluetooth:hover,
 #network:hover,
+#clock:hover,
 #custom-power:hover {
 	color: @hover-fg;
 }
