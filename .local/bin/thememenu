@@ -7,12 +7,13 @@ case "$MENU" in
 esac
 
 menu="\
-catppuccin-light\n\
-catppuccin-dark\n\
-gruvbox-light\n\
-gruvbox-dark\n\
+Dark mode\n\
+Light mode\n\
+Auto mode\n\
 "
 
-THEME=$(printf "$menu" | $MENU $opt -p "Select color scheme:" "$@")
+case "$menu" in
+
+esac
 
 theme
