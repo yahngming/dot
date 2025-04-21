@@ -7,14 +7,14 @@ case "$MENU" in
 esac
 
 menu="\
-Auto switch\n\
-Dark mode\n\
-Light mode\n\
+󰔎 Auto switch\n\
+ Dark mode\n\
+ Light mode\n\
 "
 
 service="sun@darkmode.timer"
 
-case $(printf "$menu" | $MENU $opt "$@") in
+case $(printf "$menu" | $MENU $opt -p "Select theme:" "$@") in
 	*Auto*)
 		darkmode
 		systemctl --user start $service
