@@ -91,5 +91,4 @@ noremap <Down> :tabclose<CR>
 noremap <Left> gT
 noremap <Right> gt
 noremap <Up> :tabnew<CR>
-xnoremap <silent> p :r !wl-paste<CR><CR>
-xnoremap <silent> y :w !wl-copy<CR><CR>
+noremap <silent> <leader>y y:call system("wl-copy --trim-newline", @*)<CR>
