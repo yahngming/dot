@@ -1,0 +1,8 @@
+#!/bin/sh
+
+source ~/.local/bin/lib
+
+touch -f ~/.config/dark
+theme
+systemctl --user stop sun@autotheme.timer
+systemctl --user disable sun@autotheme.timer
