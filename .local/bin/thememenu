@@ -13,9 +13,9 @@ Light mode\n\
 "
 
 case $(printf "$menu" | $MENU $opt "$@") in
-	*Auto*) autodark ;;
-	*Dark*) touch -f ~/.config/dark ;;
-	*Light*) rm -f ~/.config/dark ;;
+	*Auto*  ) darkmode ;;
+	*Dark*  ) touch -f ~/.config/dark ;;
+	*Light* ) rm -f ~/.config/dark ;;
 esac
 
 theme
