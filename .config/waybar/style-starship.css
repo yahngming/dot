@@ -2,26 +2,26 @@
 
 /* Main Colors */
 
-@define-color shadow          shade(@crust, 0.5);
-@define-color main-fg         @text;
-@define-color main-bg         @crust;
-@define-color main-br         @text;
+@define-color shadow          shade(@bg, 0.5);
+@define-color main-fg         @fg;
+@define-color main-bg         @bg;
+@define-color main-br         @fg;
 
 @define-color active-bg       @overlay2;
-@define-color active-fg       @crust;
+@define-color active-fg       @bg;
 
 @define-color hover-bg        @surface0;
-@define-color hover-fg        alpha(@text, 0.75);
+@define-color hover-fg        alpha(@fg, 0.75);
 
 /* Module Colors */
 
-@define-color module-fg       @text;
+@define-color module-fg       @fg;
 @define-color workspaces      @mantle;
 
 @define-color temperature     @mantle;
 @define-color memory          @base;
 @define-color cpu             @surface0;
-@define-color distro-fg       @black;
+@define-color distro-fg       @gg;
 @define-color distro-bg       @overlay2;
 @define-color pulseaudio      @surface0;
 @define-color backlight       @base;
@@ -36,18 +36,6 @@
 
 @define-color warning         @yellow;
 @define-color critical        @red;
-@define-color charging        @text;
-
-/* Override Colors */
-
-@define-color shadow          shade(@bg, 0.5);
-@define-color main-fg         @fg;
-@define-color main-bg         @bg;
-@define-color main-br         @fg;
-@define-color active-fg       @bg;
-@define-color hover-fg        alpha(@fg, 0.75);
-@define-color module-fg       @fg;
-@define-color distro-fg       @gg;
 @define-color charging        @fg;
 
 * {
