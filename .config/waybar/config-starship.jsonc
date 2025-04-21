@@ -245,7 +245,8 @@
 		},
 		"actions": {
 			"on-click": "mode",
-			"on-click-right": "mode"
+			"on-scroll-up": "shift_down",
+			"on-scroll-down": "shift_up"
 		},
 		"min-length": 6,
 		"max-length": 6
@@ -255,6 +256,11 @@
 		"format": "{:%I:%M %p}",
 		"tooltip": true,
 		"tooltip-format": "{:%H:%M UTC%Ez}",
+		"actions": {
+			"on-click": "mode",
+			"on-scroll-up": "tz_down",
+			"on-scroll-down": "tz_up"
+		},
 		"min-length": 9,
 		"max-length": 9
 	},
