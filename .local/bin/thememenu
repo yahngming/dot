@@ -1,7 +1,5 @@
 #!/bin/sh
 
-source ~/.local/bin/lib
-
 case "$MENU" in
 	dmenu ) opt="-noi" ;;
 esac
@@ -12,24 +10,8 @@ menu="\
  Light mode\n\
 "
 
-service="sun@darkmode.timer"
-
 case $(printf "$menu" | $MENU $opt -p "Select theme:" "$@") in
-	*Auto*)
-		darkmode
-		systemctl --user start $service
-		systemctl --user enable $service
-		;;
-	*Dark*)
-		touch -f ~/.config/dark
-		theme
-		systemctl --user stop $service
-		systemctl --user disable $service
-		;;
-	*Light*)
-		rm -f ~/.config/dark
-		theme
-		systemctl --user stop $service
-		systemctl --user disable $service
-		;;
+	*Auto*  ) autotheme ;;
+	*Dark*  ) darkmode ;;
+	*Light* ) lightmode ;;
 esac
