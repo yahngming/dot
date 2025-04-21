@@ -63,10 +63,6 @@ theme() {
 			export XCURSOR_THEME="Chicago95 Standard Cursors"
 			;;
 	esac
-	case "$DESKTOP" in
-		Hyprland ) export START="exec $DESKTOP" ;;
-		*        ) export START="startx ~/.config/xorg/xinitrc $DESKTOP" ;;
-	esac
 	case "$LAUNCHER" in
 		fuzzel ) export MENU="fuzzel --dmenu" ;;
 		rofi   ) export MENU="rofi -dmenu" ;;
