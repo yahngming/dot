@@ -254,10 +254,10 @@
 
 	"clock#time": {
 		"format": "{:%I:%M %p}",
-		"tooltip": true,
+		"format-alt": "{:%H:%M}",
+		"timezones": ["", "America/New_York", "America/Los_Angeles"],
 		"tooltip-format": "{:%H:%M UTC%Ez}",
 		"actions": {
-			"on-click": "mode",
 			"on-scroll-up": "tz_down",
 			"on-scroll-down": "tz_up"
 		},
