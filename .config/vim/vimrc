@@ -91,4 +91,4 @@ noremap <Down> :tabclose<CR>
 noremap <Left> gT
 noremap <Right> gt
 noremap <Up> :tabnew<CR>
-noremap <silent> y y:w !wl-copy<CR><CR>
+xnoremap <silent> y y:w !wl-copy<CR><CR>
