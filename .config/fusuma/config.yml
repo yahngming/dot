@@ -1,9 +1,9 @@
 swipe:
   3: 
     left: 
-      command: 'xdotool key alt+Right'
+      command: 'xdo key_press -k 113; xdo key_press -k 100; sleep 0.2; xdo key_release -k 100; xdo key_release -k 113'
     right: 
-      command: 'xdotool key alt+Left'
+      command: 'xdo key_press -k 113; xdo key_press -k 100; sleep 0.2; xdo key_release -k 100; xdo key_release -k 113'
     up: 
       command: 'xdotool key ctrl+shift+plus'
     down: 
