@@ -254,15 +254,15 @@
 
 	"clock#time": {
 		"format": "{:%I:%M %p}",
-		"format-alt": "{:%H:%M}",
+		"format-alt": "{:%T}",
 		"timezones": ["", "America/New_York", "America/Los_Angeles"],
 		"tooltip-format": "{:%H:%M UTC%Ez}",
 		"actions": {
 			"on-scroll-up": "tz_down",
 			"on-scroll-down": "tz_up"
 		},
-		"min-length": 9,
-		"max-length": 9
+		"min-length": 8,
+		"max-length": 8
 	},
 
 	"custom/power": {
