@@ -71,12 +71,12 @@ map <Left> h
 map <Right> l
 map <Up> gk
 map <C-a> ggVG
-map <C-o> :Files<CR>
-map <C-p> :NERDTreeToggle<CR>
 map <C-v> p
 map <C-z> u
 map <Leader>. :set list!<CR>
 map <Leader><Esc> :nohlsearch<CR>
+map <Leader>o :Files<CR>
+map <Leader>p :NERDTreeToggle<CR>
 map <Leader>q :q!<CR>
 map <Leader>w :w!<CR>
 imap jk <Esc>
