@@ -61,10 +61,6 @@ set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
 set wildmenu
 set wrap
 
-filetype indent on
-filetype plugin on
-syntax on
-
 map <Space> <Leader>
 map <Down> gj
 map <Left> h
@@ -98,6 +94,10 @@ Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 call plug#end()
+
+filetype indent on
+filetype plugin on
+syntax on
 
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
