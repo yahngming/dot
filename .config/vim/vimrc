@@ -1,5 +1,4 @@
 let $LANG='en'
-let g:ale_completion_enabled=1
 set autoindent
 set autoread
 set background=dark
@@ -30,6 +29,7 @@ set noshowmode
 set noswapfile
 set nowritebackup
 set number
+set omnifunc=syntaxcomplete#Complete
 set regexpengine=0
 set relativenumber
 set ruler
@@ -90,7 +90,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'dense-analysis/ale'
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
