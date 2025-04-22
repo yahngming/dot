@@ -73,6 +73,7 @@ map <Right> l
 map <Up> gk
 map <C-a> ggVG
 map <C-n> :NERDTreeToggle<CR>
+map <C-o> :Files<CR>
 map <C-v> p
 map <C-z> u
 map <Leader>. :set list!<CR>
