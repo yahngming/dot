@@ -83,7 +83,7 @@ map <Space> <Leader>
 map <Leader>q :q!<CR>
 map <Leader>w :w!<CR>
 map <Leader>. :set list!<CR>
-map <silent><Esc><Esc> :nohlsearch<CR>
+map <esc><esc> :nohlsearch<CR>
 imap jk <Esc>
 imap kj <Esc>
 imap <C-v> <C-r>+
