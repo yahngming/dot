@@ -89,9 +89,11 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'dense-analysis/ale'
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'mg979/vim-visual-multi'
 Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
@@ -101,4 +103,4 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | source $MYVIMRC | endif
-autocmd VimLeave * mksession! ~/.vim/session.vim
+autocmd VimLeave * mksession! ~/.vim/vimsession
