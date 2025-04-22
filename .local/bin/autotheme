@@ -8,5 +8,6 @@ else
 	rm -f ~/.config/dark
 fi
 theme
+
 systemctl --user start sun@autotheme.timer
 systemctl --user enable sun@autotheme.timer
