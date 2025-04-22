@@ -74,6 +74,9 @@ syntax on
 map ; :
 map 0 ^
 map <C-n> :NERDTreeToggle<CR>
+map <C-a> ggVG
+map <C-c> y
+map <C-v> p
 map <C-z> u
 map <Space> <Leader>
 map <Leader>q :q!<CR>
@@ -82,11 +85,7 @@ map <Leader>. :set list!<CR>
 map <silent> <Esc><Esc> :nohlsearch<CR>
 imap jk <Esc>
 imap kj <Esc>
-noremap j gj
-noremap k gk
 noremap <Down> gj
-noremap <Left> gh
-noremap <Right> gl
+noremap <Left> h
+noremap <Right> l
 noremap <Up> gk
-inoremap <silent> <C-v> <Esc>:let @+=system("wl-paste --no-newline")<CR>a<C-r>+
-xnoremap <silent> <C-c> y:call system("wl-copy --trim-newline", @+)<CR>
