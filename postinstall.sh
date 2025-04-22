@@ -7,11 +7,6 @@ arch() {
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako slurp waybar wl-clipboard xdg-desktop-portal-hyprland # wayland
 	sudo pacman -S dunst maim unclutter xautolock xcape xclip xcompmgr xdo xfce4 xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
- 	mkdir -p ~/.config/vim/pack/vendor/start
-  	cd ~/.config/vim/pack/vendor/start
-   	git clone https://github.com/jasonccox/vim-wayland-clipboard
-   	git clone https://github.com/mhinz/vim-startify
-  	git clone https://github.com/preservim/nerdtree
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
