@@ -22,3 +22,6 @@ elif [ -n "$DISPLAY" ]; then
 	sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
 	killall dunst && dunst &
 fi
+
+systemctl --user start daily@wallpaper.timer
+systemctl --user enable daily@wallpaper.timer
