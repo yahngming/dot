@@ -71,8 +71,6 @@ filetype indent on
 filetype plugin on
 syntax on
 
-map ; :
-map 0 ^
 map <C-n> :NERDTreeToggle<CR>
 map <C-a> ggVG
 map <C-v> p
