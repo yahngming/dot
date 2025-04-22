@@ -87,4 +87,5 @@ map <silent> <Esc><Esc> :nohlsearch<CR>
 imap jk <Esc>
 imap kj <Esc>
 imap <C-v> <C-r>+
+imap <C-z> <C-o>u
 vmap <C-c> y
