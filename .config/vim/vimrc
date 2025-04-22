@@ -39,7 +39,7 @@ set regexpengine=0
 set relativenumber
 set ruler
 set runtimepath+=~/.config/vim
-set scrolloff=4
+set scrolloff=0
 set shiftwidth=8
 set showmatch
 set showtabline=2
@@ -73,10 +73,6 @@ syntax on
 
 map ; :
 map 0 ^
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
 map <C-n> :NERDTreeToggle<CR>
 map <C-z> u
 map <Space> <Leader>
@@ -88,9 +84,9 @@ imap jk <Esc>
 imap kj <Esc>
 noremap j gj
 noremap k gk
-noremap <Down> :tabclose<CR>
-noremap <Left> gT
-noremap <Right> gt
-noremap <Up> :tabnew<CR>
+noremap <Down> gj
+noremap <Left> gh
+noremap <Right> gl
+noremap <Up> gk
 inoremap <silent> <C-v> <Esc>:let @+=system("wl-paste --no-newline")<CR>a<C-r>+
 xnoremap <silent> <C-c> y:call system("wl-copy --trim-newline", @+)<CR>
