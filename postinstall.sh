@@ -7,6 +7,10 @@ arch() {
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako slurp waybar wl-clipboard xdg-desktop-portal-hyprland # wayland
 	sudo pacman -S dunst maim unclutter xautolock xcape xclip xcompmgr xdo xfce4 xorg-server xorg-xinput xorg-xrandr xwallpaper # xorg
+ 	mkdir -p ~/.config/vim/pack/vendor/start
+  	cd ~/.config/vim/pack/vendor/start
+  	git clone https://github.com/preservim/nerdtree.git
+   	git clone https://github.com/jasonccox/vim-wayland-clipboard.git
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
@@ -22,7 +26,6 @@ arch() {
    	sudo systemctl enable smb.service
  	sudo cp -r ~/.config/getty\@.service.d/ /etc/systemd/system/
 	sudo sed -i 's/LOGIN_TIMEOUT.*/LOGIN_TIMEOUT 0/' /etc/login.defs
- 	systemctl --user enable daily@wallpaper.timer
 	gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
 	gsettings set org.gnome.system.proxy.ftp port 7890
 	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
