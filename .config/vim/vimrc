@@ -75,9 +75,12 @@ map ; :
 map 0 ^
 map <C-n> :NERDTreeToggle<CR>
 map <C-a> ggVG
-map <C-c> y
 map <C-v> p
 map <C-z> u
+map <Down> gj
+map <Left> h
+map <Right> l
+map <Up> gk
 map <Space> <Leader>
 map <Leader>q :q!<CR>
 map <Leader>w :w!<CR>
@@ -85,7 +88,5 @@ map <Leader>. :set list!<CR>
 map <silent> <Esc><Esc> :nohlsearch<CR>
 imap jk <Esc>
 imap kj <Esc>
-noremap <Down> gj
-noremap <Left> h
-noremap <Right> l
-noremap <Up> gk
+imap <C-v> <C-r>+
+vmap <C-c> y
