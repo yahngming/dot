@@ -71,21 +71,21 @@ filetype indent on
 filetype plugin on
 syntax on
 
-map <C-n> :NERDTreeToggle<CR>
 map <C-a> ggVG
+map <C-n> :NERDTreeToggle<CR>
 map <C-v> p
 map <C-z> u
 map <Down> gj
-map <Left> h
-map <Right> l
-map <Up> gk
-map <Space> <Leader>
-map <Leader>q :q!<CR>
-map <Leader>w :w!<CR>
 map <Leader>. :set list!<CR>
 map <Leader><Esc> :nohlsearch<CR>
-imap jk <Esc>
-imap kj <Esc>
+map <Leader>q :q!<CR>
+map <Leader>w :w!<CR>
+map <Left> h
+map <Right> l
+map <Space> <Leader>
+map <Up> gk
 imap <C-v> <C-r>+
 imap <C-z> <C-o>u
+imap jk <Esc>
+imap kj <Esc>
 vmap <C-c> y
