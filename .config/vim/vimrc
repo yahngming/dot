@@ -29,11 +29,9 @@ set noshowmode
 set noswapfile
 set nowritebackup
 set number
-set packpath+=~/.config/vim
 set regexpengine=0
 set relativenumber
 set ruler
-set runtimepath+=~/.config/vim
 set scrolloff=0
 set shiftwidth=8
 set showmatch
@@ -55,7 +53,6 @@ set t_vb=
 set tabstop=8
 set tm=500
 set tw=500
-set viminfo='10,<100,:100,%,n~/.config/vim/viminfo
 set visualbell
 set whichwrap+=<,>,[,]
 set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
@@ -86,8 +83,8 @@ imap <C-v> <C-r>+
 imap <C-z> <C-o>u
 vmap <C-c> y
 
-if empty(glob('~/.config/vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
 call plug#begin()
@@ -103,4 +100,4 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | source $MYVIMRC | endif
-autocmd VimLeave * mksession! ~/.config/vim/session.vim
+autocmd VimLeave * mksession! ~/.vim/session.vim
