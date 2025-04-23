@@ -105,16 +105,16 @@
 			"warning": 75,
 			"critical": 90
 		},
-		"interval": 5,
+		"on-click": "pkill btop || tui btop",
 		"min-length": 6,
 		"max-length": 6
 	},
 
 	"cpu": {
-		"format": " {usage}%",
+		"format": "{icon} {usage}%",
+		"format-icons": ["󰡳", "󰡵", "󰊚", "󰡴"],
 		"tooltip": false,
 		"tooltip-format": "CPU Frequency: {avg_frequency} GHz / {max_frequency} GHz",
-		"interval": 5,
 		"on-click": "pkill btop || tui btop",
 		"min-length": 6,
 		"max-length": 6
