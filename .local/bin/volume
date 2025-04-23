@@ -1,42 +1,29 @@
 #!/bin/sh
 
-sinkbar() {
-	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume @DEFAULT_SINK@ | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
+bar() {
+	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume $device | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
 }
 
-sinkup() {
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1 && sinkbar
+up() {
+	wpctl set-volume $device 2%+ -l 1 && bar
 }
 
-sinkdown() {
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- && sinkbar
+down() {
+	wpctl set-volume $device 2%- && bar
 }
 
-sinkmute() {
-	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-}
-
-sourcebar() {
-	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume @DEFAULT_SOURCE@ | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
-}
-
-sourceup() {
-	wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%+ -l 1 && sourcebar
-}
-
-sourcedown() {
-	wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%- && sourcebar
-}
-
-sourcemute() {
-	wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+mute() {
+	wpctl set-mute $device toggle
 }
 
 help() {
-	echo "Usage: postinstall [option]"
-	echo "  arch            run post install script on Arch"
-	echo "  chromeos        run post install script on ChromeOS"
+	echo "Usage: volume [OPTION] [DEVICE]"
+	echo "  up              Volume up"
+	echo "  down            Volume up"
+	echo "  mute            Toggle mute"
 }
 
-volume=${1:-help}
-$volume
+option=${1:-help}
+device=${2:-@DEFAULT_SINK@}
+
+$option
