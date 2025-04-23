@@ -1,25 +1,30 @@
 #!/bin/sh
 
-volbar() {
+sinkbar() {
 	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume @DEFAULT_SINK@ | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
 }
 
-volup() {
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1 && volbar
+sinkup() {
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1 && sinkbar
 }
 
-voldown() {
+sinkdown() {
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- && sinkbar
 }
 
-volmute() {
+sinkmute() {
 }
 
-micbar() {
+sourcebar() {
 	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume @DEFAULT_SOURCE@ | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
 }
 
-micup() {
-	wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%+ -l 1 && micbar
+sourceup() {
+	wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%+ -l 1 && sourcebar
+}
+
+sourcedown() {
+	wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%- && sourcebar
 }
 
 help() {
