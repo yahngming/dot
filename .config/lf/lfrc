@@ -18,6 +18,9 @@ set sixel true
 map <enter> open
 map <delete> %trash-put $fx
 map <s-delete> %rm -rf $fx
+map <c-a> push ggv
+map <c-c> copy
+map <c-v> paste
 map ` !true
 map . set hidden!
 map a setfilter
