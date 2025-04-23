@@ -15,7 +15,7 @@ set sixel true
 &ctpv -s $id
 &ctpvquit $id
 
-map <m-2> push <m-1>
+map <m-2> %dragon-drop -a -x $fx
 map <esc> :clear; unselect
 map <enter> open
 map <delete> %trash-put $fx
