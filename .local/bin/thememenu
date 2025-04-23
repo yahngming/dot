@@ -11,7 +11,7 @@ menu="\
 "
 
 case $(printf "$menu" | $MENU $opt -p "Select theme:" "$@") in
-	*Auto*  ) autotheme ;;
-	*Dark*  ) darkmode ;;
-	*Light* ) lightmode ;;
+	*Auto*  ) darkmode auto ;;
+	*Dark*  ) darkmode dark ;;
+	*Light* ) darkmode light ;;
 esac
