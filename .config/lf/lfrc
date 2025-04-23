@@ -15,7 +15,7 @@ set sixel true
 &ctpv -s $id
 &ctpvquit $id
 
-map <m-2> push <esc>
+map <m-2> push <m-1>
 map <esc> :clear; unselect
 map <enter> open
 map <delete> %trash-put $fx
