@@ -55,7 +55,7 @@ chromeos() {
 }
 
 help() {
-	echo "Usage: postinstall [option]"
+	echo "Usage: postinstall [DISTRO]"
 	echo "  arch            run post install script on Arch"
 	echo "  chromeos        run post install script on ChromeOS"
 }
