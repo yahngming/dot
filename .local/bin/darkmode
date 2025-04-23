@@ -28,8 +28,7 @@ light() {
 }
 
 help() {
-	echo "Usage:"
-	echo "  darkmode [MODE]"
+	echo "Usage: darkmode [MODE]"
 	echo "    auto         auto switch"
 	echo "    dark         dark mode"
 	echo "    light        light mode"
