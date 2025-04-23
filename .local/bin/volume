@@ -17,6 +17,14 @@ down() {
 }
 
 mute() {
+	wpctl set-mute $device 1
+}
+
+unmute() {
+	wpctl set-mute $device 0
+}
+
+toggle() {
 	wpctl set-mute $device toggle
 }
 
@@ -25,12 +33,15 @@ help() {
 	echo "  volume [COMMAND] [DEVICE]"
 	echo ""
 	echo "Commands:"
-	echo "  get             Get volume"
+	echo "  get             Show volume"
 	echo "  up              Volume up"
 	echo "  down            Volume down"
-	echo "  mute            Toggle mute"
+	echo "  mute            Mute"
+	echo "  unmute          Unmute"
+	echo "  toggle          Toggle mute"
 	echo "Device:"
 	echo "  ID              default to @DEFAULT_SINK@ when not specified"
+	echo ""
 }
 
 command=${1:-help}
