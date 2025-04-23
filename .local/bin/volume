@@ -8,13 +8,19 @@ volup() {
 	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1 && volbar
 }
 
-volup() {
+voldown() {
 }
 
 volmute() {
 }
 
+micbar() {
+	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume @DEFAULT_SOURCE@ | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
+}
 
+micup() {
+	wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%+ -l 1 && micbar
+}
 
 help() {
 	echo "Usage: postinstall [option]"
