@@ -138,6 +138,7 @@
 		"tooltip": false,
 		"tooltip-format": "Device: {desc}",
 		"scroll-step": 2,
+		"on-click": "volume toggle",
 		"min-length": 6,
 		"max-length": 6
 	},
