@@ -20,7 +20,7 @@ map <esc> :clear; setfilter; unselect
 map <enter> open
 map <delete> %trash-put $fx
 map <s-delete> %rm -rf $fx
-map <c-a> :clear; invert
+map <c-a> :clear; top
 map <c-c> copy
 map <c-v> paste
 map ` !true
