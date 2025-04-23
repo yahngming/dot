@@ -196,7 +196,7 @@
 	},
 	
 	"custom/script": {
-		"on-click": "togglemute",
+		"on-click": "volume toggle",
 		"format": ""
 	},
 
