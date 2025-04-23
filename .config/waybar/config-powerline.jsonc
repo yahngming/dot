@@ -133,7 +133,7 @@
 			"default": ["", ""]
 		},
 		"scroll-step": 1,
-		"on-click": "togglemute",
+		"on-click": "volume toggle",
 		"tooltip": false
 	},
 
