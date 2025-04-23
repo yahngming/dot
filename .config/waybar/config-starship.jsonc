@@ -175,8 +175,9 @@
 
 	"battery": {
 		"format": "{icon} {capacity}%",
-		"format-icons": ["󰂎", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-		"format-charging": " {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-critical": "󰂃 {capacity}%",
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 		"tooltip": false,
 		"tooltip-format": "Discharging: {time}",
 		"tooltip-format-charging": "Charging: {time}",
@@ -184,6 +185,8 @@
 			"warning": 20,
 			"critical": 10
 		},
+		"on-scroll-up": "brightnessctl s",
+		"on-scroll-down": "brightnessctl s",
 		"min-length": 6,
 		"max-length": 6
 	},
