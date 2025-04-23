@@ -15,7 +15,7 @@ set sixel true
 &ctpv -s $id
 &ctpvquit $id
 
-map <esc> clear; unselect
+map <esc> :clear; unselect
 map <enter> open
 map <delete> %trash-put $fx
 map <s-delete> %rm -rf $fx
@@ -36,8 +36,8 @@ map gd ${{lf -remote "send $id cd $HOME/Downloads"}}
 map gm ${{lf -remote "send $id cd $XDG_RUNTIME_DIR/gvfs"}}
 map gt ${{lf -remote "send $id cd $HOME/.local/share/Trash"}}
 map gu ${{lf -remote "send $id cd /run/media/$USER"}}
-map za push archive<space>
-map zc push zoxide<space>
+map za push :archive<space>
+map zc push :zoxide<space>
 map zd push %mkdir<space>
 map zf push %touch<space>
 map zu unarchive
