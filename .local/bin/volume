@@ -48,5 +48,4 @@ help() {
 
 command=${1:-help}
 device=${2:-@DEFAULT_SINK@}
-
 $command
