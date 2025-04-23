@@ -150,7 +150,9 @@
 		"tooltip": false,
 		"tooltip-format": "Device: {desc}",
 		"scroll-step": 2,
-		"on-click": "togglemute",
+		"on-click": "volume toggle @DEFAULT_SOURCE@",
+		"on-scroll-up": "volume up @DEFAULT_SOURCE@",
+		"on-scroll-down": "volume down @DEFAULT_SOURCE@",
 		"min-length": 6,
 		"max-length": 6
 	},
