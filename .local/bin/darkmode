@@ -1,7 +1,5 @@
 #!/bin/sh
 
-source ~/.local/bin/lib
-
 auto() {
 	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
 		touch -f ~/.config/dark
