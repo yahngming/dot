@@ -32,7 +32,7 @@
 		"custom/rightin1",
 		"pulseaudio",           // volume
 		"custom/right3",
-		"pulseaudio#source",            // brightness
+		"pulseaudio#source",    // microphone
 		"custom/right4",
 		"battery",              // battery
 		"custom/right5",
