@@ -27,6 +27,7 @@ map R bulk-rename
 map V invert-below
 map x %trash-put $fx
 map X delete
+map dd %dragon-drop -a -x $fx
 map gc ${{lf -remote "send $id cd $HOME/.config"}}
 map gd ${{lf -remote "send $id cd $HOME/Downloads"}}
 map gm ${{lf -remote "send $id cd $XDG_RUNTIME_DIR/gvfs"}}
