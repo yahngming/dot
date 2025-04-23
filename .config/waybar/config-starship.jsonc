@@ -92,7 +92,7 @@
 		"tooltip": false,
 		"warning-threshold": 70,
 		"critical-threshold": 90,
-		"interval": 5,
+		"interval": 3,
 		"min-length": 6,
 		"max-length": 6
 	},
@@ -184,7 +184,6 @@
 			"warning": 20,
 			"critical": 10
 		},
-		"interval": 1,
 		"min-length": 6,
 		"max-length": 6
 	},
@@ -238,7 +237,6 @@
 		"tooltip-format-connected": "{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}",
 		"tooltip-format-enumerate-connected-battery": "󰥉 {device_alias}: {device_battery_percentage}%",
-		"interval": 1,
 		"on-click": "btmenu"
 	},
 
@@ -274,7 +272,6 @@
 	},
 
 	"clock#time": {
-		"interval": 1,
 		"format": "{:%I:%M %p}",
 		"format-alt": "{:%T}",
 		"timezones": ["", "America/New_York", "America/Los_Angeles"],
@@ -283,6 +280,7 @@
 			"on-scroll-up": "tz_down",
 			"on-scroll-down": "tz_up"
 		},
+		"interval": 1,
 		"min-length": 8,
 		"max-length": 8
 	},
