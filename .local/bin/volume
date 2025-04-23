@@ -1,7 +1,9 @@
 #!/bin/sh
 
 bar() {
-	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume $device | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
+	if [ -z "$WAYLAND_DISPLAY" ]; then
+		notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume $device | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
+	fi
 }
 
 get() {
