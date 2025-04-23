@@ -4,6 +4,10 @@ bar() {
 	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume $device | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
 }
 
+get() {
+	wpctl get-volume $device && bar
+}
+
 up() {
 	wpctl set-volume $device 2%+ -l 1 && bar
 }
@@ -17,13 +21,19 @@ mute() {
 }
 
 help() {
-	echo "Usage: volume [OPTION] [DEVICE]"
+	echo "Usage:"
+	echo "  volume [COMMAND] [DEVICE]"
+	echo ""
+	echo "Commands:"
+	echo "  get             Get volume"
 	echo "  up              Volume up"
-	echo "  down            Volume up"
+	echo "  down            Volume down"
 	echo "  mute            Toggle mute"
+	echo "Device:"
+	echo "  ID              default to @DEFAULT_SINK@ when not specified"
 }
 
-option=${1:-help}
-device=${2:-@DEFAULT_SINK@}
+command=${1:help}
+device=${2:@DEFAULT_SINK@}
 
-$option
+$command
