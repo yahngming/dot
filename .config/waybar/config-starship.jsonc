@@ -87,6 +87,7 @@
 
 	"temperature": {
 		"format": "{icon} {temperatureC}°",
+		"format-critical": "󰈸 {temperatureC}°",
 		"format-icons": ["", "", "", "", ""],
 		"tooltip": false,
 		"warning-threshold": 70,
@@ -98,7 +99,7 @@
 
 	"memory": {
 		"format": " {percentage}%",
-		"format-critical": "󰀦 {percentage}%",
+		"format-critical": " {percentage}%",
 		"tooltip": false,
 		"tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
 		"states": {
@@ -112,9 +113,14 @@
 
 	"cpu": {
 		"format": "{icon} {usage}%",
+		"format-critical": " {usage}%",
 		"format-icons": ["󰡳", "󰡵", "󰊚", "󰡴"],
 		"tooltip": false,
 		"tooltip-format": "CPU Frequency: {avg_frequency} GHz / {max_frequency} GHz",
+		"states": {
+			"warning": 80,
+			"critical": 90
+		},
 		"on-click": "pkill btop || tui btop",
 		"min-length": 6,
 		"max-length": 6
@@ -129,11 +135,12 @@
 
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
-		"format-muted": "󰝟 {volume}%",
+		"format-bluetooth": "󰥰 {volume}%",
+		"format-muted": "󰖁 {volume}%",
 		"format-icons": {
-			"default": ["󰕿", "󰖀", "󰕾"],
 			"headphone": "󰋋",
-			"headset": "󰋋"
+			"headset": "󰋋",
+			"default": ["󰕿", "󰖀", "󰕾"]
 		},
 		"tooltip": false,
 		"tooltip-format": "Device: {desc}",
@@ -145,8 +152,8 @@
 
 	"pulseaudio#source": {
 		"format": "{format_source}",
-		"format-source": " {volume}%",
-		"format-source-muted": " {volume}%",
+		"format-source": "󰍬 {volume}%",
+		"format-source-muted": "󰍭 {volume}%",
 		"tooltip": false,
 		"tooltip-format": "Device: {desc}",
 		"scroll-step": 2,
@@ -186,9 +193,9 @@
 		"format": "{player_icon} {title} - {artist}",
 		"format-paused": "{status_icon} {title} - {artist}",
 		"player-icons": {
-			"default": "󰝚 ",
 			"chromium": "<span foreground='#cd201f'>󰗃 </span>",
-			"spotify": "<span foreground='#a6e3a1'>󰓇 </span>"
+			"spotify": "<span foreground='#a6e3a1'>󰓇 </span>",
+			"default": "󰝚 "
 		},
 		"status-icons": {
 			"paused": "<span color='#b4befe'>\u200A\u200A󰏤\u2009\u2009</span>"
