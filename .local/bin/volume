@@ -1,5 +1,9 @@
 #!/bin/sh
 
+volbar() {
+	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume @DEFAULT_SINK@ | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
+}
+
 volup() {
 	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1 && volbar
 }
