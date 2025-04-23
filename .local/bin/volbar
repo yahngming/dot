@@ -1,3 +1,0 @@
-#!/bin/sh
-
-notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume @DEFAULT_SINK@ | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
