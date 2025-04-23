@@ -9,6 +9,13 @@ dark() {
 	systemctl --user disable sun@darkmode.timer
 }
 
+light() {
+	rm -f ~/.config/dark
+	theme
+	systemctl --user stop sun@darkmode.timer
+	systemctl --user disable sun@darkmode.timer
+}
+
 help() {
 	echo "Usage:"
 	echo "  darkmode [MODE]"
