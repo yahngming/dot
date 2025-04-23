@@ -185,8 +185,8 @@
 			"warning": 20,
 			"critical": 10
 		},
-		"on-scroll-up": "brightnessctl s",
-		"on-scroll-down": "brightnessctl s",
+		"on-scroll-up": "brightnessctl s 5%+",
+		"on-scroll-down": "brightnessctl s 5%-",
 		"min-length": 6,
 		"max-length": 6
 	},
