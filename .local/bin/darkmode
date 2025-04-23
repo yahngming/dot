@@ -2,6 +2,17 @@
 
 source ~/.local/bin/lib
 
+auto() {
+	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
+		touch -f ~/.config/dark
+	else
+		rm -f ~/.config/dark
+	fi
+	theme
+	systemctl --user start sun@darkmode.timer
+	systemctl --user enable sun@darkmode.timer
+}
+
 dark() {
 	touch -f ~/.config/dark
 	theme
