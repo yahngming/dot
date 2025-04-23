@@ -33,7 +33,7 @@ help() {
 	echo "  ID              default to @DEFAULT_SINK@ when not specified"
 }
 
-command=${1:help}
-device=${2:@DEFAULT_SINK@}
+command=${1:-help}
+device=${2:-@DEFAULT_SINK@}
 
 $command
