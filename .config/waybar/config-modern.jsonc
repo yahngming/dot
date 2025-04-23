@@ -121,9 +121,9 @@
 		"format": "{icon}",
 		"format-muted": "",
 		"format-icons": ["", "", ""],
-		"on-click": "togglemute",
-		"on-scroll-up": "volup",
-		"on-scroll-down": "voldown",
+		"on-click": "volume toggle",
+		"on-scroll-up": "volume up",
+		"on-scroll-down": "volume down",
 		"tooltip-format": "{volume}%"
 	},
 
