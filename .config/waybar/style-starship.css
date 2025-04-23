@@ -238,6 +238,12 @@ tooltip label {
 #cpu {
 	background: @cpu;
 }
+#cpu.warning {
+	color: @warning;
+}
+#cpu.critical {
+	color: @critical;
+}
 #custom-leftin1 {
 	color: @cpu;
 	margin-bottom: -1px;
