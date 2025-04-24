@@ -22,36 +22,33 @@ _fzf_comprun() {
 	esac
 }
 
-proxy() {
+setenv() {
 	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 	for envar in $PROXY_ENV; do
 		export $envar="http://127.0.0.1:7890"
 	done
 	gsettings set org.gnome.system.proxy mode "manual"
-}
-
-theme() {
 	if [ -f ~/.config/dark ]; then
 		export COLOR_SCHEME="prefer-dark"
 		export GTK_THEME="Adwaita-dark"
 		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
-		export ICON_THEME="Adwaita"
 		export XCURSOR_THEME="Bibata-Modern-Ice"
 	else
 		export COLOR_SCHEME="prefer-light"
 		export GTK_THEME="Adwaita"
 		export HYPRCURSOR_THEME="Bibata-Modern-Classic"
-		export ICON_THEME="Adwaita"
 		export XCURSOR_THEME="Bibata-Modern-Classic"
 	fi
 	case "$XDG_VTNR" in
 		1)
 			export DESKTOP="Hyprland"
+			export ICON_THEME="Adwaita"
 			export LAUNCHER="fuzzel"
 			export TERMINAL="foot"
 			;;
 		2)
 			export DESKTOP="dwm"
+			export ICON_THEME="Adwaita"
 			export LAUNCHER="dmenu"
 			export TERMINAL="st"
 			;;
@@ -80,13 +77,8 @@ theme() {
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
-	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
-	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl setcursor $HYPRCURSOR_THEME 24
-	fi
 }
 
-export -f theme
 export BROWSER="chrome"
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
@@ -116,8 +108,7 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ]; then
-	proxy
-	theme
+	setenv
 	eval "$START"
 else
 	fastfetch | lolcat
