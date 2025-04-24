@@ -17,7 +17,7 @@ gpg --edit-key $KEYID
 gpg> trust
 git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
-rclone config
+rclone setup
 ```sh
 rclone config
 Storage> webdav
