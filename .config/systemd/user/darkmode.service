@@ -2,5 +2,4 @@
 Description=Auto dark mode switch
 
 [Service]
-Type=oneshot
 ExecStart=%h/.local/bin/darkmode auto
