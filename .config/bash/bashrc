@@ -27,27 +27,26 @@ setenv() {
 	for envar in $PROXY_ENV; do
 		export $envar="http://127.0.0.1:7890"
 	done
-	gsettings set org.gnome.system.proxy mode "manual"
 	if [ -f ~/.config/dark ]; then
 		export COLOR_SCHEME="prefer-dark"
 		export GTK_THEME="Adwaita-dark"
 		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
+		export ICON_THEME="Adwaita"
 		export XCURSOR_THEME="Bibata-Modern-Ice"
 	else
 		export COLOR_SCHEME="prefer-light"
 		export GTK_THEME="Adwaita"
 		export HYPRCURSOR_THEME="Bibata-Modern-Classic"
+		export ICON_THEME="Adwaita"
 		export XCURSOR_THEME="Bibata-Modern-Classic"
 	fi
 	case "$XDG_VTNR" in
 		1)
-			export ICON_THEME="Adwaita"
 			export LAUNCHER="fuzzel"
 			export START="exec Hyprland"
 			export TERMINAL="foot"
 			;;
 		2)
-			export ICON_THEME="Adwaita"
 			export LAUNCHER="dmenu"
 			export START="startx ~/.config/xorg/xinitrc dwm"
 			export TERMINAL="st"
@@ -67,6 +66,7 @@ setenv() {
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+	gsettings set org.gnome.system.proxy mode "manual"
 }
 
 export BROWSER="chrome"
