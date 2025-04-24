@@ -15,15 +15,6 @@ set sixel true
 &ctpv -s $id
 &ctpvquit $id
 
-map <m-2> %dragon-drop -a -x $fx
-map <c-m-1> invert-below
-map <esc> :clear; setfilter; unselect
-map <enter> open
-map <delete> %trash-put $fx
-map <s-delete> %rm -rf $fx
-map <c-a> :unselect; invert
-map <c-c> copy
-map <c-v> paste
 map ` !true
 map . set hidden!
 map f filter
@@ -41,6 +32,13 @@ map zc push :zoxide<space>
 map zd push %mkdir<space>
 map zf push %touch<space>
 map zu unarchive
+map <enter> open
+map <esc> :clear; setfilter; unselect
+map <c-a> :unselect; invert
+map <c-c> copy
+map <c-v> paste
+map <m-2> %dragon-drop -a -x $fx
+map <c-m-1> invert-below
 
 cmd archive ${{
 	set -f
