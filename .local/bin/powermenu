@@ -10,7 +10,7 @@ menu="\
 󰤆 shutdown\n\
 "
 
-case $(printf "$menu" | $MENU "$@") in
+case $(printf "$menu" | menu "$@") in
 	*lock*     ) locker ;;
 	*sleep*    ) systemctl sleep ;;
 	*logout*   ) pkill -KILL -u $USER ;;
