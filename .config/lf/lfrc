@@ -78,7 +78,7 @@ cmd paste &{{
 	esac
 }}
 
-cmd bulk-rename ${{
+cmd rename ${{
 	if [ -n "$fs" ]; then
 		fs="$(basename -a -- $fs)"
 		old="$(mktemp)"
@@ -98,7 +98,7 @@ cmd bulk-rename ${{
 		rm -- "$old" "$new"
 		lf -remote "send $id unselect"
 	else
-		rename
+		lf -remote "send $id rename"
 	fi
 }}
 
