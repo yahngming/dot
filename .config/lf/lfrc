@@ -16,6 +16,7 @@ set sixel true
 &ctpvquit $id
 
 map <m-2> %dragon-drop -a -x $fx
+map <c-m-1> invert-below
 map <esc> :clear; setfilter; unselect
 map <enter> open
 map <delete> %trash-put $fx
@@ -28,7 +29,6 @@ map . set hidden!
 map f filter
 map i pager
 map R bulk-rename
-map V invert-below
 map x %trash-put $fx
 map X delete
 map gc ${{lf -remote "send $id cd $HOME/.config"}}
