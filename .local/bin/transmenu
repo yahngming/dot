@@ -32,9 +32,9 @@ load_config() {
 
 	# Default values
 	: "${TRANS_LANGS:=:zh :ja :en}"
-	: "${DMENU_TEXT:=${MENU} -p 'Translate:'}"
-	: "${DMENU_LANG:=${MENU} -p 'To:'}"
-	: "${DMENU_NEXT:=${MENU} -p 'Options:'}"
+	: "${DMENU_TEXT:=menu -p 'Translate:'}"
+	: "${DMENU_LANG:=menu -p 'To:'}"
+	: "${DMENU_NEXT:=menu -p 'Options:'}"
 }
 
 formatmenu() {
