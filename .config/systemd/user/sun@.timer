@@ -4,7 +4,7 @@ Description=Sunrise and sunset timer for %i service
 [Timer]
 OnCalendar=06,18:00
 Persistent=true
-RandomizedDelaySec=1
+RandomizedDelaySec=2
 Unit=%i.service
 
 [Install]
