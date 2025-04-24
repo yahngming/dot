@@ -106,7 +106,6 @@
 			"warning": 75,
 			"critical": 90
 		},
-		"on-click": "pkill btop || tui btop",
 		"min-length": 6,
 		"max-length": 6
 	},
