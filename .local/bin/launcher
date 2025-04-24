@@ -2,8 +2,7 @@
 
 pkill $LAUNCHER && exit
 
-if [ "$LAUNCHER" == "dmenu" ]; then
-	dmenu_run "$@"
-else
-	$LAUNCHER "$@"
-fi
+case "$LAUNCHER" in
+	dmenu ) dmenu_run "$@" ;
+	*     ) $LAUNCHER "$@" ;
+esac
