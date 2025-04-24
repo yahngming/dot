@@ -98,7 +98,7 @@ cmd bulk-rename ${{
 		rm -- "$old" "$new"
 		lf -remote "send $id unselect"
 	else
-		rename $f
+		rename
 	fi
 }}
 
