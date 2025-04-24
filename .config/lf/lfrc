@@ -28,7 +28,7 @@ map ` !true
 map . set hidden!
 map f filter
 map i pager
-map R bulk-rename
+map r bulk-rename
 map x %trash-put $fx
 map X delete
 map gc ${{lf -remote "send $id cd $HOME/.config"}}
@@ -78,7 +78,7 @@ cmd paste &{{
 	esac
 }}
 
-cmd rename ${{
+cmd bulk-rename ${{
 	if [ -n "$fs" ]; then
 		fs="$(basename -a -- $fs)"
 		old="$(mktemp)"
