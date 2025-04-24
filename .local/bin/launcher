@@ -3,6 +3,6 @@
 pkill $LAUNCHER && exit
 
 case "$LAUNCHER" in
-	dmenu ) dmenu_run "$@" ;
-	*     ) $LAUNCHER "$@" ;
+	dmenu ) dmenu_run "$@" ;;
+	*     ) $LAUNCHER "$@" ;;
 esac
