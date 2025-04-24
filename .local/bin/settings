@@ -2,7 +2,7 @@
 
 pkill $LAUNCHER && exit
 
-case "$MENU" in
+case "$LAUNCHER" in
 	dmenu ) opt="-g 3 -l 6" ;;
 esac
 
@@ -29,7 +29,7 @@ menu="\
 󱚾 WLAN\n\
 "
 
-case $(printf "$menu" | $MENU $opt "$@") in
+case $(printf "$menu" | menu $opt "$@") in
 	*Bar*       ) barmenu ;;
 	*Bluetooth* ) btmenu ;;
 	*Cloud*     ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
