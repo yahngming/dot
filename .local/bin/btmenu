@@ -2,7 +2,7 @@
 
 pkill $LAUNCHER && exit
 
-case "$MENU" in
+case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
 
@@ -311,7 +311,7 @@ show_menu() {
 # dmenu command to pipe into. Extra arguments to dmenu-bluetooth are passed through to dmenu. This
 # allows the user to set fonts, sizes, colours, etc.
 run_dmenu() {
-	$MENU $opt -p Bluetooth "${dmenu_args[@]}"
+	menu $opt -p Bluetooth "${dmenu_args[@]}"
 }
 
 print_help() {
