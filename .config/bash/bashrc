@@ -41,37 +41,27 @@ setenv() {
 	fi
 	case "$XDG_VTNR" in
 		1)
-			export DESKTOP="Hyprland"
 			export ICON_THEME="Adwaita"
 			export LAUNCHER="fuzzel"
+			export START="exec Hyprland"
 			export TERMINAL="foot"
 			;;
 		2)
-			export DESKTOP="dwm"
 			export ICON_THEME="Adwaita"
 			export LAUNCHER="dmenu"
+			export START="startx ~/.config/xorg/xinitrc dwm"
 			export TERMINAL="st"
 			;;
 		3)
 			export COLOR_SCHEME="prefer-light"
-			export DESKTOP="xfce"
 			export GTK_THEME="Chicago95"
 			export ICON_THEME="Chicago95"
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
+			export START="startx ~/.config/xorg/xinitrc xfce"
 			export TERMINAL="xfce4-terminal"
 			export XCURSOR_THEME="Chicago95 Standard Cursors"
 			;;
-	esac
-	case "$DESKTOP" in
-		Hyprland ) export START="exec $DESKTOP" ;;
-		*        ) export START="startx ~/.config/xorg/xinitrc $DESKTOP" ;;
-	esac
-	case "$LAUNCHER" in
-		fuzzel ) export MENU="fuzzel --dmenu" ;;
-		rofi   ) export MENU="rofi -dmenu" ;;
-		walker ) export MENU="walker --dmenu --keepsort" ;;
-		*      ) export MENU="dmenu" ;;
 	esac
 	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
