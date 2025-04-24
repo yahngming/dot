@@ -17,6 +17,14 @@ gpg --edit-key $KEYID
 gpg> trust
 git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
+rclone config
+```sh
+rclone config
+Storage> webdav
+url> https://cloud.disroot.org/remote.php/dav/files/myang
+user> myang
+password: $PASSWORD
+```
 other packages
 ```sh
 yay -S davinci-resolve gyroflow intel-compute-runtime-legacy-bin minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
