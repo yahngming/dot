@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$MENU" in
+case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
 
@@ -10,7 +10,7 @@ menu="\
  Light mode\n\
 "
 
-case $(printf "$menu" | $MENU $opt -p "Select theme:" "$@") in
+case $(printf "$menu" | menu $opt -p "Select theme:" "$@") in
 	*Auto*  ) darkmode auto ;;
 	*Dark*  ) darkmode dark ;;
 	*Light* ) darkmode light ;;
