@@ -37,6 +37,7 @@ map <esc> :clear; setfilter; unselect
 map <c-a> :unselect; invert
 map <c-c> copy
 map <c-v> paste
+map <c-x> cut
 map <m-2> %dragon-drop -a -x $fx
 map <c-m-1> invert-below
 
