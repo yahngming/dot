@@ -19,6 +19,7 @@ theme() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl setcursor $HYPRCURSOR_THEME 24
 	fi
+	wallpaper
 }
 
 dark() {
