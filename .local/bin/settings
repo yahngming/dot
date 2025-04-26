@@ -41,7 +41,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Keyboard*  ) keymap ;;
 	*Password*  ) passmenu ;;
 	*Printer*   ) browser --new-tab http://localhost:631 ;;
-	*Proxy*     ) browser --new-tab https://clash.razord.top ;;
+	*Proxy*     ) proxymenu ;;
 	*SMB*       ) smbmenu ;;
 	*Theme*     ) thememenu ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
