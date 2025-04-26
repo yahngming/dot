@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+󰔎 Dashboard\n\
+ Proxy ON\n\
+ Proxy OFF\n\
+"
+
+case $(printf "$menu" | menu $opt -p "Proxy config:" "$@") in
+	*Dashboard* ) darkmode auto ;;
+	*ON*        ) touch -p ~/.config/proxy ;;
+	*OFF*       ) rm -p ~/.config/proxy ;;
+esac
