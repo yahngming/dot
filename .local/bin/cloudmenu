@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+󰨇 Copy from cloud\n\
+󰌙 Copy to cloud\n\
+"
+
+case $(printf "$menu" | menu $opt -p "Cloud" "$@") in
+	*from* ) rm -f ~/.config/proxy ;;
+	*to*   ) touch -f ~/.config/proxy ;;
+esac
