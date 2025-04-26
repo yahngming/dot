@@ -1,43 +1,5 @@
 #!/bin/sh
 
-theme() {
-	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
-		exit
-	elif [ -f ~/.config/dark ]; then
-		export COLOR_SCHEME="prefer-dark"
-		export GTK_THEME="Adwaita-dark"
-		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
-		export XCURSOR_THEME="Bibata-Modern-Ice"
-	else
-		export COLOR_SCHEME="prefer-light"
-		export GTK_THEME="Adwaita"
-		export HYPRCURSOR_THEME="Bibata-Modern-Classic"
-		export XCURSOR_THEME="Bibata-Modern-Classic"
-	fi
-	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
-	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
-	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
-	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
-	wallpaper
-	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl setcursor $HYPRCURSOR_THEME 24
-	fi
-}
-
-dark() {
-	touch -f ~/.config/dark
-	theme
-	systemctl --user stop sun@darkmode.timer
-	systemctl --user disable sun@darkmode.timer
-}
-
-light() {
-	rm -f ~/.config/dark
-	theme
-	systemctl --user stop sun@darkmode.timer
-	systemctl --user disable sun@darkmode.timer
-}
-
 auto() {
 	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
 		dark
@@ -46,6 +8,24 @@ auto() {
 	fi
 	systemctl --user start sun@darkmode.timer
 	systemctl --user enable sun@darkmode.timer
+}
+
+dark() {
+	if [ ! -f ~/.config/dark ]; then
+		touch -f ~/.config/dark
+		theme
+	fi
+	systemctl --user stop sun@darkmode.timer
+	systemctl --user disable sun@darkmode.timer
+}
+
+light() {
+	if [ -f ~/.config/dark ]; then
+		rm -f ~/.config/dark
+		theme
+	fi
+	systemctl --user stop sun@darkmode.timer
+	systemctl --user disable sun@darkmode.timer
 }
 
 help() {
