@@ -9,12 +9,12 @@ esac
 menu="\
  Bar\n\
  Bluetooth\n\
-󰅟 Cloud\n\
+ Cloud\n\
  Coffee\n\
 󰍹 Display\n\
  Dotfiles\n\
 󰊖 Gamemode\n\
-󰇧 IME\n\
+ IME\n\
 󰌌 Keyboard\n\
  Password\n\
 󰐪 Printer\n\
@@ -26,7 +26,7 @@ menu="\
 󰚰 Update\n\
 󱊞 USB\n\
 󰸉 Wallpaper\n\
-󱚾 WLAN\n\
+󰖩 WLAN\n\
 "
 
 case $(printf "$menu" | menu $opt "$@") in
