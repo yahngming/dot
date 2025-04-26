@@ -1,7 +1,9 @@
 #!/bin/sh
 
 theme() {
-	if [ -f ~/.config/dark ]; then
+	if [ QT_STYLE_OVERRIDE="Windows" ]; then
+		exit
+	elif [ -f ~/.config/dark ]; then
 		export COLOR_SCHEME="prefer-dark"
 		export GTK_THEME="Adwaita-dark"
 		export HYPRCURSOR_THEME="Bibata-Modern-Ice"
