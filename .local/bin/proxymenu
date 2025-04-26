@@ -11,7 +11,15 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
-	*dashboard* ) browser --new-tab https://clash.razord.top ;;
-	*OFF*       ) rm -f ~/.config/proxy ;;
-	*ON*        ) touch -f ~/.config/proxy ;;
+	*dashboard*)
+		browser --new-tab https://clash.razord.top
+		;;
+	*OFF*)
+		rm -f ~/.config/proxy
+		gsettings set org.gnome.system.proxy mode "none"
+		;;
+	*ON*)
+		touch -f ~/.config/proxy
+		gsettings set org.gnome.system.proxy mode "manual"
+		;;
 esac
