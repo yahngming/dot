@@ -32,7 +32,7 @@ toggle() {
 
 help() {
 	echo "Usage:"
-	echo "  volume [COMMAND] [DEVICE]"
+	echo "  volume [COMMAND] [ID]"
 	echo ""
 	echo "Commands:"
 	echo "  get              show volume"
@@ -42,8 +42,7 @@ help() {
 	echo "  unmute           unmute"
 	echo "  toggle           toggle mute"
 	echo ""
-	echo "Device:"
-	echo "  device id        default to @DEFAULT_SINK@ when not specified"
+	echo "Device ID defaults to @DEFAULT_SINK@ when not specified."
 	echo ""
 }
 
