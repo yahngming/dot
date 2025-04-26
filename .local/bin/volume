@@ -41,6 +41,7 @@ help() {
 	echo "  mute             mute"
 	echo "  unmute           unmute"
 	echo "  toggle           toggle mute"
+	echo ""
 	echo "Device:"
 	echo "  device id        default to @DEFAULT_SINK@ when not specified"
 	echo ""
