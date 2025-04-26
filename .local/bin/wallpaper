@@ -10,10 +10,10 @@ if [ -d $dir/$theme ]; then
 	wallpapers=$dir/$theme/*
 else
 	wallpapers=$dir/*
-
+fi
 wallpaper=$(find $wallpapers | shuf -n 1)
-wal -n -i "$wallpaper"
 
+wal -n -i "$wallpaper"
 source ~/.cache/wal/colors.sh
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	hyprctl dispatch exec hyprpaper
