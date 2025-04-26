@@ -6,12 +6,7 @@ if [ -f ~/.config/dark ]; then
 else
 	theme=light
 fi
-if [ -d "$dir/$theme" ]; then
-	wallpapers="$dir/$theme/*"
-else
-	wallpapers="$dir/*"
-fi
-wallpaper=$(find "$wallpapers" | shuf -n 1)
+wallpaper=$(find $dir/$theme | shuf -n 1)
 
 wal -n -i "$wallpaper"
 source ~/.cache/wal/colors.sh
