@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $QT_STYLE_OVERRIDE="Windows" ]; then
+if [ $QT_STYLE_OVERRIDE=="Windows" ]; then
 	exit
 elif [ -f ~/.config/dark ]; then
 	theme=dark
