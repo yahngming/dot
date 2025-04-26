@@ -41,28 +41,6 @@ setenv() {
 			export TERMINAL="xfce4-terminal"
 			;;
 	esac
-	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
-		COLOR_SCHEME="prefer-light"
-		GTK_THEME="Chicago95"
-		ICON_THEME="Chicago95"
-		XCURSOR_THEME="Chicago95 Standard Cursors"
-	elif [ -f ~/.config/dark ]; then
-		COLOR_SCHEME="prefer-dark"
-		GTK_THEME="Adwaita-dark"
-		HYPRCURSOR_THEME="Bibata-Modern-Ice"
-		ICON_THEME="Adwaita"
-		XCURSOR_THEME="Bibata-Modern-Ice"
-	else
-		COLOR_SCHEME="prefer-light"
-		GTK_THEME="Adwaita"
-		HYPRCURSOR_THEME="Bibata-Modern-Classic"
-		ICON_THEME="Adwaita"
-		XCURSOR_THEME="Bibata-Modern-Classic"
-	fi
-	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
-	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
-	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
-	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 	if [ -f ~/.config/proxy ]; then
 		PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 		for envar in $PROXY_ENV; do
