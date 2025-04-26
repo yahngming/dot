@@ -23,10 +23,6 @@ _fzf_comprun() {
 }
 
 setenv() {
-	PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
-	for envar in $PROXY_ENV; do
-		export $envar="http://127.0.0.1:7890"
-	done
 	if [ -f ~/.config/dark ]; then
 		export COLOR_SCHEME="prefer-dark"
 		export GTK_THEME="Adwaita-dark"
@@ -66,7 +62,13 @@ setenv() {
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
-	gsettings set org.gnome.system.proxy mode "manual"
+	if [ -f ~/.config/proxy ]; then
+		PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
+		for envar in $PROXY_ENV; do
+			export $envar="http://127.0.0.1:7890"
+		done
+		gsettings set org.gnome.system.proxy mode "manual"
+	fi
 }
 
 export BROWSER="chrome"
