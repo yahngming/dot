@@ -1,6 +1,12 @@
 #!/bin/sh
 
-wallpaper=$(find ~/Pictures/wallpapers/* | shuf -n 1)
+if [ -f ~/.config/dark ]; then
+	theme=dark
+else
+	theme=light
+fi
+wallpaper=$(find ~/Pictures/wallpapers/$theme/* | shuf -n 1)
+
 wal -n -i "$wallpaper"
 
 source ~/.cache/wal/colors.sh
