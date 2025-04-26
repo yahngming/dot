@@ -35,17 +35,18 @@ setenv() {
 			export TERMINAL="st"
 			;;
 		3)
-			export COLOR_SCHEME="prefer-light"
-			export GTK_THEME="Chicago95"
-			export ICON_THEME="Chicago95"
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
 			export START="startx ~/.config/xorg/xinitrc xfce"
 			export TERMINAL="xfce4-terminal"
-			export XCURSOR_THEME="Chicago95 Standard Cursors"
 			;;
 	esac
-	if [ -f ~/.config/dark ]; then
+	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
+		COLOR_SCHEME="prefer-light"
+		GTK_THEME="Chicago95"
+		ICON_THEME="Chicago95"
+		XCURSOR_THEME="Chicago95 Standard Cursors"
+	elif [ -f ~/.config/dark ]; then
 		COLOR_SCHEME="prefer-dark"
 		GTK_THEME="Adwaita-dark"
 		HYPRCURSOR_THEME="Bibata-Modern-Ice"
