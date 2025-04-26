@@ -10,7 +10,7 @@ menu="\
 󱊪 Proxy ON\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Change proxy:" "$@") in
+case $(printf "$menu" | menu $opt -p "Proxy options:" "$@") in
 	*Dashboard* ) browser --new-tab https://clash.razord.top ;;
 	*OFF*       ) rm -f ~/.config/proxy ;;
 	*ON*        ) touch -f ~/.config/proxy ;;
