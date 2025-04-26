@@ -10,7 +10,7 @@ menu="\
  Light mode\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Select theme:" "$@") in
+case $(printf "$menu" | menu $opt -p "Change theme to:" "$@") in
 	*Auto*  ) darkmode auto ;;
 	*Dark*  ) darkmode dark ;;
 	*Light* ) darkmode light ;;
