@@ -1,7 +1,7 @@
 #!/bin/sh
 
 theme() {
-	if [ QT_STYLE_OVERRIDE="Windows" ]; then
+	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		exit
 	elif [ -f ~/.config/dark ]; then
 		export COLOR_SCHEME="prefer-dark"
