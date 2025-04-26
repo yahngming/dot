@@ -32,7 +32,7 @@ menu="\
 case $(printf "$menu" | menu $opt "$@") in
 	*Bar*       ) barmenu ;;
 	*Bluetooth* ) btmenu ;;
-	*Cloud*     ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
+	*Cloud*     ) cloudmenu ;;
 	*Coffee*    ) coffee ;;
 	*Display*   ) dispmenu ;;
 	*Dotfiles*  ) tui "dot" ;;
