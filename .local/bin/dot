@@ -9,6 +9,7 @@ cd - >/dev/null 2>&1
 
 cd ~/.local/src/sub
 git pull
+mkdir -p ~/.config/mihomo
 cp ~/.local/src/sub/clash ~/.config/mihomo/config.yaml
 cd - >/dev/null 2>&1
 
