@@ -6,12 +6,12 @@ esac
 
 menu="\
 󰨇 Dashboard\n\
-󱊪 Proxy ON\n\
 󰌙 Proxy OFF\n\
+󱊪 Proxy ON\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Change proxy:" "$@") in
 	*Dashboard* ) browser --new-tab https://clash.razord.top ;;
-	*ON*        ) touch -p ~/.config/proxy ;;
-	*OFF*       ) rm -p ~/.config/proxy ;;
+	*OFF*       ) rm -f ~/.config/proxy ;;
+	*ON*        ) touch -f ~/.config/proxy ;;
 esac
