@@ -18,7 +18,12 @@ else
 	ICON_THEME="Adwaita"
 	XCURSOR_THEME="Bibata-Modern-Classic"
 fi
+
 gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
 gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	hyprctl setcursor $HYPRCURSOR_THEME 24
+fi
+cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
