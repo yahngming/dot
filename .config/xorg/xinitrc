@@ -15,8 +15,8 @@ case $1 in
 		dunst &
 		fcitx5 &
 		statusbar &
+		theme &
 		udiskie &
-		wallpaper &
 		xautolock -time 5 -locker locker &
 		xcompmgr &
 		exec dwm
