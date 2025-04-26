@@ -5,13 +5,13 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰨇 Dashboard\n\
-󰌙 Proxy OFF\n\
-󱊪 Proxy ON\n\
+󰨇 Open dashboard\n\
+󰌙 Turn OFF\n\
+󱊪 Turn ON\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Proxy options:" "$@") in
-	*Dashboard* ) browser --new-tab https://clash.razord.top ;;
+case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
+	*dashboard* ) browser --new-tab https://clash.razord.top ;;
 	*OFF*       ) rm -f ~/.config/proxy ;;
 	*ON*        ) touch -f ~/.config/proxy ;;
 esac
