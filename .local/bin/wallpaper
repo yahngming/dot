@@ -29,5 +29,5 @@ elif [ -n "$DISPLAY" ]; then
 	killall dunst && dunst &
 fi
 
-systemctl --user start daily@wallpaper.timer
-systemctl --user enable daily@wallpaper.timer
+systemctl --user start sun@wallpaper.timer
+systemctl --user enable sun@wallpaper.timer
