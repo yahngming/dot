@@ -24,7 +24,6 @@ map x trash
 map X delete
 map gc ${{lf -remote "send $id cd $HOME/.config"}}
 map gd ${{lf -remote "send $id cd $HOME/Downloads"}}
-map gf :fzf_jump
 map gm ${{lf -remote "send $id cd $XDG_RUNTIME_DIR/gvfs"}}
 map gs :fzf_search
 map gt ${{lf -remote "send $id cd $HOME/.local/share/Trash"}}
@@ -38,6 +37,7 @@ map <enter> open
 map <esc> :clear; setfilter; unselect
 map <c-a> :unselect; invert
 map <c-c> copy
+map <c-f> :fzf_jump
 map <c-v> paste
 map <c-x> cut
 map <c-z> trash-restore
@@ -77,7 +77,7 @@ cmd bulk-rename ${{
 }}
 
 cmd fzf_jump ${{
-	res="$(find . -maxdepth 1 | fzf --reverse --header="Jump to location")"
+	res="$(find . | fzf --reverse --header="Jump to location")"
 	if [ -n "$res" ]; then
 		if [ -d "$res" ]; then
 			cmd="cd"
