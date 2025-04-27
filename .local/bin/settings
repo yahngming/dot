@@ -45,7 +45,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*SMB*       ) smbmenu ;;
 	*Theme*     ) thememenu ;;
 	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
-	*Trash*     ) tui "trash-empty" ;;
+	*Trash*     ) tui "gio trash --empty" ;;
 	*Update*    ) tui "up" ;;
 	*USB*       ) usbmenu ;;
 	*Wallpaper* ) wallpaper ;;
