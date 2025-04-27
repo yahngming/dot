@@ -95,7 +95,7 @@ cmd fzf_search ${{
 	--bind="start:reload([ -n {q} ] && $cmd -- {q} || true)" \
 	--bind="change:reload([ -n {q} ] && $cmd -- {q} || true)" \
 	--bind='enter:become(lf -remote "send $id select \"$(printf "%s" {1} | sed '\''s/\\/\\\\/g;s/"/\\"/g'\'')\"")' \
-	--preview='~/.config/lf/cleaner; ~/.config/lf/previewer {1} "$FZF_PREVIEW_COLUMNS" "$FZF_PREVIEW_LINES" "$FZF_PREVIEW_LEFT" "$FZF_PREVIEW_TOP"'
+	--preview='ctpvclear; ctpv {1} "$FZF_PREVIEW_COLUMNS" "$FZF_PREVIEW_LINES" "$FZF_PREVIEW_LEFT" "$FZF_PREVIEW_TOP"'
 }}
 
 cmd pager ${{
