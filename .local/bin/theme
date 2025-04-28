@@ -33,7 +33,7 @@ init() {
 }
 
 auto() {
-	if [[ "$(date +%H:%M)" <= "06:00" ]] || [[ "$(date +%H:%M)" => "18:00" ]]; then
+	if [[ "$(date +%H:%M)" <= "06:00" ]] || [[ "$(date +%H:%M)" >= "18:00" ]]; then
 		dark
 	else
 		light
