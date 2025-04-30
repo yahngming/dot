@@ -151,7 +151,7 @@ cmd paste &{{
 
 cmd trash ${{
 	set -f
-	if gio trash 2>/dev/null; then
+	if command -v gio; then
 		gio trash $fx
 	else
 		mkdir -p ~/.trash
