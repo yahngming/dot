@@ -26,7 +26,7 @@ map gc ${{lf -remote "send $id cd $HOME/.config"}}
 map gd ${{lf -remote "send $id cd $HOME/Downloads"}}
 map gm ${{lf -remote "send $id cd $XDG_RUNTIME_DIR/gvfs"}}
 map gs :fzf_search
-map gt ${{lf -remote "send $id cd $HOME/.local/share/Trash"}}
+map gt ${{lf -remote "send $id cd $HOME/.local/share/Trash/files"}}
 map gu ${{lf -remote "send $id cd /run/media/$USER"}}
 map za push :archive<space>
 map zc push :zoxide<space>
