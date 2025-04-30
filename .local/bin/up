@@ -2,4 +2,4 @@
 
 yay
 sudo pacman -Rns $(pacman -Qtdq)
-sudo pacman -Sc
+yay -Scc
