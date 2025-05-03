@@ -25,9 +25,9 @@ init() {
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl setcursor $HYPRCURSOR_THEME 24
 	 	killall waybar
 		hyprctl dispatch exec waybar >/dev/null 2>&1
+		hyprctl setcursor $HYPRCURSOR_THEME 24
 	fi
 	if [ -n "$DISPLAY" ]; then
 		wallpaper
