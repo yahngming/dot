@@ -27,7 +27,7 @@ password: $PASSWORD
 ```
 other packages
 ```sh
-yay -S davinci-resolve gyroflow intel-compute-runtime-legacy-bin minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
+yay -S davinci-resolve game-devices-udev gyroflow intel-compute-runtime-legacy-bin minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
 ```
 
 ## chromeos
