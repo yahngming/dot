@@ -3,7 +3,7 @@
 wallpaper=~/Pictures/wallpapers/wallpaper
 weatherpaper=~/Pictures/wallpapers/weatherpaper.png
 
-if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
+if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 	exit
 fi
 convert "$wallpaper" \( <( curl wttr.in/_tqp0.png ) -resize 400x \) -geometry +100+100 -composite "$weatherpaper"
