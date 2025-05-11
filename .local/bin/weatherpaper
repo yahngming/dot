@@ -8,10 +8,12 @@ if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 fi
 convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -gravity center -composite "$weatherpaper"
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	hyprctl dispatch exec hyprpaper
-	hyprctl hyprpaper unload all
 	hyprctl hyprpaper preload "$weatherpaper"
 	hyprctl hyprpaper wallpaper ,"$weatherpaper"
+	sleep 10
+	hyprctl hyprpaper wallpaper ,"$wallpaper"
 elif [ -n "$DISPLAY" ]; then
 	xwallpaper --zoom "$weatherpaper"
+	sleep 10
+	xwallpaper --zoom "$wallpaper"
 fi
