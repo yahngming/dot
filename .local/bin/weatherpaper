@@ -11,6 +11,7 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 	hyprctl hyprpaper preload "$weatherpaper"
 	hyprctl hyprpaper wallpaper ,"$weatherpaper"
 	sleep 10
+	hyprctl hyprpaper preload "$wallpaper"
 	hyprctl hyprpaper wallpaper ,"$wallpaper"
 elif [ -n "$DISPLAY" ]; then
 	xwallpaper --zoom "$weatherpaper"
