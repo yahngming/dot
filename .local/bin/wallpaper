@@ -49,8 +49,8 @@ setpaper() {
 
 help() {
 	echo "Usage: wallpaper [MODE]"
-	echo "  manual        initialize"
-	echo "  random        auto switch"
+	echo "  manual        select from a list"
+	echo "  random        random pick"
 }
 
 mode=${1:-help}
