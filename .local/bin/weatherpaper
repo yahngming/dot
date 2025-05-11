@@ -1,4 +1,13 @@
 #!/bin/sh
 
-	weatherpaper=~/Pictures/wallpapers/weatherpaper.png
-	convert "$wallpaper" \( <( curl wttr.in/_tqp0.png ) -resize 400x \) -geometry +50+50 -composite "$weatherpaper" &
+wallpaper=~/Pictures/wallpapers/wallpaper.png
+weatherpaper=~/Pictures/wallpapers/weatherpaper.png
+convert "$wallpaper" \( <( curl wttr.in/_tqp0.png ) -resize 400x \) -geometry +100+100 -composite "$weatherpaper"
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	hyprctl dispatch exec hyprpaper
+	hyprctl hyprpaper unload all
+	hyprctl hyprpaper preload "$weatherpaper"
+	hyprctl hyprpaper wallpaper ,"$weatherpaper"
+elif [ -n "$DISPLAY" ]; then
+	xwallpaper --zoom "$weatherpaper"
+fi
