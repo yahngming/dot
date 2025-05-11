@@ -48,7 +48,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Trash*     ) tui "gio trash --empty" ;;
 	*Update*    ) tui "up" ;;
 	*USB*       ) usbmenu ;;
-	*Wallpaper* ) wallpaper ;;
+	*Wallpaper* ) wallpapermenu ;;
 	*WLAN*      ) wlanmenu ;;
 	*           ) exit 1 ;;
 esac
