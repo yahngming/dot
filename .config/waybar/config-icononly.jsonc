@@ -237,7 +237,7 @@
 		"format": "{}",
 		"rotate": 0,
 		"exec": "echo ; echo 󰆊 switch wallpaper",
-		"on-click": "wallpaper",
+		"on-click": "wallpaper random",
 		"interval" : 86400, // once every day
 		"tooltip": true
 	},
