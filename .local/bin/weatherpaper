@@ -10,11 +10,6 @@ convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -gravity center -composite "$we
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	hyprctl hyprpaper preload "$weatherpaper"
 	hyprctl hyprpaper wallpaper ,"$weatherpaper"
-	sleep 10
-	hyprctl hyprpaper preload "$wallpaper"
-	hyprctl hyprpaper wallpaper ,"$wallpaper"
 elif [ -n "$DISPLAY" ]; then
 	xwallpaper --zoom "$weatherpaper"
-	sleep 10
-	xwallpaper --zoom "$wallpaper"
 fi
