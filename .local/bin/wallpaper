@@ -54,7 +54,7 @@ setpaper() {
 
 help() {
 	echo "Usage: wallpaper [ARG]"
-	echo "  filename/directory        set a wallpaper manually"
+	echo "  filename/directory        set wallpaper manually"
 	echo "  picker                    select from a picker"
 	echo "  random                    random picture"
 }
