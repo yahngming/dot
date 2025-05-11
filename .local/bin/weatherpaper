@@ -3,6 +3,10 @@
 wallpaper=~/Pictures/wallpapers/wallpaper
 weatherpaper=~/Pictures/wallpapers/weatherpaper.png
 convert "$wallpaper" \( <( curl wttr.in/_tqp0.png ) -resize 400x \) -geometry +100+100 -composite "$weatherpaper"
+
+if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$weatherpaper" == "" ]; then
+	exit
+fi
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	hyprctl dispatch exec hyprpaper
 	hyprctl hyprpaper unload all
