@@ -1,31 +1,57 @@
 #!/bin/sh
 
-if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
-	exit
-elif [ -f ~/.config/dark ]; then
-	theme=dark
-else
-	theme=light
-fi
-wallpaper=$(find ~/Pictures/wallpapers/$theme/* | shuf -n 1)
+getfolder() {
+	if [ -f ~/.config/dark ]; then
+		theme=dark
+	else
+		theme=light
+	fi
+	folder=~/Pictures/wallpapers/$theme
+}
 
-wal -n -i "$wallpaper"
-source ~/.cache/wal/colors.sh
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	hyprctl dispatch exec hyprpaper
-	hyprctl hyprpaper unload all
-	hyprctl hyprpaper preload "$wallpaper"
-	hyprctl hyprpaper wallpaper ,"$wallpaper"
-	sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
-	sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
-	sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
-	sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
-	makoctl reload
-elif [ -n "$DISPLAY" ]; then
-	xwallpaper --zoom "$wallpaper"
-	xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
-	sed -i '/background = /s/.*/background = "'$color0'"/' "$HOME/.config/dunst/dunstrc"
-	sed -i '/foreground = /s/.*/foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
-	sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
-	killall dunst && dunst &
-fi
+manual() {
+	getfolder
+	wallpaper=$(nsxiv -otb $folder/*)
+	setpaper
+}
+
+random() {
+	getfolder
+	wallpaper=$(find $folder/* | shuf -n 1)
+	setpaper
+}
+
+setpaper() {
+	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
+		exit
+	fi
+	wal -n -i "$wallpaper"
+	source ~/.cache/wal/colors.sh
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		hyprctl dispatch exec hyprpaper
+		hyprctl hyprpaper unload all
+		hyprctl hyprpaper preload "$wallpaper"
+		hyprctl hyprpaper wallpaper ,"$wallpaper"
+		sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
+		sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
+		sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
+		sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
+		makoctl reload
+	elif [ -n "$DISPLAY" ]; then
+		xwallpaper --zoom "$wallpaper"
+		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
+		sed -i '/background = /s/.*/background = "'$color0'"/' "$HOME/.config/dunst/dunstrc"
+		sed -i '/foreground = /s/.*/foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
+		sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
+		killall dunst && dunst &
+	fi
+}
+
+help() {
+	echo "Usage: wallpaper [MODE]"
+	echo "  manual        initialize"
+	echo "  random        auto switch"
+}
+
+mode=${1:-help}
+$mode
