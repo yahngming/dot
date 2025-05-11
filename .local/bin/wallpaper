@@ -35,7 +35,7 @@ setpaper() {
 		exit
 	fi
 	weatherpaper=~/Pictures/wallpapers/weatherpaper.png
-	convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +50+50 -composite "$weatherpaper" &
+	convert "$wallpaper" \( <( curl wttr.in/_tqp0.png ) -resize 400x \) -geometry +50+50 -composite "$weatherpaper" &
 	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
