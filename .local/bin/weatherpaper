@@ -1,7 +1,7 @@
 #!/bin/sh
 
 wallpaper=~/Pictures/wallpapers/wallpaper
-weatherpaper=~/Pictures/wallpapers/weatherpaper
+weatherpaper=~/Pictures/wallpapers/weatherpaper.png
 convert "$wallpaper" \( <( curl wttr.in/_tqp0.png ) -resize 400x \) -geometry +100+100 -composite "$weatherpaper"
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	hyprctl dispatch exec hyprpaper
