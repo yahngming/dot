@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+󰕰 Manual\n\
+ Random\n\
+"
+
+case $(printf "$menu" | menu $opt -p "Set wallpaper:" "$@") in
+	*Manual* ) wallpaper manual ;;
+	*Random* ) wallpaper random ;;
+esac
