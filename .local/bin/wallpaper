@@ -12,6 +12,7 @@ getfolder() {
 
 manual() {
 	if [ -d "$arg" ] || [ -f "$arg" ]; then
+		getfolder
 		wallpaper=$arg
 		setpaper
 	else
