@@ -5,7 +5,7 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰕰 Select one or more in a picker\n\
+󰕰 Select picture(s) in a picker\n\
  Select randomly\n\
 "
 
