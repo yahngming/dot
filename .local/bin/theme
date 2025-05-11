@@ -30,7 +30,7 @@ init() {
 		hyprctl setcursor $HYPRCURSOR_THEME 24
 	fi
 	if [ -n "$DISPLAY" ]; then
-		wallpaper
+		wallpaper random
 	fi
 }
 
