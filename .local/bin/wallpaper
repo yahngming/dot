@@ -10,7 +10,7 @@ getfolder() {
 }
 
 manual() {
-	wallpaper=$1
+	wallpaper=$arg
 	setpaper
 }
 
