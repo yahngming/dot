@@ -22,7 +22,7 @@ random() {
 }
 
 setpaper() {
-	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
+	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
 	fi
 	wal -n -i "$wallpaper"
