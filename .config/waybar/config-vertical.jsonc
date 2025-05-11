@@ -278,10 +278,10 @@
 				"󰕾"
 			]
 		},
-		"on-click": "volume mute",
+		"on-click": "volume toggle",
 		"on-click-middle": "pavucontrol",
-		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"on-scroll-up": "volume up",
+		"on-scroll-down": "volume down",
 		"smooth-scrolling-threshold": 1
 	},
 	"pulseaudio#mic": {
@@ -289,9 +289,9 @@
 		"format-source": "",
 		"format-source-muted": "",
 		"tooltip-format": "{volume}% {format_source} ",
-		"on-click": "pactl set-source-mute 0 toggle",
-		"on-scroll-down": "pactl set-source-volume 0 -1%",
-		"on-scroll-up": "pactl set-source-volume 0 +1%"
+		"on-click": "volume toggle @DEFAULT_SOURCE@",
+		"on-scroll-up": "volume up @DEFAULT_SOURCE@"
+		"on-scroll-down": "volume down @DEFAULT_SOURCE@",
 	},
 	"pulseaudio/slider": {
 		"min": 0,
