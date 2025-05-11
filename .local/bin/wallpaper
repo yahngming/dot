@@ -34,6 +34,8 @@ setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
 	fi
+	weatherpaper=~/Pictures/wallpapers/weatherpaper.png
+	convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +50+50 -composite "$weatherpaper" &
 	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
@@ -46,8 +48,7 @@ setpaper() {
 		sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
 		sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
 		makoctl reload
-		weatherpaper=~/Pictures/wallpapers/weatherpaper.png
-		convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +50+50 -composite "$weatherpaper"
+		sleep 5
 		hyprctl hyprpaper preload "$weatherpaper"
 		hyprctl hyprpaper wallpaper ,"$weatherpaper"
 	elif [ -n "$DISPLAY" ]; then
@@ -57,6 +58,8 @@ setpaper() {
 		sed -i '/foreground = /s/.*/foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
 		sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
 		killall dunst && dunst &
+		sleep 5
+		xwallpaper --zoom "$weatherpaper"
 	fi
 }
 
