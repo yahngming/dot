@@ -54,6 +54,7 @@ setpaper() {
 		sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
 		killall dunst && dunst &
 	fi
+	cp "$wallpaper" ~/Pictures/wallpapers/
 }
 
 help() {
