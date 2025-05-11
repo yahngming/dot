@@ -1,0 +1,4 @@
+#!/bin/sh
+
+	weatherpaper=~/Pictures/wallpapers/weatherpaper.png
+	convert "$wallpaper" \( <( curl wttr.in/_tqp0.png ) -resize 400x \) -geometry +50+50 -composite "$weatherpaper" &
