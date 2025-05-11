@@ -5,7 +5,7 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰕰 Open a picker and press m to select a wallpaper manually\n\
+󰕰 Press m to pick manually\n\
  Select randomly\n\
 "
 
