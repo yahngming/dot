@@ -10,8 +10,12 @@ getfolder() {
 }
 
 manual() {
-	wallpaper=$arg
-	setpaper
+	if [ -f "$arg" ] || [ -d "$arg" ]; then
+		wallpaper=$arg
+		setpaper
+	else
+		echo "File not found."
+	fi
 }
 
 picker() {
