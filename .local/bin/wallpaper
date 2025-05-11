@@ -48,7 +48,7 @@ setpaper() {
 		sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
 		sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
 		makoctl reload
-		sleep 5
+		sleep 10
 		hyprctl hyprpaper preload "$weatherpaper"
 		hyprctl hyprpaper wallpaper ,"$weatherpaper"
 	elif [ -n "$DISPLAY" ]; then
@@ -58,7 +58,7 @@ setpaper() {
 		sed -i '/foreground = /s/.*/foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
 		sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
 		killall dunst && dunst &
-		sleep 5
+		sleep 10
 		xwallpaper --zoom "$weatherpaper"
 	fi
 }
