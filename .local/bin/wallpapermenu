@@ -5,11 +5,11 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰕰 Manual\n\
- Random\n\
+󰕰 Open a picker and press m to select a wallpaper manually\n\
+ Select randomly\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Set wallpaper:" "$@") in
-	*Manual* ) wallpaper manual ;;
-	*Random* ) wallpaper random ;;
+	*manual* ) wallpaper manual ;;
+	*random* ) wallpaper random ;;
 esac
