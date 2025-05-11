@@ -35,8 +35,6 @@ setpaper() {
 		exit
 	fi
 	wal -n -i "$wallpaper"
-	convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +50+50 -composite ~/Pictures/wallpapers/wallpaper.png
-	wallpaper="~/Pictures/wallpapers/wallpaper.png"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl dispatch exec hyprpaper
@@ -48,6 +46,10 @@ setpaper() {
 		sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
 		sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
 		makoctl reload
+		weatherpaper=~/Pictures/wallpapers/weatherpaper.png
+		convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +50+50 -composite "$weatherpaper"
+		hyprctl hyprpaper preload "$weatherpaper"
+		hyprctl hyprpaper wallpaper ,"$weatherpaper"
 	elif [ -n "$DISPLAY" ]; then
 		xwallpaper --zoom "$wallpaper"
 		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
