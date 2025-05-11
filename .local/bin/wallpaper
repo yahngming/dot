@@ -14,7 +14,7 @@ manual() {
 		wallpaper=$arg
 		setpaper
 	else
-		echo "File not found."
+		echo "Argument unknown"
 	fi
 }
 
