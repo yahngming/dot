@@ -22,7 +22,7 @@ manual() {
 
 picker() {
 	getfolder
-	wallpaper=$(nsxiv -otb $folder/* | shuf -n 1)
+	wallpaper=$(nsxiv -ot $folder/* | shuf -n 1)
 	setpaper
 }
 
