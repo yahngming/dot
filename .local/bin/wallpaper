@@ -10,6 +10,11 @@ getfolder() {
 }
 
 manual() {
+	wallpaper=$1
+	setpaper
+}
+
+picker() {
 	getfolder
 	wallpaper=$(nsxiv -otb $folder/* | shuf -n 1)
 	setpaper
@@ -48,10 +53,14 @@ setpaper() {
 }
 
 help() {
-	echo "Usage: wallpaper [MODE]"
-	echo "  manual        select from a list"
-	echo "  random        random pick"
+	echo "Usage: wallpaper [ARG]"
+	echo "  filename/directory        set a wallpaper manually"
+	echo "  picker                    select from a picker"
+	echo "  random                    random picture"
 }
 
-mode=${1:-help}
-$mode
+arg=${1:-help}
+case "$arg" in
+	help|picker|random ) $arg ;;
+	*                  ) manual ;;
+esac
