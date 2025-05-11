@@ -10,7 +10,7 @@ getfolder() {
 }
 
 manual() {
-	if [ -f "$arg" ] || [ -d "$arg" ]; then
+	if [ -d "$arg" ] || [ -f "$arg" ]; then
 		wallpaper=$arg
 		setpaper
 	else
@@ -58,7 +58,7 @@ setpaper() {
 
 help() {
 	echo "Usage: wallpaper [ARG]"
-	echo "  filename/directory        set wallpaper manually"
+	echo "  directory/filename        set wallpaper manually"
 	echo "  picker                    select from a picker"
 	echo "  random                    random picture"
 }
