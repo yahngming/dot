@@ -11,7 +11,7 @@ getfolder() {
 
 manual() {
 	getfolder
-	wallpaper=$(nsxiv -otb $folder/*)
+	wallpaper=$(nsxiv -otb $folder/* | shuf -n 1)
 	setpaper
 }
 
