@@ -127,9 +127,9 @@ cmd open &{{
 
 cmd pager ${{
 	if [ -f "$f" ]; then
-		$PAGER "$f"
+		bat --paging always "$f"
 	elif [ -d "$f" ]; then
-		tree "$f" | $PAGER
+		tree "$f" | less
 	fi
 }}
 
