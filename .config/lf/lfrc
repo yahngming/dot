@@ -25,7 +25,6 @@ map X delete
 map gc ${{lf -remote "send $id cd $HOME/.config"}}
 map gd ${{lf -remote "send $id cd $HOME/Downloads"}}
 map gm ${{lf -remote "send $id cd $XDG_RUNTIME_DIR/gvfs"}}
-map gs :fzf_search
 map gt ${{lf -remote "send $id cd $HOME/.local/share/Trash/files"}}
 map gu ${{lf -remote "send $id cd /run/media/$USER"}}
 map za push :archive<space>
@@ -38,6 +37,7 @@ map <esc> :clear; setfilter; unselect
 map <c-a> :unselect; invert
 map <c-c> copy
 map <c-f> :fzf_jump
+map <c-s> :fzf_search
 map <c-v> paste
 map <c-x> cut
 map <c-z> trash-restore
