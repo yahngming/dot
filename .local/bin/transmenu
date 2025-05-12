@@ -31,6 +31,7 @@ load_config() {
 	fi
 
 	# Default values
+	: "${TRANS_ENGINE:=bing}"
 	: "${TRANS_LANGS:=:zh :ja :en}"
 	: "${DMENU_TEXT:=menu -p 'Translate:'}"
 	: "${DMENU_LANG:=menu -p 'To:'}"
@@ -117,7 +118,7 @@ target="$(lang_menu | eval "$DMENU_LANG" '$@')" || exit 0
 }
 
 # Translate text
-translation="$(trans "$target" "$text")"
+translation="$(trans -e "${TRANS_ENGINE:-'google'}" "$target" "$text")"
 [ -z "$translation" ] && err 'Translation failed.'
 
 case "$(choose_next "$translation" "$@")" in
