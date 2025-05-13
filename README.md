@@ -27,7 +27,9 @@ password: $PASSWORD
 ```
 other packages
 ```sh
-yay -S davinci-resolve game-devices-udev gyroflow intel-compute-runtime-legacy-bin minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
+yay -S intel-compute-runtime-legacy-bin # for Thinkpad X1C 2018
+yay -S game-devices-udev # for 8BitDo Pro 2
+yay -S davinci-resolve gyroflow minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
 ```
 
 ## chromeos
