@@ -32,6 +32,12 @@ random() {
 	setpaper
 }
 
+weather() {
+	wallpaper=~/Pictures/wallpapers/weatherpaper.png
+	convert ~/Pictures/wallpapers/wallpaper <( curl wttr.in/_tqp0.png ) -geometry +100+100 -composite "$wallpaper"
+	setpaper
+}
+
 setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
@@ -64,10 +70,11 @@ help() {
 	echo "  directory/filename        set wallpaper manually"
 	echo "  picker                    select from a picker"
 	echo "  random                    random picture"
+	echo "  weather                   overlay weather report"
 }
 
 arg=${1:-help}
 case "$arg" in
-	help|picker|random ) $arg ;;
-	*                  ) manual ;;
+	help|picker|random|weather ) $arg ;;
+	*                          ) manual ;;
 esac
