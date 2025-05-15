@@ -70,7 +70,7 @@ help() {
 	echo "  directory/filename        set wallpaper manually"
 	echo "  picker                    select from a picker"
 	echo "  random                    random picture"
-	echo "  weather                   overlay weather report"
+	echo "  weather                   weather overlay"
 }
 
 arg=${1:-help}
