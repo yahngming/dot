@@ -7,9 +7,11 @@ esac
 menu="\
 󰕰 Select picture(s) in a picker\n\
  Select randomly\n\
+ Overlay weather forcast\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Set wallpaper:" "$@") in
-	*picker* ) wallpaper picker ;;
-	*random* ) wallpaper random ;;
+	*picker*  ) wallpaper picker ;;
+	*random*  ) wallpaper random ;;
+	*weather* ) wallpaper weather ;;
 esac
