@@ -6,7 +6,7 @@ esac
 
 menu="\
 󰕰 Select picture(s) in a picker\n\
- Select randomly\n\
+ Change randomly\n\
  Overlay weather forcast\n\
 "
 
