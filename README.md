@@ -29,7 +29,8 @@ other packages
 ```sh
 yay -S intel-compute-runtime-legacy-bin # for Thinkpad X1C 2018
 yay -S game-devices-udev # for 8BitDo Pro 2
-yay -S davinci-resolve gyroflow minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
+yay -S brother-hl2140 # for Brother HL2140
+yay -S betaflight-configurator davinci-resolve doomrunner expresslrs-configurator gyroflow gzdoom minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git velocidrone
 ```
 
 ## chromeos
