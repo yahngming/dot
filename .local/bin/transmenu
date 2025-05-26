@@ -31,7 +31,7 @@ load_config() {
 	fi
 
 	# Default values
-	: "${TRANS_ENGINE:=bing}"
+	: "${TRANS_ENGINE:=google}"
 	: "${TRANS_LANGS:=:zh :ja :en}"
 	: "${DMENU_TEXT:=menu -p 'Translate:'}"
 	: "${DMENU_LANG:=menu -p 'To:'}"
