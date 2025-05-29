@@ -1,5 +1,9 @@
 #!/bin/sh
 
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
 input() {
 	audio_sources_raw=$(pactl list short sources | grep -v '.monitor' | awk '{print $1 "\t" $2}')
 	menu_input=""
@@ -28,3 +32,12 @@ output() {
 	pactl set-default-sink "$chosen_pactl_name"
 }
 
+menu="\
+󰕰 Input\n\
+ Output\n\
+"
+
+case $(printf "$menu" | menu $opt -p "Change port:" "$@") in
+	*input*  ) input ;;
+	*output* ) output ;;
+esac
