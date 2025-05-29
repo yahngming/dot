@@ -5,11 +5,11 @@ case "$LAUNCHER" in
 esac
 
 menu="\
- Input\n\
-󰓃 Output\n\
+󰓃 Sinks\n\
+ Sources\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Select interface:" "$@") in
-	*Input*  ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu $opt)" ;;
-	*Output* ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu $opt)" ;;
+	*Sinks*   ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu $opt)" ;;
+	*Sources* ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu $opt)" ;;
 esac
