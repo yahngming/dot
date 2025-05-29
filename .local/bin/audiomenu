@@ -5,11 +5,11 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰕰 Input\n\
- Output\n\
+ Input\n\
+󰓃 Output\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Change port:" "$@") in
-	*input*  ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu)" ;;
-	*output* ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu)" ;;
+case $(printf "$menu" | menu $opt -p "Select audio:" "$@") in
+	*Input*  ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu)" ;;
+	*Output* ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu)" ;;
 esac
