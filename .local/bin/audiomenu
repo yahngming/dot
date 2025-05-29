@@ -10,6 +10,6 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt -p "Change port:" "$@") in
-	*input*  ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $1 "\t" $2}' | menu)" ;;
-	*output* ) pactl set-default-sink "$(pactl list short sinks | awk '{print $1 "\t" $2}' | menu)" ;;
+	*input*  ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu)" ;;
+	*output* ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu)" ;;
 esac
