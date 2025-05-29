@@ -9,7 +9,7 @@ menu="\
 󰓃 Output\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Select audio:" "$@") in
-	*Input*  ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu)" ;;
-	*Output* ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu)" ;;
+case $(printf "$menu" | menu $opt -p "Select interface:" "$@") in
+	*Input*  ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu $opt)" ;;
+	*Output* ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu $opt)" ;;
 esac
