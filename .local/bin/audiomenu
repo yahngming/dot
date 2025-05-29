@@ -1,0 +1,30 @@
+#!/bin/sh
+
+input() {
+	audio_sources_raw=$(pactl list short sources | grep -v '.monitor' | awk '{print $1 "\t" $2}')
+	menu_input=""
+	declare -A source_map
+	while IFS=$'\t' read -r id name; do
+		display_name=$(echo "$name" | sed -E 's/^(alsa_input\.|bluez_input\.)//' | tr '_' ' ' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1))tolower(substr($i,2)); print}')
+		menu_input+="$display_name"$'\n'
+		source_map["$display_name"]="$name"
+	done <<< "$audio_sources_raw"
+	chosen_display_name=$(echo -e "$menu_input" | menu -p "Choose input:")
+	chosen_pactl_name="${source_map["$chosen_display_name"]}"
+	pactl set-default-source "$chosen_pactl_name"
+}
+
+output() {
+	audio_sinks_raw=$(pactl list short sinks | awk '{print $1 "\t" $2}')
+	menu_input=""
+	declare -A source_map
+	while IFS=$'\t' read -r id name; do
+		display_name=$(echo "$name" | sed -E 's/^(alsa_output\.|bluez_output\.)//' | tr '_' ' ' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1))tolower(substr($i,2)); print}')
+		menu_input+="$display_name"$'\n'
+		source_map["$display_name"]="$name"
+	done <<< "$audio_sinks_raw"
+	chosen_display_name=$(echo -e "$menu_input" | menu -p "Choose output:")
+	chosen_pactl_name="${source_map["$chosen_display_name"]}"
+	pactl set-default-sink "$chosen_pactl_name"
+}
+
