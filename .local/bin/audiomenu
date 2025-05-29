@@ -5,17 +5,59 @@ case "$LAUNCHER" in
 esac
 
 input() {
-	audio_sources_raw=$(pactl list short sources | grep -v '.monitor' | awk '{print $1 "\t" $2}')
-	menu_input=""
-	declare -A source_map
-	while IFS=$'\t' read -r id name; do
-		display_name=$(echo "$name" | sed -E 's/^(alsa_input\.|bluez_input\.)//' | tr '_' ' ' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1))tolower(substr($i,2)); print}')
-		menu_input+="$display_name"$'\n'
-		source_map["$display_name"]="$name"
-	done <<< "$audio_sources_raw"
-	chosen_display_name=$(echo -e "$menu_input" | menu -p "Choose input:")
-	chosen_pactl_name="${source_map["$chosen_display_name"]}"
-	pactl set-default-source "$chosen_pactl_name"
+    echo "Gathering audio input devices..."
+
+    # Get a list of physical audio sources (microphones) and format them for processing.
+    # Excludes '.monitor' sources which are virtual outputs.
+    audio_sources_raw=$(pactl list short sources | grep -v '.monitor' | awk '{print $1 "\t" $2}')
+
+    # Exit if no physical audio inputs are found.
+    if [ -z "$audio_sources_raw" ]; then
+        echo "No physical audio input devices (microphones) found."
+        echo "Please ensure your microphone is connected and recognized by PipeWire/PulseAudio."
+        return 1 # Return a non-zero status to indicate an error
+    fi
+
+    local menu_input=""
+    # Use a local associative array to map the display name back to the original pactl name.
+    declare -A source_map
+
+    # Process each source to create user-friendly display names for dmenu.
+    while IFS=$'\t' read -r id name; do
+        # Clean up the name for display: remove prefixes, replace underscores, and capitalize words.
+        local display_name=$(echo "$name" | \
+            sed -E 's/^(alsa_input\.|bluez_input\.)//' | \
+            tr '_' ' ' | \
+            awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1))tolower(substr($i,2)); print}')
+
+        menu_input+="$display_name"$'\n'
+        source_map["$display_name"]="$name"
+    done <<< "$audio_sources_raw"
+
+    # Present the choices to the user via dmenu (or your 'menu' alias).
+    local chosen_display_name=$(echo -e "$menu_input" | dmenu -p "Choose Microphone Input:")
+
+    # If the user cancels dmenu, exit the function.
+    if [ -z "$chosen_display_name" ]; then
+        echo "No microphone input device selected. Operation cancelled."
+        return 0 # Return 0 for a successful cancellation
+    fi
+
+    # Retrieve the actual pactl name using the chosen display name.
+    local chosen_pactl_name="${source_map["$chosen_display_name"]}"
+
+    # Error check: should not happen if map is built correctly, but good for robustness.
+    if [ -z "$chosen_pactl_name" ]; then
+        echo "Error: Could not find the internal name for '$chosen_display_name'."
+        return 1
+    fi
+
+    echo "Setting default microphone to: **$chosen_display_name**"
+    # Set the chosen source as the default.
+    pactl set-default-source "$chosen_pactl_name"
+
+    echo "Default microphone input successfully updated."
+    return 0 # Indicate success
 }
 
 output() {
