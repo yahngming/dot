@@ -27,11 +27,12 @@ password: $PASSWORD
 ```
 other packages
 ```sh
+yay betaflight-configurator doomrunner expresslrs-configurator gyroflow gzdoom minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
 yay intel-compute-runtime-legacy-bin # for Thinkpad X1C 2018
 yay brother-hl2140 # for Brother HL2140
 yay game-devices-udev # for 8BitDo Pro 2
 yay new-lg4ff-dkms-git oversteer # for Logitech G29
-yay betaflight-configurator davinci-resolve doomrunner expresslrs-configurator gyroflow gzdoom minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git velocidrone
+yay davinci-resolve velocidrone # Download official packages into ~/.cache/yay/$PKGNAME
 ```
 
 ## chromeos
