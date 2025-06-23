@@ -7,6 +7,7 @@ menu="\
 󰤄 sleep\n\
 󰗽 logout\n\
  reboot\n\
+ bios\n\
 󰤆 shutdown\n\
 "
 
@@ -15,6 +16,7 @@ case $(printf "$menu" | menu "$@") in
 	*sleep*    ) systemctl sleep ;;
 	*logout*   ) pkill -KILL -u $USER ;;
 	*reboot*   ) systemctl reboot ;;
+	*bios*     ) systemctl reboot --firmware-setup ;;
 	*shutdown* ) systemctl poweroff ;;
 	*          ) exit 1 ;;
 esac
