@@ -1,5 +1,6 @@
 #!/bin/sh
 
+sudo pacman -Sy --needed archlinux-keyring
 yay
 sudo pacman -Rns $(pacman -Qtdq)
 yay -Scc
