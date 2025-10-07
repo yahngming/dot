@@ -102,7 +102,7 @@ tooltip label {
 
 /* <<--< General >-->> */
 
-#custom-ws,
+#custom-start,
 #workspaces,
 #window,
 #temperature,
@@ -125,7 +125,7 @@ tooltip label {
 	padding: 0 4px;
 }
 
-#custom-ws:hover,
+#custom-start:hover,
 #window:hover,
 #cpu:hover,
 #custom-distro:hover,
@@ -168,7 +168,7 @@ tooltip label {
 
 /* Window Icon */
 
-#custom-ws {
+#custom-start {
 	background: @main-bg;
 }
 
