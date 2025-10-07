@@ -6,15 +6,14 @@
 	"reload_style_on_change": true,
 	"gtk-layer-shell": true,
 
-	// <<--< Positions >-->>
+	// layout
 
 	"modules-left": [
-		"custom/ws",            // ws icon
+		"custom/start",
 		"custom/left1",
-		"hyprland/workspaces",  // workspaces
+		"hyprland/workspaces",
 		"custom/right1",
-		"custom/paddw",
-		"hyprland/window"       // window title
+		"hyprland/window"
 	],
 
 	"modules-center": [
@@ -58,7 +57,7 @@
 
 	// <<--< Modules >-->>
 
-	"custom/ws": {
+	"custom/start": {
 		"format": "  ",
 		"tooltip": false,
 		"on-click": "launcher",
