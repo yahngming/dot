@@ -17,42 +17,39 @@
 	],
 
 	"modules-center": [
-		"custom/paddc",
 		"custom/left2",
-		"temperature",          // temperature
+		"temperature",
 		"custom/left3",
-		"memory",               // memory
+		"memory",
 		"custom/left4",
-		"cpu",                  // cpu
+		"cpu",
 		"custom/leftin1",
 		"custom/left5",
-		"custom/distro",        // distro icon
+		"custom/distro",
 		"custom/right2",
 		"custom/rightin1",
-		"pulseaudio",           // volume
+		"pulseaudio",
 		"custom/right3",
-		"pulseaudio#source",    // microphone
+		"pulseaudio#source",
 		"custom/right4",
-		"battery",              // battery
-		"custom/right5",
-		"custom/paddc"
+		"battery",
+		"custom/right5"
 	],
 
 	"modules-right": [
-		"mpris",                // media info
-		"custom/paddw",
+		"mpris",
 		"custom/left6",
-		"tray",                 // tray
-		"custom/usb",           // usb
-		"idle_inhibitor",       // idle inhibitor
-		"bluetooth",            // bluetooth
-		"network",              // network
+		"tray",
+		"custom/usb",
+		"idle_inhibitor",
+		"bluetooth",
+		"network",
 		"custom/left7",
-		"clock#date",           // date
+		"clock#date",
 		"custom/left8",
-		"clock#time",           // time
+		"clock#time",
 		"custom/leftin2",
-		"custom/power"          // power button
+		"custom/power"
 	],
 
 	// modules
@@ -291,18 +288,7 @@
 		"on-click": "powermenu"
 	},
 
-	// padding
-
-	"custom/paddw": {
-		"format": " ",
-		"tooltip": false
-	},
-	"custom/paddc": {
-		"format": " ",
-		"tooltip": false
-	},
-
-	// left
+	// arrows
 
 	"custom/left1": {
 		"format": "",
@@ -344,9 +330,6 @@
 		"format": "",
 		"tooltip": false
 	},
-
-	// right
-
 	"custom/right1": {
 		"format": "",
 		"tooltip": false
