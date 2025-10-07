@@ -55,7 +55,7 @@
 		"custom/power"          // power button
 	],
 
-	// <<--< Modules >-->>
+	// modules
 
 	"custom/start": {
 		"format": "  ",
@@ -291,19 +291,18 @@
 		"on-click": "powermenu"
 	},
 
-	// <<--< Padding >-->>
+	// padding
 
 	"custom/paddw": {
 		"format": " ",
 		"tooltip": false
 	},
-
 	"custom/paddc": {
 		"format": " ",
 		"tooltip": false
 	},
 
-	// Left Arrows
+	// left
 
 	"custom/left1": {
 		"format": "",
@@ -337,8 +336,16 @@
 		"format": "",
 		"tooltip": false
 	},
+	"custom/leftin1": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/leftin2": {
+		"format": "",
+		"tooltip": false
+	},
 
-	// Right Arrows
+	// right
 
 	"custom/right1": {
 		"format": "",
@@ -360,20 +367,6 @@
 		"format": "",
 		"tooltip": false
 	},
-
-	// Left Inverse
-
-	"custom/leftin1": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/leftin2": {
-		"format": "",
-		"tooltip": false
-	},
-
-	// Right Inverse
-
 	"custom/rightin1": {
 		"format": "",
 		"tooltip": false
