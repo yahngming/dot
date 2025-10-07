@@ -40,7 +40,7 @@
 @define-color charging        @fg;
 
 * {
-	font-family: "0xProto Nerd Font";
+	font-family: monospace;
 	font-weight: bold;
 	min-height: 0;
 	padding: 0;
