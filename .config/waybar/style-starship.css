@@ -196,9 +196,6 @@ tooltip label {
 
 /* Temperature */
 
-#custom-paddc {
-	padding-left: 22px;
-}
 #custom-left2 {
 	color: @temperature;
 	background: @main-bg;
@@ -326,9 +323,6 @@ tooltip label {
 
 /* Media Info */
 
-#custom-paddc {
-	padding-right: 22px;
-}
 #mpris {
 	font-weight: normal;
 	background-color: @main-bg;
