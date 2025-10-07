@@ -43,8 +43,8 @@ bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) chromeo
 chrome-untrusted://terminal/html/nassh_preferences_editor.html
 ```
 @font-face {
-  font-family: "JetBrainsMono Nerd Font";
-  src: url("https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts/patched-fonts/JetBrainsMono/NoLigatures/Regular/JetBrainsMonoNLNerdFont-Regular.ttf");
+  font-family: "FiraMono Nerd Font";
+  src: url("https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts/patched-fonts/FiraMono/Regular/FiraMonoNerdFont-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
