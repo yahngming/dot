@@ -1,7 +1,7 @@
 @import 'colors.css';
 
 * {
-	font-family: monospace;
+	font-family: symbol;
 }
 
 window#waybar {
