@@ -16,6 +16,7 @@
 		],
 		"modules-right": [
 			"mpd",
+			"tray",
 			"idle_inhibitor",
 			"temperature",
 			"cpu",
@@ -26,7 +27,6 @@
 			"keyboard-state",
 			"battery",
 			"battery#bat2",
-			"tray",
 			"clock"
 		],
 		"hyprland/window": {
@@ -217,6 +217,7 @@
 		"spacing": "5",
 		"sway/window": {
 			"max-length": 50
+			"tray",
 		},
 		"custom/os_button": {
 			"format": "🔍",
