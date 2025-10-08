@@ -149,13 +149,13 @@
 		"format": "{icon}",
 		"format-icons": {
 			"default": "",
-			"active": "",
+			"active": ""
 			//"default": "○",
 			//"default": "●"
 		},
 		"persistent-workspaces": {
-			"*": [5]
-		},
+			"*": 5
+		}
 	},
 
 	"wlr/workspaces": {
