@@ -44,17 +44,19 @@
 			"exec": "echo 'File'",
 			"interval": 60,
 			"return-type": "plain",
-			"on-click": "nautilus"
+			"on-click": "tui lf"
 		},
 		"custom/textthree": {
 			"exec": "echo 'Edit'",
 			"interval": 60,
-			"return-type": "plain"
+			"return-type": "plain",
+			"on-click": "tui vim"
 		},
 		"custom/textfour": {
 			"exec": "echo 'View'",
 			"interval": 60,
-			"return-type": "plain"
+			"return-type": "plain",
+			"on-click": "settings"
 		},
 		"custom/textfive": {
 			"exec": "echo 'Help'",
