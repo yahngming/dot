@@ -217,7 +217,6 @@
 		"spacing": "5",
 		"sway/window": {
 			"max-length": 50
-			"tray",
 		},
 		"custom/os_button": {
 			"format": "🔍",
