@@ -39,7 +39,7 @@
 		},
 		"custom/launcher": {
 			"format": "🔍",
-			"on-click": "wofi --show drun",
+			"on-click": "launcher",
 			"tooltip": false
 		},
 		"custom/texttwo": {
@@ -51,8 +51,7 @@
 		"custom/textthree": {
 			"exec": "echo 'Edit'",
 			"interval": 60,
-			"return-type": "plain",
-			"on-click": "gimp"
+			"return-type": "plain"
 		},
 		"custom/textfour": {
 			"exec": "echo 'View'",
@@ -62,8 +61,7 @@
 		"custom/textfive": {
 			"exec": "echo 'Help'",
 			"interval": 60,
-			"return-type": "plain",
-			"on-click": "gio open https://github.com/kamlendras/waybar/issues/new"
+			"return-type": "plain"
 		},
 		"keyboard-state": {
 			"numlock": true,
@@ -228,7 +226,7 @@
 		},
 		"custom/os_button": {
 			"format": "🔍",
-			"on-click": "wofi --show drun",
+			"on-click": "launcher",
 			"tooltip": false
 		},
 		"wlr/taskbar": {
