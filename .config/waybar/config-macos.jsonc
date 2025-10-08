@@ -32,7 +32,7 @@
 		"hyprland/window": {
 			"format": "{class}",
 			"icon": true,
-			"icon-size": 10,
+			"icon-size": 14,
 			"max-length": 20
 		},
 		"custom/launcher": {
