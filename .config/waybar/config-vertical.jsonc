@@ -62,6 +62,9 @@
 		"format-icons": {
 			"default": "󰄰",
 			"active": "󰄯"
+		},
+		"persistent-workspaces": {
+			"*": 5
 		}
 	},
 	"cpu": {
