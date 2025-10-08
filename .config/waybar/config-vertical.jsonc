@@ -84,7 +84,7 @@
 	},
 	"clock": {
 		"interval": 1,
-		"format": "{:%H%M}",
+		"format": "{:%H\n%M}",
 		"tooltip-format": "<tt><small>{calendar}</small></tt>"
 	},
 	"mpris": {
