@@ -137,8 +137,7 @@
 	"custom/power": {
 		"format": "@{}",
 		"rotate": 0,
-		"on-click": "ags -t ControlPanel",
-		"on-click-right": "pkill ags",
+		"on-click": "powermenu",
 		"tooltip": true
 	},
 	
@@ -155,11 +154,7 @@
 			//"default": "●"
 		},
 		"persistent-workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-			"5": []
+			"*": [5]
 		},
 	},
 
