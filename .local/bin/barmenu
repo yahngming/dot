@@ -6,9 +6,10 @@ esac
 
 menu="\
 icononly\n\
+macos\n\
+mecha\n\
 modern\n\
 powerline\n\
-starship\n\
 vertical\n\
 windows\n\
 "
