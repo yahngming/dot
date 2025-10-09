@@ -5,5 +5,3 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 elif [ -n "$DISPLAY" ]; then
 	pgrep slock || slock &
 fi
-
-screensaver off
