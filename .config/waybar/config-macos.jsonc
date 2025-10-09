@@ -50,7 +50,7 @@
 			"exec": "echo 'Edit'",
 			"interval": 60,
 			"return-type": "plain",
-			"on-click": "tui vim"
+			"on-click": "editor"
 		},
 		"custom/textfour": {
 			"exec": "echo 'View'",
