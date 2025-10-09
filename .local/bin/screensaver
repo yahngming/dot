@@ -1,7 +1,7 @@
 #!/bin/sh
 
 screensavers=(
-	"$TERMINAL -F -e asciiquarium"
+	"$TERMINAL -F -e asciiquarium -s -t"
 	"$TERMINAL -F -e cmatrix -s"
 	"$TERMINAL -F -e lavat -c red -R 1 -k magenta"
 	"$TERMINAL -F -e pipes.sh -R"
