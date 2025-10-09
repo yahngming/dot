@@ -1,5 +1,7 @@
 #!/bin/sh
 
+screensaver off
+
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	pgrep hyprlock || hyprlock
 elif [ -n "$DISPLAY" ]; then
