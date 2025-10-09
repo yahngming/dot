@@ -8,11 +8,25 @@ screensavers=(
 	"$TERMINAL -F -e ttysvr"
 )
 
-for screensaver in "${screensavers[@]}"; do
-	if pgrep -fx "$screensaver"; then
-		pkill -fx "$screensaver"
-		exit
-	fi
-done
+off() {
+	for screensaver in "${screensavers[@]}"; do
+		if pgrep -fx "$screensaver"; then
+			pkill -fx "$screensaver"
+			exit
+		fi
+	done
+}
 
-eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
+random() {
+	off
+	eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
+}
+
+help() {
+	echo "Usage: screensaver [MODE]"
+	echo "  off           turn off"
+	echo "  random        start a random screensaver"
+}
+
+mode=${1:-help}
+$mode
