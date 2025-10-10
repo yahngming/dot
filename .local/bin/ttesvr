@@ -1,13 +1,5 @@
 #!/bin/sh
 
-shopt -s nocasematch
-
-case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
-	*thinkpad* ) input="$HOME/.config/fastfetch/thinkpad.txt" ;;
-	*          ) input="$HOME/.config/fastfetch/arch.txt" ;;
-esac
-opt="--input-file $input --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c"
-
 exit_screensaver() {
 	pkill -x tte 2>/dev/null
 	exit 0
@@ -17,7 +9,7 @@ trap exit_screensaver SIGINT SIGTERM SIGHUP SIGQUIT
 
 while true; do
 	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)
-	tte $opt $effect &
+	tte --input-file $LOGO --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c $effect &
 	while pgrep -x tte >/dev/null; do
 		if read -n 1 -t 3; then
 			exit_screensaver
