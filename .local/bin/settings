@@ -20,6 +20,7 @@ menu="\
  Password\n\
 󰐪 Printer\n\
 󰌘 Proxy\n\
+ Screensaver\n\
 󰡰 SMB\n\
  Theme\n\
 󰔠 Timezone\n\
@@ -31,26 +32,27 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt "$@") in
-	*Audio*     ) audiomenu ;;
-	*Bar*       ) barmenu ;;
-	*Bluetooth* ) btmenu ;;
-	*Cloud*     ) cloudmenu ;;
-	*Coffee*    ) coffee ;;
-	*Display*   ) dispmenu ;;
-	*Dotfiles*  ) tui "dot" ;;
-	*Gamemode*  ) gamemode ;;
-	*IME*       ) fcitx5-configtool ;;
-	*Keyboard*  ) keymap ;;
-	*Password*  ) passmenu ;;
-	*Printer*   ) browser --new-tab http://localhost:631 ;;
-	*Proxy*     ) proxymenu ;;
-	*SMB*       ) smbmenu ;;
-	*Theme*     ) thememenu ;;
-	*Timezone*  ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
-	*Trash*     ) tui "gio trash --empty" ;;
-	*Update*    ) tui "up" ;;
-	*USB*       ) usbmenu ;;
-	*Wallpaper* ) wallpapermenu ;;
-	*WLAN*      ) wlanmenu ;;
-	*           ) exit 1 ;;
+	*Audio*       ) audiomenu ;;
+	*Bar*         ) barmenu ;;
+	*Bluetooth*   ) btmenu ;;
+	*Cloud*       ) cloudmenu ;;
+	*Coffee*      ) coffee ;;
+	*Display*     ) dispmenu ;;
+	*Dotfiles*    ) tui "dot" ;;
+	*Gamemode*    ) gamemode ;;
+	*IME*         ) fcitx5-configtool ;;
+	*Keyboard*    ) keymap ;;
+	*Password*    ) passmenu ;;
+	*Printer*     ) browser --new-tab http://localhost:631 ;;
+	*Proxy*       ) proxymenu ;;
+	*Screensaver* ) screensavermenu ;;
+	*SMB*         ) smbmenu ;;
+	*Theme*       ) thememenu ;;
+	*Timezone*    ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
+	*Trash*       ) tui "gio trash --empty" ;;
+	*Update*      ) tui "up" ;;
+	*USB*         ) usbmenu ;;
+	*Wallpaper*   ) wallpapermenu ;;
+	*WLAN*        ) wlanmenu ;;
+	*             ) exit 1 ;;
 esac
