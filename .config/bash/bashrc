@@ -42,7 +42,7 @@ setenv() {
 			;;
 	esac
 	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
-		*thinkpad* ) export LOGO="$HOME/.config/fastfetch/thinkpad.txt" ;;
+		*ThinkPad* ) export LOGO="$HOME/.config/fastfetch/thinkpad.txt" ;;
 		*          ) export LOGO="$HOME/.config/fastfetch/arch.txt" ;;
 	esac
 	if [ -f ~/.config/proxy ]; then
