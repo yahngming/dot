@@ -12,7 +12,6 @@ for screensaver in "${screensavers[@]}"; do
 	if pgrep -fx "$screensaver"; then
 		break
 	fi
-	$screensaver=""
 done
 
 off() {
