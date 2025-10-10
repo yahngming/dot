@@ -12,7 +12,7 @@ for screensaver in "${screensavers[@]}"; do
 	if pgrep -fx "$screensaver"; then
 		break
 	fi
-	${!screensaver}=""
+	unset screensaver
 done
 
 echo $screensaver
