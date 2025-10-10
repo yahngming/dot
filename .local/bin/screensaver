@@ -14,13 +14,14 @@ dim() {
 }
 
 off() {
-	rm -f ~/.config/screensaver
-	for screensaver in "${screensavers[@]}"; do
-		if pgrep -fx "$screensaver"; then
-			pkill -fx "$screensaver"
-			exit
-		fi
-	done
+	if [ -f ~/.config/screensaver ]; then
+		rm -f ~/.config/screensaver
+		for screensaver in "${screensavers[@]}"; do
+			if pgrep -fx "$screensaver"; then
+				pkill -fx "$screensaver"
+			fi
+		done
+	fi
 	brightnessctl -r
 	brightnessctl -rd tpacpi::kbd_backlight
 }
