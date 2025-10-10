@@ -3,10 +3,10 @@
 shopt -s nocasematch
 
 case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
-	*thinkpad* ) opt="$HOME/.config/fastfetch/thinkpad.txt" ;;
-	*          ) opt="$HOME/.config/fastfetch/arch.txt" ;;
+	*thinkpad* ) input="$HOME/.config/fastfetch/thinkpad.txt" ;;
+	*          ) input="$HOME/.config/fastfetch/arch.txt" ;;
 esac
-opt="--input-file $opt --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c"
+opt="--input-file $input --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c"
 
 exit_screensaver() {
 	pkill -x tte 2>/dev/null
