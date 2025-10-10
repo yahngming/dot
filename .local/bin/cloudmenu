@@ -5,11 +5,11 @@ case "$LAUNCHER" in
 esac
 
 menu="\
- Copy from cloud\n\
- Copy to cloud\n\
+ Backup to cloud\n\
+ Sync from cloud\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Cloud" "$@") in
-	*from* ) tui "rclone --ignore-existing --progress copy disroot:/Documents ~/Documents" ;;
-	*to*   ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
+	*Backup* ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
+	*Sync*   ) tui "rclone --ignore-existing --progress copy disroot:/Documents ~/Documents" ;;
 esac
