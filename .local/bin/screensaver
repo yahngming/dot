@@ -14,6 +14,7 @@ dim() {
 }
 
 off() {
+	rm -f ~/.config/screensaver
 	for screensaver in "${screensavers[@]}"; do
 		if pgrep -fx "$screensaver"; then
 			pkill -fx "$screensaver"
@@ -25,7 +26,10 @@ off() {
 }
 
 on() {
-	eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
+	if [ ! -f ~/.config/screensaver ]; then
+		touch -f ~/.config/screensaver
+		eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
+	fi
 }
 
 help() {
