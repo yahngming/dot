@@ -35,9 +35,9 @@ on() {
 
 help() {
 	echo "Usage: screensaver [MODE]"
-	echo "  dim       dim the screen"
-	echo "  off       turn off screensaver and bring up the brightness"
-	echo "  on        start a random screensaver"
+	echo "  dim        dim the keyboard and screen"
+	echo "  off        turn off screensaver and bring up the brightness"
+	echo "  on         start a random screensaver"
 }
 
 mode=${1:-help}
