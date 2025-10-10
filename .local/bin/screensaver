@@ -8,36 +8,30 @@ screensavers=(
 	"$TERMINAL -F -e ttysvr"
 )
 
-dim() {
-	brightnessctl -s set 10
-	brightnessctl -sd tpacpi::kbd_backlight set 0
-}
+for screensaver in "${screensavers[@]}"; do
+	if pgrep -fx "$screensaver"; then
+		break
+	fi
+	$screensaver=""
+done
 
 off() {
-	if [ -f ~/.config/screensaver ]; then
-		rm -f ~/.config/screensaver
-		for screensaver in "${screensavers[@]}"; do
-			if pgrep -fx "$screensaver"; then
-				pkill -fx "$screensaver"
-			fi
-		done
-	fi
 	brightnessctl -r
-	brightnessctl -rd tpacpi::kbd_backlight
+	pkill -fx "$screensaver"
 }
 
 on() {
-	if [ ! -f ~/.config/screensaver ]; then
-		touch -f ~/.config/screensaver
+	if [ -f ~/.config/screendim ]; then
+		brightnessctl -s set 10
+	elif [ -f ~/.config/screensaver ] && [ -z "$screensaver" ]; then
 		eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
 	fi
 }
 
 help() {
 	echo "Usage: screensaver [MODE]"
-	echo "  dim        dim the keyboard and screen"
-	echo "  off        turn off screensaver and bring up the brightness"
-	echo "  on         start a random screensaver"
+	echo "  off        turn off screensaver"
+	echo "  on         start screensaver"
 }
 
 mode=${1:-help}
