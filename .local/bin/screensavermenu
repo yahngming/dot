@@ -5,10 +5,10 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰨇 Manually turn on screensaver\n\
-󰌙 Turn off screensaver\n\
-󰌙 Set screensaver to dim\n\
-󱊪 Set screensaver to random\n\
+ Manually turn on screensaver\n\
+ Turn off screensaver\n\
+󰱊 Set screensaver to dim\n\
+ Set screensaver to random\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Screensaver" "$@") in
