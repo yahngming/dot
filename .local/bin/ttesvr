@@ -3,8 +3,8 @@
 shopt -s nocasematch
 
 case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
-	*thinkpad* ) opt="--input-file ~/.config/fastfetch/thinkpad.txt" ;;
-	*          ) opt="--input-file ~/.config/fastfetch/arch.txt" ;;
+	*thinkpad* ) opt="-i ~/.config/fastfetch/thinkpad.txt" ;;
+	*          ) opt="-i ~/.config/fastfetch/arch.txt" ;;
 esac
 
 exit_screensaver() {
