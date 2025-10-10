@@ -41,6 +41,10 @@ setenv() {
 			export TERMINAL="xfce4-terminal"
 			;;
 	esac
+	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
+		*thinkpad* ) export LOGO="$HOME/.config/fastfetch/thinkpad.txt" ;;
+		*          ) export LOGO="$HOME/.config/fastfetch/arch.txt" ;;
+	esac
 	if [ -f ~/.config/proxy ]; then
 		PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 		for envar in $PROXY_ENV; do
