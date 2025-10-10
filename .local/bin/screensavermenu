@@ -21,9 +21,11 @@ case $(printf "$menu" | menu $opt -p "Screensaver" "$@") in
 		screensaver off
 		;;
 	*dim*)
+		rm -f ~/.config/screendsaver
 		touch -f ~/.config/screendim
 		;;
 	*random*)
+		rm -f ~/.config/screendim
 		touch -f ~/.config/screensaver
 		;;
 esac
