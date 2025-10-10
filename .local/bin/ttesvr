@@ -3,8 +3,8 @@
 shopt -s nocasematch
 
 case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
-	*thinkpad* ) opt="-i ~/.config/fastfetch/thinkpad.txt" ;;
-	*          ) opt="-i ~/.config/fastfetch/arch.txt" ;;
+	*thinkpad* ) opt="~/.config/fastfetch/thinkpad.txt" ;;
+	*          ) opt="~/.config/fastfetch/arch.txt" ;;
 esac
 
 exit_screensaver() {
@@ -16,7 +16,7 @@ trap exit_screensaver SIGINT SIGTERM SIGHUP SIGQUIT
 
 while true; do
 	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)
-	tte $opt --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c $effect &
+	tte -i $opt --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c $effect &
 	while pgrep -x tte >/dev/null; do
 		if read -n 1 -t 3; then
 			exit_screensaver
