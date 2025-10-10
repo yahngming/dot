@@ -18,7 +18,6 @@ off() {
 }
 
 on() {
-	off
 	pgrep hyprlock || pgrep slock || eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
 }
 
