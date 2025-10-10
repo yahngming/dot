@@ -14,13 +14,13 @@ menu="\
 case $(printf "$menu" | menu $opt -p "Screensaver" "$@") in
 	*Disable*)
 		rm -f ~/.config/screendim
-		rm -f ~/.config/screendsaver
+		rm -f ~/.config/screensaver
 		;;
 	*Preview*)
 		screensaver on
 		;;
 	*dim*)
-		rm -f ~/.config/screendsaver
+		rm -f ~/.config/screensaver
 		touch -f ~/.config/screendim
 		;;
 	*random*)
