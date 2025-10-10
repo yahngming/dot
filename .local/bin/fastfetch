@@ -1,11 +1,3 @@
 #!/bin/sh
 
-shopt -s nocasematch
-
-case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
-	*thinkpad* ) logo="~/.config/fastfetch/thinkpad.txt" ;;
-	*          ) logo="~/.config/fastfetch/arch.txt" ;;
-esac
-opt="--logo $logo"
-
-/usr/bin/fastfetch $opt "$@"
+/usr/bin/fastfetch --logo $LOGO "$@"
