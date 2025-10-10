@@ -15,8 +15,6 @@ for screensaver in "${screensavers[@]}"; do
 	unset screensaver
 done
 
-echo $screensaver
-
 off() {
 	brightnessctl -r
 	pkill -fx "$screensaver"
