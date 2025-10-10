@@ -8,6 +8,11 @@ screensavers=(
 	"$TERMINAL -F -e ttysvr"
 )
 
+dim() {
+	brightnessctl -s set 10
+	brightnessctl -sd tpacpi::kbd_backlight set 0
+}
+
 off() {
 	for screensaver in "${screensavers[@]}"; do
 		if pgrep -fx "$screensaver"; then
@@ -15,6 +20,8 @@ off() {
 			exit
 		fi
 	done
+	brightnessctl -r
+	brightnessctl -rd tpacpi::kbd_backlight
 }
 
 on() {
@@ -23,7 +30,8 @@ on() {
 
 help() {
 	echo "Usage: screensaver [MODE]"
-	echo "  off       turn off screensaver"
+	echo "  dim       dim the screen"
+	echo "  off       turn off screensaver and bring up the brightness"
 	echo "  on        start a random screensaver"
 }
 
