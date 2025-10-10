@@ -33,7 +33,7 @@ random() {
 }
 
 weather() {
-	wallpaper=~/Pictures/wallpapers/weatherpaper.png
+	wallpaper=~/Pictures/wallpapers/weatherpaper
 	convert ~/Pictures/wallpapers/wallpaper <( curl wttr.in/_tqp0.png ) -geometry +100+100 -composite "$wallpaper"
 	setpaper
 }
