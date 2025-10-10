@@ -68,7 +68,7 @@ setpaper() {
 help() {
 	echo "Usage: wallpaper [ARG]"
 	echo "  directory/filename        set wallpaper manually"
-	echo "  picker                    select from a picker"
+	echo "  picker                    choose from a picker"
 	echo "  random                    random picture"
 	echo "  weather                   weather overlay"
 }
