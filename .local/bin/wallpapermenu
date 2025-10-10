@@ -5,13 +5,13 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰕰 Select picture(s) in a picker\n\
  Change randomly\n\
+󰕰 Choose from a picker\n\
 󱗺 Overlay weather forcast\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Set wallpaper:" "$@") in
-	*picker*  ) wallpaper picker ;;
 	*random*  ) wallpaper random ;;
+	*picker*  ) wallpaper picker ;;
 	*weather* ) wallpaper weather ;;
 esac
