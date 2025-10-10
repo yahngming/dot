@@ -17,15 +17,15 @@ off() {
 	done
 }
 
-random() {
+on() {
 	off
 	eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
 }
 
 help() {
 	echo "Usage: screensaver [MODE]"
-	echo "  off           turn off"
-	echo "  random        start a random screensaver"
+	echo "  off       turn off screensaver"
+	echo "  on        start a random screensaver"
 }
 
 mode=${1:-help}
