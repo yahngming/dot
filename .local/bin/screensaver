@@ -6,6 +6,7 @@ screensavers=(
 	"$TERMINAL -F -e lavat -c red -R 1 -k magenta"
 	"$TERMINAL -F -e pipes.sh -R"
 	"$TERMINAL -F -e ttysvr"
+	"tte -i ~/.config/fastfetch/arch.txt --frame-rate 240 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c $(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)"
 )
 
 for screensaver in "${screensavers[@]}"; do
