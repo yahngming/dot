@@ -25,7 +25,7 @@ off() {
 
 on() {
 	if [ -f ~/.config/screenblank ] && [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl dispatch dpms on
+		hyprctl dispatch dpms off
 	elif [ -f ~/.config/screendim ]; then
 		brightnessctl -s set 10
 	elif [ -f ~/.config/screensaver ] && [ -z "$screensaver" ]; then
