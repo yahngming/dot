@@ -4,7 +4,7 @@ screensavers=(
 	"$TERMINAL -F -e asciiquarium -s -t"
 	"$TERMINAL -F -e neo-matrix -s"
 	"$TERMINAL -F -e lavat -c red -R 1 -k magenta"
-	"$TERMINAL -e ttesvr"
+	"$TERMINAL -F -e ttesvr"
 	"$TERMINAL -F -e ttysvr"
 )
 
@@ -16,12 +16,17 @@ for screensaver in "${screensavers[@]}"; do
 done
 
 off() {
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		hyprctl dispatch dpms on
+	fi
 	brightnessctl -r
 	pkill -fx "$screensaver"
 }
 
 on() {
-	if [ -f ~/.config/screendim ]; then
+	if [ -f ~/.config/screenblank ] && [ -n "$WAYLAND_DISPLAY" ]; then
+		hyprctl dispatch dpms on
+	elif [ -f ~/.config/screendim ]; then
 		brightnessctl -s set 10
 	elif [ -f ~/.config/screensaver ] && [ -z "$screensaver" ]; then
 		eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
