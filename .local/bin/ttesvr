@@ -1,12 +1,19 @@
 #!/bin/sh
 
 killtte() {
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		hyprctl keyword cursor:invisible false
+	fi
 	pkill -x tte 2>/dev/null
 	pkill -f "$TERMINAL -F -e ttesvr" 2>/dev/null
 	exit 0
 }
 
 trap killtte SIGINT SIGTERM SIGHUP SIGQUIT
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	hyprctl keyword cursor:invisible true
+fi
 
 while true; do
 	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)
