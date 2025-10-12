@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	exit
+	pgrep -x hypridle && pkill -x hypridle || hypridle &
 elif [ -n "$DISPLAY" ]; then
 	xautolock -toggle
 	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
