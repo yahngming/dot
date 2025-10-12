@@ -29,7 +29,14 @@ on() {
 	elif [ -f ~/.config/screendim ]; then
 		brightnessctl -s set 10
 	elif [ -f ~/.config/screensaver ] && [ -z "$screensaver" ]; then
-		eval "${screensavers[$(($RANDOM%${#screensavers[@]}))]}"
+		while true; do
+			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
+			read -r -a command <<< "$screensaver"
+			if command -v "${command[3]}"; then
+				break
+			fi
+		done
+		eval "$screensaver"
 	fi
 }
 
