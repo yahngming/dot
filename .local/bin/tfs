@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case "$TERMINAL" in
+	*xfce* ) $TERMINAL --fullscreen -e "$@" ;;
+	*      ) $TERMINAL -F -e $SHELL -c "cat ~/.cache/wal/sequences ; $@" ;;
+esac
