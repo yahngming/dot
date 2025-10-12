@@ -36,9 +36,7 @@ on() {
 				break
 			fi
 		done
-		ttesvr
-		hyprctl dispatch fullscreen 1
-		# eval "$screensaver"
+		eval "$screensaver"
 	fi
 }
 
