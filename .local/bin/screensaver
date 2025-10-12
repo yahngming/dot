@@ -1,11 +1,11 @@
 #!/bin/sh
 
 screensavers=(
-	"tfs asciiquarium -s -t"
-	"tfs neo-matrix -s"
-	"tfs lavat -c red -R 1 -k magenta"
-	"tfs ttesvr"
-	"tfs ttysvr"
+	"tuif asciiquarium -s -t"
+	"tuif neo-matrix -s"
+	"tuif lavat -c red -R 1 -k magenta"
+	"tuif ttesvr"
+	"tuif ttysvr"
 )
 
 for screensaver in "${screensavers[@]}"; do
