@@ -4,7 +4,7 @@ mkdir -p ~/Pictures/screenshots
 screenshot=~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	grim -g "$(slurp)" "$screenshot" | wl-copy
+	pkill slurp || grim -g "$(slurp)" | satty --filename - --output-filename "$screenshot" --early-exit --actions-on-enter save-to-clipboard --save-after-copy --copy-command "wl-copy"
 elif [ -n "$DISPLAY" ]; then
 	maim --hidecursor --select "$screenshot" | xclip -selection clipboard -target image/png
 fi
