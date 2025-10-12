@@ -28,6 +28,7 @@ password: $PASSWORD
 other packages
 ```sh
 yay betaflight-configurator doomrunner expresslrs-configurator gyroflow gzdoom minecraft-launcher orca-slicer sdrpp-git subconverter-bin tsukimi-git
+yay asciiquarium-transparent-git lavat-git neo-matrix ttysvr # screensavers
 yay intel-compute-runtime-legacy-bin # for Thinkpad X1C 2018
 yay brother-hl2140 # for Brother HL2140
 yay game-devices-udev # for 8BitDo Pro 2
