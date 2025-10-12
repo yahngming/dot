@@ -1,11 +1,11 @@
 #!/bin/sh
 
 screensavers=(
-	"$TERMINAL --fullscreen -e asciiquarium -s -t"
-	"$TERMINAL --fullscreen -e neo-matrix -s"
-	"$TERMINAL --fullscreen -e lavat -c red -R 1 -k magenta"
-	"$TERMINAL --fullscreen -e ttesvr"
-	"$TERMINAL --fullscreen -e ttysvr"
+	"$TERMINAL -F -e asciiquarium -s -t"
+	"$TERMINAL -F -e neo-matrix -s"
+	"$TERMINAL -F -e lavat -c red -R 1 -k magenta"
+	"$TERMINAL -F -e ttesvr"
+	"$TERMINAL -F -e ttysvr"
 )
 
 for screensaver in "${screensavers[@]}"; do
