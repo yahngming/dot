@@ -1,6 +1,6 @@
 #!/bin/sh
 
 case "$TERMINAL" in
-	*xfce* ) $TERMINAL --fullscreen -e "$@" ;;
-	*      ) $TERMINAL -F -e $SHELL -c "cat ~/.cache/wal/sequences ; $@" ;;
+	*xfce* ) $TERMINAL --fullscreen --hide-menubar --hide-borders --hide-toolbar --hide-scrollbar -e "$@" ;;
+	*      ) $TERMINAL -F -e "$@" ;;
 esac
