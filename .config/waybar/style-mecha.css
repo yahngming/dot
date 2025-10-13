@@ -21,8 +21,8 @@
 @define-color temperature     @mantle;
 @define-color memory          @base;
 @define-color cpu             @surface0;
-@define-color distro-fg       @gg;
-@define-color distro-bg       @overlay2;
+@define-color logo-fg       @gg;
+@define-color logo-bg       @overlay2;
 @define-color pulseaudio      @surface0;
 @define-color sourceaudio     @base;
 @define-color backlight       @base;
@@ -132,7 +132,7 @@ tooltip decoration {
 #custom-start:hover,
 #window:hover,
 #cpu:hover,
-#custom-distro:hover,
+#custom-logo:hover,
 #pulseaudio:hover,
 #mpris:hover,
 #tray:hover,
@@ -248,23 +248,23 @@ tooltip decoration {
 	margin-bottom: -1px;
 }
 
-/* Distro Icon */
+/* Logo */
 
 #custom-left5 {
-	color: @distro-bg;
+	color: @logo-bg;
 	background: @main-bg;
 	text-shadow: none;
 	margin-bottom: -2px;
 }
-#custom-distro {
-	color: @distro-fg;
-	background: @distro-bg;
+#custom-logo {
+	color: @logo-fg;
+	background: @logo-bg;
 	margin: 0 -1px -2px 0;
 	padding: 0 9px 0 5px;
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }
 #custom-right2 {
-	color: @distro-bg;
+	color: @logo-bg;
 	background: @main-bg;
 	text-shadow: none;
 	margin-bottom: -2px;
@@ -440,12 +440,12 @@ tooltip decoration {
 	font-size: 15.5px;
 }
 
-/* distro icon */
-#custom-distro {
+/* logo icon */
+#custom-logo {
 	font-size: 14.6px;
 }
 
-/* distro arrows override */
+/* logo arrows override */
 #custom-left5,
 #custom-right2 {
 	font-size: 15.68px;
