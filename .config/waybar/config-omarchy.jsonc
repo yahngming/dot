@@ -19,7 +19,7 @@
 		"tooltip": false,
 		"exec": "logo",
 		"menu": "on-click",
-		"menu-file": "startmenu.xml",
+		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
 			"programs": "launcher",
 			"documents": "tui lf",
