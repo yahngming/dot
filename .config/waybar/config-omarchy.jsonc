@@ -21,13 +21,11 @@
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
-			"about": "$TERMINAL",
-			"update": "update",
-			"launcher": "launcher",
+			"programs": "launcher",
+			"documents": "tui lf",
 			"settings": "settings",
-			"lock": "locker",
-			"reboot": "reboot",
-			"shutdown": "shutdown"
+			"run": "tui",
+			"shutdown": "powermenu"
 		}
 	},
 	"hyprland/workspaces": {
