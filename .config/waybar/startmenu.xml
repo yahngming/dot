@@ -2,21 +2,52 @@
 <interface>
 	<object class="GtkMenu" id="menu">
 		<child>
-			<object class="GtkMenuItem" id="launcher">
-				<property name="label">Run...</property>
+			<object class="GtkMenuItem" id="about">
+				<property name="label">About</property>
 			</object>
 		</child>
 		<child>
-			<object class="GtkMenuItem" id="settings">
-				<property name="label">Settings...</property>
+			<object class="GtkMenuItem" id="update">
+				<property name="label">Package Update...</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkSeparatorMenuItem" id="delimiter1" />
 		</child>
 		<child>
-			<object class="GtkMenuItem" id="powermenu">
-				<property name="label">Shutdown...</property>
+			<object class="GtkMenuItem" id="launcher">
+				<property name="label">Run...</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="settings">
+				<property name="label">System Settings...</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkSeparatorMenuItem" id="delimiter1" />
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="lock">
+				<property name="label">Lock...</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="restart">
+				<property name="label">Restart</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="shutdown">
+				<property name="label">Shutdown</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkSeparatorMenuItem" id="delimiter1" />
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="logout">
+				<property name="label">Logout...</property>
 			</object>
 		</child>
 	</object>
