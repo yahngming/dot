@@ -19,12 +19,12 @@
 		"tooltip": false,
 		"exec": "logo",
 		"menu": "on-click",
-		"menu-file": "~/.config/waybar/startmenu.xml",
+		"menu-file": "startmenu.xml",
 		"menu-actions": {
 			"programs": "launcher",
 			"documents": "tui lf",
 			"settings": "settings",
-			"run": "tui",
+			"run": "$TERMINAL",
 			"shutdown": "powermenu"
 		}
 	},
