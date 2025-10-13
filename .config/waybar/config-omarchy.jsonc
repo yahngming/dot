@@ -23,7 +23,7 @@
 		"menu-actions": {
 			"launcher": "launcher",
 			"settings": "settings",
-			"powermenu": "powermenu",
+			"reboot": "reboot"
 		}
 	},
 	"hyprland/workspaces": {
