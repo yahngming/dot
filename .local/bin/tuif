@@ -1,7 +1,0 @@
-#!/bin/sh
-
-case "$TERMINAL" in
-	*foot* ) $TERMINAL --override=colors.background=000000 --fullscreen -e "$@" ;;
-	*xfce* ) $TERMINAL --fullscreen --hide-menubar --hide-borders --hide-toolbar --hide-scrollbar -e "$@" ;;
-	*      ) $TERMINAL -F -e "$@" ;;
-esac
