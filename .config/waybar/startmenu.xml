@@ -17,7 +17,7 @@
 			</object>
 		</child>
 		<child>
-			<object class="GtkMenuItem" id="run">
+			<object class="GtkMenuItem" id="terminal">
 				<property name="label">Run...</property>
 			</object>
 		</child>
