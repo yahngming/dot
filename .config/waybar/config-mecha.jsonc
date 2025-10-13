@@ -25,7 +25,7 @@
 		"cpu",
 		"custom/leftin1",
 		"custom/left5",
-		"custom/distro",
+		"custom/logo",
 		"custom/right2",
 		"custom/rightin1",
 		"pulseaudio",
@@ -117,7 +117,7 @@
 		"max-length": 6
 	},
 
-	"custom/distro": {
+	"custom/logo": {
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
