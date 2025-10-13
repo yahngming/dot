@@ -2,6 +2,27 @@
 <interface>
 	<object class="GtkMenu" id="menu">
 		<child>
+			<object class="GtkMenuItem" id="lock">
+				<property name="label">Lock</property>
+			</object>
+		</child>
+	</object>
+	<object class="GtkMenu" id="menu">
+		<child>
+			<object class="GtkMenuItem" id="reboot">
+				<property name="label">Reboot</property>
+			</object>
+		</child>
+	</object>
+	<object class="GtkMenu" id="menu">
+		<child>
+			<object class="GtkMenuItem" id="shutdown">
+				<property name="label">Shutdown</property>
+			</object>
+		</child>
+	</object>
+	<object class="GtkMenu" id="menu">
+		<child>
 			<object class="GtkMenuItem" id="logout">
 				<property name="label">Logout...</property>
 			</object>
