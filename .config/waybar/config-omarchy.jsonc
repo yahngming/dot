@@ -21,9 +21,13 @@
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
+			"about": "$TERMINAL",
+			"update": "update",
 			"launcher": "launcher",
 			"settings": "settings",
-			"reboot": "reboot"
+			"lock": "locker",
+			"reboot": "reboot",
+			"shutdown": "shutdown"
 		}
 	},
 	"hyprland/workspaces": {
