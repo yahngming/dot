@@ -32,7 +32,7 @@ on() {
 		while true; do
 			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 			read -r -a command <<< "$screensaver"
-			if command -v "${command[1]}"; then
+			if command -v "${command[3]}"; then
 				break
 			fi
 		done
