@@ -2,7 +2,7 @@
 <interface>
 	<object class="GtkMenu" id="menu">
 		<child>
-		        <object class="GtkMenuItem" id="launcher">
+			<object class="GtkMenuItem" id="launcher">
 				<property name="label">Run...</property>
 			</object>
 		</child>
