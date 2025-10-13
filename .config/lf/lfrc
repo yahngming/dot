@@ -59,7 +59,7 @@ cmd bulk-rename ${{
 		new="$(mktemp)"
 		printf '%s\n' "$fs" > "$old"
 		printf '%s\n' "$fs" > "$new"
-		$EDITOR "$new"
+		editor "$new"
 		[ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
 		paste "$old" "$new" | while IFS= read -r names; do
 			src="$(printf '%s' "$names" | cut -f1)"
