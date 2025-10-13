@@ -16,7 +16,7 @@
 	],
 	"custom/logo": {
 		"format": "{text}",
-		"tooltip": flase,
+		"tooltip": false,
 		"exec": "logo",
 		"on-click": "settings"
 	},
