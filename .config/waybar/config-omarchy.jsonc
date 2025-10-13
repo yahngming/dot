@@ -18,7 +18,7 @@
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
-		"on-click": "settings"
+		"on-click": "launcher"
 	},
 	"hyprland/workspaces": {
 		"on-click": "activate",
@@ -51,14 +51,14 @@
 	},
 	"custom/update": {
 		"format": "",
-		"exec": "omarchy-update-available",
+		"exec": "yay -Qu",
 		"on-click": "up",
 		"signal": 7,
 		"interval": 3600
 	},
 	"custom/screenrecording-indicator": {
-		"on-click": "omarchy-cmd-screenrecord",
-		"exec": "screen-recording",
+		"on-click": "screenshot",
+		"exec": "pgrep screenshot",
 		"signal": 8,
 		"return-type": "json"
 	},
@@ -101,7 +101,7 @@
 	"pulseaudio": {
 		"format": "{icon}",
 		"on-click": "volume toggle",
-		"tooltip-format": "{volume}%",
+		"tooltip-format": "Playing at {volume}%",
 		"scroll-step": 5,
 		"format-muted": "",
 		"format-icons": {
