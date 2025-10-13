@@ -18,7 +18,13 @@
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
-		"on-click": "launcher"
+		"menu": "on-click",
+		"menu-file": "~/.config/waybar/startmenu.xml",
+		"menu-actions": {
+			"launcher": "launcher",
+			"settings": "settings",
+			"powermenu": "powermenu",
+		}
 	},
 	"hyprland/workspaces": {
 		"on-click": "activate",
