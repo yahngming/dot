@@ -4,6 +4,7 @@
 		"type": "file",
 		"source": "$LOGO",
 		"color": { "1": "green" },
+		"position": "top",
 		"padding": {
 			"top": 2,
 			"right": 6,
