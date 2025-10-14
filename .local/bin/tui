@@ -6,10 +6,9 @@ case "$@" in
 esac
 if [ ! -z "$class" ]; then
 	case "$TERMINAL" in
-		*foot* ) opt="-a $class" ;;
-		*st*   ) opt="-c $class" ;;
-		*xfce* ) opt="--class $class" ;;
+		*foot*    ) TERMINAL="foot -a $class" ;;
+		*st|xfce* ) TERMINAL="st -c $class" ;;
 	esac
 fi
 
-$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences ; $@"
+$TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences ; $@"
