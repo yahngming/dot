@@ -1,10 +1,14 @@
 #!/bin/sh
 
-case "$TERMINAL" in
-	*xfce* ) TERMINAL="st" ;;
-esac
 case "$@" in
-	dot|up ) opt="-c center" ;;
+	dot|up ) class="center" ;;
 esac
+if [ ! -z "$class" ]; then
+	case "$TERMINAL" in
+		*foot* ) opt="-a $class" ;;
+		*st*   ) opt="-c $class" ;;
+		*xfce* ) opt="--class $class" ;;
+	esac
+fi
 
 $TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences ; $@" ;;
