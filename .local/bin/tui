@@ -1,8 +1,8 @@
 #!/bin/sh
 
 case "$@" in
-	*about*|dot|tzselect|up                   ) class="center" ;;
-	*asciiquarium|matrix|lavat|ttesvr|ttysvr* ) class="fullscreen" ;;
+	*about*|dot|tzselect|up                       ) class="center" ;;
+	*asciiquarium*|*matrix*|*lavat*|ttesvr|ttysvr ) class="fullscreen" ;;
 esac
 
 if [ "$class" == "center" ]; then
