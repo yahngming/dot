@@ -156,45 +156,6 @@
     },
     {
       "type": "title",
-      "key": "{#90}{$1}│ {#92}User        {#90}│",
-      //"fqdn": false,
-      "format": "{$2}{$3}{user-name} {#2}[{home-dir}]",
-      //fastfetch -h title-format
-      // {1}: User name - user-name
-      // {3}: Home directory - home-dir
-      // The default is something similar to "{6}{7}{8}".
-    },
-    {
-      "type": "users",
-      "key": "{#90}{$1}│ {#92}Users       {#90}│",
-      "myselfOnly": false,
-      "format": "{$2}{$3}{1}@{host-name}  {#2}[IP:{client-ip}]  {#2}[Login time: {login-time}]",
-      // fastfetch -h users-format
-      // {1}: User name - user-name
-      // {2}: Host name - host-name
-      // {3}: Session name - session
-      // {4}: Client IP - client-ip
-      // {5}: Login Time in local timezone - login-time
-      // The default is something similar to "{1}@{2} - login time {5}".
-    },
-    {
-      "type": "datetime",
-      "key": "{#90}{$1}│ {#92}Datetime    {#90}│",
-      "format": "{$2}{$3}{year}-{month-pretty}-{day-in-month}  {hour-pretty}:{minute-pretty}:{second-pretty}  {#2}{weekday}  {#2}[W{week}] {#2}[UTC{offset-from-utc}]",
-      //fastfetch -h datetime-format
-      // {1}: year - year
-      // {4}: month with leading zero - month-pretty
-      // {7}: week number on year - week
-      // {8}: weekday - weekday
-      // {11}: day in month - day-in-month
-      // {14}: hour with leading zero - hour-pretty
-      // {18}: minute with leading zero - minute-pretty
-      // {20}: second with leading zero - second-pretty
-      // {21}: offset from UTC in the ISO 8601 format - offset-from-utc
-      // The default is something similar to "{1}-{4}-{11} {14}:{18}:{20}".
-    },
-    {
-      "type": "title",
       "key": "{#90}{$1}│ {#93}Host:       {#90}│",
       //"fqdn": false,
       "format": "{$2}{$3}{#1}{#36}{host-name}",
@@ -243,14 +204,14 @@
       // {4}: Seconds - seconds
       // The default is something similar to "{1} days {2} hours {3} mins".
     },
-    // {
-    //   "type": "board",
-    //   "key": "{#5;104}Board",
-    //   "format": "{2} {1}",
-    //   //fastfetch -h board-format
-    //   // {1}: board name - name
-    //   // {2}: board vendor - vendor
-    // },
+    {
+      "type": "board",
+      "key": "{#5;104}Board",
+      "format": "{2} {1}",
+      //fastfetch -h board-format
+      // {1}: board name - name
+      // {2}: board vendor - vendor
+    },
     {
       "type": "cpu",
       "key": "{#90}{$1}│ {#91}CPU         {#90}│",
@@ -291,10 +252,10 @@
       // {3}: Percentage used (num) - percentage
       // The default is something similar to "{1} / {2} ({3})".
     },
-    // {
-    //   "type": "swap",
-    //   "key": "Swap",
-    // },
+    {
+      "type": "swap",
+      "key": "Swap",
+    },
     {
       "type": "disk",
       "key": "{#90}{$1}│ {#91}Disk        {#90}│",
@@ -305,11 +266,11 @@
       // {3}: Size percentage num - size-percentage
       // The default is something similar to "{1} / {2} ({3}) - {9}".
     },
-    // {
-    //   "type": "battery",
-    //   "key": "Battery",
-    //   "temp": true,
-    // },
+    {
+      "type": "battery",
+      "key": "Battery",
+      "temp": true,
+    },
     {
       "type": "poweradapter",
       "key": "{#90}{$1}│ {#91}Power       {#90}│",
@@ -375,10 +336,10 @@
       // {6}: MTU size in bytes - mtu
       // The default is something similar to "{1}".
     },
-    // {
-    //   "type": "dns",
-    //   "key": "DNS",
-    // },
+    {
+      "type": "dns",
+      "key": "DNS",
+    },
     {
       "type": "publicip",
       "key": "{#90}{$1}│ {#94}Public IPv4 {#90}│",
@@ -388,10 +349,10 @@
       // {2}: Location - location
       // The default is something similar to "{1} ({2})".
     },
-    // {
-    //   "type": "colors",
-    //   "symbol": "background",
-    // },
+    {
+      "type": "colors",
+      "symbol": "background",
+    },
     // CUSTOM - Button UI bar
     {
       "type": "custom",
