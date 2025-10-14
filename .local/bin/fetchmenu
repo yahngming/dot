@@ -10,7 +10,10 @@ config-inline\n\
 config-omarchy\n\
 logo-auto\n\
 logo-arch\n\
+logo-clippy\n\
+logo-ibm\n\
 logo-thinkpad\n\
+logo-windows\n\
 "
 
 choice=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
