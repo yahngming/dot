@@ -3,13 +3,7 @@
 	"logo": {
 		"type": "file",
 		"source": "$LOGO",
-		"color": { "1": "green" },
-		"position": "top",
-		"padding": {
-			"top": 2,
-			"right": 6,
-			"left": 2
-		}
+		"position": "top"
 	},
 	"modules": [
 		"break",
