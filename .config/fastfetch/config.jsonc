@@ -166,7 +166,7 @@
     {
       "type": "host",
       "key": "{#90}{$1}│ {#93}Machine     {#90}│",
-      "format": "{$2}{$3}{version} {#2}{version}",
+      "format": "{$2}{$3}{version}",
       // fastfetch -h host-format
       // {2}: product name - name
       // {3}: product version - version
@@ -195,8 +195,7 @@
     {
       "type": "uptime",
       "key": "{#90}{$1}│ {#93}Uptime      {#90}│",
-      //"format": "{$2}{$3}{days} Days {hours} Hours {minutes} Mins {seconds} Secs",
-      "format": "{$2}{$3}{days} Days + {hours}:{minutes}:{seconds}",
+      "format": "{$2}{$3}{days} Days {hours} Hours {minutes} Mins {seconds} Secs",
       // fastfetch -h uptime-format
       // {1}: Days - days
       // {2}: Hours - hours
@@ -261,8 +260,7 @@
     {
       "type": "battery",
       "key": "{#90}{$1}│ {#91}Battery     {#90}│",
-      "format": "{$2}{$3}{name}",
-      "temp": true,
+      "format": "{$2}{$3}{capacity} {#2}{status}",
     },
     {
       "type": "poweradapter",
@@ -311,20 +309,6 @@
       "format": "{$2}{$3}{ifname}: {ipv4}  {#2}[MTU:{mtu}]",
       // fastfetch -h localip-format
       // {1}: Local IPv4 address - ipv4
-      // {4}: Interface name - ifname
-      // {6}: MTU size in bytes - mtu
-      // The default is something similar to "{1}".
-    },
-    {
-      // localip IPv6
-      "type": "localip",
-      "key": "{#90}{$1}│ {#94}Local IPv6  {#90}│",
-      "showPrefixLen": true,
-      "showIpv4": false,
-      "showIpv6": true,
-      "format": "{$2}{$3}{ifname}: {ipv6}  {#2}[MTU:{mtu}]",
-      // fastfetch -h localip-format
-      // {2}: Local IPv6 address - ipv6
       // {4}: Interface name - ifname
       // {6}: MTU size in bytes - mtu
       // The default is something similar to "{1}".
