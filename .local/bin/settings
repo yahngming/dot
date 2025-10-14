@@ -18,6 +18,7 @@ menu="\
 󰊖 Gamemode\n\
 󰇧 IME\n\
 󰌌 Keyboard\n\
+󰋩 Logo\n\
  Password\n\
 󰐪 Printer\n\
 󰌘 Proxy\n\
@@ -44,6 +45,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Gamemode*    ) gamemode ;;
 	*IME*         ) fcitx5-configtool ;;
 	*Keyboard*    ) keymap ;;
+	*Logo*        ) logomenu ;;
 	*Password*    ) passmenu ;;
 	*Printer*     ) browser --new-tab http://localhost:631 ;;
 	*Proxy*       ) proxymenu ;;
