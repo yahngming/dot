@@ -21,6 +21,7 @@
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
+			"about": "about",
 			"programs": "launcher",
 			"documents": "tui lf",
 			"settings": "settings",
