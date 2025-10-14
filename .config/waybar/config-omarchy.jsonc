@@ -59,6 +59,7 @@
 	},
 	"custom/update": {
 		"format": "",
+		"tooltip": false,
 		"exec": "yay -Qu",
 		"on-click": "up",
 		"signal": 7,
