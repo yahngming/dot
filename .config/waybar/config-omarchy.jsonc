@@ -61,7 +61,7 @@
 		"format": "",
 		"tooltip": false,
 		"exec": "yay -Qu",
-		"on-click": "up",
+		"on-click": "tui up",
 		"signal": 7,
 		"interval": 3600
 	},
