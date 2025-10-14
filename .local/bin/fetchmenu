@@ -11,7 +11,9 @@ config-omarchy\n\
 logo-auto\n\
 logo-arch\n\
 logo-clippy\n\
+logo-dos\n\
 logo-ibm\n\
+logo-invader\n\
 logo-thinkpad\n\
 logo-windows\n\
 "
