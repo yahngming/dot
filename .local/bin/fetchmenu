@@ -5,12 +5,17 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-box\n\
-inline\n\
-omarchy\n\
+config-box\n\
+config-inline\n\
+config-omarchy\n\
+logo-auto\n\
+logo-arch\n\
+logo-omarchy\n\
+logo-thinkpad\n\
+logo-trackpoint\n\
 "
 
-fetch=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
+config=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
 
 if [ -f ~/.config/fastfetch/config-$fetch.jsonc ]; then
 	cp ~/.config/fastfetch/config-$fetch.jsonc ~/.config/fastfetch/config.jsonc
