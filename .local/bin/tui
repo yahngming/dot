@@ -2,6 +2,7 @@
 
 case "$@" in
 	dot|up ) class="center" ;;
+	ttesvr ) class="fullscreen" ;;
 esac
 if [ ! -z "$class" ]; then
 	case "$TERMINAL" in
