@@ -21,11 +21,11 @@
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
-			"about": "about",
+			"about": "tui about",
 			"programs": "launcher",
 			"documents": "tui lf",
 			"settings": "settings",
-			"run": "$TERMINAL",
+			"shell": "$TERMINAL -a center",
 			"shutdown": "powermenu"
 		}
 	},
