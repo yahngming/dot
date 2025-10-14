@@ -1,6 +1,8 @@
 {
 	"$schema": "https://cdn.jsdelivr.net/gh/fastfetch-cli/fastfetch/doc/json_schema.json",
 	"logo": {
+		"type": "file",
+		"source": "$LOGO",
 		"color": {
 			"1": "red",
 			"2": "green",
