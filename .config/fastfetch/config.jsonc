@@ -260,7 +260,7 @@
     {
       "type": "battery",
       "key": "{#90}{$1}│ {#91}Battery     {#90}│",
-      "format": "{$2}{$3}{capacity} {#2}{status}",
+      "format": "{$2}{$3}{capacity} ({status}{$2})",
     },
     {
       "type": "poweradapter",
