@@ -3,7 +3,6 @@
 	"logo": {
 		"type": "file",
 		"source": "$LOGO",
-		"position": "left",
 		"color": {
 			"1": "red",
 			"2": "green",
