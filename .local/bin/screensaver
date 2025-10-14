@@ -1,11 +1,11 @@
 #!/bin/sh
 
 screensavers=(
-	"st -F -e asciiquarium -s -t"
-	"st -F -e neo-matrix -s"
-	"st -F -e lavat -c red -R 1 -k magenta"
-	"st -F -e ttesvr"
-	"st -F -e ttysvr"
+	"tui asciiquarium -s -t"
+	"tui neo-matrix -s"
+	"tui lavat -c red -R 1 -k magenta"
+	"tui ttesvr"
+	"tui ttysvr"
 )
 
 for screensaver in "${screensavers[@]}"; do
@@ -32,7 +32,7 @@ on() {
 		while true; do
 			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 			read -r -a command <<< "$screensaver"
-			if command -v "${command[3]}"; then
+			if command -v "${command[1]}"; then
 				break
 			fi
 		done
