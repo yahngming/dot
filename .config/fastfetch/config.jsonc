@@ -11,11 +11,10 @@
 			"4": "white"
 		},
 		"padding": {
-			"left": 10
+			"left": 5
 		}
 	},
 	"modules": [
-		"break",
 		{
 			"type": "custom",
 			"format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
