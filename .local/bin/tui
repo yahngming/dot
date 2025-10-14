@@ -12,7 +12,7 @@ if [ "$class" == "center" ]; then
 	esac
 elif [ "$class" == "fullscreen" ]; then
 	case "$TERMINAL" in
-		*         ) TERMINAL="st -c $class" ;;
+		*         ) TERMINAL="st -F -c $class" ;;
 	esac
 fi
 
