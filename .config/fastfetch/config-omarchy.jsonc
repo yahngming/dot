@@ -13,14 +13,13 @@
 	"modules": [
 		"break",
 		"break",
-		"break",
 		{
 			"type": "custom",
 			"format": "\u001b[90m┌───────────────────── Hardware ─────────────────────┐"
 		},
 		{
 			"type": "host",
-			"key": " PC",
+			"key": "   ",
 			"keyColor": "green"
 		},
 		{
@@ -31,28 +30,28 @@
 		},
 		{
 			"type": "gpu",
-			"key": "│ ├",
+			"key": "  ├",
 			"detectionMethod": "pci",
 			"keyColor": "green"
 		},
 		{
 			"type": "display",
-			"key": "│ ├󱄄",
+			"key": "  ├󱄄",
 			"keyColor": "green"
 		},
 		{
 			"type": "disk",
-			"key": "│ ├󰋊",
+			"key": "  ├󰋊",
 			"keyColor": "green"
 		},
 		{
 			"type": "memory",
-			"key": "│ ├",
+			"key": "  ├",
 			"keyColor": "green"
 		},
 		{
 			"type": "swap",
-			"key": "└ └󰓡 ",
+			"key": "  └󰓡 ",
 			"keyColor": "green"
 		},
 		{
@@ -65,25 +64,13 @@
 			"format": "\u001b[90m┌───────────────────── Software ─────────────────────┐"
 		},
 		{
-			"type": "command",
-			"key": "\ue900 OS",
-			"keyColor": "blue",
-			"text": "version=$(omarchy-version); echo \"Omarchy $version\""
-		},
-		{
-			"type": "command",
-			"key": "│ ├󰘬",
-			"keyColor": "blue",
-			"text": "branch=$(omarchy-version-branch); echo \"$branch\""
-		},
-		{
 			"type": "kernel",
-			"key": "│ ├",
+			"key": "  ├",
 			"keyColor": "blue"
 		},
 		{
 			"type": "wm",
-			"key": "│ ├",
+			"key": "  ├",
 			"keyColor": "blue"
 		},
 		{
@@ -93,28 +80,28 @@
 		},
 		{
 			"type": "terminal",
-			"key": "│ ├",
+			"key": "  ├",
 			"keyColor": "blue"
 		},
 		{
 			"type": "packages",
-			"key": "│ ├󰏖",
+			"key": "  ├󰏖",
 			"keyColor": "blue"
 		},
 		{
 			"type": "wmtheme",
-			"key": "│ ├󰉼",
+			"key": "  ├󰉼",
 			"keyColor": "blue"
 		},
 		{
 			"type": "command",
-			"key": "│ ├󰸌",
+			"key": "  ├󰸌",
 			"keyColor": "blue",
 			"text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38m●\\e[37m●\\e[36m●\\e[35m●\\e[34m●\\e[33m●\\e[32m●\\e[31m●\""
 		},
 		{
 			"type": "terminalfont",
-			"key": "└ └",
+			"key": "  └",
 			"keyColor": "blue"
 		},
 		{
@@ -128,13 +115,13 @@
 		},
 		{
 			"type": "command",
-			"key": "󱦟 OS Age",
+			"key": "  󱦟 OS Age",
 			"keyColor": "magenta",
 			"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
 		},
 		{
 			"type": "uptime",
-			"key": "󱫐 Uptime",
+			"key": "  󱫐 Uptime",
 			"keyColor": "magenta"
 		},
 		{
