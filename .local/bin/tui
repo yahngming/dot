@@ -11,4 +11,4 @@ if [ ! -z "$class" ]; then
 	esac
 fi
 
-$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences ; $@" ;;
+$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences ; $@"
