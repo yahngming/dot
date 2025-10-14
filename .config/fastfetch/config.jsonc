@@ -207,7 +207,7 @@
     {
       "type": "board",
       "key": "{#90}{$1}│ {#91}Board       {#90}│",
-      "format": "{2} {1}",
+      "format": "{$2}{$3}{#2} {#1}",
       //fastfetch -h board-format
       // {1}: board name - name
       // {2}: board vendor - vendor
@@ -261,6 +261,7 @@
     {
       "type": "battery",
       "key": "{#90}{$1}│ {#91}Battery     {#90}│",
+      "format": "{$2}{$3}{name}",
       "temp": true,
     },
     {
