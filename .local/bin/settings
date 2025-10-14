@@ -18,7 +18,6 @@ menu="\
 󰊖 Gamemode\n\
 󰇧 IME\n\
 󰌌 Keyboard\n\
-󰋩 Logo\n\
  Password\n\
 󰐪 Printer\n\
 󰌘 Proxy\n\
@@ -26,7 +25,6 @@ menu="\
 󰡰 SMB\n\
  Theme\n\
 󰔠 Timezone\n\
-󰃢 Trash\n\
 󰚰 Update\n\
 󱊞 USB\n\
 󰸉 Wallpaper\n\
@@ -40,21 +38,19 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Cloud*       ) cloudmenu ;;
 	*Coffee*      ) coffee ;;
 	*Display*     ) dispmenu ;;
-	*Dotfiles*    ) tui "dot" ;;
+	*Dotfiles*    ) tui dot ;;
 	*Fetch*       ) fetchmenu ;;
 	*Gamemode*    ) gamemode ;;
 	*IME*         ) fcitx5-configtool ;;
 	*Keyboard*    ) keymap ;;
-	*Logo*        ) logomenu ;;
 	*Password*    ) passmenu ;;
 	*Printer*     ) browser --new-tab http://localhost:631 ;;
 	*Proxy*       ) proxymenu ;;
 	*Screensaver* ) screensavermenu ;;
 	*SMB*         ) smbmenu ;;
 	*Theme*       ) thememenu ;;
-	*Timezone*    ) sudo -A timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)" ;;
-	*Trash*       ) tui "gio trash --empty" ;;
-	*Update*      ) tui "up" ;;
+	*Timezone*    ) tui tzselect ;;
+	*Update*      ) tui up ;;
 	*USB*         ) usbmenu ;;
 	*Wallpaper*   ) wallpapermenu ;;
 	*WLAN*        ) wlanmenu ;;
