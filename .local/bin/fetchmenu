@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+box\n\
+inline\n\
+omarchy\n\
+"
+
+fetch=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
+
+if [ -f ~/.config/fastfetch/config-$fetch.jsonc ]; then
+	cp ~/.config/fastfetch/config-$fetch.jsonc ~/.config/fastfetch/config.jsonc
+fi
