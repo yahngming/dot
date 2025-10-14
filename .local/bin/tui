@@ -1,8 +1,8 @@
 #!/bin/sh
 
 case "$@" in
-	dot|up ) class="center" ;;
-	ttesvr ) class="fullscreen" ;;
+	about|dot|up ) class="center" ;;
+	ttesvr       ) class="fullscreen" ;;
 esac
 if [ ! -z "$class" ]; then
 	case "$TERMINAL" in
