@@ -1,18 +1,18 @@
 #!/bin/sh
 
 case "$@" in
-	about|dot|up ) class="center" ;;
-	ttesvr       ) class="fullscreen" ;;
+	about|dot|up                              ) class="center" ;;
+	*asciiquarium|matrix|lavat|ttesvr|ttysvr* ) class="fullscreen" ;;
 esac
 
 if [ "$class" == "center" ]; then
 	case "$TERMINAL" in
-		*foot*    ) TERMINAL="foot -a $class" ;;
-		*st|xfce* ) TERMINAL="st -c $class" ;;
+		*foot* ) TERMINAL="foot -a $class" ;;
+		*      ) TERMINAL="st -c $class" ;;
 	esac
 elif [ "$class" == "fullscreen" ]; then
 	case "$TERMINAL" in
-		*         ) TERMINAL="st -F -c $class" ;;
+		*      ) TERMINAL="st -F -c $class" ;;
 	esac
 fi
 
