@@ -166,7 +166,7 @@
     {
       "type": "host",
       "key": "{#90}{$1}│ {#93}Machine     {#90}│",
-      "format": "{$2}{$3}{name} {#2}{version}",
+      "format": "{$2}{$3}{version} {#2}{version}",
       // fastfetch -h host-format
       // {2}: product name - name
       // {3}: product version - version
@@ -207,7 +207,7 @@
     {
       "type": "board",
       "key": "{#90}{$1}│ {#91}Board       {#90}│",
-      "format": "{$2}{$3}{#2} {#1}",
+      "format": "{$2}{$3}{vendor} {#2}{name}",
       //fastfetch -h board-format
       // {1}: board name - name
       // {2}: board vendor - vendor
