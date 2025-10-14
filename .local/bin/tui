@@ -4,11 +4,13 @@ case "$@" in
 	about|dot|up ) class="center" ;;
 	ttesvr       ) class="fullscreen" ;;
 esac
-if [ ! -z "$class" ]; then
+if [ "$class"=="center" ]; then
 	case "$TERMINAL" in
 		*foot*    ) TERMINAL="foot -a $class" ;;
 		*st|xfce* ) TERMINAL="st -c $class" ;;
 	esac
+elif [ "$class"=="fullscreen" ]; then
+	TERMINAL="st -c $class"
 fi
 
 $TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences ; $@"
