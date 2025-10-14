@@ -156,19 +156,17 @@
     },
     {
       "type": "title",
-      "key": "{#90}{$1}│ {#93}Host:       {#90}│",
+      "key": "{#90}{$1}│ {#93}Host        {#90}│",
       //"fqdn": false,
       "format": "{$2}{$3}{#1}{#36}{host-name}",
       //fastfetch -h title-format
-      // {2}: Host name - host-nameCPU         {#90}│",
-      "format": "{2} {1}",
-      //fastfetch -h board-format
+      // {2}: Host name - host-name
       // The default is something similar to "{6}{7}{8}".
     },
     {
       "type": "host",
       "key": "{#90}{$1}│ {#93}Machine     {#90}│",
-      "format": "{name} {#2}{version}",
+      "format": "{$2}{$3}{name} {#2}{version}",
       // fastfetch -h host-format
       // {2}: product name - name
       // {3}: product version - version
