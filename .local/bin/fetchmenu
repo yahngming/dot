@@ -15,8 +15,16 @@ logo-thinkpad\n\
 logo-trackpoint\n\
 "
 
-config=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
+choice=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
 
-if [ -f ~/.config/fastfetch/config-$fetch.jsonc ]; then
-	cp ~/.config/fastfetch/config-$fetch.jsonc ~/.config/fastfetch/config.jsonc
+if [ "$choice" == "logo-auto" ]; then
+	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
+		*ThinkPad* ) choice="logo-thinkpad" ;;
+		*          ) choice="logo-arch" ;;
+	esac
+fi
+
+if [ -f ~/.config/fastfetch/$choice.jsonc ] || [ -f ~/.config/fastfetch/$choice.txt ]; then
+	cp ~/.config/fastfetch/$choice.jsonc ~/.config/fastfetch/config.jsonc
+	cp ~/.config/fastfetch/$choice.txt ~/.config/fastfetch/logo.txt
 fi
