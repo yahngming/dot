@@ -5,15 +5,16 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-Auto\n\
+Auto detect\n\
 arch\n\
+omarchy\n\
 thinkpad\n\
 trackpoint\n\
 "
 
 logo=$(printf "$menu" | menu $opt -p "Select a logo:" "$@")
 
-if [ "$logo" == "Auto" ]; then
+if [ "$logo" == "Auto detect" ]; then
 	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
 		*ThinkPad* ) logo="thinkpad" ;;
 		*          ) logo="arch" ;;
