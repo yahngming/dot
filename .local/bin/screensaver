@@ -1,15 +1,15 @@
 #!/bin/sh
 
 screensavers=(
-	"tui asciiquarium -s -t"
-	"tui neo-matrix -s"
-	"tui lavat -c red -R 1 -k magenta"
-	"tui ttesvr"
-	"tui ttysvr"
+	"asciiquarium -s -t"
+	"neo-matrix -s"
+	"lavat -c red -R 1 -k magenta"
+	"ttesvr"
+	"ttysvr"
 )
 
 for screensaver in "${screensavers[@]}"; do
-	if pgrep -fx "$screensaver"; then
+	if pgrep -f "$screensaver"; then
 		break
 	fi
 	unset screensaver
@@ -20,7 +20,7 @@ off() {
 		hyprctl dispatch dpms on
 	fi
 	brightnessctl -r
-	pkill -fx "$screensaver"
+	pkill -f "$screensaver"
 }
 
 on() {
@@ -32,11 +32,11 @@ on() {
 		while true; do
 			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 			read -r -a command <<< "$screensaver"
-			if command -v "${command[1]}"; then
+			if command -v "${command[0]}"; then
 				break
 			fi
 		done
-		eval "$screensaver"
+		eval "tui $screensaver"
 	fi
 }
 
