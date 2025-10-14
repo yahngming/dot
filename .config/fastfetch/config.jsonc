@@ -250,7 +250,7 @@
     {
       "type": "disk",
       "key": "{#90}{$1}│ {#91}Disk        {#90}│",
-      "format": "{$2}{$3}{size-used} / {size-used} ({size-percentage}{$2})",
+      "format": "{$2}{$3}{size-used} / {size-total} ({size-percentage}{$2})",
       // fastfetch -h disk-format
       // {1}: Size used - size-used
       // {2}: Size total - size-total
