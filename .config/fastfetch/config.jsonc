@@ -175,7 +175,7 @@
     {
       "type": "os",
       "key": "{#90}{$1}│ {#93}OS          {#90}│",
-      "format": "{$2}{$3}{pretty-name} {codename} {#2}[v{version}] {#2}[{arch}]",
+      "format": "{$2}{$3}{pretty-name} {#2}[v{version}] {#2}[{arch}]",
       // fastfetch -h os-format
       // {3}: Pretty name of the OS - pretty-name
       // {8}: Version of the OS - version
@@ -258,19 +258,6 @@
       // The default is something similar to "{1} / {2} ({3}) - {9}".
     },
     {
-      "type": "battery",
-      "key": "{#90}{$1}│ {#91}Battery     {#90}│",
-      "format": "{$2}{$3}{capacity} ({status}{$2})",
-    },
-    {
-      "type": "poweradapter",
-      "key": "{#90}{$1}│ {#91}Power       {#90}│",
-      "format": "{$2}{$3}{name}",
-      // fastfetch -h poweradapter-format
-      // {2}: PowerAdapter name - name
-      // The default is something similar to "{1}W".
-    },
-    {
       "type": "terminal",
       "key": "{#90}{$1}│ {#95}Terminal    {#90}│",
       "format": "{$2}{$3}{pretty-name} {#2}[{version}]",
@@ -282,7 +269,7 @@
     {
       "type": "terminalfont",
       "key": "{#90}{$1}│ {#95}Font        {#90}│",
-      "format": "{$2}{$3}{name}  {#2}[{size}]",
+      "format": "{$2}{$3}{name} {#2}[{size}]",
       // fastfetch -h terminalfont-format
       // {2}: Terminal font name - name
       // {3}: Terminal font size - size
@@ -291,7 +278,7 @@
     {
       "type": "shell",
       "key": "{#90}{$1}│ {#95}Shell       {#90}│",
-      "format": "{$2}{$3}{exe-name}  {#2}[v{version}] {#2}[{exe-path}] {#2}[PID:{pid}]",
+      "format": "{$2}{$3}{exe-name} {#2}[v{version}] {#2}[{exe-path}] {#2}[PID:{pid}]",
       // fastfetch -h shell-format
       // {3}: Shell base name of arg0 - exe-name
       // {4}: Shell version - version
@@ -306,21 +293,12 @@
       "showPrefixLen": true,
       "showIpv4": true,
       "showIpv6": false,
-      "format": "{$2}{$3}{ifname}: {ipv4}  {#2}[MTU:{mtu}]",
+      "format": "{$2}{$3}{ifname}:{ipv4} {#2}[MTU:{mtu}]",
       // fastfetch -h localip-format
       // {1}: Local IPv4 address - ipv4
       // {4}: Interface name - ifname
       // {6}: MTU size in bytes - mtu
       // The default is something similar to "{1}".
-    },
-    {
-      "type": "publicip",
-      "key": "{#90}{$1}│ {#94}Public IPv4 {#90}│",
-      "format": "{$2}{$3}{ip}  {#2}[{location}]",
-      // fastfetch -h publicip-format
-      // {1}: Public IP address - ip
-      // {2}: Location - location
-      // The default is something similar to "{1} ({2})".
     },
     // CUSTOM - Button UI bar
     {
