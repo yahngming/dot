@@ -13,9 +13,10 @@
 	"modules": [
 		"break",
 		"break",
+		"break",
 		{
 			"type": "custom",
-			"format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+			"format": "\u001b[90m┌───────────────────── Hardware ─────────────────────┐"
 		},
 		{
 			"type": "host",
@@ -24,7 +25,7 @@
 		},
 		{
 			"type": "cpu",
-			"key": "│ ├",
+			"key": "  ├",
 			"showPeCoreCount": true,
 			"keyColor": "green"
 		},
@@ -61,7 +62,7 @@
 		"break",
 		{
 			"type": "custom",
-			"format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+			"format": "\u001b[90m┌───────────────────── Software ─────────────────────┐"
 		},
 		{
 			"type": "command",
@@ -123,7 +124,7 @@
 		"break",
 		{
 			"type": "custom",
-			"format": "\u001b[90m┌────────────────────Uptime / Age────────────────────┐"
+			"format": "\u001b[90m┌────────────────────── Uptime ──────────────────────┐"
 		},
 		{
 			"type": "command",
