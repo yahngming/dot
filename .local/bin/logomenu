@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+arch\n\
+thinkpad\n\
+trackpoint\n\
+"
+
+logo=$(printf "$menu" | menu $opt -p "Select a logo:" "$@")
+
+if [ -f ~/.config/fastfetch/$logo.txt ]; then
+	cp ~/.config/fastfetch/$logo.txt ~/.config/fastfetch/logo.txt
+fi
