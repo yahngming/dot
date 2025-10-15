@@ -3,8 +3,8 @@
 	"position": "left",
 	"margin": "0 0 0 0",
 	"reload_style_on_change": true,
-	"modules-left": ["custom/cachy", "clock", "cpu"],
-	"modules-center": ["mpris", "hyprland/workspaces", "privacy"],
+	"modules-left": ["custom/logo", "hyprland/workspaces", "clock", "cpu"],
+	"modules-center": ["mpris", "privacy"],
 	"modules-right": [
 		"group/extras",
 		"network",
@@ -51,10 +51,11 @@
 			"pulseaudio/slider"
 		]
 	},
-	"custom/cachy": {
-		"format": "",
+	"custom/logo": {
+		"format": "{text}",
 		"tooltip": false,
-		"on-click": "$TERMINAL"
+		"exec": "logo",
+		"on-click": "settings"
 	},
 	"hyprland/workspaces": {
 		"on-click": "activate",
