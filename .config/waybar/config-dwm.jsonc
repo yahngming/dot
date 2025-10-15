@@ -51,7 +51,7 @@
 	},
 	"clock": {
 		"format": "{:%R}",
-		"tooltip": false
+		"tooltip-format": "{calendar}"
 	}
 
 }
