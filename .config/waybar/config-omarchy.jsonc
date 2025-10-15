@@ -18,7 +18,7 @@
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
-		"on-click": "tui about",
+		"on-click": "pkill about || tui about",
 	},
 	"hyprland/workspaces": {
 		"on-click": "activate",
@@ -121,7 +121,7 @@
 		"tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
 		"tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
 		"interval": 5,
-		"on-click": "tui 'about battery'",
+		"on-click": "pkill about || tui 'about battery'",
 		"states": {
 			"warning": 20,
 			"critical": 10
