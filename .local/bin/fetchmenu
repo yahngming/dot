@@ -5,29 +5,27 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-config-box\n\
-config-inline\n\
-config-omarchy\n\
-logo-auto\n\
-logo-arch\n\
-logo-clippy\n\
-logo-dos\n\
-logo-ibm\n\
-logo-invader\n\
-logo-thinkpad\n\
-logo-windows\n\
+auto\n\
+arch\n\
+box\n\
+clippy\n\
+dos\n\
+ibm\n\
+invader\n\
+thinkpad\n\
+windows\n\
 "
 
 choice=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
 
-if [ "$choice" == "logo-auto" ]; then
+if [ "$choice" == "auto" ]; then
 	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
-		*ThinkPad* ) choice="logo-thinkpad" ;;
-		*          ) choice="logo-arch" ;;
+		*ThinkPad* ) choice="thinkpad" ;;
+		*          ) choice="arch" ;;
 	esac
 fi
 
-if [ -f ~/.config/fastfetch/$choice.jsonc ] || [ -f ~/.config/fastfetch/$choice.txt ]; then
-	cp ~/.config/fastfetch/$choice.jsonc ~/.config/fastfetch/config.jsonc
-	cp ~/.config/fastfetch/$choice.txt ~/.config/fastfetch/logo.txt
+if [ -f ~/.config/fastfetch/config-$choice.jsonc ] && [ -f ~/.config/fastfetch/logo-$choice.txt ]; then
+	cp ~/.config/fastfetch/config-$choice.jsonc ~/.config/fastfetch/config.jsonc
+	cp ~/.config/fastfetch/logo-$choice.txt ~/.config/fastfetch/logo.txt
 fi
