@@ -22,7 +22,7 @@ window#waybar.empty #window {
 
 #workspaces button {
 	padding: 0px 5px;
-	border-bottom: 1px solid @sfg;
+	border-top: 1px solid @sfg;
 }
 
 #workspaces button.empty {
