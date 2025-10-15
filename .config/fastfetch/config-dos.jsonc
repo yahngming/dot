@@ -31,7 +31,7 @@
 			"format": "{$1}{$2}"
 		},
 		{
-			"type": "board",
+			"type": "board",{$1}
 			"key": " ",
 			"format": "{$1}{$2} {#93}   Board - {$1}{vendor} {#2}[{name}]"
 		},
@@ -53,17 +53,12 @@
 		{
 			"type": "memory",
 			"key": " ",
-			"format": "{$1}{$2} {#93}     RAM - {$1}{used} / {total} {#2}[{percentage}{$1}{#2}]"
+			"format": "{$1}{$2} {#93}  Memory - {$1}{used} / {total} {#2}[{percentage}{$1}{#2}]"
 		},
 		{
 			"type": "disk",
 			"key": " ",
-			"format": "{$1}{$2} {#93}     SSD - {$1}{size-used} / {size-total} {#2}[{size-percentage}{$1}{#2}]"
-		},
-		{
-			"type": "custom",
-			"key": " ",
-			"format": "{$1}{$2}"
+			"format": "{$1}{$2} {#93}    Disk - {$1}{size-used} / {size-total} {#2}[{size-percentage}{$1}{#2}]"
 		},
 		{
 			"type": "os",
