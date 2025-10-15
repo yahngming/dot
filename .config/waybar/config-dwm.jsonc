@@ -31,9 +31,9 @@
 	},
 	"network": {
 		"format": "{icon}",
-		"format-disconnected": "󰤮  ",
-		"format-ethernet": "󰈀  ",
-		"format-icons": ["󰤯  ", "󰤟  ", "󰤢  ", "󰤥  ", "󰤨  "],
+		"format-disconnected": "󰤮 ",
+		"format-ethernet": "󰈀 ",
+		"format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
 		"tooltip": false
 	},
 	"pulseaudio": {
