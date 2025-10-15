@@ -32,6 +32,7 @@ window#waybar.empty #window {
 
 #workspaces button.visible, #window {
 	background: @sbg;
+	color: @sfg;
 }
 
 #window, #clock, #tray {
