@@ -9,6 +9,9 @@
 	"modules-right": ["tray", "temperature", "battery", "network", "pulseaudio", "clock"],
 
 	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": 5
+		}
 	},
 	"hyprland/window": {
 		"tooltip": false
@@ -16,7 +19,7 @@
 
 	"tray": {
 		"icon-size": 18,
-		"spacing": 10
+		"spacing": 5
 	},
 	"temperature": {
 		"format": "{icon}",
@@ -33,9 +36,9 @@
 	},
 	"network": {
 		"format": "{icon}",
-		"format-disconnected": "󰤮",
-		"format-ethernet": "󰈀",
-		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"format-disconnected": "󰤮 ",
+		"format-ethernet": "󰈀 ",
+		"format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
 		"tooltip": false
 	},
 	"pulseaudio": {
