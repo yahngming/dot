@@ -28,7 +28,7 @@
 		{
 			"type": "os",
 			"key": " ",
-			"format": "{$1}{$2}{#93} OS      - {$1}{pretty-name} {#2}[v{version}] {#2}[{arch}]"
+			"format": "{$1}{$2}{#93} OS      - {$1}{pretty-name} {#2}[v{version}] [{arch}]"
 		},
 		{
 			"type": "kernel",
@@ -63,12 +63,12 @@
 		{
 			"type": "memory",
 			"key": " ",
-			"format": "{$1}{$2}{#93} RAM     - {$1}{used} / {total} ({percentage}{$2})"
+			"format": "{$1}{$2}{#93} RAM     - {$1}{used} / {total} {#2}({percentage})"
 		},
 		{
 			"type": "disk",
 			"key": " ",
-			"format": "{$1}{$2}{#93} SSD     - {$1}{size-used} / {size-total} ({size-percentage}{$2})"
+			"format": "{$1}{$2}{#93} SSD     - {$1}{size-used} / {size-total} {#2}({size-percentage})"
 		},
 		{
 			"type": "terminal",
@@ -87,7 +87,7 @@
 		},
 		{
 			"type": "custom",
-			"format": "{$1}└─────────────────────────────────────────────────────────────┘"
+			"format": "{$1}└───────────────────────────────────────────────────────────┘"
 		}
 	]
 }
