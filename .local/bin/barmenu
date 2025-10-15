@@ -5,6 +5,7 @@ case "$LAUNCHER" in
 esac
 
 menu="\
+dwm\n\
 float\n\
 icononly\n\
 macos\n\
