@@ -7,49 +7,44 @@
 	font-size: 16px;
 }
 
-window#waybar { 
-	background-color: @fs; 
-	color: @fg;
-}
-
 .modules-left {
-	background-color: @bg;
+	background: @bg;
 	padding: 0px 0px 0px 0px;
 }
 
 .modules-right {
-	background-color: @bg;
+	background: @bg;
 	padding: 0px 5px 0px 0px;
 }
 
 #workspaces {
+	padding: 0px 11px 0px 11px;
 }
 
 #workspaces button {
-	padding: 0px 11px 0px 11px; 
- 	min-width: 1px;
 	color: @fg;
 }
 
 #workspaces button.active { 
-	padding: 0px 11px 0px 11px; 
-	background-color: @fs;
-	color: @fg;
+	background: @fs;
 }
 
 #window {
-	 color: @fg;
-	 background-color: @fs;
 	 padding: 0px 10px 0px 10px;
 }
 
+window#waybar { 
+	background: @fs; 
+	color: @fg;
+}
+
 window#waybar.empty #window {
-	background-color: transparent;
+	background: transparent;
 	color: transparent;
 }
 
 window#waybar.empty {
-	background-color: @bg;
+	background: @bg;
 }
 
 #tray{
