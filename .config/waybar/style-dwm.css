@@ -14,7 +14,7 @@ window#waybar {
 	font-size: 16px;
 }
 
-window#waybar.empty {
+.modules-left, .modules-right {
 	background: @bg;
 }
 
@@ -22,11 +22,7 @@ window#waybar.empty {
 	padding: 0px 5px;
 }
 
-#workspaces button.visible {
-	background: @fs;
-}
-
-#window {
+#workspaces button.visible, #window {
 	background: @fs;
 }
 
