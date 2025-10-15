@@ -18,12 +18,6 @@ window#waybar {
 	padding: 0px 5px 0px 0px;
 }
 
-#custom-scratch {
-	background-color: #323232;
-	color: #b8b8b8;
-	padding: 0px 9px 0px 9px;
-}
-
 #workspaces {
 }
 
@@ -66,8 +60,8 @@ window#waybar.empty {
 	margin: 0px 5px 0px 5px;
 }
 
-#network, #temperature, #backlight, #pulseudio, #battery {
-	padding: 0px 15px 0px 15px;
+#temperature, #battery, #network, #pulseudio {
+	padding: 0px 5px 0px 5px;
 }
 
 #battery.critical {
