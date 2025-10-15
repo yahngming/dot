@@ -7,26 +7,34 @@
 			"left": 1
 		}
 	},
+	"display": {
+    	"separator": " • "
+	}
 	"modules": [
 		{
 			"type": "kernel",
-			"key": "{#92} "
+			"key": " ",
+			"keyColor": "blue"
 		},
 		{
 			"type": "uptime",
-			"key": "{#93} "
+			"key": " ",
+			"keyColor": "yellow"
 		},
 		{
 			"type": "packages",
-			"key": "{#94} "
+			"key": " ",
+			"keyColor": "purple"
 		},
 		{
 			"type": "shell",
-			"key": "{#95} "
+			"key": " ",
+			"keyColor": "red"
 		},
 		{
 			"type": "terminal",
-			"key": "{#96} "
+			"key": " ",
+			"keyColor": "green"
 		}
 	]
 }
