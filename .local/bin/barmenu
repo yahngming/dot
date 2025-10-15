@@ -15,11 +15,11 @@ vertical\n\
 windows\n\
 "
 
-bar=$(printf "$menu" | menu $opt -p "Select a bar:" "$@")
+choice=$(printf "$menu" | menu $opt -p "Select a bar style:" "$@")
 
-if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$bar.jsonc ] && [ -f ~/.config/waybar/style-$bar.css ]; then
-	cp ~/.config/waybar/config-$bar.jsonc ~/.config/waybar/config.jsonc
- 	cp ~/.config/waybar/style-$bar.css ~/.config/waybar/style.css
+if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$choice.jsonc ] && [ -f ~/.config/waybar/style-$choice.css ]; then
+	cp ~/.config/waybar/config-$choice.jsonc ~/.config/waybar/config.jsonc
+ 	cp ~/.config/waybar/style-$choice.css ~/.config/waybar/style.css
  	killall waybar
 	hyprctl dispatch exec waybar >/dev/null 2>&1
 fi
