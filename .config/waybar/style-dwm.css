@@ -1,14 +1,9 @@
 @import 'colors.css';
 
-@define-color base #222222;
-@define-color text #aaaaaa;
-@define-color blue #005577;
-@define-color grey #eeeeee;
-
 @define-color bg @color0;
 @define-color fg @color8;
-@define-color sbg @color3;
-@define-color sfg @color7;
+@define-color sb @color3;
+@define-color sf @color7;
 
 * {
 	border: none;
@@ -29,7 +24,7 @@ window#waybar.empty #window {
 
 #workspaces button {
 	padding: 0px 5px;
-	border-bottom: 1px solid @sfg;
+	border-bottom: 1px solid @sf;
 }
 
 #workspaces button.empty {
@@ -38,11 +33,11 @@ window#waybar.empty #window {
 }
 
 #workspaces button.visible, #window {
-	background: @sbg;
+	background: @sb;
 }
 
 #workspaces button.visible, #window, #clock {
-	color: @sfg;
+	color: @sf;
 }
 
 #window, #clock, #tray {
