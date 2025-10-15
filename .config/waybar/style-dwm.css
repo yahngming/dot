@@ -29,7 +29,7 @@ window#waybar.empty #window {
 
 #workspaces button.visible, #window {
 	background: @fs;
-	text-decoration-line: overline underline;
+	text-decoration-line: underline;
 }
 
 #window, #clock {
