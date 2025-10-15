@@ -4,8 +4,8 @@
 		"type": "file",
 		"source": "~/.config/fastfetch/logo.txt",
 		"padding": {
-			"top": 6,
-			"right": 10,
+			"top": 4,
+			"right": 6,
 			"left": 2
 		}
 	},
