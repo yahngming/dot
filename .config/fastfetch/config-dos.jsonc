@@ -12,9 +12,9 @@
 		"disableLinewrap": "false",
 		"constants": [
 			// CONSTANT {$1} - COLOR BACKGROUND FOR KEY
-			"blue",
+			"\u001b[48;2;0;0;170m",
 			// CONSTANT {$2} - COLOR BACKGROUND FOR OUTPUT
-			"blue",
+			"\u001b[48;2;0;0;170m",
 			// CONSTANT {$3} - VERTICAL BARS AT START AND 75th CHARACTERS FORWARD AND BACKWARD
 			"\u001b[90m│                                                            │\u001b[60D\u001b[39m",
 		],
@@ -27,8 +27,7 @@
 		},
 		{
 			"type": "title",
-			"key": "{#90}{$1}│ {#93}Host        {#90}│",
-			"format": "{$2}{$3}{#1}{#36}{host-name}",
+			"key": "{$2}{$3}{#1}{#36}Host",
 		},
 		{
 			"type": "host",
