@@ -20,7 +20,7 @@ choice=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
 if [ "$choice" == "auto" ]; then
 	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
 		*ThinkPad* ) choice="thinkpad" ;;
-		*          ) choice="dos" ;;
+		*          ) choice="arch" ;;
 	esac
 fi
 
