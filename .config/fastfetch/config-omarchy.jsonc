@@ -3,7 +3,12 @@
 	"logo": {
 		"type": "file",
 		"source": "~/.config/fastfetch/logo.txt",
-		"color": { "1": "green" },
+		"color": {
+			"1": "red",
+			"2": "green",
+			"3": "blue",
+			"4": "white"
+		},
 		"padding": {
 			"top": 2,
 			"right": 6,
