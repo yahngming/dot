@@ -1,5 +1,5 @@
 @define-color bg #222222;
-@define-color fg #bbbbbb;
+@define-color fg #aaaaaa;
 @define-color sbg #005577;
 @define-color sfg #eeeeee;
 
@@ -32,6 +32,9 @@ window#waybar.empty #window {
 
 #workspaces button.visible, #window {
 	background: @sbg;
+}
+
+#workspaces button.visible, #window, #clock {
 	color: @sfg;
 }
 
@@ -39,6 +42,6 @@ window#waybar.empty #window {
 	padding: 0px 10px;
 }
 
-#temperature, #battery, #network, #pulseudio {
+#battery, #network, #pulseudio {
 	padding: 0px 5px 0px 5px;
 }
