@@ -11,7 +11,7 @@
 	"display": {
 		"disableLinewrap": "false",
 		"constants": [
-			"\u001b[48;2;0;0;170m",
+			"\u001b[48;2;0;0;170m\u001b[39m",
 			"\u001b[48;2;0;0;170m",
 			"\u001b[90m│                                                           │\u001b[60D\u001b[39m"
 		]
