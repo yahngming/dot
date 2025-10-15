@@ -8,7 +8,7 @@ case $(file --mime-type -Lb "$@") in
 	*http*                                 ) w3m -sixel "$@" ;;
 	*json*|*xml*                           ) bat --paging always "$@" ;;
 	*markdown*                             ) glow --pager "$@" ;;
-	*telnet*                               ) set -- ${1#telnet://}; telnet "$@" ;;
+	*telnet*                               ) set -- ${1#telnet://}; setsid -f telnet >/dev/null 2>&1 "$@" ;;
 	application/*                          ) "$@" ;;
 	audio/*|video/*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$@" ;;
 	image/*                                ) setsid -f nsxiv -a >/dev/null 2>&1 "$@" * ;;
