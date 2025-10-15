@@ -24,12 +24,12 @@
 		{
 			"type": "host",
 			"key": " ",
-			"format": "{$3}{#93}Machine - {$1}{version}"
+			"format": "{$1}{$3}{#93}Machine - {$1}{version}"
 		},
 		{
 			"type": "os",
 			"key": " ",
-			"format": "{$3}{#93}OS - {$1}{pretty-name} {#2}[v{version}] {#2}[{arch}]"
+			"format": "{$1}{$3}{#93}OS - {$1}{pretty-name} {#2}[v{version}] {#2}[{arch}]"
 		},
 		{
 			"type": "kernel",
