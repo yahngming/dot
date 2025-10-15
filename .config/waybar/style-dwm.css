@@ -29,7 +29,11 @@ window#waybar.empty #window {
 }
 
 #workspaces button.empty {
-	text-decoration: none;
+	text-decoration: underline;
+}
+
+#workspaces button.active {
+	text-decoration: underline;
 }
 
 #workspaces button.visible, #window {
