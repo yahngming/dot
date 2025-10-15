@@ -25,19 +25,11 @@ window#waybar.empty #window {
 
 #workspaces button {
 	padding: 0px 5px;
-	text-decoration-line: underline;
-}
-
-#workspaces button.empty {
-	text-decoration: underline;
-}
-
-#workspaces button.active {
-	text-decoration: underline;
 }
 
 #workspaces button.visible, #window {
 	background: @fs;
+	text-decoration: underline;
 }
 
 #window, #clock {
