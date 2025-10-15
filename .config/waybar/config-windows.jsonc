@@ -36,7 +36,7 @@
 		"menu-actions": {
 			"about": "tui about",
 			"programs": "launcher",
-			"documents": "tui lf",
+			"documents": "$TERMINAL -a center -e $SHELL -c 'cat ~/.cache/wal/sequences ; lf'",
 			"settings": "settings",
 			"shell": "$TERMINAL -a center",
 			"shutdown": "powermenu"
