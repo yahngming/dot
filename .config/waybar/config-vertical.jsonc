@@ -56,7 +56,7 @@
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
-		"on-click": "settings"
+		"on-click": "tui about"
 	},
 	"hyprland/workspaces": {
 		"on-click": "activate",
