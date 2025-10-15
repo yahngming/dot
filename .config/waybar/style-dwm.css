@@ -3,13 +3,10 @@
 @define-color fs #225877;
 
 * {
+	background-color: @bg;
+	color: @fg;
 	border: none;
 	border-radius: 0;
-}
-
-#waybar {
-	background: @bg;
-	color: @fg;
 	font-family: monospace;
 	font-size: 16px;
 }
@@ -18,7 +15,11 @@
 	padding: 0px 5px;
 }
 
-#workspaces button.visible, window#waybar {
+#workspaces button.visible {
+	background: @fs;
+}
+
+window#waybar {
 	background: @fs;
 }
 
