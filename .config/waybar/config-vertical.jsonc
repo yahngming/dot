@@ -3,7 +3,7 @@
 	"position": "left",
 	"margin": "0 0 0 0",
 	"reload_style_on_change": true,
-	"modules-left": ["custom/logo", "hyprland/workspaces", "clock", "cpu"],
+	"modules-left": ["custom/logo", "hyprland/workspaces", "cpu"],
 	"modules-center": ["mpris", "privacy"],
 	"modules-right": [
 		"group/extras",
@@ -13,7 +13,8 @@
 		"group/audio",
 		"group/brightness",
 		"battery",
-		"custom/powermenu"
+		"custom/powermenu",
+		"clock"
 	],
 	"group/extras": {
 		"orientation": "inherit",
