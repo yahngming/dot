@@ -9,46 +9,42 @@
 	"modules-right": ["tray", "network", "temperature", "backlight", "pulseaudio", "battery", "clock"],
 
 	"hyprland/workspaces": {
-		"disable-scroll": true,
-		"disable-markup": true,
 		"format": "{}" 
 	},
 	"hyprland/window": {
-		"format": "{}",
-		"max-length": 150
+		"format": "{}"
 	},
 
 	"tray": {
 		"icon-size": 18,
-		"spacing": 15
+		"spacing": 10
 	},
 	"network": {
-		"interface": "wlp4s0", 
-		"format-wifi": "   WiFi-On",
-		"format-disconnected": "睊   Disconnected",
+		"format-wifi": " ",
+		"format-disconnected": "Disconnected",
 		"interval": 60
 	},
 	"temperature": {
 	   	"thermal-zone": 0,
 		"format": "{icon} {temperatureC}°C",
-		"format-icons":[""],
+		"format-icons": [""],
 		"interval": 30
 	},
 	"backlight": {
 		"device": "intel_backlight",
-		"format": "{icon}  {percent}%  ",
+		"format": "{icon} {percent}%",
 		"format-icons": ["","","",""],
 		"interval": 60
 	},
 	"pulseaudio": {
-		"format": "{icon}  {volume}%  ",
-		"format-bluetooth": "  {volume}%  ",
-		"format-muted":"婢  Mute  ",
+		"format": "{icon} {volume}%",
+		"format-bluetooth": " {volume}%",
+		"format-muted":"婢 Mute",
 		"interval": 60,
 		"format-icons": {
 			"default": [""]
 		},
-		"on-click": "blueman-manager"
+		"on-click": "volume toggle"
 	},
 	"battery": {
 		"bat": "BAT0",
@@ -59,14 +55,14 @@
 			"warning": 20,
 			"critical": 20
 		},
-		"format": "{icon}   {capacity}%",
-		"format-good": "{icon}   {capacity}%", 
-		"format-full": "   {capacity}%",
+		"format": "{icon} {capacity}%",
+		"format-good": "{icon} {capacity}%", 
+		"format-full": "  {capacity}%",
 		"format-icons": ["", "", "", "", ""],
 		"interval": 30
 	},
 	"clock": {
-		"format": "{:%a %b %e  %R}",
+		"format": "{:%R}",
 		"interval": 30
 	}
 
