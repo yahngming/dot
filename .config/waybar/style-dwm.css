@@ -61,17 +61,13 @@ window#waybar.empty {
 	background-color: #323232;
 }
 
-#network, #temperature, #backlight, #pulseudio, #battery {
-	padding: 0px 15px 0px 15px;
-}
-
-#clock {
-	margin: 0px 15px 0px 15px;
-}
-
 #tray{
 	padding: 0px 8px 0px 5px;
 	margin: 0px 5px 0px 5px;
+}
+
+#network, #temperature, #backlight, #pulseudio, #battery {
+	padding: 0px 15px 0px 15px;
 }
 
 #battery.critical {
@@ -82,4 +78,6 @@ window#waybar.empty {
 	color: #ff5555;
 }
 
-
+#clock {
+	margin: 0px 15px 0px 15px;
+}
