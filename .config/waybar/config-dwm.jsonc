@@ -38,12 +38,12 @@
 	},
 	"pulseaudio": {
 		"format": "{icon}",
-		"format-bluetooth": "󰥰",
-		"format-muted": "󰖁",
+		"format-bluetooth": "󰥰 ",
+		"format-muted": "󰖁 ",
 		"format-icons": {
-			"headphone": "󰋋",
-			"headset": "󰋋",
-			"default": ["󰕿", "󰖀", "󰕾"]
+			"headphone": "󰋋 ",
+			"headset": "󰋋 ",
+			"default": ["󰕿 ", "󰖀 ", "󰕾 "]
 		},
 		"tooltip": false,
 		"on-click": "volume toggle"
