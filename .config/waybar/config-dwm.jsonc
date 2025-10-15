@@ -53,7 +53,6 @@
 		"format": "{:%R}",
 		"tooltip-format": "{calendar}",
 		"calendar": {
-			"mode": "month",
 			"format": {
 				"months": "<span color='#b4befe'><b>{}</b></span>",
 				"today": "<span color='#f38ba8'><b>{}</b></span>"
