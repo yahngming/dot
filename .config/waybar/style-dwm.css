@@ -25,6 +25,11 @@ window#waybar.empty #window {
 
 #workspaces button {
 	padding: 0px 5px;
+	text-decoration: underline;
+}
+
+#workspaces button.empty {
+	text-decoration: none;
 }
 
 #workspaces button.visible, #window {
