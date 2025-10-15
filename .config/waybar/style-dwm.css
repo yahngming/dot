@@ -1,20 +1,24 @@
+@define-color bg #323232;
+@define-color fg #ffffff;
+@define-color fs #225877;
+
 * {
 	font-family: monospace;
 	font-size: 16px;
 }
 
 window#waybar { 
-	background-color: #225877; 
-	color: #ffffff;
+	background-color: @fs; 
+	color: @fg;
 }
 
 .modules-left {
-	background-color: #323232;
+	background-color: @bg;
 	padding: 0px 0px 0px 0px;
 }
 
 .modules-right {
-	background-color: #323232;
+	background-color: @bg;
 	padding: 0px 5px 0px 0px;
 }
 
@@ -24,25 +28,18 @@ window#waybar {
 #workspaces button {
 	padding: 0px 11px 0px 11px; 
  	min-width: 1px;
-	color: #888888;
+	color: @fg;
 }
 
 #workspaces button.focused { 
 	padding: 0px 11px 0px 11px; 
-	background-color: #285577;
-	color: #ffffff;
-}
-
-#mode { 
-	 background-color: #900000;
-	 color: #ffffff;
-	 padding: 0px 5px 0px 5px;
-	 border: 1px solid #2f343a;
+	background-color: @focused;
+	color: @fg;
 }
 
 #window {
-	 color: #ffffff;
-	 background-color: #285577;
+	 color: @fg;
+	 background-color: @fs;
 	 padding: 0px 10px 0px 10px;
 }
 
@@ -52,7 +49,7 @@ window#waybar.empty #window {
 }
 
 window#waybar.empty {
-	background-color: #323232;
+	background-color: @bg;
 }
 
 #tray{
@@ -62,14 +59,6 @@ window#waybar.empty {
 
 #temperature, #battery, #network, #pulseudio {
 	padding: 0px 5px 0px 5px;
-}
-
-#battery.critical {
-	color: #ff5555;
-}
-
-#network.disconnected {
-	color: #ff5555;
 }
 
 #clock {
