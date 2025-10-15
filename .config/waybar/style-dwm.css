@@ -17,6 +17,7 @@ window#waybar {
 
 window#waybar.empty, .modules-left, .modules-right {
 	background: @bg;
+	color: @fg;
 }
 
 window#waybar.empty #window {
@@ -35,6 +36,7 @@ window#waybar.empty #window {
 
 #workspaces button.visible, #window {
 	background: @sbg;
+	color: @sfg;
 }
 
 #window, #clock, #tray {
