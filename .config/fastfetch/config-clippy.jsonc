@@ -12,7 +12,7 @@
 		"disableLinewrap": "false",
 		"separator": "",
 		"key": {
-			"width": 16,
+			"width": 16
 		},
 		"constants": [
 			"\u001b[48;2;43;43;69m",
