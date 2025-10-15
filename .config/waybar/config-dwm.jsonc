@@ -54,7 +54,7 @@
 		"tooltip-format": "{calendar}",
 		"calendar": {
 			"format": {
-				"months": "<center>{}</center>",
+				"months": "<b>{}</b>",
 				"weekdays": "<b>{}</b>",
 				"today": "<span color='#f38ba8'><b>{}</b></span>"
 			}
