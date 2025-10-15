@@ -5,10 +5,10 @@ case "$LAUNCHER" in
 esac
 
 menu="\
+float\n\
 icononly\n\
 macos\n\
 mecha\n\
-modern\n\
 omarchy\n\
 powerline\n\
 vertical\n\
