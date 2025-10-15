@@ -3,12 +3,21 @@
 @define-color fs #225877;
 
 * {
-	background-color: @bg;
+	background: @bg;
 	color: @fg;
 	border: none;
 	border-radius: 0;
 	font-family: monospace;
 	font-size: 16px;
+}
+
+window#waybar {
+	background: @fs;
+	color: @fg;
+}
+
+window#waybar.empty {
+	background: @bg;
 }
 
 #workspaces button {
