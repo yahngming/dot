@@ -7,6 +7,7 @@ case "$LAUNCHER" in
 esac
 
 menu="\
+ About\n\
  Audio\n\
  Bar\n\
  Bluetooth\n\
@@ -14,7 +15,7 @@ menu="\
  Coffee\n\
 󰍹 Display\n\
  Dotfiles\n\
- Fetch\n\
+ Fetch\n\
 󰊖 Gamemode\n\
 󰇧 IME\n\
 󰌌 Keyboard\n\
@@ -32,6 +33,7 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt "$@") in
+	*About*       ) tui about ;;
 	*Audio*       ) audiomenu ;;
 	*Bar*         ) barmenu ;;
 	*Bluetooth*   ) btmenu ;;
