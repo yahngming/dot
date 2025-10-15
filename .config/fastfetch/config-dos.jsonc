@@ -26,7 +26,7 @@
 		},
 		{
 			"type": "host",
-			"key": "",
+			"key": " ",
 			// "key": "{#90}{$1}│ {#93}Machine     {#90}│",
 			"format": "{$2}{$3}{version}",
 		},
