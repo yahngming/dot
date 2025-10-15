@@ -26,6 +26,7 @@ window#waybar.empty #window {
 #workspaces button {
 	padding: 0px 5px;
 	border-bottom: 1px solid @fg;
+	border-radius: 3;
 }
 
 #workspaces button.active {
@@ -40,10 +41,10 @@ window#waybar.empty #window {
 	background: @fs;
 }
 
-#window, #clock {
+#window, #clock, #tray {
 	padding: 0px 10px;
 }
 
-#tray, #temperature, #battery, #network, #pulseudio {
+#temperature, #battery, #network, #pulseudio {
 	padding: 0px 5px 0px 5px;
 }
