@@ -31,7 +31,7 @@
 			"format": "{$1}{$2}"
 		},
 		{
-			"type": "board",{$1}
+			"type": "board",
 			"key": " ",
 			"format": "{$1}{$2} {#93}   Board - {$1}{vendor} {#2}[{name}]"
 		},
