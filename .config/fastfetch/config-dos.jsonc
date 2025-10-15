@@ -23,34 +23,24 @@
 		{
 			"type": "host",
 			"key": " ",
-			"format": "{$1}{$2}{#93} Machine - {$1}{version}"
+			"format": "{$1}{$2}{#93} {$1}{version}"
 		},
 		{
-			"type": "os",
+			"type": "custom",
 			"key": " ",
-			"format": "{$1}{$2}{#93} OS      - {$1}{pretty-name} {#2}[v{version}] [{arch}]"
-		},
-		{
-			"type": "kernel",
-			"key": " ",
-			"format": "{$1}{$2}{#93} Kernel  - {$1}{sysname} {#2}[v{release}]"
-		},
-		{
-			"type": "uptime",
-			"key": " ",
-			"format": "{$1}{$2}{#93} Uptime  - {$1}{days} Days {hours} Hours {minutes} Mins {seconds} Secs"
+			"format": "{$1}{$2}"
 		},
 		{
 			"type": "board",
 			"key": " ",
-			"format": "{$1}{$2}{#93} Board   - {$1}{vendor} {#2}{name}"
+			"format": "{$1}{$2} {#93}Board   - {$1}{vendor} {#2}[{name}]"
 		},
 		{
 			"type": "cpu",
 			"key": " ",
 			"showPeCoreCount": true,
 			"temp": true,
-			"format": "{$1}{$2}{#93} CPU     - {$1}{name} {#2}[C:{core-types}] {#2}[{freq-max}]"
+			"format": "{$1}{$2} {#93}CPU     - {$1}{name} {#2}[C:{core-types}] [{freq-max}]"
 		},
 		{
 			"type": "gpu",
@@ -58,32 +48,52 @@
 			"detectionMethod": "auto",
 			"hideType": "none",
 			"temp": true,
-			"format": "{$1}{$2}{#93} GPU     - {$1}{name} {#2}[C:{core-count}] {#2}[{type}]"
+			"format": "{$1}{$2} {#93}GPU     - {$1}{name} {#2}[C:{core-count}] [{type}]"
 		},
 		{
 			"type": "memory",
 			"key": " ",
-			"format": "{$1}{$2}{#93} RAM     - {$1}{used} / {total} {#2}({percentage})"
+			"format": "{$1}{$2} {#93}RAM     - {$1}{used} / {total} {#2}[{percentage}]"
 		},
 		{
 			"type": "disk",
 			"key": " ",
-			"format": "{$1}{$2}{#93} SSD     - {$1}{size-used} / {size-total} {#2}({size-percentage})"
+			"format": "{$1}{$2} {#93}SSD     - {$1}{size-used} / {size-total} {#2}[{size-percentage}]"
+		},
+		{
+			"type": "custom",
+			"key": " ",
+			"format": "{$1}{$2}"
+		},
+		{
+			"type": "os",
+			"key": " ",
+			"format": "{$1}{$2} {#93}OS      - {$1}{pretty-name} {#2}[v{version}] [{arch}]"
+		},
+		{
+			"type": "kernel",
+			"key": " ",
+			"format": "{$1}{$2} {#93}Kernel  - {$1}{sysname} {#2}[v{release}]"
 		},
 		{
 			"type": "terminal",
 			"key": " ",
-			"format": "{$1}{$2}{#93} TERM    - {$1}{pretty-name} {#2}[{version}]"
+			"format": "{$1}{$2} {#93}TERM    - {$1}{pretty-name} {#2}[{version}]"
 		},
 		{
 			"type": "terminalfont",
 			"key": " ",
-			"format": "{$1}{$2}{#93} Font    - {$1}{name} {#2}[{size}]"
+			"format": "{$1}{$2} {#93}Font    - {$1}{name} {#2}[{size}]"
 		},
 		{
 			"type": "shell",
 			"key": " ",
-			"format": "{$1}{$2}{#93} SHELL   - {$1}{exe-name} {#2}[v{version}] {#2}[{exe-path}] {#2}[PID:{pid}]"
+			"format": "{$1}{$2} {#93}SHELL   - {$1}{exe-name} {#2}[v{version}] [{exe-path}] [PID:{pid}]"
+		},
+		{
+			"type": "uptime",
+			"key": " ",
+			"format": "{$1}{$2} {#93}Uptime  - {$1}{days} Days {hours} Hours {minutes} Mins {seconds} Secs"
 		},
 		{
 			"type": "custom",
