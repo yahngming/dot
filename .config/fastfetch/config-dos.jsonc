@@ -19,12 +19,12 @@
 	"modules": [
 		{
 			"type": "custom",
-			"format": "{$1}{#90}┌────────────────────────┤ SysInfo ├────────────────────────┐",
+			"format": "{$1}┌────────────────────────┤ SysInfo ├────────────────────────┐",
 		},
 		{
 			"type": "host",
 			"key": " ",
-			"format": "{$1}{$3}{#93}Machine - {$1}{version}",
+			"format": "{#93}{$3}Machine - {$1}{version}",
 		},
 		{
 			"type": "os",
