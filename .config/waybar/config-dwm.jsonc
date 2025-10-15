@@ -6,64 +6,51 @@
 
 	"modules-left": ["hyprland/workspaces", "hyprland/window"],
 	"modules-center": [],
-	"modules-right": ["tray", "network", "temperature", "backlight", "pulseaudio", "battery", "clock"],
+	"modules-right": ["tray", "temperature", "battery", "network", "pulseaudio", "clock"],
 
 	"hyprland/workspaces": {
-		"format": "{}" 
+		"persistent-workspaces": {
+			"*": 5
+		}
 	},
 	"hyprland/window": {
-		"format": "{}"
+		"tooltip": false
 	},
 
 	"tray": {
 		"icon-size": 18,
 		"spacing": 10
 	},
-	"network": {
-		"format-wifi": " ",
-		"format-disconnected": "Disconnected",
-		"interval": 60
-	},
 	"temperature": {
-	   	"thermal-zone": 0,
-		"format": "{icon} {temperatureC}°C",
-		"format-icons": [""],
-		"interval": 30
+		"format": "{icon} {temperatureC}°",
+		"format-critical": "󰈸 {temperatureC}°",
+		"format-icons": ["", "", "", "", ""]
 	},
-	"backlight": {
-		"device": "intel_backlight",
-		"format": "{icon} {percent}%",
-		"format-icons": ["","","",""],
-		"interval": 60
+	"battery": {
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-critical": "󰂃 {capacity}%",
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	},
+	"network": {
+		"format": "{icon}",
+		"format-disconnected": "󰤮",
+		"format-ethernet": "󰈀",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
-		"format-bluetooth": " {volume}%",
-		"format-muted":"婢 Mute",
-		"interval": 60,
+		"format-bluetooth": "󰥰 {volume}%",
+		"format-muted": "󰖁 {volume}%",
 		"format-icons": {
-			"default": [""]
+			"headphone": "󰋋",
+			"headset": "󰋋",
+			"default": ["󰕿", "󰖀", "󰕾"]
 		},
 		"on-click": "volume toggle"
 	},
-	"battery": {
-		"bat": "BAT0",
-		"states": {
-			"full": 99,
-			"good": 98,
-			"normal": 98,
-			"warning": 20,
-			"critical": 20
-		},
-		"format": "{icon} {capacity}%",
-		"format-good": "{icon} {capacity}%", 
-		"format-full": "  {capacity}%",
-		"format-icons": ["", "", "", "", ""],
-		"interval": 30
-	},
 	"clock": {
-		"format": "{:%R}",
-		"interval": 30
+		"format": "{:%I:%M %p}"
 	}
 
 }
