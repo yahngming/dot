@@ -4,7 +4,6 @@
 		"position": "top",
 		"height": 24,
 		"spacing": 5,
-		"reload_style_on_change": true,
 		"modules-left": [
 			"hyprland/window",
 			"custom/texttwo",
