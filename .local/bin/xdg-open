@@ -5,7 +5,7 @@ case $(file --mime-type -Lb "$@") in
 	*diff*                                 ) delta --paging always < "$@" ;;
 	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
 	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
-	*http*                                 ) w3m -sixel "$@" ;;
+	*ftp*|*http*                           ) w3m -sixel "$@" ;;
 	*json*|*xml*                           ) bat --paging always "$@" ;;
 	*markdown*                             ) glow --pager "$@" ;;
 	*telnet*                               ) set -- ${1#telnet://}; tui "telnet "$@"" ;;
