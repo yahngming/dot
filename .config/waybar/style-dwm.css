@@ -14,16 +14,12 @@ window#waybar {
 	font-size: 16px;
 }
 
-window#waybar.empty {
-	background: @bg;
-}
-
-.modules-left, .modules-right {
+window#waybar.empty, .modules-left, .modules-right {
 	background: @bg;
 }
 
 window#waybar.empty #window {
-	background-color: transparent;
+	background: transparent;
 	color: transparent;
 }
 
