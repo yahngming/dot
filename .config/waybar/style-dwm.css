@@ -18,22 +18,9 @@
 #workspaces button.visible {
 	background: @fs;
 }
-#workspaces button.focused {
-	background: @fs;
-}
-#workspaces button.active {
-	background: @fs;
-}
 
-window#waybar {
+#window {
 	background: @fs;
-}
-window#waybar.empty {
-	background: @bg; 
-}
-window#waybar.empty #window {
-	background-color: transparent;
-	color: transparent;
 }
 
 #window, #clock {
