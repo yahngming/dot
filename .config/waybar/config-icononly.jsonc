@@ -13,8 +13,8 @@
 	"reload_style_on_change": true,
 
 	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
-	"modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-2","group/expand-3","group/expand-4","memory","cpu","clock","custom/notification","custom/padd"],
+	"modules-center": ["custom/padd","custom/l_end","custom/r_end","clock","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-2","group/expand-3","group/expand-4","memory","cpu","battery","custom/notification","custom/padd"],
 
 	"custom/led": {
 		"format": "<span color='#021c18'>󰍿</span> <span color='#313436'></span> ",
