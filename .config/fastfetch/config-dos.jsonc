@@ -24,7 +24,7 @@
 		{
 			"type": "host",
 			"key": " ",
-			"format": "{$2}{$3}{#93}Machine - {#90}{version}",
+			"format": "{$1}{$3}{#93}Machine - {$1}{version}",
 		},
 		{
 			"type": "os",
