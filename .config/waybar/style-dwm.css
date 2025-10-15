@@ -29,7 +29,7 @@ window#waybar.empty #window {
 
 #workspaces button.active {
 	background: @fs;
-	border-bottom: 2px;
+	border-bottom: 2px solid @fg;
 }
 
 #window {
