@@ -53,12 +53,12 @@
 		{
 			"type": "memory",
 			"key": " ",
-			"format": "{$1}{$2} {#93}     RAM - {$1}{used} / {total} {#2}[{percentage}{#2}]"
+			"format": "{$1}{$2} {#93}     RAM - {$1}{used} / {total} {#2}[{percentage}{$1}{#2}]"
 		},
 		{
 			"type": "disk",
 			"key": " ",
-			"format": "{$1}{$2} {#93}     SSD - {$1}{size-used} / {size-total} {#2}[{size-percentage}{#2}]"
+			"format": "{$1}{$2} {#93}     SSD - {$1}{size-used} / {size-total} {#2}[{size-percentage}{$1}{#2}]"
 		},
 		{
 			"type": "custom",
