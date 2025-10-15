@@ -51,12 +51,13 @@
 	},
 	"clock": {
 		"format": "{:%R}",
-		"tooltip-format": "{calendar}",
+		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
 			"format": {
-				"months": "<b>{}</b>",
-				"weekdays": "<b>{}</b>",
-				"today": "<span color='#f38ba8'><b>{}</b></span>"
+				"months": "<span color=snow><b>{}</b></span>",
+				"weekdays": "<span color=snow><b>{}</b></span>",
+				"days": "<span color=silver>{}</span>",
+				"today": "<span color=tomato><b>{}</b></span>"
 			}
 		}
 	}
