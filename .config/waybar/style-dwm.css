@@ -1,6 +1,7 @@
-@define-color bg #323232;
-@define-color fg #ffffff;
-@define-color fs #225877;
+@define-color bg #222222;
+@define-color fg #bbbbbb;
+@define-color sbg #005577;
+@define-color sfg #eeeeee;
 
 * {
 	border: none;
@@ -8,7 +9,7 @@
 }
 
 window#waybar {
-	background: @fs;
+	background: @bg;
 	color: @fg;
 	font-family: monospace;
 	font-size: 16px;
@@ -25,7 +26,7 @@ window#waybar.empty #window {
 
 #workspaces button {
 	padding: 0px 5px;
-	border-bottom: 1px solid @fg;
+	border-bottom: 1px solid @sfg;
 }
 
 #workspaces button.empty {
@@ -33,7 +34,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button.visible, #window {
-	background: @fs;
+	background: @sbg;
 }
 
 #window, #clock, #tray {
