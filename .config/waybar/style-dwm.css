@@ -27,9 +27,13 @@ window#waybar.empty #window {
 	padding: 0px 5px;
 }
 
-#workspaces button.visible, #window {
+#workspaces button.active {
 	background: @fs;
-	text-decoration-line: underline;
+	border-bottom: 2px;
+}
+
+#window {
+	background: @fs;
 }
 
 #window, #clock {
