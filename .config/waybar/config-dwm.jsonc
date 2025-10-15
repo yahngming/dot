@@ -51,7 +51,7 @@
 	},
 	"clock": {
 		"format": "{:%R}",
-		"tooltip-format": "<tt>{calendar}</tt>",
+		"tooltip-format": "{calendar}",
 		"calendar": {
 			"format": {
 				"months": "<span color='snow'><b>{}</b></span>",
