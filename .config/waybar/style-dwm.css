@@ -26,18 +26,13 @@ window#waybar.empty #window {
 #workspaces button {
 	padding: 0px 5px;
 	border-bottom: 1px solid @fg;
-	border-radius: 3;
-}
-
-#workspaces button.active {
-	background: @fs;
 }
 
 #workspaces button.empty {
 	border: none;
 }
 
-#window {
+#workspaces button.visible, #window {
 	background: @fs;
 }
 
