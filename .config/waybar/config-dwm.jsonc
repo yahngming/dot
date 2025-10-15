@@ -10,7 +10,7 @@
 
 	"hyprland/workspaces": {
 		"persistent-workspaces": {
-			"*": 5
+			"*": 9
 		}
 	},
 	"hyprland/window": {
@@ -54,7 +54,7 @@
 		"on-click": "volume toggle"
 	},
 	"clock": {
-		"format": "{:%I:%M %p}",
+		"format": "{:%R}",
 		"tooltip": false
 	}
 
