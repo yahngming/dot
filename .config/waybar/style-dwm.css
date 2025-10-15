@@ -5,10 +5,10 @@
 @define-color blue #005577;
 @define-color grey #eeeeee;
 
-@define-color bg @background;
-@define-color fg @foreground;
+@define-color bg @color0;
+@define-color fg @color6;
 @define-color sbg @color3;
-@define-color sfg @color6;
+@define-color sfg @color7;
 
 * {
 	border: none;
