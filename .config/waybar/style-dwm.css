@@ -15,7 +15,7 @@
 	padding: 0px 5px;
 }
 
-#workspaces button.active, window#waybar {
+#workspaces button.visible, window#waybar {
 	background: @fs;
 }
 
