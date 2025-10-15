@@ -10,7 +10,7 @@
 	"height": 41,
 
 	"modules-left": [
-		"custom/os_button",
+		"custom/start",
 		"wlr/taskbar"
 	],
 	"modules-center": [],
@@ -27,42 +27,20 @@
 		"clock"
 	],
 
-	"hyprland/language": {
-		"format": "{}",
-		"format-en": "ENG",
-		"format-cn": "CHI"
-	},
-	"custom/os_button": {
-		"format": "",
-		"on-click": "launcher",
-		"tooltip": false
-	},
-	"cpu": {
-		"interval": 5,
-		"format": " {usage}%",
-		"max-length": 10
-	},
-	"temperature": {
-		"hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
-		"critical-threshold": 75,
+	"custom/start": {
+		"format": "{text}",
 		"tooltip": false,
-		"format-critical": "󰔏 {temperatureC}°C",
-		"format": "󰔏 {temperatureC}°C"
-	},
-	"disk": {
-		"interval": 30,
-		"format": "󰋊 {percentage_used}%",
-		"path": "/",
-		"tooltip": true,
-		"unit": "GB",
-		"tooltip-format":  "Available {free} of {total}"
-	},
-	"memory": {
-		"interval": 10,
-		"format": " {percentage}%",
-		"max-length": 10,
-		"tooltip": true,
-		"tooltip-format": "RAM - {used:0.1f}GiB used"
+		"exec": "logo",
+		"menu": "on-click",
+		"menu-file": "~/.config/waybar/startmenu.xml",
+		"menu-actions": {
+			"about": "tui about",
+			"programs": "launcher",
+			"documents": "tui lf",
+			"settings": "settings",
+			"shell": "$TERMINAL -a center",
+			"shutdown": "powermenu"
+		}
 	},
 	"wlr/taskbar": {
 		"format": "{icon} {title:.17}",
@@ -73,9 +51,91 @@
 		"ignore-list": [],
 		"on-click": "activate"
 	},
+
 	"tray": {
 		"icon-size": 18,
 		"spacing": 3
+	},
+	"temperature": {
+		"hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
+		"critical-threshold": 75,
+		"tooltip": false,
+		"format-critical": "󰔏 {temperatureC}°C",
+		"format": "󰔏 {temperatureC}°C"
+	},
+	"cpu": {
+		"interval": 5,
+		"format": " {usage}%",
+		"max-length": 10
+	},
+	"memory": {
+		"interval": 10,
+		"format": " {percentage}%",
+		"max-length": 10,
+		"tooltip": true,
+		"tooltip-format": "RAM - {used:0.1f}GiB used"
+	},
+	"disk": {
+		"interval": 30,
+		"format": "󰋊 {percentage_used}%",
+		"path": "/",
+		"tooltip": true,
+		"unit": "GB",
+		"tooltip-format":  "Available {free} of {total}"
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 20
+		},
+		"format": "{icon}",
+		"format-charging": "",
+		"format-icons": [
+			"󰂎",
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+			"󰁿",
+			"󰂀",
+			"󰂁",
+			"󰂂",
+			"󰁹"
+		]
+	},
+	"network": {
+		"format-wifi": "{icon}",
+		"format-ethernet": "󰈀",
+		"format-disconnected": "󰌙",
+		"format-icons": [
+			"󰤯",
+			"󰤟",
+			"󰤢",
+			"󰤢",
+			"󰤨"
+		]
+	},
+	"pulseaudio": {
+		"max-volume": 150,
+		"scroll-step": 10,
+		"format": "{icon}",
+		"tooltip-format": "{volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"default": [
+				"",
+				"",
+				""
+			]
+		},
+		"on-click": "volume toggle"
+	},
+	"hyprland/language": {
+		"format": "{}",
+		"format-en": "ENG",
+		"format-cn": "CHI"
 	},
 	"clock": {
 		"format": "            {:%R\n %d.%m.%Y}",
@@ -101,55 +161,6 @@
 			"on-scroll-up": "shift_up",
 			"on-scroll-down": "shift_down"
 		}
-	},
-	"network": {
-		"format-wifi": "{icon}",
-		"format-ethernet": "󰈀",
-		"format-disconnected": "󰌙",
-		"format-icons": [
-			"󰤯",
-			"󰤟",
-			"󰤢",
-			"󰤢",
-			"󰤨"
-		]
-	},
-	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 20
-		},
-		"format": "{icon}",
-		"format-charging": "",
-		"format-icons": [
-			"󰂎",
-			"󰁺",
-			"󰁻",
-			"󰁼",
-			"󰁽",
-			"󰁾",
-			"󰁿",
-			"󰂀",
-			"󰂁",
-			"󰂂",
-			"󰁹"
-		]
-	},
-	"pulseaudio": {
-		"max-volume": 150,
-		"scroll-step": 10,
-		"format": "{icon}",
-		"tooltip-format": "{volume}%",
-		"format-muted": "",
-		"format-icons": {
-			"default": [
-				"",
-				"",
-				""
-			]
-		},
-		"on-click": "volume toggle"
 	}
 
 }
