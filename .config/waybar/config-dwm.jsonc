@@ -54,8 +54,8 @@
 		"tooltip-format": "{calendar}",
 		"calendar": {
 			"format": {
-				"months": "<span color='#b4befe'><b>{}</b></span>",
-				"today": "<span color='#f38ba8'><b>{}</b></span>"
+				"months": "<span><b>{}</b></span>",
+				"today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
 			}
 		}
 	}
