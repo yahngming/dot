@@ -9,9 +9,6 @@
 	"modules-right": ["tray", "temperature", "battery", "network", "pulseaudio", "clock"],
 
 	"hyprland/workspaces": {
-		"persistent-workspaces": {
-			"*": 5
-		}
 	},
 	"hyprland/window": {
 		"tooltip": false
@@ -22,35 +19,40 @@
 		"spacing": 10
 	},
 	"temperature": {
-		"format": "{icon} {temperatureC}°",
+		"format": "{icon}",
 		"format-critical": "󰈸 {temperatureC}°",
-		"format-icons": ["", "", "", "", ""]
+		"format-icons": ["", "", "", "", ""],
+		"tooltip": false
 	},
 	"battery": {
-		"format": "{icon} {capacity}%",
-		"format-charging": "󰂄 {capacity}%",
-		"format-critical": "󰂃 {capacity}%",
-		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		"format": "{icon}",
+		"format-charging": "󰂄",
+		"format-critical": "󰂃",
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"tooltip": false
 	},
 	"network": {
 		"format": "{icon}",
 		"format-disconnected": "󰤮",
 		"format-ethernet": "󰈀",
-		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"tooltip": false
 	},
 	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "󰥰 {volume}%",
-		"format-muted": "󰖁 {volume}%",
+		"format": "{icon}",
+		"format-bluetooth": "󰥰",
+		"format-muted": "󰖁",
 		"format-icons": {
 			"headphone": "󰋋",
 			"headset": "󰋋",
 			"default": ["󰕿", "󰖀", "󰕾"]
 		},
+		"tooltip": false,
 		"on-click": "volume toggle"
 	},
 	"clock": {
-		"format": "{:%I:%M %p}"
+		"format": "{:%I:%M %p}",
+		"tooltip": false
 	}
 
 }
