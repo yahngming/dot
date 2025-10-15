@@ -77,12 +77,12 @@
 		{
 			"type": "memory",
 			"key": "{#90}{$1}│ {#91}Memory      {#90}│",
-			"format": "{$2}{$3}{used} / {total} ({percentage}{$2})",
+			"format": "{$2}{$3}{used} / {total} {#2}({percentage}{$2})",
 		},
 		{
 			"type": "disk",
 			"key": "{#90}{$1}│ {#91}Disk        {#90}│",
-			"format": "{$2}{$3}{size-used} / {size-total} ({size-percentage}{$2})",
+			"format": "{$2}{$3}{size-used} / {size-total} {#2}({size-percentage}{$2})",
 		},
 		{
 			"type": "terminal",
