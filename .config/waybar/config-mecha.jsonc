@@ -121,7 +121,7 @@
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
-		"on-click": "settings"
+		"on-click": "tui about"
 	},
 
 	"pulseaudio": {
