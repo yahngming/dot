@@ -3,7 +3,7 @@
 ## arch
 post install
 ```sh
-bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) arch
+bash <(curl -L https://raw.githubusercontent.com/yahngming/dot/master/postinstall.sh) arch
 ```
 proxy config
 ```sh
@@ -39,13 +39,13 @@ yay davinci-resolve velocidrone # Download official packages into ~/.cache/yay/$
 ## chromeos
 post install
 ```sh
-bash <(curl -L https://cdn.jsdelivr.net/gh/yahngming/dot/postinstall.sh) chromeos
+bash <(curl -L https://raw.githubusercontent.com/yahngming/dot/master/postinstall.sh) chromeos
 ```
 chrome-untrusted://terminal/html/nassh_preferences_editor.html
 ```
 @font-face {
   font-family: "FiraMono Nerd Font";
-  src: url("https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts/patched-fonts/FiraMono/Regular/FiraMonoNerdFont-Regular.otf");
+  src: url("https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraMono/Regular/FiraMonoNerdFont-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
