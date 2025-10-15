@@ -13,9 +13,6 @@
 			"left": 1
 		}
 	},
-	"display": {
-		"pipe": false
-	},
 	"modules": [
 		"os",
 		"kernel",
