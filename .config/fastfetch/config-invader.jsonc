@@ -9,7 +9,7 @@
 	},
 	"display": {
     	"separator": " • "
-	}
+	},
 	"modules": [
 		{
 			"type": "kernel",
