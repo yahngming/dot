@@ -3,20 +3,11 @@
 @define-color fs #225877;
 
 * {
+	background: @bg;
 	border: none;
 	border-radius: 0;
 	font-family: monospace;
 	font-size: 16px;
-}
-
-.modules-left {
-	background: @bg;
-	padding: 0px 0px 0px 0px;
-}
-
-.modules-right {
-	background: @bg;
-	padding: 0px 5px 0px 0px;
 }
 
 #workspaces button {
