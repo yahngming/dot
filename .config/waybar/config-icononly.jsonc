@@ -168,8 +168,7 @@
 		"interval": 1,
 		"rotate": 270,
 		"format": "{icon}",
-		"format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
-		"max-length": 10
+		"format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"]
 	},
 
 	"cpu": {
@@ -186,12 +185,10 @@
 			"critical": 20
 		},
 		"format": "{icon}",
-		"rotate": 0,
-		"format-charging": "<span color='#a6d189'>󱐋</span>",
-		"format-plugged": "󰂄",
+		"rotate": 90,
 		// "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
-		// "format-icons": ["","","","","","","",""],
-		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"format-icons": ["","","","","","","",""],
+		// "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 		// "format-icons": [<i class='fa-solid fa-wifi-slash'></i>],
 	},
 
