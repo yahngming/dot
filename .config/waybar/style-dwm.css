@@ -8,13 +8,13 @@
 * {
 	border: none;
 	border-radius: 0;
+	font-family: terminal;
+	font-size: 16px;
 }
 
 window#waybar, window#waybar.empty, .modules-left, .modules-right {
 	background: @bg;
 	color: @fg;
-	font-family: terminal;
-	font-size: 16px;
 }
 
 window#waybar.empty #window {
