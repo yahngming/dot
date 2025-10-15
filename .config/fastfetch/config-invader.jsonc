@@ -3,27 +3,30 @@
 	"logo": {
 		"type": "file",
 		"source": "~/.config/fastfetch/logo.txt",
-		"color": {
-			"1": "red",
-			"2": "green",
-			"3": "blue",
-			"4": "white"
-		},
 		"padding": {
 			"left": 1
 		}
 	},
-	"display": {
-		"pipe": false
-	},
 	"modules": [
 		{
 			"type": "kernel",
-			"key": "\e[32m ",
+			"key": "{#92} "
 		},
-		"uptime",
-		"packages",
-		"shell",
-		"terminal"
+		{
+			"type": "uptime",
+			"key": "{#93} "
+		},
+		{
+			"type": "packages",
+			"key": "{#94} "
+		},
+		{
+			"type": "shell",
+			"key": "{#95} "
+		},
+		{
+			"type": "terminal",
+			"key": "{#96} "
+		}
 	]
 }
