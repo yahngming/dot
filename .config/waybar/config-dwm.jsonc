@@ -55,7 +55,7 @@
 		"calendar": {
 			"format": {
 				"months": "<span color='snow'><b>{}</b></span>",
-				"weekdays": "<span color='snow'><b>{}</b></span>",
+				"weekdays": "<span color='linen'><b>{}</b></span>",
 				"days": "<span color='silver'>{}</span>",
 				"today": "<span color='tomato'><b>{}</b></span>"
 			}
