@@ -18,16 +18,7 @@
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
-		"menu": "on-click",
-		"menu-file": "~/.config/waybar/startmenu.xml",
-		"menu-actions": {
-			"about": "tui about",
-			"programs": "launcher",
-			"documents": "tui lf",
-			"settings": "settings",
-			"shell": "$TERMINAL -a center",
-			"shutdown": "powermenu"
-		}
+		"on-click": "tui about",
 	},
 	"hyprland/workspaces": {
 		"on-click": "activate",
