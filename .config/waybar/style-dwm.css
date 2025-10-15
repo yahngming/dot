@@ -1,9 +1,14 @@
 @import 'colors.css';
 
-@define-color bg #222222;
-@define-color fg #aaaaaa;
-@define-color sbg #005577;
-@define-color sfg #eeeeee;
+@define-color base #222222;
+@define-color text #aaaaaa;
+@define-color blue #005577;
+@define-color grey #eeeeee;
+
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color sbg @color3;
+@define-color sfg @color6;
 
 * {
 	border: none;
