@@ -2,7 +2,6 @@
 	"layer": "top",
 	"position": "left",
 	"margin": "0 0 0 0",
-	"reload_style_on_change": true,
 	"modules-left": ["custom/logo", "hyprland/workspaces", "cpu"],
 	"modules-center": ["mpris", "privacy"],
 	"modules-right": [
