@@ -2,7 +2,7 @@
 
 	"layer": "top",
 	"position": "top",
-	"height": 27,
+	"height": 28,
 
 	"modules-left": ["hyprland/workspaces", "hyprland/window"],
 	"modules-center": [],
