@@ -6,7 +6,7 @@
 
 	"modules-left": ["hyprland/workspaces", "hyprland/window"],
 	"modules-center": [],
-	"modules-right": ["tray", "temperature", "battery", "network", "pulseaudio", "clock"],
+	"modules-right": ["tray", "battery", "network", "pulseaudio", "clock"],
 
 	"hyprland/workspaces": {
 		"persistent-workspaces": {
@@ -19,12 +19,7 @@
 
 	"tray": {
 		"icon-size": 18,
-		"spacing": 5
-	},
-	"temperature": {
-		"format": "{icon}",
-		"format-critical": "󰈸 {temperatureC}°",
-		"format-icons": ["", "", "", "", ""],
+		"spacing": 5,
 		"tooltip": false
 	},
 	"battery": {
