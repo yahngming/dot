@@ -33,14 +33,14 @@
 		{
 			"type": "board",
 			"key": " ",
-			"format": "{$1}{$2} {#93}Board   - {$1}{vendor} {#2}[{name}]"
+			"format": "{$1}{$2} {#93}   Board - {$1}{vendor} {#2}[{name}]"
 		},
 		{
 			"type": "cpu",
 			"key": " ",
 			"showPeCoreCount": true,
 			"temp": true,
-			"format": "{$1}{$2} {#93}CPU     - {$1}{name} {#2}[C:{core-types}] [{freq-max}]"
+			"format": "{$1}{$2} {#93}     CPU - {$1}{name} {#2}[C:{core-types}] [{freq-max}]"
 		},
 		{
 			"type": "gpu",
@@ -48,17 +48,17 @@
 			"detectionMethod": "auto",
 			"hideType": "none",
 			"temp": true,
-			"format": "{$1}{$2} {#93}GPU     - {$1}{name} {#2}[C:{core-count}] [{type}]"
+			"format": "{$1}{$2} {#93}     GPU - {$1}{name} {#2}[C:{core-count}] [{type}]"
 		},
 		{
 			"type": "memory",
 			"key": " ",
-			"format": "{$1}{$2} {#93}RAM     - {$1}{used} / {total} {#2}[{percentage}]"
+			"format": "{$1}{$2} {#93}     RAM - {$1}{used} / {total} {#2}[{percentage}{#2}]"
 		},
 		{
 			"type": "disk",
 			"key": " ",
-			"format": "{$1}{$2} {#93}SSD     - {$1}{size-used} / {size-total} {#2}[{size-percentage}]"
+			"format": "{$1}{$2} {#93}     SSD - {$1}{size-used} / {size-total} {#2}[{size-percentage}{#2}]"
 		},
 		{
 			"type": "custom",
@@ -68,32 +68,27 @@
 		{
 			"type": "os",
 			"key": " ",
-			"format": "{$1}{$2} {#93}OS      - {$1}{pretty-name} {#2}[v{version}] [{arch}]"
+			"format": "{$1}{$2} {#93}      OS - {$1}{pretty-name} {#2}[v{version}] [{arch}]"
 		},
 		{
 			"type": "kernel",
 			"key": " ",
-			"format": "{$1}{$2} {#93}Kernel  - {$1}{sysname} {#2}[v{release}]"
-		},
-		{
-			"type": "terminal",
-			"key": " ",
-			"format": "{$1}{$2} {#93}TERM    - {$1}{pretty-name} {#2}[{version}]"
-		},
-		{
-			"type": "terminalfont",
-			"key": " ",
-			"format": "{$1}{$2} {#93}Font    - {$1}{name} {#2}[{size}]"
+			"format": "{$1}{$2} {#93}  Kernel - {$1}{sysname} {#2}[v{release}]"
 		},
 		{
 			"type": "shell",
 			"key": " ",
-			"format": "{$1}{$2} {#93}SHELL   - {$1}{exe-name} {#2}[v{version}] [{exe-path}] [PID:{pid}]"
+			"format": "{$1}{$2} {#93}   Shell - {$1}{exe-name} {#2}[v{version}] [{exe-path}] [PID:{pid}]"
+		},
+		{
+			"type": "terminal",
+			"key": " ",
+			"format": "{$1}{$2} {#93}Terminal - {$1}{pretty-name} {#2}[{version}]"
 		},
 		{
 			"type": "uptime",
 			"key": " ",
-			"format": "{$1}{$2} {#93}Uptime  - {$1}{days} Days {hours} Hours {minutes} Mins {seconds} Secs"
+			"format": "{$1}{$2} {#93}  Uptime - {$1}{days} Days {hours} Hours {minutes} Mins {seconds} Secs"
 		},
 		{
 			"type": "custom",
