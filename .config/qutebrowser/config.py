@@ -47,8 +47,8 @@ c.colors.hints.match.fg = c1
 c.colors.completion.odd.bg = bg
 c.colors.completion.even.bg = c0
 c.colors.completion.fg = fg
-c.colors.completion.selected.bg = c4
-c.colors.completion.selected.fg = fg
+c.colors.completion.item.selected.bg = c4
+c.colors.completion.item.selected.fg = fg
 
 # Downloads bar colors
 c.colors.downloads.bar.bg = bg
