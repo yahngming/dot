@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -Sy --needed archlinux-keyring --noconfim
-yay --noconfim
-sudo pacman -Rns $(pacman -Qtdq) --noconfim
-yay -Scc --noconfim
+sudo pacman -Sy --needed archlinux-keyring --noconfirm
+yay --noconfirm
+sudo pacman -Rns $(pacman -Qtdq) --noconfirm
+yay -Scc --noconfirm
