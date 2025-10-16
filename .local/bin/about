@@ -1,8 +1,0 @@
-#!/bin/sh
-
-case "$@" in
-	*battery* ) cmd="upower -i $(upower -e | grep BAT)" ;;
-	*         ) cmd="fastfetch" ;;
-esac
-
-$cmd ; read -n 1 -s

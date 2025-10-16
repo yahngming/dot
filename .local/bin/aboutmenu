@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+󰔎 Computer\n\
+ Battery\n\
+"
+
+case $(printf "$menu" | menu $opt -p "Change theme to:" "$@") in
+	*Computer* ) cmd="fastfetch" ;;
+	*Battery*  ) cmd="upower -i $(upower -e | grep BAT)" ;;
+esac
+
+$cmd ; read -n 1 -s
