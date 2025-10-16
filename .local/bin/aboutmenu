@@ -14,4 +14,4 @@ case $(printf "$menu" | menu $opt -p "About" "$@") in
 	*Battery*  ) opt="battery" ;;
 esac
 
-tui "about $opt" ; read -n 1 -s
+tui "about $opt; read -n 1 -s"
