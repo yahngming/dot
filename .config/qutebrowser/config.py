@@ -2,13 +2,11 @@ import json
 import os
 
 try:
-    for i in range(16):
-        globals()[f'c{i}'] = '#888888'
     with open(os.path.expanduser('~/.cache/wal/colors.json'), 'r') as f:
         data = json.load(f)
-    colors = data.get('colors', {})
+    colors = data['colors']
     for i in range(16):
-        globals()[f'c{i}'] = colors.get(f'color{i}', globals().get(f'c{i}'))
+        globals()[f'c{i}'] = colors[f'color{i}']
 except (FileNotFoundError, Exception):
     pass
 
