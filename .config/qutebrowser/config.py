@@ -45,6 +45,7 @@ c.content.blocking.enabled = True
 c.fonts.default_family = 'monospace'
 c.tabs.indicator.width = 0
 c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
+c.tabs.position = 'left'
 c.tabs.width = '7%'
 c.window.transparent = True
 
