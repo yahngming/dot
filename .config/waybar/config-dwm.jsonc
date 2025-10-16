@@ -5,7 +5,7 @@
 	"height": 28,
 	"reload_style_on_change": true,
 
-	"modules-left": ["hyprland/workspaces", "hyprland/window"],
+	"modules-left": ["hyprland/workspaces", "wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["tray", "battery", "network", "pulseaudio", "clock"],
 
@@ -15,6 +15,11 @@
 		}
 	},
 	"hyprland/window": {
+		"tooltip": false
+	},
+	"wlr/taskbar": {
+		"format": "{icon} {title}",
+		"on-click": "activate",
 		"tooltip": false
 	},
 
