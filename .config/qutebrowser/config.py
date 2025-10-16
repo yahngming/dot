@@ -46,24 +46,25 @@ c.content.blocking.enabled = True
 c.content.blocking.method = 'adblock'
 c.content.blocking.adblock.lists = [
 	"https://easylist.to/easylist/easylist.txt",
-#         "https://easylist.to/easylist/easyprivacy.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/adservers.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/adservers_firstparty.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/allowlist.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/antiadblock.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/general_elemhide.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/general_extensions.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/general_url.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/replace.txt",
-#         "https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/specific.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-others.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badware.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/quick-fixes.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"]
+	"https://easylist.to/easylist/easyprivacy.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/adservers.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/adservers_firstparty.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/allowlist.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/antiadblock.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/general_elemhide.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/general_extensions.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/general_url.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/replace.txt",
+	"https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/specific.txt",
+	"https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt",
+	"https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-others.txt",
+	"https://github.com/uBlockOrigin/uAssets/raw/master/filters/badware.txt",
+	"https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters.txt",
+	"https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt",
+	"https://github.com/uBlockOrigin/uAssets/raw/master/filters/quick-fixes.txt",
+	"https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
+	"https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"
+]
 c.fonts.default_family = 'monospace'
 c.statusbar.show = 'never'
 c.tabs.indicator.width = 0
