@@ -15,7 +15,7 @@
 window#waybar, window#waybar.empty, .modules-left, .modules-right {
 	background: @bg;
 	color: @fg;
-	max-width: 100%;
+	width: 100%;
 }
 
 window#waybar.empty #window {
