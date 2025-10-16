@@ -16,4 +16,4 @@ elif [ "$class" == "fullscreen" ]; then
 	esac
 fi
 
-$TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences ; $@"
+$TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
