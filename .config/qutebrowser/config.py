@@ -71,5 +71,5 @@ c.tabs.position = 'left'
 c.tabs.width = '15%'
 c.window.transparent = True
 
+config.bind('<Ctrl-f>', 'nop')
 config.load_autoconfig(False)
-config.unbind('<Ctrl-f>')
