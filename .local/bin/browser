@@ -3,5 +3,6 @@
 case "$BROWSER" in
 	*chrome*     ) google-chrome-stable "$@" ;;
 	*fox*|*wolf* ) $BROWSER --profile "$HOME/.config/$BROWSER" "$@" ;;
+	*qute*       ) qutebrowser "$@" ;;
 	*            ) $BROWSER "$@" ;;
 esac
