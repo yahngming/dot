@@ -26,8 +26,6 @@ setpaper() {
 	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-	 	killall waybar
-		hyprctl dispatch exec waybar >/dev/null 2>&1
 		sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
 		sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
 		sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
