@@ -1,3 +1,5 @@
+config.load_autoconfig(False)
+
 import subprocess
 def read_xresources(prefix):
     props = {}
