@@ -44,7 +44,7 @@
 			"exec": "echo 'File'",
 			"interval": 60,
 			"return-type": "plain",
-			"on-click": "tui lf"
+			"on-click": "explorer"
 		},
 		"custom/textthree": {
 			"exec": "echo 'Edit'",
