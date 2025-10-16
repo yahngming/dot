@@ -2,17 +2,20 @@ import json
 import os
 
 try:
-	with open(os.path.expanduser('~/.cache/wal/colors.json'), 'r') as f:
-		data = json.load(f)
-	special = data.get('special', {})
-	colors = data.get('colors', {})
-	bg = special.get('background', bg)
-	fg = special.get('foreground', fg)
-	cursor = special.get('cursor', cursor)
-	for i in range(16):
-		globals()[f'c{i}'] = colors.get(f'color{i}', globals().get(f'c{i}'))
+    bg, fg, cursor = '#000000', '#FFFFFF', '#FFFFFF'
+    for i in range(16):
+        globals()[f'c{i}'] = '#888888'
+    with open(os.path.expanduser('~/.cache/wal/colors.json'), 'r') as f:
+        data = json.load(f)
+    special = data.get('special', {})
+    bg = special.get('background', bg)
+    fg = special.get('foreground', fg)
+    cursor = special.get('cursor', cursor)
+    colors = data.get('colors', {})
+    for i in range(16):
+        globals()[f'c{i}'] = colors.get(f'color{i}', globals().get(f'c{i}'))
 except (FileNotFoundError, Exception):
-	pass
+    pass
 
 # Set the font
 c.fonts.default_family = 'monospace'
