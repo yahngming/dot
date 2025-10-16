@@ -120,8 +120,7 @@
 	"custom/logo": {
 		"format": "{text}",
 		"tooltip": false,
-		"exec": "logo",
-		"on-click": "tui about"
+		"exec": "logo"
 	},
 
 	"pulseaudio": {
