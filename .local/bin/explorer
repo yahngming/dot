@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case "$EXPLORER" in
+	lf|nnn|ranger|yazi ) tui $EXPLORER "$@" ;;
+	*                  ) $EXPLORER "$@" ;;
+esac
