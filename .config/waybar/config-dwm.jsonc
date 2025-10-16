@@ -18,7 +18,6 @@
 		"tooltip": false
 	},
 	"wlr/taskbar": {
-		"format": "{icon} {title:.20}",
 		"tooltip": false,
 		"on-click": "activate"
 	},
