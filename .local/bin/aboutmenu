@@ -7,9 +7,9 @@ esac
 menu="\
 󰕮 System\n\
 ---------\n\
-󱧦 Battery\n\
+ Battery\n\
  CPU\n\
-󰋊 Drive\n\
+ Drive\n\
 󰢮 GPU\n\
  Memory\n\
  PCI\n\
