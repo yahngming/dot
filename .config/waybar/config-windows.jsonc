@@ -34,7 +34,7 @@
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
-			"about": "tui about",
+			"about": "aboutmenu",
 			"programs": "launcher",
 			"documents": "$TERMINAL -a center -e $SHELL -c 'cat ~/.cache/wal/sequences ; lf'",
 			"settings": "settings",
