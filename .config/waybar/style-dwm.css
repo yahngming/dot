@@ -6,6 +6,7 @@
 @define-color sf @color7;
 
 * {
+	padding: 0;
 	border: none;
 	border-radius: 0;
 	font-family: terminal;
@@ -23,7 +24,6 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-	padding: 0px 5px;
 	color: @sf;
 	border-bottom: 1px solid @sf;
 }
@@ -45,6 +45,6 @@ window#waybar.empty #window {
 	padding: 0px 10px;
 }
 
-#battery, #network, #pulseudio {
-	padding: 0px 5px 0px 5px;
+#workspaces button, #battery, #network, #pulseudio {
+	padding: 0px 5px;
 }
