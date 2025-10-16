@@ -79,8 +79,7 @@
 		],
 		"interval": 1,
 		"tooltip": true,
-		"tooltip-format": "CPU Frequency: {avg_frequency} GHz",
-		"on-click": "pkill btop || tui btop"
+		"tooltip-format": "CPU Frequency: {avg_frequency} GHz"
 	},
 	"clock": {
 		"interval": 1,
