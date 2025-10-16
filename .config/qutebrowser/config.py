@@ -21,9 +21,9 @@ c.colors.statusbar.passthrough.bg = c4
 c.colors.statusbar.passthrough.fg = c7
 # Tab colors
 c.colors.tabs.even.bg = c0
-c.colors.tabs.even.fg = c4
+c.colors.tabs.even.fg = c8
 c.colors.tabs.odd.bg = c0
-c.colors.tabs.odd.fg = c4
+c.colors.tabs.odd.fg = c8
 c.colors.tabs.selected.even.bg = c3
 c.colors.tabs.selected.even.fg = c7
 c.colors.tabs.selected.odd.bg = c3
