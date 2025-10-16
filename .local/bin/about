@@ -1,7 +1,11 @@
 #!/bin/sh
 
+help() {
+	echo "Usage: about [battery|system]"
+}
+
 case "$@" in
 	*battery* ) upower -i $(upower -e | grep BAT) ;;
-	*sys*     ) fastfetch ;;
+	*system*  ) fastfetch ;;
 	*         ) help ;;
 esac
