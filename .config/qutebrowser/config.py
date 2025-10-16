@@ -14,11 +14,13 @@ c.fonts.default_family = 'monospace'
 
 # Status bar colors
 c.colors.statusbar.normal.bg = c0
-c.colors.statusbar.normal.fg = c7
-c.colors.statusbar.insert.bg = c2
-c.colors.statusbar.command.fg = c3
-c.colors.statusbar.passthrough.bg = c4
-c.colors.statusbar.passthrough.fg = c7
+c.colors.statusbar.normal.fg = c8
+c.colors.statusbar.insert.bg = c0
+c.colors.statusbar.insert.fg = c8
+c.colors.statusbar.command.bg = c0
+c.colors.statusbar.command.fg = c8
+c.colors.statusbar.passthrough.bg = c0
+c.colors.statusbar.passthrough.fg = c8
 # Tab colors
 c.colors.tabs.even.bg = c0
 c.colors.tabs.even.fg = c8
