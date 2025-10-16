@@ -11,7 +11,7 @@
 
 	"hyprland/workspaces": {
 		"persistent-workspaces": {
-			"*": 9
+			"*": 5
 		}
 	},
 	"hyprland/window": {
