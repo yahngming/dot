@@ -30,4 +30,5 @@ case $(printf "$menu" | menu $opt -p "About" "$@") in
 	*-----*|* ) opt="" ;;
 esac
 
-[[ -z "$opt" ]] || pkill -f about; tui "about $opt; read -n 1 -s"
+pkill -f about
+[[ -z "$opt" ]] || tui "about $opt; read -n 1 -s"
