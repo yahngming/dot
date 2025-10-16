@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+󰔎 Computer\n\
+ Battery\n\
+"
+
+case $(printf "$menu" | menu $opt -p "About" "$@") in
+	*Computer* ) opt="" ;;
+	*Battery*  ) opt="battery" ;;
+esac
+
+tui "about $opt" ; read -n 1 -s
