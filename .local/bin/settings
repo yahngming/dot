@@ -33,7 +33,7 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt "$@") in
-	*About*       ) tui about ;;
+	*About*       ) aboutmenu ;;
 	*Audio*       ) audiomenu ;;
 	*Bar*         ) barmenu ;;
 	*Bluetooth*   ) btmenu ;;
