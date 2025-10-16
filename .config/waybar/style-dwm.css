@@ -27,16 +27,16 @@ window#waybar.empty #window {
 	border-bottom: 1px solid @sf;
 }
 
-#workspaces button.empty {
+#workspaces button.empty, #taskbar button {
 	color: @fg;
 	border: none;
 }
 
-#workspaces button.visible, #window {
+#workspaces button.visible, #taskbar button.active, #window {
 	background: @sb;
 }
 
-#workspaces button.visible, #window, #clock {
+#workspaces button.visible, #taskbar button.active, #window, #clock {
 	color: @sf;
 }
 
