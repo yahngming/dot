@@ -41,7 +41,7 @@ window#waybar.empty #window {
 	color: @sf;
 }
 
-#window, #clock, #tray {
+#taskbar button, #window, #tray, #clock {
 	padding: 0px 10px;
 }
 
