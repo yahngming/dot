@@ -1,11 +1,18 @@
 #!/bin/sh
 
 help() {
-	echo "Usage: about [battery|system]"
+	echo "Usage: about [battery|cpu|drive|gpu|memory|pci|system|time|usb]"
 }
 
 case "$@" in
-	*battery* ) upower -i $(upower -e | grep BAT) ;;
-	*system*  ) fastfetch ;;
-	*         ) help ;;
+	battery ) upower -i $(upower -e | grep BAT) ;;
+	cpu     ) lscpu ;;
+	drive   ) lsblk ;;
+	gpu     ) lsgpu ;;
+	memory  ) free -h ;;
+	pci     ) lspci ;;
+	system  ) fastfetch ;;
+	time    ) timedatectl ;;
+	usb     ) lsusb ;;
+	*       ) help ;;
 esac
