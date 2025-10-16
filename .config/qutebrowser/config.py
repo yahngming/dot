@@ -31,10 +31,10 @@ c.colors.tabs.even.bg = bg
 c.colors.tabs.even.fg = fg
 c.colors.tabs.odd.bg = bg
 c.colors.tabs.odd.fg = fg
-c.colors.tabs.selected.even.bg = c4
-c.colors.tabs.selected.even.fg = c15
-c.colors.tabs.selected.odd.bg = c4
-c.colors.tabs.selected.odd.fg = c15
+c.colors.tabs.selected.even.bg = c3
+c.colors.tabs.selected.even.fg = c7
+c.colors.tabs.selected.odd.bg = c3
+c.colors.tabs.selected.odd.fg = c7
 # Hint colors
 c.colors.hints.bg = c3
 c.colors.hints.fg = bg
