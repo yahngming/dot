@@ -6,13 +6,28 @@ esac
 
 menu="\
 󰕮 System\n\
+---------\n\
 󱧦 Battery\n\
+ CPU\n\
+󰋊 Drive\n\
+󰢮 GPU\n\
+ Memory\n\
+ PCI\n\
+󰺗 Time\n\
+ USB\n\
 "
 
 case $(printf "$menu" | menu $opt -p "About" "$@") in
 	*Battery* ) opt="battery" ;;
+	*CPU*     ) opt="cpu" ;;
+	*Drive*   ) opt="drive" ;;
+	*GPU*     ) opt="gpu" ;;
+	*Memory*  ) opt="memory" ;;
+	*PCI*     ) opt="pci" ;;
 	*System*  ) opt="system" ;;
-	*         ) opt="" ;;
+	*Time*    ) opt="time" ;;
+	*USB*     ) opt="usb" ;;
+	*-----*|* ) opt="" ;;
 esac
 
 [[ -z "$opt" ]] || tui "about $opt; read -n 1 -s"
