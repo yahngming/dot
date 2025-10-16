@@ -1,6 +1,6 @@
 #!/bin/sh
 
 case "$EDITOR" in
-	*vim* ) tui $EDITOR "$@" ;;
-	*     ) $EDITOR "$@" ;;
+	*vi* ) tui $EDITOR "$@" ;;
+	*    ) $EDITOR "$@" ;;
 esac
