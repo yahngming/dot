@@ -30,6 +30,7 @@ window#waybar.empty #window {
 #workspaces button.empty, #taskbar button {
 	color: @fg;
 	border: none;
+	max-width: 130px;
 }
 
 #workspaces button.visible, #taskbar button.active, #window {
