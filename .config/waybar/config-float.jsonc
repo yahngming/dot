@@ -130,7 +130,6 @@
 	"temperature": {
 		"hwmon-path": ["/sys/class/thermal/thermal_zone0/temp"],
 		"format": "{temperatureC}",
-		"on-click": "pkill btop || tui btop",
 		"tooltip": false
 	},
 
