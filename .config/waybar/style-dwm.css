@@ -25,6 +25,7 @@ window#waybar.empty #window {
 #workspaces button {
 	padding: 0px 5px;
 	border-bottom: 1px solid @sf;
+	color: @sf;
 }
 
 #workspaces button.empty, #taskbar button {
