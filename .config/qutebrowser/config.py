@@ -21,8 +21,7 @@ c.colors.statusbar.command.bg = c0
 c.colors.statusbar.command.fg = c8
 c.colors.statusbar.passthrough.bg = c0
 c.colors.statusbar.passthrough.fg = c8
-c.colors.statusbar.url.fg = c8
-c.colors.statusbar.url.success_fg = c3
+c.colors.statusbar.url.fg = c3
 # Tab colors
 c.colors.tabs.even.bg = c0
 c.colors.tabs.even.fg = c8
