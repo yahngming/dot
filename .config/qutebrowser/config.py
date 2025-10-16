@@ -33,6 +33,7 @@ c.colors.statusbar.passthrough.fg = c8
 c.colors.statusbar.url.fg = c8
 c.colors.statusbar.url.hover.fg = c3
 c.colors.statusbar.url.success.https.fg = c3
+c.colors.tabs.bar.bg = c0
 c.colors.tabs.even.bg = c0
 c.colors.tabs.even.fg = c8
 c.colors.tabs.odd.bg = c0
