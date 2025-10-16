@@ -19,7 +19,7 @@
 	},
 	"wlr/taskbar": {
 		"format": "{icon} {title:.20}",
-		"max-length": 60,
+		"icon-size": 14,
 		"tooltip": false,
 		"on-click": "activate"
 	},
