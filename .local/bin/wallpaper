@@ -63,6 +63,7 @@ setpaper() {
 		killall dunst && dunst &
 	fi
 	cp "$wallpaper" ~/Pictures/wallpapers/wallpaper
+	qutebrowser ":config-source"
 }
 
 help() {
