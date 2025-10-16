@@ -17,8 +17,7 @@
 	"custom/logo": {
 		"format": "{text}",
 		"tooltip": false,
-		"exec": "logo",
-		"on-click": "pkill about || tui about",
+		"exec": "logo"
 	},
 	"hyprland/workspaces": {
 		"on-click": "activate",
