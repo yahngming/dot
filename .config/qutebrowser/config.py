@@ -43,6 +43,7 @@ c.colors.tabs.selected.odd.bg = c3
 c.colors.tabs.selected.odd.fg = c7
 c.content.blocking.enabled = True
 c.fonts.default_family = 'monospace'
+c.statusbar.show = 'never'
 c.tabs.indicator.width = 0
 c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
 c.tabs.position = 'left'
