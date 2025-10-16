@@ -5,13 +5,14 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰔎 Computer\n\
- Battery\n\
+󰕮 System\n\
+─────────
+󱧦 Battery\n\
 "
 
 case $(printf "$menu" | menu $opt -p "About" "$@") in
-	*Computer* ) opt="" ;;
-	*Battery*  ) opt="battery" ;;
+	*Battery* ) opt="battery" ;;
+	*System*  ) opt="system" ;;
 esac
 
 tui "about $opt; read -n 1 -s"
