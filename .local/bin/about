@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case "$@" in
+	*battery* ) upower -i $(upower -e | grep BAT) ;;
+	*         ) fastfetch ;;
+esac
