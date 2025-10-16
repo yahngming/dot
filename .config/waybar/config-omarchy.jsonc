@@ -105,7 +105,7 @@
 	"cpu": {
 		"interval": 5,
 		"format": "󰍛",
-		"on-click": "pkill btop || tui btop"
+		"on-click": "pkill topper || topper"
 	},
 	"battery": {
 		"format": "{capacity}% {icon}",
