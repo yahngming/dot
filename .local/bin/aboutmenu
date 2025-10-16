@@ -6,7 +6,7 @@ esac
 
 menu="\
 󰕮 System\n\
----------\n\
+  -----\n\
  Battery\n\
  CPU\n\
  Drive\n\
