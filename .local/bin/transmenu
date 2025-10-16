@@ -1,5 +1,7 @@
 #!/bin/sh
 
+pkill $LAUNCHER && exit
+
 echo_err() {
 	notify-send -u critical "$0 error" "$1"
 }
