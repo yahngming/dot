@@ -12,6 +12,7 @@ menu="\
 case $(printf "$menu" | menu $opt -p "About" "$@") in
 	*Battery* ) opt="battery" ;;
 	*System*  ) opt="system" ;;
+	*         ) opt="" ;;
 esac
 
-tui "about $opt; read -n 1 -s"
+[[ -z "$opt" ]] || tui "about $opt; read -n 1 -s"
