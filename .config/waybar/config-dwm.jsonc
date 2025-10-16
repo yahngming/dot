@@ -19,8 +19,8 @@
 	},
 	"wlr/taskbar": {
 		"format": "{icon} {title:.20}",
-		"on-click": "activate",
-		"tooltip": false
+		"tooltip": false,
+		"on-click": "activate"
 	},
 
 	"tray": {
