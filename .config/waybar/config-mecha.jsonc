@@ -112,7 +112,7 @@
 			"warning": 80,
 			"critical": 90
 		},
-		"on-click": "pkill btop || tui btop",
+		"on-click": "pkill topper || topper",
 		"min-length": 6,
 		"max-length": 6
 	},
