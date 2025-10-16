@@ -1,22 +1,18 @@
 import json
 import os
 
-WAL_CACHE_PATH = os.path.expanduser('~/.cache/wal/colors.json')
 try:
-    with open(WAL_CACHE_PATH, 'r') as f:
-        data = json.load(f)
-    if 'colors' in data and isinstance(data['colors'], dict):
-        for i in range(16):
-            key = f'color{i}'
-            if key in data['colors']:
-                globals()[f'c{i}'] = data['colors'][key]
-    if 'special' in data and isinstance(data['special'], dict):
-        if 'background' in data['special']:
-            bg = data['special']['background']
-        if 'foreground' in data['special']:
-            fg = data['special']['foreground']
-        if 'cursor' in data['special']:
-            cursor = data['special']['cursor']
+	with open(os.path.expanduser('~/.cache/wal/colors.json'), 'r') as f:
+		data = json.load(f)
+	special = data.get('special', {})
+	colors = data.get('colors', {})
+	bg = special.get('background', bg)
+	fg = special.get('foreground', fg)
+	cursor = special.get('cursor', cursor)
+	for i in range(16):
+		globals()[f'c{i}'] = colors.get(f'color{i}', globals().get(f'c{i}'))
+except (FileNotFoundError, Exception):
+	pass
 
 # Set the font
 c.fonts.default_family = 'monospace'
