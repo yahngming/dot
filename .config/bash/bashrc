@@ -52,6 +52,7 @@ setenv() {
 
 export BROWSER="qutebrowser"
 export EDITOR="vim"
+export EXPLORER="lf"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
 export FZF_CTRL_T_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type file"
 export FZF_ALT_C_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type directory"
