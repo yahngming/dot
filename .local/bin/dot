@@ -20,7 +20,3 @@ if [ "$BROWSER" == "firefox" ]; then
 	./prefsCleaner.sh
 	cd - >/dev/null 2>&1
 fi
-
-if [ "$BROWSER" == "qutebrowser" ]; then
-	pgrep qutebrowser && qutebrowser ":config-source"
-fi
