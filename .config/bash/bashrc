@@ -22,6 +22,10 @@ _fzf_comprun() {
 	esac
 }
 
+help() {
+	"$@" --help 2>&1 | bat --plain --language=help
+}
+
 setenv() {
 	case "$XDG_VTNR" in
 		1)
