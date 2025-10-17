@@ -10,8 +10,6 @@ try:
 except (FileNotFoundError, Exception):
     pass
 
-config.load_autoconfig(False)
-
 c.auto_save.session = True
 c.colors.completion.even.bg = c0
 c.colors.completion.fg = c3
@@ -66,5 +64,4 @@ c.tabs.width = '15%'
 c.window.transparent = True
 
 config.unbind('<Ctrl-f>')
-config.unbind('<Space>')
-config.bind(' q', 'quit --save', mode='normal')
+config.bind('<Backspace>, 'back')
