@@ -64,7 +64,7 @@ c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
 c.tabs.position = 'left'
 c.tabs.width = '15%'
 c.window.transparent = True
-
+config.bindings.default['normal']['<Space>'] = 'nop'
 config.bind('<Ctrl-f>', 'nop', mode='insert')
 config.bind('<Space>', 'nop', mode='normal') 
 config.bind('<Space>q', 'quit --save', mode='normal')
