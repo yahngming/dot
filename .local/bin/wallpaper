@@ -11,7 +11,7 @@ setfolder() {
 }
 
 setpaper() {
-	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
+	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		exit
 	fi
 	wallpaper="~/Pictures/wallpapers/wallpaper"
