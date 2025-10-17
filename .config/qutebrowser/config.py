@@ -63,6 +63,7 @@ c.content.blocking.adblock.lists = [
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt',
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt'
 ]
+c.downloads.position = 'bottom'
 c.fonts.default_family = 'monospace'
 c.statusbar.show = 'never'
 c.tabs.indicator.width = 0
