@@ -6,7 +6,7 @@ setvar() {
 	else
 		theme=light
 	fi
-	folder="~/Pictures/wallpapers"
+	folder="$HOME/Pictures/wallpapers"
 	wallpapers="$folder/$theme"
 	wallpaper="$folder/wallpaper.png"
 }
