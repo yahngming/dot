@@ -65,4 +65,5 @@ c.window.transparent = True
 
 config.unbind('<Ctrl-f>')
 config.bind('<Backspace>', 'back')
+config.bind('<Ctrl-a>', 'fake-key <Ctrl-a>')
 config.load_autoconfig(False)
