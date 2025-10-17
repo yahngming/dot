@@ -54,7 +54,7 @@ c.content.blocking.adblock.lists = [
 ]
 c.downloads.position = 'bottom'
 c.downloads.remove_finished = 3
-c.editor.command = ['editor', '-f', '{file}']
+c.editor.command = ['editor', '{file}', '-c', 'normal {line}G{column0}l']
 c.fonts.default_family = 'monospace'
 c.statusbar.show = 'in-mode'
 c.tabs.indicator.width = 0
