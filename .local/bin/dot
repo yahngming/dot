@@ -13,8 +13,6 @@ mkdir -p ~/.config/mihomo
 cp ~/.local/src/sub/clash ~/.config/mihomo/config.yaml
 cd - >/dev/null 2>&1
 
-pgrep qutebrowser && qutebrowser ":config-source"
-
 if [ "$BROWSER" == "firefox" ]; then
 	cd ~/.config/firefox
 	chmod +x *.sh
