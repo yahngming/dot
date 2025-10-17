@@ -14,7 +14,7 @@ setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		exit
 	fi
-	wallpaper="$HOME/Pictures/wallpapers/wallpaper"
+	wallpaper="~/Pictures/wallpapers/wallpaper.jpg"
 	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
