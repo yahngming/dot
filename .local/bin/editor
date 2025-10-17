@@ -1,6 +1,6 @@
 #!/bin/sh
 
 case "$EDITOR" in
-	*vi* ) tui $EDITOR "$@" ;;
+	*vi* ) tui "$EDITOR $@" ;;
 	*    ) $EDITOR "$@" ;;
 esac
