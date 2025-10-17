@@ -1,20 +1,20 @@
 #!/bin/sh
 
-setfolder() {
+setvar() {
 	if [ -f ~/.config/dark ]; then
 		theme=dark
 	else
 		theme=light
 	fi
-	folder=~/Pictures/wallpapers/$theme
-	mkdir -p $folder
+	folder="~/Pictures/wallpapers"
+	wallpapers="$folder/$theme/*"
+	wallpaper="$folder/wallpaper.png"
 }
 
 setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		exit
 	fi
-	wallpaper="~/Pictures/wallpapers/wallpaper.jpg"
 	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
@@ -37,8 +37,8 @@ setpaper() {
 
 manual() {
 	if [ -f "$arg" ]; then
-		setfolder
-		cp "$arg" ~/Pictures/wallpapers/wallpaper
+		setvar
+		cp "$arg" "$wallpaper"
 		setpaper
 	else
 		echo "File not found"
@@ -46,19 +46,20 @@ manual() {
 }
 
 picker() {
-	setfolder
-	cp "$(nsxiv -ot $folder/* | shuf -n 1)" ~/Pictures/wallpapers/wallpaper
+	setvar
+	cp "$(nsxiv -ot $wallpapers | shuf -n 1)" "$wallpaper"
 	setpaper
 }
 
 random() {
-	setfolder
-	cp "$(find $folder/* | shuf -n 1)" ~/Pictures/wallpapers/wallpaper
+	setvar
+	cp "$(find $wallpapers | shuf -n 1)" "$wallpaper"
 	setpaper
 }
 
 weather() {
-	convert ~/Pictures/wallpapers/wallpaper <( curl wttr.in/_tqp0.png ) -geometry +100+100 -composite ~/Pictures/wallpapers/wallpaper
+	setvar
+	convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +100+100 -composite "$wallpaper"
 	setpaper
 }
 
