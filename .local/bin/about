@@ -1,7 +1,7 @@
 #!/bin/sh
 
 help() {
-	echo "Usage: about [battery|cpu|drive|gpu|memory|pci|system|time|usb]"
+	echo "Usage: about [battery|cpu|drive|gpu|memory|pci|sensors|system|time|usb]"
 }
 
 case "$@" in
@@ -11,6 +11,7 @@ case "$@" in
 	gpu     ) lsgpu | bat -pPl cpuinfo ;;
 	memory  ) free -h | bat -pPl cpuinfo ;;
 	pci     ) lspci | bat -pPl cpuinfo ;;
+	sensors ) sensors | bat -pPl cpuinfo ;;
 	system  ) fastfetch ;;
 	time    ) timedatectl ;;
 	usb     ) lsusb | bat -pPl conf ;;
