@@ -2,23 +2,27 @@
 
 init() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
+		BRIGHTNESS="0"
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Chicago95"
 		ICON_THEME="Chicago95"
 		XCURSOR_THEME="Chicago95 Standard Cursors"
 	elif [ -f ~/.config/dark ]; then
+		BRIGHTNESS="1"
 		COLOR_SCHEME="prefer-dark"
 		GTK_THEME="Adwaita-dark"
 		HYPRCURSOR_THEME="Bibata-Modern-Classic"
 		ICON_THEME="Adwaita"
 		XCURSOR_THEME="Bibata-Modern-Classic"
 	else
+		BRIGHTNESS="0"
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Adwaita"
 		HYPRCURSOR_THEME="Bibata-Modern-Ice"
 		ICON_THEME="Adwaita"
 		XCURSOR_THEME="Bibata-Modern-Ice"
 	fi
+	brightnessctl -sd tpacpi::kbd_backlight set "$BRIGHTNESS"
 	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
