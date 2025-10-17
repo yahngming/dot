@@ -1,18 +1,17 @@
 #!/bin/sh
 
-setvar() {
+setfolder() {
 	if [ -f ~/.config/dark ]; then
 		theme=dark
 	else
 		theme=light
 	fi
-	folder="$HOME/Pictures/wallpapers"
-	wallpapers="$folder/$theme"
-	wallpaper="$folder/wallpaper.png"
+	paperfolder="$HOME/Pictures/wallpapers"
+	themefolder="$paperfolder/$theme"
 }
 
 setpaper() {
-	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
+	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
 	fi
 	wal -n -i "$wallpaper"
@@ -33,12 +32,13 @@ setpaper() {
 		killall dunst && dunst &
 	fi
 	pgrep qutebrowser && qutebrowser ":config-source"
+	cp "$wallpaper" "$paperfolder/wallpaper"
 }
 
 manual() {
 	if [ -f "$arg" ]; then
-		setvar
-		cp "$arg" "$wallpaper"
+		setfolder
+		wallpaper="$arg"
 		setpaper
 	else
 		echo "File not found"
@@ -46,19 +46,20 @@ manual() {
 }
 
 picker() {
-	setvar
-	cp "$(nsxiv -ot $wallpapers | shuf -n 1)" "$wallpaper"
+	setfolder
+	wallpaper="$(nsxiv -ot $paperfolder | shuf -n 1)"
 	setpaper
 }
 
 random() {
-	setvar
-	cp "$(find $wallpapers | shuf -n 1)" "$wallpaper"
+	setfolder
+	wallpaper="$(find $themefolder | shuf -n 1)"
 	setpaper
 }
 
 weather() {
-	setvar
+	setfolder
+	wallpaper="$paperfolder/wallpaper"
 	convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +100+100 -composite "$wallpaper"
 	setpaper
 }
