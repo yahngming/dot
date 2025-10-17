@@ -14,6 +14,7 @@ setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
 	fi
+	wallpaper="~/Pictures/wallpapers/wallpaper"
 	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
@@ -32,34 +33,32 @@ setpaper() {
 		killall dunst && dunst &
 	fi
 	pgrep qutebrowser && qutebrowser ":config-source"
-	cp "$wallpaper" ~/Pictures/wallpapers/wallpaper
 }
 
 manual() {
-	if [ -d "$arg" ] || [ -f "$arg" ]; then
+	if [ -f "$arg" ]; then
 		setfolder
-		wallpaper=$arg
+		cp "$arg" ~/Pictures/wallpapers/wallpaper
 		setpaper
 	else
-		echo "Argument unknown"
+		echo "File not found"
 	fi
 }
 
 picker() {
 	setfolder
-	wallpaper=$(nsxiv -ot $folder/* | shuf -n 1)
+	cp "$(nsxiv -ot $folder/* | shuf -n 1)" ~/Pictures/wallpapers/wallpaper
 	setpaper
 }
 
 random() {
 	setfolder
-	wallpaper=$(find $folder/* | shuf -n 1)
+	cp "$(find $folder/* | shuf -n 1)" ~/Pictures/wallpapers/wallpaper
 	setpaper
 }
 
 weather() {
-	wallpaper=~/Pictures/wallpapers/weatherpaper
-	convert ~/Pictures/wallpapers/wallpaper <( curl wttr.in/_tqp0.png ) -geometry +100+100 -composite "$wallpaper"
+	convert ~/Pictures/wallpapers/wallpaper <( curl wttr.in/_tqp0.png ) -geometry +100+100 -composite ~/Pictures/wallpapers/wallpaper
 	setpaper
 }
 
@@ -68,7 +67,7 @@ help() {
 	echo "  directory/filename        set wallpaper manually"
 	echo "  picker                    choose from a picker"
 	echo "  random                    random picture"
-	echo "  weather                   weather overlay"
+	echo "  weather                   overlay weather forecast"
 }
 
 arg=${1:-help}
