@@ -64,4 +64,4 @@ c.tabs.width = '15%'
 c.window.transparent = True
 
 config.unbind('<Ctrl-f>')
-config.bind('<Backspace>, 'back')
+config.bind('<Backspace>', 'back')
