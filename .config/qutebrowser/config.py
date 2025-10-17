@@ -62,8 +62,8 @@ c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
 c.tabs.position = 'left'
 c.tabs.width = '15%'
 c.window.transparent = True
-
-config.unbind('<Ctrl-f>')
+config.load_autoconfig(False)
 config.bind('<Backspace>', 'back')
 config.bind('<Ctrl-a>', 'fake-key <Ctrl-a>')
-config.load_autoconfig(False)
+config.unbind('<Ctrl-f>')
+input.insert_mode.auto_load = True
