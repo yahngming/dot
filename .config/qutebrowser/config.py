@@ -2,13 +2,13 @@ import json
 import os
 
 try:
-    with open(os.path.expanduser('~/.cache/wal/colors.json'), 'r') as f:
-        data = json.load(f)
-    colors = data['colors']
-    for i in range(16):
-        globals()[f'c{i}'] = colors[f'color{i}']
+	with open(os.path.expanduser('~/.cache/wal/colors.json'), 'r') as f:
+		data = json.load(f)
+	colors = data['colors']
+	for i in range(16):
+		globals()[f'c{i}'] = colors[f'color{i}']
 except (FileNotFoundError, Exception):
-    pass
+	pass
 
 c.auto_save.session = True
 c.colors.completion.even.bg = c0
