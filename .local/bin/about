@@ -5,7 +5,7 @@ help() {
 }
 
 case "$@" in
-	battery ) upower -i $(upower -e | grep BAT) ;;
+	battery ) upower -i $(upower -e | grep BAT) | bat --plain --language=help ;;
 	cpu     ) lscpu ;;
 	drive   ) lsblk ;;
 	gpu     ) lsgpu ;;
