@@ -65,3 +65,4 @@ c.window.transparent = True
 
 config.unbind('<Ctrl-f>')
 config.bind('<Backspace>', 'back')
+config.load_autoconfig(False)
