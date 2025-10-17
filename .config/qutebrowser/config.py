@@ -10,6 +10,8 @@ try:
 except (FileNotFoundError, Exception):
     pass
 
+config.load_autoconfig(False)
+
 c.auto_save.session = True
 c.colors.completion.even.bg = c0
 c.colors.completion.fg = c3
@@ -63,5 +65,6 @@ c.tabs.position = 'left'
 c.tabs.width = '15%'
 c.window.transparent = True
 
-config.bind('<Ctrl-f>', 'nop')
-config.load_autoconfig(False)
+config.unbind('<Ctrl-f>', mode='insert')
+config.unbind('<Space>', mode='normal')
+config.bind('<Space>q', 'quit --save', mode='normal')
