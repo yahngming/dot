@@ -15,10 +15,7 @@ setpaper() {
 		exit
 	fi
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl dispatch exec hyprpaper
-		hyprctl hyprpaper unload all
-		hyprctl hyprpaper preload "$wallpaper"
-		hyprctl hyprpaper wallpaper ,"$wallpaper"
+		hyprctl hyprpaper reload ,"$wallpaper"
 	elif [ -n "$DISPLAY" ]; then
 		xwallpaper --zoom "$wallpaper"
 	fi
