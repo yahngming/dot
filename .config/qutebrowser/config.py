@@ -68,9 +68,9 @@ config.bind('<Backspace>', 'back')
 config.bind('<Ctrl-a>', 'fake-key <Ctrl-a>')
 config.bind('<Ctrl-x>', 'fake-key <Ctrl-x>')
 config.set('qt.args', [
-    'ignore-gpu-blacklist',
-    'enable-gpu-rasterization',
-    'enable-zero-copy',
-    'enable-features=AcceleratedVideoDecodeLinuxGL',
+	'enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,TouchpadOverscrollHistoryNavigation,VaapiVideoDecoder',
+	'enable-gpu-rasterization',
+	'enable-zero-copy',
+	'ignore-gpu-blocklist',
 ])
 config.unbind('<Ctrl-f>')
