@@ -65,6 +65,6 @@ c.tabs.position = 'left'
 c.tabs.width = '15%'
 c.window.transparent = True
 
-config.unbind('<Ctrl-f>', mode='insert')
-config.unbind('<Space>', mode='normal')
+config.bind('<Ctrl-f>', 'nop', mode='insert')
+config.bind('<Space>', 'nop', mode='normal')
 config.bind('<Space>q', 'quit --save', mode='normal')
