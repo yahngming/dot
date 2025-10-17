@@ -19,7 +19,9 @@ off() {
 }
 
 on() {
-	if [ -f ~/.config/screenblank ] && [ -n "$WAYLAND_DISPLAY" ]; then
+	if [ pgrep locker ]; then
+		exit
+	elif [ -f ~/.config/screenblank ] && [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl dispatch dpms off
 	elif [ -f ~/.config/screendim ]; then
 		brightnessctl -s set 10
