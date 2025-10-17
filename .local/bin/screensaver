@@ -19,7 +19,7 @@ off() {
 }
 
 on() {
-	if [ pgrep locker ]; then
+	if pgrep locker; then
 		exit
 	elif [ -f ~/.config/screenblank ] || [ -z $(cat /sys/class/power_supply/AC/online) ] && [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl dispatch dpms off
