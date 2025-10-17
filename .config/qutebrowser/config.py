@@ -55,7 +55,7 @@ c.content.blocking.adblock.lists = [
 c.downloads.position = 'bottom'
 c.downloads.remove_finished = 3
 c.editor.command = [
-	'$EDITOR',
+	'editor',
 	'-f',
 	'{file}',
 	'-c',
