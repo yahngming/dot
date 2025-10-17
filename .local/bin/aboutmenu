@@ -13,6 +13,7 @@ menu="\
 󰢮 GPU\n\
  Memory\n\
  PCI\n\
+󱉶 Sensors\n\
 󰺗 Time\n\
  USB\n\
 "
@@ -24,6 +25,7 @@ case $(printf "$menu" | menu $opt -p "About" "$@") in
 	*GPU*     ) opt="gpu" ;;
 	*Memory*  ) opt="memory" ;;
 	*PCI*     ) opt="pci" ;;
+	*Sensors* ) opt="sensors" ;;
 	*System*  ) opt="system" ;;
 	*Time*    ) opt="time" ;;
 	*USB*     ) opt="usb" ;;
