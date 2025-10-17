@@ -57,6 +57,12 @@ c.downloads.remove_finished = 3
 c.editor.command = ['editor', '{file}']
 c.fonts.default_family = 'monospace'
 c.input.insert_mode.auto_load = True
+c.qt.args = [
+	'enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,TouchpadOverscrollHistoryNavigation,VaapiVideoDecoder',
+	'enable-gpu-rasterization',
+	'enable-zero-copy',
+	'ignore-gpu-blocklist',
+]
 c.statusbar.show = 'in-mode'
 c.tabs.indicator.width = 0
 c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
@@ -67,10 +73,4 @@ config.load_autoconfig(False)
 config.bind('<Backspace>', 'back')
 config.bind('<Ctrl-a>', 'fake-key <Ctrl-a>')
 config.bind('<Ctrl-x>', 'fake-key <Ctrl-x>')
-config.set('qt.args', [
-	'enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,TouchpadOverscrollHistoryNavigation,VaapiVideoDecoder',
-	'enable-gpu-rasterization',
-	'enable-zero-copy',
-	'ignore-gpu-blocklist',
-])
 config.unbind('<Ctrl-f>')
