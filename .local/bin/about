@@ -5,14 +5,14 @@ help() {
 }
 
 case "$@" in
-	battery ) upower -i $(upower -e | grep BAT) ;;
-	cpu     ) lscpu ;;
-	drive   ) lsblk ;;
-	gpu     ) lsgpu ;;
-	memory  ) free -h ;;
-	pci     ) lspci ;;
+	battery ) upower -i $(upower -e | grep BAT) | bat -pPl cpuinfo ;;
+	cpu     ) lscpu | bat -pPl cpuinfo ;;
+	drive   ) lsblk | bat -pPl conf ;;
+	gpu     ) lsgpu | bat -pPl cpuinfo ;;
+	memory  ) free -h | bat -pPl cpuinfo ;;
+	pci     ) lspci | bat -pPl cpuinfo ;;
 	system  ) fastfetch ;;
 	time    ) timedatectl ;;
-	usb     ) lsusb ;;
+	usb     ) lsusb | bat -pPl conf ;;
 	*       ) help ;;
 esac
