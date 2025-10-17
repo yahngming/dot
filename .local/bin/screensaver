@@ -8,19 +8,14 @@ screensavers=(
 	"ttysvr"
 )
 
-for screensaver in "${screensavers[@]}"; do
-	if pgrep -f "$screensaver"; then
-		break
-	fi
-	unset screensaver
-done
-
 off() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl dispatch dpms on
 	fi
 	brightnessctl -r
-	pkill -f "$screensaver"
+	for screensaver in "${screensavers[@]}"; do
+		pkill -f "$screensaver"
+	done
 }
 
 on() {
@@ -28,7 +23,7 @@ on() {
 		hyprctl dispatch dpms off
 	elif [ -f ~/.config/screendim ]; then
 		brightnessctl -s set 10
-	elif [ -f ~/.config/screensaver ] && [ -z "$screensaver" ]; then
+	elif [ -f ~/.config/screensaver ]; then
 		while true; do
 			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 			read -r -a command <<< "$screensaver"
@@ -36,6 +31,7 @@ on() {
 				break
 			fi
 		done
+		off
 		eval "tui $screensaver"
 	fi
 }
