@@ -64,6 +64,7 @@ c.content.blocking.adblock.lists = [
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt'
 ]
 c.downloads.position = 'bottom'
+c.downloads.remove_finished = 5
 c.fonts.default_family = 'monospace'
 c.statusbar.show = 'never'
 c.tabs.indicator.width = 0
