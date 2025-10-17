@@ -47,7 +47,7 @@ manual() {
 
 picker() {
 	setfolder
-	wallpaper="$(nsxiv -ot $paperfolder | shuf -n 1)"
+	wallpaper="$(nsxiv -ot $themefolder | shuf -n 1)"
 	setpaper
 }
 
