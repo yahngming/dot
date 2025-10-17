@@ -66,5 +66,5 @@ c.tabs.width = '15%'
 c.window.transparent = True
 
 config.unbind('<Ctrl-f>')
-config.bindings.default['normal']['<Space>'] = 'nop'
+c.bindings.default['normal']['<Space>'] = 'nop'
 config.bind('<Space>q', 'quit --save', mode='normal')
