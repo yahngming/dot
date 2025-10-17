@@ -64,7 +64,7 @@ c.tabs.width = '15%'
 c.window.transparent = True
 
 config.unbind('<Ctrl-f>')
-config.unbind('<Space>') 
+config.bind('<Space>', 'nop') 
 config.bind('<Space>q', 'quit --save')
 
 config.load_autoconfig(False)
