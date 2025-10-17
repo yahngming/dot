@@ -1,7 +1,6 @@
 #!/bin/sh
 
 killtte() {
-	pkill -x tte 2>/dev/null
 	pkill -f ttesvr 2>/dev/null
 	exit 0
 }
