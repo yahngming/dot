@@ -33,6 +33,7 @@ init() {
 		hyprctl dispatch exec waybar >/dev/null 2>&1
 		hyprctl setcursor $HYPRCURSOR_THEME 24
 	fi
+	wallpaper random
 }
 
 auto() {
