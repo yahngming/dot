@@ -76,7 +76,8 @@ c.tabs.position = 'left'
 c.tabs.width = '15%'
 c.window.transparent = True
 config.load_autoconfig(False)
-config.bind('<Backspace>', 'back')
-config.bind('<Ctrl-a>', 'fake-key <Ctrl-a>')
-config.bind('<Ctrl-f>', 'fake-key <Ctrl-f>')
-config.bind('<Ctrl-x>', 'fake-key <Ctrl-x>')
+config.bind('<Alt-Left>', 'back')
+config.bind('<Alt-Right>', 'forward')
+config.bind('<Ctrl-A>', 'fake-key <Ctrl-A>')
+config.bind('<Ctrl-F>', 'fake-key <Ctrl-F>')
+config.bind('<Ctrl-X>', 'fake-key <Ctrl-X>')
