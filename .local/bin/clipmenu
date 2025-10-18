@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cliphist list | menu | cliphist decode | wl-copy
