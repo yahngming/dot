@@ -17,7 +17,7 @@ case $1 in
 		statusbar &
 		theme init &
 		udiskie &
-		xautolock -time 5 -locker locker &
+		xautolock -time 10 -locker locker &
 		xcompmgr &
 		exec dwm
 		;;
