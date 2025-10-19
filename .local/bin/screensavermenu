@@ -14,7 +14,7 @@ menu="\
 
 case $(printf "$menu" | menu $opt -p "Screensaver" "$@") in
 	*Preview*)
-		screensaver on
+		screensaver preview
 		;;
 	*blank*)
 		rm -f ~/.config/screen*
