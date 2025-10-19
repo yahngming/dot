@@ -12,6 +12,7 @@ case "$@" in
 		;;
 	*asciiquarium*|*matrix*|*lavat*|*telnet*|ttesvr|ttysvr)
 		class="fullscreen"
-		st -F -c $class -e $SHELL -c "$@"
+		st -F -c $class -e $SHELL -c "$@" &
 		;;
 esac
+exit 0
