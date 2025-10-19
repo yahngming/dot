@@ -5,7 +5,7 @@ case "$@" in
 		class="center"
 		if [ "$TERMINAL" = "foot" ]; then
 			opt="-a $class"
-		elif
+		else
 			opt="-c $class"
 		fi
 		$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
