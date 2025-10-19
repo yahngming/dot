@@ -12,6 +12,6 @@ if [ "$class" == "center" ]; then
 	esac
 	$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
 elif [ "$class" == "fullscreen" ]; then
-	st -F -c $class -e "$@"
+	st -F -c $class -e $@
 fi
 
