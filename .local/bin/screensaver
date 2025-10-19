@@ -16,7 +16,6 @@ off() {
 	for screensaver in "${screensavers[@]}"; do
 		pkill -f "$screensaver"
 	done
-	pkill screensaver
 }
 
 on() {
