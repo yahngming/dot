@@ -4,20 +4,13 @@ case "$@" in
 	*about*|dot|tzselect|up)
 		class="center"
 		;;
-	*asciiquarium*|*matrix*|*lavat*|*telnet*|ttesvr|ttysvr)
-		TERMINAL="st -F"
+	*telnet*)
 		class="fullscreen"
 		;;
-esac
-
-case "$class" in
-	fullscreen ) cmd="$@" ;;
-	*          ) cmd="cat ~/.cache/wal/sequences; $@" ;;
-esac
 
 case "$TERMINAL" in
-	foot ) opt="-a $class" ;;
-	*    ) opt="-c $class" ;;
+	foot) opt="-a $class" ;;
+	*   ) opt="-c $class" ;;
 esac
 
-$TERMINAL $opt -e $SHELL -c "$cmd"
+$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
