@@ -2,7 +2,7 @@
 
 case "$@" in
 	*about*|dot|tzselect|up                               ) class="center" ;;
-	*asciiquarium*|*matrix*|*lavat*|*telnet*|"tte"|ttysvr ) class="fullscreen" ;;
+	*asciiquarium*|*matrix*|*lavat*|*telnet*|*tte*|ttysvr ) class="fullscreen" ;;
 esac
 
 if [ "$class" == "center" ]; then
