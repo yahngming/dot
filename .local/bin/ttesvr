@@ -2,7 +2,7 @@
 
 killtte() {
 	pkill -x tte 2>/dev/null
-	pkill -f "tui ttesvr" 2>/dev/null
+	pkill -f "st -F -c screensaver" 2>/dev/null
 	exit 0
 }
 
