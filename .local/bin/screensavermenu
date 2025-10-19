@@ -6,18 +6,15 @@ esac
 
 menu="\
  Preview screensaver\n\
- Turn off screensaver\n\
 󰄱 Set screensaver to blank\n\
 󰱊 Set screensaver to dim\n\
  Set screensaver to random\n\
+ Turn off screensaver\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Screensaver" "$@") in
 	*Preview*)
 		screensaver on
-		;;
-	*off*)
-		rm -f ~/.config/screen*
 		;;
 	*blank*)
 		rm -f ~/.config/screen*
@@ -30,5 +27,8 @@ case $(printf "$menu" | menu $opt -p "Screensaver" "$@") in
 	*random*)
 		rm -f ~/.config/screen*
 		touch -f ~/.config/screensaver
+		;;
+	*off*)
+		rm -f ~/.config/screen*
 		;;
 esac
