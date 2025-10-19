@@ -10,12 +10,6 @@ screensavers=(
 
 if pgrep -f "st -F -c screensaver" || pgrep locker; then
 	exit
-elif [ -f ~/.config/screenblank ]; then
-	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl dispatch dpms off
-	fi
-elif [ -f ~/.config/screendim ]; then
-	brightnessctl -s set 10
 elif [ -f ~/.config/screensaver ] || [ "$@" == "preview" ]; then
 	while true; do
 		screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
@@ -25,4 +19,10 @@ elif [ -f ~/.config/screensaver ] || [ "$@" == "preview" ]; then
 			exit
 		fi
 	done
+elif [ -f ~/.config/screendim ]; then
+	brightnessctl -s set 10
+elif [ -f ~/.config/screenblank ]; then
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		hyprctl dispatch dpms off
+	fi
 fi
