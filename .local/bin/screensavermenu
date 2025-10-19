@@ -6,9 +6,9 @@ esac
 
 menu="\
  Preview screensaver\n\
-󰄱 Set screensaver to blank\n\
-󰱊 Set screensaver to dim\n\
- Set screensaver to random\n\
+󰄱 Set to blank screen\n\
+󰱊 Set to dim screen\n\
+ Set to random screensaver\n\
  Turn off screensaver\n\
 "
 
