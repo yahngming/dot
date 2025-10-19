@@ -21,8 +21,10 @@ off() {
 on() {
 	if pgrep locker; then
 		exit
-	elif [ -f ~/.config/screenblank ] || [ "$(cat /sys/class/power_supply/AC/online 2>/dev/null)" == "0" ] && [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl dispatch dpms off
+	elif [ -f ~/.config/screenblank ]; then
+		if [ -n "$WAYLAND_DISPLAY" ]; then
+			hyprctl dispatch dpms off
+		fi
 	elif [ -f ~/.config/screendim ]; then
 		brightnessctl -s set 10
 	elif [ -f ~/.config/screensaver ]; then
