@@ -3,16 +3,18 @@
 case "$@" in
 	*about*|dot|tzselect|up)
 		class="center"
-		if [ "$TERMINAL" = "foot" ]; then
-			opt="-a $class"
-		else
-			opt="-c $class"
-		fi
-		$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
+		cmd="cat ~/.cache/wal/sequences; $@"
 		;;
 	*asciiquarium*|*matrix*|*lavat*|*telnet*|ttesvr|ttysvr)
+		TERMINAL="st -F"
 		class="fullscreen"
-		st -F -c $class -e $SHELL -c "$@" &
+		cmd="$@"
 		;;
 esac
-exit 0
+
+case "$TERMINAL" in
+	foot ) opt="-a $class"
+	*    ) opt="-c $class"
+esac
+
+$TERMINAL $opt -e $SHELL -c "$cmd"
