@@ -31,8 +31,10 @@ on() {
 			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 			read -r -a command <<< "$screensaver"
 			if command -v "${command[0]}"; then
-				eval "tui $screensaver"
-				exit
+				eval "tui $screensaver" &
+				sleep 60
+				off
+				loginctl lock-session
 			fi
 		done
 	fi
