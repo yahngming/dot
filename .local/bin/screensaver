@@ -8,7 +8,7 @@ screensavers=(
 	"ttysvr"
 )
 
-if pgrep -f "st -F -c screensaver" || pgrep locker; then
+if pgrep -f "-c screensaver" || pgrep locker; then
 	exit
 elif [ -f ~/.config/screendim ]; then
 	brightnessctl -s set 10
