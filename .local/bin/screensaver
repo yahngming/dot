@@ -32,8 +32,6 @@ on() {
 			read -r -a command <<< "$screensaver"
 			if command -v "${command[0]}"; then
 				eval "tui $screensaver &"
-				sleep 60
-				loginctl lock-session
 				exit
 			fi
 		done
