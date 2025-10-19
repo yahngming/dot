@@ -1,12 +1,14 @@
 #!/bin/sh
 
 killtte() {
+	hyprctl keyword cursor:invisible false
 	pkill -x tte 2>/dev/null
 	pkill -f "st -F -c screensaver" 2>/dev/null
 	exit 0
 }
 
 trap killtte SIGINT SIGTERM SIGHUP SIGQUIT
+hyprctl keyword cursor:invisible true &>/dev/null
 while true; do
 	input=$(find ~/.config/ttesvr -type f | shuf -n 1)
 	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)
