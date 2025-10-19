@@ -3,13 +3,16 @@
 case "$@" in
 	*about*|dot|tzselect|up)
 		class="center"
-		cmd="cat ~/.cache/wal/sequences; $@"
 		;;
 	*asciiquarium*|*matrix*|*lavat*|*telnet*|ttesvr|ttysvr)
 		TERMINAL="st -F"
 		class="fullscreen"
-		cmd="$@"
 		;;
+esac
+
+case "$class" in
+	fullscreen ) cmd="$@" ;;
+	*          ) cmd="cat ~/.cache/wal/sequences; $@" ;;
 esac
 
 case "$TERMINAL" in
