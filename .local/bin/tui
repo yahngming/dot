@@ -13,8 +13,8 @@ case "$@" in
 esac
 
 case "$TERMINAL" in
-	foot ) opt="-a $class"
-	*    ) opt="-c $class"
+	foot ) opt="-a $class" ;;
+	*    ) opt="-c $class" ;;
 esac
 
 $TERMINAL $opt -e $SHELL -c "$cmd"
