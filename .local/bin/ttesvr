@@ -4,5 +4,4 @@ while true; do
 	input=$(find ~/.config/ttesvr -type f | shuf -n 1)
 	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)
 	tui "tte --input-file $input --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c $effect"
-	sleep 1
 done
