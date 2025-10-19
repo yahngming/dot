@@ -1,20 +1,8 @@
 #!/bin/sh
 
-killtte() {
-	pkill -x tte 2>/dev/null
-	pkill -f "tui ttesvr" 2>/dev/null
-	exit 0
-}
-
-trap killtte SIGINT SIGTERM SIGHUP SIGQUIT
-
 while true; do
 	input=$(find ~/.config/ttesvr -type f | shuf -n 1)
 	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)
-	tte --input-file $input --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c $effect &
-	while pgrep -x tte >/dev/null; do
-		if read -n 1 -t 3; then
-			killtte
-		fi
-	done
+	tui "tte --input-file $input --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c $effect"
+	sleep 1
 done
