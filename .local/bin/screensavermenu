@@ -5,19 +5,19 @@ case "$LAUNCHER" in
 esac
 
 menu="\
- Disable screensaver\n\
  Preview screensaver\n\
+ Turn off screensaver\n\
 󰄱 Set screensaver to blank\n\
 󰱊 Set screensaver to dim\n\
  Set screensaver to random\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Screensaver" "$@") in
-	*Disable*)
-		rm -f ~/.config/screen*
-		;;
 	*Preview*)
 		screensaver on
+		;;
+	*off*)
+		rm -f ~/.config/screen*
 		;;
 	*blank*)
 		rm -f ~/.config/screen*
