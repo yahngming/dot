@@ -33,8 +33,7 @@ on() {
 			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 			read -r -a command <<< "$screensaver"
 			if command -v "${command[0]}"; then
-				tui "$screensaver" &
-				sleep 0.5
+				tui "$screensaver"
 				exit
 			fi
 		done
