@@ -6,8 +6,8 @@ killtte() {
 	exit 0
 }
 
+(
 trap killtte SIGINT SIGTERM SIGHUP SIGQUIT
-
 while true; do
 	input=$(find ~/.config/ttesvr -type f | shuf -n 1)
 	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)
@@ -18,3 +18,6 @@ while true; do
 		fi
 	done
 done
+) &
+
+exit 0
