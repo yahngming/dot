@@ -7,6 +7,7 @@ case "$@" in
 	*telnet*)
 		class="fullscreen"
 		;;
+esac
 
 case "$TERMINAL" in
 	foot) opt="-a $class" ;;
