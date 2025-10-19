@@ -7,13 +7,11 @@ esac
 
 if [ "$class" == "center" ]; then
 	case "$TERMINAL" in
-		*foot* ) TERMINAL="foot -a $class" ;;
-		*      ) TERMINAL="st -c $class" ;;
+		*foot* ) opt="-a $class" ;;
+		*      ) opt="-c $class" ;;
 	esac
+	$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
 elif [ "$class" == "fullscreen" ]; then
-	case "$TERMINAL" in
-		*      ) TERMINAL="st -F -c $class" ;;
-	esac
+	st -F -c $class -e "$@"
 fi
 
-$TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
