@@ -27,7 +27,6 @@ on() {
 	elif [ -f ~/.config/screendim ]; then
 		brightnessctl -s set 10
 	elif [ -f ~/.config/screensaver ]; then
-		off
 		while true; do
 			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 			read -r -a command <<< "$screensaver"
