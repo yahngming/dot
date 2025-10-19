@@ -3,7 +3,7 @@
 screensavers=(
 	"asciiquarium -s -t"
 	"neo-matrix -s"
-	"lavat -c red -R 1 -k magenta"
+	"lavat -g -c FF0000 -k FF00FF"
 	"ttesvr"
 	"ttysvr"
 )
