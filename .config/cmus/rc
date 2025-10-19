@@ -1,1 +1,2 @@
 bind -f common q quit
+bind -f common w push run id3v2 {}
