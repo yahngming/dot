@@ -8,43 +8,21 @@ screensavers=(
 	"ttysvr"
 )
 
-off() {
+if pgrep -f "st -F -c screensaver" || pgrep locker; then
+	exit
+elif [ -f ~/.config/screendim ]; then
+	brightnessctl -s set 10
+elif [ -f ~/.config/screenoff ]; then
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl dispatch dpms on
+		hyprctl dispatch dpms off
 	fi
-	brightnessctl -r
-	for screensaver in "${screensavers[@]}"; do
-		pkill -f "$screensaver"
-	done
-}
-
-on() {
-	if pgrep locker; then
-		exit
-	elif [ -f ~/.config/screenblank ]; then
-		if [ -n "$WAYLAND_DISPLAY" ]; then
-			hyprctl dispatch dpms off
+elif [ -f ~/.config/screensaver ] || [ "$@" == "preview" ]; then
+	while true; do
+		screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
+		read -r -a command <<< "$screensaver"
+		if command -v "${command[0]}"; then
+			st -F -c screensaver -e $SHELL -c "$screensaver"
+			exit
 		fi
-	elif [ -f ~/.config/screendim ]; then
-		brightnessctl -s set 10
-	elif [ -f ~/.config/screensaver ]; then
-		off
-		while true; do
-			screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
-			read -r -a command <<< "$screensaver"
-			if command -v "${command[0]}"; then
-				tui "$screensaver"
-				exit
-			fi
-		done
-	fi
-}
-
-help() {
-	echo "Usage: screensaver [MODE]"
-	echo "  off        turn off screensaver"
-	echo "  on         start screensaver"
-}
-
-mode=${1:-help}
-$mode
+	done
+fi
