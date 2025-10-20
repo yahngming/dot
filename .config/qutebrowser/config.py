@@ -45,7 +45,6 @@ c.content.blocking.adblock.lists = [
 	'https://github.com/AdguardTeam/AdguardFilters/raw/master/ChineseFilter/sections/specific.txt',
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt',
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-others.txt',
-	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/badware.txt',
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/experimental.txt',
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters.txt',
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-general.txt',
