@@ -68,6 +68,7 @@ c.qt.args = [
 	'enable-gpu-rasterization',
 	'enable-zero-copy',
 	'ignore-gpu-blocklist',
+	'ozone-platform-hint=auto'
 ]
 c.url.searchengines = {
 	'DEFAULT': 'https://duckduckgo.com/?q={}',
