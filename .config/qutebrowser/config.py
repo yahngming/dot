@@ -68,6 +68,14 @@ c.qt.args = [
 	'enable-zero-copy',
 	'ignore-gpu-blocklist',
 ]
+c.url.searchengines = {
+	'DEFAULT': 'https://duckduckgo.com/?q={}',
+	'g': 'https://google.com/search?hl=en&q={}',
+	'r': 'https://www.reddit.com/search?q={}',
+	'w': 'https://en.wikipedia.org/wiki/{}',
+	'x': 'https://twitter.com/search?q={}',
+	'y': 'https://www.youtube.com/results?search_query={}',
+}
 c.statusbar.show = 'in-mode'
 c.tabs.indicator.width = 0
 c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
