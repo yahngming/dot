@@ -76,7 +76,7 @@ c.url.searchengines = {
 	'r': 'https://www.reddit.com/search?q={}',
 	'w': 'https://en.wikipedia.org/wiki/{}',
 	'x': 'https://twitter.com/search?q={}',
-	'y': 'https://www.youtube.com/results?search_query={}',
+	'y': 'https://www.youtube.com/results?search_query={}'
 }
 c.statusbar.show = 'in-mode'
 c.tabs.indicator.width = 0
