@@ -10,7 +10,9 @@ cd - >/dev/null 2>&1
 cd ~/.local/src/sub
 git pull
 mkdir -p ~/.config/mihomo
+mkdir -p ~/.config/sing-box
 cp ~/.local/src/sub/clash ~/.config/mihomo/config.yaml
+cp ~/.local/src/sub/sing-box ~/.config/sing-box/config.json
 cd - >/dev/null 2>&1
 
 if [ "$BROWSER" == "firefox" ]; then
