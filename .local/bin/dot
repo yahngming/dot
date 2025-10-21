@@ -12,7 +12,7 @@ git pull
 mkdir -p ~/.config/mihomo
 mkdir -p ~/.config/sing-box
 cp ~/.local/src/sub/clash ~/.config/mihomo/config.yaml
-cp ~/.local/src/sub/sing-box ~/.config/sing-box/config.json
+cp ~/.local/src/sub/singbox ~/.config/sing-box/config.json
 cd - >/dev/null 2>&1
 
 if [ "$BROWSER" == "firefox" ]; then
