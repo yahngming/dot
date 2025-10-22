@@ -724,7 +724,7 @@ value = "true"
 
 [[template.globals]]
 key = "clash.log_level"
-value = "warn"
+value = "warning"
 
 [[template.globals]]
 key = "clash.external_controller"
