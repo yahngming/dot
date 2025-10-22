@@ -12,7 +12,7 @@ menu="\
 
 case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
 	*dashboard*)
-		xdg-open https://clash.razord.top
+		xdg-open http://127.0.0.1:9090/ui/
 		;;
 	*OFF*)
 		rm -f ~/.config/proxy
