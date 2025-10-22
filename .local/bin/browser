@@ -1,8 +1,8 @@
 #!/bin/sh
 
 case "$BROWSER" in
-	*chrome*     ) google-chrome-stable "$@" ;;
-	*fox*|*wolf* ) $BROWSER --profile "$HOME/.config/$BROWSER" "$@" ;;
+	*chrome*     ) google-chrome-stable --new-tab "$@" ;;
+	*fox*|*wolf* ) $BROWSER --new-tab --profile "$HOME/.config/$BROWSER" "$@" ;;
 	*qute*       ) qutebrowser "$@" ;;
 	*            ) $BROWSER "$@" ;;
 esac
