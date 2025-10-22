@@ -12,9 +12,15 @@ git pull
 mkdir -p ~/.config/mihomo
 mkdir -p ~/.config/sing-box
 cp ~/.local/src/sub/clash ~/.config/mihomo/config.yaml
-cp ~/.local/src/sub/gistconf.ini ~/Downloads/subconverter/gistconf.ini
-cp ~/.local/src/sub/pref.toml ~/Downloads/subconverter/pref.toml
 cp ~/.local/src/sub/singbox ~/.config/sing-box/config.json
+cd - >/dev/null 2>&1
+
+cd ~/Downloads/subconverter
+cp ~/.config/subconverter/pref.toml .
+cp ~/.config/subconverter/singbox.json ./base
+cp ~/.local/src/sub/clash.ini .
+cp ~/.local/src/sub/gistconf.ini .
+cp ~/.local/src/sub/singbox.ini .
 cd - >/dev/null 2>&1
 
 if [ "$BROWSER" == "firefox" ]; then
