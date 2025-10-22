@@ -1,5 +1,4 @@
 keymap &
-mihomo &
 rquickshare &
 setleds -D +num &
 unclutter &
