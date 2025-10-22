@@ -23,5 +23,7 @@ case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
 	*ON*)
 		touch -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "manual"
+		sudo systemctl enable sing-box.service
+		sudo systemctl start sing-box.service
 		;;
 esac
