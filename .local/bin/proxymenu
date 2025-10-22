@@ -17,6 +17,8 @@ case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
 	*OFF*)
 		rm -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "none"
+		sudo systemctl stop sing-box.service
+		sudo systemctl disable sing-box.service
 		;;
 	*ON*)
 		touch -f ~/.config/proxy
