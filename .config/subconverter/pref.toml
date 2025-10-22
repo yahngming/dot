@@ -436,6 +436,158 @@ enabled = true
 overwrite_original_rules = false
 update_ruleset_on_request = false
 
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list"
+
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list"
+
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list"
+
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+
+[[rulesets]]
+group = "Emby"
+ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/emby.list"
+
+[[rulesets]]
+group = "GitHub"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Github.list"
+
+[[rulesets]]
+group = "GitHub"
+ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/white.list"
+
+[[rulesets]]
+group = "Netflix"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/DisneyPlus.list"
+
+[[rulesets]]
+group = "Netflix"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/HBO.list"
+
+[[rulesets]]
+group = "Netflix"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list"
+
+[[rulesets]]
+group = "Netflix"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetflixIP.list"
+
+[[rulesets]]
+group = "Steam"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list"
+
+[[rulesets]]
+group = "Steam"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list"
+
+[[rulesets]]
+group = "Steam"
+ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/battlenet.list"
+
+[[rulesets]]
+group = "YouTube"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list"
+
+[[rulesets]]
+group = "YouTube"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list"
+
+[[rulesets]]
+group = "YouTube"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list"
+
+[[rulesets]]
+group = "YouTube"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list"
+
+[[rulesets]]
+group = "EU"
+ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/turtlewow.list"
+
+[[rulesets]]
+group = "HK"
+ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/clubsim.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bing.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Facebook.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Gemini.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Instagram.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Microsoft.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Pandora.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Spotify.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTubeMusic.list"
+
+[[rulesets]]
+group = "US"
+ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/tmobile.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/direct.list"
+
+[[rulesets]]
+group = "GLOBAL"
+ruleset = "[]FINAL"
+
 [[custom_groups]]
 name = "Emby"
 type = "select"
