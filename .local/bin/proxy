@@ -1,6 +1,6 @@
 #!/bin/sh
 
-off() {
+disable() {
 	if [ -f ~/.config/proxy ]; then
 		rm -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "none"
@@ -9,7 +9,7 @@ off() {
 	fi
 }
 
-on() {
+enable() {
 	if [ ! -f ~/.config/proxy ]; then
 		touch -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "manual"
@@ -30,9 +30,9 @@ reload() {
 
 help() {
 	echo "Usage: proxy [MODE]"
-	echo "  off           turn off"
-	echo "  on            turn on"
-	echo "  reload        update config and restart"
+	echo "  disable        disable proxy"
+	echo "  enable         enable proxy"
+	echo "  reload         update config and restart"
 }
 
 mode=${1:-help}
