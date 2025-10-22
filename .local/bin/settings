@@ -46,7 +46,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*IME*         ) fcitx5-configtool ;;
 	*Keyboard*    ) keymap ;;
 	*Password*    ) passmenu ;;
-	*Printer*     ) browser --new-tab http://localhost:631 ;;
+	*Printer*     ) xdg-open http://localhost:631 ;;
 	*Proxy*       ) proxymenu ;;
 	*Screensaver* ) screensavermenu ;;
 	*SMB*         ) smbmenu ;;
