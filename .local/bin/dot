@@ -9,12 +9,11 @@ cd - >/dev/null 2>&1
 
 cd ~/.local/src/sub
 git pull
-cd ~/Downloads/subconverter
-cp ~/.config/subconverter/pref.toml .
-cp ~/.config/subconverter/singbox.json ./base
-cp ~/.local/src/sub/clash.ini .
-cp ~/.local/src/sub/gistconf.ini .
-cp ~/.local/src/sub/singbox.ini .
+cp ~/.config/subconverter/pref.toml ~/Downloads/subconverter
+cp ~/.config/subconverter/singbox.json ~/Downloads/subconverter/base
+cp ~/.local/src/sub/clash.ini ~/Downloads/subconverter
+cp ~/.local/src/sub/gistconf.ini ~/Downloads/subconverter
+cp ~/.local/src/sub/singbox.ini ~/Downloads/subconverter
 cd - >/dev/null 2>&1
 
 if [ "$BROWSER" == "firefox" ]; then
