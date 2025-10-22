@@ -644,63 +644,63 @@ target = "/version"
 
 [[aliases]]
 uri = "/clash"
-target = "/sub?target=clash"
+target = "/getprofile?name=clash.ini&token=password"
 
 [[aliases]]
 uri = "/clashr"
-target = "/sub?target=clashr"
+target = "/getprofile?name=clashr.ini&token=password"
 
 [[aliases]]
 uri = "/surge"
-target = "/sub?target=surge"
+target = "/getprofile?name=surge.ini&token=password"
 
 [[aliases]]
 uri = "/quan"
-target = "/sub?target=quan"
+target = "/getprofile?name=quan.ini&token=password"
 
 [[aliases]]
 uri = "/quanx"
-target = "/sub?target=quanx"
+target = "/getprofile?name=quanx.ini&token=password"
 
 [[aliases]]
 uri = "/mellow"
-target = "/sub?target=mellow"
+target = "/getprofile?name=mellow.ini&token=password"
 
 [[aliases]]
 uri = "/surfboard"
-target = "/sub?target=surfboard"
+target = "/getprofile?name=surfboard.ini&token=password"
 
 [[aliases]]
 uri = "/loon"
-target = "/sub?target=loon"
+target = "/getprofile?name=loon.ini&token=password"
 
 [[aliases]]
 uri = "/singbox"
-target = "/sub?target=singbox"
+target = "/getprofile?name=singbox.ini&token=password"
 
 [[aliases]]
 uri = "/ss"
-target = "/sub?target=ss"
+target = "/getprofile?name=ss.ini&token=password"
 
 [[aliases]]
 uri = "/ssd"
-target = "/sub?target=ssd"
+target = "/getprofile?name=ssd.ini&token=password"
 
 [[aliases]]
 uri = "/sssub"
-target = "/sub?target=sssub"
+target = "/getprofile?name=sssub.ini&token=password"
 
 [[aliases]]
 uri = "/ssr"
-target = "/sub?target=ssr"
+target = "/getprofile?name=ssr.ini&token=password"
 
 [[aliases]]
 uri = "/v2ray"
-target = "/sub?target=v2ray"
+target = "/getprofile?name=v2ray.ini&token=password"
 
 [[aliases]]
 uri = "/trojan"
-target = "/sub?target=trojan"
+target = "/getprofile?name=trojan.ini&token=password"
 
 [server]
 listen = "0.0.0.0"
