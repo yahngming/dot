@@ -5,28 +5,15 @@ case "$LAUNCHER" in
 esac
 
 menu="\
-󰨇 Open dashboard\n\
-󰌙 Turn off\n\
-󱊪 Turn on and refresh\n\
+󰨇 Dashboard\n\
+󰌙 Disable proxy\n\
+󱊪 Enable proxy\n\
+󰌚 Reload proxy\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
-	*dashboard*)
-		xdg-open http://127.0.0.1:9090/ui/
-		;;
-	*off*)
-		rm -f ~/.config/proxy
-		gsettings set org.gnome.system.proxy mode "none"
-		sudo systemctl stop sing-box.service
-		sudo systemctl disable sing-box.service
-		;;
-	*on*)
-		touch -f ~/.config/proxy
-		gsettings set org.gnome.system.proxy mode "manual"
-		sudo cp ~/.local/src/sub/singbox /etc/sing-box/config.json
-		sudo chown sing-box:sing-box /etc/sing-box/config.json
-		sudo chmod 640 /etc/sing-box/config.json
-		sudo systemctl enable sing-box.service
-		sudo systemctl restart sing-box.service
-		;;
+	*Dashboard* ) xdg-open http://127.0.0.1:9090/ui/ ;;
+	*Disable*   ) proxy disable ;;
+	*Enable*    ) proxy enable ;;
+	*Reload*    ) proxy reload ;;
 esac
