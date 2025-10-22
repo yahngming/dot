@@ -12,7 +12,7 @@ menu="\
 
 case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
 	*dashboard*)
-		browser --new-tab https://clash.razord.top
+		browser https://clash.razord.top
 		;;
 	*OFF*)
 		rm -f ~/.config/proxy
