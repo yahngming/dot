@@ -1,28 +1,9 @@
 #!/bin/sh
 
-screensavers=(
-	"asciiquarium -s -t"
-	"neo-matrix -s"
-	"lavat -g -c FF0000 -k FF00FF"
-	"ttesvr"
-	"ttysvr"
-)
-
-if pgrep -f "st -F -c screensaver" || pgrep locker; then
+if pgrep -f "st -F -c screensaver" || pgrep locker || [ ! -f ~/.config/screensaver ]; then
 	exit
-elif [ -f ~/.config/screensaver ] || [ "$@" == "preview" ]; then
-	while true; do
-		screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
-		read -r -a command <<< "$screensaver"
-		if command -v "${command[0]}"; then
-			st -F -c screensaver -e $SHELL -c "$screensaver"
-			exit
-		fi
-	done
-elif [ -f ~/.config/screendim ]; then
-	brightnessctl -s set 10
-elif [ -f ~/.config/screenblank ]; then
-	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl dispatch dpms off
-	fi
 fi
+
+readarray -t screensavers < <(grep -vE '^\s*(#|$)' ~/.config/screensaver)
+screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
+st -F -c screensaver -e $SHELL -c "$screensaver"
