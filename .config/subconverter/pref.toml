@@ -635,6 +635,9 @@ ruleset = "https://raw.githubusercontent.com/yahngming/rules/master/direct.list"
 group = "GLOBAL"
 ruleset = "[]FINAL"
 
+[template]
+template_path = ""
+
 [[aliases]]
 uri = "/clash"
 target = "/getprofile?name=clash.ini&token=password"
