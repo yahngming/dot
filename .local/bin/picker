@@ -1,8 +1,11 @@
 #!/bin/sh
 
 case "$TERMINAL" in
-	foot) opt="-a center" ;;
-	*   ) opt="-c center" ;;
+	foot) opt="-a" ;;
+	*   ) opt="-c" ;;
 esac
 
-$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
+case "$EXPLORER" in
+	lf|nnn|ranger|yazi ) $TERMINAL $opt center -e $SHELL -c "cat ~/.cache/wal/sequences; $EXPLORER" ;;
+	*                  ) $EXPLORER "$@" ;;
+esac
