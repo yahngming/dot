@@ -1,9 +1,5 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
 auto\n\
 arch\n\
@@ -15,7 +11,7 @@ thinkpad\n\
 windows\n\
 "
 
-choice=$(printf "$menu" | menu $opt -p "Select a fetch style:" "$@")
+choice=$(printf "$menu" | menu "$@")
 
 if [ "$choice" == "auto" ]; then
 	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
