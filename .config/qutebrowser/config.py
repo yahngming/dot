@@ -59,8 +59,8 @@ c.downloads.position = 'bottom'
 c.downloads.remove_finished = 3
 c.editor.command = ['editor', '{file}']
 c.fileselect.handler = "external"
-c.fileselect.multiple_files.command = ['explorer', '-selection-path={}']
-c.fileselect.single_file.command = ['explorer', '-selection-path={}']
+c.fileselect.multiple_files.command = ['picker', '-selection-path={}']
+c.fileselect.single_file.command = ['picker', '-selection-path={}']
 c.fonts.default_family = 'monospace'
 c.input.insert_mode.auto_load = True
 c.qt.args = [
