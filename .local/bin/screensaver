@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if pgrep -f "st -F -c screensaver" || pgrep locker || [ ! -f ~/.config/screensaver ]; then
+if pgrep -f " screensaver " || pgrep locker || [ ! -f ~/.config/screensaver ]; then
 	exit
 fi
 
