@@ -24,7 +24,6 @@ reload() {
 		sudo chown sing-box:sing-box /etc/sing-box/config.json
 		sudo chmod 640 /etc/sing-box/config.json
 		sudo systemctl restart sing-box.service
-		sudo systemctl enable sing-box.service
 	fi
 }
 
