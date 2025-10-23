@@ -9,8 +9,8 @@ cd - >/dev/null 2>&1
 
 cd ~/.local/src/sub
 git pull
+cp ~/.config/subconverter/* ~/Downloads/subconverter/base
 cp ~/.config/subconverter/pref.toml ~/Downloads/subconverter
-cp ~/.config/subconverter/singbox.json ~/Downloads/subconverter/base
 cp ~/.local/src/sub/clash.ini ~/Downloads/subconverter
 cp ~/.local/src/sub/gistconf.ini ~/Downloads/subconverter
 cp ~/.local/src/sub/singbox.ini ~/Downloads/subconverter
