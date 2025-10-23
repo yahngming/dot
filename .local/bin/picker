@@ -1,0 +1,8 @@
+#!/bin/sh
+
+case "$TERMINAL" in
+	foot) opt="-a center" ;;
+	*   ) opt="-c center" ;;
+esac
+
+$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
