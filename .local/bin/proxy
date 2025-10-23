@@ -13,8 +13,8 @@ enable() {
 	if [ ! -f ~/.config/proxy ]; then
 		touch -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "manual"
-		sudo systemctl enable sing-box.service
 		sudo systemctl start sing-box.service
+		sudo systemctl enable sing-box.service
 	fi
 }
 
@@ -23,8 +23,8 @@ reload() {
 		sudo cp ~/.local/src/sub/singbox /etc/sing-box/config.json
 		sudo chown sing-box:sing-box /etc/sing-box/config.json
 		sudo chmod 640 /etc/sing-box/config.json
-		sudo systemctl enable sing-box.service
 		sudo systemctl restart sing-box.service
+		sudo systemctl enable sing-box.service
 	fi
 }
 
