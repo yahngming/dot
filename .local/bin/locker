@@ -6,4 +6,4 @@ elif [ -n "$DISPLAY" ]; then
 	pgrep slock || slock &
 fi
 
-pkill -f "st -F -c screensaver"
+pkill -f " screensaver "
