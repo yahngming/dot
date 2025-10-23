@@ -1,8 +1,8 @@
 #!/bin/sh
 
 case "$TERMINAL" in
-	foot) opt="-a" ;;
-	*   ) opt="-c" ;;
+	foot               ) opt="-a" ;;
+	*                  ) opt="-c" ;;
 esac
 
 case "$EXPLORER" in
