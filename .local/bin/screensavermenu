@@ -1,34 +1,33 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
- Preview screensaver\n\
- Disable screensaver\n\
- Set to random screensaver\n\
-󰱊 Set to dim screen\n\
-󰄱 Set to blank screen\n\
+asciiquarium\n\
+lavat\n\
+matrix\n\
+terminaltexteffects\n\
+ttysvr\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Screensaver" "$@") in
-	*Preview*)
+case $(printf "$menu" | menu "$@") in
+	random)
 		screensaver preview
 		;;
-	*Disable*)
+	none)
 		rm -f ~/.config/screen*
 		;;
-	*random*)
+	asciiquarium)
 		rm -f ~/.config/screen*
-		touch -f ~/.config/screensaver
 		;;
-	*dim*)
+	lavat)
 		rm -f ~/.config/screen*
-		touch -f ~/.config/screendim
 		;;
-	*blank*)
+	matrix)
 		rm -f ~/.config/screen*
-		touch -f ~/.config/screenblank
+		;;
+	terminaltexteffects)
+		rm -f ~/.config/screen*
+		;;
+	ttysvr)
+		rm -f ~/.config/screen*
 		;;
 esac
