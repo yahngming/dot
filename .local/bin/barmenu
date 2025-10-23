@@ -1,9 +1,5 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
 dwm\n\
 float\n\
@@ -16,7 +12,7 @@ vertical\n\
 windows\n\
 "
 
-choice=$(printf "$menu" | menu $opt -p "Select a bar style:" "$@")
+choice=$(printf "$menu" | menu -p "Select a bar style:" "$@")
 
 if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$choice.jsonc ] && [ -f ~/.config/waybar/style-$choice.css ]; then
 	cp ~/.config/waybar/config-$choice.jsonc ~/.config/waybar/config.jsonc
