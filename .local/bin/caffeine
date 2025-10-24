@@ -1,11 +1,31 @@
 #!/bin/sh
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	pgrep hypridle && pkill hypridle || hypridle &
-elif [ -n "$DISPLAY" ]; then
-	xautolock -toggle
-	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
-		Disabled ) xset +dpms ;;
-		Enabled  ) xset -dpms ;;
-	esac
-fi
+off() {
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		pkill hypridle
+	elif [ -n "$DISPLAY" ]; then
+		xautolock -enable
+		xset +dpms
+	fi
+}
+
+on() {
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		pgrep hypridle || hypridle &
+	elif [ -n "$DISPLAY" ]; then
+		xautolock -disable
+		xset -dpms
+	fi
+}
+
+help() {
+	pgrep hypridle || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ] && mode="Enabled"
+	echo "Idle inhibit $mode"
+	echo ""
+	echo "Usage: caffeine [MODE]"
+	echo "  off        disable idle inhibit"
+	echo "  on         enable idle inhibit"
+}
+
+mode=${1:-help}
+$mode
