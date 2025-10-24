@@ -7,6 +7,7 @@ asciiquarium\n\
 dim\n\
 lavat\n\
 matrix\n\
+pipes\n\
 terminaltexteffects\n\
 ttysvr\n\
 ----\n\
@@ -19,6 +20,7 @@ case $(printf "$menu" | menu "$@") in
 	dim                 ) echo "brightnessctl -s set 10" > ~/.config/screensaver ;;
 	lavat               ) echo "lavat -g -c FF0000 -k FF00FF" > ~/.config/screensaver ;;
 	matrix              ) echo "neo-matrix -s" > ~/.config/screensaver ;;
+	pipes               ) echo "cpipes -m 99" > ~/.config/screensaver ;;
 	terminaltexteffects ) echo "ttesvr" > ~/.config/screensaver ;;
 	ttysvr              ) echo "ttysvr" > ~/.config/screensaver ;;
 	none                ) rm -f ~/.config/screensaver ;;
