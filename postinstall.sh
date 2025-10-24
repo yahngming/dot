@@ -14,7 +14,9 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
-	yay -S bibata-cursor-git chicago95-theme ctpv-git dragon-drop google-chrome newsraft r-quick-share-bin sing-box
+	yay -S ctpv-git dragon-drop newsraft sing-box #base
+	yay -S asciiquarium-transparent-git lavat-git neo-matrix pipes.c terminaltexteffects-git ttysvr # screensavers
+	yay -S bibata-cursor-git chicago95-theme google-chrome r-quick-share-bin #gui
 	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
    	sudo systemctl enable avahi-daemon.service
    	sudo systemctl enable bluetooth.service
