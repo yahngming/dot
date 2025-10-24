@@ -2,27 +2,26 @@
 
 init() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
-		BRIGHTNESS="0"
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Chicago95"
 		ICON_THEME="Chicago95"
 		XCURSOR_THEME="Chicago95 Standard Cursors"
+		KBD_BACKLIGHT="0"
 	elif [ -f ~/.config/dark ]; then
-		BRIGHTNESS="1"
 		COLOR_SCHEME="prefer-dark"
 		GTK_THEME="Adwaita-dark"
-		HYPRCURSOR_THEME="Bibata-Modern-Classic"
 		ICON_THEME="Adwaita"
+		HYPRCURSOR_THEME="Bibata-Modern-Classic"
 		XCURSOR_THEME="Bibata-Modern-Classic"
+		KBD_BACKLIGHT="1"
 	else
-		BRIGHTNESS="0"
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Adwaita"
-		HYPRCURSOR_THEME="Bibata-Modern-Ice"
 		ICON_THEME="Adwaita"
+		HYPRCURSOR_THEME="Bibata-Modern-Ice"
 		XCURSOR_THEME="Bibata-Modern-Ice"
+		KBD_BACKLIGHT="0"
 	fi
-	brightnessctl -sd tpacpi::kbd_backlight set "$BRIGHTNESS"
 	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
@@ -33,6 +32,7 @@ init() {
 		hyprctl dispatch exec waybar >/dev/null 2>&1
 		hyprctl setcursor $HYPRCURSOR_THEME 24
 	fi
+	brightnessctl -sd *::kbd_backlight set "$KBD_BACKLIGHT"
 	wallpaper random
 }
 
