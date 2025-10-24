@@ -35,7 +35,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Audio*       ) audiomenu ;;
 	*Bar*         ) barmenu ;;
 	*Bluetooth*   ) btmenu ;;
-	*Caffeine*    ) coffeemenu ;;
+	*Caffeine*    ) caffeinemenu ;;
 	*Cloud*       ) cloudmenu ;;
 	*Display*     ) dispmenu ;;
 	*Dotfiles*    ) tui dot ;;
