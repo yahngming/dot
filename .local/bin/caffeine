@@ -19,7 +19,11 @@ on() {
 }
 
 help() {
-	pgrep hypridle || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ] && mode="Enabled"
+	if pgrep hypridle || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
+		mode="ENABLED"
+	else
+		mode="DISABLED"
+	fi
 	echo "Idle inhibit $mode"
 	echo ""
 	echo "Usage: caffeine [MODE]"
