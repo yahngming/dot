@@ -32,7 +32,7 @@ init() {
 		hyprctl dispatch exec waybar >/dev/null 2>&1
 		hyprctl setcursor $HYPRCURSOR_THEME 24
 	fi
-	brightnessctl -sd *::kbd_backlight set "$KBD_BACKLIGHT"
+	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
 	wallpaper random
 }
 
