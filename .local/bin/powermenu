@@ -4,8 +4,8 @@ pkill $LAUNCHER && exit
 
 menu="\
  lock\n\
-󰤄 sleep\n\
 󰗽 logout\n\
+󰤄 sleep\n\
  reboot\n\
  bios\n\
 󰤆 shutdown\n\
@@ -13,8 +13,8 @@ menu="\
 
 case $(printf "$menu" | menu "$@") in
 	*lock*     ) locker ;;
-	*sleep*    ) systemctl sleep ;;
 	*logout*   ) pkill -KILL -u $USER ;;
+	*sleep*    ) systemctl sleep ;;
 	*reboot*   ) systemctl reboot ;;
 	*bios*     ) systemctl reboot --firmware-setup ;;
 	*shutdown* ) systemctl poweroff ;;
