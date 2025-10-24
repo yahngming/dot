@@ -36,7 +36,7 @@ clk() {
 		"12" ) icon="󱑊" ;;
 	esac
 	clk="$(date '+%H:%M')"
-	printf " $icon $clk "
+	printf " $icon "
 }
 
 cpu() {
@@ -46,7 +46,7 @@ cpu() {
 		$((cpu <= 80)) ) icon="󰔏" ;;
 		$((cpu <= 99)) ) icon="󱃂" ;;
 	esac
-	[ "$cpu" ] && printf " $icon $cpu°C "
+	[ "$cpu" ] && printf " $icon "
 }
 
 cut() {
@@ -62,13 +62,14 @@ dpm() {
 }
 
 ime() {
-	case "$(fcitx5-remote -n)" in
-		*anthy*|*kkc*|*mozc*|*skk* ) ime="ja" ;;
-		*bi*|*ma*|*pin*            ) ime="zh" ;;
-		*hangul*                   ) ime="ko" ;;
-		*                          ) ime="en" ;;
+	ime="$(fcitx5-remote -n)"
+	case "$im" in
+		*anthy*|*kkc*|*mozc*|*skk* ) icon="" ;;
+		*bi*|*ma*|*pin*            ) icon="" ;;
+		*hangul*                   ) icon="" ;;
+		*                          ) icon="" ;;
 	esac
-	[ "$ime" ] && printf "  $ime "
+	[ "$ime" ] && printf " $icon "
 }
 
 net() {
