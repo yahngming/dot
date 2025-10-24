@@ -11,14 +11,12 @@ menu="\
  Audio\n\
  Bar\n\
  Bluetooth\n\
+ Caffeine\n\
  Cloud\n\
- Coffee\n\
 󰍹 Display\n\
  Dotfiles\n\
  Fetch\n\
-󰊖 Gamemode\n\
 󰇧 IME\n\
-󰌌 Keyboard\n\
  Password\n\
 󰐪 Printer\n\
 󰌘 Proxy\n\
@@ -37,14 +35,12 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Audio*       ) audiomenu ;;
 	*Bar*         ) barmenu ;;
 	*Bluetooth*   ) btmenu ;;
+	*Caffeine*    ) coffeemenu ;;
 	*Cloud*       ) cloudmenu ;;
-	*Coffee*      ) coffee ;;
 	*Display*     ) dispmenu ;;
 	*Dotfiles*    ) tui dot ;;
 	*Fetch*       ) fetchmenu ;;
-	*Gamemode*    ) gamemode ;;
 	*IME*         ) fcitx5-configtool ;;
-	*Keyboard*    ) keymap ;;
 	*Password*    ) passmenu ;;
 	*Printer*     ) xdg-open http://localhost:631 ;;
 	*Proxy*       ) proxymenu ;;
@@ -56,5 +52,4 @@ case $(printf "$menu" | menu $opt "$@") in
 	*USB*         ) usbmenu ;;
 	*Wallpaper*   ) wallpapermenu ;;
 	*WLAN*        ) wlanmenu ;;
-	*             ) exit 1 ;;
 esac
