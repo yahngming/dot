@@ -48,3 +48,11 @@ window#waybar.empty #window {
 #workspaces button, #battery, #network, #pulseudio {
 	padding: 0px 5px;
 }
+
+#battery.critical {
+	color: red;
+}
+
+#battery.warning {
+	color: yellow;
+}
