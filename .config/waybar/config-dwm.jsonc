@@ -34,8 +34,7 @@
 			"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 		},
 		"states": {
-			"critical": 10,
-			"warning": 90
+			"critical": 10
 		},
 		"tooltip": false
 	},
