@@ -28,9 +28,15 @@
 	},
 	"battery": {
 		"format": "{icon}",
-		"format-charging": "󰂄",
-		"format-critical": "󰂃",
-		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"format-charging": "{icon}",
+		"format-critical": "󰂎",
+		"format-icons": {
+			"charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+			"default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		},
+		"states": {
+			"critical": 10
+		},
 		"tooltip": false
 	},
 	"network": {
