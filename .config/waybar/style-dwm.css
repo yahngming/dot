@@ -52,7 +52,3 @@ window#waybar.empty #window {
 #battery.critical {
 	color: red;
 }
-
-#battery.warning {
-	color: yellow;
-}
