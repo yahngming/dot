@@ -1,14 +1,11 @@
 {
-
 	"layer": "top",
 	"position": "top",
 	"height": 28,
 	"reload_style_on_change": true,
-
 	"modules-left": ["hyprland/workspaces", "wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["tray", "battery", "network", "pulseaudio", "clock"],
-
 	"hyprland/workspaces": {
 		"persistent-workspaces": {
 			"*": 5
@@ -24,7 +21,6 @@
 		"on-click": "activate",
 		"on-click-middle": "close"
 	},
-
 	"tray": {
 		"icon-size": 18,
 		"spacing": 5,
@@ -46,12 +42,9 @@
 	},
 	"pulseaudio": {
 		"format": "{icon}",
-		"format-bluetooth": "󰥰 ",
-		"format-muted": "󰖁 ",
+		"format-muted": " ",
 		"format-icons": {
-			"headphone": "󰋋 ",
-			"headset": "󰋋 ",
-			"default": ["󰕿 ", "󰖀 ", "󰕾 "]
+			"default": [" ", " ", " "]
 		},
 		"tooltip": false,
 		"on-click": "volume toggle"
@@ -68,5 +61,4 @@
 			}
 		}
 	}
-
 }
