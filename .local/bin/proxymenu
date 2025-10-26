@@ -7,13 +7,11 @@ esac
 menu="\
 󰨇 Dashboard\n\
 󰌙 Disable proxy\n\
-󱊪 Enable proxy\n\
-󰌚 Reload proxy\n\
+󱊪 Enable or reload proxy\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
 	*Dashboard* ) xdg-open http://127.0.0.1:9090/ui/ ;;
 	*Disable*   ) tui "proxy disable" ;;
 	*Enable*    ) tui "proxy enable" ;;
-	*Reload*    ) tui "proxy reload" ;;
 esac
