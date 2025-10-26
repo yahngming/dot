@@ -1,6 +1,6 @@
 #!/bin/sh
 
-disable() {
+off() {
 	if [ -f ~/.config/proxy ]; then
 		rm -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "none"
@@ -9,7 +9,7 @@ disable() {
 	fi
 }
 
-enable() {
+on() {
 	sudo cp ~/.local/src/sub/singbox /etc/sing-box/config.json
 	sudo chown sing-box:sing-box /etc/sing-box/config.json
 	sudo chmod 640 /etc/sing-box/config.json
@@ -25,8 +25,8 @@ enable() {
 
 help() {
 	echo "Usage: proxy [MODE]"
-	echo "  disable        disable proxy"
-	echo "  enable         enable/reload proxy"
+	echo "  off        disable proxy"
+	echo "  on         enable/reload proxy"
 }
 
 mode=${1:-help}
