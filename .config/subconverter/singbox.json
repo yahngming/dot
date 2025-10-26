@@ -18,12 +18,16 @@
     ],
     "rules": [
       {
-        "clash_mode": "Global",
-        "server": "global"
+        "rule_set": "geosite-cn",
+        "server": "direct"
       },
       {
         "clash_mode": "Direct",
         "server": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "global"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -31,7 +35,7 @@
   "inbounds": [
     {
       "type": "tun",
-      "tag": "tun-in",
+      "tag": "tun",
       "address": [
         "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
@@ -53,18 +57,13 @@
     },
     {
       "type": "mixed",
-      "tag": "mixed-in",
+      "tag": "mixed",
       "listen": "127.0.0.1",
       "listen_port": 7890
     }
   ],
   "outbounds": [],
   "route": {
-    "default_domain_resolver": {
-      "server": "direct",
-      "rewrite_ttl": 60,
-      "client_subnet": "1.1.1.1"
-    },
     "rules": [
       {
         "action": "sniff"
@@ -187,7 +186,13 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
       }
     ],
-    "auto_detect_interface": true
+    "final": "GLOBAL",
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "direct",
+      "rewrite_ttl": 60,
+      "client_subnet": "1.1.1.1"
+    }
   },
   "experimental": {
     "cache_file": {
