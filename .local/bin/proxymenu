@@ -12,6 +12,6 @@ menu="\
 
 case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
 	*Dashboard* ) xdg-open http://127.0.0.1:9090/ui/ ;;
-	*Disable*   ) tui "proxy disable" ;;
-	*Enable*    ) tui "proxy enable" ;;
+	*Disable*   ) tui "proxy off" ;;
+	*Enable*    ) tui "proxy on" ;;
 esac
