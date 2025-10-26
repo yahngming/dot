@@ -10,19 +10,15 @@ disable() {
 }
 
 enable() {
+	sudo cp ~/.local/src/sub/singbox /etc/sing-box/config.json
+	sudo chown sing-box:sing-box /etc/sing-box/config.json
+	sudo chmod 640 /etc/sing-box/config.json
 	if [ ! -f ~/.config/proxy ]; then
 		touch -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "manual"
 		sudo systemctl start sing-box.service
 		sudo systemctl enable sing-box.service
-	fi
-}
-
-reload() {
-	if [ -f ~/.config/proxy ]; then
-		sudo cp ~/.local/src/sub/singbox /etc/sing-box/config.json
-		sudo chown sing-box:sing-box /etc/sing-box/config.json
-		sudo chmod 640 /etc/sing-box/config.json
+	else
 		sudo systemctl restart sing-box.service
 	fi
 }
@@ -30,8 +26,7 @@ reload() {
 help() {
 	echo "Usage: proxy [MODE]"
 	echo "  disable        disable proxy"
-	echo "  enable         enable proxy"
-	echo "  reload         update config and restart"
+	echo "  enable         enable/reload proxy"
 }
 
 mode=${1:-help}
