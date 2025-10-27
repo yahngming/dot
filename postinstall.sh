@@ -22,8 +22,8 @@ arch() {
    	sudo systemctl enable bluetooth.service
    	sudo systemctl enable cups.service
    	sudo systemctl enable smb.service
- 	sudo cp -r ~/.config/udev/hwdb.d/ /etc/udev/
- 	sudo cp -r ~/.config/systemd/system/getty\@.service.d/ /etc/systemd/system/
+ 	sudo cp -r ~/.config/udev/ /etc/
+ 	sudo cp -r ~/.config/systemd/ /etc/
 	sudo sed -i 's/LOGIN_TIMEOUT.*/LOGIN_TIMEOUT 0/' /etc/login.defs
 	sudo gpasswd -a $USER uucp
 }
