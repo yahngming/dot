@@ -41,7 +41,6 @@ help() {
 	echo "  toggle        toggle mute"
 	echo ""
 	echo "Device ID defaults to @DEFAULT_SINK@ when not specified."
-	echo ""
 }
 
 command=${1:-help}
