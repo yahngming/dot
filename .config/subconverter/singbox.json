@@ -9,7 +9,7 @@
         "type": "tls",
         "tag": "global",
         "server": "1.1.1.1",
-        "domain_resolver": "direct"
+        "detour": "GLOBAL"
       },
       {
         "type": "udp",
@@ -189,11 +189,7 @@
     ],
     "final": "GLOBAL",
     "auto_detect_interface": true,
-    "default_domain_resolver": {
-      "server": "direct",
-      "rewrite_ttl": 60,
-      "client_subnet": "1.1.1.1"
-    }
+    "default_domain_resolver": "direct"
   },
   "experimental": {
     "cache_file": {
