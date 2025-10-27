@@ -30,6 +30,7 @@ case $(printf "$menu" | menu "$@") in
 esac
 
 case "$opt" in
+	""    ) exit ;;
 	binds ) about $opt ;;
 	*     ) pkill -f "read -n 1 -s"; tui "about $opt; read -n 1 -s" ;;
 esac
