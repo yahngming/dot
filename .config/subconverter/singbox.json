@@ -6,9 +6,10 @@
   "dns": {
     "servers": [
       {
-        "type": "https",
+        "type": "tls",
         "tag": "global",
-        "server": "1.1.1.1"
+        "server": "1.1.1.1",
+        "domain_resolver": "direct"
       },
       {
         "type": "udp",
