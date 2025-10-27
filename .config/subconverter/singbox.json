@@ -8,31 +8,18 @@
       {
         "type": "tls",
         "tag": "global",
-        "server": "1.1.1.1",
-        "domain_resolver": "direct",
-        "detour": "GLOBAL"
+        "server": "1.1.1.1"
       },
       {
         "type": "udp",
         "tag": "direct",
         "server": "223.5.5.5"
-      },
-      {
-        "type": "local"
       }
     ],
     "rules": [
       {
         "rule_set": "geosite-cn",
         "server": "direct"
-      },
-      {
-        "clash_mode": "Direct",
-        "server": "direct"
-      },
-      {
-        "clash_mode": "Global",
-        "server": "global"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -82,6 +69,18 @@
         "action": "reject"
       },
       {
+        "ip_is_private": true,
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "DIRECT"
+      },
+      {
         "rule_set": "geosite-category-emby",
         "outbound": "Emby"
       },
@@ -112,26 +111,6 @@
       {
         "rule_set": "geoip-us",
         "outbound": "US"
-      },
-      {
-        "rule_set": "geoip-cn",
-        "outbound": "DIRECT"
-      },
-      {
-        "rule_set": "geosite-cn",
-        "outbound": "DIRECT"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "DIRECT"
-      },
-      {
-        "clash_mode": "Direct",
-        "outbound": "DIRECT"
-      },
-      {
-        "clash_mode": "Global",
-        "outbound": "GLOBAL"
       }
     ],
     "rule_set": [
