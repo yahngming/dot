@@ -156,4 +156,4 @@ dynamic_bindings |
   sort -u |
   parse_keycodes |
   parse_bindings |
-  menu -p 'Keybindings' --width 800 --height "$menu_height"
+  menu -p 'Keybindings'
