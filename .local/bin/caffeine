@@ -19,7 +19,7 @@ on() {
 }
 
 help() {
-	if pgrep hypridle || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
+	if pgrep hypridle >/dev/null || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
 		mode="DISABLED"
 	else
 		mode="ENABLED"
