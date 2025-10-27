@@ -7,7 +7,6 @@ off() {
 		xautolock -enable
 		xset +dpms
 	fi
-	notify-send "Caffeine OFF"
 }
 
 on() {
@@ -17,7 +16,6 @@ on() {
 		xautolock -disable
 		xset -dpms
 	fi
-	notify-send "Caffeine ON"
 }
 
 help() {
