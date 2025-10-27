@@ -6,15 +6,16 @@
   "dns": {
     "servers": [
       {
+        "type": "udp",
+        "tag": "local",
+        "server": "223.5.5.5"
+        "detour": "DIRECT"
+      },
+      {
         "type": "tls",
         "tag": "global",
         "server": "1.1.1.1",
         "detour": "GLOBAL"
-      },
-      {
-        "type": "udp",
-        "tag": "local",
-        "server": "223.5.5.5"
       }
     ],
     "rules": [
