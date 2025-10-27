@@ -1,31 +1,31 @@
 #!/bin/sh
 
 bar() {
-	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume $device | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
+	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume $id | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
 }
 
 get() {
-	wpctl get-volume $device && bar
+	wpctl get-volume $id && bar
 }
 
 up() {
-	wpctl set-volume $device 2%+ -l 1 && bar
+	wpctl set-volume $id 2%+ -l 1 && bar
 }
 
 down() {
-	wpctl set-volume $device 2%- && bar
+	wpctl set-volume $id 2%- && bar
 }
 
 mute() {
-	wpctl set-mute $device 1
+	wpctl set-mute $id 1
 }
 
 unmute() {
-	wpctl set-mute $device 0
+	wpctl set-mute $id 0
 }
 
 toggle() {
-	wpctl set-mute $device toggle
+	wpctl set-mute $id toggle
 }
 
 help() {
@@ -41,8 +41,11 @@ help() {
 	echo "  toggle        toggle mute"
 	echo ""
 	echo "Device ID defaults to @DEFAULT_SINK@ when not specified."
+	echo "Device ID for microphone is @DEFAULT_SOURCE@."
 }
 
-command=${1:-help}
-device=${2:-@DEFAULT_SINK@}
-$command
+id=${2:-@DEFAULT_SINK@}
+case "$1" in
+	get|up|down|mute|unmute|toggle ) $1 ;;
+	*                              ) help ;;
+esac
