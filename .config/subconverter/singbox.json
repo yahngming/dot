@@ -9,12 +9,16 @@
         "type": "tls",
         "tag": "global",
         "server": "1.1.1.1",
+        "domain_resolver": "direct",
         "detour": "GLOBAL"
       },
       {
         "type": "udp",
         "tag": "direct",
         "server": "223.5.5.5"
+      },
+      {
+        "type": "local"
       }
     ],
     "rules": [
