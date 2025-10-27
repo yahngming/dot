@@ -2,27 +2,29 @@
 
 off() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pkill hypridle
+		pgrep hypridle || hypridle &
 	elif [ -n "$DISPLAY" ]; then
 		xautolock -enable
 		xset +dpms
 	fi
+	notify-send "Caffeine OFF"
 }
 
 on() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pgrep hypridle || hypridle &
+		pkill hypridle
 	elif [ -n "$DISPLAY" ]; then
 		xautolock -disable
 		xset -dpms
 	fi
+	notify-send "Caffeine ON"
 }
 
 help() {
 	if pgrep hypridle || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
-		mode="ENABLED"
-	else
 		mode="DISABLED"
+	else
+		mode="ENABLED"
 	fi
 	echo "Idle inhibit $mode"
 	echo ""
