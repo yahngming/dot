@@ -124,4 +124,4 @@ parse_bindings() {
 
 build_keymap_cache
 
-dynamic_bindings | sort -u | parse_keycodes | parse_bindings | menu -p 'Keybindings' --width 800
+dynamic_bindings | sort -u | parse_keycodes | parse_bindings | menu -p 'Keybindings' --width 80
