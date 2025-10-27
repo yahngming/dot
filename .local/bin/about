@@ -1,11 +1,12 @@
 #!/bin/sh
 
 help() {
-	echo "Usage: about [battery|cpu|drive|gpu|memory|pci|sensors|system|time|usb]"
+	echo "Usage: about [battery|binds|cpu|drive|gpu|memory|pci|sensors|system|time|usb]"
 }
 
 case "$@" in
 	battery ) upower -i $(upower -e | grep BAT) | bat -pPl cpuinfo ;;
+	binds   ) bindsmenu ;;
 	cpu     ) lscpu | bat -pPl cpuinfo ;;
 	drive   ) lsblk | bat -pPl conf ;;
 	gpu     ) lsgpu | bat -pPl cpuinfo ;;
