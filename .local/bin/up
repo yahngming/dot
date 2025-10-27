@@ -4,3 +4,8 @@ sudo pacman -Sy --needed archlinux-keyring --noconfirm
 yay --noconfirm
 sudo pacman -Rns $(pacman -Qtdq) --noconfirm
 yay -Scc --noconfirm
+
+sudo cp -r ~/.config/udev/ /etc/
+sudo cp -r ~/.config/systemd/ /etc/
+sudo systemd-hwdb update
+sudo udevadm trigger
