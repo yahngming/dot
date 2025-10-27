@@ -6,7 +6,7 @@
   "dns": {
     "servers": [
       {
-        "type": "tls",
+        "type": "https",
         "tag": "global",
         "server": "1.1.1.1"
       },
