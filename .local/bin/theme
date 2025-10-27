@@ -72,5 +72,7 @@ help() {
 	echo "  light          light mode"
 }
 
-mode=${1:-help}
-$mode
+case "$@" in
+	init|auto|dark|light ) $@ ;;
+	*                    ) help ;;
+esac
