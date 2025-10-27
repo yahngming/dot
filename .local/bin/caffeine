@@ -31,5 +31,7 @@ help() {
 	echo "  on         enable idle inhibit"
 }
 
-mode=${1:-help}
-$mode
+case "$@" in
+	off|on ) $@ ;;
+	*      ) help ;;
+esac
