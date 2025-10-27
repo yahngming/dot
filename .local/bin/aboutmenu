@@ -33,5 +33,5 @@ pkill -f "read -n 1 -s"
 
 case "$opt" in
 	binds ) about $opt ;;
-	*     ) tui "about $opt; read -n 1 -s"
+	*     ) tui "about $opt; read -n 1 -s" ;;
 esac
