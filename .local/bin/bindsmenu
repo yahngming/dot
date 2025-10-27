@@ -127,6 +127,7 @@ parse_bindings() {
 	}'
 }
 
-build_keymap_cache
-
-dynamic_bindings | sort -u | parse_keycodes | parse_bindings | menu $opt -p "Keybindings"
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	build_keymap_cache
+	dynamic_bindings | sort -u | parse_keycodes | parse_bindings | menu $opt -p "Keybindings"
+fi
