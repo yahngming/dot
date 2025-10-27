@@ -12,14 +12,17 @@
       },
       {
         "type": "udp",
-        "tag": "direct",
+        "tag": "local",
         "server": "223.5.5.5"
+      },
+      {
+        "type": "local"
       }
     ],
     "rules": [
       {
         "rule_set": "geosite-cn",
-        "server": "direct"
+        "server": "local"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -172,7 +175,7 @@
     ],
     "final": "GLOBAL",
     "auto_detect_interface": true,
-    "default_domain_resolver": "direct"
+    "default_domain_resolver": "local"
   },
   "experimental": {
     "cache_file": {
