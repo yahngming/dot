@@ -1,5 +1,10 @@
 #!/bin/bash
 
+case "$LAUNCHER" in
+	fuzzel ) opt="--width 80" ;;
+	walker ) opt="--width 800" ;;
+esac
+
 declare -A KEYCODE_SYM_MAP
 
 build_keymap_cache() {
@@ -124,4 +129,4 @@ parse_bindings() {
 
 build_keymap_cache
 
-dynamic_bindings | sort -u | parse_keycodes | parse_bindings | menu -p 'Keybindings' --width 80
+dynamic_bindings | sort -u | parse_keycodes | parse_bindings | menu $opt -p "Keybindings"
