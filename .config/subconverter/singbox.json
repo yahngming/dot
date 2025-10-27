@@ -8,7 +8,7 @@
       {
         "type": "udp",
         "tag": "local",
-        "server": "223.5.5.5"
+        "server": "223.5.5.5",
         "detour": "DIRECT"
       },
       {
