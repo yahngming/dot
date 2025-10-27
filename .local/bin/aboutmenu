@@ -11,8 +11,8 @@ menu="\
  Memory\n\
  PCI\n\
 󱉶 Sensors\n\
-󰺗 Time\n\
- USB\n\
+ Time\n\
+󱊞 USB\n\
 "
 
 case $(printf "$menu" | menu "$@") in
