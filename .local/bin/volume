@@ -9,11 +9,11 @@ get() {
 }
 
 up() {
-	wpctl set-volume $id 2%+ -l 1 && bar
+	wpctl set-volume $id 2%+ -l 1 && get
 }
 
 down() {
-	wpctl set-volume $id 2%- && bar
+	wpctl set-volume $id 2%- && get
 }
 
 mute() {
