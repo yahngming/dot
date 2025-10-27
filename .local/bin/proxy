@@ -29,5 +29,7 @@ help() {
 	echo "  on         enable/reload proxy"
 }
 
-mode=${1:-help}
-$mode
+case "$@" in
+	off|on ) $@ ;;
+	*      ) help ;;
+esac
