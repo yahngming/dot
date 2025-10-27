@@ -6,4 +6,8 @@ elif [ -n "$DISPLAY" ]; then
 	pgrep slock || slock &
 fi
 
+if pgrep -x "keepassxc"; then
+	keepassxc --lock &
+fi
+
 pkill -f " screensaver "
