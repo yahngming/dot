@@ -114,10 +114,10 @@ vol() {
 case "$START" in
 	*dwm*)
 		while true; do
-			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb)$(dpm)$(cpu)$(bat)$(net)$(vol) $(clk) "
+			sleep 0.5 && xprop -root -set WM_NAME "$(ime)$(usb)$(dpm)$(cpu)$(bat)$(net)$(vol) $(clk) "
 		done
 		;;
 	*)
-		printf "$(bat) $(net)  $(vol)"
+		echo "$(bat)$(net)$(vol)"
 		;;
 esac
