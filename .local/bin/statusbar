@@ -63,7 +63,7 @@ dpm() {
 
 ime() {
 	ime="$(fcitx5-remote -n)"
-	case "$im" in
+	case "$ime" in
 		*anthy*|*kkc*|*mozc*|*skk* ) icon="🇯🇵" ;;
 		*bi*|*ma*|*pin*            ) icon="🇨🇳" ;;
 		*hangul*                   ) icon="🇰🇷" ;;
