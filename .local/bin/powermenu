@@ -5,18 +5,19 @@ pkill $LAUNCHER && exit
 menu="\
  Lock\n\
 󰗽 Logout\n\
-󰤄 Sleep\n\
+  ----\n\
  Reboot\n\
- Bios\n\
+ BIOS\n\
+  ----\n\
+󰤄 Sleep\n\
 󰤆 Shutdown\n\
 "
 
 case $(printf "$menu" | menu "$@") in
 	*Lock*     ) locker ;;
 	*Logout*   ) pkill -KILL -u $USER ;;
-	*Sleep*    ) systemctl sleep ;;
 	*Reboot*   ) systemctl reboot ;;
-	*Bios*     ) systemctl reboot --firmware-setup ;;
+	*BIOS*     ) systemctl reboot --firmware-setup ;;
+	*Sleep*    ) systemctl sleep ;;
 	*Shutdown* ) systemctl poweroff ;;
-	*          ) exit 1 ;;
 esac
