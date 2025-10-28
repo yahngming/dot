@@ -114,7 +114,7 @@ vol() {
 case "$START" in
 	*dwm*)
 		while true; do
-			sleep 0.5 && xprop -root -set WM_NAME "$(cpu)10C$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
+			sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
 		done
 		;;
 	*)
