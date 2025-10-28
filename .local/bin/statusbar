@@ -64,10 +64,10 @@ dpm() {
 ime() {
 	ime="$(fcitx5-remote -n)"
 	case "$im" in
-		*anthy*|*kkc*|*mozc*|*skk* ) icon="" ;;
-		*bi*|*ma*|*pin*            ) icon="" ;;
-		*hangul*                   ) icon="" ;;
-		*                          ) icon="" ;;
+		*anthy*|*kkc*|*mozc*|*skk* ) icon=" ja" ;;
+		*bi*|*ma*|*pin*            ) icon=" zh" ;;
+		*hangul*                   ) icon=" ko" ;;
+		*                          ) icon=" en" ;;
 	esac
 	[ "$ime" ] && printf "$icon"
 }
