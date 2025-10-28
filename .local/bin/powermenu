@@ -5,11 +5,9 @@ pkill $LAUNCHER && exit
 menu="\
  Lock\n\
 󰗽 Logout\n\
-  ----\n\
  Reboot\n\
  BIOS\n\
-  ----\n\
-󰤄 Sleep\n\
+󰒲 Sleep\n\
 󰤆 Shutdown\n\
 "
 
