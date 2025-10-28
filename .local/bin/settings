@@ -7,26 +7,26 @@ case "$LAUNCHER" in
 esac
 
 menu="\
- Audio\n\
+󱡫 Audio\n\
  Bar\n\
- Bluetooth\n\
- Caffeine\n\
+󰂯 Bluetooth\n\
+ Caffeine\n\
  Cloud\n\
 󰍹 Display\n\
- Dotfiles\n\
+ Dotfiles\n\
  Fetch\n\
-󰇧 IME\n\
- Password\n\
-󰐪 Printer\n\
+ IME\n\
+ Password\n\
+󱞆 Printer\n\
 󰌘 Proxy\n\
  Screensaver\n\
-󰡰 SMB\n\
- Theme\n\
+󰲁 SMB\n\
+󰔎 Theme\n\
 󰔠 Timezone\n\
 󰚰 Update\n\
-󱊞 USB\n\
+󱇰 USB\n\
 󰸉 Wallpaper\n\
-󰖩 WLAN\n\
+󱚾 WLAN\n\
 "
 
 case $(printf "$menu" | menu $opt "$@") in
