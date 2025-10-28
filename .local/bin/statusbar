@@ -15,7 +15,7 @@ bat() {
 		$((bat <= 99)) ) icon="󰂂" ;;
 		$((bat >= 99)) ) icon="󰁹" ;;
 	esac
-	[ "$bat" ] && printf " $icon "
+	[ "$bat" ] && printf "$icon"
 }
 
 clk() {
@@ -36,7 +36,7 @@ clk() {
 		"12" ) icon="󱑊" ;;
 	esac
 	clk="$(date '+%H:%M')"
-	printf " $icon "
+	printf "$icon"
 }
 
 cpu() {
@@ -46,7 +46,7 @@ cpu() {
 		$((cpu <= 80)) ) icon="󰔏" ;;
 		$((cpu <= 99)) ) icon="󱃂" ;;
 	esac
-	[ "$cpu" ] && printf " $icon "
+	[ "$cpu" ] && printf "$icon"
 }
 
 cut() {
@@ -57,7 +57,7 @@ cut() {
 
 dpm() {
 	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
-		Disabled ) printf "  " ;;
+		Disabled ) printf "" ;;
 	esac
 }
 
@@ -69,7 +69,7 @@ ime() {
 		*hangul*                   ) icon="" ;;
 		*                          ) icon="" ;;
 	esac
-	[ "$ime" ] && printf " $icon "
+	[ "$ime" ] && printf "$icon"
 }
 
 net() {
@@ -87,12 +87,12 @@ net() {
 	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
 		*up* ) icon="󰈀" ;;
 	esac
-	[ "$net" ] && printf " $icon "
+	[ "$net" ] && printf "$icon"
 }
 
 usb() {
 	usb="$(df | grep '/media/')"
-	[ "$usb" ] && printf " 󰕓 "
+	[ "$usb" ] && printf "󰕓"
 }
 
 vol() {
@@ -108,13 +108,13 @@ vol() {
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
 		*MUTED* ) icon="󰝟" ;;
 	esac
-	[ "$vol" ] && printf " $icon "
+	[ "$vol" ] && printf "$icon"
 }
 
 case "$START" in
 	*dwm*)
 		while true; do
-			sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
+			sleep 0.5 && xprop -root -set WM_NAME "$(cpu)10C$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
 		done
 		;;
 	*)
