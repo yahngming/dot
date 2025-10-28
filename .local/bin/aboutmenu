@@ -3,8 +3,8 @@
 menu="\
 󰕮 System\n\
   ----\n\
- Battery\n\
-󰌌 Binds\n\
+󰄌 Battery\n\
+ Binds\n\
  CPU\n\
  Drive\n\
 󰢮 GPU\n\
@@ -12,7 +12,7 @@ menu="\
  PCI\n\
 󱉶 Sensors\n\
  Time\n\
-󱊞 USB\n\
+󰕓 USB\n\
 "
 
 case $(printf "$menu" | menu "$@") in
