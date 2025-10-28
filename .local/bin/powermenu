@@ -3,20 +3,20 @@
 pkill $LAUNCHER && exit
 
 menu="\
- lock\n\
-󰗽 logout\n\
-󰤄 sleep\n\
- reboot\n\
- bios\n\
-󰤆 shutdown\n\
+ Lock\n\
+󰗽 Logout\n\
+󰤄 Sleep\n\
+ Reboot\n\
+ Bios\n\
+󰤆 Shutdown\n\
 "
 
 case $(printf "$menu" | menu "$@") in
-	*lock*     ) locker ;;
-	*logout*   ) pkill -KILL -u $USER ;;
-	*sleep*    ) systemctl sleep ;;
-	*reboot*   ) systemctl reboot ;;
-	*bios*     ) systemctl reboot --firmware-setup ;;
-	*shutdown* ) systemctl poweroff ;;
+	*Lock*     ) locker ;;
+	*Logout*   ) pkill -KILL -u $USER ;;
+	*Sleep*    ) systemctl sleep ;;
+	*Reboot*   ) systemctl reboot ;;
+	*Bios*     ) systemctl reboot --firmware-setup ;;
+	*Shutdown* ) systemctl poweroff ;;
 	*          ) exit 1 ;;
 esac
