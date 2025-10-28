@@ -64,10 +64,10 @@ dpm() {
 ime() {
 	ime="$(fcitx5-remote -n)"
 	case "$im" in
-		*anthy*|*kkc*|*mozc*|*skk* ) icon=" ja" ;;
-		*bi*|*ma*|*pin*            ) icon=" zh" ;;
-		*hangul*                   ) icon=" ko" ;;
-		*                          ) icon=" en" ;;
+		*anthy*|*kkc*|*mozc*|*skk* ) icon="🇯🇵" ;;
+		*bi*|*ma*|*pin*            ) icon="🇨🇳" ;;
+		*hangul*                   ) icon="🇰🇷" ;;
+		*                          ) icon="🇺🇸" ;;
 	esac
 	[ "$ime" ] && printf "$icon"
 }
@@ -114,7 +114,7 @@ vol() {
 case "$START" in
 	*dwm*)
 		while true; do
-			sleep 0.5 && xprop -root -set WM_NAME "$(cpu)$(ime)$(usb)$(dpm)$(bat)$(net)$(vol)$(clk)"
+			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb)$(dpm)$(cpu)$(bat)$(net)$(vol) $(clk) "
 		done
 		;;
 	*)
