@@ -118,6 +118,6 @@ case "$START" in
 		done
 		;;
 	*)
-		printf "$(bat) $(net) $(vol)"
+		printf "$(bat) $(net)  $(vol)"
 		;;
 esac
