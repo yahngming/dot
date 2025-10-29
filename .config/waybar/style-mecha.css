@@ -42,7 +42,6 @@
 * {
 	font-family: monospace;
 	font-weight: bold;
-	font-size: 16px;
 	min-height: 0;
 	padding: 0;
 	border: none;
@@ -53,7 +52,7 @@
 
 window#waybar > box {
 	background-color: @main-bg;
-	margin: 4px;
+	padding: 1px;
 }
 
 /* Main Shadow */
@@ -171,7 +170,6 @@ tooltip decoration {
 
 #custom-start {
 	background: @main-bg;
-	font-size: 20px;
 }
 
 /* Workspaces */
@@ -394,7 +392,6 @@ tooltip decoration {
 }
 #custom-power:hover {
 	background: @hover-bg;
-	font-size: 20px;
 	text-shadow: none;
 	box-shadow: none;
 }
@@ -432,7 +429,7 @@ tooltip decoration {
 #custom-right3,
 #custom-right4,
 #custom-right5 {
-	font-size: 23.1px;
+	font-size: 14.68px;
 }
 
 /* left and right inverse */
@@ -444,7 +441,7 @@ tooltip decoration {
 
 /* logo icon */
 #custom-logo {
-	font-size: 12.6px;
+	font-size: 12.5px;
 }
 
 /* logo arrows override */
