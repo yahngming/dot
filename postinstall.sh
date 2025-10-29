@@ -53,5 +53,7 @@ help() {
 	echo "  chromeos        run post install script on ChromeOS"
 }
 
-distro=${1:-help}
-$distro
+case "$@" in
+	arch|chromeos ) $@ ;;
+	*             ) help ;;
+esac
