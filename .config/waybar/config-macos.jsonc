@@ -142,9 +142,9 @@
 			"format-critical": "{icon} {temperatureC}°C",
 			"format": "{icon} {temperatureC}°C",
 			"format-icons": [
-				"",
+				"",
 				"",
-				""
+				""
 			]
 		},
 		"backlight": {
@@ -167,7 +167,7 @@
 				"critical": 15
 			},
 			"format": "{icon}",
-			"format-charging": "",
+			"format-charging": "{icon}",
 			"format-plugged": "",
 			"format-icons": [
 				"",
@@ -182,17 +182,15 @@
 		},
 		"network": {
 			"format-wifi": "",
-			"format-ethernet": "",
-			"tooltip-format": "",
-			"format-linked": "",
-			"format-disconnected": "⚠"
+			"format-ethernet": "󰈀",
+			"format-disconnected": "󰌙"
 		},
 		"pulseaudio": {
 			"scroll-step": 5,
 			"format": "{icon}",
 			"format-bluetooth": "",
-			"format-bluetooth-muted": "",
-			"format-muted": "",
+			"format-bluetooth-muted": "󰗿",
+			"format-muted": "",
 			"format-source": "",
 			"format-source-muted": "",
 			"format-icons": {
