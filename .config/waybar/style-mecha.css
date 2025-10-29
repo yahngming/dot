@@ -259,8 +259,8 @@ tooltip decoration {
 #custom-logo {
 	color: @logo-fg;
 	background: @logo-bg;
-	margin: 0 -1px -1px 0;
-	padding: 0 9px 0 5px;
+	margin: 0 0 0 0;
+	padding: 0 5px 0 5px;
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }
 #custom-right2 {
