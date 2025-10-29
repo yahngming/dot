@@ -21,7 +21,7 @@
 	box-shadow: none;
 	border: none;
 	border-radius: 0;
-	font-family: "Segoe UI", "Ubuntu";
+	font-family: system-ui;
 	font-weight: 600;
 	font-size: 12.7px;
 	
@@ -46,7 +46,7 @@ tooltip label{
 }
 
 #custom-start {
-	font-family: monospace;
+	font-family: graphical;
 	font-size: 24px;
 	padding-left: 12px;
 	padding-right: 20px;
