@@ -5,6 +5,7 @@
 		"height": 24,
 		"spacing": 5,
 		"modules-left": [
+			"custom/launcher",
 			"hyprland/window",
 			"custom/texttwo",
 			"custom/textthree",
@@ -31,9 +32,9 @@
 		],
 		"hyprland/window": {
 			"format": "{class}",
-			"icon": true,
+			"icon": false,
 			"icon-size": 14,
-			"max-length": 20
+			"max-length": 60
 		},
 		"custom/launcher": {
 			"format": "🔍",
@@ -61,7 +62,8 @@
 		"custom/textfive": {
 			"exec": "echo 'Help'",
 			"interval": 60,
-			"return-type": "plain"
+			"return-type": "plain",
+			"on-click": "aboutmenu"
 		},
 		"keyboard-state": {
 			"numlock": true,
