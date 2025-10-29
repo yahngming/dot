@@ -52,7 +52,7 @@
 
 window#waybar > box {
 	background-color: @main-bg;
-	padding: 1px;
+	padding: 0px;
 }
 
 /* Main Shadow */
