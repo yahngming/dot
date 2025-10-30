@@ -4,22 +4,20 @@ off() {
 	if [ -f ~/.config/proxy ]; then
 		rm -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "none"
-		sudo systemctl stop sing-box.service
-		sudo systemctl disable sing-box.service
+		sudo systemctl stop mihomo.service
+		sudo systemctl disable mihomo.service
 	fi
 }
 
 on() {
-	sudo cp ~/.local/src/sub/singbox /etc/sing-box/config.json
-	sudo chown sing-box:sing-box /etc/sing-box/config.json
-	sudo chmod 640 /etc/sing-box/config.json
+	sudo cp ~/.local/src/sub/clash /etc/mihomo/config.yaml
 	if [ ! -f ~/.config/proxy ]; then
 		touch -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "manual"
-		sudo systemctl start sing-box.service
-		sudo systemctl enable sing-box.service
+		sudo systemctl start mihomo.service
+		sudo systemctl enable mihomo.service
 	else
-		sudo systemctl restart sing-box.service
+		sudo systemctl restart mihomo.service
 	fi
 }
 
