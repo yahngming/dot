@@ -7,10 +7,6 @@ chmod +x ~/.local/bin/* ~/.config/nsxiv/exec/*
 rm -rf ~/.git ~/postinstall.sh ~/README.md
 cd - >/dev/null 2>&1
 
-cd ~/.local/src/sub
-git pull
-cd - >/dev/null 2>&1
-
 if [ "$BROWSER" == "firefox" ]; then
 	cd ~/.config/firefox
 	chmod +x *.sh
