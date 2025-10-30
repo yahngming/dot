@@ -12,6 +12,7 @@ off() {
 on() {
 	cd ~/.local/src/sub
 	git pull
+	cd - >/dev/null 2>&1
 	sudo cp ~/.local/src/sub/clash /etc/mihomo/config.yaml
 	if [ ! -f ~/.config/proxy ]; then
 		touch -f ~/.config/proxy
