@@ -21,7 +21,7 @@
 
 #workspaces button {
 	all: initial;
-	padding: 0 7.5px;
+	padding: 0 1px;
 	margin: 0 1.5px;
 	min-width: 9px;
 }
