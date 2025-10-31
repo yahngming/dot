@@ -7,7 +7,7 @@ esac
 menu="\
 󰨇 Dashboard\n\
   ----\n\
-󰿨 Sub Store\n\
+󰿨 Substore\n\
  Subconverter\n\
   ----\n\
 󰌙 Disable proxy\n\
@@ -16,7 +16,7 @@ menu="\
 
 case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
 	*Dashboard*    ) xdg-open http://127.0.0.1:9090/ui/ ;;
-	*Sub Store*    ) xdg-open http://127.0.0.1:3001/ ;;
+	*Substore*     ) xdg-open http://127.0.0.1:3001/ ;;
 	*Subconverter* ) xdg-open http://127.0.0.1:25500/sub?url=http%3A%2F%2F127.0.0.1%3A3001%2F12345678910987654321%2Fdownload%2Fcollection%2Feverything&config=https%3A%2F%2Fraw.githubusercontent.com%2Fyahngming%2Frules%2Fmaster%2Fsubconverter.ini&upload=true&target=clash ;;
 	*Disable*      ) tui "proxy off" ;;
 	*Enable*       ) tui "proxy on" ;;
