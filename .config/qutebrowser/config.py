@@ -78,7 +78,7 @@ c.url.searchengines = {
 	'x': 'https://twitter.com/search?q={}',
 	'y': 'https://www.youtube.com/results?search_query={}'
 }
-c.statusbar.padding = {'top': 5, 'right': 5, 'bottom': 2, 'left': 5}
+c.statusbar.padding = {'top': 9, 'right': 5, 'bottom': 1, 'left': 5}
 c.statusbar.show = 'in-mode'
 c.tabs.indicator.width = 0
 c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
