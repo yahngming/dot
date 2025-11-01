@@ -412,7 +412,7 @@ tooltip decoration {
 
 /* modules */
 * {
-	font-size: 10px;
+	font-size: 11px;
 }
 
 /* left and right arrows */
@@ -429,25 +429,25 @@ tooltip decoration {
 #custom-right3,
 #custom-right4,
 #custom-right5 {
-	font-size: 14.68px;
+	font-size: 15px;
 }
 
 /* left and right inverse */
 #custom-leftin1,
 #custom-leftin2,
 #custom-rightin1 {
-	font-size: 16.68px;
+	font-size: 17px;
 }
 
 /* logo icon */
 #custom-logo {
-	font-size: 10px;
+	font-size: 12px;
 }
 
 /* logo arrows override */
 #custom-left5,
 #custom-right2 {
-	font-size: 16.68px;
+	font-size: 17px;
 }
 
 /*
