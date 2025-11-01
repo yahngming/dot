@@ -249,7 +249,7 @@
 			"mode-mon-col": 6,
 			"format": {
 				"months": "<span color='#b4befe'><b>{}</b></span>",
-				"weekdays": "<span color='#a6adc8' font='7'>{}</span>",
+				"weekdays": "<span color='#a6adc8'>{}</span>",
 				"today": "<span color='#f38ba8'><b>{}</b></span>"
 			}
 		},
