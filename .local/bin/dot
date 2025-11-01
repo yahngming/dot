@@ -7,7 +7,7 @@ chmod +x ~/.local/bin/* ~/.config/nsxiv/exec/*
 rm -rf ~/.git ~/postinstall.sh ~/README.md
 cd - >/dev/null 2>&1
 
-if pgrep qutebrowser; then
+if pgrep qutebrowser >/dev/null; then
 	qutebrowser :config-source
 fi
 
