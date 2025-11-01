@@ -55,7 +55,7 @@
 	// modules
 
 	"custom/start": {
-		"format": "  ",
+		"format": "",
 		"tooltip": false,
 		"on-click": "launcher",
 		"min-length": 3,
@@ -184,7 +184,7 @@
 		"format": "{player_icon} {title} - {artist}",
 		"format-paused": "{status_icon} {title} - {artist}",
 		"player-icons": {
-			"chromium": "<span foreground='#cd201f'>󰗃 </span>",
+			"youtube": "<span foreground='#cd201f'>󰗃 </span>",
 			"spotify": "<span foreground='#a6e3a1'>󰓇 </span>",
 			"default": "󰝚 "
 		},
