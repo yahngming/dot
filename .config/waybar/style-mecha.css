@@ -460,10 +460,10 @@ tooltip decoration {
 	padding: 0 2px;
 }
 #workspaces button.active {
-	padding: 0 6px;
+	padding: 0 4px;
 }
 #custom-start {
-	padding: 0 5px 0 9px;
+	padding: 0 3px 0 9px;
 }
 #custom-power {
 	border-radius: 10px;
