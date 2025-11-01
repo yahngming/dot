@@ -40,7 +40,7 @@
 @define-color charging        @fg;
 
 * {
-	font-family: monospace;
+	font-family: terminal;
 	font-weight: bold;
 	min-height: 0;
 	padding: 0;
@@ -259,7 +259,7 @@ tooltip decoration {
 	background: @logo-bg;
 	font-size: 23px;
 	margin: 0 0 -1px 0;
-	padding: 0 3px 0 3px;
+	padding: 0 5px 0 5px;
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }
 #custom-right2 {
