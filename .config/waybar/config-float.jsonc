@@ -61,7 +61,7 @@
 		"format": "{}",
 		"interval": 3,
 		"exec": "printf '󰕓'",
-		"exec-if": "df | grep '/media/' > /dev/null",
+		"exec-if": "df | grep '/media/' >/dev/null",
 		"on-click": "usbmenu",
 		"tooltip": false
 	},
