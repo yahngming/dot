@@ -40,7 +40,7 @@
 @define-color charging        @fg;
 
 * {
-	font-family: terminal;
+	font-family: graphical;
 	font-weight: bold;
 	min-height: 0;
 	padding: 0;
