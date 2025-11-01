@@ -10,7 +10,7 @@ try:
 except (FileNotFoundError, Exception):
 	pass
 
-c.auto_save.session = true
+c.auto_save.session = True
 c.colors.completion.even.bg = c0
 c.colors.completion.fg = c3
 c.colors.completion.item.selected.bg = c3
@@ -62,7 +62,7 @@ c.fileselect.handler = "external"
 c.fileselect.multiple_files.command = ['picker', '-selection-path={}']
 c.fileselect.single_file.command = ['picker', '-selection-path={}']
 c.fonts.default_family = 'monospace'
-c.input.insert_mode.auto_load = true
+c.input.insert_mode.auto_load = True
 c.qt.args = [
 	'enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,TouchpadOverscrollHistoryNavigation,VaapiVideoDecoder',
 	'enable-gpu-rasterization',
@@ -84,8 +84,8 @@ c.tabs.indicator.width = 0
 c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
 c.tabs.position = 'left'
 c.tabs.width = '15%'
-c.window.transparent = true
-config.load_autoconfig(false)
+c.window.transparent = True
+config.load_autoconfig(False)
 config.bind('<Alt-Left>', 'back')
 config.bind('<Alt-Right>', 'forward')
 config.bind('<Ctrl-A>', 'fake-key <Ctrl-A>')
