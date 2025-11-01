@@ -258,7 +258,6 @@ tooltip decoration {
 #custom-logo {
 	color: @logo-fg;
 	background: @logo-bg;
-	font-size: 23px;
 	margin: 0 0 -1px 0;
 	padding: 0 5px 0 5px;
 	text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
@@ -414,6 +413,9 @@ tooltip decoration {
 /* modules */
 * {
 	font-size: 11px;
+}
+tooltip {
+	font-size: 12px;
 }
 
 /* left and right arrows */
