@@ -36,7 +36,7 @@ clk() {
 		"12" ) icon="󱑊" ;;
 	esac
 	clk="$(date '+%H:%M')"
-	printf "$icon$clk"
+	printf "$clk"
 }
 
 cpu() {
@@ -46,7 +46,7 @@ cpu() {
 		$((cpu <= 80)) ) icon="󰔏" ;;
 		$((cpu <= 99)) ) icon="󱃂" ;;
 	esac
-	[ "$cpu" ] && printf "$icon$cpu"
+	[ "$cpu" ] && printf "$icon"
 }
 
 cut() {
