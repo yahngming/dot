@@ -9,3 +9,5 @@ sudo cp -r ~/.config/udev/ /etc/
 sudo cp -r ~/.config/systemd/ /etc/
 sudo systemd-hwdb update
 sudo udevadm trigger
+
+fc-cache -f
