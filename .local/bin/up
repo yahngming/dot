@@ -5,9 +5,10 @@ yay --noconfirm
 sudo pacman -Rns $(pacman -Qtdq) --noconfirm
 yay -Scc --noconfirm
 
+dot
 sudo cp -r ~/.config/udev/ /etc/
 sudo cp -r ~/.config/systemd/ /etc/
+sudo cp ~/.local/src/sub/mihomo /etc/mihomo/config.yaml
 sudo systemd-hwdb update
 sudo udevadm trigger
-
 fc-cache -f
