@@ -24,6 +24,7 @@ set mat=2
 set mouse=a
 set nobackup
 set nocompatible
+set noemoji
 set noerrorbells
 set noshowmode
 set noswapfile
