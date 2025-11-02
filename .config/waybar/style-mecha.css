@@ -25,7 +25,6 @@
 @define-color logo-bg         @overlay2;
 @define-color pulseaudio      @surface0;
 @define-color sourceaudio     @base;
-@define-color backlight       @base;
 @define-color battery         @mantle;
 
 @define-color tray            @mantle;
@@ -290,16 +289,6 @@ tooltip decoration {
 }
 #custom-right4 {
 	color: @sourceaudio;
-	background: @battery;
-}
-
-/* Brightness */
-
-#backlight {
-	background: @backlight;
-}
-#custom-right4 {
-	color: @backlight;
 	background: @battery;
 }
 
