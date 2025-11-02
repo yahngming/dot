@@ -29,7 +29,7 @@ help() {
 setenv() {
 	case "$XDG_VTNR" in
 		1)
-			export LAUNCHER="fuzzel"
+			export LAUNCHER="walker"
 			export START="exec Hyprland"
 			export TERMINAL="foot"
 			;;
