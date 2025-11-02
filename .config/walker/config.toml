@@ -7,5 +7,4 @@ default = [
 	"calc",
 	"desktopapplications",
 	"files",
-	"websearch",
 ]
