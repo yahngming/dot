@@ -6,9 +6,6 @@ theme = "default"
 default = [
 	"calc",
 	"desktopapplications",
+	"files",
 	"websearch",
 ]
-
-[[providers.prefixes]]
-prefix = ";"
-provider = "providerlist"
