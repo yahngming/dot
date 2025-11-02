@@ -24,8 +24,8 @@ scrollbar {
 
 .box-wrapper {
 	background: alpha(@bg, 0.95);
-	padding: 20px;
-	border: 2px solid @fg;
+	padding: 10px;
+	border: 1px solid @gg;
 }
 
 .preview-box {
