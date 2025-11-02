@@ -129,7 +129,7 @@ cmd pager ${{
 	if [ -f "$f" ]; then
 		bat --paging always "$f"
 	elif [ -d "$f" ]; then
-		tree "$f" | bat --paging always -pl ini
+		tree "$f" | bat --paging always -pl conf
 	fi
 }}
 
