@@ -4,8 +4,11 @@ theme = "default"
 
 [providers]
 default = [
-	"desktopapplications",
 	"calc",
-	"menu",
+	"desktopapplications",
 	"websearch",
 ]
+
+[[providers.prefixes]]
+prefix = ";"
+provider = "providerlist"
