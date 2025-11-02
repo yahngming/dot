@@ -2,7 +2,6 @@
 
 case "$LAUNCHER" in
 	fuzzel ) opt="--width 80" ;;
-	walker ) opt="--width 800" ;;
 esac
 
 declare -A KEYCODE_SYM_MAP
