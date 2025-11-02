@@ -2,26 +2,7 @@
 
 pkill $LAUNCHER && exit
 
-echo_err() {
-	notify-send -u critical "$0 error" "$1"
-}
-
-err() {
-	echo_err "$1"
-	exit 1
-}
-
-check_dep() {
-	command -v "$1" > /dev/null || err "$1 is required: $2"
-}
-
-# We don't check if dmenu is installed because someone
-# may want to replace it via DMENU vars
-check_dep trans https://github.com/soimort/translate-shell
-check_dep notify-send
-
 load_config() {
-	# Check display server
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		: "${CLIP_COPY:=wl-copy -n}"
 		: "${CLIP_PASTE_CLIP:=wl-paste}"
@@ -31,13 +12,10 @@ load_config() {
 		: "${CLIP_PASTE_CLIP:=xclip -o -selection clipboard}"
 		: "${CLIP_PASTE_PRIM:=xclip -o -selection primary}"
 	fi
-
-	# Default values
 	: "${TRANS_ENGINE:=google}"
-	: "${TRANS_LANGS:=:zh :ja :en}"
+	: "${TRANS_LANGS:=:zh :en :ja}"
 	: "${DMENU_TEXT:=menu -p 'Translate:'}"
 	: "${DMENU_LANG:=menu -p 'To:'}"
-	: "${DMENU_NEXT:=menu -p 'Options:'}"
 }
 
 formatmenu() {
@@ -56,18 +34,7 @@ clip_menu() {
 
 lang_menu() {
 	echo "$TRANS_LANGS" | sed 's/\s\+/\n/g' | sed '/:/!s/^/:/'
-	echo '[Define]'
-}
-
-choose_next() {
-	t="$1"
-	shift
-	if [ -n "$ALWAYS_COPY" ]; then
-		echo 'Copy'
-		echo 'View'
-	else
-		echo 'View'
-	fi
+	echo ":Define"
 }
 
 save_file() (
@@ -91,45 +58,20 @@ get_text() {
 			exit 10
 		}
 	done
-
-	# If not found, just echo text
 	[ $? -ne 10 ] && echo "$1"
 }
 
-# Config
 load_config
 
-# Get selections
-clipboard="$(get_selection clip)"
 primary="$(get_selection)"
-
+clipboard="$(get_selection clip)"
 clip_menu="$(clip_menu "$primary" "$clipboard")"
-
-# Enter text
 text="$(printf '%s' "$clip_menu" | eval "$DMENU_TEXT" '$@')" || exit 0
 text="$(get_text "$text" "$clip_menu")"
-
-# Choose target language
 target="$(lang_menu | eval "$DMENU_LANG" '$@')" || exit 0
 
-# If Define chosen, define term and exit
-[ "$target" = '[Define]' ] && {
-	dict="$(trans -dictionary "$text")"
+if [ "$target" = ":Define" ]; then
 	open_term "$(trans -dictionary "$text")"
-	exit 0
-}
-
-# Translate text
-translation="$(trans -e "${TRANS_ENGINE:-'google'}" "$target" "$text")"
-[ -z "$translation" ] && err 'Translation failed.'
-
-case "$(choose_next "$translation" "$@")" in
-	'View')                open_term "$translation"; exit 0 ;;
-	'Copy temp file name') output="$(save_file "$translation")" ;;
-	'Copy'*)               output="$translation" ;;
-	*)                     exit 0 ;;
-esac
-
-echo "$output" | eval "$CLIP_COPY" || err 'Copy failed.'
-
-notify-send 'Translation copied.'
+else
+	open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
+fi
