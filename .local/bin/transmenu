@@ -66,7 +66,7 @@ load_config
 primary="$(get_selection)"
 clipboard="$(get_selection clip)"
 clip_menu="$(clip_menu "$primary" "$clipboard")"
-text="$(printf '%s' "$clip_menu" | eval "$DMENU_TEXT" '$@')" || exit 0
+text="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
 text="$(get_text "$text" "$clip_menu")"
 target="$(lang_menu | eval "$DMENU_LANG" '$@')" || exit 0
 
