@@ -10,7 +10,7 @@ case "$@" in
 	cpu     ) lscpu | bat -fpPl cpuinfo ;;
 	drive   ) lsblk | bat -fpPl conf ;;
 	gpu     ) lsgpu | bat -fpPl cpuinfo ;;
-	memory  ) free -h | bat -fpPl cpuinfo ;;
+	memory  ) free -h | bat -fpPl meminfo ;;
 	pci     ) lspci | bat -fpPl cpuinfo ;;
 	sensors ) sensors | bat -fpPl cpuinfo ;;
 	system  ) fastfetch ;;
