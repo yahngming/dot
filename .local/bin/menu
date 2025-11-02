@@ -1,6 +1,6 @@
 #!/bin/sh
 
 case "$LAUNCHER" in
-	fuzzel|hyprlauncher|walker ) $LAUNCHER --dmenu "$@" ;;
-	*                          ) dmenu "$@" ;;
+	fuzzel|walker ) $LAUNCHER --dmenu "$@" ;;
+	*             ) dmenu "$@" ;;
 esac
