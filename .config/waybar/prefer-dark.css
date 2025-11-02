@@ -1,4 +1,4 @@
-@import '/home/yahngming/.cache/wal/colors-waybar.css';
+@import '../../.cache/wal/colors-waybar.css';
 
 @define-color bg              @background;
 @define-color fg              @foreground;
