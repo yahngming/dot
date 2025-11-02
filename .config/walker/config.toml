@@ -1,0 +1,3 @@
+force_keyboard_focus = true
+hide_quick_activation = true
+theme = "dmenu"
