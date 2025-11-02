@@ -7,7 +7,7 @@
 * {
 	font-family: terminal;
 	font-size: 18px;
-	color: @text;
+	color: @fg;
 }
 
 scrollbar {
@@ -23,9 +23,9 @@ scrollbar {
 }
 
 .box-wrapper {
-	background: alpha(@base, 0.95);
+	background: alpha(@bg, 0.95);
 	padding: 20px;
-	border: 2px solid @border;
+	border: 2px solid @fg;
 }
 
 .preview-box {
@@ -35,7 +35,7 @@ scrollbar {
 }
 
 .search-container {
-	background: @base;
+	background: @bg;
 	padding: 10px;
 }
 
@@ -75,7 +75,7 @@ child:selected .item-box {
 }
 
 child:selected .item-box * {
-	color: @selected-text;
+	color: @gg;
 }
 
 .item-box {
@@ -107,11 +107,11 @@ child:selected .item-box * {
 }
 
 .keybind-hints {
-	background: @background;
+	background: @bg;
 	padding: 10px;
 	margin-top: 10px;
 }
 
 .preview {
-	background: @background;
+	background: @bg;
 }
