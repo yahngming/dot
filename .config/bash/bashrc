@@ -23,7 +23,7 @@ _fzf_comprun() {
 }
 
 help() {
-	"$@" -h 2>&1 | bat --plain --language=help
+	"$@" --help 2>&1 | bat --plain --language=help
 }
 
 setenv() {
