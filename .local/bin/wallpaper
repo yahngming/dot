@@ -15,6 +15,7 @@ setpaper() {
 		exit
 	fi
 	wal -n -i "$wallpaper"
+	cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl hyprpaper reload ,"$wallpaper"
