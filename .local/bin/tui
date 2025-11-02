@@ -6,8 +6,8 @@ case "$TERMINAL" in
 esac
 
 case "$@" in
-	*about*|dot|less|*proxy*|*rclone*|tzselect|up ) class="center" ;;
-	*telnet*                                 ) class="fullscreen" ;;
+	*about*|dot|*less*|*proxy*|*rclone*|tzselect|up ) class="center" ;;
+	*telnet*                                        ) class="fullscreen" ;;
 esac
 
 $TERMINAL $opt $class -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
