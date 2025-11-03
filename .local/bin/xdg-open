@@ -6,7 +6,7 @@ case $(file --mime-type -Lb "$@") in
 	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
 	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
 	*http*                                 ) browser "$@" ;;
-	*json*|*yml*|*xml*                     ) bat --paging always "$@" ;;
+	*empty*|*json*|*xml*                   ) bat --paging always "$@" ;;
 	*markdown*                             ) glow --pager "$@" ;;
 	*telnet*                               ) tui "telnet $(echo "${1#telnet://}" | sed 's/:/ /')" ;;
 	application/*                          ) "$@" ;;
