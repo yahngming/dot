@@ -25,6 +25,7 @@ arch() {
    	sudo systemctl enable smb.service
 	sudo sed -i 's/LOGIN_TIMEOUT.*/LOGIN_TIMEOUT 0/' /etc/login.defs
 	sudo gpasswd -a $USER uucp
+	sudo usermod -aG docker $USER
 }
 
 chromeos() {
