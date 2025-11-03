@@ -1,7 +1,7 @@
 #!/bin/sh
 
 arch() {
-	sudo pacman -S 7zip aerc android-tools atool base-devel bat bc bluez bluez-utils brightnessctl btop cmus cups dante docker evtest eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow id3v2 inetutils jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-adblock python-pywal rclone ripgrep samba timeshift translate-shell udiskie ueberzugpp unrar unzip w3m wireplumber zathura-pdf-poppler zoxide # base
+	sudo pacman -S 7zip aerc android-tools atool base-devel bat bc bluez bluez-utils brightnessctl btop cmus cups dante docker docker-compose evtest eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow id3v2 inetutils jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-adblock python-pywal rclone ripgrep samba timeshift translate-shell udiskie ueberzugpp unrar unzip w3m wireplumber zathura-pdf-poppler zoxide # base
 	sudo pacman -S noto-fonts-cjk noto-fonts-emoji ttf-noto-nerd ttf-terminus-nerd # font
 	sudo pacman -S gvim libreoffice-fresh qutebrowser steam # gui
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
