@@ -36,7 +36,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Caffeine*    ) caffeinemenu ;;
 	*Cloud*       ) cloudmenu ;;
 	*Display*     ) dispmenu ;;
-	*Dotfiles*    ) tui dot ;;
+	*Dotfiles*    ) tui "dot" ;;
 	*Fetch*       ) fetchmenu ;;
 	*IME*         ) fcitx5-configtool ;;
 	*Password*    ) passmenu ;;
@@ -45,8 +45,8 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Screensaver* ) screensavermenu ;;
 	*SMB*         ) smbmenu ;;
 	*Theme*       ) thememenu ;;
-	*Timezone*    ) tui tzselect ;;
-	*Update*      ) tui up ;;
+	*Timezone*    ) tui "tzselect" ;;
+	*Update*      ) tui "up" ;;
 	*USB*         ) usbmenu ;;
 	*Wallpaper*   ) wallpapermenu ;;
 	*WLAN*        ) wlanmenu ;;
