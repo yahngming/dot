@@ -75,7 +75,6 @@ c.qt.args = [
 	'ignore-gpu-blocklist',
 	'ozone-platform-hint=auto'
 ]
-c.spellcheck.languages = ["en-US"]
 c.statusbar.show = 'in-mode'
 c.tabs.indicator.width = 0
 c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
