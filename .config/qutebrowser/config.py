@@ -16,6 +16,11 @@ c.colors.completion.fg = c3
 c.colors.completion.item.selected.bg = c3
 c.colors.completion.item.selected.fg = c7
 c.colors.completion.odd.bg = c0
+c.colors.contextmenu.disabled.fg = c1
+c.colors.contextmenu.menu.bg = c0
+c.colors.contextmenu.menu.fg = c8
+c.colors.contextmenu.selected.bg = c3
+c.colors.contextmenu.selected.fg = c7
 c.colors.downloads.bar.bg = c0
 c.colors.downloads.start.bg = c0
 c.colors.downloads.stop.bg = c3
@@ -70,19 +75,16 @@ c.qt.args = [
 	'ignore-gpu-blocklist',
 	'ozone-platform-hint=auto'
 ]
-c.url.searchengines = {
-	'DEFAULT': 'https://duckduckgo.com/?q={}',
-	'g': 'https://google.com/search?hl=en&q={}',
-	'r': 'https://www.reddit.com/search?q={}',
-	'w': 'https://en.wikipedia.org/wiki/{}',
-	'x': 'https://twitter.com/search?q={}',
-	'y': 'https://www.youtube.com/results?search_query={}'
-}
+c.spellcheck.languages = ["en-US"]
 c.statusbar.show = 'in-mode'
 c.tabs.indicator.width = 0
 c.tabs.padding = {'top': 5, 'right': 9, 'bottom': 5, 'left': 9}
 c.tabs.position = 'left'
 c.tabs.width = '15%'
+c.url.searchengines = {
+	'DEFAULT': 'https://duckduckgo.com/?q={}',
+	'g': 'https://google.com/search?hl=en&q={}'
+}
 c.window.transparent = True
 config.load_autoconfig(False)
 config.bind('<Alt-Left>', 'back')
