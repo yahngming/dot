@@ -27,8 +27,8 @@ on() {
 
 help() {
 	echo "Usage: proxy [MODE]"
-	echo "  off        disable proxy"
-	echo "  on         enable/reload proxy"
+	echo "  off        disable/stop proxy"
+	echo "  on         enable/start proxy"
 }
 
 case "$@" in
