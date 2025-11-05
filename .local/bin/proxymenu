@@ -6,18 +6,16 @@ esac
 
 menu="\
 󰨇 Dashboard\n\
-  ----\n\
-󰿨 Substore\n\
+󰌙 Disable/stop proxy\n\
+󱊪 Enable/reload proxy\n\
  Subconverter\n\
-  ----\n\
-󰌙 Disable proxy\n\
-󱊪 Enable or reload proxy\n\
+󰿨 Sub-Store\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Proxy" "$@") in
-	*Dashboard*    ) xdg-open http://127.0.0.1:9090/ui/ ;;
-	*Substore*     ) xdg-open http://127.0.0.1:3001/?api=http://127.0.0.1:3001/12345678910987654321 ;;
-	*Subconverter* ) xdg-open http://127.0.0.1:25500/sub?url=http%3A%2F%2F127.0.0.1%3A3001%2F12345678910987654321%2Fdownload%2Fcollection%2Feverything&config=https%3A%2F%2Fraw.githubusercontent.com%2Fyahngming%2Frules%2Fmaster%2Fsubconverter.ini&upload=true&target=clash ;;
+case $(printf "$menu" | menu $opt -p "$PROXY" "$@") in
+	*Dashboard*    ) xdg-open http://127.0.0.1:9090/ ;;
 	*Disable*      ) tui "proxy off" ;;
 	*Enable*       ) tui "proxy on" ;;
+	*Subconverter* ) xdg-open http://127.0.0.1:25500/sub?url=http%3A%2F%2F127.0.0.1%3A3001%2F12345678910987654321%2Fdownload%2Fcollection%2Feverything&config=https%3A%2F%2Fraw.githubusercontent.com%2Fyahngming%2Frules%2Fmaster%2Fsubconverter.ini&upload=true&target=clash ;;
+	*Sub-Store*    ) xdg-open http://127.0.0.1:3001/?api=http://127.0.0.1:3001/12345678910987654321 ;;
 esac
