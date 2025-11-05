@@ -4,8 +4,8 @@ off() {
 	if [ -f ~/.config/proxy ]; then
 		rm -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "none"
-		sudo systemctl stop mihomo.service
-		sudo systemctl disable mihomo.service
+		sudo systemctl stop $PROXY.service
+		sudo systemctl disable $PROXY.service
 	fi
 }
 
@@ -13,14 +13,15 @@ on() {
 	cd ~/.local/src/sub
 	git pull
 	cd - >/dev/null 2>&1
-	sudo cp ~/.local/src/sub/mihomo /etc/mihomo/config.yaml
+	sudo cp ~/.local/src/sub/$PROXY /etc/$PROXY/config.json
+	sudo cp ~/.local/src/sub/$PROXY /etc/$PROXY/config.yaml
 	if [ ! -f ~/.config/proxy ]; then
 		touch -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "manual"
-		sudo systemctl start mihomo.service
-		sudo systemctl enable mihomo.service
+		sudo systemctl start $PROXY.service
+		sudo systemctl enable $PROXY.service
 	else
-		sudo systemctl restart mihomo.service
+		sudo systemctl restart $PROXY.service
 	fi
 }
 
