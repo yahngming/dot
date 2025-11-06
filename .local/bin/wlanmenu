@@ -19,7 +19,7 @@ iwd_dmenu() {
 
 			# user can connect, disconnect, or forget network
 			# don't care bout access points or other stuff
-			if ! show_menu 'WLAN' 'Connect' 'Disconnect' 'Forget'; then break; fi
+			if ! show_menu 'WLAN' 'Connect' 'Disconnect' 'Forget' 'Portal'; then break; fi
 		done
 	}
 
@@ -73,6 +73,10 @@ iwd_dmenu() {
 			[ -n "${network}" ] && answer="$(show_menu "Forget ${network}?" 'Cancel' 'Confirm')"
 			[ "${answer}" = "Confirm" ] && iwctl known-networks "${network}" forget
 		fi
+	}
+
+	portal() {
+		xdg-open http://http.badssl.com/
 	}
 
 	# get network column separately
