@@ -32,7 +32,7 @@ setpaper() {
 		sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
 		killall dunst && dunst &
 	fi
-	sed -i 's/osd-color=.*/osd-color="${color7}dd"/' "$HOME/.config/mpv/mpv.conf"
+	sed -i "s/osd-color=.*/osd-color='${color7}dd'/" "$HOME/.config/mpv/mpv.conf"
 	pgrep qutebrowser && qutebrowser ":config-source"
 	cp "$wallpaper" "$paperfolder/wallpaper"
 }
