@@ -34,6 +34,7 @@ setpaper() {
 	fi
 	sed -i "s/osd-back-color=.*/osd-back-color='${color0}dd'/" "$HOME/.config/mpv/mpv.conf"
 	sed -i "s/osd-color=.*/osd-color='${color8}dd'/" "$HOME/.config/mpv/mpv.conf"
+	sed -i "s/osd-selected-color=.*/osd-selected-color='${color7}dd'/" "$HOME/.config/mpv/mpv.conf"
 	pgrep qutebrowser && qutebrowser ":config-source"
 	cp "$wallpaper" "$paperfolder/wallpaper"
 }
