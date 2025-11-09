@@ -68,7 +68,6 @@ export HISTSIZE=10000
 export LESS="-IR --use-color -Dd+r -Du+b"
 export MANPAGER="less"
 export MANROFFOPT="-P -c"
-export OPENER="xdg-open"
 export PROXY="sing-box"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
