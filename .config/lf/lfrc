@@ -122,7 +122,7 @@ cmd on-select &{{
 }}
 
 cmd open ${{
-	$OPENER $fx
+	xdg-open $fx
 }}
 
 cmd pager ${{
