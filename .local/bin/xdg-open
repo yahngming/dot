@@ -1,11 +1,15 @@
 #!/bin/sh
 
+case "$@" in
+	*watch?v*                              ) setsid -f mpv --force-window >/dev/null 2>&1 "$@" ;;
+	*http*                                 ) browser "$@" ;;
+esac
+
 case $(file --mime-type -Lb "$@") in
 	*archive*|*compress*|*rar*|*tar*|*zip* ) als --page "$@" ;;
 	*diff*                                 ) delta --paging always < "$@" ;;
 	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
 	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
-	*http*                                 ) browser "$@" ;;
 	*empty*|*json*|*xml*                   ) bat --paging always "$@" ;;
 	*markdown*                             ) glow --pager "$@" ;;
 	*telnet*                               ) tui "telnet $(echo "${1#telnet://}" | sed 's/:/ /')" ;;
