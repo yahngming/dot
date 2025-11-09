@@ -5,7 +5,7 @@ help() {
 }
 
 case "$@" in
-	auto   ) bindsmenu ;;
+	auto   ) sudo timedatectl set-timezone $(curl http://ip-api.com/line/?fields=timezone) ;;
 	manual ) sudo timedatectl set-timezone $(tzselect) ;;
 	*      ) help ;;
 esac
