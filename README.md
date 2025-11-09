@@ -43,8 +43,8 @@ bash <(curl -L https://raw.githubusercontent.com/yahngming/dot/master/postinstal
 chrome-untrusted://terminal/html/nassh_preferences_editor.html
 ```
 @font-face {
-  font-family: "FiraMono Nerd Font";
-  src: url("https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraMono/Regular/FiraMonoNerdFont-Regular.otf");
+  font-family: "NotoSansM Nerd Font";
+  src: url("https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Noto/Sans-Mono/NotoSansMNerdFont-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
