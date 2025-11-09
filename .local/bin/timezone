@@ -1,11 +1,8 @@
 #!/bin/sh
 
-help() {
-	echo "Usage: timezone [auto|manual]"
-}
-
 case "$@" in
 	auto   ) sudo timedatectl set-timezone $(curl http://ip-api.com/line/?fields=timezone) ;;
 	manual ) sudo timedatectl set-timezone $(tzselect) ;;
-	*      ) help ;;
+	help   ) echo "Usage: timezone [auto|manual]" ;;
+	*      ) timedatectl | grep zone ;;
 esac
