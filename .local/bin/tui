@@ -6,7 +6,7 @@ case "$TERMINAL" in
 esac
 
 case "$@" in
-	*about*|*bat*|dot|*proxy*|*rclone*|tzselect|up ) class="center" ;;
+	*about*|*bat*|dot|*proxy*|*rclone*|timezone|up ) class="center" ;;
 	*telnet*                                       ) class="fullscreen" ;;
 esac
 
