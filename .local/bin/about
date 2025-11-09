@@ -1,9 +1,5 @@
 #!/bin/sh
 
-help() {
-	echo "Usage: about [battery|binds|cpu|drive|gpu|memory|pci|sensors|system|time|usb]"
-}
-
 case "$@" in
 	battery ) upower -i $(upower -e | grep BAT) | bat -fpPl cpuinfo ;;
 	binds   ) bindsmenu ;;
@@ -16,5 +12,5 @@ case "$@" in
 	system  ) fastfetch ;;
 	time    ) timedatectl ;;
 	usb     ) lsusb | bat -fpPl conf ;;
-	*       ) help ;;
+	*       ) echo "Usage: about [battery|binds|cpu|drive|gpu|memory|pci|sensors|system|time|usb]" ;;
 esac
