@@ -1,0 +1,11 @@
+#!/bin/sh
+
+help() {
+	echo "Usage: timezone [auto|manual]"
+}
+
+case "$@" in
+	auto   ) bindsmenu ;;
+	manual ) lsusb | bat -fpPl conf ;;
+	*      ) help ;;
+esac
