@@ -2,7 +2,7 @@
 
 case "$@" in
 	*watch?v*                              ) setsid -f mpv --title="Picture in picture" --autofit=50% >/dev/null 2>&1 "$@" ;;
-	*http*                                 ) setsid -f browser "$@" ;;
+	*http*                                 ) setsid -f browser >/dev/null 2>&1 "$@" ;;
 esac
 
 case $(file --mime-type -Lb "$@") in
