@@ -45,7 +45,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Screensaver* ) screensavermenu ;;
 	*SMB*         ) smbmenu ;;
 	*Theme*       ) thememenu ;;
-	*Timezone*    ) tzmenu ;;
+	*Timezone*    ) timezonemenu ;;
 	*Update*      ) tui "up" ;;
 	*USB*         ) usbmenu ;;
 	*Wallpaper*   ) wallpapermenu ;;
