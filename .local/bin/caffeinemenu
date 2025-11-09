@@ -9,7 +9,7 @@ menu="\
 󰅶 Enable idle inhibit\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Caffeine" "$@") in
+case $(printf "$menu" | menu $opt -p "$(caffeine)" "$@") in
 	*Disable* ) caffeine off ;;
 	*Enable*  ) caffeine on ;;
 esac
