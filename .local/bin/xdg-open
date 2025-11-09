@@ -1,8 +1,8 @@
 #!/bin/sh
 
 case "$@" in
-	*watch?v*                              ) mpv --title="Picture in picture" --autofit=50% >/dev/null 2>&1 "$@" ;;
-	*http*                                 ) browser "$@" ;;
+	*watch?v*                              ) setsid -f mpv --title="Picture in picture" --autofit=50% >/dev/null 2>&1 "$@" ;;
+	*http*                                 ) setsid -f browser "$@" ;;
 esac
 
 case $(file --mime-type -Lb "$@") in
