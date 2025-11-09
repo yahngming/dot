@@ -9,7 +9,7 @@ menu="\
  Manual select\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Timezone:" "$@") in
+case $(printf "$menu" | menu $opt -p "Timezone" "$@") in
 	*Auto*   ) sudo timedatectl set-timezone $(curl http://ip-api.com/line/?fields=timezone) ;;
-	*Manual* ) sudo timedatectl set-timezone $(tzselect) ;;
+	*Manual* ) sudo tui "timedatectl set-timezone $(tzselect)" ;;
 esac
