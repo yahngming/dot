@@ -9,7 +9,7 @@ menu="\
  Manual select\n\
 "
 
-case $(printf "$menu" | menu $opt -p "$(timezone | awk '{$1=$1};1')" "$@") in
+case $(printf "$menu" | menu $opt -p "$(timezone | sed 's/^ *Time zone: //')" "$@") in
 	*Auto*   ) tui "timezone auto" ;;
 	*Manual* ) tui "timezone manual" ;;
 esac
