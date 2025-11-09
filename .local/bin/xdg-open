@@ -17,5 +17,4 @@ case $(file --mime-type -Lb "$@") in
 	audio/*|video/*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$@" ;;
 	image/*                                ) setsid -f nsxiv -a >/dev/null 2>&1 "$@" * ;;
 	text/*                                 ) bat --paging always "$@" ;;
-	*                                      ) /usr/bin/xdg-open "$@" ;;
 esac
