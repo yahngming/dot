@@ -26,12 +26,18 @@ on() {
 }
 
 help() {
-	echo "Usage: proxy [MODE]"
-	echo "  off        disable/stop proxy"
-	echo "  on         enable/start proxy"
+	echo "Usage: proxy [off|on]"
+}
+
+show() {
+	if [ -f ~/.config/proxy ]; then
+		echo "$PROXY active."
+	else
+		echo "Proxy inactive."
+	fi
 }
 
 case "$@" in
-	off|on ) $@ ;;
-	*      ) help ;;
+	help|off|on ) $@ ;;
+	*           ) show ;;
 esac
