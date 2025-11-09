@@ -19,19 +19,19 @@ on() {
 }
 
 help() {
+	echo "Usage: caffeine [off|on]"
+}
+
+show() {
 	if pgrep hypridle >/dev/null || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
 		mode="DISABLED"
 	else
 		mode="ENABLED"
 	fi
 	echo "Idle inhibit $mode"
-	echo ""
-	echo "Usage: caffeine [MODE]"
-	echo "  off        disable idle inhibit"
-	echo "  on         enable idle inhibit"
 }
 
 case "$@" in
-	off|on ) $@ ;;
-	*      ) help ;;
+	help|off|on ) $@ ;;
+	*           ) show ;;
 esac
