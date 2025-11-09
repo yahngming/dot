@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+ Auto detect\n\
+ Manual select\n\
+"
+
+case $(printf "$menu" | menu $opt -p "Timezone:" "$@") in
+	*Auto*   ) sudo timedatectl set-timezone $(curl http://ip-api.com/line/?fields=timezone) ;;
+	*Manual* ) tui "tzselect" ;;
+esac
