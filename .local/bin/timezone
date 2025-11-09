@@ -6,6 +6,6 @@ help() {
 
 case "$@" in
 	auto   ) bindsmenu ;;
-	manual ) lsusb | bat -fpPl conf ;;
+	manual ) sudo timedatectl set-timezone $(tzselect) ;;
 	*      ) help ;;
 esac
