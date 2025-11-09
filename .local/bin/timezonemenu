@@ -9,7 +9,7 @@ menu="\
  Manual select\n\
 "
 
-case $(printf "$menu" | menu $opt -p "$(timedatectl | grep zone)" "$@") in
+case $(printf "$menu" | menu $opt -p "$(timezone | awk '{$1=$1};1')" "$@") in
 	*Auto*   ) tui "timezone auto" ;;
 	*Manual* ) tui "timezone manual" ;;
 esac
