@@ -10,6 +10,6 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt -p "Timezone" "$@") in
-	*Auto*   ) timedatectl set-timezone $(curl http://ip-api.com/line/?fields=timezone) ;;
+	*Auto*   ) tui "timezone auto" ;;
 	*Manual* ) tui "timezone manual" ;;
 esac
