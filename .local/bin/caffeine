@@ -1,9 +1,5 @@
 #!/bin/sh
 
-help() {
-	echo "Usage: caffeine [off|on]"
-}
-
 off() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		pgrep hypridle || hypridle &
@@ -28,6 +24,10 @@ status() {
 	else
 		echo "Presentation ON"
 	fi
+}
+
+help() {
+	echo "Usage: caffeine [off|on]"
 }
 
 case "$@" in
