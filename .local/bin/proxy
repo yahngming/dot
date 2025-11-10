@@ -29,7 +29,7 @@ help() {
 	echo "Usage: proxy [off|on]"
 }
 
-show() {
+status() {
 	if [ -f ~/.config/proxy ]; then
 		echo "$PROXY active"
 	else
@@ -39,5 +39,5 @@ show() {
 
 case "$@" in
 	help|off|on ) $@ ;;
-	*           ) show ;;
+	*           ) status ;;
 esac
