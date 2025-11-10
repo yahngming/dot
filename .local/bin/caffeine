@@ -22,7 +22,7 @@ help() {
 	echo "Usage: caffeine [off|on]"
 }
 
-show() {
+status() {
 	if pgrep hypridle >/dev/null || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
 		mode="DISABLED"
 	else
@@ -33,5 +33,5 @@ show() {
 
 case "$@" in
 	help|off|on ) $@ ;;
-	*           ) show ;;
+	*           ) status ;;
 esac
