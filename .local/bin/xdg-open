@@ -1,19 +1,18 @@
 #!/bin/sh
 
 case "$@" in
-	*.diff                                 ) delta --paging always < "$@" ;;
-	*.epub|*.pdf                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
-	*.json|*.xml|*.yaml                    ) bat --paging always "$@" ;;
-	*.md                                   ) glow --pager "$@" ;;
 	https://www.youtube.com/*              ) setsid -f mpv --title="Picture in picture" --autofit=50% >/dev/null 2>&1 "$@" ;;
 	http*                                  ) setsid -f browser >/dev/null 2>&1 "$@" ;;
 esac
 
 case $(file --mime-type -Lb "$@") in
 	*archive*|*compress*|*rar*|*tar*|*zip* ) als --page "$@" ;;
+	*audio*|*video*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$@" ;;
+	*diff*                                 ) delta --paging always < "$@" ;;
 	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
+	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
+	*image*                                ) setsid -f nsxiv -a >/dev/null 2>&1 "$@" * ;;
+	*json*|*text*|*xml*                    ) bat --paging always "$@" ;;
+	*md*|*markdown*                        ) glow --pager "$@" ;;
 	*telnet*                               ) tui "telnet $(echo "${1#telnet://}" | sed 's/:/ /')" ;;
-	application/*                          ) "$@" ;;
-	audio/*|video/*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$@" ;;
-	image/*                                ) setsid -f nsxiv -a >/dev/null 2>&1 "$@" * ;;
 esac
