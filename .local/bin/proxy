@@ -31,9 +31,9 @@ help() {
 
 show() {
 	if [ -f ~/.config/proxy ]; then
-		echo "$PROXY active."
+		echo "$PROXY active"
 	else
-		echo "Proxy inactive."
+		echo "$PROXY inactive"
 	fi
 }
 
