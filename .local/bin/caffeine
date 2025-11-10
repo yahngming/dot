@@ -1,5 +1,9 @@
 #!/bin/sh
 
+help() {
+	echo "Usage: caffeine [off|on]"
+}
+
 off() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		pgrep hypridle || hypridle &
@@ -18,17 +22,12 @@ on() {
 	fi
 }
 
-help() {
-	echo "Usage: caffeine [off|on]"
-}
-
 status() {
 	if pgrep hypridle >/dev/null || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
-		mode="DISABLED"
+		echo "Presentation OFF"
 	else
-		mode="ENABLED"
+		echo "Presentation ON"
 	fi
-	echo "Idle inhibit $mode"
 }
 
 case "$@" in
