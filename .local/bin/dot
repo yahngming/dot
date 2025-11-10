@@ -6,7 +6,7 @@ cp -a ~/.local/src/dot/. ~/
 chmod +x ~/.local/bin/* ~/.config/nsxiv/exec/*
 rm -rf ~/.git ~/postinstall.sh ~/README.md
 cd - >/dev/null 2>&1
-pgrep qutebrowser >/dev/null && qutebrowser :config-source
+pgrep qutebrowser >/dev/null && qutebrowser :config-source >/dev/null
 
 if [ "$BROWSER" == "firefox" ]; then
 	cd ~/.config/firefox
