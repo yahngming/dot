@@ -1,9 +1,5 @@
 #!/bin/sh
 
-help() {
-	echo "Usage: proxy [off|on]"
-}
-
 off() {
 	if [ -f ~/.config/proxy ]; then
 		rm -f ~/.config/proxy
@@ -35,6 +31,10 @@ status() {
 	else
 		echo "$PROXY inactive"
 	fi
+}
+
+help() {
+	echo "Usage: proxy [off|on]"
 }
 
 case "$@" in
