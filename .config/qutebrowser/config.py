@@ -60,6 +60,7 @@ c.content.blocking.adblock.lists = [
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/ubol-filters.txt',
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt'
 ]
+c.content.user_stylesheets = ["~/.config/qutebrowser/styles/youtube.css"]
 c.downloads.position = 'bottom'
 c.downloads.remove_finished = 3
 c.editor.command = ['editor', '{file}']
