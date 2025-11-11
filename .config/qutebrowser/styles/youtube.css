@@ -1,10 +1,21 @@
+#items.ytd-grid-renderer>ytd-grid-video-renderer.ytd-grid-renderer:has([href*="/shorts/"]) {
 #items.ytd-grid-renderer>ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]),
-ytd-item-section-renderer:not(:has(ytd-grid-renderer)):has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]),
 #secondary,
-ytd-mini-guide-renderer, 
-ytd-guide-renderer,
 .ytd-masthead,
-.ytp-gradient-bottom {
+.ytp-gradient-bottom,
+[is-shorts],
+[title*="Shorts"],
+ytd-grid-video-renderer:has([overlay-style="SHORTS"]),
+ytd-guide-entry-renderer:has([title="Shorts"]),
+ytd-guide-renderer,
+ytd-item-section-renderer:not(:has(ytd-grid-renderer)):has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]),
+ytd-mini-guide-renderer, 
+ytd-reel-item-renderer,
+ytd-reel-shelf-renderer,
+ytd-reel-shelf-renderer,
+ytd-rich-grid-slim-media,
+ytd-rich-shelf-renderer,
+ytd-video-renderer:has([aria-label="Shorts"]) {
 	display: none !important;
 }
 
