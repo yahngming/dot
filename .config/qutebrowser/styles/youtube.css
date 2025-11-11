@@ -18,3 +18,8 @@ ytd-guide-renderer,
 	padding-top: 0 !important;
 	margin-left: 0 !important;
 }
+
+html:not(.ytd-watch-flexy) ytd-watch-flexy[flexy] #player {
+	width: 100% !important;
+	margin: 0 auto !important;
+}
