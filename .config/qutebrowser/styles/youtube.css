@@ -6,6 +6,10 @@ ytd-item-section-renderer:not(:has(ytd-grid-renderer)):has(ytd-thumbnail-overlay
   display: none; 
 }
 
+#secondary {
+  display: none !important;
+}
+
 #primary {
     width: 100% !important;
     flex: 1 !important;
@@ -14,6 +18,11 @@ ytd-item-section-renderer:not(:has(ytd-grid-renderer)):has(ytd-thumbnail-overlay
 
 ytd-mini-guide-renderer, 
 ytd-guide-renderer {
+  display: none !important;
+}
+
+.ytd-masthead {
+  margin: 0 !important;
   display: none !important;
 }
 
@@ -27,4 +36,8 @@ html:not(.ytd-watch-flexy) ytd-watch-flexy[flexy] #player {
   width: 100% !important;
   max-width: 1400px;
   margin: 0 auto !important;
+}
+
+.ytp-gradient-bottom {
+  display: none !important;
 }
