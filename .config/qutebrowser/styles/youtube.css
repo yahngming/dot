@@ -1,99 +1,20 @@
-ytd-mini-guide-renderer {
-  display: none;
+#items.ytd-grid-renderer>ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]),
+ytd-item-section-renderer:not(:has(ytd-grid-renderer)):has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]),
+#secondary,
+ytd-mini-guide-renderer, 
+ytd-guide-renderer,
+.ytd-masthead,
+.ytp-gradient-bottom {
+	display: none !important;
 }
 
-#page-manager{
-  margin-left: 0;
-}
-#masthead-container{
-
-  #background.ytd-masthead{
-    background-color: #00000000;
-    backdrop-filter: blur(30px);
-  }
+#primary {
+	width: 100% !important;
+	flex: 1 !important;
+	max-width: none !important;
 }
 
-#container.ytd-searchbox{
-  background-color: #00000000;
-}
-
-.ytd-two-column-browse-results-renderer #header{
-  display: none;
-}
-
-
-ytd-video-meta-block{
-  /* opacity: 0; */
-}
-
-#content #dismissible:hover{
-  background-color: #00000000;
-ytd-video-meta-block{
-  opacity: 1;
-}
-}
-
-#header{
-  /* opacity: 0.01; */
-  /* border-radius: 1.5em 0 1.5em 0; */
-  /* background-color: #000; */
-  /* transition: opacity 0.3s ease-in; */
-  &:hover{
-  /* opacity: 1; */
-  }
-}
-
-#byline-container #channel-name a{
-  opacity: 0.6;
-}
-
-ytd-rich-item-renderer[rendered-from-rich-grid] {
-    --ytd-rich-item-row-usable-width: calc(100% - var(--ytd-rich-grid-gutter-margin)* 1);
-}
-
-ytd-rich-item-renderer{
-  margin-bottom: 1em !important;
-}
-
-ytd-video-meta-block.grid #metadata.ytd-video-meta-block{
-  display:inline-flexbox;
-  flex-direction: row;
-  text-overflow:ellipsis;
-
-  #metadata-line span:nth-child(3){
-    width: 2em;
-    height: 1em;
-  }
-}
-
-ytd-watch-flexy{
-  margin-top: 0;
-}
-
-html[data-page-type="video"][it-player-size="full_window"] ytd-watch-flexy[theater]:not([fullscreen]) #player-wide-container, html[data-page-type="video"][it-player-size="full_window"] ytd-watch-flexy[full-bleed-player]:not([fullscreen]) #full-bleed-container.ytd-watch-flexy{
-  height: 100vh !important;
-}
-
-#movie_player > div.html5-video-container video{
-  height: 100vh;
-  width: 100vw !important;
-}
-
-div.wrapper.clickable-comment {
-  background-color: #00000044;
-  backdrop-filter: blur(15px);
-  box-shadow: 0px 0px 10px #00000055;
-  max-width: 20vw;
-  border-radius: 10px;
-  .comment{
-    font-size: 1.3em;
-  }
-  .likes, .author{
-    display: none;
-  }
-  .avatar{
-    border-radius: 6px;
-    height: 45px;
-    width: auto;
-  }
+.ytd-app {
+	padding-top: 0 !important;
+	margin-left: 0 !important;
 }
