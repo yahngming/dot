@@ -12,6 +12,11 @@ ytd-item-section-renderer:not(:has(ytd-grid-renderer)):has(ytd-thumbnail-overlay
     max-width: none !important;
 }
 
+ytd-mini-guide-renderer, 
+ytd-guide-renderer {
+  display: none !important;
+}
+
 .ytd-app {
   margin-top: 0 !important;
   padding-top: 0 !important;
