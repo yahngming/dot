@@ -5,7 +5,7 @@ case "$@" in
 	http*                                  ) setsid -f browser >/dev/null 2>&1 "$@" ;;
 esac
 
-case $(file --mime-type -Lb "$@") in
+case $(file --mime-type -Lb "$1") in
 	*archive*|*compress*|*rar*|*tar*|*zip* ) als --page "$@" ;;
 	*audio*|*video*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$@" ;;
 	*diff*                                 ) delta --paging always < "$@" ;;
