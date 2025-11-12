@@ -15,19 +15,3 @@ ytd-rich-shelf-renderer,
 ytd-video-renderer:has([aria-label="Shorts"]) {
 	display: none !important;
 }
-
-#primary {
-	width: 100% !important;
-	flex: 1 !important;
-	max-width: none !important;
-}
-
-.ytd-app {
-	padding-top: 0 !important;
-	margin-left: 0 !important;
-}
-
-html:not(.ytd-watch-flexy) ytd-watch-flexy[flexy] #player {
-	width: 100% !important;
-	margin: 0 auto !important;
-}
