@@ -9,10 +9,10 @@ killtte() {
 trap killtte SIGINT SIGTERM SIGHUP SIGQUIT
 while true; do
 	input=$(find ~/.config/ttesvr -type f | shuf -n 1)
-	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | sort -u | shuf -n1)
-	tte --input-file "$input" --frame-rate 0 --canvas-width 0 --canvas-height $(($(tput lines) - 2)) --anchor-canvas c --anchor-text c "$effect" &
+	effect=$(tte 2>&1 | grep -oP '{\K[^}]+' | tr ',' ' ' | tr ' ' '\n' | sed -n '/^beams$/,$p' | grep -Ev '^(dev_worm)$' | sort -u | shuf -n1)
+	tte --input-file "$input" --frame-rate 0 --canvas-width 0 --canvas-height 0 --reuse-canvas --anchor-canvas c --anchor-text c --no-eol --no-restore-cursor "$effect" &
 	while pgrep -x tte >/dev/null; do
-		if read -n 1 -t 3; then
+		if read -n 1 -t 1; then
 			killtte
 		fi
 	done
