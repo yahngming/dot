@@ -8,8 +8,8 @@ menu="\
 󰨇 Dashboard\n\
 󰌙 Disable/stop proxy\n\
 󱊪 Enable/start proxy\n\
- Subconverter\n\
 󰿨 Sub-Store\n\
+ Subconverter\n\
 "
 
 case $(printf "$menu" | menu $opt -p "$(proxy)" "$@") in
