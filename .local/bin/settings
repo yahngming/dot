@@ -40,7 +40,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Fetch*       ) fetchmenu ;;
 	*IME*         ) fcitx5-configtool ;;
 	*Password*    ) passmenu ;;
-	*Printer*     ) xdg-open http://127.0.0.1:631/ ;;
+	*Printer*     ) xdg-open http://127.0.0.1:631 ;;
 	*Proxy*       ) proxymenu ;;
 	*Screensaver* ) screensavermenu ;;
 	*SMB*         ) smbmenu ;;
