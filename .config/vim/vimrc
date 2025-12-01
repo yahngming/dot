@@ -34,7 +34,7 @@ set omnifunc=syntaxcomplete#Complete
 set regexpengine=0
 set relativenumber
 set ruler
-set runtimepath+=~/.local/share/vim
+set runtimepath^=~/.local/share/vim
 set scrolloff=0
 set shiftwidth=8
 set showmatch
