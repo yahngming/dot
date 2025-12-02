@@ -64,6 +64,7 @@ export FZF_CTRL_T_OPTS="--preview 'if [ -d {} ]; then eza --color=always --tree 
 export FZF_ALT_C_OPTS="--preview 'eza --color=always --tree {} | head -200'"
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc"
 export HISTCONTROL="ignoreboth:erasedups"
+export HISTFILE="$HOME/.local/state/bash/bash_history"
 export HISTSIZE=10000
 export LESS="-IR --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
@@ -77,6 +78,7 @@ export SDL_IM_MODULE="fcitx"
 export SUDO_ASKPASS="$HOME/.local/bin/sapmenu"
 export TOPPER="btop"
 export W3M_DIR="$HOME/.config/w3m"
+export WGETRC="$HOME/.config/wget/wgetrc"
 export XMODIFIERS="@im=fcitx"
 
 PS1="\[$(tput sc; tput setaf 3; printf '%*s' $COLUMNS $(__git_ps1); tput rc)\]\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 1)\]\w>\[$(tput sgr0)\] "
