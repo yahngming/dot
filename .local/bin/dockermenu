@@ -10,6 +10,6 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt -p "Docker" "$@") in
-	*Dashboard*    ) lazydocker ;;
+	*Dashboard*    ) tui "lazydocker" ;;
 	*Start*        ) for f in ~/.confi/docker/*.yaml; do docker compose -f "$f" up -d; done ;;
 esac
