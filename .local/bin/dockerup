@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for f in ~/.config/docker/*.yaml
+do
+	docker compose -f "$f" up -d
+done
