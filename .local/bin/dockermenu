@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+󰨇 Dashboard\n\
+ Start containers\n\
+"
+
+case $(printf "$menu" | menu $opt -p "Docker" "$@") in
+	*Dashboard*    ) lazydocker ;;
+	*Start*        ) for f in ~/.confi/docker/*.yaml; do docker compose -f "$f" up -d; done ;;
+esac
