@@ -9,7 +9,7 @@ menu="\
  Start containers\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Docker $(systemctl is-active docker)" "$@") in
+case $(printf "$menu" | menu $opt -p "docker $(systemctl is-active docker.service)" "$@") in
 	*Dashboard*    ) tui "lazydocker" ;;
 	*Start*        ) for f in ~/.config/docker/*.yaml; do docker compose -f "$f" up -d; done ;;
 esac
