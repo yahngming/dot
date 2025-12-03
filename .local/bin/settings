@@ -13,6 +13,7 @@ menu="\
  Caffeine\n\
  Cloud\n\
 󰍹 Display\n\
+ Docker\n\
  Dotfiles\n\
  Fetch\n\
  IME\n\
@@ -36,6 +37,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Caffeine*    ) caffeinemenu ;;
 	*Cloud*       ) cloudmenu ;;
 	*Display*     ) dispmenu ;;
+	*Docker*      ) dockermenu ;;
 	*Dotfiles*    ) tui "dot" ;;
 	*Fetch*       ) fetchmenu ;;
 	*IME*         ) fcitx5-configtool ;;
