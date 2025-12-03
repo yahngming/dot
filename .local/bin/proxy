@@ -26,11 +26,7 @@ on() {
 }
 
 status() {
-	if [ -f ~/.config/proxy ]; then
-		echo "$PROXY active"
-	else
-		echo "$PROXY inactive"
-	fi
+	echo "$PROXY $(systemctl is-active $PROXY.service)"
 }
 
 help() {
