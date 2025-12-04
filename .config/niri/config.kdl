@@ -141,7 +141,7 @@ binds {
 	Mod+WheelScrollUp { focus-workspace-up; }
 	Mod+WheelScrollLeft { focus-column-left; }
 	Mod+WheelScrollRight { focus-column-right; }
-	XF86AudioMute { spawn "volume" "toggle"; }
+	XF86AudioMute { spawn "volume toggle"; }
 	XF86AudioLowerVolume { spawn "volume" "down"; }
 	XF86AudioRaiseVolume { spawn "volume" "up"; }
 	XF86AudioMicMute { spawn "volume" "toggle" "@DEFAULT_SOURCE@"; }
