@@ -6,4 +6,4 @@ case "$@" in
 	*asciiquarium*|*lavat*|*matrix*|*svr*            ) opt="-T screensaver" ;;
 esac
 
-terminal $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
+$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
