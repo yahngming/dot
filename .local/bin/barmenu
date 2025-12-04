@@ -17,6 +17,6 @@ choice=$(printf "$menu" | menu "$@")
 if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$choice.jsonc ] && [ -f ~/.config/waybar/style-$choice.css ]; then
 	cp ~/.config/waybar/config-$choice.jsonc ~/.config/waybar/config.jsonc
  	cp ~/.config/waybar/style-$choice.css ~/.config/waybar/style.css
- 	killall waybar
+ 	pkill waybar
 	waybar &
 fi
