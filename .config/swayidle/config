@@ -1,4 +1,3 @@
-timeout 300 'locker'
-timeout 600 'swaymsg "output * dpms off"'
-resume 'swaymsg "output * dpms on"'
 before-sleep 'locker'
+timeout 300 'screensaver'
+timeout 900 'systemctl suspend'
