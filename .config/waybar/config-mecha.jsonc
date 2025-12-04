@@ -11,8 +11,7 @@
 	"modules-left": [
 		"custom/start",
 		"custom/left1",
-		"hyprland/workspaces",
-		"niri/workspaces",
+		"ext/workspaces",
 		"custom/right1",
 		"hyprland/window",
 		"niri/window"
@@ -72,10 +71,7 @@
 		"on-scroll-down": "hyprctl dispatch workspace +1"
 	},
 
-	"niri/workspaces": {
-		"persistent-workspaces": {
-			"*": 5
-		},
+	"ext/workspaces": {
 		"on-scroll-up": "hyprctl dispatch workspace -1",
 		"on-scroll-down": "hyprctl dispatch workspace +1"
 	},
