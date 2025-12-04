@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	pgrep hyprlock || hyprlock &
+	pgrep swaylock || swaylock &
 elif [ -n "$DISPLAY" ]; then
 	pgrep slock || slock &
 fi
