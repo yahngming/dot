@@ -3,15 +3,10 @@
 	"position": "top",
 	"height": 28,
 	"reload_style_on_change": true,
-	"modules-left": ["niri/workspaces", "hyprland/workspaces", "wlr/taskbar"],
+	"modules-left": ["ext/workspaces", "wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["tray", "battery", "network", "pulseaudio", "clock"],
-	"niri/workspaces": {
-		"persistent-workspaces": {
-			"*": 5
-		}
-	},
-	"hyprland/workspaces": {
+	"ext/workspaces": {
 		"persistent-workspaces": {
 			"*": 5
 		}
