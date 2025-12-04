@@ -19,7 +19,7 @@ setpaper() {
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		hyprctl hyprpaper reload ,"$wallpaper"
-		swaybg --image "$wallpaper"
+		killall swaybg && swaybg --image "$wallpaper" &
 		sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
 		sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
 		sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
