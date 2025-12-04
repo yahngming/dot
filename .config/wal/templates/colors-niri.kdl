@@ -1,8 +1,7 @@
 layout {
 	border {
 		on
-		active-color "#ffc87f"
-		inactive-color "#505050"
-		urgent-color "#9b0000"
+		active-color "{color3.strip}"
+		inactive-color "{color6.strip}"
 	}
 }
