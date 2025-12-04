@@ -11,21 +11,18 @@ input {
 
 layout {
 	gaps 8
+	default-column-width {}
 	focus-ring {
 		off
 	}
 	border {
 		on
 		width 1
-		active-color "#ffc87f"
-		inactive-color "#505050"
-		urgent-color "#9b0000"
 	}
 	shadow {
 		on
 		softness 30
-		spread 2
-		color "#00000070"
+		spread 5
 	}
 }
 
