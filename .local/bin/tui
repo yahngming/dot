@@ -5,4 +5,4 @@ case "$@" in
 	*telnet*                                         ) opt="-T fullscreen" ;;
 esac
 
-$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
+terminal $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
