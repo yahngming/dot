@@ -12,8 +12,10 @@
 		"custom/start",
 		"custom/left1",
 		"hyprland/workspaces",
+		"niri/workspaces",
 		"custom/right1",
-		"hyprland/window"
+		"hyprland/window",
+		"niri/window"
 	],
 
 	"modules-center": [
@@ -70,7 +72,22 @@
 		"on-scroll-down": "hyprctl dispatch workspace +1"
 	},
 
+	"niri/workspaces": {
+		"persistent-workspaces": {
+			"*": 5
+		},
+		"on-scroll-up": "hyprctl dispatch workspace -1",
+		"on-scroll-down": "hyprctl dispatch workspace +1"
+	},
+
 	"hyprland/window": {
+		"max-length": 35,
+		"icon": true,
+		"icon-size": 10,
+		"tooltip-format": "{title}"
+	},
+
+	"niri/window": {
 		"max-length": 35,
 		"icon": true,
 		"icon-size": 10,
