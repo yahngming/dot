@@ -23,21 +23,21 @@ window#waybar.empty #window {
 	color: transparent;
 }
 
-#workspaces button {
-	color: @sf;
-	border-bottom: 1px solid @sf;
-}
-
-#workspaces button.empty, #taskbar button {
+#workspaces button, #taskbar button {
 	color: @fg;
 	border: none;
 }
 
-#workspaces button.visible, #taskbar button.active, #window {
+#workspaces button.active {
+	color: @sf;
+	border-bottom: 1px solid @sf;
+}
+
+#workspaces button.active, #taskbar button.active, #window {
 	background: @sb;
 }
 
-#workspaces button.visible, #taskbar button.active, #window, #clock {
+#workspaces button.active, #taskbar button.active, #window, #clock {
 	color: @sf;
 }
 
