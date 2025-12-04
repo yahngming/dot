@@ -6,12 +6,11 @@ input {
         tap
         natural-scroll
     }
-    focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse
 }
 
 layout {
     gaps 8
-    default-column-width { }
     border {
         width 1
         active-color "#ffc87f"
@@ -19,9 +18,8 @@ layout {
         urgent-color "#9b0000"
     }
     shadow {
-        softness 30
-        spread 5
-        offset x=0 y=5
+        softness 6
+        spread 2
         color "#0007"
     }
 }
@@ -31,6 +29,7 @@ spawn-at-startup "rquickshare"
 spawn-at-startup "theme" "init"
 spawn-at-startup "steam" "-silent"
 spawn-at-startup "udiskie"
+spawn-at-startup "waybar"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 
 hotkey-overlay {
@@ -40,29 +39,28 @@ hotkey-overlay {
 prefer-no-csd
 
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match title="^Picture-in-Picture$"
     open-floating true
 }
+
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
     block-out-from "screen-capture"
 
 }
+
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
 }
 
 binds {
-    Mod+A { spawn "$TERMINAL"; }
+    Mod+A { spawn "foot"; }
     Mod+H { spawn "aboutmenu"; }
     Mod+I { spawn "settings"; }
     Mod+L { spawn "powermenu"; }
-    Mod+R { spawn "$LAUNCHER"; }
+    Mod+R { spawn "launcher"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+Q repeat=false { close-window; }
     Mod+1 { focus-workspace 1; }
