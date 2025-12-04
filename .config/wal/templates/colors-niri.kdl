@@ -1,7 +1,7 @@
-layout {
-	border {
+layout {{
+	border {{
 		on
 		active-color "{color3}"
 		inactive-color "{color6}"
-	}
-}
+	}}
+}}
