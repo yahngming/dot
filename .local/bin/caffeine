@@ -2,7 +2,7 @@
 
 off() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pgrep hypridle || hypridle &
+		pgrep swayidle || swayidle -w &
 	elif [ -n "$DISPLAY" ]; then
 		xautolock -enable
 		xset +dpms
@@ -11,7 +11,7 @@ off() {
 
 on() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pkill hypridle
+		pkill swayidle
 	elif [ -n "$DISPLAY" ]; then
 		xautolock -disable
 		xset -dpms
@@ -19,7 +19,7 @@ on() {
 }
 
 status() {
-	if pgrep hypridle >/dev/null || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
+	if pgrep swayidle >/dev/null || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
 		echo "Presentation OFF"
 	else
 		echo "Presentation ON"
