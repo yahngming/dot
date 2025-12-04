@@ -39,6 +39,7 @@ setpaper() {
 	fi
 	pgrep qutebrowser && qutebrowser :config-source
 	cp "$wallpaper" "$paperfolder/wallpaper"
+	convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/lockpaper"
 }
 
 manual() {
