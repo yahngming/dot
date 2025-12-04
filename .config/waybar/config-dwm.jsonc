@@ -7,10 +7,7 @@
 	"modules-center": [],
 	"modules-right": ["tray", "battery", "network", "pulseaudio", "clock"],
 	"ext/workspaces": {
-		"on-click": "activate",
-		"persistent-workspaces": {
-			"*": 5
-		}
+		"on-click": "activate"
 	},
 	"wlr/taskbar": {
 		"format": "{icon} {title:.20}",
