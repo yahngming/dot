@@ -59,6 +59,9 @@ window-rule {
 
 binds {
     Mod+A { spawn "$TERMINAL"; }
+    Mod+H { spawn "aboutmenu"; }
+    Mod+I { spawn "settings"; }
+    Mod+L { spawn "powermenu"; }
     Mod+R { spawn "$LAUNCHER"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+Q repeat=false { close-window; }
