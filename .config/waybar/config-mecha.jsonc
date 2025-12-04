@@ -12,9 +12,7 @@
 		"custom/start",
 		"custom/left1",
 		"ext/workspaces",
-		"custom/right1",
-		"hyprland/window",
-		"niri/window"
+		"custom/right1"
 	],
 
 	"modules-center": [
@@ -38,7 +36,6 @@
 	],
 
 	"modules-right": [
-		"mpris",
 		"custom/left6",
 		"tray",
 		"custom/usb",
@@ -63,6 +60,10 @@
 		"max-length": 3
 	},
 
+	"ext/workspaces": {
+		"on-click": "activate"
+	},
+
 	"hyprland/workspaces": {
 		"persistent-workspaces": {
 			"*": 5
@@ -71,19 +72,7 @@
 		"on-scroll-down": "hyprctl dispatch workspace +1"
 	},
 
-	"ext/workspaces": {
-		"on-scroll-up": "hyprctl dispatch workspace -1",
-		"on-scroll-down": "hyprctl dispatch workspace +1"
-	},
-
 	"hyprland/window": {
-		"max-length": 35,
-		"icon": true,
-		"icon-size": 10,
-		"tooltip-format": "{title}"
-	},
-
-	"niri/window": {
 		"max-length": 35,
 		"icon": true,
 		"icon-size": 10,
