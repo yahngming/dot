@@ -113,7 +113,7 @@ binds {
 	Mod+Shift+9 { move-column-to-workspace 9; }
 	Mod+A { spawn "terminal"; }
 	Mod+B { spawn "browser"; }
-	Mod+C { spawn "tui" "bc" "-l"; }
+	Mod+C { spawn "tui" "bc -l"; }
 	Mod+D { spawn "transmenu"; }
 	Mod+E { spawn "editor"; }
 	Mod+F { spawn "explorer"; }
