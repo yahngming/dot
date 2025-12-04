@@ -11,7 +11,6 @@ set previewer ctpv
 set scrolloff 0
 set shell sh
 set shellopts '-eu'
-set sixel true
 &ctpv -s $id
 &ctpvquit $id
 
