@@ -1,27 +1,27 @@
 input {
-    keyboard {
-        numlock
-    }
-    touchpad {
-        tap
-        natural-scroll
-    }
-    focus-follows-mouse
+	keyboard {
+		numlock
+	}
+	touchpad {
+		tap
+		natural-scroll
+	}
+	focus-follows-mouse
 }
 
 layout {
-    gaps 8
-    border {
-        width 1
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
-    }
-    shadow {
-        softness 30
-        spread 2
-        color "#ffffff"
-    }
+	gaps 8
+	border {
+		width 1
+		active-color "#ffc87f"
+		inactive-color "#505050"
+		urgent-color "#9b0000"
+	}
+	shadow {
+		softness 30
+		spread 2
+		color "#ffffff"
+	}
 }
 
 spawn-at-startup "fcitx5"
@@ -33,54 +33,65 @@ spawn-at-startup "waybar"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 
 hotkey-overlay {
-    skip-at-startup
+	skip-at-startup
 }
 
 prefer-no-csd
 
 window-rule {
-    match title="^Picture-in-Picture$"
-    open-floating true
+	match title="^Picture-in-Picture$"
+	open-floating true
 }
 
 window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-    block-out-from "screen-capture"
+	match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+	match app-id=r#"^org\.gnome\.World\.Secrets$"#
+	block-out-from "screen-capture"
 
 }
 
 window-rule {
-    geometry-corner-radius 4
-    clip-to-geometry true
+	geometry-corner-radius 4
+	clip-to-geometry true
 }
 
 binds {
-    Mod+A { spawn "foot"; }
-    Mod+H { spawn "aboutmenu"; }
-    Mod+I { spawn "settings"; }
-    Mod+L { spawn "powermenu"; }
-    Mod+R { spawn "launcher"; }
-    Mod+O repeat=false { toggle-overview; }
-    Mod+Q repeat=false { close-window; }
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
-    Mod+5 { focus-workspace 5; }
-    Mod+6 { focus-workspace 6; }
-    Mod+7 { focus-workspace 7; }
-    Mod+8 { focus-workspace 8; }
-    Mod+9 { focus-workspace 9; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
-    Mod+Ctrl+5 { move-column-to-workspace 5; }
-    Mod+Ctrl+6 { move-column-to-workspace 6; }
-    Mod+Ctrl+7 { move-column-to-workspace 7; }
-    Mod+Ctrl+8 { move-column-to-workspace 8; }
-    Mod+Ctrl+9 { move-column-to-workspace 9; }
-    Mod+Return { fullscreen-window; }
-    Mod+Backspace { toggle-window-floating; }
+	Mod+A { spawn "terminal"; }
+	Mod+B { spawn "browser"; }
+	Mod+C { spawn "tui" "bc"; }
+	Mod+D { spawn "transmenu"; }
+	Mod+E { spawn "editor"; }
+	Mod+F { spawn "tui" "lf"; }
+	Mod+G { spawn "steam"; }
+	Mod+H { spawn "aboutmenu"; }
+	Mod+I { spawn "settings"; }
+	Mod+L { spawn "powermenu"; }
+	Mod+M { spawn "tui" "aerc"; }
+	Mod+N { spawn "tui" "newsraft"; }
+	Mod+O repeat=false { toggle-overview; }
+	Mod+P { spawn "tui" "cmus"; }
+	Mod+Q repeat=false { close-window; }
+	Mod+R { spawn "launcher"; }
+	Mod+S { spawn "screenshot"; }
+	Mod+T { spawn "topper"; }
+	Mod+1 { focus-workspace 1; }
+	Mod+2 { focus-workspace 2; }
+	Mod+3 { focus-workspace 3; }
+	Mod+4 { focus-workspace 4; }
+	Mod+5 { focus-workspace 5; }
+	Mod+6 { focus-workspace 6; }
+	Mod+7 { focus-workspace 7; }
+	Mod+8 { focus-workspace 8; }
+	Mod+9 { focus-workspace 9; }
+	Mod+Ctrl+1 { move-column-to-workspace 1; }
+	Mod+Ctrl+2 { move-column-to-workspace 2; }
+	Mod+Ctrl+3 { move-column-to-workspace 3; }
+	Mod+Ctrl+4 { move-column-to-workspace 4; }
+	Mod+Ctrl+5 { move-column-to-workspace 5; }
+	Mod+Ctrl+6 { move-column-to-workspace 6; }
+	Mod+Ctrl+7 { move-column-to-workspace 7; }
+	Mod+Ctrl+8 { move-column-to-workspace 8; }
+	Mod+Ctrl+9 { move-column-to-workspace 9; }
+	Mod+Return { fullscreen-window; }
+	Mod+Backspace { toggle-window-floating; }
 }
