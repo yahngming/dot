@@ -38,14 +38,14 @@ hotkey-overlay {
 prefer-no-csd
 
 window-rule {
-	opacity 0.95
+	opacity 0.85
 	geometry-corner-radius 4
 	clip-to-geometry true
 }
 
 window-rule {
-	match is-active=false
-	opacity 0.85
+	match is-active=true
+	opacity 0.95
 }
 
 window-rule {
