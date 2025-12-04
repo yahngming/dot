@@ -2,7 +2,6 @@
 
 case "$@" in
 	battery ) upower -i $(upower -e | grep BAT) | bat -fpPl cpuinfo ;;
-	binds   ) bindsmenu ;;
 	cpu     ) lscpu | bat -fpPl cpuinfo ;;
 	drive   ) lsblk | bat -fpPl conf ;;
 	gpu     ) lsgpu | bat -fpPl cpuinfo ;;
