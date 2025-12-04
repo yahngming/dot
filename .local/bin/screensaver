@@ -7,4 +7,4 @@ fi
 readarray -t screensavers < <(grep -vE '^\s*(#|$)' ~/.config/screensaver)
 screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 
-terminal -T screensaver -e $SHELL -c "$screensaver"
+st -F -T screensaver -e $SHELL -c "$screensaver"
