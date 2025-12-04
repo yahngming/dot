@@ -13,25 +13,29 @@ setfolder() {
 setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
+	elif [ -n "$WAYLAND_DISPLAY" ]; then
+		hyprctl hyprpaper reload ,"$wallpaper"
+		killall swaybg
+		swaybg --image "$wallpaper" &
+	elif [ -n "$DISPLAY" ]; then
+		xwallpaper --zoom "$wallpaper"
+		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
 	fi
 	wal -n -i "$wallpaper"
 	cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/
 	source ~/.cache/wal/colors.sh
+	sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
+	sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
+	sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
+	sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
+	sed -i '/background = /s/.*/background = "'$color0'"/' "$HOME/.config/dunst/dunstrc"
+	sed -i '/foreground = /s/.*/foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
+	sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl hyprpaper reload ,"$wallpaper"
-		killall swaybg && swaybg --image "$wallpaper" &
-		sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
-		sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
-		sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
-		sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
 		makoctl reload
 	elif [ -n "$DISPLAY" ]; then
-		xwallpaper --zoom "$wallpaper"
-		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
-		sed -i '/background = /s/.*/background = "'$color0'"/' "$HOME/.config/dunst/dunstrc"
-		sed -i '/foreground = /s/.*/foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
-		sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
-		killall dunst && dunst &
+		killall dunst
+		dunst &
 	fi
 	pgrep qutebrowser && qutebrowser :config-source
 	cp "$wallpaper" "$paperfolder/wallpaper"
