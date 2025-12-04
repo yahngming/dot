@@ -38,14 +38,14 @@ hotkey-overlay {
 prefer-no-csd
 
 window-rule {
-	opacity 0.9
+	opacity 0.95
 	geometry-corner-radius 4
 	clip-to-geometry true
 }
 
 window-rule {
 	match is-active=false
-	opacity 0.7
+	opacity 0.85
 }
 
 window-rule {
@@ -63,12 +63,6 @@ window-rule {
 	match title="^Picture-in-Picture$"
 	open-floating true
 	default-floating-position x=0 y=0 relative-to="bottom-right"
-}
-
-window-rule {
-	match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-	block-out-from "screen-capture"
-
 }
 
 binds {
