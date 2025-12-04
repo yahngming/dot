@@ -122,8 +122,8 @@ binds {
 	Mod+Delete { maximize-column; }
 	Mod+Backspace { toggle-window-floating; }
 	Mod+Return { fullscreen-window; }
-	Mod+Down { focus-window-down; }
-	Mod+Up { focus-window-up; }
+	Mod+Down { focus-window-or-workspace-down; }
+	Mod+Up { focus-window-or-workspace-up; }
 	Mod+Left { focus-column-left; }
 	Mod+Right { focus-column-right; }
 	Mod+WheelScrollDown { focus-workspace-down; }
