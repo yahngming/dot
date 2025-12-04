@@ -2,7 +2,8 @@
 
 off() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pgrep swayidle || swayidle -w &
+		pkill swayidle
+		swayidle -w &
 	elif [ -n "$DISPLAY" ]; then
 		xautolock -enable
 		xset +dpms
