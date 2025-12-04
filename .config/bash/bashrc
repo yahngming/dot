@@ -30,15 +30,20 @@ setenv() {
 	case "$XDG_VTNR" in
 		1)
 			export LAUNCHER="fuzzel"
+			export START="exec niri-session"
+			export TERMINAL="alacritty"
+			;;
+		2)
+			export LAUNCHER="fuzzel"
 			export START="exec Hyprland"
 			export TERMINAL="foot"
 			;;
-		2)
+		3)
 			export LAUNCHER="dmenu"
 			export START="startx ~/.config/xorg/xinitrc dwm"
 			export TERMINAL="st"
 			;;
-		3)
+		4)
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
 			export START="startx ~/.config/xorg/xinitrc xfce"
