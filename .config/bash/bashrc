@@ -31,7 +31,7 @@ setenv() {
 		1)
 			export LAUNCHER="fuzzel"
 			export START="exec niri-session"
-			export TERMINAL="alacritty"
+			export TERMINAL="foot"
 			;;
 		2)
 			export LAUNCHER="fuzzel"
