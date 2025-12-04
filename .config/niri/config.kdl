@@ -39,6 +39,11 @@ hotkey-overlay {
 prefer-no-csd
 
 window-rule {
+	match title="screensaver"
+	open-fullscreen true
+}
+
+window-rule {
 	match title="^Picture-in-Picture$"
 	open-floating true
 }
