@@ -1,3 +1,5 @@
+include "~/.cache/wal/colors-niri.kdl"
+
 input {
 	keyboard {
 		numlock
