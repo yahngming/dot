@@ -16,7 +16,6 @@ setpaper() {
 	elif [ -n "$WAYLAND_DISPLAY" ]; then
 		swaybg="$(pidof swaybg)"
 		swaybg --mode fill --image "$wallpaper" &
-		hyprctl hyprpaper reload ,"$wallpaper"
 	elif [ -n "$DISPLAY" ]; then
 		xwallpaper --zoom "$wallpaper"
 		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
