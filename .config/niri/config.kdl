@@ -58,10 +58,10 @@ window-rule {
 binds {
 	Mod+A { spawn "terminal"; }
 	Mod+B { spawn "browser"; }
-	Mod+C { spawn "tui" "bc"; }
+	Mod+C { spawn "tui" "bc" "-l"; }
 	Mod+D { spawn "transmenu"; }
 	Mod+E { spawn "editor"; }
-	Mod+F { spawn "tui" "lf"; }
+	Mod+F { spawn "explorer"; }
 	Mod+G { spawn "steam"; }
 	Mod+H { spawn "aboutmenu"; }
 	Mod+I { spawn "settings"; }
