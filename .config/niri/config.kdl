@@ -71,8 +71,7 @@ window-rule {
 
 window-rule {
 	match app-id=".*config.*"
-	match app-id="rquickshare"
-	match app-id="xdg-desktop-portal.*"
+	match app-id="xdg-desktop-portal-.*"
 	match title="center"
 	open-floating true
 }
