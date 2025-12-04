@@ -95,7 +95,7 @@ alias ll="eza --all --color=always --git --git-repos --group-directories-first -
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
-if [ -z "$DISPLAY" ]; then
+if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ]; then
 	setenv
 	eval "$START"
 fi
