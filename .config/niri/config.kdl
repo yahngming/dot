@@ -132,6 +132,8 @@ binds {
 	Mod+S { spawn "screenshot"; }
 	Mod+T { spawn "topper"; }
 	Mod+V { spawn "clipmenu"; }
+	Mod+Minus { set-column-width "-10%"; }
+	Mod+Equal { set-column-width "+10%"; }
 	Mod+Delete { maximize-column; }
 	Mod+Backspace { toggle-window-floating; }
 	Mod+Return { fullscreen-window; }
