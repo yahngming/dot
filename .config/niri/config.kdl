@@ -57,7 +57,7 @@ window-rule {
 	match app-id="mpv"
 	match app-id="resolve"
 	match title=".*YouTube -.*"
-	opacity 1
+	opacity 1.0
 }
 
 window-rule {
