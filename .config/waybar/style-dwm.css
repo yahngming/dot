@@ -33,15 +33,15 @@ window#waybar.empty #window {
 	border-bottom: 1px solid @sf;
 }
 
-#workspaces button.active, #taskbar button.active, #window {
+#workspaces button.active, #taskbar button.active {
 	background: @sb;
 }
 
-#workspaces button.active, #taskbar button.active, #window, #clock {
+#workspaces button.active, #taskbar button.active, #clock {
 	color: @sf;
 }
 
-#taskbar button, #window, #tray, #clock {
+#taskbar button, #tray, #clock {
 	padding: 0px 10px;
 }
 
