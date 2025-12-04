@@ -29,6 +29,7 @@ layout {
 
 spawn-at-startup "fcitx5"
 spawn-at-startup "rquickshare"
+spawn-at-startup "steam" "-silent"
 spawn-at-startup "swayidle" "-w"
 spawn-at-startup "theme" "init"
 spawn-at-startup "udiskie"
