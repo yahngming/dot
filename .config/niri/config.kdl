@@ -21,8 +21,6 @@ layout {
 	}
 	shadow {
 		on
-		softness 30
-		spread 5
 	}
 }
 
