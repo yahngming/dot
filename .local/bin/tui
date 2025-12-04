@@ -1,13 +1,8 @@
 #!/bin/sh
 
-case "$TERMINAL" in
-	foot                                             ) opt="-a" ;;
-	*                                                ) opt="-c" ;;
-esac
-
 case "$@" in
-	*about*|*bat*|dot|*proxy*|*rclone*|*timezone*|up ) class="center" ;;
-	*telnet*                                         ) class="fullscreen" ;;
+	*about*|*bat*|dot|*proxy*|*rclone*|*timezone*|up ) title="center" ;;
+	*telnet*                                         ) title="fullscreen" ;;
 esac
 
-$TERMINAL $opt $class -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
+$TERMINAL -T $title -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
