@@ -11,16 +11,21 @@ input {
 
 layout {
 	gaps 8
+	focus-ring {
+		off
+	}
 	border {
+		on
 		width 1
 		active-color "#ffc87f"
 		inactive-color "#505050"
 		urgent-color "#9b0000"
 	}
 	shadow {
+		on
 		softness 30
 		spread 2
-		color "#ffffff"
+		color "#00000070"
 	}
 }
 
