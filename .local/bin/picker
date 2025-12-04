@@ -1,6 +1,6 @@
 #!/bin/sh
 
 case "$EXPLORER" in
-	lf|nnn|ranger|yazi ) terminal -T center -e $SHELL -c "cat ~/.cache/wal/sequences; $EXPLORER $@" ;;
+	lf|nnn|ranger|yazi ) $TERMINAL -T center -e $SHELL -c "cat ~/.cache/wal/sequences; $EXPLORER $@" ;;
 	*                  ) $EXPLORER "$@" ;;
 esac
