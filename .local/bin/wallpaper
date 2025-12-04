@@ -14,11 +14,9 @@ setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
 	elif [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl hyprpaper reload ,"$wallpaper"
-		pid="$(pidof swaybg)"
+		swaybg="$(pidof swaybg)"
 		swaybg --mode fill --image "$wallpaper" &
-		sleep 1
-		kill $pid
+		hyprctl hyprpaper reload ,"$wallpaper"
 	elif [ -n "$DISPLAY" ]; then
 		xwallpaper --zoom "$wallpaper"
 		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
@@ -34,6 +32,7 @@ setpaper() {
 	sed -i '/foreground = /s/.*/foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
 	sed -i '/frame_color = /s/.*/frame_color = "'$color3'"/' "$HOME/.config/dunst/dunstrc"
 	if [ -n "$WAYLAND_DISPLAY" ]; then
+		kill $swaybg
 		makoctl reload
 	elif [ -n "$DISPLAY" ]; then
 		killall dunst
