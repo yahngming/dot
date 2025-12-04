@@ -34,7 +34,7 @@ setpaper() {
 		kill $swaybg
 		makoctl reload
 	elif [ -n "$DISPLAY" ]; then
-		killall dunst
+		pkill dunst
 		dunst &
 	fi
 	pgrep qutebrowser && qutebrowser :config-source
