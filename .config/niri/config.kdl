@@ -39,18 +39,24 @@ hotkey-overlay {
 prefer-no-csd
 
 window-rule {
+	match title="fullscreen"
 	match title="screensaver"
 	open-fullscreen true
 }
 
 window-rule {
-	match title="^Picture-in-Picture$"
+	match title="center"
 	open-floating true
 }
 
 window-rule {
+	match title="^Picture-in-Picture$"
+	open-floating true
+	default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+
+window-rule {
 	match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-	match app-id=r#"^org\.gnome\.World\.Secrets$"#
 	block-out-from "screen-capture"
 
 }
