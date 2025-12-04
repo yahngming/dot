@@ -18,9 +18,9 @@ layout {
         urgent-color "#9b0000"
     }
     shadow {
-        softness 6
+        softness 30
         spread 2
-        color "#0007"
+        color "#ffffff"
     }
 }
 
