@@ -1,7 +1,7 @@
 layout {
 	border {
 		on
-		active-color "{color3.strip}"
-		inactive-color "{color6.strip}"
+		active-color "{color3}"
+		inactive-color "{color6}"
 	}
 }
