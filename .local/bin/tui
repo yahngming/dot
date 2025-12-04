@@ -2,7 +2,7 @@
 
 case "$@" in
 	*about*|*bat*|dot|*proxy*|*rclone*|*timezone*|up ) opt="-T center" ;;
-	*telnet*                                         ) opt="-T fullscreen" ;;
+	*asciiquarium*|*lavat*|*matrix*|*svr*|*telnet*   ) opt="-T fullscreen" ;;
 esac
 
 terminal $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
