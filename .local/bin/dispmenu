@@ -4,6 +4,36 @@ case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
 
+expand() {
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+	elif [ -n "$DISPLAY" ]; then
+		primary=$(echo "$screens" | menu $opt -p "Select primary display:")
+		secondary=$(echo "$screens" | grep -v ^"$primary"$ | menu $opt -p "Select secondary display:")
+		tertiary=$(echo "$screens" | grep -v ^"$primary"$ | grep -v ^"$secondary"$ | menu $opt -p "Select third display:")
+		direction=$(printf "left\\nright" | menu $opt -p "$secondary is on the:")
+		xrandr --output "$primary" --auto --output "$secondary" --"$direction"-of "$primary" --auto --output "$tertiary" --"$(printf "left\\nright" | grep -v "$direction")"-of "$primary" --auto
+	fi
+}
+
+mirror() {
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		master=$(printf "$monitors" | menu $opt -p "Optimize resolution for:")
+		mode=$(wlr-randr | awk "/^$master /,/Modes:/" | grep "(preferred)" | awk '{print $1 " @ " $3 " Hz"}' | tr -d '\n')
+	elif [ -n "$DISPLAY" ]; then
+		external=$(echo "$screens" | menu $opt -p "Optimize resolution for:")
+		internal=$(echo "$screens" | grep -v "$external")
+		res_external=$(xrandr --query | sed -n "/^$external/,/\+/p" | tail -n 1 | awk '{print $1}')
+		res_internal=$(xrandr --query | sed -n "/^$internal/,/\+/p" | tail -n 1 | awk '{print $1}')
+		res_ext_x=$(echo "$res_external" | sed 's/x.*//')
+		res_ext_y=$(echo "$res_external" | sed 's/.*x//')
+		res_int_x=$(echo "$res_internal" | sed 's/x.*//')
+		res_int_y=$(echo "$res_internal" | sed 's/.*x//')
+		scale_x=$(echo "$res_ext_x / $res_int_x" | bc -l)
+		scale_y=$(echo "$res_ext_y / $res_int_y" | bc -l)
+		xrandr --output "$external" --auto --scale 1.0x1.0 --output "$internal" --auto --same-as "$external" --scale "$scale_x"x"$scale_y"
+	fi
+}
+
 single() {
 	chosen=$(printf "$monitors" | menu $opt -p "Choose a monitor:")
 	if [ -n "$WAYLAND_DISPLAY" ]; then
@@ -20,29 +50,6 @@ single() {
 	fi
 }
 
-multiple() {
-	mirror=$(printf "No\\nYes" | menu $opt -p "Mirror displays?")
-	if [ "$mirror" = "Yes" ]; then
-		external=$(echo "$screens" | menu $opt -p "Optimize resolution for:")
-		internal=$(echo "$screens" | grep -v "$external")
-		res_external=$(xrandr --query | sed -n "/^$external/,/\+/p" | tail -n 1 | awk '{print $1}')
-		res_internal=$(xrandr --query | sed -n "/^$internal/,/\+/p" | tail -n 1 | awk '{print $1}')
-		res_ext_x=$(echo "$res_external" | sed 's/x.*//')
-		res_ext_y=$(echo "$res_external" | sed 's/.*x//')
-		res_int_x=$(echo "$res_internal" | sed 's/x.*//')
-		res_int_y=$(echo "$res_internal" | sed 's/.*x//')
-		scale_x=$(echo "$res_ext_x / $res_int_x" | bc -l)
-		scale_y=$(echo "$res_ext_y / $res_int_y" | bc -l)
-		xrandr --output "$external" --auto --scale 1.0x1.0 --output "$internal" --auto --same-as "$external" --scale "$scale_x"x"$scale_y"
-	else
-		primary=$(echo "$screens" | menu $opt -p "Select primary display:")
-		secondary=$(echo "$screens" | grep -v ^"$primary"$ | menu $opt -p "Select secondary display:")
-		tertiary=$(echo "$screens" | grep -v ^"$primary"$ | grep -v ^"$secondary"$ | menu $opt -p "Select third display:")
-		direction=$(printf "left\\nright" | menu $opt -p "$secondary is on the:")
-		xrandr --output "$primary" --auto --output "$secondary" --"$direction"-of "$primary" --auto --output "$tertiary" --"$(printf "left\\nright" | grep -v "$direction")"-of "$primary" --auto
-	fi
-}
-
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	monitors=$(wlr-randr | grep "^[^ ]" | sed 's/^[^"]*"//' | sed 's/"$//')
 	outputs=$(echo "$monitors" | awk '{print $NF}')
@@ -52,11 +59,13 @@ elif [ -n "$DISPLAY" ]; then
 fi
 
 menu="\
-󰾪 Multiple monitors\n\
+󰾪 Expand monitors\n\
+󰾪 Mirror monitors\n\
 󰅶 Single monitor\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Display" "$@") in
-	*Multiple* ) multiple ;;
-	*Single*   ) single ;;
+	*Expand* ) expand ;;
+	*Mirror* ) mirror ;;
+	*Single* ) single ;;
 esac
