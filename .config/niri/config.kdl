@@ -1,5 +1,15 @@
 include "../../.cache/wal/colors-niri.kdl"
 
+prefer-no-csd
+
+spawn-at-startup "fcitx5"
+spawn-at-startup "rquickshare"
+spawn-at-startup "steam" "-silent" "-system-composer"
+spawn-at-startup "swayidle" "-w"
+spawn-at-startup "theme" "init"
+spawn-at-startup "udiskie"
+spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
+
 input {
 	keyboard {
 		numlock
@@ -27,73 +37,8 @@ layout {
 	}
 }
 
-spawn-at-startup "fcitx5"
-spawn-at-startup "rquickshare"
-spawn-at-startup "steam" "-silent" "-system-composer"
-spawn-at-startup "swayidle" "-w"
-spawn-at-startup "theme" "init"
-spawn-at-startup "udiskie"
-spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
-
 hotkey-overlay {
 	skip-at-startup
-}
-
-prefer-no-csd
-
-window-rule {
-	opacity 0.85
-	geometry-corner-radius 4
-	clip-to-geometry true
-}
-
-window-rule {
-	match is-active=true
-	opacity 0.95
-}
-
-window-rule {
-	match app-id=".*freecad.*"
-	match app-id="blender"
-	match app-id="Darktable"
-	match app-id="krita"
-	match app-id="mpv"
-	match app-id="resolve"
-	match title=".*YouTube -.*"
-	opacity 1.0
-}
-
-window-rule {
-	match app-id="steam_app_.*"
-	match title="fullscreen"
-	match title="screensaver"
-	open-fullscreen true
-	open-focused true
-}
-
-window-rule {
-	match app-id=".*config.*"
-	match app-id="Pinentry-.*"
-	match app-id="xdg-desktop-portal-.*"
-	match title="center"
-	open-floating true
-	open-focused true
-}
-
-window-rule {
-	match title="^Picture.?in.?[Pp]icture$"
-	open-floating true
-	default-floating-position x=16 y=16 relative-to="bottom-right"
-}
-
-layer-rule {
-    match namespace="^wallpaper$"
-    place-within-backdrop true
-}
-
-layer-rule {
-	match namespace="waybar"
-	opacity 0.95
 }
 
 binds {
@@ -155,4 +100,59 @@ binds {
 	XF86AudioRaiseVolume  { spawn "volume" "up"; }
 	XF86MonBrightnessDown { spawn "brightnessctl" "s" "5%-"; }
 	XF86MonBrightnessUp   { spawn "brightnessctl" "s" "5%+"; }
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+layer-rule {
+	match namespace="waybar"
+	opacity 0.95
+}
+
+window-rule {
+	opacity 0.85
+	geometry-corner-radius 4
+	clip-to-geometry true
+}
+
+window-rule {
+	match is-active=true
+	opacity 0.95
+}
+
+window-rule {
+	match app-id=".*freecad.*"
+	match app-id="blender"
+	match app-id="Darktable"
+	match app-id="krita"
+	match app-id="mpv"
+	match app-id="resolve"
+	match title=".*YouTube -.*"
+	opacity 1.0
+}
+
+window-rule {
+	match app-id="steam_app_.*"
+	match title="fullscreen"
+	match title="screensaver"
+	open-fullscreen true
+	open-focused true
+}
+
+window-rule {
+	match app-id=".*config.*"
+	match app-id="Pinentry-.*"
+	match app-id="xdg-desktop-portal-.*"
+	match title="center"
+	open-floating true
+	open-focused true
+}
+
+window-rule {
+	match title="^Picture.?in.?[Pp]icture$"
+	open-floating true
+	default-floating-position x=16 y=16 relative-to="bottom-right"
 }
