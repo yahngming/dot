@@ -72,9 +72,9 @@ single() {
 }
 
 menu="\
-󰾪 Extend monitors\n\
-󰾪 Mirror monitors\n\
-󰅶 Single monitor\n\
+󰹑 Extend monitors\n\
+󰍺 Mirror monitors\n\
+󰍹 Single monitor\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Display" "$@") in
