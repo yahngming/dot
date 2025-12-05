@@ -4,6 +4,7 @@ case "$@" in
 	*about*|*bat*|dot|*proxy*|*rclone*|*timezone*|up ) opt="-T center" ;;
 	*telnet*                                         ) opt="-T fullscreen" ;;
 	*asciiquarium*|*lavat*|*matrix*|*svr*            ) opt="-T screensaver" ;;
+	*                                                ) opt="-T $@" ;;
 esac
 
 $TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
