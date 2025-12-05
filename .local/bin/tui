@@ -3,7 +3,7 @@
 case "$@" in
 	*about*|*bat*|dot|picker|*proxy*|*rclone*|*timezone*|up ) class="center" ;;
 	*telnet*                                                ) class="fullscreen" ;;
-	*asciiquarium*|*lavat*|*matrix*|*svr*                   ) class="screensaver" ;;
+	*asciiquarium*|*lavat*|*matrix*|*pipes*|*svr*           ) class="screensaver" ;;
 esac
 
 case "$TERMINAL" in
