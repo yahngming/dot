@@ -160,5 +160,5 @@ window-rule {
 window-rule {
 	match title="^Picture.?in.?[Pp]icture$"
 	open-floating true
-	default-floating-position x=16 y=20 relative-to="bottom-right"
+	default-floating-position x=20 y=16 relative-to="bottom-right"
 }
