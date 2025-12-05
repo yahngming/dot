@@ -12,4 +12,4 @@ case "$TERMINAL" in
 	*                                                       ) class="-a $class" ;;
 esac
 
-$TERMINAL -T $(echo "$@" | cut -d ' ' -f 1) $class -e '$SHELL -c "cat ~/.cache/wal/sequences; $@"'
+$TERMINAL -T $(echo "$@" | cut -d ' ' -f 1) $class -e $SHELL '-c "cat ~/.cache/wal/sequences; $@"'
