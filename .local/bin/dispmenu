@@ -16,7 +16,7 @@ single() {
 		done
 	elif [ -n "$DISPLAY" ]; then
 		chosen=$(echo "$chosen" | awk '/ connected/ {print $1}')
-		xrandr --output "$chosen" --auto --scale 1.0x1.0 $(echo "$outputs" | grep -v "\b$1" | awk '{print "--output", $chosen, "--off"}' | paste -sd ' ' -)
+		xrandr --output "$chosen" --auto $(echo "$outputs" | grep -v "\b$1" | awk '{print "--output", $chosen, "--off"}' | paste -sd ' ' -)
 	fi
 }
 
