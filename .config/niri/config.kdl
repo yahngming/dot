@@ -68,6 +68,7 @@ window-rule {
 	match title="fullscreen"
 	match title="screensaver"
 	open-fullscreen true
+	open-focused true
 }
 
 window-rule {
@@ -76,6 +77,7 @@ window-rule {
 	match app-id="xdg-desktop-portal-.*"
 	match title="center"
 	open-floating true
+	open-focused true
 }
 
 window-rule {
