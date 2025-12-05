@@ -5,8 +5,9 @@ case "$LAUNCHER" in
 esac
 
 single() {
-	chosen=$(printf "$displays" | menu $opt -p "Choose a display:")
+	chosen=$(printf "$monitors" | menu $opt -p "Choose a monitor:")
 	if [ -n "$WAYLAND_DISPLAY" ]; then
+		chosen=$(echo "$chosen" | awk '{print $1}')
 		wlr-randr --output "$chosen" --on --preferred
 		for display in $displays; do
 			if [ "$display" != "$chosen" ]; then
@@ -14,7 +15,8 @@ single() {
 			fi
 		done
 	elif [ -n "$DISPLAY" ]; then
-		xrandr --output "$display" --auto --scale 1.0x1.0 $(echo "$displays" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -)
+		chosen=$(echo "$chosen" | awk '/ connected/ {print $1}')
+		xrandr --output "$chosen" --auto --scale 1.0x1.0 $(echo "$displays" | grep -v "\b$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ' -)
 	fi
 }
 
@@ -42,9 +44,11 @@ multiple() {
 }
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	displays=$(wlr-randr | grep "^[^ ]" | awk '{print $1}')
+	monitors=$(wlr-randr | grep "^[^ ]")
+	displays=$(echo "$monitors" | awk '{print $1}')
 elif [ -n "$DISPLAY" ]; then
-	displays=$(xrandr -q | grep "connected" | awk '/ connected/ {print $1}')
+	monitors=$(xrandr -q | grep "connected")
+	displays=$(echo "$monitors" | awk '/ connected/ {print $1}')
 fi
 
 menu="\
