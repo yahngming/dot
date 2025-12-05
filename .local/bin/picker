@@ -1,3 +1,9 @@
 #!/bin/sh
 
-$EXPLORER "$@"
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	TERMINAL="foot -a center"
+elif [ -n "$DISPLAY" ]; then
+	TERMINAL="st -c center"
+fi
+
+$TERMINAL -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "cat ~/.cache/wal/sequences; $EXPLORER $@"
