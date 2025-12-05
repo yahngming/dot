@@ -6,10 +6,10 @@ case "$@" in
 	*asciiquarium*|*lavat*|*matrix*|*pipes*|*svr*           ) class="screensaver" ;;
 esac
 
-case "$TERMINAL" in
-	*st*                                                    ) class="-c $class" ;;
-	*xfce*                                                  ) class="--class=$class" ;;
-	*                                                       ) class="-a $class" ;;
-esac
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	TERMINAL="foot -a $class"
+elif [ -n "$DISPLAY" ]; then
+	TERMINAL="st -c $class"
+fi
 
-$TERMINAL -T $(echo "$@" | cut -d ' ' -f 1) $class -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
+$TERMINAL -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
