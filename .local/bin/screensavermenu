@@ -14,7 +14,7 @@ none\n\
 "
 
 case $(printf "$menu" | menu "$@") in
-	random              ) echo -e "asciiquarium -s -t\nlavat -g -c FF0000 -k FF00FF\nneo-matrix -s\nttesvr\nttysvr" > ~/.config/screensaver ;;
+	random              ) echo -e "asciiquarium -s -t\nlavat -g -c FF0000 -k FF00FF\nneo-matrix -s\ncpipes -m 99\nttesvr\nttysvr" > ~/.config/screensaver ;;
 	asciiquarium        ) echo "asciiquarium -s -t" > ~/.config/screensaver ;;
 	lavat               ) echo "lavat -g -c FF0000 -k FF00FF" > ~/.config/screensaver ;;
 	matrix              ) echo "neo-matrix -s" > ~/.config/screensaver ;;
