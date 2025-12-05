@@ -4,7 +4,7 @@ case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
 
-expand() {
+extend() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 	elif [ -n "$DISPLAY" ]; then
 		primary=$(echo "$screens" | menu $opt -p "Select primary display:")
@@ -16,9 +16,10 @@ expand() {
 }
 
 mirror() {
+	chosen=$(printf "$monitors" | menu $opt -p "Optimize resolution for:")
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		master=$(printf "$monitors" | menu $opt -p "Optimize resolution for:")
-		mode=$(wlr-randr | awk "/^$master /,/Modes:/" | grep "(preferred)" | awk '{print $1 " @ " $3 " Hz"}' | tr -d '\n')
+		chosen=$(echo "$chosen" | awk '{print $NF}')
+		mode=$(wlr-randr | awk "/^$chosen /,/Modes:/" | grep "(preferred)" | awk '{print $1 " @ " $3 " Hz"}' | tr -d '\n')
 	elif [ -n "$DISPLAY" ]; then
 		external=$(echo "$screens" | menu $opt -p "Optimize resolution for:")
 		internal=$(echo "$screens" | grep -v "$external")
@@ -59,13 +60,13 @@ elif [ -n "$DISPLAY" ]; then
 fi
 
 menu="\
-󰾪 Expand monitors\n\
+󰾪 Extend monitors\n\
 󰾪 Mirror monitors\n\
 󰅶 Single monitor\n\
 "
 
 case $(printf "$menu" | menu $opt -p "Display" "$@") in
-	*Expand* ) expand ;;
+	*Extend* ) extend ;;
 	*Mirror* ) mirror ;;
 	*Single* ) single ;;
 esac
