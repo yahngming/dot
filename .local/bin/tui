@@ -1,10 +1,15 @@
 #!/bin/sh
 
 case "$@" in
-	*about*|*bat*|dot|*proxy*|*rclone*|*timezone*|up ) opt="-T center" ;;
-	*telnet*                                         ) opt="-T fullscreen" ;;
-	*asciiquarium*|*lavat*|*matrix*|*svr*            ) opt="-T screensaver" ;;
-	*                                                ) opt="-T $1" ;;
+	*about*|*bat*|dot|*proxy*|*rclone*|*timezone*|up ) class="center" ;;
+	*telnet*                                         ) class="fullscreen" ;;
+	*asciiquarium*|*lavat*|*matrix*|*svr*            ) class="screensaver" ;;
 esac
 
-$TERMINAL $opt -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
+case "$TERMINAL" in
+	*st*                                             ) class="-c $class" ;;
+	*xfce*                                           ) class="--class=$class" ;;
+	*                                                ) class="-a $class" ;;
+esac
+
+$TERMINAL -T $1 $class -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
