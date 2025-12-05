@@ -4,33 +4,45 @@ case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
 
-extend() {
-	primary=$(printf "$monitors" | menu $opt -p "Select primary display:")
+init() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		primary=$(echo "$primary" | awk '{print $NF}')
+		monitors=$(wlr-randr | grep "^[^ ]" | sed 's/^[^"]*"//' | sed 's/"$//')
+		outputs=$(echo "$monitors" | awk '{print $NF}')
+		primary=$(echo "$monitors" | menu $opt -p "Select primary display:" | awk '{print $NF}')
 		wlr-randr --output "$primary" --on --preferred --pos 0,0
+	elif [ -n "$DISPLAY" ]; then
+		monitors=$(xrandr -q | grep "connected")
+		outputs=$(echo "$monitors" | awk '/ connected/ {print $1}')
+		primary=$(echo "$monitors" | menu $opt -p "Select primary display:" | awk '/ connected/ {print $1}')
+		xrandr --output "$primary" --auto
+	fi
+}
+
+extend() {
+	init
+	if [ -n "$WAYLAND_DISPLAY" ]; then
 		for output in $outputs; do
-			wlr-randr --output "$output" --on --preferred
+			if [ "$output" != "$primary" ]; then
+				wlr-randr --output "$output" --on --preferred
+			fi
 		done
 	elif [ -n "$DISPLAY" ]; then
-		primary=$(echo "$primary" | awk '/ connected/ {print $1}')
 		secondary=$(echo "$outputs" | grep -v ^"$primary"$ | menu $opt -p "Select secondary display:")
 		tertiary=$(echo "$outputs" | grep -v ^"$primary"$ | grep -v ^"$secondary"$ | menu $opt -p "Select third display:")
 		direction=$(printf "left\\nright" | menu $opt -p "$secondary is on the:")
-		xrandr --output "$primary" --auto --output "$secondary" --"$direction"-of "$primary" --auto --output "$tertiary" --"$(printf "left\\nright" | grep -v "$direction")"-of "$primary" --auto
+		xrandr --output "$secondary" --"$direction"-of "$primary" --auto --output "$tertiary" --"$(printf "left\\nright" | grep -v "$direction")"-of "$primary" --auto
 	fi
 }
 
 mirror() {
-	primary=$(printf "$monitors" | menu $opt -p "Optimize resolution for:")
+	init
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		primary=$(echo "$primary" | awk '{print $NF}')
-		mode=$(wlr-randr | awk "/^$primary /,/Sync:/" | grep "preferred" | awk '{print $1}' | tr -d '\n')
 		for output in $outputs; do
-			wlr-randr --output "$output" --on --mode "$mode" --pos 0,0
+			if [ "$output" != "$primary" ]; then
+				wlr-mirror --fullscreen-output "$output" "$primary"
+			fi
 		done
 	elif [ -n "$DISPLAY" ]; then
-		primary=$(echo "$primary" | awk '/ connected/ {print $1}')
 		secondary=$(echo "$outputs" | grep -v "$primary")
 		res_primary=$(xrandr --query | sed -n "/^$primary/,/\+/p" | tail -n 1 | awk '{print $1}')
 		res_secondary=$(xrandr --query | sed -n "/^$secondary/,/\+/p" | tail -n 1 | awk '{print $1}')
@@ -40,33 +52,22 @@ mirror() {
 		res_int_y=$(echo "$res_secondary" | sed 's/.*x//')
 		scale_x=$(echo "$res_ext_x / $res_int_x" | bc -l)
 		scale_y=$(echo "$res_ext_y / $res_int_y" | bc -l)
-		xrandr --output "$primary" --auto --output "$secondary" --auto --same-as "$primary" --scale "$scale_x"x"$scale_y"
+		xrandr --output "$secondary" --auto --same-as "$primary" --scale "$scale_x"x"$scale_y"
 	fi
 }
 
 single() {
-	primary=$(printf "$monitors" | menu $opt -p "Choose a monitor:")
+	init
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		primary=$(echo "$primary" | awk '{print $NF}')
-		wlr-randr --output "$primary" --on --preferred
 		for output in $outputs; do
 			if [ "$output" != "$primary" ]; then
 				wlr-randr --output "$output" --off
 			fi
 		done
 	elif [ -n "$DISPLAY" ]; then
-		primary=$(echo "$primary" | awk '/ connected/ {print $1}')
-		xrandr --output "$primary" --auto $(echo "$outputs" | grep -v "\b$primary" | awk '{print "--output", $primary, "--off"}' | paste -sd ' ' -)
+		xrandr $(echo "$outputs" | grep -v "\b$primary" | awk '{print "--output", $primary, "--off"}' | paste -sd ' ' -)
 	fi
 }
-
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	monitors=$(wlr-randr | grep "^[^ ]" | sed 's/^[^"]*"//' | sed 's/"$//')
-	outputs=$(echo "$monitors" | awk '{print $NF}')
-elif [ -n "$DISPLAY" ]; then
-	monitors=$(xrandr -q | grep "connected")
-	outputs=$(echo "$monitors" | awk '/ connected/ {print $1}')
-fi
 
 menu="\
 󰾪 Extend monitors\n\
