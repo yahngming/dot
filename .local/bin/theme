@@ -49,19 +49,19 @@ auto() {
 dark() {
 	if [ ! -f ~/.config/dark ]; then
 		touch -f ~/.config/dark
-		init
 	fi
 	systemctl --user stop sun@themeauto.timer
 	systemctl --user disable sun@themeauto.timer
+	init
 }
 
 light() {
 	if [ -f ~/.config/dark ]; then
 		rm -f ~/.config/dark
-		init
 	fi
 	systemctl --user stop sun@themeauto.timer
 	systemctl --user disable sun@themeauto.timer
+	init
 }
 
 help() {
