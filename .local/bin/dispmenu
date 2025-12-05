@@ -27,7 +27,7 @@ mirror() {
 		primary=$(echo "$primary" | awk '{print $NF}')
 		mode=$(wlr-randr | awk "/^$primary /,/Modes:/" | grep "(preferred)" | awk '{print $1 " @ " $3 " Hz"}' | tr -d '\n')
 		for output in $outputs; do
-			wlr-randr --output "$output" --on --mode "$mode" --pos 0,0
+			wlr-randr --output "$output" --on --preferred --pos 0,0
 		done
 	elif [ -n "$DISPLAY" ]; then
 		primary=$(echo "$primary" | awk '/ connected/ {print $1}')
