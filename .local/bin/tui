@@ -1,9 +1,9 @@
 #!/bin/sh
 
 case "$@" in
-	*about*|*bat*|dot|picker|*proxy*|*rclone*|*timezone*|up ) class="center" ;;
-	*telnet*                                                ) class="fullscreen" ;;
-	*asciiquarium*|*lavat*|*matrix*|*pipes*|*svr*           ) class="screensaver" ;;
+	*about*|*bat*|dot|*proxy*|*rclone*|*timezone*|up ) class="center" ;;
+	*telnet*                                         ) class="fullscreen" ;;
+	*asciiquarium*|*lavat*|*matrix*|*pipes*|*svr*    ) class="screensaver" ;;
 esac
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
