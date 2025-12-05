@@ -10,6 +10,7 @@ init() {
 		outputs=$(echo "$monitors" | awk '{print $NF}')
 		primary=$(echo "$monitors" | menu $opt -p "Select primary display:" | awk '{print $NF}')
 		wlr-randr --output "$primary" --on --preferred --pos 0,0
+		pkill wl-mirror
 	elif [ -n "$DISPLAY" ]; then
 		monitors=$(xrandr -q | grep "connected")
 		outputs=$(echo "$monitors" | awk '/ connected/ {print $1}')
