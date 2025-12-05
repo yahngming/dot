@@ -4,12 +4,12 @@ case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
 
-onescreen() { # If only one output available or chosen.
+onescreen() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		hyprctl keyword monitor "$1",preferred,auto,auto
+		wlr-randr --output "$1" --on --preferred
 		for screen in $screens; do
-			if [[ "$screen" != "$1" ]]; then
-				hyprctl keyword monitor "$screen",disable
+			if [ "$screen" != "$1" ]; then
+				wlr-randr --output "$screen" --off
 			fi
 		done
 	elif [ -n "$DISPLAY" ]; then
@@ -58,7 +58,7 @@ multimon() { # Multi-monitor handler.
 	fi
 }
 
-postrun() { # Stuff to run to clean up.
+postrun() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		exit
 	elif [ -n "$DISPLAY" ]; then
@@ -67,14 +67,10 @@ postrun() { # Stuff to run to clean up.
 }
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	# Get all possible displays.
-	displays=$(hyprctl monitors all | grep "Monitor")
-	# Get all connected screens.
-	screens=$(echo "$displays" | awk '/Monitor/{print $2}')
+	displays=$(wlr-randr | grep "^[^ ]")
+	screens=$(echo "$displays" | awk '{print $1}')
 elif [ -n "$DISPLAY" ]; then
-	# Get all possible displays.
 	displays=$(xrandr -q | grep "connected")
-	# Get all connected screens.
 	screens=$(echo "$displays" | awk '/ connected/ {print $1}')
 fi
 
@@ -82,7 +78,6 @@ fi
 [ "$(echo "$screens" | wc -l)" -lt 2 ] &&
 { onescreen "$screens"; postrun; exit ;}
 
-# Main menu.
 chosen=$(printf "%s\\nMulti-monitor" "$screens" | menu $opt -p "Choose a monitor:") &&
 case "$chosen" in
 	"Multi-monitor") multimon ;;
