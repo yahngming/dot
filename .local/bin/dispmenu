@@ -39,8 +39,7 @@ mirror() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		for output in $outputs; do
 			if [ "$output" != "$primary" ]; then
-				wlr-randr --output "$output" --on --preferred
-				wlr-mirror --fullscreen-output "$output" "$primary"
+				wl-mirror --fullscreen-output "$output" "$primary"
 			fi
 		done
 	elif [ -n "$DISPLAY" ]; then
