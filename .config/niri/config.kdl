@@ -22,7 +22,7 @@ input {
 }
 
 layout {
-	gaps 4
+	gaps 6
 	default-column-width {}
 	background-color "transparent"
 	focus-ring {
@@ -36,9 +36,9 @@ layout {
 		on
 	}
 	struts {
-		top 8
+		top 4
 		right 8
-		bottom 8
+		bottom 4
 		left 8
 	}
 }
