@@ -1,5 +1,3 @@
 #!/bin/sh
 
-case "$TERMINAL" in
-	* ) $TERMINAL "$@" ;;
-esac
+$TERMINAL "$@"
