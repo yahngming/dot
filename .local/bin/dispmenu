@@ -8,6 +8,10 @@ extend() {
 	primary=$(printf "$monitors" | menu $opt -p "Select primary display:")
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		primary=$(echo "$primary" | awk '{print $NF}')
+		wlr-randr --output "$primary" --on --preferred --pos 0,0
+		for output in $outputs; do
+			wlr-randr --output "$output" --on --preferred
+		done
 	elif [ -n "$DISPLAY" ]; then
 		primary=$(echo "$primary" | awk '/ connected/ {print $1}')
 		secondary=$(echo "$outputs" | grep -v ^"$primary"$ | menu $opt -p "Select secondary display:")
