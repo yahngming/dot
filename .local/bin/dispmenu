@@ -25,7 +25,7 @@ mirror() {
 	primary=$(printf "$monitors" | menu $opt -p "Optimize resolution for:")
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		primary=$(echo "$primary" | awk '{print $NF}')
-		mode=$(wlr-randr | awk "/^$primary /,/Modes:/" | grep "(preferred)" | awk '{print $1 " @ " $3 " Hz"}' | tr -d '\n')
+		mode=$(wlr-randr | awk "/^$primary /,/Sync:/" | grep "preferred" | awk '{print $1 " @ " $3 " Hz"}' | tr -d '\n')
 		for output in $outputs; do
 			wlr-randr --output "$output" --on --preferred --pos 0,0
 		done
