@@ -6,4 +6,4 @@ elif [ -n "$DISPLAY" ]; then
 	TERMINAL="st -c center"
 fi
 
-$TERMINAL -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "cat ~/.cache/wal/sequences; $EXPLORER $@"
+$TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences; $EXPLORER $@"
