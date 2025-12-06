@@ -11,14 +11,12 @@ init() {
 		COLOR_SCHEME="prefer-dark"
 		GTK_THEME="Adwaita-dark"
 		ICON_THEME="Adwaita"
-		HYPRCURSOR_THEME="Bibata-Modern-Classic"
 		XCURSOR_THEME="Bibata-Modern-Classic"
 		KBD_BACKLIGHT="1"
 	else
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Adwaita"
 		ICON_THEME="Adwaita"
-		HYPRCURSOR_THEME="Bibata-Modern-Ice"
 		XCURSOR_THEME="Bibata-Modern-Ice"
 		KBD_BACKLIGHT="0"
 	fi
@@ -26,13 +24,12 @@ init() {
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
 	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 	 	pkill waybar
 		waybar &
-		hyprctl setcursor $HYPRCURSOR_THEME 24
 	fi
-	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
 	wallpaper random
 }
 
