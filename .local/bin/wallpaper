@@ -25,6 +25,7 @@ setpaper() {
 		sed -i "s/text-color=.*/text-color=${color7}dd/" "$HOME/.config/mako/config"
 		sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
 		makoctl reload
+		sleep 1
 		kill $swaybg
 	elif [ -n "$DISPLAY" ]; then
 		xwallpaper --zoom "$wallpaper"
