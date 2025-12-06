@@ -125,7 +125,7 @@ window-rule {
 }
 
 window-rule {
-	match is-active=true
+	match is-focused=true
 	opacity 0.95
 }
 
