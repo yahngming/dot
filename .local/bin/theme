@@ -27,8 +27,7 @@ init() {
 	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
 	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-	 	pkill waybar
-		waybar &
+	 	pgrep waybar || waybar &
 	fi
 	wallpaper random
 }
