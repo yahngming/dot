@@ -10,6 +10,6 @@ window-rule {{
 	match is-focused=true
 	shadow {{
 		on
-		color "{color3}"
+		color "{color6}"
 	}}
 }}
