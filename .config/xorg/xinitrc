@@ -1,34 +1,8 @@
-rquickshare &
-setleds -D +num &
-setxkbmap -option ctrl:nocaps,shift:both_capslock &
-unclutter &
-xcape &
-xinput set-prop "Synaptics TM3289-021" 320 1 &
-xinput set-prop "Synaptics TM3289-021" 322 1 &
-xinput set-prop "Synaptics TM3289-021" 324 1 &
-xinput set-prop "Synaptics TM3289-021" 328 1 &
-xinput set-prop "Synaptics TM3289-021" 340 1 &
-xset r rate 300 30 s 600 &
-
 case $1 in
-	dwm)
-		dunst &
-		fcitx5 &
-		idler &
-		statusbar &
-		theme init &
-		udiskie &
-		xcompmgr &
-		xrdb -merge ~/.config/xorg/xresources
-		exec dwm
-		;;
-	gnome)
-		exec gnome-session
-		;;
-	kde)
-		exec startplasma-x11
-		;;
-	xfce)
-		exec startxfce4
-		;;
+	dwm   ) exec dwm ;;
+	gnome ) exec gnome-session ;;
+	kde   ) exec startplasma-x11 ;;
+	xfce  ) exec startxfce4 ;;
 esac
+
+autostart
