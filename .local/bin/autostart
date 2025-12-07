@@ -3,13 +3,31 @@
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	theme set
 	locker
-	fcitx5
 	idler
-	rquickshare
-	systemctl --user start hyprpolkitagent
-	udiskie
-	wl-paste --watch cliphist store
-	steam -silent -system-composer
+	fcitx5 &
+	rquickshare &
+	steam -silent -system-composer &
+	systemctl --user start hyprpolkitagent &
+	udiskie &
+	wl-paste --watch cliphist store &
 elif [ -n "$DISPLAY" ]; then
-	exit
+	theme set
+	rquickshare &
+	setleds -D +num &
+	setxkbmap -option ctrl:nocaps,shift:both_capslock &
+	dunst &
+	fcitx5 &
+	idler
+	statusbar &
+	udiskie &
+	unclutter &
+	xcape &
+	xinput set-prop "Synaptics TM3289-021" 320 1 &
+	xinput set-prop "Synaptics TM3289-021" 322 1 &
+	xinput set-prop "Synaptics TM3289-021" 324 1 &
+	xinput set-prop "Synaptics TM3289-021" 328 1 &
+	xinput set-prop "Synaptics TM3289-021" 340 1 &
+	xset r rate 300 30 s 600 &
+	xcompmgr &
+	xrdb -merge ~/.config/xorg/xresources
 fi
