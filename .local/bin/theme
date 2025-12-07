@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set() {
+start() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Chicago95"
@@ -48,7 +48,7 @@ dark() {
 	fi
 	systemctl --user stop sun@themeauto.timer
 	systemctl --user disable sun@themeauto.timer
-	set
+	start
 }
 
 light() {
@@ -57,7 +57,7 @@ light() {
 	fi
 	systemctl --user stop sun@themeauto.timer
 	systemctl --user disable sun@themeauto.timer
-	set
+	start
 }
 
 help() {
@@ -65,10 +65,10 @@ help() {
 	echo "  auto           auto switch"
 	echo "  dark           dark mode"
 	echo "  light          light mode"
-	echo "  set            initialize"
+	echo "  start          initialize"
 }
 
 case "$@" in
-	auto|dark|light|set ) $@ ;;
-	*                   ) help ;;
+	auto|dark|light|start ) $@ ;;
+	*                     ) help ;;
 esac
