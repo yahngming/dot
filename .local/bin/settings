@@ -30,9 +30,9 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt "$@") in
-	*Audio*       ) audiomenu ;;
+	*Audio*       ) wiremix || audiomenu ;;
 	*Bar*         ) barmenu ;;
-	*Bluetooth*   ) btmenu ;;
+	*Bluetooth*   ) bluetui || btmenu ;;
 	*Caffeine*    ) caffeinemenu ;;
 	*Cloud*       ) cloudmenu ;;
 	*Display*     ) dispmenu ;;
@@ -49,5 +49,5 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Update*      ) tui "up" ;;
 	*USB*         ) usbmenu ;;
 	*Wallpaper*   ) wallpapermenu ;;
-	*WLAN*        ) wlanmenu ;;
+	*WLAN*        ) impala || wlanmenu ;;
 esac
