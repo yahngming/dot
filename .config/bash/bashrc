@@ -29,12 +29,14 @@ help() {
 setenv() {
 	case "$XDG_VTNR" in
 		1)
+			export IDLER="hypridle"
 			export LAUNCHER="fuzzel"
 			export LOCKER="hyprlock"
 			export START="exec niri-session"
 			export TERMINAL="foot"
 			;;
 		2)
+			export IDLER="xautolock"
 			export LAUNCHER="dmenu"
 			export LOCKER="slock"
 			export START="startx ~/.config/xorg/xinitrc dwm"
