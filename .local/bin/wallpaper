@@ -14,6 +14,11 @@ setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
 	fi
+	case "$PAPER" in
+		hyprpaper  ) $PAPER "$@" & ;;
+		swaybg     ) $PAPER -i "$wallpaper" -m fill & ;;
+		xwallpaper ) $PAPER --zoom "$wallpaper" ;;
+	esac
 	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
