@@ -1,7 +1,7 @@
 #!/bin/sh
 
 case "$IDLER" in
-	hypridle  ) $IDLER "$@" ;;
-	swayidle  ) $IDLER -w "$@" ;;
-	xautolock ) $IDLER -time 10 -locker locker "$@" ;;
+	hypridle  ) $IDLER "$@" & ;;
+	swayidle  ) $IDLER -w "$@" & ;;
+	xautolock ) $IDLER -time 10 -locker locker "$@" & ;;
 esac
