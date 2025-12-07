@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pkill $LAUNCHER && exit
+pkill "$LAUNCHER" && exit
 
 case "$LAUNCHER" in
 	dmenu ) dmenu_run "$@" ;;
