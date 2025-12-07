@@ -1,7 +1,6 @@
 #!/bin/sh
 
 tui "bluetui" && exit
-pkill "$LAUNCHER" && exit
 
 case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
