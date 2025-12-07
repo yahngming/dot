@@ -1,10 +1,14 @@
 #!/bin/sh
 
-theme set
-locker
-fcitx5
-rquickshare
-steam -silent -system-composer
-idler
-udiskie
-wl-paste --watch cliphist store
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	theme set
+	locker
+	idler
+	fcitx5
+	udiskie
+	wl-paste --watch cliphist store
+	rquickshare
+	steam -silent -system-composer
+elif [ -n "$DISPLAY" ]; then
+	exit
+fi
