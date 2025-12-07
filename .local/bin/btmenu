@@ -1,5 +1,6 @@
 #!/bin/sh
 
+bluetui && exit
 pkill $LAUNCHER && exit
 
 case "$LAUNCHER" in
