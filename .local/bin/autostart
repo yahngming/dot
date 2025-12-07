@@ -1,0 +1,10 @@
+#!/bin/sh
+
+theme set
+locker
+fcitx5
+rquickshare
+steam -silent -system-composer
+idler
+udiskie
+wl-paste --watch cliphist store
