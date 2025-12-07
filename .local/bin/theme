@@ -60,6 +60,11 @@ light() {
 	settheme
 }
 
+start() {
+	settheme
+	locker
+}
+
 help() {
 	echo "Usage: theme [MODE]"
 	echo "  init           initialize"
@@ -69,6 +74,6 @@ help() {
 }
 
 case "$@" in
-	init|auto|dark|light ) $@ ;;
-	*                    ) help ;;
+	auto|dark|light|start ) $@ ;;
+	*                     ) help ;;
 esac
