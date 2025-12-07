@@ -1,8 +1,8 @@
+autostart
+
 case $1 in
 	dwm   ) exec dwm ;;
 	gnome ) exec gnome-session ;;
 	kde   ) exec startplasma-x11 ;;
 	xfce  ) exec startxfce4 ;;
 esac
-
-autostart
