@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pkill $LAUNCHER && exit
+pkill "$LAUNCHER" && exit
 
 load_config() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
