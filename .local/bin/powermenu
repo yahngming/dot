@@ -12,7 +12,7 @@ menu="\
 "
 
 case $(printf "$menu" | menu "$@") in
-	*Lock*     ) loginctl lock-session ;;
+	*Lock*     ) locker ;;
 	*Logout*   ) pkill -KILL -u $USER ;;
 	*Reboot*   ) systemctl reboot ;;
 	*BIOS*     ) systemctl reboot --firmware-setup ;;
