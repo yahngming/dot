@@ -2,8 +2,8 @@
 
 off() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pkill idler
-		idler &
+		pkill $IDLER
+		idler
 	elif [ -n "$DISPLAY" ]; then
 		$IDLER -enable
 		xset +dpms
@@ -12,7 +12,7 @@ off() {
 
 on() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pkill idler
+		pkill $IDLER
 	elif [ -n "$DISPLAY" ]; then
 		$IDLER -disable
 		xset -dpms
@@ -20,7 +20,7 @@ on() {
 }
 
 status() {
-	if pgrep idler >/dev/null || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
+	if pgrep $IDLER >/dev/null || [ "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" == "Enabled" ]; then
 		echo "Presentation OFF"
 	else
 		echo "Presentation ON"
