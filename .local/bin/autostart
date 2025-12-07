@@ -3,11 +3,12 @@
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	theme set
 	locker
-	idler
 	fcitx5
+	idler
+	rquickshare
+	systemctl --user start hyprpolkitagent
 	udiskie
 	wl-paste --watch cliphist store
-	rquickshare
 	steam -silent -system-composer
 elif [ -n "$DISPLAY" ]; then
 	exit
