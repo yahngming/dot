@@ -4,7 +4,7 @@ case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
 
-init() {
+primary() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		monitors=$(wlr-randr | grep "^[^ ]" | sed 's/^[^"]*"//' | sed 's/"$//')
 		outputs=$(echo "$monitors" | awk '{print $NF}')
@@ -20,7 +20,7 @@ init() {
 }
 
 extend() {
-	init
+	primary
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		for output in $outputs; do
 			if [ "$output" != "$primary" ]; then
@@ -36,7 +36,7 @@ extend() {
 }
 
 mirror() {
-	init
+	primary
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		for output in $outputs; do
 			if [ "$output" != "$primary" ]; then
@@ -59,7 +59,7 @@ mirror() {
 }
 
 single() {
-	init
+	primary
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		for output in $outputs; do
 			if [ "$output" != "$primary" ]; then
