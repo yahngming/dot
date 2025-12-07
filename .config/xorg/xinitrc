@@ -14,10 +14,10 @@ case $1 in
 	dwm)
 		dunst &
 		fcitx5 &
+		idler &
 		statusbar &
 		theme init &
 		udiskie &
-		xautolock -time 10 -locker locker &
 		xcompmgr &
 		xrdb -merge ~/.config/xorg/xresources
 		exec dwm
