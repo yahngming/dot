@@ -26,17 +26,10 @@ help() {
 	"$@" --help 2>&1 | bat --plain --language=help
 }
 
-setenv() {
-	case "$XDG_VTNR" in
-		1)
-			export IDLER="hypridle"
-			export LAUNCHER="fuzzel"
-			export LOCKER="hyprlock"
-			export PAPER="hyprpaper"
-			export START="exec niri-session"
-			export TERMINAL="foot"
-			;;
-		2)
+start() {
+	read -p "dwm/hyprland/niri/xfce: " DESKTOP
+	case "$DESKTOP" in
+		dwm)
 			export IDLER="xautolock"
 			export LAUNCHER="dmenu"
 			export LOCKER="slock"
@@ -44,7 +37,22 @@ setenv() {
 			export START="startx ~/.config/xorg/xinitrc dwm"
 			export TERMINAL="st"
 			;;
-		3)
+		hyprland)
+			export IDLER="hypridle"
+			export LAUNCHER="fuzzel"
+			export LOCKER="hyprlock"
+			export PAPER="hyprpaper"
+			export START="exec Hyprland"
+			export TERMINAL="foot"
+		niri)
+			export IDLER="hypridle"
+			export LAUNCHER="fuzzel"
+			export LOCKER="hyprlock"
+			export PAPER="hyprpaper"
+			export START="exec niri-session"
+			export TERMINAL="foot"
+			;;
+		xfce)
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
 			export START="startx ~/.config/xorg/xinitrc xfce"
@@ -58,9 +66,11 @@ setenv() {
 		done
 		gsettings set org.gnome.system.proxy mode "manual"
 	fi
+	eval "$START"
 }
 
 export BROWSER="qutebrowser"
+export DESKTOP="dwm"
 export EDITOR="vim"
 export EXPLORER="lf"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
@@ -97,6 +107,5 @@ eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
 if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ]; then
-	setenv
-	eval "$START"
+	start
 fi
