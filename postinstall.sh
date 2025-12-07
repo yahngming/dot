@@ -5,7 +5,7 @@ arch() {
 	sudo pacman -S noto-fonts-cjk noto-fonts-emoji ttf-noto-nerd ttf-terminus-nerd # font
 	sudo pacman -S gvim libreoffice-fresh qutebrowser steam # gui
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
-	sudo pacman -S cliphist foot fuzzel grim hyprland hyprpolkitagent mako niri qt6-wayland satty slurp swaybg swaylock swayidle waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
+	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako niri qt6-wayland satty slurp waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
 	sudo pacman -S dunst maim unclutter xautolock xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xhost xorg-xinput xorg-xrandr xwallpaper # xorg
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
