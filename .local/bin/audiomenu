@@ -1,5 +1,7 @@
 #!/bin/sh
 
+tui "wiremix" && exit
+
 case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
