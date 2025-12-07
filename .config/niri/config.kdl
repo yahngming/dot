@@ -28,6 +28,7 @@ layout {
 	}
 	shadow {
 		on
+		draw-behind-window true
 	}
 	struts {
 		top 4
