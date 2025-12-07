@@ -13,7 +13,6 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 	wl-paste --watch cliphist store &
 elif [ -n "$DISPLAY" ]; then
 	dunst &
-	setleds -D +num &
 	setxkbmap -option ctrl:nocaps,shift:both_capslock &
 	statusbar &
 	unclutter &
