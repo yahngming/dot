@@ -1,13 +1,4 @@
 #!/bin/sh
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	pgrep swaylock || swaylock &
-elif [ -n "$DISPLAY" ]; then
-	pgrep slock || slock &
-fi
-
-if pgrep -x "keepassxc"; then
-	keepassxc --lock &
-fi
-
+pgrep $LOCKER || $LOCKER &
 pkill -f " screensaver "
