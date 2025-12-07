@@ -8,8 +8,8 @@ case "$@" in
 	memory  ) free -h | bat -fpPl meminfo ;;
 	pci     ) lspci | bat -fpPl cpuinfo ;;
 	sensors ) sensors | bat -fpPl cpuinfo ;;
-	system  ) fastfetch ;;
-	time    ) timedatectl ;;
+	system  ) fastfetch | lolcat ;;
+	time    ) timedatectl | bat -fpPl conf ;;
 	usb     ) lsusb | bat -fpPl conf ;;
 	*       ) echo "Usage: about [battery|binds|cpu|drive|gpu|memory|pci|sensors|system|time|usb]" ;;
 esac
