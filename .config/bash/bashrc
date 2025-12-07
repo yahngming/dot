@@ -44,6 +44,7 @@ start() {
 			export PAPER="hyprpaper"
 			export START="exec Hyprland"
 			export TERMINAL="foot"
+			;;
 		niri)
 			export IDLER="hypridle"
 			export LAUNCHER="fuzzel"
