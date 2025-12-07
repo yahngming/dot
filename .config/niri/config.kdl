@@ -5,7 +5,7 @@ prefer-no-csd
 spawn-at-startup "fcitx5"
 spawn-at-startup "rquickshare"
 spawn-at-startup "steam" "-silent" "-system-composer"
-spawn-at-startup "swayidle" "-w"
+spawn-at-startup "idler"
 spawn-at-startup "theme" "init"
 spawn-at-startup "udiskie"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
