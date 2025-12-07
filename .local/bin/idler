@@ -3,5 +3,5 @@
 case "$IDLER" in
 	hypridle  ) $IDLER "$@" ;;
 	swayidle  ) $IDLER -w "$@" ;;
-	xautolock ) $IDLER "$@" ;;
+	xautolock ) $IDLER -time 10 -locker locker "$@" ;;
 esac
