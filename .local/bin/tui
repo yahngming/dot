@@ -1,10 +1,10 @@
 #!/bin/sh
 
 case "$@" in
-	*about*|bluetui|dot|impala|*proxy*|*rclone*|*timezone*|up|wiremix ) class="center" ;;
-	*telnet*                                                          ) class="fullscreen" ;;
-	*asciiquarium*|*lavat*|*matrix*|*pipes*|*svr*                     ) class="screensaver" ;;
-	*                                                                 ) class="tui" ;;
+	about*|bluetui|dot|impala|proxy*|rclone*|timezone*|up|wiremix ) class="center" ;;
+	telnet*                                                       ) class="fullscreen" ;;
+	asciiquarium*|lavat*|*matrix|*pipes*|*svr                     ) class="screensaver" ;;
+	*                                                             ) class="tui" ;;
 esac
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
