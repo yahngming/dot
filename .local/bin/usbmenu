@@ -1,7 +1,5 @@
 #!/bin/sh
 
-pkill $LAUNCHER && exit
-
 case "$LAUNCHER" in
 	dmenu ) opt="-noi" ;;
 esac
