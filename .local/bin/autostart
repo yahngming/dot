@@ -1,6 +1,6 @@
 #!/bin/sh
 
-theme set
+theme start
 idler
 locker
 fcitx5 &
