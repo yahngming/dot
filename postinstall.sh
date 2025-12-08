@@ -33,6 +33,8 @@ arch() {
 	sudo cp -r ~/.config/systemd/ /etc/
 	sudo systemd-hwdb update
 	sudo udevadm trigger
+	cp ~/.config/waybar/config-dwm.jsonc ~/.config/waybar/config.jsonc
+ 	cp ~/.config/waybar/style-dwm.css ~/.config/waybar/style.css
 	~/.local/bin/theme auto
 	reboot
 }
