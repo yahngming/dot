@@ -3,16 +3,16 @@
 arch() {
 	sudo sed -i 's/LOGIN_TIMEOUT.*/LOGIN_TIMEOUT 0/' /etc/login.defs
 	sudo sed -i '/#\[multilib\]/,+1s/^#//' /etc/pacman.conf
-	sudo pacman -Syy --noconfirm
-	sudo pacman -Sy --needed --noconfirm archlinux-keyring
-	sudo pacman -S --noconfirm bluez bluez-utils brightnessctl evtest intel-media-driver lib32-mesa lib32-vulkan-icd-loader lib32-vulkan-intel lib32-vulkan-radeon mesa pipewire pipewire-audio pipewire-jack udiskie vulkan-icd-loader vulkan-intel vulkan-radeon wireplumber # driver
-	sudo pacman -S --noconfirm 7zip android-tools atool base-devel bat bc cups dante docker docker-compose eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow id3v2 inetutils jq less lolcat man-db mpv nsxiv openssh pass perl-image-exiftool polkit poppler python-adblock python-pywal rclone ripgrep samba translate-shell ueberzugpp unrar unzip w3m yt-dlp zathura-pdf-poppler zoxide # base
-	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-input-nerd ttf-noto-nerd ttf-terminus-nerd # font
-	sudo pacman -S --noconfirm aerc bluetui btop cmus impala lf wiremix # tui
-	sudo pacman -S --noconfirm gvim libreoffice-fresh qutebrowser steam # gui
-	sudo pacman -S --noconfirm fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
-	sudo pacman -S --noconfirm cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
-	sudo pacman -S --noconfirm dunst maim unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xwallpaper # xorg
+	sudo pacman -Syy
+	sudo pacman -Sy --needed archlinux-keyring
+	sudo pacman -S bluez bluez-utils brightnessctl evtest intel-media-driver lib32-mesa lib32-vulkan-icd-loader lib32-vulkan-intel lib32-vulkan-radeon mesa pipewire pipewire-audio pipewire-jack udiskie vulkan-icd-loader vulkan-intel vulkan-radeon wireplumber # driver
+	sudo pacman -S 7zip android-tools atool base-devel bat bc cups dante docker docker-compose eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow id3v2 inetutils jq less lolcat man-db mpv nsxiv openssh pass perl-image-exiftool polkit poppler python-adblock python-pywal rclone ripgrep samba translate-shell ueberzugpp unrar unzip w3m yt-dlp zathura-pdf-poppler zoxide # base
+	sudo pacman -S noto-fonts-cjk noto-fonts-emoji ttf-input-nerd ttf-noto-nerd ttf-terminus-nerd # font
+	sudo pacman -S aerc bluetui btop cmus impala lf wiremix # tui
+	sudo pacman -S gvim libreoffice-fresh qutebrowser steam # gui
+	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
+	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
+	sudo pacman -S dunst maim unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xwallpaper # xorg
    	sudo systemctl enable avahi-daemon.service
    	sudo systemctl enable bluetooth.service
    	sudo systemctl enable cups.service
@@ -27,9 +27,9 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
-	yay -S --noconfirm ctpv-git dragon-drop newsraft sing-box xautolock #base
-	yay -S --noconfirm asciiquarium-transparent-git lavat-git neo-matrix pipes.c python-terminaltexteffects ttysvr # screensavers
-	yay -S --noconfirm bibata-cursor-git chicago95-theme google-chrome r-quick-share-bin #gui
+	yay -S ctpv-git dragon-drop newsraft sing-box xautolock #base
+	yay -S asciiquarium-transparent-git lavat-git neo-matrix pipes.c python-terminaltexteffects ttysvr # screensavers
+	yay -S bibata-cursor-git chicago95-theme r-quick-share-bin #gui
 }
 
 chromeos() {
