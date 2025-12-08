@@ -1,8 +1,8 @@
 #!/bin/sh
 
-sudo pacman -Sy --needed archlinux-keyring --noconfirm
+sudo pacman -Sy --needed --noconfirm archlinux-keyring
 yay --noconfirm
-sudo pacman -Rns $(pacman -Qtdq) --noconfirm
+sudo pacman -Rns --noconfirm $(pacman -Qtdq)
 yay -Scc --noconfirm
 
 dot
