@@ -14,15 +14,15 @@ setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
 	fi
-	pkill $PAPER
-	case "$PAPER" in
-		hyprpaper  ) $PAPER & ;;
-		swaybg     ) $PAPER -i "$wallpaper" -m fill & ;;
-		xwallpaper ) $PAPER --zoom "$wallpaper" ;;
-	esac
+	cp "$wallpaper" "$paperfolder/wallpaper"
+	convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
 	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
+		pkill hyprpaper
+		pkill swaybg
+		hyprpaper &
+		swaybg -i "$paperfolder/backdrop" -m fill &
 		cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/
 		sed -i "s/background-color=.*/background-color=${color0}dd/" "$HOME/.config/mako/config"
 		sed -i "s/border-color=.*/border-color=${color3}dd/" "$HOME/.config/mako/config"
@@ -30,6 +30,7 @@ setpaper() {
 		sed -i "s/progress-color=.*/progress-color=${color7}dd/" "$HOME/.config/mako/config"
 		makoctl reload
 	elif [ -n "$DISPLAY" ]; then
+		xwallpaper --zoom "$wallpaper"
 		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
 		sed -i '/background = /s/.*/background = "'$color0'"/' "$HOME/.config/dunst/dunstrc"
 		sed -i '/foreground = /s/.*/foreground = "'$color7'"/' "$HOME/.config/dunst/dunstrc"
@@ -37,8 +38,6 @@ setpaper() {
 		pkill dunst
 		dunst &
 	fi
-	cp "$wallpaper" "$paperfolder/wallpaper"
-	convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
 	pgrep qutebrowser && qutebrowser :config-source
 }
 
