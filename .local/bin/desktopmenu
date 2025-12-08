@@ -1,0 +1,15 @@
+#!/bin/sh
+
+menu="\
+dwm\n\
+hyprland\n\
+niri\n\
+xfce\n\
+"
+
+case $(printf "$menu" | menu "$@") in
+	dwm      ) echo "dwm" > ~/.config/desktop ;;
+	hyprland ) echo "hyprland" > ~/.config/desktop ;;
+	niri     ) echo "niri" > ~/.config/desktop ;;
+	xfce     ) echo "xfce" > ~/.config/desktop ;;
+esac
