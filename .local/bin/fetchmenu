@@ -17,6 +17,9 @@ choice=$(printf "$menu" | menu "$@")
 if [ "$choice" == "auto" ]; then
 	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
 		*ThinkPad* ) choice="thinkpad" ;;
+	esac
+	case "$(cat /sys/devices/virtual/dmi/id/product_name)" in
+		*ITX*      ) choice="dos" ;;
 		*          ) choice="arch" ;;
 	esac
 fi
