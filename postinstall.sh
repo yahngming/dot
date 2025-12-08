@@ -1,7 +1,6 @@
 #!/bin/sh
 
 arch() {
-	sudo ln -sf ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 	sudo sed -i '/#\[multilib\]/,+1s/^#//' /etc/pacman.conf
 	sudo pacman -S bluez bluez-utils brightnessctl evtest intel-media-driver mesa pipewire-jack udiskie # driver
 	sudo pacman -S 7zip android-tools atool base-devel bat bc cups dante docker docker-compose eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow id3v2 inetutils jq less lolcat man-db mpv nsxiv openssh pass perl-image-exiftool polkit poppler python-adblock python-pywal rclone ripgrep samba translate-shell ueberzugpp unrar unzip w3m yt-dlp zathura-pdf-poppler zoxide # base
