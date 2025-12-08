@@ -12,16 +12,16 @@ arch() {
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
 	sudo pacman -S dunst maim unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xwallpaper # xorg
-   	sudo systemctl enable avahi-daemon.service
-   	sudo systemctl enable bluetooth.service
-   	sudo systemctl enable cups.service
-   	sudo systemctl enable docker.socket
-   	sudo systemctl enable smb.service
+	sudo systemctl enable avahi-daemon.service
+	sudo systemctl enable bluetooth.service
+	sudo systemctl enable cups.service
+	sudo systemctl enable docker.socket
+	sudo systemctl enable smb.service
 	sudo gpasswd -a $USER uucp
 	sudo usermod -aG docker $USER
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && GOPROXY=direct makepkg -si
- 	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
+	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
 	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd dwm && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
@@ -29,7 +29,10 @@ arch() {
 	yay -S ctpv-git dragon-drop newsraft sing-box xautolock #base
 	yay -S asciiquarium-transparent-git lavat-git neo-matrix pipes.c python-terminaltexteffects ttysvr # screensavers
 	yay -S bibata-cursor-git chicago95-theme r-quick-share-bin #gui
-	theme auto
+	sudo cp -r ~/.config/udev/ /etc/
+	sudo cp -r ~/.config/systemd/ /etc/
+	sudo systemd-hwdb update
+	sudo udevadm trigger
 	reboot
 }
 
