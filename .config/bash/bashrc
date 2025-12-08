@@ -32,7 +32,6 @@ start() {
 			export IDLER="xautolock"
 			export LAUNCHER="dmenu"
 			export LOCKER="slock"
-			export PAPER="xwallpaper"
 			export START="startx ~/.config/xorg/xinitrc dwm"
 			export TERMINAL="st"
 			;;
@@ -40,7 +39,6 @@ start() {
 			export IDLER="hypridle"
 			export LAUNCHER="fuzzel"
 			export LOCKER="hyprlock"
-			export PAPER="hyprpaper"
 			export START="exec Hyprland"
 			export TERMINAL="foot"
 			;;
@@ -48,7 +46,6 @@ start() {
 			export IDLER="hypridle"
 			export LAUNCHER="fuzzel"
 			export LOCKER="hyprlock"
-			export PAPER="hyprpaper"
 			export START="exec niri-session"
 			export TERMINAL="foot"
 			;;
