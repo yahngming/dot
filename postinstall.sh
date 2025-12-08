@@ -10,7 +10,7 @@ arch() {
 	sudo pacman -S gvim libreoffice-fresh qutebrowser steam # gui
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako niri qt6-wayland satty slurp waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
-	sudo pacman -S dunst maim unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xhost xorg-xinput xorg-xrandr xwallpaper # xorg
+	sudo pacman -S dunst maim unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xhost xorg-xinit xorg-xinput xorg-xrandr xwallpaper # xorg
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && GOPROXY=direct makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
