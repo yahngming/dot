@@ -37,6 +37,7 @@ arch() {
 	cp ~/.config/fastfetch/logo-arch.txt ~/.config/fastfetch/logo.txt
 	cp ~/.config/waybar/config-dwm.jsonc ~/.config/waybar/config.jsonc
  	cp ~/.config/waybar/style-dwm.css ~/.config/waybar/style.css
+	echo "ttesvr" > ~/.config/screensaver 
 	~/.local/bin/theme auto
 	reboot
 }
