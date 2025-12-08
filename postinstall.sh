@@ -11,7 +11,7 @@ arch() {
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako niri qt6-wayland satty slurp waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
 	sudo pacman -S dunst maim unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xhost xorg-xinput xorg-xrandr xwallpaper # xorg
 	mkdir -p ~/.local/src
-	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && GOPROXY=direct makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
 	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd dwm && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
