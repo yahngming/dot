@@ -10,7 +10,7 @@ arch() {
 	sudo pacman -S aerc bluetui btop cmus impala lf wiremix # tui
 	sudo pacman -S gvim libreoffice-fresh qutebrowser steam # gui
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
-	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
+	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
 	sudo pacman -S dunst maim unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xwallpaper # xorg
 	sudo systemctl enable avahi-daemon.service
 	sudo systemctl enable bluetooth.service
