@@ -19,9 +19,6 @@ arch() {
 	yay -S ctpv-git dragon-drop newsraft sing-box xautolock #base
 	yay -S asciiquarium-transparent-git lavat-git neo-matrix pipes.c python-terminaltexteffects ttysvr # screensavers
 	yay -S bibata-cursor-git chicago95-theme google-chrome r-quick-share-bin #gui
-	mkdir -p ~/Pictures/wallpapers/dark ~/Pictures/wallpapers/light
-	cd ~/Pictures/wallpapers/dark && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
-	cd ~/Pictures/wallpapers/light && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
    	sudo systemctl enable avahi-daemon.service
    	sudo systemctl enable bluetooth.service
    	sudo systemctl enable cups.service
