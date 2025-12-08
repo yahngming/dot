@@ -53,13 +53,13 @@ manual() {
 
 picker() {
 	setfolder
-	wallpaper="$(nsxiv -ot $themefolder | shuf -n 1)"
+	wallpaper="$(nsxiv -ot $themefolder/ | shuf -n 1)"
 	setpaper
 }
 
 random() {
 	setfolder
-	wallpaper="$(find $themefolder | shuf -n 1)"
+	wallpaper="$(find $themefolder/ | shuf -n 1)"
 	setpaper
 }
 
