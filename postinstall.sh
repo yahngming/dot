@@ -33,6 +33,7 @@ arch() {
 	sudo cp -r ~/.config/systemd/ /etc/
 	sudo systemd-hwdb update
 	sudo udevadm trigger
+	~/.local/bin/theme auto
 	reboot
 }
 
