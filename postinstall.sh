@@ -3,7 +3,7 @@
 arch() {
 	sudo sed -i '/#\[multilib\]/,+1s/^#//' /etc/pacman.conf
 	sudo pacman -Syy
-	sudo pacman -S bluez bluez-utils brightnessctl evtest intel-media-driver lib32-mesa lib32-vulkan-intel lib32-vulkan-radeon mesa pipewire-jack udiskie vulkan-intel vulkan-radeon # driver
+	sudo pacman -S bluez bluez-utils brightnessctl evtest intel-media-driver lib32-mesa lib32-vulkan-icd-loader lib32-vulkan-intel lib32-vulkan-radeon mesa pipewire-jack udiskie vulkan-icd-loader vulkan-intel vulkan-radeon # driver
 	sudo pacman -S 7zip android-tools atool base-devel bat bc cups dante docker docker-compose eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow id3v2 inetutils jq less lolcat man-db mpv nsxiv openssh pass perl-image-exiftool polkit poppler python-adblock python-pywal rclone ripgrep samba translate-shell ueberzugpp unrar unzip w3m yt-dlp zathura-pdf-poppler zoxide # base
 	sudo pacman -S noto-fonts-cjk noto-fonts-emoji ttf-input-nerd ttf-noto-nerd ttf-terminus-nerd # font
 	sudo pacman -S aerc bluetui btop cmus impala lf wiremix # tui
