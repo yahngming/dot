@@ -3,7 +3,7 @@
 case "$@" in
 	about*|bluetui|dot|impala|proxy*|rclone*|timezone*|up|wiremix ) class="center" ;;
 	telnet*                                                       ) class="fullscreen" ;;
-	asciiquarium*|lavat*|*matrix|*pipes*|*svr                     ) class="screensaver" ;;
+	asciiquarium*|lavat*|*matrix*|*pipes*|*svr                    ) class="screensaver" ;;
 	*                                                             ) class="tui" ;;
 esac
 
