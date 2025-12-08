@@ -12,6 +12,7 @@ menu="\
 󰂳 Bluetooth\n\
  Caffeine\n\
  Cloud\n\
+ Desktop\n\
 󰍹 Display\n\
  Dotfiles\n\
  Fetch\n\
@@ -35,6 +36,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Bluetooth*   ) btmenu ;;
 	*Caffeine*    ) caffeinemenu ;;
 	*Cloud*       ) cloudmenu ;;
+	*Desktop*     ) desktopmenu ;;
 	*Display*     ) dispmenu ;;
 	*Dotfiles*    ) tui "dot" ;;
 	*Fetch*       ) fetchmenu ;;
