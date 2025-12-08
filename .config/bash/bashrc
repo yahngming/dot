@@ -27,7 +27,7 @@ help() {
 }
 
 start() {
-	case "$DESKTOP" in
+	case "$(head -n 1 ~/.config/desktop)" in
 		dwm)
 			export IDLER="xautolock"
 			export LAUNCHER="dmenu"
@@ -67,7 +67,6 @@ start() {
 }
 
 export BROWSER="qutebrowser"
-export DESKTOP="niri"
 export EDITOR="vim"
 export EXPLORER="lf"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
