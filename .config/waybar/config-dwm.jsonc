@@ -47,7 +47,9 @@
 			"default": ["󰕿", "󰖀", "󰕾"]
 		},
 		"tooltip": false,
-		"on-click": "volume toggle"
+		"on-click": "volume toggle",
+		"on-scroll-down": "volume down",
+		"on-scroll-up": "volume up"
 	},
 	"clock": {
 		"format": "{:%R}",
