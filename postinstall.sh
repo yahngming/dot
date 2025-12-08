@@ -1,7 +1,8 @@
 #!/bin/sh
 
 arch() {
-	sudo pacman -S 7zip android-tools atool base-devel bat bc bluez bluez-utils brightnessctl cups dante docker docker-compose evtest eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow id3v2 inetutils jq less lolcat man-db mpv nsxiv openssh pass perl-image-exiftool pipewire polkit poppler python-adblock python-pywal rclone ripgrep samba timeshift translate-shell udiskie ueberzugpp unrar unzip w3m wireplumber yt-dlp zathura-pdf-poppler zoxide # base
+	sudo pacman -S intel-media-driver mesa pipewire # driver
+	sudo pacman -S 7zip android-tools atool base-devel bat bc bluez bluez-utils brightnessctl cups dante docker docker-compose evtest eza fastfetch fd ffmpegthumbnailer fontforge fuse fzf git git-delta glow id3v2 inetutils jq less lolcat man-db mpv nsxiv openssh pass perl-image-exiftool polkit poppler python-adblock python-pywal rclone ripgrep samba translate-shell udiskie ueberzugpp unrar unzip w3m wireplumber yt-dlp zathura-pdf-poppler zoxide # base
 	sudo pacman -S noto-fonts-cjk noto-fonts-emoji ttf-noto-nerd ttf-terminus-nerd # font
 	sudo pacman -S aerc bluetui btop cmus impala lf wiremix # tui
 	sudo pacman -S gvim libreoffice-fresh qutebrowser steam # gui
