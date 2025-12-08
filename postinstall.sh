@@ -29,6 +29,8 @@ arch() {
 	yay -S ctpv-git dragon-drop newsraft sing-box xautolock #base
 	yay -S asciiquarium-transparent-git lavat-git neo-matrix pipes.c python-terminaltexteffects ttysvr # screensavers
 	yay -S bibata-cursor-git chicago95-theme r-quick-share-bin #gui
+	theme auto
+	reboot
 }
 
 chromeos() {
