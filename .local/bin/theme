@@ -27,7 +27,7 @@ start() {
 	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
 	case "$(head -n 1 ~/.config/desktop)" in
 		hyprland ) hyprctl setcursor "$XCURSOR_THEME" ;;
-		niri     ) echo -e "cursor {\n\txcursor-theme \"\$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl ;;
+		niri     ) echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl ;;
 	esac
 	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
 	if [ -n "$WAYLAND_DISPLAY" ]; then
