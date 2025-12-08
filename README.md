@@ -11,10 +11,12 @@ git clone https://gist.github.com/$GISTID ~/.local/src/sub
 ```
 pass init
 ```sh
-gpg --import keys.asc
+gpg --import KEYS.asc
 gpg --list-keys
 gpg --edit-key $KEYID
 gpg> trust
+gpg> 5
+gpg> quit
 git clone https://$TOKEN@github.com/yahngming/pass ~/.password-store
 ```
 rclone setup
