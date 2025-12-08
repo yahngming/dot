@@ -9,6 +9,7 @@ steam -silent -system-composer &
 udiskie &
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
+	kanshi &
 	systemctl --user start hyprpolkitagent &
 	wl-paste --watch cliphist store &
 elif [ -n "$DISPLAY" ]; then
