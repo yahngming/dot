@@ -38,6 +38,7 @@ layout {
 }
 
 cursor {
+	xcursor-theme "Bibata-Modern-Classic"
 	hide-when-typing
 	hide-after-inactive-ms 5000
 }
