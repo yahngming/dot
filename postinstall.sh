@@ -8,7 +8,7 @@ arch() {
 	sudo pacman -S gvim libreoffice-fresh qutebrowser steam # gui
 	sudo pacman -S fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent mako niri qt6-wayland satty slurp waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
-	sudo pacman -S dunst maim unclutter xautolock xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xhost xorg-xinput xorg-xrandr xwallpaper # xorg
+	sudo pacman -S dunst maim unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xhost xorg-xinput xorg-xrandr xwallpaper # xorg
 	mkdir -p ~/.local/src
 	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
  	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
@@ -16,7 +16,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/slock && cd slock && sudo make clean install
-	yay -S ctpv-git dragon-drop newsraft sing-box #base
+	yay -S ctpv-git dragon-drop newsraft sing-box xautolock #base
 	yay -S asciiquarium-transparent-git lavat-git neo-matrix pipes.c python-terminaltexteffects ttysvr # screensavers
 	yay -S bibata-cursor-git chicago95-theme google-chrome r-quick-share-bin #gui
 	mkdir -p ~/Pictures/wallpapers && cd ~/Pictures/wallpapers && curl -O https://dt.iki.fi/stuff/forums/arch/ARCH_bubblessvg_v2_5120px.png
