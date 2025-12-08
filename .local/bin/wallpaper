@@ -14,7 +14,6 @@ setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
 	fi
-	cp "$wallpaper" "$paperfolder/wallpaper"
 	pkill $PAPER
 	case "$PAPER" in
 		hyprpaper  ) $PAPER & ;;
@@ -38,6 +37,8 @@ setpaper() {
 		pkill dunst
 		dunst &
 	fi
+	cp "$wallpaper" "$paperfolder/wallpaper"
+	convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
 	pgrep qutebrowser && qutebrowser :config-source
 }
 
