@@ -1,0 +1,7 @@
+profile {
+	output DP-1 mode 3440x1440@99.998001 scale 1.5
+}
+
+profile {
+	output eDP-1 mode 1920x1080@60.012001 scale 1.25
+}
