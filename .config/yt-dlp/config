@@ -1,1 +1,2 @@
 --sponsorblock-remove "default"
+--use-postprocessor srt_fix
