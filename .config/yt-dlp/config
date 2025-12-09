@@ -1,3 +1,6 @@
 --convert-subs=srt
 --sponsorblock-remove "default"
+--sub-lang en
 --use-postprocessor srt_fix
+--write-subs
+--write-auto-subs
