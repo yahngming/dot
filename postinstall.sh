@@ -20,7 +20,7 @@ arch() {
 	sudo gpasswd -a $USER uucp
 	sudo usermod -aG docker $USER
 	mkdir -p ~/.local/src
-	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+	cd ~/.local/src && git clone https://aur.archlinux.org/yay.git && cd yay && GOPROXY="direct" makepkg -si
 	cd ~/.local/src && git clone https://github.com/yahngming/dot && cd dot && bash .local/bin/dot
 	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd dwm && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
