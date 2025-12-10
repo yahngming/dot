@@ -6,7 +6,7 @@ arch() {
 	sudo pacman -Syu --needed --noconfirm archlinux-keyring
 	sudo pacman -S --noconfirm bluez bluez-utils brightnessctl evtest intel-media-driver lib32-mesa lib32-vulkan-icd-loader lib32-vulkan-intel lib32-vulkan-radeon libvdpau-va-gl libvpl mesa pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse udiskie vpl-gpu-rt vulkan-icd-loader vulkan-intel vulkan-radeon wireplumber # driver
 	sudo pacman -S --noconfirm 7zip aerc atool base-devel bat bc bluetui btop cmus cups dante docker docker-compose eza fastfetch fd ffmpegthumbnailer fontforge fortune-mod fuse fzf git git-delta glow id3v2 impala inetutils jq less lf lolcat man-db mpv nsxiv openssh pass perl-image-exiftool polkit poppler python-adblock python-pywal rclone ripgrep samba translate-shell ueberzugpp unrar unzip w3m webkit2gtk-4.1 wiremix yt-dlp zathura-pdf-poppler zoxide # base
-	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-input-nerd ttf-noto-nerd ttf-terminus-nerd # font
+	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-noto-nerd ttf-terminus-nerd # font
 	sudo pacman -S --noconfirm gamescope gvim keepassxc libreoffice-fresh qutebrowser steam # gui
 	sudo pacman -S --noconfirm fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S --noconfirm cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
