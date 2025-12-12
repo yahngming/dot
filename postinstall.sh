@@ -9,8 +9,8 @@ arch() {
 	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-noto-nerd ttf-terminus-nerd # font
 	sudo pacman -S --noconfirm gamescope gvim keepassxc libreoffice-fresh qutebrowser steam # gui
 	sudo pacman -S --noconfirm fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
-	sudo pacman -S --noconfirm cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xdg-desktop-portal-hyprland xwayland-satellite # wayland
-	sudo pacman -S --noconfirm dunst maim nsxiv unclutter xcape xclip xcompmgr xdg-desktop-portal-gnome xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xwallpaper # xorg
+	sudo pacman -S --noconfirm cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xwayland-satellite # wayland
+	sudo pacman -S --noconfirm dunst maim nsxiv unclutter xcape xclip xcompmgr xdg-desktop-portal-gtk xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xwallpaper # xorg
 	sudo systemctl enable avahi-daemon.service
 	sudo systemctl enable bluetooth.service
 	sudo systemctl enable cups.service
@@ -35,7 +35,7 @@ arch() {
 	cp ~/.config/fastfetch/logo-arch.txt ~/.config/fastfetch/logo.txt
 	cp ~/.config/waybar/config-dwm.jsonc ~/.config/waybar/config.jsonc
 	cp ~/.config/waybar/style-dwm.css ~/.config/waybar/style.css
-	echo "niri" > ~/.config/desktop
+	echo "exec niri-session" > ~/.config/desktop
 	echo "ttesvr" > ~/.config/screensaver
 	~/.local/bin/theme auto
 	reboot
