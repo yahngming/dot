@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if pgrep -f " screensaver " || pgrep locker || pgrep mpv || [ ! -f ~/.config/screensaver ]; then
+if pgrep -f " screensaver " || pgrep "$LOCKER" || pgrep mpv || [ ! -f ~/.config/screensaver ]; then
 	exit
 fi
 
