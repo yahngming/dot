@@ -29,30 +29,24 @@ help() {
 start() {
 	case "$(head -n 1 ~/.config/desktop)" in
 		dwm)
+			export EXPLORER="lf"
 			export IDLER="xautolock"
 			export LAUNCHER="dmenu"
 			export LOCKER="slock"
-			export START="startx ~/.config/xorg/xinitrc dwm"
 			export TERMINAL="st"
 			;;
-		hyprland)
+		hyprland|niri)
+			export BAR="waybar"
+			export EXPLORER="lf"
 			export IDLER="hypridle"
 			export LAUNCHER="fuzzel"
 			export LOCKER="hyprlock"
-			export START="exec Hyprland"
-			export TERMINAL="foot"
-			;;
-		niri)
-			export IDLER="hypridle"
-			export LAUNCHER="fuzzel"
-			export LOCKER="hyprlock"
-			export START="exec niri-session"
 			export TERMINAL="foot"
 			;;
 		xfce)
+			export EXPLORER="thunar"
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
-			export START="startx ~/.config/xorg/xinitrc xfce"
 			export TERMINAL="xfce4-terminal"
 			;;
 	esac
@@ -63,12 +57,11 @@ start() {
 		done
 		gsettings set org.gnome.system.proxy mode "manual"
 	fi
-	eval "$START"
+	eval "$(head -n 1 ~/.config/desktop)"
 }
 
 export BROWSER="qutebrowser"
 export EDITOR="vim"
-export EXPLORER="lf"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
 export FZF_CTRL_T_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type file"
 export FZF_ALT_C_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type directory"
