@@ -28,7 +28,7 @@ help() {
 
 start() {
 	case "$(head -n 1 ~/.config/desktop)" in
-		dwm)
+		*dwm*)
 			export BAR="dwm"
 			export EXPLORER="lf"
 			export IDLER="xautolock"
@@ -36,7 +36,7 @@ start() {
 			export LOCKER="slock"
 			export TERMINAL="st"
 			;;
-		hyprland|niri)
+		*hyprland*|*niri*)
 			export BAR="waybar"
 			export EXPLORER="lf"
 			export IDLER="hypridle"
@@ -44,7 +44,7 @@ start() {
 			export LOCKER="hyprlock"
 			export TERMINAL="foot"
 			;;
-		xfce)
+		*xfce*)
 			export EXPLORER="thunar"
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
