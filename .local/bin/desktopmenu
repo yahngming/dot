@@ -8,8 +8,8 @@ xfce\n\
 "
 
 case $(printf "$menu" | menu "$@") in
-	dwm      ) echo "dwm" > ~/.config/desktop ;;
-	hyprland ) echo "hyprland" > ~/.config/desktop ;;
-	niri     ) echo "niri" > ~/.config/desktop ;;
-	xfce     ) echo "xfce" > ~/.config/desktop ;;
+	dwm      ) echo "startx ~/.config/xorg/xinitrc dwm" > ~/.config/desktop ;;
+	hyprland ) echo "exec Hyprland" > ~/.config/desktop ;;
+	niri     ) echo "exec niri-session" > ~/.config/desktop ;;
+	xfce     ) echo "startx ~/.config/xorg/xinitrc xfce" > ~/.config/desktop ;;
 esac
