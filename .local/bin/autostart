@@ -15,7 +15,6 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 elif [ -n "$DISPLAY" ]; then
 	dunst &
 	setxkbmap -option ctrl:nocaps,shift:both_capslock &
-	statusbar &
 	unclutter &
 	xcape &
 	xcompmgr &
