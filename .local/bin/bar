@@ -111,15 +111,15 @@ vol() {
 	[ "$vol" ] && printf "$icon"
 }
 
-case "$START" in
-	*dwm*)
+case "$BAR" in
+	dwm)
 		while true; do
 			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb) $(dpm) $(cpu) $(bat) $(net) $(vol) $(clk) "
 		done
 		;;
-	*hyprland*|*niri*)
-		pkill $BAR
-		$BAR &
+	waybar)
+		pkill waybar
+		waybar &
 		;;
 	*)
 		printf "$(bat) $(net) $(vol)"
