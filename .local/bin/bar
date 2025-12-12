@@ -117,7 +117,11 @@ case "$START" in
 			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb) $(dpm) $(cpu) $(bat) $(net) $(vol) $(clk) "
 		done
 		;;
+	*hyprland*|*niri*)
+		pkill $BAR
+		$BAR &
+		;;
 	*)
-		echo "$(bat) $(net) $(vol)"
+		printf "$(bat) $(net) $(vol)"
 		;;
 esac
