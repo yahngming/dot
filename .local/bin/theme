@@ -30,8 +30,8 @@ start() {
 		niri     ) echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl ;;
 	esac
 	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
-	wallpaper random
 	bar
+	wallpaper random
 }
 
 auto() {
