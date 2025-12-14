@@ -1,10 +1,15 @@
 #!/bin/sh
 
 down() {
+	for f in ~/.config/docker/*.yaml
+	do
+		docker compose -f "$f" stop
+	done
 	sudo systemctl stop docker.service
 }
 
 up() {
+	sudo systemctl start docker.service
 	for f in ~/.config/docker/*.yaml
 	do
 		docker compose -f "$f" up -d
