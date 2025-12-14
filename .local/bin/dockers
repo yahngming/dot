@@ -5,8 +5,8 @@ down() {
 	do
 		docker compose -f "$f" stop
 	done
-	sudo systemctl stop docker.service
 	sudo systemctl stop docker.socket
+	sudo systemctl stop docker.service
 }
 
 up() {
@@ -18,8 +18,8 @@ up() {
 }
 
 status() {
-	echo "docker.service $(systemctl is-active docker.service)"
 	echo "docker.socket $(systemctl is-active docker.socket)"
+	echo "docker.service $(systemctl is-active docker.service)"
 }
 
 help() {
