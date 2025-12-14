@@ -18,8 +18,10 @@ up() {
 }
 
 status() {
-	echo "docker.socket $(systemctl is-active docker.socket)"
-	echo "docker.service $(systemctl is-active docker.service)"
+	case "$(systemctl is-active docker.service)" in
+		active   ) docker ps ;;
+		inactive ) echo "docker.service inactive / docker.socket $(systemctl is-active docker.socket)"
+	esac
 }
 
 help() {
