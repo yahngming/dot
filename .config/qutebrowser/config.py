@@ -70,7 +70,7 @@ c.fileselect.single_file.command = ['picker', '-selection-path={}']
 c.fonts.default_family = 'monospace'
 c.input.insert_mode.auto_load = True
 c.input.mode_override = {
-	'rmjs.rmadvanced.com': 'passthrough'
+	'passthrough': 'rmjs.rmadvanced.com'
 }
 c.qt.args = [
 	'enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,TouchpadOverscrollHistoryNavigation,VaapiVideoDecoder',
