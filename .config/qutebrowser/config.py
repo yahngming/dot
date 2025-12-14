@@ -60,16 +60,15 @@ c.content.blocking.adblock.lists = [
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/ubol-filters.txt',
 	'https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt'
 ]
-c.content.user_stylesheets = ["~/.config/qutebrowser/styles/youtube.css"]
+c.content.user_stylesheets = ['~/.config/qutebrowser/styles/youtube.css']
 c.downloads.position = 'bottom'
 c.downloads.remove_finished = 3
 c.editor.command = ['editor', '{file}']
-c.fileselect.handler = "external"
+c.fileselect.handler = 'external'
 c.fileselect.multiple_files.command = ['picker', '-selection-path={}']
 c.fileselect.single_file.command = ['picker', '-selection-path={}']
 c.fonts.default_family = 'monospace'
 c.input.insert_mode.auto_load = True
-c.input.mode_override = ['passthrough', 'rmjs.rmadvanced.com']
 c.qt.args = [
 	'enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,TouchpadOverscrollHistoryNavigation,VaapiVideoDecoder',
 	'enable-gpu-rasterization',
@@ -95,3 +94,4 @@ config.bind('<Ctrl-F>', 'fake-key <Ctrl-F>')
 config.bind('<Ctrl-X>', 'fake-key <Ctrl-X>')
 config.bind(';p', 'hint links spawn xdg-open {hint-url}')
 config.bind('pi', 'spawn xdg-open {url}')
+config.set('input.mode_override', 'passthrough', 'rmjs.rmadvanced.com')
