@@ -1,5 +1,7 @@
 #!/bin/sh
 
+pkill "$IDLER"
+
 case "$IDLER" in
 	hypridle  ) $IDLER "$@" & ;;
 	swayidle  ) $IDLER -w "$@" & ;;
