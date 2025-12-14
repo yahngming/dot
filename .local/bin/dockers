@@ -1,0 +1,25 @@
+#!/bin/sh
+
+down() {
+	sudo systemctl stop docker.service
+}
+
+up() {
+	for f in ~/.config/docker/*.yaml
+	do
+		docker compose -f "$f" up -d
+	done
+}
+
+status() {
+	echo "docker $(systemctl is-active docker.service)"
+}
+
+help() {
+	echo "Usage: dockers [down|up]"
+}
+
+case "$@" in
+	help|down|up ) $@ ;;
+	*            ) status ;;
+esac
