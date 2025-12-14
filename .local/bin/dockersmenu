@@ -10,7 +10,7 @@ menu="\
 󰡨 Stop all containers\n\
 "
 
-case $(printf "$menu" | menu $opt -p "$(systemctl is-active docker.service)" "$@") in
+case $(printf "$menu" | menu $opt -p "docker $(systemctl is-active docker.service)" "$@") in
 	*Dashboard* ) tui "lazydocker" ;;
 	*Start*     ) tui "dockers start" ;;
 	*Stop*      ) tui "dockers stop" ;;
