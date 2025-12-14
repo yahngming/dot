@@ -288,7 +288,7 @@ ytd-merch-shelf-renderer {
   transition: 0.05s filter linear;
 }
 
-:is(#movie_player.ad-showing .caption-window,.ytp-ad-player-overlay-flyout-cta,.ytp-ad-player-overlay-layout__player-card-container,.ytp-ad-action-interstitial-slot,.ytp-video-interstitial-buttoned-centered-layout__content,ytd-action-companion-ad-renderer,ytd-display-ad-renderer,ytd-ad-slot-renderer,ytd-promoted-sparkles-web-renderer,ytd-player-legacy-desktop-watch-ads-renderer,ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"],ytd-merch-shelf-renderer):is(:hover,:focus-within) {
+:is(#movie_player.ad-showing .caption-window,.ytp-ad-player-overlay-flyout-cta,.ytp-ad-player-overlay-layout__player-card-container,.ytp-ad-action-interstitial-slot,.ytp-video-interstitial-buttoned-centered-layout__content,ytd-action-companion-ad-renderer,ytd-display-ad-renderer,ytd-ad-slot-renderer,ytd-promoted-sparkles-web-renderer,ytd-player-legacy-desktop-watch-ads-renderer,ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"],ytd-merch-shelf-renderer,ytd-rich-section-renderer,ytd-rich-shelf-renderer):is(:hover,:focus-within) {
     filter: none;
   }
 
