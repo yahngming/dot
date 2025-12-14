@@ -11,6 +11,7 @@ ytd-reel-item-renderer,
 ytd-reel-shelf-renderer,
 ytd-reel-shelf-renderer,
 ytd-rich-grid-slim-media,
+ytd-rich-section-renderer,
 ytd-rich-shelf-renderer,
 ytd-video-renderer:has([aria-label="Shorts"]) {
 	display: none !important;
