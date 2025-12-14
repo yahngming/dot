@@ -5,7 +5,7 @@
 	"reload_style_on_change": true,
 	"modules-left": ["ext/workspaces", "wlr/taskbar"],
 	"modules-center": [],
-	"modules-right": ["tray", "battery", "network", "wireplumber", "clock"],
+	"modules-right": ["tray", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
 	"ext/workspaces": {
 		"on-click": "activate"
 	},
@@ -46,6 +46,7 @@
 		"format-icons": {
 			"default": ["󰕿", "󰖀", "󰕾"]
 		},
+		"justify": "center",
 		"tooltip": false,
 		"on-click": "volume toggle",
 		"on-scroll-down": "volume down",
