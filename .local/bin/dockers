@@ -1,20 +1,20 @@
 #!/bin/sh
 
-down() {
+start() {
+	sudo systemctl start docker.service
+	for f in ~/.config/docker/*.yaml
+	do
+		docker compose -f "$f" up -d
+	done
+}
+
+stop() {
 	for f in ~/.config/docker/*.yaml
 	do
 		docker compose -f "$f" stop
 	done
 	sudo systemctl stop docker.socket
 	sudo systemctl stop docker.service
-}
-
-up() {
-	sudo systemctl start docker.service
-	for f in ~/.config/docker/*.yaml
-	do
-		docker compose -f "$f" up -d
-	done
 }
 
 status() {
@@ -29,6 +29,6 @@ help() {
 }
 
 case "$@" in
-	help|down|up ) $@ ;;
-	*            ) status ;;
+	help|start|stop ) $@ ;;
+	*               ) status ;;
 esac
