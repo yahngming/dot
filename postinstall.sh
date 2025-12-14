@@ -14,7 +14,6 @@ arch() {
 	sudo systemctl enable avahi-daemon.service
 	sudo systemctl enable bluetooth.service
 	sudo systemctl enable cups.service
-	sudo systemctl enable docker.socket
 	sudo systemctl enable smb.service
 	sudo gpasswd -a $USER uucp
 	sudo usermod -aG docker $USER
