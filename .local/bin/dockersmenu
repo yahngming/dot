@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case "$LAUNCHER" in
+	dmenu ) opt="-noi" ;;
+esac
+
+menu="\
+󰨇 Dashboard\n\
+ Start all containers\n\
+󰡨 Stop all containers\n\
+"
+
+case $(printf "$menu" | menu $opt -p "$(dockers)" "$@") in
+	*Dashboard* ) tui "lazydocker" ;;
+	*Start*     ) tui "dockers start" ;;
+	*Stop*      ) tui "dockers stop" ;;
+esac
