@@ -18,7 +18,8 @@ up() {
 }
 
 status() {
-	echo "docker $(systemctl is-active docker.service)"
+	echo "docker.service $(systemctl is-active docker.service)"
+	echo "docker.socket $(systemctl is-active docker.socket)"
 }
 
 help() {
