@@ -11,7 +11,7 @@ off() {
 
 on() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pkill $IDLER
+		pkill "$IDLER"
 	elif [ -n "$DISPLAY" ]; then
 		$IDLER -disable
 		xset -dpms
