@@ -21,6 +21,15 @@
 		"spacing": 5,
 		"tooltip": false
 	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		},
+		"tooltip": false,
+		"timeout": 240
+	},
 	"battery": {
 		"format": "{icon}",
 		"format-charging": "{icon}",
@@ -46,7 +55,6 @@
 		"format-icons": {
 			"default": ["󰕿", "󰖀", "󰕾"]
 		},
-		"justify": "center",
 		"tooltip": false,
 		"on-click": "volume toggle",
 		"on-scroll-down": "volume down",
