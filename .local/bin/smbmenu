@@ -1,12 +1,8 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
-server=$(avahi-browse _smb._tcp -t | awk '{print $4}' | sort -u | menu $opt -p "Choose a server:") || exit 1
+server=$(avahi-browse _smb._tcp -t | awk '{print $4}' | sort -u | menu -p "Choose a server:") || exit 1
 notify-send "Searching for network shares on $server..."
-share=$(smbclient -N -L "$server" | grep "Disk" | awk '{print $1}' | sort -u | menu $opt -p "Choose a share on $server:") || exit 1
+share=$(smbclient -N -L "$server" | grep "Disk" | awk '{print $1}' | sort -u | menu -p "Choose a share on $server:") || exit 1
 username=$(menu -p "Username:" </dev/null) || exit 1
 password=$(menu -p "Password:" </dev/null) || exit 1
 servershare="smb://${server}.local/${share}"
