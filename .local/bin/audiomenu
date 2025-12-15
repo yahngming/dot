@@ -2,16 +2,12 @@
 
 tui "wiremix" && exit
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
 󰓃 Sinks\n\
  Sources\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Select interface:" "$@") in
-	*Sinks*   ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu $opt)" ;;
-	*Sources* ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu $opt)" ;;
+case $(printf "$menu" | menu -p "Select interface:" "$@") in
+	*Sinks*   ) pactl set-default-sink "$(pactl list short sinks | awk '{print $2}' | menu)" ;;
+	*Sources* ) pactl set-default-source "$(pactl list short sources | grep -v '.monitor' | awk '{print $2}' | menu)" ;;
 esac
