@@ -10,3 +10,9 @@ $(dockers ps sub-store)\n\
 choice=$(printf "$menu" | menu "$@")
 name="${choice%% *}"
 state="${choice#* }"
+
+if [ "$state" == "stopped" ]; then
+	tui "dockers start $name"
+else
+	tui "dockers stop $name"
+fi
