@@ -1,9 +1,8 @@
 #!/bin/sh
 
 menu="\
-󰨇 Dashboard\n\
-open-webui $(docker ps -aq --filter "name=open-webui" && echo "running" || echo "stopped")\n\
-sub-store\n\
+$(dockers ps open-webui)\n\
+$(dockers ps sub-store)\n\
 "
 
 case $(printf "$menu" | menu $opt -p "docker $(systemctl is-active docker.service)" "$@") in
