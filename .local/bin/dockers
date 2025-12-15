@@ -5,7 +5,7 @@ ps() {
 		docker ps
 	elif [ -z "$id" ]; then
 		echo "$name stopped"
-	elif [ -z "$id" ]; then
+	else
 		echo "$name running"
 	fi
 }
