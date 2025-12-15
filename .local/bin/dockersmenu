@@ -1,13 +1,9 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
 󰨇 Dashboard\n\
- Start all containers\n\
-󰡨 Stop all containers\n\
+open-webui $(docker ps -aq --filter "name=open-webui" && echo "running" || echo "stopped")\n\
+sub-store\n\
 "
 
 case $(printf "$menu" | menu $opt -p "docker $(systemctl is-active docker.service)" "$@") in
