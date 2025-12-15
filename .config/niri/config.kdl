@@ -66,7 +66,7 @@ binds {
 	Mod+Shift+7           { move-column-to-workspace 7; }
 	Mod+Shift+8           { move-column-to-workspace 8; }
 	Mod+Shift+9           { move-column-to-workspace 9; }
-	Mod+A                 { spawn "terminal"; }
+	Mod+A                 { spawn "tui" "tenere"; }
 	Mod+B                 { spawn "browser"; }
 	Mod+C                 { spawn "tui" "bc -l"; }
 	Mod+D                 { spawn "transmenu"; }
@@ -85,6 +85,7 @@ binds {
 	Mod+S                 { spawn "screenshot"; }
 	Mod+T                 { spawn "topper"; }
 	Mod+V                 { spawn "clipmenu"; }
+	Mod+Z                 { spawn "terminal"; }
 	Mod+Delete            { maximize-column; }
 	Mod+Minus             { set-column-width "-5%"; }
 	Mod+Equal             { set-column-width "+5%"; }
