@@ -40,6 +40,6 @@ help() {
 folder="~/.config/dockers"
 name=$2
 case "$1" in
-	start|stop|status ) $1 ;;
+	start|stop|ps ) $1 ;;
 	*                 ) help ;;
 esac
