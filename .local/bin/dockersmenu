@@ -11,6 +11,6 @@ state="{choice#* }
 
 if [ "$state" == "stopped" ]; then
 	tui "dockers start $name"
-else
+elif [ "$state" == "running" ]; then
 	tui "dockers stop $name"
 fi
