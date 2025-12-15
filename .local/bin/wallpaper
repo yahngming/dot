@@ -1,8 +1,5 @@
 #!/bin/sh
 
-setfolder() {
-}
-
 setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
@@ -36,7 +33,6 @@ setpaper() {
 
 manual() {
 	if [ -f "$arg" ]; then
-		setfolder
 		wallpaper="$arg"
 		setpaper
 	else
@@ -45,19 +41,16 @@ manual() {
 }
 
 picker() {
-	setfolder
 	wallpaper="$(nsxiv -ot $themefolder/* | shuf -n 1)"
 	setpaper
 }
 
 random() {
-	setfolder
 	wallpaper="$(find $themefolder/* | shuf -n 1)"
 	setpaper
 }
 
 weather() {
-	setfolder
 	wallpaper="$paperfolder/wallpaper"
 	convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +100+100 -composite "$wallpaper"
 	setpaper
