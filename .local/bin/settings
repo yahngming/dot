@@ -40,7 +40,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Desktop*     ) desktopmenu ;;
 	*Display*     ) dispmenu ;;
 	*Docker*      ) dockersmenu ;;
-	*Dotfiles*    ) tui "dot" ;;
+	*Dotfiles*    ) tui dot ;;
 	*Fetch*       ) fetchmenu ;;
 	*IME*         ) fcitx5-configtool ;;
 	*Password*    ) passmenu ;;
@@ -50,7 +50,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*SMB*         ) smbmenu ;;
 	*Theme*       ) thememenu ;;
 	*Timezone*    ) timezonemenu ;;
-	*Update*      ) tui "up" ;;
+	*Update*      ) tui up ;;
 	*USB*         ) usbmenu ;;
 	*Wallpaper*   ) wallpapermenu ;;
 	*WLAN*        ) wlanmenu ;;
