@@ -1,7 +1,5 @@
 #!/bin/sh
 
-tui "lazydocker" && exit
-
 menu="\
 $(dockers ps open-webui)\n\
 $(dockers ps sub-store)\n\
