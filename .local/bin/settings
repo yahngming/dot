@@ -3,7 +3,8 @@
 pkill $LAUNCHER && exit
 
 case "$LAUNCHER" in
-	dmenu ) opt="-g 3 -l 7" ;;
+	fuzzel|walker ) opt="" ;;
+	*             ) opt="-g 3 -l 7" ;;
 esac
 
 menu="\
