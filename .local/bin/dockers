@@ -24,7 +24,8 @@ help() {
 	echo "Usage: dockers [start|stop|status]"
 }
 
+name=${2:-all}
 case "$1" in
-	start|stop|status ) $1 $2 ;;
+	start|stop|status ) $1 ;;
 	*                 ) help ;;
 esac
