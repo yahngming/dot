@@ -1,5 +1,13 @@
 #!/bin/sh
 
+ps() {
+	if [ -n "$name" ]; then
+		docker ps -aq --filter "name=$1" > /dev/null && echo "$1 running" || echo "$1 stopped"
+	else
+		docker ps
+	fi
+}
+
 start() {
 	sudo systemctl start docker.service
 	if [ -n "$name" ]; then
@@ -25,21 +33,13 @@ stop() {
 	sudo systemctl stop docker.service
 }
 
-ps() {
-	if [ -n "$name" ]; then
-		docker ps -aq --filter "name=$1" > /dev/null && echo "$1 running" || echo "$1 stopped"
-	else
-		docker ps
-	fi
-}
-
 help() {
 	echo "Usage: dockers [start|stop|status]"
 }
 
-folder="~/.config/dockers"
+folder="$HOME/.config/dockers"
 name=$2
 case "$1" in
-	start|stop|ps ) $1 ;;
-	*                 ) help ;;
+	ps|start|stop ) $1 ;;
+	*             ) help ;;
 esac
