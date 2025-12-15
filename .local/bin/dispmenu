@@ -1,20 +1,16 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 primary() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		monitors=$(wlr-randr | grep "^[^ ]" | sed 's/^[^"]*"//' | sed 's/"$//')
 		outputs=$(echo "$monitors" | awk '{print $NF}')
-		primary=$(echo "$monitors" | menu $opt -p "Select primary display:" | awk '{print $NF}')
+		primary=$(echo "$monitors" | menu -p "Select primary display:" | awk '{print $NF}')
 		wlr-randr --output "$primary" --on --preferred --pos 0,0
 		pkill wl-mirror
 	elif [ -n "$DISPLAY" ]; then
 		monitors=$(xrandr -q | grep "connected")
 		outputs=$(echo "$monitors" | awk '/ connected/ {print $1}')
-		primary=$(echo "$monitors" | menu $opt -p "Select primary display:" | awk '/ connected/ {print $1}')
+		primary=$(echo "$monitors" | menu -p "Select primary display:" | awk '/ connected/ {print $1}')
 		xrandr --output "$primary" --auto
 	fi
 }
@@ -28,9 +24,9 @@ extend() {
 			fi
 		done
 	elif [ -n "$DISPLAY" ]; then
-		secondary=$(echo "$outputs" | grep -v ^"$primary"$ | menu $opt -p "Select secondary display:")
-		tertiary=$(echo "$outputs" | grep -v ^"$primary"$ | grep -v ^"$secondary"$ | menu $opt -p "Select third display:")
-		direction=$(printf "left\\nright" | menu $opt -p "$secondary is on the:")
+		secondary=$(echo "$outputs" | grep -v ^"$primary"$ | menu -p "Select secondary display:")
+		tertiary=$(echo "$outputs" | grep -v ^"$primary"$ | grep -v ^"$secondary"$ | menu -p "Select third display:")
+		direction=$(printf "left\\nright" | menu -p "$secondary is on the:")
 		xrandr --output "$secondary" --"$direction"-of "$primary" --auto --output "$tertiary" --"$(printf "left\\nright" | grep -v "$direction")"-of "$primary" --auto
 	fi
 }
@@ -77,7 +73,7 @@ menu="\
 󰍹 Single monitor\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Display" "$@") in
+case $(printf "$menu" | menu -p "Display" "$@") in
 	*Extend* ) extend ;;
 	*Mirror* ) mirror ;;
 	*Single* ) single ;;
