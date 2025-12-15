@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pkill "$LAUNCHER" && exit
+pkill $LAUNCHER && exit
 
 menu="\
  Lock\n\
