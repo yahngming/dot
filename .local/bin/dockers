@@ -2,7 +2,7 @@
 
 ps() {
 	if [ -n "$name" ]; then
-		docker ps -aq --filter "name=$1" > /dev/null && echo "$1 running" || echo "$1 stopped"
+		docker ps -aq --filter "name=$name" > /dev/null && echo "$name running" || echo "$name stopped"
 	else
 		docker ps
 	fi
@@ -11,7 +11,7 @@ ps() {
 start() {
 	sudo systemctl start docker.service
 	if [ -n "$name" ]; then
-		docker compose -f "$folder/$1.yaml" up -d
+		docker compose -f "$folder/$name.yaml" up -d
 	else
 		for f in $folder/*.yaml
 		do
@@ -22,7 +22,7 @@ start() {
 
 stop() {
 	if [ -n "$name" ]; then
-		docker compose -f "$folder/$1.yaml" stop
+		docker compose -f "$folder/$name.yaml" stop
 	else
 		for f in $folder/*.yaml
 		do
