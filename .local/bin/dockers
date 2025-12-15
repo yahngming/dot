@@ -2,33 +2,29 @@
 
 start() {
 	sudo systemctl start docker.service
-	for f in ~/.config/docker/*.yaml
-	do
-		docker compose -f "$f" up -d
-	done
+	docker compose -f "~/.config/dockers/$2.yaml" up -d
 }
 
 stop() {
-	for f in ~/.config/docker/*.yaml
-	do
-		docker compose -f "$f" stop
-	done
+	docker compose -f "~/.config/dockers/$2.yaml" stop
 	sudo systemctl stop docker.socket
 	sudo systemctl stop docker.service
 }
 
 status() {
-	case "$(systemctl is-active docker.service)" in
-		active   ) docker ps ;;
-		inactive ) echo "docker.service inactive / docker.socket $(systemctl is-active docker.socket)"
-	esac
+	id=$(docker ps -aq --filter "name=$2")
+	if [ -n "$id" ]; then
+		echo "$2 running"
+	else
+		echo "$2 stopped"
+	fi
 }
 
 help() {
-	echo "Usage: dockers [down|up]"
+	echo "Usage: dockers [start|stop|status]"
 }
 
-case "$@" in
-	help|start|stop ) $@ ;;
-	*               ) status ;;
+case "$1" in
+	start|stop|status ) $@ ;;
+	*                 ) help ;;
 esac
