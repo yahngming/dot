@@ -9,7 +9,6 @@ ps() {
 }
 
 start() {
-	sudo systemctl start docker.service
 	if [ -n "$name" ]; then
 		docker compose -f "$folder/$name.yaml" up -d
 	else
@@ -29,8 +28,6 @@ stop() {
 			docker compose -f "$f" stop
 		done
 	fi
-	sudo systemctl stop docker.socket
-	sudo systemctl stop docker.service
 }
 
 help() {
