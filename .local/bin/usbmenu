@@ -1,9 +1,5 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 pgrep udiskie || udiskie
 
 if [ -n "$(df | grep '/media/')" ] ; then
