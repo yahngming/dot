@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pkill "$LAUNCHER" && exit
+pkill $LAUNCHER && exit
 
 case "$LAUNCHER" in
 	dmenu ) opt="-g 3 -l 7" ;;
