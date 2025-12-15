@@ -16,7 +16,7 @@ menu="\
 󱇰 USB\n\
 "
 
-case $(printf "$menu" | menu "$@") in
+case $(printf $menu | menu $@) in
 	*Battery* ) opt="battery" ;;
 	*CPU*     ) opt="cpu" ;;
 	*Drive*   ) opt="drive" ;;
@@ -29,7 +29,7 @@ case $(printf "$menu" | menu "$@") in
 	*USB*     ) opt="usb" ;;
 esac
 
-case "$opt" in
+case $opt in
 	"" ) exit ;;
 	*  ) pkill -f "read -n 1 -s"; tui "about $opt; read -n 1 -s" ;;
 esac
