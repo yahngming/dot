@@ -34,7 +34,15 @@ stop() {
 }
 
 help() {
-	echo "Usage: dockers [start|stop|status]"
+	echo "Usage:"
+	echo "  dockers [COMMAND] [NAME]"
+	echo ""
+	echo "Commands:"
+	echo "  ps           list container(s)"
+	echo "  start            start container(s)"
+	echo "  stop          stop container(s)"
+	echo ""
+	echo "All containers will be applied if NAME is omitted."
 }
 
 folder="$HOME/.config/dockers"
