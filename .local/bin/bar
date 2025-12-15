@@ -122,6 +122,6 @@ case "$BAR" in
 		waybar &
 		;;
 	*)
-		printf "$(bat) $(net) $(vol)"
+		echo "$(bat) $(net) $(vol)"
 		;;
 esac
