@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tui "lazydocker" && exit
+tui lazydocker && exit
 
 menu="\
 $(dockers ps open-webui)\n\
