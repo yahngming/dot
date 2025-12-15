@@ -1,15 +1,11 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
 󰾪 Disable idle inhibit\n\
 󰅶 Enable idle inhibit\n\
 "
 
-case $(printf "$menu" | menu $opt -p "$(caffeine)" "$@") in
+case $(printf "$menu" | menu -p "$(caffeine)" "$@") in
 	*Disable* ) caffeine off ;;
 	*Enable*  ) caffeine on ;;
 esac
