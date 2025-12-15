@@ -1,32 +1,34 @@
 #!/bin/sh
 
 ps() {
-	if [ -n "$name" ]; then
-		docker ps -qf "name=$name" > /dev/null && echo "$name running" || echo "$name stopped"
-	else
+	if [ -z "$name" ]; then
 		docker ps
+	elif [ -z "$id" ]; then
+		echo "$name stopped"
+	elif [ -z "$id" ]; then
+		echo "$name running"
 	fi
 }
 
 start() {
-	if [ -n "$name" ]; then
-		docker compose -f "$folder/$name.yaml" up -d
-	else
+	if [ -z "$name" ]; then
 		for f in $folder/*.yaml
 		do
 			docker compose -f "$f" up -d
 		done
+	else
+		docker compose -f "$folder/$name.yaml" up -d
 	fi
 }
 
 stop() {
-	if [ -n "$name" ]; then
-		docker compose -f "$folder/$name.yaml" stop
-	else
+	if [ -z "$name" ]; then
 		for f in $folder/*.yaml
 		do
 			docker compose -f "$f" stop
 		done
+	else
+		docker compose -f "$folder/$name.yaml" stop
 	fi
 }
 
@@ -44,6 +46,7 @@ help() {
 
 folder="$HOME/.config/dockers"
 name=$2
+id=$(docker ps -qf "name=$name")
 case "$1" in
 	ps|start|stop ) $1 ;;
 	*             ) help ;;
