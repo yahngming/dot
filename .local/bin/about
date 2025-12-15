@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$@" in
+case $@ in
 	battery ) upower -i $(upower -e | grep BAT) | bat -fpPl cpuinfo ;;
 	cpu     ) lscpu | bat -fpPl cpuinfo ;;
 	drive   ) lsblk | bat -fpPl conf ;;
