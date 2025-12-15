@@ -1,10 +1,6 @@
 #!/bin/sh
 
-tui "impala" && exit
-
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
+tui impala && exit
 
 NEWLINE='
 '
@@ -124,7 +120,7 @@ iwd_dmenu() {
 				done)"
 
 		# print using dmenu
-		if ! answer="$(printf '%s\n' "${options}" | menu $opt -p "${prompt}")"; then return 1; fi
+		if ! answer="$(printf '%s\n' "${options}" | menu -p "${prompt}")"; then return 1; fi
 
 		# get user's answer
 		printf '%s\n' "${options}" | while read -r line; do
