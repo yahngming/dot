@@ -2,21 +2,21 @@
 
 start() {
 	sudo systemctl start docker.service
-	docker compose -f "~/.config/dockers/$2.yaml" up -d
+	docker compose -f "~/.config/dockers/$1.yaml" up -d
 }
 
 stop() {
-	docker compose -f "~/.config/dockers/$2.yaml" stop
+	docker compose -f "~/.config/dockers/$1.yaml" stop
 	sudo systemctl stop docker.socket
 	sudo systemctl stop docker.service
 }
 
 status() {
-	id=$(docker ps -aq --filter "name=$2")
+	id=$(docker ps -aq --filter "name=$1")
 	if [ -n "$id" ]; then
-		echo "$2 running"
+		echo "$1 running"
 	else
-		echo "$2 stopped"
+		echo "$1 stopped"
 	fi
 }
 
@@ -25,6 +25,6 @@ help() {
 }
 
 case "$1" in
-	start|stop|status ) $1 ;;
+	start|stop|status ) $1 $2 ;;
 	*                 ) help ;;
 esac
