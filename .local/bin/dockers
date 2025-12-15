@@ -2,21 +2,34 @@
 
 start() {
 	sudo systemctl start docker.service
-	docker compose -f "~/.config/dockers/$1.yaml" up -d
+	if [ -n "$name" ]; then
+		docker compose -f "$folder/$1.yaml" up -d
+	else
+		for f in $folder/*.yaml
+		do
+			docker compose -f "$f" up -d
+		done
+	fi
 }
 
 stop() {
-	docker compose -f "~/.config/dockers/$1.yaml" stop
+	if [ -n "$name" ]; then
+		docker compose -f "$folder/$1.yaml" stop
+	else
+		for f in $folder/*.yaml
+		do
+			docker compose -f "$f" stop
+		done
+	fi
 	sudo systemctl stop docker.socket
 	sudo systemctl stop docker.service
 }
 
 status() {
-	id=$(docker ps -aq --filter "name=$1")
-	if [ -n "$id" ]; then
-		echo "$1 running"
+	if [ -n "$name" ]; then
+		docker ps -aq --filter "name=$1" > /dev/null && echo "$1 running" || echo "$1 stopped"
 	else
-		echo "$1 stopped"
+		docker ps
 	fi
 }
 
@@ -24,7 +37,8 @@ help() {
 	echo "Usage: dockers [start|stop|status]"
 }
 
-name=${2:-all}
+folder="~/.config/dockers"
+name=$2
 case "$1" in
 	start|stop|status ) $1 ;;
 	*                 ) help ;;
