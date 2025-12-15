@@ -1,7 +1,7 @@
 services:
   sub-store:
-    image: xream/sub-store:http-meta
     container_name: sub-store
+    image: xream/sub-store:http-meta
     restart: always
     network_mode: host
     environment:
