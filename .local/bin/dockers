@@ -47,6 +47,7 @@ help() {
 folder="$HOME/.config/dockers"
 name=$2
 id=$(docker ps -qf "name=$name")
+
 case "$1" in
 	ps|start|stop ) $1 ;;
 	*             ) help ;;
