@@ -1,9 +1,5 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
  Backup to cloud\n\
  Sync from cloud\n\
