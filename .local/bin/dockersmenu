@@ -5,6 +5,8 @@ $(dockers ps open-webui)\n\
 $(dockers ps sub-store)\n\
 "
 
+choice=$(printf "$menu" | menu "$@")
+
 case $(printf "$menu" | menu $opt -p "docker $(systemctl is-active docker.service)" "$@") in
 	*Dashboard* ) tui "lazydocker" ;;
 	*Start*     ) tui "dockers start" ;;
