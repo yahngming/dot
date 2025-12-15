@@ -1,13 +1,6 @@
 #!/bin/sh
 
 setfolder() {
-	if [ -f ~/.config/dark ]; then
-		theme=dark
-	else
-		theme=light
-	fi
-	paperfolder="$HOME/Pictures/wallpapers"
-	themefolder="$paperfolder/$theme"
 }
 
 setpaper() {
@@ -78,7 +71,15 @@ help() {
 	echo "  weather                   overlay weather forecast"
 }
 
+if [ -f ~/.config/dark ]; then
+	theme=dark
+else
+	theme=light
+fi
+paperfolder="$HOME/Pictures/wallpapers"
+themefolder="$paperfolder/$theme"
 arg=${1:-help}
+
 case "$arg" in
 	help|picker|random|weather ) $arg ;;
 	*                          ) manual ;;
