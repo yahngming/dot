@@ -16,7 +16,7 @@ menu="\
 󱇰 USB\n\
 "
 
-case $(printf $menu | menu $@) in
+case $(printf "$menu" | menu "$@") in
 	*Battery* ) opt="battery" ;;
 	*CPU*     ) opt="cpu" ;;
 	*Drive*   ) opt="drive" ;;
