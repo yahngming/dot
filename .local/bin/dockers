@@ -39,8 +39,8 @@ help() {
 	echo ""
 	echo "Commands:"
 	echo "  ps           list container(s)"
-	echo "  start            start container(s)"
-	echo "  stop          stop container(s)"
+	echo "  start        start container(s)"
+	echo "  stop         stop container(s)"
 	echo ""
 	echo "All containers will be applied if NAME is omitted."
 }
