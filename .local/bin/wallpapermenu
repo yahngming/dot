@@ -1,16 +1,12 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
  Change randomly\n\
 󰕰 Choose from a picker\n\
 󱗺 Overlay weather forcast\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Set wallpaper:" "$@") in
+case $(printf "$menu" | menu -p "Set wallpaper:" "$@") in
 	*random*  ) wallpaper random ;;
 	*picker*  ) wallpaper picker ;;
 	*weather* ) wallpaper weather ;;
