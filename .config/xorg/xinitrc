@@ -4,5 +4,3 @@ case $1 in
 	kde   ) exec startplasma-x11 ;;
 	xfce  ) exec startxfce4 ;;
 esac
-
-autostart
