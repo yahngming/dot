@@ -1,4 +1,4 @@
 #!/bin/sh
 
-pgrep "$LOCKER" || $LOCKER &
+pgrep $LOCKER || $LOCKER &
 pkill -f " screensaver "
