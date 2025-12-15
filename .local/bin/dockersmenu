@@ -8,9 +8,5 @@ $(dockers ps sub-store)\n\
 "
 
 choice=$(printf "$menu" | menu "$@")
-
-case $(printf "$menu" | menu $opt -p "docker $(systemctl is-active docker.service)" "$@") in
-	*Dashboard* ) tui "lazydocker" ;;
-	*Start*     ) tui "dockers start" ;;
-	*Stop*      ) tui "dockers stop" ;;
-esac
+name="${choice%% *}"
+state="${choice#* }"
