@@ -1,9 +1,5 @@
 #!/bin/sh
 
-case "$LAUNCHER" in
-	dmenu ) opt="-noi" ;;
-esac
-
 menu="\
 󰨇 Dashboard\n\
 󰌙 Disable/stop proxy\n\
