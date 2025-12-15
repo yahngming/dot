@@ -35,7 +35,6 @@ yay brother-hl2140 # for Brother HL2140
 yay game-devices-udev # for 8BitDo Pro 2
 yay new-lg4ff-dkms-git oversteer # for Logitech G29
 yay davinci-resolve velocidrone # Download official packages into ~/.cache/yay/$PKGNAME
-yay ollama ollama-cuda ollama-rocm open-webui #AI
 ```
 
 ## chromeos
