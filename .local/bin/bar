@@ -111,13 +111,13 @@ vol() {
 	[ "$vol" ] && printf "$icon"
 }
 
-case "$BAR" in
-	dwm)
+case "$DESKTOP" in
+	*dwm*)
 		while true; do
 			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb) $(dpm) $(cpu) $(bat) $(net) $(vol) $(clk) "
 		done
 		;;
-	waybar)
+	*hyprland*|*niri*)
 		pkill waybar
 		waybar &
 		;;
