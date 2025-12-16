@@ -6,10 +6,6 @@
     <property name="IconThemeName" type="string" value="Chicago95"/>
   </property>
   <property name="Gtk" type="empty">
-    <property name="FontName" type="string" value="sans-serif"/>
-    <property name="MonospaceFontName" type="string" value="monospace"/>
     <property name="CursorThemeName" type="string" value="Chicago95 Standard Cursors"/>
-    <property name="CursorThemeSize" type="int" value="24"/>
-    <property name="DecorationLayout" type="string" value="icon,menu:minimize,maximize,close"/>
   </property>
 </channel>
