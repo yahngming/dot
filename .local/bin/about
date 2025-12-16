@@ -4,7 +4,7 @@ case "$@" in
 	battery ) upower -i $(upower -e | grep BAT) | bat -fpPl cpuinfo ;;
 	cpu     ) lscpu | bat -fpPl cpuinfo ;;
 	drive   ) lsblk | bat -fpPl conf ;;
-	gpu     ) lspci | grep ' VGA ' | cut -d" " -f 1 | xargs -i lspci -v -s {} | bat -fpPl cpuinfo ;;
+	gpu     ) lspci | grep VGA | cut -d" " -f 1 | xargs -i lspci -v -s {} | bat -fpPl cpuinfo ;;
 	memory  ) free -h | bat -fpPl meminfo ;;
 	pci     ) lspci | bat -fpPl cpuinfo ;;
 	sensors ) sensors | bat -fpPl cpuinfo ;;
