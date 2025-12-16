@@ -37,9 +37,11 @@ start() {
 			export TERMINAL="foot"
 			;;
 	esac
-	if [ "$DESKTOP" == *"xfce" ]; then
+	case "$DESKTOP" in
+		*xfce*)
 			export QT_STYLE_OVERRIDE="Windows"
-	fi
+			;;
+	esac
 	if [ -f ~/.config/proxy ]; then
 		PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY GOPROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
 		for envar in $PROXY_ENV; do
