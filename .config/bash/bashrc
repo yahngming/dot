@@ -31,13 +31,11 @@ start() {
 		*dwm*)
 			export EXPLORER="lf"
 			export LAUNCHER="dmenu"
-			export LOCKER="slock"
 			export TERMINAL="st"
 			;;
 		*hyprland*|*niri*)
 			export EXPLORER="lf"
 			export LAUNCHER="fuzzel"
-			export LOCKER="hyprlock"
 			export TERMINAL="foot"
 			;;
 		*xfce*)
