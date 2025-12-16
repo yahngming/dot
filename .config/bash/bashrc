@@ -30,14 +30,12 @@ start() {
 	case "$(head -n 1 ~/.config/desktop)" in
 		*dwm*)
 			export EXPLORER="lf"
-			export IDLER="xautolock"
 			export LAUNCHER="dmenu"
 			export LOCKER="slock"
 			export TERMINAL="st"
 			;;
 		*hyprland*|*niri*)
 			export EXPLORER="lf"
-			export IDLER="hypridle"
 			export LAUNCHER="fuzzel"
 			export LOCKER="hyprlock"
 			export TERMINAL="foot"
