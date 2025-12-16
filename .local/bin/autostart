@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$(head -n 1 ~/.config/desktop)" in
+case "$DESKTOP" in
 	*dwm*)
 		dunst &
 		setxkbmap -option ctrl:nocaps,shift:both_capslock &
