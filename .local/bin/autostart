@@ -21,9 +21,9 @@ case "$DESKTOP" in
 		;;
 esac
 
-theme start
-idler
-locker
 fcitx5 &
 rquickshare &
 udiskie &
+theme start
+idler
+locker
