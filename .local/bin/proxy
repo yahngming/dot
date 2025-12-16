@@ -4,8 +4,8 @@ off() {
 	if [ -f ~/.config/proxy ]; then
 		rm -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "none"
-		sudo systemctl stop $PROXY.service
-		sudo systemctl disable $PROXY.service
+		sudo systemctl stop sing-box.service
+		sudo systemctl disable sing-box.service
 	fi
 }
 
@@ -13,20 +13,20 @@ on() {
 	cd ~/.local/src/sub
 	git pull
 	cd - >/dev/null 2>&1
-	sudo cp ~/.local/src/sub/$PROXY /etc/$PROXY/config.json
-	sudo cp ~/.local/src/sub/$PROXY /etc/$PROXY/config.yaml
+	sudo cp ~/.local/src/sub/sing-box /etc/sing-box/config.json
+	sudo cp ~/.local/src/sub/sing-box /etc/sing-box/config.yaml
 	if [ ! -f ~/.config/proxy ]; then
 		touch -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "manual"
-		sudo systemctl start $PROXY.service
-		sudo systemctl enable $PROXY.service
+		sudo systemctl start sing-box.service
+		sudo systemctl enable sing-box.service
 	else
-		sudo systemctl restart $PROXY.service
+		sudo systemctl restart sing-box.service
 	fi
 }
 
 status() {
-	echo "$PROXY $(systemctl is-active $PROXY.service)"
+	echo "sing-box $(systemctl is-active sing-box.service)"
 }
 
 help() {
