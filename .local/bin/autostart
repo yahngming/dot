@@ -7,6 +7,7 @@ case "$DESKTOP" in
 		setxkbmap -option ctrl:nocaps,shift:both_capslock &
 		unclutter &
 		xcape &
+		xcompmgr &
 		xinput set-prop "Synaptics TM3289-021" 320 1 &
 		xinput set-prop "Synaptics TM3289-021" 322 1 &
 		xinput set-prop "Synaptics TM3289-021" 324 1 &
