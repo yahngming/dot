@@ -29,7 +29,6 @@ help() {
 start() {
 	case "$(head -n 1 ~/.config/desktop)" in
 		*dwm*)
-			export BAR="dwm"
 			export EXPLORER="lf"
 			export IDLER="xautolock"
 			export LAUNCHER="dmenu"
@@ -37,7 +36,6 @@ start() {
 			export TERMINAL="st"
 			;;
 		*hyprland*|*niri*)
-			export BAR="waybar"
 			export EXPLORER="lf"
 			export IDLER="hypridle"
 			export LAUNCHER="fuzzel"
