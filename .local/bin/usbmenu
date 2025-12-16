@@ -3,7 +3,7 @@
 pgrep udiskie || udiskie
 
 if [ -n "$(df | grep '/media/')" ] ; then
-	device=$(udiskie-info -a -o "{ui_label}" | menu $opt -p "Select a drive:" | cut -d":" -f1)
+	device=$(udiskie-info -a -o "{ui_label}" | menu -p "Select a drive:" | cut -d":" -f1)
 else
 	notify-send "No device found."
 fi
