@@ -3,6 +3,7 @@
 case "$DESKTOP" in
 	*dwm*|*xfce*)
 		clipmenud &
+		numlockx &
 		setxkbmap -option ctrl:nocaps,shift:both_capslock &
 		unclutter &
 		xcape &
