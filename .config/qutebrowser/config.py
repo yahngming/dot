@@ -36,6 +36,7 @@ c.colors.tabs.selected.even.bg = c3
 c.colors.tabs.selected.even.fg = c7
 c.colors.tabs.selected.odd.bg = c3
 c.colors.tabs.selected.odd.fg = c7
+c.colors.webpage.bg = c0
 c.content.blocking.adblock.lists = [
 	'https://easylist.to/easylist/easylist.txt',
 	'https://easylist.to/easylist/easyprivacy.txt',
