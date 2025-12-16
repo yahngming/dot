@@ -3,5 +3,5 @@
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	cliphist list | menu | cliphist decode | wl-copy
 elif [ -n "$DISPLAY" ]; then
-	exit
+	/usr/bin/clipmenu
 fi
