@@ -1,8 +1,7 @@
 #!/bin/sh
 
-pkill $IDLER
-
-case "$IDLER" in
-	hypridle|xscreensaver ) $IDLER "$@" & ;;
-	swayidle              ) $IDLER -w "$@" & ;;
-esac
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	hypridle &
+elif [ -n "$DISPLAY" ]; then
+	xscreensaver &
+fi
