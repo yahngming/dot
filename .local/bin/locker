@@ -1,4 +1,9 @@
 #!/bin/sh
 
-pgrep $LOCKER || $LOCKER &
 pkill -f " screensaver "
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	pgrep hyprlock || hyprlock &
+elif [ -n "$DISPLAY" ]; then
+	xscreensaver-command -lock &
+fi
