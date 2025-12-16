@@ -1,5 +1,5 @@
 profile {
-	output DP-1 mode 3440x1440@99.998001 scale 1.5
+	output DP-1 mode 3440x1440@99.998001 scale 1.60
 }
 
 profile {
