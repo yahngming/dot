@@ -2,8 +2,8 @@
 
 case "$DESKTOP" in
 	*dwm*)
-		pkill statusbar
-		statusbar &
+		pkill status
+		status &
 		;;
 	*hyprland*|*niri*)
 		pkill waybar
