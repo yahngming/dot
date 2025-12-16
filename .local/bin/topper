@@ -1,6 +1,3 @@
 #!/bin/sh
 
-case "$TOPPER" in
-	*top* ) tui "$TOPPER $@" ;;
-	*     ) $TOPPER "$@" ;;
-esac
+tui "btop $@"
