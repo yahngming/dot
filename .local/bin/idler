@@ -3,7 +3,7 @@
 pkill $IDLER
 
 case "$IDLER" in
-	hypridle  ) $IDLER "$@" & ;;
-	swayidle  ) $IDLER -w "$@" & ;;
-	xautolock ) $IDLER -time 10 -locker locker "$@" & ;;
+	hypridle|xscreensaver ) $IDLER "$@" & ;;
+	swayidle              ) $IDLER -w "$@" & ;;
+	xautolock             ) $IDLER -time 10 -locker locker "$@" & ;;
 esac
