@@ -16,6 +16,7 @@ set shellopts '-eu'
 
 map ` !true
 map . set hidden!
+map e edit
 map f filter
 map i pager
 map r bulk-rename
