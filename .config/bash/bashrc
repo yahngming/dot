@@ -29,17 +29,14 @@ help() {
 start() {
 	case "$(head -n 1 ~/.config/desktop)" in
 		*dwm*)
-			export EXPLORER="lf"
 			export LAUNCHER="dmenu"
 			export TERMINAL="st"
 			;;
 		*hyprland*|*niri*)
-			export EXPLORER="lf"
 			export LAUNCHER="fuzzel"
 			export TERMINAL="foot"
 			;;
 		*xfce*)
-			export EXPLORER="thunar"
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
 			export TERMINAL="xfce4-terminal"
