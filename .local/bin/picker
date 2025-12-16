@@ -1,9 +1,7 @@
 #!/bin/sh
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	TERMINAL="foot -a center"
+	foot -a center -e $SHELL -c "cat ~/.cache/wal/sequences; lf $@"
 elif [ -n "$DISPLAY" ]; then
-	TERMINAL="st -c center"
+	st -c center -e $SHELL -c "cat ~/.cache/wal/sequences; lf $@"
 fi
-
-$TERMINAL -e $SHELL -c "cat ~/.cache/wal/sequences; $EXPLORER $@"
