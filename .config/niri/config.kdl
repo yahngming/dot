@@ -66,9 +66,9 @@ binds {
 	Mod+Shift+7           { move-column-to-workspace 7; }
 	Mod+Shift+8           { move-column-to-workspace 8; }
 	Mod+Shift+9           { move-column-to-workspace 9; }
-	Mod+A                 { spawn "tui" "tenere"; }
+	Mod+A                 { spawn "ai"; }
 	Mod+B                 { spawn "browser"; }
-	Mod+C                 { spawn "tui" "bc -l"; }
+	Mod+C                 { spawn "calculator"; }
 	Mod+D                 { spawn "transmenu"; }
 	Mod+E                 { spawn "editor"; }
 	Mod+F                 { spawn "explorer"; }
@@ -76,10 +76,10 @@ binds {
 	Mod+H                 { spawn "aboutmenu"; }
 	Mod+I                 { spawn "settings"; }
 	Mod+L                 { spawn "powermenu"; }
-	Mod+M                 { spawn "tui" "aerc"; }
-	Mod+N                 { spawn "tui" "newsraft"; }
+	Mod+M                 { spawn "mail"; }
+	Mod+N                 { spawn "news"; }
 	Mod+O                 { toggle-overview; }
-	Mod+P                 { spawn "tui" "cmus"; }
+	Mod+P                 { spawn "music"; }
 	Mod+Q                 { close-window; }
 	Mod+R                 { spawn "launcher"; }
 	Mod+S                 { spawn "screenshot"; }
