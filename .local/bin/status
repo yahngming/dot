@@ -117,10 +117,6 @@ case "$DESKTOP" in
 			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb) $(dpm) $(cpu) $(bat) $(net) $(vol) $(clk) "
 		done
 		;;
-	*hyprland*|*niri*)
-		pkill waybar
-		waybar &
-		;;
 	*)
 		echo "$(bat) $(net) $(vol)"
 		;;
