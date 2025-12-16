@@ -5,5 +5,4 @@ pkill $IDLER
 case "$IDLER" in
 	hypridle|xscreensaver ) $IDLER "$@" & ;;
 	swayidle              ) $IDLER -w "$@" & ;;
-	xautolock             ) $IDLER -time 10 -locker locker "$@" & ;;
 esac
