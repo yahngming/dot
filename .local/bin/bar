@@ -5,7 +5,7 @@ case "$DESKTOP" in
 		pkill status
 		status &
 		;;
-	*hyprland*|*niri*)
+	*Hyprland*|*niri*)
 		pkill waybar
 		waybar &
 		;;
