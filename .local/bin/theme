@@ -7,6 +7,7 @@ start() {
 		ICON_THEME="Chicago95"
 		XCURSOR_THEME="Chicago95 Standard Cursors"
 		KBD_BACKLIGHT="0"
+		systemctl --user stop sun@themeauto.timer
 	elif [ -f ~/.config/dark ]; then
 		COLOR_SCHEME="prefer-dark"
 		GTK_THEME="Adwaita-dark"
