@@ -14,7 +14,7 @@ case "$DESKTOP" in
 		xrdb -merge ~/.config/xorg/xresources &
 		xset r rate 300 30 s 600 &
 		;;
-	*hyprland*|*niri*)
+	*Hyprland*|*niri*)
 		kanshi &
 		steam -silent -system-composer &
 		systemctl --user start hyprpolkitagent &
