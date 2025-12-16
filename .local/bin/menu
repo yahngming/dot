@@ -1,7 +1,6 @@
 #!/bin/sh
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	fuzzel --dmenu "$@"
-elif [ -n "$DISPLAY" ]; then
-	dmenu "$@"
-fi
+case "$LAUNCHER" in
+	fuzzel|walker ) $LAUNCHER --dmenu "$@" ;;
+	*             ) dmenu "$@" ;;
+esac
