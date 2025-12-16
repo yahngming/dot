@@ -75,6 +75,9 @@ cmd bulk-rename ${{
 	fi
 }}
 
+cmd edit ${{
+	editor $fx
+}}
 cmd fzf_jump ${{
 	res="$(find . | fzf --reverse --header="Jump to location")"
 	if [ -n "$res" ]; then
