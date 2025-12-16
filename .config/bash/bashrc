@@ -49,7 +49,7 @@ start() {
 		done
 		gsettings set org.gnome.system.proxy mode "manual"
 	fi
-	eval "$(head -n 1 ~/.config/desktop)"
+	eval "$DESKTOP"
 }
 
 export BROWSER="qutebrowser"
