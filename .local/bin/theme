@@ -26,8 +26,9 @@ start() {
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
 	case "$DESKTOP" in
-		hyprland ) hyprctl setcursor "$XCURSOR_THEME" ;;
-		niri     ) echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl ;;
+		*dwm*      ) pgrep xcompmgr || xcompmgr & ;;
+		*hyprland* ) hyprctl setcursor "$XCURSOR_THEME" ;;
+		*niri*     ) echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl ;;
 	esac
 	cp ~/.config/waybar/$COLOR_SCHEME.css ~/.config/waybar/colors.css
 	bar
