@@ -1,7 +1,3 @@
 #!/bin/sh
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	tui "foot $@"
-elif [ -n "$DISPLAY" ]; then
-	tui "st $@"
-fi
+tui "lf $@"
