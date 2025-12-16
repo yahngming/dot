@@ -1,5 +1,10 @@
 #!/bin/sh
 
+case "$TERMINAL" in
+	foot ) opt="-a" ;;
+	st   ) opt="-c" ;;
+esac
+
 case "$@" in
 	about*|bluetui|dockers*|dot|impala|proxy*|rclone*|timezone*|up|wiremix ) class="center" ;;
 	telnet*                                                                ) class="fullscreen" ;;
@@ -7,10 +12,4 @@ case "$@" in
 	*                                                                      ) class="tui" ;;
 esac
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	TERMINAL="foot -a $class"
-elif [ -n "$DISPLAY" ]; then
-	TERMINAL="st -c $class"
-fi
-
-$TERMINAL -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
+$TERMINAL $opt $class -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "cat ~/.cache/wal/sequences; $@"
