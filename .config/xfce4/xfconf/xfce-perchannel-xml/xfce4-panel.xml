@@ -17,7 +17,9 @@
         <value type="int" value="9"/>
         <value type="int" value="10"/>
       </property>
+      <property name="position" type="string" value="p=8;x=1147;y=945"/>
       <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="28"/>
       <property name="length" type="double" value="100"/>
       <property name="length-adjust" type="bool" value="true"/>
     </property>
