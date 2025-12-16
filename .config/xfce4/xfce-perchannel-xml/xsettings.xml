@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xsettings" version="1.0">
+  <property name="Net" type="empty">
+    <property name="ThemeName" type="string" value="Chicago95"/>
+    <property name="IconThemeName" type="string" value="Chicago95"/>
+  </property>
+  <property name="Gtk" type="empty">
+    <property name="FontName" type="string" value="sans-serif"/>
+    <property name="MonospaceFontName" type="string" value="monospace"/>
+    <property name="CursorThemeName" type="string" value="Chicago95 Standard Cursors"/>
+    <property name="CursorThemeSize" type="int" value="24"/>
+    <property name="DecorationLayout" type="string" value="icon,menu:minimize,maximize,close"/>
+  </property>
+</channel>
