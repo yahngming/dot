@@ -1,0 +1,10 @@
+case "$DESKTOP" in
+	*dwm*)
+		pkill statusbar
+		statusbar &
+		;;
+	*hyprland*|*niri*)
+		pkill waybar
+		waybar &
+		;;
+esac
