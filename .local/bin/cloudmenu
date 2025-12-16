@@ -5,7 +5,7 @@ menu="\
  Sync from cloud\n\
 "
 
-case $(printf "$menu" | menu $opt -p "Cloud" "$@") in
+case $(printf "$menu" | menu -p "Cloud" "$@") in
 	*Backup* ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
 	*Sync*   ) tui "rclone --ignore-existing --progress copy disroot:/Documents ~/Documents" ;;
 esac
