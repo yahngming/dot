@@ -1,7 +1,8 @@
 #!/bin/sh
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	foot -a center -e $SHELL -c "cat ~/.cache/wal/sequences; lf $@"
-elif [ -n "$DISPLAY" ]; then
-	st -c center -e $SHELL -c "cat ~/.cache/wal/sequences; lf $@"
-fi
+case "$TERMINAL" in
+	foot ) opt="-a" ;;
+	st   ) opt="-c" ;;
+esac
+
+$TERMINAL $opt center -e $SHELL -c "cat ~/.cache/wal/sequences; lf $@"
