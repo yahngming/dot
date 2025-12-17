@@ -1,14 +1,13 @@
-@import 'colors.css';
+@import "colors.css";
 
 * {
-	padding: 0;
 	border: none;
 	border-radius: 0;
 	font-family: graphical;
 	font-size: 16px;
 }
 
-window {
+window#waybar {
 	background: @bg;
 	color: @fg;
 }
@@ -22,11 +21,11 @@ window {
 	color: @sf;
 }
 
-#taskbar button, #tray, #clock {
-	padding: 0px 10px;
+button, #tray, #clock {
+	padding: 0px 9px;
 }
 
-#workspaces button, #idle_inhibitor, #battery, #network, #wireplumber {
+#idle_inhibitor, #battery, #network, #wireplumber {
 	padding: 0px 5px;
 }
 
