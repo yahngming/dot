@@ -1,8 +1,8 @@
 layout {{
 	border {{
 		on
-		active-color "{color6}"
-		inactive-color "{color3}"
+		active-color "{color3}"
+		inactive-color "{color8}"
 	}}
 }}
 
@@ -10,6 +10,6 @@ window-rule {{
 	match is-focused=true
 	shadow {{
 		on
-		color "{color6}"
+		color "{color3}"
 	}}
 }}
