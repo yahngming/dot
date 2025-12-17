@@ -1,42 +1,4 @@
-import json
-import os
-
-try:
-	with open(os.path.expanduser('~/.cache/wal/colors.json'), 'r') as f:
-		data = json.load(f)
-	colors = data['colors']
-	for i in range(16):
-		globals()[f'c{i}'] = colors[f'color{i}']
-except (FileNotFoundError, Exception):
-	pass
-
 c.auto_save.session = True
-c.colors.completion.even.bg = c0
-c.colors.completion.fg = c3
-c.colors.completion.item.selected.bg = c3
-c.colors.completion.item.selected.fg = c7
-c.colors.completion.odd.bg = c0
-c.colors.contextmenu.disabled.fg = c1
-c.colors.contextmenu.menu.bg = c0
-c.colors.contextmenu.menu.fg = c8
-c.colors.contextmenu.selected.bg = c3
-c.colors.contextmenu.selected.fg = c7
-c.colors.downloads.bar.bg = c0
-c.colors.downloads.start.bg = c0
-c.colors.downloads.stop.bg = c3
-c.colors.hints.bg = c0
-c.colors.hints.fg = c7
-c.colors.hints.match.fg = c1
-c.colors.tabs.bar.bg = c0
-c.colors.tabs.even.bg = c0
-c.colors.tabs.even.fg = c8
-c.colors.tabs.odd.bg = c0
-c.colors.tabs.odd.fg = c8
-c.colors.tabs.selected.even.bg = c3
-c.colors.tabs.selected.even.fg = c7
-c.colors.tabs.selected.odd.bg = c3
-c.colors.tabs.selected.odd.fg = c7
-c.colors.webpage.bg = c0
 c.content.blocking.adblock.lists = [
 	'https://easylist.to/easylist/easylist.txt',
 	'https://easylist.to/easylist/easyprivacy.txt',
@@ -96,3 +58,4 @@ config.bind('<Ctrl-X>', 'fake-key <Ctrl-X>')
 config.bind(';p', 'hint links spawn xdg-open {hint-url}')
 config.bind('pi', 'spawn xdg-open {url}')
 config.set('input.mode_override', 'passthrough', 'rmjs.rmadvanced.com')
+config.source('~/.cache/wal/colors-qutebrowser.py')
