@@ -1,0 +1,4 @@
+background-color={background}
+text-color={foreground}
+border-color=#4C7899FF
+progress-color=#5588AAFF
