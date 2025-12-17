@@ -1,10 +1,10 @@
 [global]
 	follow = keyboard
-	origin = bottom-right
-	offset = (20, 80)
+	origin = top-right
+	offset = (20, 20)
 	progress_bar_height = 20
 	transparency = 20
-	frame_width = 0
+	frame_width = 1
 	font = monospace 20
 
 [urgency_low]
