@@ -7,7 +7,7 @@
 	font-size: 16px;
 }
 
-window#waybar {
+window, button {
 	background: @bg;
 	color: @fg;
 }
@@ -21,14 +21,14 @@ window#waybar {
 	color: @sf;
 }
 
+#battery.critical {
+	color: red;
+}
+
 button, #tray, #clock {
 	padding: 0px 9px;
 }
 
 #idle_inhibitor, #battery, #network, #wireplumber {
 	padding: 0px 5px;
-}
-
-#battery.critical {
-	color: red;
 }
