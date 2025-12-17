@@ -1,4 +1,4 @@
 background-color={color0}
 text-color={color8}
 border-color={color7}
-progress-color=#5588AAFF
+progress-color={color7}
