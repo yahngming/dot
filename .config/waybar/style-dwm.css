@@ -26,7 +26,7 @@ window#waybar.empty #window {
 	border-bottom: 1px solid @sf;
 }
 
-.active {
+#workspaces.active {
 	background: @sb;
 	color: @sf;
 }
