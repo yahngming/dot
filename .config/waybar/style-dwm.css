@@ -1,10 +1,5 @@
 @import 'colors.css';
 
-@define-color bg @color0;
-@define-color fg @color8;
-@define-color sb @color3;
-@define-color sf @color7;
-
 * {
 	padding: 0;
 	border: none;
