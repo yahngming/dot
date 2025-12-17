@@ -18,15 +18,11 @@ window#waybar.empty #window {
 	color: transparent;
 }
 
-#workspaces button, #taskbar button {
-	border: none;
-}
-
-#workspaces button.active {
+#workspaces .active {
 	border-bottom: 1px solid @sf;
 }
 
-#workspaces.active {
+#workspaces .active, #taskbar .active {
 	background: @sb;
 	color: @sf;
 }
