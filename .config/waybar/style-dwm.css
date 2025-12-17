@@ -8,14 +8,9 @@
 	font-size: 16px;
 }
 
-window#waybar, window#waybar.empty, .modules-left, .modules-right {
+window {
 	background: @bg;
 	color: @fg;
-}
-
-window#waybar.empty #window {
-	background: transparent;
-	color: transparent;
 }
 
 #workspaces .active {
