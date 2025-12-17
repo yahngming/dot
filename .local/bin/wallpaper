@@ -3,10 +3,13 @@
 setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
 		exit
+	elif [ -f ~/.config/dark ]; then
+		wal -ni "$wallpaper"
+	else
+		wal -lni "$wallpaper"
 	fi
 	cp "$wallpaper" "$paperfolder/wallpaper"
 	convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
-	wal -n -i "$wallpaper"
 	source ~/.cache/wal/colors.sh
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		pkill hyprpaper
