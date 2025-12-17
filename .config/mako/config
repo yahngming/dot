@@ -1,9 +1,6 @@
+include=~/.cache/wal/colors-mako
+font=terminal
 outer-margin=20,20
 border-size=0
-font=terminal
-background-color=#285577FF
-border-color=#4C7899FF
-text-color=#FFFFFFFF
-progress-color=#5588AAFF
 default-timeout=5000
 anchor=top-right
