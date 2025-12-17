@@ -19,7 +19,6 @@ window#waybar.empty #window {
 }
 
 #workspaces button, #taskbar button {
-	color: @fg;
 	border: none;
 }
 
@@ -30,9 +29,6 @@ window#waybar.empty #window {
 
 #workspaces button.active, #taskbar button.active {
 	background: @sb;
-}
-
-#workspaces button.active, #taskbar button.active, #clock {
 	color: @sf;
 }
 
