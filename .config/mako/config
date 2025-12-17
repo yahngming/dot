@@ -1,6 +1,6 @@
 include=~/.cache/wal/colors-mako
 font=terminal
 outer-margin=20,20
-border-size=0
+border-size=1
 default-timeout=5000
 anchor=top-right
