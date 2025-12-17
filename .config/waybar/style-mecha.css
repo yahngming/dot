@@ -21,7 +21,7 @@
 @define-color temperature     @mantle;
 @define-color memory          @base;
 @define-color cpu             @surface0;
-@define-color logo-fg         @gg;
+@define-color logo-fg         @sb;
 @define-color logo-bg         @overlay2;
 @define-color pulseaudio      @surface0;
 @define-color sourceaudio     @base;
