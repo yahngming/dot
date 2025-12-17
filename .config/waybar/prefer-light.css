@@ -1,9 +1,9 @@
 @import 'colors-waybar.css';
 
 @define-color bg              @color8;
-@define-color fg              @color5;
+@define-color fg              @color0;
 @define-color sb              @color3;
-@define-color sf              @color6;
+@define-color sf              @color7;
 @define-color rosewater       #dc8a78;
 @define-color flamingo        #dd7878;
 @define-color pink            #ea76cb;
