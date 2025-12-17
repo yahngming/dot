@@ -1,7 +1,7 @@
 {
 
 	"layer": "top",
-	"position": "bottom",
+	"position": "top",
 	"mode": "dock",
 	"reload_style_on_change": true,
 	"gtk-layer-shell": true,
