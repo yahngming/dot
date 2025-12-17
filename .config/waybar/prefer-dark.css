@@ -1,7 +1,7 @@
 @import 'colors-waybar.css';
 
-@define-color bg              @background;
-@define-color fg              @foreground;
+@define-color bg              @color0;
+@define-color fg              @color8;
 @define-color gg              @color3;
 @define-color active          @color6;
 @define-color rosewater       #f5e0dc;
