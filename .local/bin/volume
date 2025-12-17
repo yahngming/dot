@@ -8,12 +8,12 @@ get() {
 	wpctl get-volume $id && bar
 }
 
-up() {
-	wpctl set-volume $id 2%+ -l 1 && get
+down() {
+	wpctl set-volume $id 2%- && bar
 }
 
-down() {
-	wpctl set-volume $id 2%- && get
+up() {
+	wpctl set-volume $id 2%+ -l 1 && bar
 }
 
 mute() {
@@ -46,6 +46,6 @@ help() {
 
 id=${2:-@DEFAULT_SINK@}
 case "$1" in
-	get|up|down|mute|unmute|toggle ) $1 ;;
+	get|down|up|mute|unmute|toggle ) $1 ;;
 	*                              ) help ;;
 esac
