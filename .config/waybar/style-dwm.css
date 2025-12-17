@@ -23,11 +23,10 @@ window#waybar.empty #window {
 }
 
 #workspaces button.active {
-	color: @sf;
 	border-bottom: 1px solid @sf;
 }
 
-#workspaces button.active, #taskbar button.active {
+.active {
 	background: @sb;
 	color: @sf;
 }
