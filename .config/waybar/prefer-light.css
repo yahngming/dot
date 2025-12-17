@@ -1,6 +1,6 @@
 @import 'colors-waybar.css';
 
-@define-color bg              @foreground;
+@define-color bg              @color8;
 @define-color fg              @color5;
 @define-color gg              @color3;
 @define-color active          @color6;
