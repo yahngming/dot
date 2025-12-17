@@ -2,8 +2,8 @@
 
 @define-color bg              @color0;
 @define-color fg              @color8;
-@define-color gg              @color3;
-@define-color active          @color6;
+@define-color sb              @color3;
+@define-color sf              @color6;
 @define-color rosewater       #f5e0dc;
 @define-color flamingo        #f2cdcd;
 @define-color pink            #f5c2e7;
