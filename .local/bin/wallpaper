@@ -20,7 +20,7 @@ setpaper() {
 	elif [ -n "$DISPLAY" ]; then
 		xwallpaper --zoom "$wallpaper"
 		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
-		mkdir -p ~/.config/dunst/dunstrc.d/
+		mkdir -p ~/.config/dunst/dunstrc.d
 		cp ~/.cache/wal/colors-dunst.conf ~/.config/dunst/dunstrc.d/
 		dunstctl reload
 	fi
