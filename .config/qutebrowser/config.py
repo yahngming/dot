@@ -1,3 +1,5 @@
+config.source('../../.cache/wal/colors-qutebrowser.py')
+
 c.auto_save.session = True
 c.content.blocking.adblock.lists = [
 	'https://easylist.to/easylist/easylist.txt',
@@ -58,4 +60,3 @@ config.bind('<Ctrl-X>', 'fake-key <Ctrl-X>')
 config.bind(';p', 'hint links spawn xdg-open {hint-url}')
 config.bind('pi', 'spawn xdg-open {url}')
 config.set('input.mode_override', 'passthrough', 'rmjs.rmadvanced.com')
-config.source('../../.cache/wal/colors-qutebrowser.py')
