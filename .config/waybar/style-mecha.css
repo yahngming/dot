@@ -29,31 +29,27 @@
 @define-color mantle          #181825;
 @define-color crust           #11111b;
 
-@define-color shadow          shade(@bg, 0.5);
-@define-color main-fg         @fg;
-@define-color main-bg         @bg;
-@define-color main-br         @fg;
-
+@define-color main-fg         @color8;
+@define-color main-bg         @color0;
+@define-color main-br         @color8;
 @define-color active-bg       @overlay2;
-@define-color active-fg       @bg;
-
+@define-color active-fg       @color0;
 @define-color hover-bg        @surface0;
-@define-color hover-fg        alpha(@fg, 0.75);
+@define-color hover-fg        alpha(@main-fg, 0.75);
+@define-color shadow          shade(@main-bg, 0.5);
 
 /* Module Colors */
 
-@define-color module-fg       @fg;
+@define-color module-fg       @color8;
 @define-color workspaces      @mantle;
-
 @define-color temperature     @mantle;
 @define-color memory          @base;
 @define-color cpu             @surface0;
-@define-color logo-fg         @sb;
+@define-color logo-fg         @color3;
 @define-color logo-bg         @overlay2;
 @define-color pulseaudio      @surface0;
 @define-color sourceaudio     @base;
 @define-color battery         @mantle;
-
 @define-color tray            @mantle;
 @define-color date            @base;
 @define-color time            @surface0;
@@ -63,7 +59,7 @@
 
 @define-color warning         @yellow;
 @define-color critical        @red;
-@define-color charging        @fg;
+@define-color charging        @color8;
 
 * {
 	font-family: graphical;
