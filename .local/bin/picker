@@ -31,7 +31,7 @@ else
 fi
 
 if [ "$BROWSER" = "qutebrowser" ]; then
-	command="$command"
+	command="$command @1"
 else
 	for arg in "$@"; do
 		escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
