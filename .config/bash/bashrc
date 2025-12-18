@@ -1,5 +1,5 @@
 [[ $- != *i* ]] && return
-[[ -f ~/.cache/wal/sequences ]] && ! grep -q "screensaver" /proc/$PPID/cmdline 2>/dev/null && (cat ~/.cache/wal/sequences &)
+[[ -f ~/.cache/wal/sequences ]] && (cat ~/.cache/wal/sequences &)
 [[ -f /usr/share/git/completion/git-prompt.sh ]] && . /usr/share/git/completion/git-prompt.sh
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:$PATH"
 
