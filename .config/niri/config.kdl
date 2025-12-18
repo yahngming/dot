@@ -120,7 +120,7 @@ layer-rule {
 }
 
 window-rule {
-	opacity 0.85
+	opacity 0.90
 	geometry-corner-radius 4
 	clip-to-geometry true
 	draw-border-with-background false
