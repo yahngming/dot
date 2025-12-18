@@ -5,7 +5,8 @@
 	"modules-left": [
 		"custom/logo",
 		"ext/workspaces",
-		"cpu"
+		"cpu",
+		"memory"
 	],
 	"modules-center": [
 		"mpris",
@@ -24,8 +25,8 @@
 	],
 	"custom/logo": {
 		"format": "{text}",
-		"tooltip": false,
-		"exec": "logo"
+		"exec": "logo",
+		"tooltip": false
 	},
 	"ext/workspaces": {
 		"format": "{icon}",
@@ -47,8 +48,18 @@
 			"<span size='14pt'>⠛</span>",
 			"<span size='14pt'>⠟</span>",
 			"<span size='14pt'>⠿</span>"
-		],
-		"tooltip-format": "CPU Frequency: {avg_frequency} GHz"
+		]
+	},
+	"memory": {
+		"format": "{icon}",
+		"format-icons": [
+			"<span size='14pt'>⠁</span>",
+			"<span size='14pt'>⠉</span>",
+			"<span size='14pt'>⠙</span>",
+			"<span size='14pt'>⠛</span>",
+			"<span size='14pt'>⠟</span>",
+			"<span size='14pt'>⠿</span>"
+		]
 	},
 	"mpris": {
 		"format": "<span size='14pt'>󰐎</span>",
