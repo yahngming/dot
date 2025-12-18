@@ -127,7 +127,7 @@
 			"󰤢",
 			"󰤨"
 		],
-		"tooltip-format": "{essid}\t{ipaddr}",
+		"tooltip-format": "{ipaddr} {essid}",
 		"on-click": "wlanmenu"
 	},
 	"pulseaudio": {
