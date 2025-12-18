@@ -8,7 +8,7 @@ esac
 case "$@" in
 	about*|bluetui|dockers*|dot|impala|proxy*|rclone*|timezone*|up|wiremix ) opt="$opt center" ;;
 	telnet*                                                                ) opt="$opt fullscreen -o colors.background=000000" ;;
-	asciiquarium*|lavat*|*matrix*|*pipes*|*svr                             ) opt="$opt screensaver -o colors.background=000000" ;;
+	asciiquarium*|lavat*|*matrix*|*svr                                     ) opt="$opt screensaver -o colors.background=000000" ;;
 	*                                                                      ) opt="$opt tui" ;;
 esac
 
