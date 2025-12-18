@@ -4,7 +4,7 @@
 	"position": "top",
 
 	"modules-left": [
-		"hyprland/workspaces",
+		"ext/workspaces",
 		"custom/arrow10",
 		"hyprland/window"
 	],
@@ -78,7 +78,7 @@
 		"tooltip": false
 	},
 
-	"hyprland/workspaces": {
+	"ext/workspaces": {
 		"all-outputs": true,
 		"format": "{name}",
 		"persistent-workspaces": {
