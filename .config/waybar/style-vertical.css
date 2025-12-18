@@ -13,8 +13,9 @@ window#waybar {
 
 #custom-logo:hover,
 #cpu:hover,
-#network:hover,
+#memory:hover,
 #bluetooth:hover,
+#network:hover,
 #pulseaudio:hover,
 #pulseaudio.microphone:hover,
 #pulseaudio.sink-muted:hover,
@@ -24,20 +25,30 @@ window#waybar {
 
 #custom-logo,
 #cpu,
-#clock,
 #mpris,
+#privacy,
 #custom-menu,
 #tray,
-#privacy,
-#network,
-#bluetooth,
-#pulseaudio,
-#pulseaudio.microphone,
 #backlight,
 #battery,
-#custom-powermenu {
+#bluetooth,
+#network,
+#pulseaudio.microphone,
+#pulseaudio,
+#custom-powermenu,
+#clock {
 	color: @foreground;
 	padding: 6px 0;
+}
+
+tooltip {
+	background: @background;
+	border: 1px solid @foreground;
+}
+tooltip * {
+	color: @foreground;
+	margin: 2px;
+	background: @background;
 }
 
 #workspaces button {
@@ -48,41 +59,13 @@ window#waybar {
 	color: @color2;
 }
 
-#privacy {
-	margin: 4px;
-	color: @color3;
-}
-
-#clock {
-	color: @color4;
-}
-
 #mpris {
 	color: @color3;
 }
 
-#network.disabled {
-	color: @color1;
-}
-#network.wifi {
-	color: @color2;
-}
-#network.ethernet {
+#privacy {
+	margin: 4px;
 	color: @color3;
-}
-
-#bluetooth.disabled {
-	color: @color1;
-}
-#bluetooth.connected {
-	color: @color4;
-}
-
-#pulseaudio.sink-muted:not(.microphone) {
-	color: @color3;
-}
-#pulseaudio.microphone.source-muted {
-	color: @color1;
 }
 
 #battery.plugged {
@@ -95,14 +78,28 @@ window#waybar {
 	color: @color3;
 }
 
-tooltip {
-	background: @background;
-	border: 1px solid @foreground;
+#bluetooth.disabled {
+	color: @color1;
 }
-tooltip * {
-	color: @foreground;
-	margin: 2px;
-	background: @background;
+#bluetooth.connected {
+	color: @color4;
+}
+
+#network.disabled {
+	color: @color1;
+}
+#network.wifi {
+	color: @color2;
+}
+#network.ethernet {
+	color: @color3;
+}
+
+#pulseaudio.sink-muted:not(.microphone) {
+	color: @color3;
+}
+#pulseaudio.microphone.source-muted {
+	color: @color1;
 }
 
 #pulseaudio-slider,
@@ -125,4 +122,8 @@ tooltip * {
 }
 #backlight-slider highlight {
 	background: @color3;
+}
+
+#clock {
+	color: @color4;
 }
