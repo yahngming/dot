@@ -1,5 +1,6 @@
 [filechooser]
-cmd=TERMCMD='foot -T "filechooser"' lf-wrapper.sh
+cmd=lf-wrapper.sh
 default_dir=$HOME
+env=TERMCMD='foot -T "terminal filechooser"'
 open_mode = suggested
 save_mode = last
