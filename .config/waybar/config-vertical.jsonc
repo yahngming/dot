@@ -18,7 +18,6 @@
 		"battery",
 		"bluetooth",
 		"network",
-		"pulseaudio#microphone",
 		"group/audio",
 		"custom/powermenu",
 		"clock"
@@ -194,13 +193,6 @@
 		"tooltip-format": "{essid}\t{gwaddr}",
 		"on-click": "wlanmenu"
 	},
-	"pulseaudio#microphone": {
-		"format": "{format_source}",
-		"format-source": "<span size='14pt'>󰍬</span>",
-		"format-source-muted": "<span size='14pt'>󰍭</span>",
-		"on-click": "volume toggle @DEFAULT_SOURCE@",
-		"tooltip": false
-	},
 	"group/audio": {
 		"orientation": "inherit",
 		"drawer": {
@@ -210,8 +202,16 @@
 		},
 		"modules": [
 			"pulseaudio",
+			"pulseaudio#microphone/slider",
 			"pulseaudio/slider"
 		]
+	},
+	"pulseaudio#microphone": {
+		"format": "{format_source}",
+		"format-source": "<span size='14pt'>󰍬</span>",
+		"format-source-muted": "<span size='14pt'>󰍭</span>",
+		"on-click": "volume toggle @DEFAULT_SOURCE@",
+		"tooltip": false
 	},
 	"pulseaudio": {
 		"format": "{icon}",
@@ -225,6 +225,11 @@
 		"reverse-scrolling": true,
 		"tooltip": true,
 		"tooltip-format": "Volume: {volume}%\n{desc}"
+	},
+	"pulseaudio#microphone/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "vertical"
 	},
 	"pulseaudio/slider": {
 		"min": 0,
