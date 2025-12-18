@@ -35,27 +35,20 @@ start() {
 
 auto() {
 	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
-		touch -f ~/.config/dark
+		dark
 	else
-		rm -f ~/.config/dark
+		light
 	fi
-	start
-	systemctl --user start sun@themeauto.timer
-	systemctl --user enable sun@themeauto.timer
 }
 
 dark() {
 	touch -f ~/.config/dark
 	start
-	systemctl --user stop sun@themeauto.timer
-	systemctl --user disable sun@themeauto.timer
 }
 
 light() {
 	rm -f ~/.config/dark
 	start
-	systemctl --user stop sun@themeauto.timer
-	systemctl --user disable sun@themeauto.timer
 }
 
 help() {
