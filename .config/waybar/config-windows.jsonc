@@ -21,6 +21,7 @@
 		"memory",
 		"disk",
 		"battery",
+		"bluetooth",
 		"network",
 		"pulseaudio",
 		"niri/language",
@@ -115,7 +116,8 @@
 			"󰤢",
 			"󰤢",
 			"󰤨"
-		]
+		],
+		"on-click": "wlanmenu"
 	},
 	"pulseaudio": {
 		"max-volume": 150,
