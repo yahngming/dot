@@ -7,7 +7,16 @@ menu="\
 "
 
 case $(printf "$menu" | menu -p "Change theme to:" "$@") in
-	*Auto*  ) theme auto ;;
-	*Dark*  ) theme dark ;;
-	*Light* ) theme light ;;
+	*Auto*)
+		theme auto
+		systemctl --user enable --now sun@themeauto.timer
+		;;
+	*Dark*)
+		theme dark
+		systemctl --user disable --now sun@themeauto.timer
+		;;
+	*Light*)
+		theme light
+		systemctl --user disable --now sun@themeauto.timer
+		;;
 esac
