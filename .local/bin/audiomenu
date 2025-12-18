@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tui wiremix && exit
+pkill wiremix || tui wiremix && exit
 
 menu="\
 󰓃 Sinks\n\
