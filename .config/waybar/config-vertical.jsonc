@@ -25,6 +25,7 @@
 	"custom/logo": {
 		"format": "{text}",
 		"exec": "logo",
+		"on-click": "launcher",
 		"tooltip": false
 	},
 	"ext/workspaces": {
