@@ -4,19 +4,15 @@ case "$TERMINAL" in
 	foot ) opt="-a" ;;
 	st   ) opt="-c" ;;
 esac
+
 termcmd="$TERMINAL $opt center -T 'termfilechooser' -e"
 cmd="lf"
 command="$termcmd $cmd"
 
-if [ "$BROWSER" = "qutebrowser" ]; then
-	$SHELL -c "$command $@"
-	exit
-fi
-
-set -e
-
 if [ "$6" -ge 4 ]; then
 	set -x
+else
+	set -e
 fi
 
 multiple="$1"
