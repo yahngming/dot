@@ -74,7 +74,7 @@
 		"tooltip": false
 	},
 
-	"hyprland/workspaces": {
+	"ext/workspaces": {
 		"all-outputs": true,
 		"format": "{icon}",
 		"format-icons": {
