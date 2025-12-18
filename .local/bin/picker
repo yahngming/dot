@@ -9,7 +9,7 @@ cmd="lf"
 command="$termcmd $cmd"
 
 if [ "$BROWSER" = "qutebrowser" ]; then
-	sh -c "$command $@"
+	$SHELL -c "$command $@"
 	exit
 fi
 
