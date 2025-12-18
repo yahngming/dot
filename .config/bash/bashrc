@@ -52,7 +52,7 @@ start() {
 	eval "$DESKTOP"
 }
 
-export BROWSER="qutebrowser"
+export BROWSER="chrome"
 export DESKTOP="$(head -n 1 ~/.config/desktop)"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
 export FZF_CTRL_T_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type file"
