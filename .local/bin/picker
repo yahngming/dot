@@ -5,4 +5,4 @@ case "$TERMINAL" in
 	st   ) opt="-c" ;;
 esac
 
-$TERMINAL $opt center -e $SHELL -c "cat ~/.cache/wal/sequences; lf $@"
+$TERMINAL $opt center -e lf $@
