@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tui bluetui && exit
+pkill bluetui || (tui bluetui &) && exit
 
 # Constants
 divider="---------"
