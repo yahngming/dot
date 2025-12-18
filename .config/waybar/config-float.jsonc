@@ -8,25 +8,6 @@
 	"modules-center": ["ext/workspaces"],
 	"modules-right": ["tray", "temperature", "custom/usb", "idle_inhibitor", "battery", "bluetooth", "network", "pulseaudio", "custom/settings", "custom/power"],
 
-	"battery": {
-		"format": "{icon}",
-		"format-charging": "{icon}",
-		"format-icons": {
-			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-			"default": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-		},
-		"on-click": "",
-		"tooltip-format": "{capacity}%"
-	},
-
-	"bluetooth": {
-		"format": "",
-		"format-connected": "",
-		"on-click": "btmenu",
-		"tooltip-format": "{device_enumerate}",
-		"tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}%"
-	},
-
 	"clock": {
 		"format": "{:%I:%M%p}",
 		"format-alt": "{:%H:%M UTC%Ez, %A, %B %d, %Y}",
@@ -45,54 +26,11 @@
 		"tooltip-format": "<tt>{calendar}</tt>"
 	},
 
-	"custom/power": {
-		"format": "",
-		"on-click": "powermenu",
-		"tooltip": false
-	},
-
-	"custom/settings": {
-		"format": "",
-		"on-click": "settings",
-		"tooltip": false
-	},
-
-	"custom/usb": {
-		"format": "{}",
-		"interval": 3,
-		"exec": "printf '󰕓'",
-		"exec-if": "df | grep '/media/' >/dev/null",
-		"on-click": "usbmenu",
-		"tooltip": false
-	},
-
 	"custom/weather": {
 		"format": "{}",
 		"interval": 3600,
 		"exec": "curl wttr.in/?format=%C+%t",
 		"on-click": "",
-		"tooltip": false
-	},
-
-	"ext/workspaces": {
-		"all-outputs": true,
-		"format": "{icon}",
-		"format-icons": {
-			"default": ""
-		},
-		"persistent-workspaces": {
-			"*": 5
-		},
-		"on-scroll-up": "hyprctl dispatch workspace e-1",
-		"on-scroll-down": "hyprctl dispatch workspace e+1"
-	},
-
-	"idle_inhibitor": {
-		"format": "{icon}",
-		"format-icons": {
-			"activated": "󰴄",
-			"deactivated": "󰈈"
-		},
 		"tooltip": false
 	},
 
@@ -106,6 +44,73 @@
 		"on-click": "playerctl play-pause",
 		"on-scroll-up": "playerctl previous",
 		"on-scroll-down": "playerctl next"
+	},
+
+	"ext/workspaces": {
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 5
+		},
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1"
+	},
+
+	"tray": {
+		"spacing": 5
+	},
+
+	"temperature": {
+		"hwmon-path": ["/sys/class/thermal/thermal_zone0/temp"],
+		"format": "{temperatureC}",
+		"tooltip": false
+	},
+
+	"temperature#gpu": {
+		"hwmon-path": ["/sys/class/hwmon/hwmon7/temp1_input"],
+		"format": "{temperatureC}",
+		"tooltip": false
+	},
+
+	"custom/usb": {
+		"format": "{}",
+		"interval": 3,
+		"exec": "printf '󰕓'",
+		"exec-if": "df | grep '/media/' >/dev/null",
+		"on-click": "usbmenu",
+		"tooltip": false
+	},
+
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "󰴄",
+			"deactivated": "󰈈"
+		},
+		"tooltip": false
+	},
+
+	"battery": {
+		"format": "{icon}",
+		"format-charging": "{icon}",
+		"format-icons": {
+			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+			"default": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		},
+		"on-click": "",
+		"tooltip-format": "{capacity}%"
+	},
+
+	"bluetooth": {
+		"format": "",
+		"format-connected": "",
+		"on-click": "btmenu",
+		"tooltip-format": "{device_enumerate}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}%"
 	},
 
 	"network": {
@@ -127,20 +132,16 @@
 		"tooltip-format": "{volume}%"
 	},
 
-	"temperature": {
-		"hwmon-path": ["/sys/class/thermal/thermal_zone0/temp"],
-		"format": "{temperatureC}",
+	"custom/settings": {
+		"format": "",
+		"on-click": "settings",
 		"tooltip": false
 	},
 
-	"temperature#gpu": {
-		"hwmon-path": ["/sys/class/hwmon/hwmon7/temp1_input"],
-		"format": "{temperatureC}",
+	"custom/power": {
+		"format": "",
+		"on-click": "powermenu",
 		"tooltip": false
-	},
-
-	"tray": {
-		"spacing": 5
 	}
 
 }
