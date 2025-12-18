@@ -4,8 +4,7 @@ off() {
 	if [ -f ~/.config/proxy ]; then
 		rm -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "none"
-		sudo systemctl stop sing-box.service
-		sudo systemctl disable sing-box.service
+		sudo systemctl disable --now sing-box.service
 	fi
 }
 
@@ -18,8 +17,7 @@ on() {
 	if [ ! -f ~/.config/proxy ]; then
 		touch -f ~/.config/proxy
 		gsettings set org.gnome.system.proxy mode "manual"
-		sudo systemctl start sing-box.service
-		sudo systemctl enable sing-box.service
+		sudo systemctl enable --now sing-box.service
 	else
 		sudo systemctl restart sing-box.service
 	fi
