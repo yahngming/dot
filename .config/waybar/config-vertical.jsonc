@@ -23,9 +23,8 @@
 		"clock"
 	],
 	"custom/logo": {
-		"format": "{text}",
 		"exec": "logo",
-		"exec-on-event": "logo",
+		"interval": "3600",
 		"on-click": "launcher",
 		"tooltip": false
 	},
