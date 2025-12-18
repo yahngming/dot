@@ -28,12 +28,12 @@
 		"exec": "logo"
 	},
 	"ext/workspaces": {
-		"on-click": "activate",
 		"format": "{icon}",
 		"format-icons": {
 			"default": "󰄰",
 			"active": "󰄯"
 		},
+		"on-click": "activate",
 		"persistent-workspaces": {
 			"*": 5
 		}
@@ -48,17 +48,13 @@
 			"<span size='14pt'>⠟</span>",
 			"<span size='14pt'>⠿</span>"
 		],
-		"interval": 1,
-		"tooltip": true,
 		"tooltip-format": "CPU Frequency: {avg_frequency} GHz"
 	},
 	"mpris": {
 		"format": "<span size='14pt'>󰐎</span>",
-		"interval": 1,
 		"on-click": "playerctl play-pause",
 		"on-click-right": "playerctl next",
 		"on-click-middle": "playerctl previous",
-		"tooltip": true,
 		"tooltip-format": "{title}"
 	},
 	"privacy": {
@@ -134,7 +130,6 @@
 		"device": "intel_backlight"
 	},
 	"battery": {
-		"interval": 5,
 		"states": {
 			"critical": 10
 		},
@@ -154,12 +149,10 @@
 		"format-charging": "<span size='14pt'>󰂄</span>",
 		"format-plugged": "<span size='14pt'>󰚥</span>",
 		"format-critical": "<span size='14pt'>󰂃</span>",
-		"tooltip": true,
 		"tooltip-format": "Charge: {capacity}%",
 		"tooltip-format-charging": "Charging: {capacity}%"
 	},
 	"bluetooth": {
-		"interval": 5,
 		"format-on": "<span size='14pt'>󰂯</span>",
 		"format-off": "<span size='14pt'>󰂲</span>",
 		"format-disabled": "<span size='14pt'>󰂲</span>",
@@ -187,11 +180,8 @@
 		"format-ethernet": "{icon}",
 		"format-disconnected": "{icon}",
 		"format-disabled": "{icon}",
-		"interval": 5,
 		"tooltip-format": "{essid}\t{gwaddr}",
-		"on-click": "wlanmenu",
-		"tooltip": true,
-		"max-length": 20
+		"on-click": "wlanmenu"
 	},
 	"pulseaudio#microphone": {
 		"format": "{format_source}",
@@ -213,7 +203,6 @@
 		]
 	},
 	"pulseaudio": {
-		"interval": 1,
 		"format": "{icon}",
 		"format-icons": [
 			"<span size='14pt'>󰕿</span>",
@@ -224,10 +213,7 @@
 		"on-click": "volume toggle",
 		"reverse-scrolling": true,
 		"tooltip": true,
-		"tooltip-format": "Volume: {volume}%\n{desc}",
-		"ignored-sinks": [
-			"Easy Effects Sink"
-		]
+		"tooltip-format": "Volume: {volume}%\n{desc}"
 	},
 	"pulseaudio/slider": {
 		"min": 0,
@@ -240,8 +226,15 @@
 		"tooltip": false
 	},
 	"clock": {
-		"interval": 1,
 		"format": "{:%H\n%M}",
-		"tooltip-format": "<tt><small>{calendar}</small></tt>"
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"format": {
+				"months": "<b>{}</b>",
+				"weekdays": "<b>{}</b>",
+				"days": "{}",
+				"today": "<span color='tomato'><b>{}</b></span>"
+			}
+		}
 	}
 }
