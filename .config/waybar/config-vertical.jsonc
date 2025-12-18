@@ -24,7 +24,7 @@
 	],
 	"custom/logo": {
 		"exec": "logo",
-		"interval": "3600",
+		"interval": "once",
 		"on-click": "launcher",
 		"tooltip": false
 	},
