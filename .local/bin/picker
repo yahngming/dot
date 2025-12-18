@@ -30,9 +30,11 @@ else
 	set -- -selection-path "$out" "$path"
 fi
 
-for arg in "$@"; do
-	escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
-	command="$command \"$escaped\""
-done
+if [ "$BROWSER" != "qutebrowser" ]; then
+	for arg in "$@"; do
+		escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
+		command="$command \"$escaped\""
+	done
+fi
 
 sh -c "$command"
