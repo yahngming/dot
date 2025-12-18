@@ -23,7 +23,7 @@
 		"battery",
 		"network",
 		"pulseaudio",
-		"hyprland/language",
+		"niri/language",
 		"clock"
 	],
 
@@ -132,7 +132,7 @@
 		},
 		"on-click": "volume toggle"
 	},
-	"hyprland/language": {
+	"niri/language": {
 		"format": "{}",
 		"format-en": "ENG",
 		"format-cn": "CHI"
