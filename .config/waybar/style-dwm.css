@@ -7,7 +7,7 @@
 	font-size: 16px;
 }
 
-window, button {
+window, button, tooltip {
 	background: @color0;
 	color: @color8;
 }
