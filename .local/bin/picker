@@ -1,5 +1,18 @@
 #!/bin/sh
 
+case "$TERMINAL" in
+	foot ) opt="-a" ;;
+	st   ) opt="-c" ;;
+esac
+termcmd="$TERMINAL $opt center -T 'termfilechooser' -e"
+cmd="lf"
+command="$termcmd $cmd"
+
+if [ "$BROWSER" = "qutebrowser" ]; then
+	sh -c "$command $@"
+	exit
+fi
+
 set -e
 
 if [ "$6" -ge 4 ]; then
@@ -12,14 +25,6 @@ save="$3"
 path="$4"
 out="$5"
 
-case "$TERMINAL" in
-	foot ) opt="-a" ;;
-	st   ) opt="-c" ;;
-esac
-termcmd="$TERMINAL $opt center -T 'termfilechooser' -e"
-cmd="lf"
-command="$termcmd $cmd"
-
 if [ "$save" = "1" ]; then
 	set -- -selection-path "$out" "$path"
 elif [ "$directory" = "1" ]; then
@@ -30,13 +35,9 @@ else
 	set -- -selection-path "$out" "$path"
 fi
 
-if [ "$BROWSER" = "qutebrowser" ]; then
-	command="$command $1"
-else
-	for arg in "$@"; do
-		escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
-		command="$command \"$escaped\""
-	done
-fi
+for arg in "$@"; do
+	escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
+	command="$command \"$escaped\""
+done
 
 sh -c "$command"
