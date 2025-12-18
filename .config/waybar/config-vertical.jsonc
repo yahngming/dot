@@ -167,7 +167,6 @@
 		"format-off": "<span size='14pt'>󰂲</span>",
 		"format-disabled": "<span size='14pt'>󰂲</span>",
 		"format-connected": "<span size='14pt'>󰂱</span>",
-		"tooltip": true,
 		"tooltip-format": "{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_address}",
 		"tooltip-format-enumerate-connected-battery": "{device_address} | Battery: {device_battery_percentage}%",
@@ -223,7 +222,6 @@
 		"format-muted": "<span size='14pt'>󰝟</span>",
 		"on-click": "volume toggle",
 		"reverse-scrolling": true,
-		"tooltip": true,
 		"tooltip-format": "Volume: {volume}%\n{desc}"
 	},
 	"pulseaudio#microphone/slider": {
