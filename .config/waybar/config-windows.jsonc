@@ -36,9 +36,9 @@
 		"menu-actions": {
 			"about": "aboutmenu",
 			"programs": "launcher",
-			"documents": "$TERMINAL -T center -e $SHELL -c 'cat ~/.cache/wal/sequences ; lf'",
+			"documents": "explorer",
 			"settings": "settings",
-			"shell": "$TERMINAL -T center",
+			"shell": "terminal",
 			"shutdown": "powermenu"
 		}
 	},
