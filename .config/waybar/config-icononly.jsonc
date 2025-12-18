@@ -12,7 +12,7 @@
 	"gtk-layer-shell": true,
 	"reload_style_on_change": true,
 
-	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer"],
+	"modules-left": ["custom/smallspacer","ext/workspaces","custom/spacer"],
 	"modules-center": ["custom/padd","custom/l_end","custom/r_end","custom/padd"],
 	"modules-right": ["custom/padd","custom/l_end","group/expand","group/expand-2","group/expand-3","mpris","network","memory","cpu","battery","custom/notification","custom/padd"],
 
