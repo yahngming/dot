@@ -2,55 +2,26 @@
 	"layer": "top",
 	"position": "left",
 	"margin": "0 0 0 0",
-	"modules-left": ["custom/logo", "ext/workspaces", "cpu"],
-	"modules-center": ["mpris", "privacy"],
+	"modules-left": [
+		"custom/logo",
+		"ext/workspaces",
+		"cpu"
+	],
+	"modules-center": [
+		"mpris",
+		"privacy"
+	],
 	"modules-right": [
 		"group/extras",
-		"network",
-		"bluetooth",
-		"pulseaudio#microphone",
-		"group/audio",
 		"group/brightness",
 		"battery",
+		"bluetooth",
+		"network",
+		"pulseaudio#microphone",
+		"group/audio",
 		"custom/powermenu",
 		"clock"
 	],
-	"group/extras": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 400,
-			"children-class": "extras",
-			"transition-left-to-right": false
-		},
-		"modules": [
-			"custom/menu",
-			"tray"
-		]
-	},
-	"group/brightness": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 400,
-			"children-class": "brightness",
-			"transition-left-to-right": false
-		},
-		"modules": [
-			"backlight",
-			"backlight/slider"
-		]
-	},
-	"group/audio": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 400,
-			"children-class": "audio",
-			"transition-left-to-right": false
-		},
-		"modules": [
-			"pulseaudio",
-			"pulseaudio/slider"
-		]
-	},
 	"custom/logo": {
 		"format": "{text}",
 		"tooltip": false,
@@ -81,11 +52,6 @@
 		"tooltip": true,
 		"tooltip-format": "CPU Frequency: {avg_frequency} GHz"
 	},
-	"clock": {
-		"interval": 1,
-		"format": "{:%H\n%M}",
-		"tooltip-format": "<tt><small>{calendar}</small></tt>"
-	},
 	"mpris": {
 		"format": "<span size='14pt'>󰐎</span>",
 		"interval": 1,
@@ -94,16 +60,6 @@
 		"on-click-middle": "playerctl previous",
 		"tooltip": true,
 		"tooltip-format": "{title}"
-	},
-	"custom/menu": {
-		"format": "<span size='16pt'>󰅃</span>",
-		"tooltip": false
-	},
-	"tray": {
-		"spacing": 16,
-		"reverse-direction": true,
-		"icon-size": 16,
-		"show-passive-items": false
 	},
 	"privacy": {
 		"icon-size": 14,
@@ -121,75 +77,39 @@
 			}
 		]
 	},
-	"network": {
-		"format-icons": {
-			"wifi": [
-				"<span size='12pt'>󰤯</span>",
-				"<span size='12pt'>󰤟</span>",
-				"<span size='12pt'>󰤢</span>",
-				"<span size='12pt'>󰤥</span>",
-				"<span size='12pt'>󰤨</span>"
-			],
-			"ethernet": "<span size='12pt'>󰈀</span>",
-			"disabled": "<span size='12pt'>󰤭</span>",
-			"disconnected": "<span size='12pt'>󰤩</span>"
+	"group/extras": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 400,
+			"children-class": "extras",
+			"transition-left-to-right": false
 		},
-		"format-wifi": "{icon}",
-		"format-ethernet": "{icon}",
-		"format-disconnected": "{icon}",
-		"format-disabled": "{icon}",
-		"interval": 5,
-		"tooltip-format": "{essid}\t{gwaddr}",
-		"on-click": "wlanmenu",
-		"tooltip": true,
-		"max-length": 20
-	},
-	"bluetooth": {
-		"interval": 5,
-		"format-on": "<span size='14pt'>󰂯</span>",
-		"format-off": "<span size='14pt'>󰂲</span>",
-		"format-disabled": "<span size='14pt'>󰂲</span>",
-		"format-connected": "<span size='14pt'>󰂱</span>",
-		"tooltip": true,
-		"tooltip-format": "{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_address}",
-		"tooltip-format-enumerate-connected-battery": "{device_address} | Battery: {device_battery_percentage}%",
-		"on-click": "btmenu"
-	},
-	"pulseaudio#microphone": {
-		"format": "{format_source}",
-		"format-source": "<span size='14pt'>󰍬</span>",
-		"format-source-muted": "<span size='14pt'>󰍭</span>",
-		"on-click": "volume toggle @DEFAULT_SOURCE@",
-		"tooltip": false
-	},
-	"pulseaudio/slider": {
-		"min": 0,
-		"max": 100,
-		"orientation": "vertical"
-	},
-	"pulseaudio": {
-		"interval": 1,
-		"format": "{icon}",
-		"format-icons": [
-			"<span size='14pt'>󰕿</span>",
-			"<span size='14pt'>󰖀</span>",
-			"<span size='14pt'>󰕾</span>"
-		],
-		"format-muted": "<span size='14pt'>󰝟</span>",
-		"on-click": "volume toggle",
-		"reverse-scrolling": true,
-		"tooltip": true,
-		"tooltip-format": "Volume: {volume}%\n{desc}",
-		"ignored-sinks": [
-			"Easy Effects Sink"
+		"modules": [
+			"custom/menu",
+			"tray"
 		]
 	},
-	"backlight/slider": {
-		"min": 0,
-		"max": 100,
-		"orientation": "vertical",
-		"device": "intel_backlight"
+	"custom/menu": {
+		"format": "<span size='16pt'>󰅃</span>",
+		"tooltip": false
+	},
+	"tray": {
+		"spacing": 16,
+		"reverse-direction": true,
+		"icon-size": 16,
+		"show-passive-items": false
+	},
+	"group/brightness": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 400,
+			"children-class": "brightness",
+			"transition-left-to-right": false
+		},
+		"modules": [
+			"backlight",
+			"backlight/slider"
+		]
 	},
 	"backlight": {
 		"device": "intel_backlight",
@@ -206,6 +126,12 @@
 		"reverse-scrolling": true,
 		"smooth-scrolling-threshold": 0.2,
 		"tooltip": false
+	},
+	"backlight/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "vertical",
+		"device": "intel_backlight"
 	},
 	"battery": {
 		"interval": 5,
@@ -232,9 +158,90 @@
 		"tooltip-format": "Charge: {capacity}%",
 		"tooltip-format-charging": "Charging: {capacity}%"
 	},
+	"bluetooth": {
+		"interval": 5,
+		"format-on": "<span size='14pt'>󰂯</span>",
+		"format-off": "<span size='14pt'>󰂲</span>",
+		"format-disabled": "<span size='14pt'>󰂲</span>",
+		"format-connected": "<span size='14pt'>󰂱</span>",
+		"tooltip": true,
+		"tooltip-format": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_address} | Battery: {device_battery_percentage}%",
+		"on-click": "btmenu"
+	},
+	"network": {
+		"format-icons": {
+			"wifi": [
+				"<span size='12pt'>󰤯</span>",
+				"<span size='12pt'>󰤟</span>",
+				"<span size='12pt'>󰤢</span>",
+				"<span size='12pt'>󰤥</span>",
+				"<span size='12pt'>󰤨</span>"
+			],
+			"ethernet": "<span size='12pt'>󰈀</span>",
+			"disabled": "<span size='12pt'>󰤭</span>",
+			"disconnected": "<span size='12pt'>󰤩</span>"
+		},
+		"format-wifi": "{icon}",
+		"format-ethernet": "{icon}",
+		"format-disconnected": "{icon}",
+		"format-disabled": "{icon}",
+		"interval": 5,
+		"tooltip-format": "{essid}\t{gwaddr}",
+		"on-click": "wlanmenu",
+		"tooltip": true,
+		"max-length": 20
+	},
+	"pulseaudio#microphone": {
+		"format": "{format_source}",
+		"format-source": "<span size='14pt'>󰍬</span>",
+		"format-source-muted": "<span size='14pt'>󰍭</span>",
+		"on-click": "volume toggle @DEFAULT_SOURCE@",
+		"tooltip": false
+	},
+	"group/audio": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 400,
+			"children-class": "audio",
+			"transition-left-to-right": false
+		},
+		"modules": [
+			"pulseaudio",
+			"pulseaudio/slider"
+		]
+	},
+	"pulseaudio": {
+		"interval": 1,
+		"format": "{icon}",
+		"format-icons": [
+			"<span size='14pt'>󰕿</span>",
+			"<span size='14pt'>󰖀</span>",
+			"<span size='14pt'>󰕾</span>"
+		],
+		"format-muted": "<span size='14pt'>󰝟</span>",
+		"on-click": "volume toggle",
+		"reverse-scrolling": true,
+		"tooltip": true,
+		"tooltip-format": "Volume: {volume}%\n{desc}",
+		"ignored-sinks": [
+			"Easy Effects Sink"
+		]
+	},
+	"pulseaudio/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "vertical"
+	},
 	"custom/powermenu": {
 		"format": "<span size='13pt'>󰐥</span>",
 		"on-click": "powermenu",
 		"tooltip": false
+	},
+	"clock": {
+		"interval": 1,
+		"format": "{:%H\n%M}",
+		"tooltip-format": "<tt><small>{calendar}</small></tt>"
 	}
 }
