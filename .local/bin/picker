@@ -30,7 +30,9 @@ else
 	set -- -selection-path "$out" "$path"
 fi
 
-if [ "$BROWSER" != "qutebrowser" ]; then
+if [ "$BROWSER" = "qutebrowser" ]; then
+	command="$command $@"
+else
 	for arg in "$@"; do
 		escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
 		command="$command \"$escaped\""
