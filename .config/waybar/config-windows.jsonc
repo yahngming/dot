@@ -106,6 +106,16 @@
 			"󰁹"
 		]
 	},
+	"bluetooth": {
+		"format-on": "󰂯",
+		"format-off": "󰂲",
+		"format-disabled": "󰂲",
+		"format-connected": "󰂱",
+		"tooltip-format": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_address} | Battery: {device_battery_percentage}%",
+		"on-click": "btmenu"
+	},
 	"network": {
 		"format-wifi": "{icon}",
 		"format-ethernet": "󰈀",
