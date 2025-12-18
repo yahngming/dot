@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pkill impala || tui impala && exit
+pkill impala || (tui impala &) && exit
 
 NEWLINE='
 '
