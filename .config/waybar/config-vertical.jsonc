@@ -25,6 +25,7 @@
 	"custom/logo": {
 		"format": "{text}",
 		"exec": "logo",
+		"exec-on-event": "logo",
 		"on-click": "launcher",
 		"tooltip": false
 	},
