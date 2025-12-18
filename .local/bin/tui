@@ -12,4 +12,4 @@ case "$@" in
 	*                                                                      ) opt="$opt tui" ;;
 esac
 
-$TERMINAL $opt -T $(echo "$@" | cut -d ' ' -f 1) -e $@
+$TERMINAL $opt -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "$@"
