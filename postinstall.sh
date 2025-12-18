@@ -28,7 +28,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	yay -S --noconfirm bibata-cursor-git chicago95-theme ctpv-git dragon-drop newsraft r-quick-share sing-box tenere #base
-	yay -S --noconfirm asciiquarium-transparent-git lavat-git neo-matrix pipes.c python-terminaltexteffects ttysvr # screensaver
+	yay -S --noconfirm asciiquarium-transparent-git lavat-git neo-matrix python-terminaltexteffects ttysvr # screensaver
 	sudo cp -r ~/.config/udev/ /etc/
 	sudo cp -r ~/.config/systemd/ /etc/
 	sudo systemd-hwdb update
