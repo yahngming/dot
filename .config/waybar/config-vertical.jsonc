@@ -190,7 +190,7 @@
 		"format-ethernet": "{icon}",
 		"format-disconnected": "{icon}",
 		"format-disabled": "{icon}",
-		"tooltip-format": "{essid}\t{gwaddr}",
+		"tooltip-format": "{ipaddr} {essid}",
 		"on-click": "wlanmenu"
 	},
 	"group/audio": {
