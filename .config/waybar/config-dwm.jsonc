@@ -5,7 +5,7 @@
 	"reload_style_on_change": true,
 	"modules-left": ["ext/workspaces", "wlr/taskbar"],
 	"modules-center": [],
-	"modules-right": ["tray", "temperature#cpu", "temperature#gpu", "cpu", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
+	"modules-right": ["tray", "temperature#cpu", "temperature#gpu", "cpu", "memory", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
 	"ext/workspaces": {
 		"on-click": "activate"
 	},
@@ -32,8 +32,11 @@
 		"tooltip": false
 	},
 	"cpu": {
-		"format": "{icon}",
-		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"format": "{usage}/",
+		"tooltip": false
+	},
+	"memory": {
+		"format": "{percentage}%",
 		"tooltip": false
 	},
 	"idle_inhibitor": {
