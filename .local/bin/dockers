@@ -14,10 +14,11 @@ start() {
 	if [ -z "$name" ]; then
 		for f in $folder/*.yaml
 		do
-			docker compose -f "$f" up -d
+			name=$(basename "$f" .yaml)
+			docker compose -f "$f" -p "$name" up -d
 		done
 	else
-		docker compose -f "$folder/$name.yaml" up -d
+		docker compose -f "$folder/$name.yaml" -p "$name" up -d
 	fi
 }
 
@@ -25,10 +26,11 @@ stop() {
 	if [ -z "$name" ]; then
 		for f in $folder/*.yaml
 		do
-			docker compose -f "$f" stop
+			name=$(basename "$f" .yaml)
+			docker compose -f "$f" -p "$name" stop
 		done
 	else
-		docker compose -f "$folder/$name.yaml" stop
+		docker compose -f "$folder/$name.yaml" -p "$name" stop
 	fi
 }
 
