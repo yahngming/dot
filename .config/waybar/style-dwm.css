@@ -28,7 +28,3 @@ window, button, tooltip, tooltip label {
 button, #tray, #clock {
 	padding: 0px 9px;
 }
-
-#idle_inhibitor, #battery, #network, #wireplumber {
-	padding: 0px 5px;
-}
