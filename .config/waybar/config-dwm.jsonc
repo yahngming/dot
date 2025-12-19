@@ -5,7 +5,7 @@
 	"reload_style_on_change": true,
 	"modules-left": ["ext/workspaces", "wlr/taskbar"],
 	"modules-center": [],
-	"modules-right": ["tray", "temperature#cpu", "temperature#gpu", "cpu", "memory", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
+	"modules-right": ["tray", "cpu", "memory", "temperature#cpu", "temperature#gpu", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
 	"ext/workspaces": {
 		"on-click": "activate"
 	},
@@ -21,6 +21,16 @@
 		"spacing": 5,
 		"tooltip": false
 	},
+	"cpu": {
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"tooltip": false
+	},
+	"memory": {
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"tooltip": false
+	},
 	"temperature#cpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon3/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
 		"format": "{icon}",
@@ -29,16 +39,6 @@
 	},
 	"temperature#gpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon1/temp1_input"],
-		"format": "{icon}",
-		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-		"tooltip": false
-	},
-	"cpu": {
-		"format": "{icon}",
-		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-		"tooltip": false
-	},
-	"memory": {
 		"format": "{icon}",
 		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"tooltip": false
