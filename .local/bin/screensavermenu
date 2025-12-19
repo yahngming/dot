@@ -22,7 +22,7 @@ else
 	current=$(awk '{print $1; exit}' "$config")
 fi
 
-case $(printf "$menu" | menu -p "$current" "$@") in
+case $(printf "$menu" | menu -p "currently $current" "$@") in
 	preview      ) screensaver ;;
 	asciiquarium ) echo "asciiquarium -s -t" > "$config" ;;
 	lavat        ) echo "lavat -g -c FF0000 -k FF00FF" > "$config" ;;
