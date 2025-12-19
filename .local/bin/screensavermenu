@@ -13,7 +13,7 @@ random\n\
 none\n\
 "
 
-config="$HOME/.config/screensaver"
+config="~/.config/screensaver"
 if [ ! -f "$config" ]; then
 	current="none"
 elif [ $(wc -l < "$config") -gt 1 ]; then
