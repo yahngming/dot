@@ -9,7 +9,7 @@ arch() {
 	sudo pacman -S --noconfirm intel-media-driver lib32-vulkan-intel libvpl vpl-gpu-rt vulkan-intel # intel
 	sudo pacman -S --noconfirm 7zip aerc atool base-devel bat bc bluetui bluez-utils brightnessctl btop cmus cups dante docker docker-compose evtest eza fastfetch fd ffmpegthumbnailer fontforge fortune-mod fuse fzf git git-delta glow id3v2 impala inetutils jq lazydocker less lf lolcat man-db mpv ollama openssh pass perl-image-exiftool polkit poppler python-pywal rclone ripgrep samba translate-shell udiskie ueberzugpp unrar unzip w3m webkit2gtk-4.1 wiremix wireplumber yt-dlp zathura-pdf-poppler zoxide # base
 	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-noto-nerd ttf-terminus-nerd # font
-	sudo pacman -S --noconfirm gamescope gvim keepassxc libreoffice-fresh steam # gui
+	sudo pacman -S --noconfirm firefox gamescope gvim keepassxc libreoffice-fresh steam # gui
 	sudo pacman -S --noconfirm fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S --noconfirm cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xwayland-satellite # wayland
 	sudo pacman -S --noconfirm clipmenu dunst maim nsxiv numlockx unclutter xcape xclip xcompmgr xdg-desktop-portal-gtk xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xscreensaver xwallpaper # xorg
