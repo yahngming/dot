@@ -6,6 +6,14 @@ menu="\
  Light mode\n\
 "
 
+if [ -f ~/.config/dark ]; then
+	current="auto"
+elif [ -f ~/.config/dark ]; then
+	current="dark"
+else
+	current="light"
+fi
+
 case $(printf "$menu" | menu -p "Change theme to:" "$@") in
 	*Auto*)
 		theme auto
