@@ -34,5 +34,5 @@ button, #tray, #clock {
 }
 
 #cpu, #memory, #temperature {
-	font-size: 14px;
+	font-size: 12px;
 }
