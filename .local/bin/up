@@ -11,3 +11,10 @@ sudo cp -r ~/.config/udev/ /etc/
 sudo cp -r ~/.config/systemd/ /etc/
 sudo systemd-hwdb update
 sudo udevadm trigger
+if [ "$BROWSER" == "firefox" ]; then
+	cd ~/.config/firefox
+	chmod +x *.sh
+	./updater.sh -us
+	./prefsCleaner.sh -s
+	cd - >/dev/null 2>&1
+fi
