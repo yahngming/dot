@@ -1,5 +1,7 @@
 #!/bin/sh
 
+(keepassxc &) && exit
+
 shopt -s nullglob globstar
 
 typeit=0
