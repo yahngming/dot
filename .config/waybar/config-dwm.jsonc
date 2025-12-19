@@ -18,7 +18,7 @@
 	},
 	"tray": {
 		"icon-size": 16,
-		"spacing": 6,
+		"spacing": 4,
 		"tooltip": false
 	},
 	"cpu": {
