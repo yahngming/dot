@@ -46,7 +46,7 @@ tooltip label{
 }
 
 #custom-start {
-	font-family: monospace;
+	font-family: graphical;
 	font-size: 24px;
 	padding-left: 12px;
 	padding-right: 12px;
@@ -156,7 +156,6 @@ tooltip label{
 }
 
 #pulseaudio {
-	font-family: monospace;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #pulseaudio:hover {
