@@ -23,20 +23,24 @@
 	},
 	"temperature#cpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon3/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
-		"format": "{temperatureC}°/",
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"tooltip": false
 	},
 	"temperature#gpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon1/temp1_input"],
-		"format": "{temperatureC}°",
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"tooltip": false
 	},
 	"cpu": {
-		"format": "{usage}%/",
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"tooltip": false
 	},
 	"memory": {
-		"format": "{percentage}%",
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"tooltip": false
 	},
 	"idle_inhibitor": {
