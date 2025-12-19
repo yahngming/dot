@@ -13,13 +13,22 @@ random\n\
 none\n\
 "
 
-case $(printf "$menu" | menu "$@") in
+config="$HOME/.config/screensaver"
+if [ ! -f "$config" ]; then
+	current="none"
+elif [ $(wc -l < "$config") -gt 1 ]; then
+	current="random"
+else
+	current=$(awk '{print $1; exit}' "$config")
+fi
+
+case $(printf "$menu" | menu -p "$current" "$@") in
 	preview      ) screensaver ;;
-	asciiquarium ) echo "asciiquarium -s -t" > ~/.config/screensaver ;;
-	lavat        ) echo "lavat -g -c FF0000 -k FF00FF" > ~/.config/screensaver ;;
-	matrix       ) echo "neo-matrix -s" > ~/.config/screensaver ;;
-	ttesvr       ) echo "ttesvr" > ~/.config/screensaver ;;
-	ttysvr       ) echo "ttysvr" > ~/.config/screensaver ;;
-	random       ) echo -e "asciiquarium -s -t\nlavat -g -c FF0000 -k FF00FF\nneo-matrix -s\nttesvr\nttysvr" > ~/.config/screensaver ;;
-	none         ) rm -f ~/.config/screensaver ;;
+	asciiquarium ) echo "asciiquarium -s -t" > "$config" ;;
+	lavat        ) echo "lavat -g -c FF0000 -k FF00FF" > "$config" ;;
+	matrix       ) echo "neo-matrix -s" > "$config" ;;
+	ttesvr       ) echo "ttesvr" > "$config" ;;
+	ttysvr       ) echo "ttysvr" > "$config" ;;
+	random       ) echo -e "asciiquarium -s -t\nlavat -g -c FF0000 -k FF00FF\nneo-matrix -s\nttesvr\nttysvr" > "$config" ;;
+	none         ) rm -f "$config" ;;
 esac
