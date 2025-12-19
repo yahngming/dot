@@ -6,11 +6,3 @@ cp -a ~/.local/src/dot/. ~/
 chmod +x ~/.local/bin/* ~/.config/nsxiv/exec/*
 rm -rf ~/.bash_history ~/.bash_logout ~/.git ~/.lesshst ~/postinstall.sh ~/README.md
 cd - >/dev/null 2>&1
-
-if [ "$BROWSER" == "firefox" ]; then
-	cd ~/.config/firefox
-	chmod +x *.sh
-	./updater.sh -us
-	./prefsCleaner.sh -s
-	cd - >/dev/null 2>&1
-fi
