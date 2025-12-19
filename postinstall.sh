@@ -11,7 +11,7 @@ arch() {
 	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-noto-nerd ttf-terminus-nerd # font
 	sudo pacman -S --noconfirm gamescope gvim keepassxc libreoffice-fresh steam # gui
 	sudo pacman -S --noconfirm fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
-	sudo pacman -S --noconfirm cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper hyprpolkitagent kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xwayland-satellite # wayland
+	sudo pacman -S --noconfirm cliphist foot fuzzel grim hypridle hyprland hyprlock hyprpaper kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xwayland-satellite # wayland
 	sudo pacman -S --noconfirm clipmenu dunst maim nsxiv numlockx unclutter xcape xclip xcompmgr xdg-desktop-portal-gtk xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xscreensaver xwallpaper # xorg
 	sudo systemctl enable avahi-daemon.service
 	sudo systemctl enable bluetooth.service
