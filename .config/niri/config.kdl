@@ -140,7 +140,7 @@ window-rule {
 	match app-id="mpv"
 	match app-id="resolve"
 	match title="RedmoonJS"
-	match title=".- YouTube -."
+	match title="- YouTube"
 	opacity 1.0
 }
 
