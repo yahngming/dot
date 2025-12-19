@@ -5,7 +5,7 @@
 	"reload_style_on_change": true,
 	"modules-left": ["ext/workspaces", "wlr/taskbar"],
 	"modules-center": [],
-	"modules-right": ["tray", "cpu", "memory", "temperature#cpu", "temperature#gpu", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
+	"modules-right": ["cpu", "memory", "temperature#cpu", "temperature#gpu", "tray", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
 	"ext/workspaces": {
 		"on-click": "activate"
 	},
