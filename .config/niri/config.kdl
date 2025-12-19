@@ -133,13 +133,13 @@ window-rule {
 }
 
 window-rule {
-	match app-id=".*freecad.*"
+	match app-id="freecad"
 	match app-id="blender"
 	match app-id="Darktable"
 	match app-id="krita"
 	match app-id="mpv"
 	match app-id="resolve"
-	match title="- YouTube -"
+	match title="YouTube"
 	match title="RedmoonJS"
 	opacity 1.0
 }
