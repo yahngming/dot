@@ -22,8 +22,8 @@
 		"tooltip": false
 	},
 	"temperature#cpu": {
-		"hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
-		"format": "{temperatureC}/",
+		"hwmon-path": ["/sys/class/hwmon/hwmon3/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+		"format": "{temperatureC}°/",
 		"tooltip": false
 	},
 	"temperature#gpu": {
@@ -32,7 +32,7 @@
 		"tooltip": false
 	},
 	"cpu": {
-		"format": "{usage}/",
+		"format": "{usage}%/",
 		"tooltip": false
 	},
 	"memory": {
