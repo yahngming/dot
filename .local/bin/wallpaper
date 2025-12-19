@@ -27,7 +27,7 @@ setpaper() {
 	if [ "$BROWSER" == "firefox" ]; then
 		pywalfox update
 	elif [ "$BROWSER" == "qutebrowser" ]; then
-		pgrep qutebrowser || qutebrowser
+		pgrep qutebrowser && qutebrowser :config-source
 	fi
 }
 
