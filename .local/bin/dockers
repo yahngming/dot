@@ -12,7 +12,7 @@ ps() {
 
 start() {
 	if [ -z "$name" ]; then
-		for f in "$folder/*.yaml"
+		for f in $folder/*.yaml
 		do
 			docker compose -f "$f" up -d
 		done
@@ -23,7 +23,7 @@ start() {
 
 stop() {
 	if [ -z "$name" ]; then
-		for f in "$folder/*.yaml"
+		for f in $folder/*.yaml
 		do
 			docker compose -f "$f" stop
 		done
