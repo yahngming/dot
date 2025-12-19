@@ -5,7 +5,7 @@
 	"reload_style_on_change": true,
 	"modules-left": ["ext/workspaces", "wlr/taskbar"],
 	"modules-center": [],
-	"modules-right": ["tray", "temperature#cpu", "temperature#gpu", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
+	"modules-right": ["tray", "temperature#cpu", "temperature#gpu", "cpu", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
 	"ext/workspaces": {
 		"on-click": "activate"
 	},
@@ -23,12 +23,17 @@
 	},
 	"temperature#cpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
-		"format": "{temperatureC}°",
+		"format": "{temperatureC}/",
 		"tooltip": false
 	},
 	"temperature#gpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon1/temp1_input"],
 		"format": "{temperatureC}°",
+		"tooltip": false
+	},
+	"cpu": {
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"tooltip": false
 	},
 	"idle_inhibitor": {
