@@ -34,7 +34,7 @@ button {
 }
 
 #idle_inhibitor, #battery, #network, #wireplumber {
-	padding: 0px 4px;
+	padding: 0px 3px;
 }
 
 #cpu, #memory, #temperature {
