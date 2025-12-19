@@ -10,7 +10,7 @@ cd - >/dev/null 2>&1
 if [ "$BROWSER" == "firefox" ]; then
 	cd ~/.config/firefox
 	chmod +x *.sh
-	./updater.sh
-	./prefsCleaner.sh
+	./updater.sh -us
+	./prefsCleaner.sh -s
 	cd - >/dev/null 2>&1
 fi
