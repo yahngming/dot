@@ -146,16 +146,16 @@ window-rule {
 window-rule {
 	match app-id="fullscreen"
 	match app-id="screensaver"
-	match app-id="steam_app_."
+	match app-id="steam_app"
 	open-fullscreen true
 	open-focused true
 }
 
 window-rule {
-	match app-id=".config."
 	match app-id="center"
-	match app-id="Pinentry-."
-	match app-id="xdg-desktop-portal-."
+	match app-id="config"
+	match app-id="Pinentry"
+	match app-id="xdg-desktop-portal"
 	open-floating true
 	open-focused true
 }
