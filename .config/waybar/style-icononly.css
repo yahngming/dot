@@ -1,11 +1,10 @@
 * {
-	font-family: monospace;
+	font-family: graphical;
 	font-weight: bold; 
 	font-size: 15px;
 }
 
 #custom-notification {
-	font-family: monospace;
 	font-size: 17px;
 	color: #A1BDCE;
 	margin: 2px 0px 0px 0px;
@@ -177,7 +176,6 @@ background: rgba(23, 23, 23, 0.0);
 	color: #A1BDCE;
 	font-size: 15px;
 	font-weight: 900;
-	font-family: monospace;
 	background: rgba(23, 23, 23, 0.0);
 	opacity: 1;
 	margin: 3px 0px 0px 0px;
@@ -265,7 +263,6 @@ background: rgba(23, 23, 23, 0.0);
 #custom-wbar,
 #window{
 	color: #A1BDCE;
-	font-family: "Martian Mono";
 }
 
 #custom-l_end,
