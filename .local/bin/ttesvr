@@ -7,10 +7,14 @@ killtte() {
 }
 
 trap killtte SIGINT SIGTERM SIGHUP SIGQUIT
+printf '\e[?1000h\e[?1003h'
+while read -rsn1 -t 0.1; do :; done
+printf '\033]11;rgb:00/00/00\007'
+tty=$(tty 2>/dev/null)
 while true; do
 	tte --input-file "$(find ~/.config/ttesvr -type f | shuf -n 1)" --random-effect --exclude-effects matrix --frame-rate 0 --canvas-width 0 --canvas-height 0 --anchor-canvas c --anchor-text c --reuse-canvas --no-eol --no-restore-cursor &
-	while pgrep -x tte >/dev/null; do
-		if read -n 1 -t 1; then
+	while pgrep -t "${tty#/dev/}" -x tte >/dev/null; do
+		if read -rsn1 -t 1; then
 			killtte
 		fi
 	done
