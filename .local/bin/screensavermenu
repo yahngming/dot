@@ -1,23 +1,25 @@
 #!/bin/sh
 
 menu="\
-random\n\
+preview\n\
 ----\n\
 asciiquarium\n\
 lavat\n\
 matrix\n\
-terminaltexteffects\n\
+ttesvr\n\
 ttysvr\n\
 ----\n\
+random\n\
 none\n\
 "
 
 case $(printf "$menu" | menu "$@") in
-	random              ) echo -e "asciiquarium -s -t\nlavat -g -c FF0000 -k FF00FF\nneo-matrix -s\nttesvr\nttysvr" > ~/.config/screensaver ;;
-	asciiquarium        ) echo "asciiquarium -s -t" > ~/.config/screensaver ;;
-	lavat               ) echo "lavat -g -c FF0000 -k FF00FF" > ~/.config/screensaver ;;
-	matrix              ) echo "neo-matrix -s" > ~/.config/screensaver ;;
-	terminaltexteffects ) echo "ttesvr" > ~/.config/screensaver ;;
-	ttysvr              ) echo "ttysvr" > ~/.config/screensaver ;;
-	none                ) rm -f ~/.config/screensaver ;;
+	preview      ) screensaver ;;
+	asciiquarium ) echo "asciiquarium -s -t" > ~/.config/screensaver ;;
+	lavat        ) echo "lavat -g -c FF0000 -k FF00FF" > ~/.config/screensaver ;;
+	matrix       ) echo "neo-matrix -s" > ~/.config/screensaver ;;
+	ttesvr       ) echo "ttesvr" > ~/.config/screensaver ;;
+	ttysvr       ) echo "ttysvr" > ~/.config/screensaver ;;
+	random       ) echo -e "asciiquarium -s -t\nlavat -g -c FF0000 -k FF00FF\nneo-matrix -s\nttesvr\nttysvr" > ~/.config/screensaver ;;
+	none         ) rm -f ~/.config/screensaver ;;
 esac
