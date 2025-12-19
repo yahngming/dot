@@ -33,3 +33,6 @@ button, #tray, #clock {
 	padding: 0px 5px;
 }
 
+#cpu, #memory, #temperature {
+	font-size: 14px;
+}
