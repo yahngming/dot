@@ -25,8 +25,12 @@ window, button, tooltip, tooltip label {
 	color: red;
 }
 
-button, #tray, #clock {
-	padding: 0px 9px;
+button {
+	padding: 0px 6px;
+}
+
+#tray, #clock {
+	padding: 0px 12px;
 }
 
 #idle_inhibitor, #battery, #network, #wireplumber {
