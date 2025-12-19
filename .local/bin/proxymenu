@@ -10,7 +10,7 @@ menu="\
 "
 
 case $(printf "$menu" | menu -p "$(proxy)" "$@") in
-	*Dashboard*    ) xdg-open http://127.0.0.1:9090 ;;
+	*Dashboard*    ) xdg-open http://192.168.1.1:9090/ui/dashboard ;;
 	*Disable*      ) tui "proxy off" ;;
 	*Enable*       ) tui "proxy on" ;;
 	*Router*       ) xdg-open http://192.168.1.1/cgi-bin/luci/admin/services/openclash ;;
