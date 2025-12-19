@@ -59,6 +59,8 @@ export FZF_CTRL_T_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefi
 export FZF_ALT_C_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type directory"
 export FZF_CTRL_T_OPTS="--preview 'if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat --color=always --line-range :500 --number {}; fi'"
 export FZF_ALT_C_OPTS="--preview 'eza --color=always --tree {} | head -200'"
+export GDK_DEBUG=portals
+export GTK_USE_PORTAL=1
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc"
 export GOPROXY="direct"
 export HISTCONTROL="ignoreboth:erasedups"
