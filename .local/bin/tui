@@ -6,10 +6,10 @@ case "$TERMINAL" in
 esac
 
 case "$@" in
-	about*|bluetui|dockers*|dot|impala|proxy*|rclone*|timezone*|up|wiremix ) opt="$opt center" ;;
-	telnet*                                                                ) opt="$opt fullscreen -o colors.background=000000" ;;
-	asciiquarium*|lavat*|*matrix*|*svr                                     ) opt="$opt screensaver -o colors.background=000000" ;;
-	*                                                                      ) opt="$opt tui" ;;
+	about*|bat*|dockers*|dot|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) opt="$opt center" ;;
+	telnet*                                                                   ) opt="$opt fullscreen -o colors.background=000000" ;;
+	asciiquarium*|lavat*|*matrix*|*svr                                        ) opt="$opt screensaver -o colors.background=000000" ;;
+	*                                                                         ) opt="$opt tui" ;;
 esac
 
 $TERMINAL $opt -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "$@"
