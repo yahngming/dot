@@ -25,7 +25,6 @@ start() {
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
-	pywalfox "${COLOR_SCHEME#*-}"
 	echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl
 	hyprctl setcursor "$XCURSOR_THEME"
 	bar
