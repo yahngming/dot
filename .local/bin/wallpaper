@@ -1,7 +1,7 @@
 #!/bin/sh
 
 setpaper() {
-	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ "$wallpaper" == "" ]; then
+	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 		exit
 	elif [ -f ~/.config/dark ]; then
 		wal -ni "$wallpaper"
@@ -29,12 +29,8 @@ setpaper() {
 }
 
 manual() {
-	if [ -f "$arg" ]; then
-		wallpaper="$arg"
-		setpaper
-	else
-		echo "File not found"
-	fi
+	wallpaper="$arg"
+	setpaper
 }
 
 picker() {
