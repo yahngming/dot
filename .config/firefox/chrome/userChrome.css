@@ -9,7 +9,7 @@
 	--pywalfox-text-focus: var(--toolbar-color);
 	--pywalfox-unselected-tab-opacity: 0.8;
 	--pywalfox-darker-background: rgba(0, 0, 0, 0.4);
-	--pywalfox-padding: 0px 0px;
+	--pywalfox-padding: 4px 8px;
 	font-size: var(--pywalfox-font-size) !important;
 }
 
