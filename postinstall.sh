@@ -40,7 +40,7 @@ arch() {
 	echo "exec niri-session" > ~/.config/desktop
 	echo "ttesvr" > ~/.config/screensaver
 	systemctl --user enable --now sun@themeauto.timer
-	pywalfox install && pywalfox auto
+	pywalfox install
 	reboot
 }
 
