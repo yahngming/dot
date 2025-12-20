@@ -1,4 +1,5 @@
 /******************** BEGIN PYWALFOX CUSTOM CSS ********************/
+
 #main-window {
 	--pywalfox-font-size: 13px;
 	--pywalfox-font-size-sm: calc(var(--pywalfox-font-size) * 0.9);
@@ -76,4 +77,5 @@ panelmultiview {
 	border-color: var(--pywalfox-background) !important;
 	color: var(--pywalfox-text) !important;
 }
+
 /********************* END PYWALFOX CUSTOM CSS *********************/
