@@ -33,13 +33,7 @@ html {
 	.top-site-outer .title span, .top-site-outer .default-icon[data-fallback]::before,
 	.top-site-outer .search-topsite[data-fallback]::before, .context-menu > ul > li > a,
 	.top-site-outer .default-icon, .top-site-outer .search-topsite {
-		font-weight: bold !important;
 		font-size: var(--pywalfox-font-size-sm);
-	}
-
-	/* Bold text to activity card page labels */
-	.ds-highlights .section .section-list .card-outer .card-host-name {
-		font-weight: bold;
 	}
 
 	/* Remove box shadow border from top sites cards */
