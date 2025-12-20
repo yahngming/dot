@@ -29,7 +29,7 @@ html {
 		--newtab-background-button-hover-color: var(--pywalfox-background-light) !important;
 	}
 
-	/* Add bold text to most text */
+	/* Make most text small */
 	.top-site-outer .title span, .top-site-outer .default-icon[data-fallback]::before,
 	.top-site-outer .search-topsite[data-fallback]::before, .context-menu > ul > li > a,
 	.top-site-outer .default-icon, .top-site-outer .search-topsite {
