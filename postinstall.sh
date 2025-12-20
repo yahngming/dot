@@ -39,7 +39,8 @@ arch() {
 	cp ~/.config/waybar/style-dwm.css ~/.config/waybar/style.css
 	echo "exec niri-session" > ~/.config/desktop
 	echo "ttesvr" > ~/.config/screensaver
-	~/.local/bin/theme auto
+	systemctl --user enable --now sun@themeauto.timer
+	pywalfox install && pywalfox auto
 	reboot
 }
 
