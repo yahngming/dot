@@ -18,7 +18,7 @@ window, button, tooltip, tooltip label {
 
 #workspaces .active, #taskbar .active {
 	background: @color9;
-	color: @color7;
+	color: @color0;
 }
 
 #battery.critical {
