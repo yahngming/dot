@@ -17,7 +17,7 @@ window, button, tooltip, tooltip label {
 }
 
 #workspaces .active, #taskbar .active {
-	background: @color3;
+	background: @color9;
 	color: @color7;
 }
 
