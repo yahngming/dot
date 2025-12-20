@@ -1,8 +1,4 @@
 /******************** BEGIN PYWALFOX CUSTOM CSS ********************/
-/* Hide page scrollbars */
-html {
-	scrollbar-width: none !important;
-}
 
 @-moz-document url(about:blank), url(about:newtab), url(about:home) {
 	body {
@@ -118,4 +114,5 @@ html {
 		filter: brightness(120%);
 	}
 }
+
 /********************* END PYWALFOX CUSTOM CSS *********************/
