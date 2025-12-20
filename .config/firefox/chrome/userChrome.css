@@ -46,12 +46,6 @@ notification, menupopup {
 	color: var(--pywalfox-text) !important;
 }
 
-/* Apply bold text to elements */
-textbox, panelview, .tabbrowser-tab, #sidebar-header,
-.findbar-container, toolbar[overflowable] > .customization-target {
-	font-weight: bold !important;
-}
-
 /* Decrease opacity of unselected tabs to match the default Firefox theme */
 .tabbrowser-tab:not([visuallyselected="true"]) {
 	opacity: var(--pywalfox-unselected-tab-opacity) !important;
