@@ -69,6 +69,7 @@ export HISTSIZE=10000
 export ICEAUTHORITY="$HOME/.cache/ICEauthority"
 export LESS="-IR --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
+export OLLAMA_NEW_ENGINE=1
 export PAGER="less"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
