@@ -148,7 +148,6 @@ window-rule {
 	match app-id="screensaver"
 	match app-id="steam_app"
 	open-fullscreen true
-	open-focused true
 }
 
 window-rule {
@@ -157,7 +156,11 @@ window-rule {
 	match app-id="Pinentry"
 	match app-id="xdg-desktop-portal"
 	open-floating true
-	open-focused true
+}
+
+window-rule {
+	match app-id="tui"
+	default-column-width { proportion 0.75; }
 }
 
 window-rule {
