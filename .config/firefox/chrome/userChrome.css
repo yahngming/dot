@@ -15,6 +15,6 @@ button, menupopup, menuseparator, notification, search-textbox, #statuspanel-lab
 }
 menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"] {
 	-moz-appearance: none !important;
-	background-color: var(--pywalfox-background-light) !important;
+	background-color: var(--pywalfox-background-extra) !important;
 	color: var(--pywalfox-text-focus) !important;
 }
