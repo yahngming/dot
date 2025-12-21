@@ -1,4 +1,6 @@
-/* pywalfox */
+* {
+	font-family: "graphical";
+}
 #main-window {
 	--pywalfox-background: var(--lwt-accent-color);
 	--pywalfox-background-light: var(--arrowpanel-background);
