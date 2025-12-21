@@ -1,5 +1,0 @@
-llm = "ollama"
-
-[ollama]
-url = "http://localhost:11434/api/chat"
-model = "gemma2"
