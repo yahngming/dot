@@ -7,7 +7,6 @@ killtte() {
 }
 
 trap killtte SIGINT SIGTERM SIGHUP SIGQUIT
-printf '\e[?1000h\e[?1003h'
 while read -rsn1 -t 0.1; do :; done
 printf '\033]11;rgb:00/00/00\007'
 tty=$(tty 2>/dev/null)
