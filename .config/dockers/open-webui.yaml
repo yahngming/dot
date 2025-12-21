@@ -6,6 +6,7 @@ services:
     network_mode: host
     environment:
       OLLAMA_BASE_URL: http://127.0.0.1:11434
+      WEBUI_AUTH : False
     ports:
       - 3000:8080
     volumes:
