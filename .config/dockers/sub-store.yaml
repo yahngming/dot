@@ -2,7 +2,7 @@ services:
   sub-store:
     container_name: sub-store
     image: xream/sub-store:http-meta
-    restart: always
+    restart: unless-stopped
     network_mode: host
     environment:
       SUB_STORE_BACKEND_API_HOST: 127.0.0.1
