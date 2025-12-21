@@ -6,6 +6,7 @@ case "$TERMINAL" in
 esac
 
 case "$@" in
+	bc*                                                                       ) opt="$opt bottomleft" ;;
 	about*|bat*|dockers*|dot|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) opt="$opt center" ;;
 	telnet*                                                                   ) opt="$opt fullscreen -o colors.background=000000" ;;
 	asciiquarium*|lavat*|*matrix*|*svr                                        ) opt="$opt screensaver -o colors.background=000000" ;;
