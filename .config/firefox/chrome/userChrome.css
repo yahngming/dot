@@ -5,7 +5,7 @@
 	--pywalfox-text: var(--arrowpanel-color);
 	--pywalfox-text-focus: var(--toolbar-color);
 }
-button, menu, menuitem, menupopup, menuseparator, notification, search-textbox, #statuspanel-label {
+button, menu, menuitem, menupopup, menuseparator, notification, search, #statuspanel-label {
 	-moz-appearance: none !important;
 	background-color: var(--pywalfox-background) !important;
 	color: var(--pywalfox-text) !important;
