@@ -9,7 +9,7 @@
 
 window, button, tooltip, tooltip label {
 	background: @color0;
-	color: @color7;
+	color: @color8;
 }
 
 #workspaces .active {
