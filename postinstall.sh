@@ -17,7 +17,6 @@ arch() {
 	sudo systemctl enable bluetooth.service
 	sudo systemctl enable cups.service
 	sudo systemctl enable docker.service
-	sudo systemctl enable ollama.service
 	sudo systemctl enable smb.service
 	sudo gpasswd -a $USER uucp
 	sudo usermod -aG docker $USER
