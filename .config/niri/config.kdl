@@ -144,9 +144,8 @@ window-rule {
 }
 
 window-rule {
-	match app-id="bottomleft"
-	open-floating true
-	default-floating-position x=20 y=16 relative-to="bottom-left"
+	match app-id="tui"
+	default-column-width { proportion 0.75; }
 }
 
 window-rule {
@@ -154,13 +153,6 @@ window-rule {
 	match title="^Picture.?in.?[Pp]icture$"
 	open-floating true
 	default-floating-position x=20 y=16 relative-to="bottom-right"
-}
-
-window-rule {
-	match app-id="fullscreen"
-	match app-id="screensaver"
-	match app-id="steam_app"
-	open-fullscreen true
 }
 
 window-rule {
@@ -172,6 +164,8 @@ window-rule {
 }
 
 window-rule {
-	match app-id="tui"
-	default-column-width { proportion 0.75; }
+	match app-id="fullscreen"
+	match app-id="screensaver"
+	match app-id="steam_app"
+	open-fullscreen true
 }
