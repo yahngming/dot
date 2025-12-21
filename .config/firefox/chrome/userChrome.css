@@ -1,10 +1,10 @@
 /* pywalfox */
 #main-window {
-	--pywalfox-background: var(--autocomplete-popup-highlight-color);
-	--pywalfox-background-light: var(--lwt-selected-tab-background-color);
+	--pywalfox-background: var(--lwt-accent-color);
+	--pywalfox-background-light: var(--arrowpanel-background);
 	--pywalfox-background-extra: var(--lwt-toolbarbutton-hover-background);
-	--pywalfox-text: var(--lwt-toolbar-field-color);
-	--pywalfox-text-focus: var(--lwt-tab-text, var(--toolbar-color));
+	--pywalfox-text: var(--arrowpanel-color);
+	--pywalfox-text-focus: var(--toolbar-color);
 	--pywalfox-accent-primary: var(--autocomplete-popup-highlight-background);
 	--pywalfox-accent-secondary: var(--lwt-toolbarbutton-icon-fill-attention);
 }
@@ -15,6 +15,6 @@ button, menupopup, menuseparator, notification, search-textbox, #statuspanel-lab
 }
 menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"] {
 	-moz-appearance: none !important;
-	background-color: var(--pywalfox-background-extra) !important;
+	background-color: var(--pywalfox-background-light) !important;
 	color: var(--pywalfox-text-focus) !important;
 }
