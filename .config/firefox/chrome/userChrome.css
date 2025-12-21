@@ -2,13 +2,10 @@
 #main-window {
 	--pywalfox-background: var(--lwt-accent-color);
 	--pywalfox-background-light: var(--arrowpanel-background);
-	--pywalfox-background-extra: var(--lwt-toolbarbutton-hover-background);
 	--pywalfox-text: var(--arrowpanel-color);
 	--pywalfox-text-focus: var(--toolbar-color);
-	--pywalfox-accent-primary: var(--autocomplete-popup-highlight-background);
-	--pywalfox-accent-secondary: var(--lwt-toolbarbutton-icon-fill-attention);
 }
-button, menupopup, menuseparator, notification, search-textbox, #statuspanel-label {
+button, menu, menuitem, menupopup, menuseparator, notification, search-textbox, #statuspanel-label {
 	-moz-appearance: none !important;
 	background-color: var(--pywalfox-background) !important;
 	color: var(--pywalfox-text) !important;
