@@ -24,6 +24,7 @@ case "$DESKTOP" in
 esac
 
 fcitx5 &
+ollama serve &
 rquickshare &
 udiskie &
 theme start
