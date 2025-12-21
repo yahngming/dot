@@ -9,7 +9,7 @@
 
 window, button, tooltip, tooltip label {
 	background: @color0;
-	color: @color8;
+	color: @color7;
 }
 
 #workspaces .active {
@@ -18,7 +18,7 @@ window, button, tooltip, tooltip label {
 
 #workspaces .active, #taskbar .active {
 	background: @color1;
-	color: @color7;
+	color: @color0;
 }
 
 #battery.critical {
