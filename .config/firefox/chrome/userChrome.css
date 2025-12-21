@@ -8,7 +8,7 @@
 	--pywalfox-accent-primary: var(--autocomplete-popup-highlight-background);
 	--pywalfox-accent-secondary: var(--lwt-toolbarbutton-icon-fill-attention);
 }
-button, search-textbox, menuseparator, #statuspanel-label {
+button, menupopup, menuseparator, notification, search-textbox, #statuspanel-label {
 	-moz-appearance: none !important;
 	background-color: var(--pywalfox-background) !important;
 	color: var(--pywalfox-text) !important;
