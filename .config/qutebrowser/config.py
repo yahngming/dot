@@ -32,7 +32,7 @@ c.editor.command = ['editor', '{file}']
 c.fileselect.handler = 'external'
 c.fileselect.multiple_files.command = ['picker', '-selection-path={}']
 c.fileselect.single_file.command = ['picker', '-selection-path={}']
-c.fonts.default_family = 'monospace'
+c.fonts.default_family = 'graphical'
 c.input.insert_mode.auto_load = True
 c.qt.args = [
 	'enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,TouchpadOverscrollHistoryNavigation,VaapiVideoDecoder',
