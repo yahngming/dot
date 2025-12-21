@@ -12,13 +12,13 @@
 
 /* Override the default appearance of buttons and textboxes to match the pywalfox theme */
 button, search-textbox, menuseparator {
-	background-color: var(--pywalfox-darker-background) !important;
+	background-color: var(--pywalfox-background) !important;
 }
 
 /* Background color on hover in right-click context menus */
 menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"] {
 	-moz-appearance: none !important;
-	background-color: var(--pywalfox-background) !important;
+	background-color: var(--pywalfox-background-light) !important;
 	color: var(--pywalfox-text-focus) !important;
 }
 
