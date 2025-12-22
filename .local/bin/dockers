@@ -42,6 +42,7 @@ help() {
 	echo "  ps           list container(s)"
 	echo "  start        start container(s)"
 	echo "  stop         stop container(s)"
+	echo "  help         display help"
 	echo ""
 	echo "All containers will be applied if NAME is omitted."
 }
