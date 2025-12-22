@@ -37,7 +37,8 @@ arch() {
 	cp ~/.config/waybar/config-dwm.jsonc ~/.config/waybar/config.jsonc
 	cp ~/.config/waybar/style-dwm.css ~/.config/waybar/style.css
 	echo "exec niri-session" > ~/.config/desktop
-	echo "ttesvr" > ~/.config/screensaver
+	echo "none" > ~/.config/screensaver
+	echo "dark" > ~/.config/theme
 	systemctl --user enable --now sun@themeauto.timer
 	pywalfox install
 	reboot
