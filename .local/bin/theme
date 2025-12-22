@@ -1,6 +1,6 @@
 #!/bin/sh
 
-start() {
+settheme() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Chicago95"
@@ -50,7 +50,7 @@ light() {
 	start
 }
 
-mode() {
+status() {
 	echo "$mode"
 }
 
@@ -63,9 +63,9 @@ help() {
 }
 
 config="$HOME/.config/theme"
-mode=$(awk '{print $1; exit}' "$config")
+theme=$(awk '{print $1; exit}' "$config")
 
 case "$@" in
 	auto|dark|light|start ) $@ ;;
-	*                     ) mode ;;
+	*                     ) status ;;
 esac
