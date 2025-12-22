@@ -2,7 +2,8 @@
 Description=Theme setup periodically
 
 [Timer]
-OnUnitActiveSec=1h
+OnStartupSec=5m
+OnUnitActiveSec=5m
 Persistent=true
 
 [Install]
