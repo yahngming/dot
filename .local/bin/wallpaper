@@ -55,6 +55,7 @@ help() {
 	echo "  picker                    choose from a picker"
 	echo "  random                    random picture"
 	echo "  weather                   overlay weather forecast"
+	echo "  help                      display help"
 }
 
 paperfolder="$HOME/Pictures/wallpapers"
@@ -62,6 +63,6 @@ themefolder="$paperfolder/$(theme)"
 arg=${1:-help}
 
 case "$arg" in
-	help|picker|random|weather ) $arg ;;
+	picker|random|weather|help ) $arg ;;
 	*                          ) manual ;;
 esac
