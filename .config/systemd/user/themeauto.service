@@ -1,7 +1,5 @@
 [Unit]
 Description=Auto switch theme
-After=graphical-session.target
-Requires=graphical-session.target
 
 [Service]
 Type=oneshot
