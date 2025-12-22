@@ -2,7 +2,6 @@
 Description=Theme setup
 
 [Service]
-Type=oneshot
+Type=simple
 KillMode=process
-RemainAfterExit=yes
 ExecStart=%h/.local/bin/theme setup
