@@ -9,14 +9,12 @@ matrix\n\
 ttesvr\n\
 ttysvr\n\
 ----\n\
-random\n\
 none\n\
+random\n\
 "
 
 config="$HOME/.config/screensaver"
-if [ ! -f "$config" ]; then
-	screensaver="none"
-elif [ $(wc -l < "$config") -gt 1 ]; then
+if [ $(wc -l < "$config") -gt 1 ]; then
 	screensaver="random"
 else
 	screensaver=$(awk '{print $1; exit}' "$config")
@@ -29,6 +27,6 @@ case $(printf "$menu" | menu -p "currently $screensaver" "$@") in
 	matrix       ) echo "neo-matrix -s" > "$config" ;;
 	ttesvr       ) echo "ttesvr" > "$config" ;;
 	ttysvr       ) echo "ttysvr" > "$config" ;;
+	none         ) echo "none" > "$config" ;;
 	random       ) echo -e "asciiquarium -s -t\nlavat -g -c FF0000 -k FF00FF\nneo-matrix -s\nttesvr\nttysvr" > "$config" ;;
-	none         ) rm -f "$config" ;;
 esac
