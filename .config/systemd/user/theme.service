@@ -4,5 +4,4 @@ Description=Theme setup
 [Service]
 Type=oneshot
 ExecStartPre=/bin/systemctl --user stop themetmp.scope
-ExecStartPre=/bin/systemctl --user reset-failed themetmp.scope
 ExecStart=/usr/bin/systemd-run --user --scope --unit=themetmp %h/.local/bin/theme setup
