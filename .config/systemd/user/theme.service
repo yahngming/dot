@@ -3,4 +3,4 @@ Description=Theme setup
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/systemd-run --scope --unit=themetmp %h/.local/bin/theme setup
+ExecStart=/usr/bin/systemd-run --user --scope --unit=themetmp %h/.local/bin/theme setup
