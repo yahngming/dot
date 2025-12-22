@@ -50,6 +50,10 @@ light() {
 	start
 }
 
+mode() {
+	echo "$mode"
+}
+
 help() {
 	echo "Usage: theme [MODE]"
 	echo "  auto           auto switch"
@@ -63,5 +67,5 @@ mode=$(awk '{print $1; exit}' "$config")
 
 case "$@" in
 	auto|dark|light|start ) $@ ;;
-	*                     ) help ;;
+	*                     ) mode ;;
 esac
