@@ -27,6 +27,6 @@ fcitx5 &
 ollama serve &
 rquickshare &
 udiskie &
-theme start
+theme setup
 idler
 locker
