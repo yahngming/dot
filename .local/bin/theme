@@ -58,6 +58,9 @@ help() {
 	echo "  start          initialize"
 }
 
+config="$HOME/.config/theme"
+mode=$(awk '{print $1; exit}' "$config")
+
 case "$@" in
 	auto|dark|light|start ) $@ ;;
 	*                     ) help ;;
