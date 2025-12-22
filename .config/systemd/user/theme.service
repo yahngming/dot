@@ -2,5 +2,6 @@
 Description=Theme setup
 
 [Service]
-Type=forking
+Type=oneshot
 ExecStart=%h/.local/bin/theme setup
+Environment=DISPLAY=:0
