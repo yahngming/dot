@@ -3,7 +3,7 @@
 setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 		exit
-	elif [ "$(theme)" = "dark" ]; then
+	elif [ "$(theme)" == "dark" ]; then
 		wal -ni "$wallpaper"
 	else
 		wal -lni "$wallpaper"
