@@ -6,6 +6,7 @@ menu="\
  Light mode\n\
 "
 
+config="$HOME/.config/theme"
 theme=$(awk '{print $1; exit}' "$config")
 
 case $(printf "$menu" | menu -p "$theme mode activated" "$@") in
