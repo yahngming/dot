@@ -37,11 +37,7 @@ mode() {
 }
 
 help() {
-	echo "Usage: theme [CMD]"
-	echo "  mode           show current theme"
-	echo "  dark           dark mode"
-	echo "  light          light mode"
-	echo "  start          initialize"
+	echo "Usage: theme [help|mode|setup]"
 }
 
 config="$HOME/.config/theme"
