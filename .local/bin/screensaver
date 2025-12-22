@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if pgrep -f " screensaver " || pgrep hyprlock || pgrep mpv || [ "$(awk '{print $1; exit}' '~/.config/screensaver')" == "none" ]; then
+if pgrep -f " screensaver " || pgrep hyprlock || pgrep mpv || [ $(awk '{print $1; exit}' "~/.config/screensaver") == "none" ]; then
 	exit
 fi
 
