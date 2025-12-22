@@ -32,7 +32,7 @@ setup() {
 	wallpaper random
 }
 
-mode() {
+status() {
 	echo "$theme"
 }
 
@@ -52,5 +52,5 @@ fi
 
 case "$@" in
 	setup|help ) $@ ;;
-	*          ) mode ;;
+	*          ) status ;;
 esac
