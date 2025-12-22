@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if pgrep -f " screensaver " || pgrep hyprlock || pgrep mpv || [ $(awk '{print $1; exit}' "~/.config/screensaver") == "none" ]; then
-	exit
-fi
-
 readarray -t screensavers < <(grep -vE '^\s*(#|$)' ~/.config/screensaver)
 screensaver=${screensavers[$(($RANDOM%${#screensavers[@]}))]}
 
-tui "$screensaver"
+if pgrep -f " screensaver " || pgrep hyprlock || pgrep mpv || [ "$screensaver" == "none" ]; then
+	exit
+else
+	tui "$screensaver"
+fi
