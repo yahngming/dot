@@ -15,14 +15,14 @@ none\n\
 
 config="$HOME/.config/screensaver"
 if [ ! -f "$config" ]; then
-	current="none"
+	screensaver="none"
 elif [ $(wc -l < "$config") -gt 1 ]; then
-	current="random"
+	screensaver="random"
 else
-	current=$(awk '{print $1; exit}' "$config")
+	screensaver=$(awk '{print $1; exit}' "$config")
 fi
 
-case $(printf "$menu" | menu -p "currently $current" "$@") in
+case $(printf "$menu" | menu -p "currently $screensaver" "$@") in
 	preview      ) screensaver ;;
 	asciiquarium ) echo "asciiquarium -s -t" > "$config" ;;
 	lavat        ) echo "lavat -g -c FF0000 -k FF00FF" > "$config" ;;
