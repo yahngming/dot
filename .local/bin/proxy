@@ -32,6 +32,6 @@ help() {
 }
 
 case "$@" in
-	help|off|on ) $@ ;;
+	off|on|help ) $@ ;;
 	*           ) status ;;
 esac
