@@ -4,5 +4,4 @@ Description=Theme setup
 [Service]
 Type=oneshot
 KillMode=none
-RemainAfterExit=no
 ExecStart=%h/.local/bin/theme setup
