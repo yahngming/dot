@@ -37,7 +37,7 @@ status() {
 }
 
 help() {
-	echo "Usage: theme [mode|setup|help]"
+	echo "Usage: theme [setup|status|help]"
 }
 
 config="$HOME/.config/theme"
