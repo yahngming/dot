@@ -6,15 +6,9 @@ menu="\
  Light mode\n\
 "
 
-if [ "$(systemctl --user is-active sun@themeauto.timer)" == "active" ]; then
-	current="auto"
-elif [ -f ~/.config/dark ]; then
-	current="dark"
-else
-	current="light"
-fi
+theme=$(awk '{print $1; exit}' "$config")
 
-case $(printf "$menu" | menu -p "$current mode activated" "$@") in
+case $(printf "$menu" | menu -p "$theme mode activated" "$@") in
 	*Auto*)
 		theme auto
 		systemctl --user enable --now sun@themeauto.timer
