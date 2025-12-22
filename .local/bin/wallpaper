@@ -3,7 +3,7 @@
 setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 		exit
-	elif [ -f ~/.config/dark ]; then
+	elif [ "$(theme)" = "dark" ]; then
 		wal -ni "$wallpaper"
 	else
 		wal -lni "$wallpaper"
@@ -57,13 +57,8 @@ help() {
 	echo "  weather                   overlay weather forecast"
 }
 
-if [ -f ~/.config/dark ]; then
-	theme=dark
-else
-	theme=light
-fi
 paperfolder="$HOME/Pictures/wallpapers"
-themefolder="$paperfolder/$theme"
+themefolder="$paperfolder/$(theme)"
 arg=${1:-help}
 
 case "$arg" in
