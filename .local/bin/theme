@@ -1,13 +1,13 @@
 #!/bin/sh
 
-settheme() {
+setup() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Chicago95"
 		ICON_THEME="Chicago95"
 		XCURSOR_THEME="Chicago95 Standard Cursors"
 		KBD_BACKLIGHT="0"
-	elif [ -f ~/.config/dark ]; then
+	elif [ "$theme" = "dark" ]; then
 		COLOR_SCHEME="prefer-dark"
 		GTK_THEME="Adwaita-dark"
 		ICON_THEME="Adwaita"
@@ -32,31 +32,13 @@ settheme() {
 	wallpaper random
 }
 
-auto() {
-	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
-		dark
-	else
-		light
-	fi
-}
-
-dark() {
-	touch -f ~/.config/dark
-	start
-}
-
-light() {
-	rm -f ~/.config/dark
-	start
-}
-
-status() {
-	echo "$mode"
+mode() {
+	echo "$theme"
 }
 
 help() {
-	echo "Usage: theme [MODE]"
-	echo "  auto           auto switch"
+	echo "Usage: theme [CMD]"
+	echo "  mode           show current theme"
 	echo "  dark           dark mode"
 	echo "  light          light mode"
 	echo "  start          initialize"
@@ -64,8 +46,14 @@ help() {
 
 config="$HOME/.config/theme"
 theme=$(awk '{print $1; exit}' "$config")
+if [ "$theme" = "auto" ]; then
+	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
+		theme="dark"
+	else
+		theme="light"
+fi
 
 case "$@" in
-	auto|dark|light|start ) $@ ;;
-	*                     ) status ;;
+	help|setup ) $@ ;;
+	*          ) mode ;;
 esac
