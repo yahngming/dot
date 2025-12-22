@@ -74,7 +74,6 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
 export QT_IM_MODULE="fcitx"
 export QT_QPA_PLATFORMTHEME="gtk3"
-export ROCR_VISIBLE_DEVICES=1
 export SDL_IM_MODULE="fcitx"
 export SUDO_ASKPASS="$HOME/.local/bin/sapmenu"
 export W3M_DIR="$HOME/.config/w3m"
