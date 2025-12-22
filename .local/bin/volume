@@ -39,6 +39,7 @@ help() {
 	echo "  mute          mute"
 	echo "  unmute        unmute"
 	echo "  toggle        toggle mute"
+	echo "  help          display help"
 	echo ""
 	echo "Device ID defaults to @DEFAULT_SINK@ when not specified."
 	echo "Device ID for microphone is @DEFAULT_SOURCE@."
