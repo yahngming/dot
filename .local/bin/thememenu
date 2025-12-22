@@ -10,15 +10,15 @@ theme=$(awk '{print $1; exit}' "$config")
 
 case $(printf "$menu" | menu -p "$theme mode activated" "$@") in
 	*Auto*)
-		theme auto
-		systemctl --user enable --now sun@themeauto.timer
+		echo "auto" > "$config"
+		theme setup
 		;;
 	*Dark*)
-		theme dark
-		systemctl --user disable --now sun@themeauto.timer
+		echo "dark" > "$config"
+		theme setup
 		;;
 	*Light*)
-		theme light
-		systemctl --user disable --now sun@themeauto.timer
+		echo "light" > "$config"
+		theme setup
 		;;
 esac
