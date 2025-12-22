@@ -27,6 +27,8 @@ fcitx5 &
 ollama serve &
 rquickshare &
 udiskie &
+systemctl --user import-environment $(env | cut -d'=' -f 1)
+dbus-update-activation-environment --systemd --all
 theme setup
 idler
 locker
