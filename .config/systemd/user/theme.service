@@ -3,4 +3,5 @@ Description=Theme setup
 
 [Service]
 Type=oneshot
+KillMode=process
 ExecStart=%h/.local/bin/theme setup
