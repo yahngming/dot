@@ -2,9 +2,9 @@
 Description=Sunrise and sunset timer for %i service
 
 [Timer]
-OnCalendar=06,18:01
+OnCalendar=06:01;18:01
 Persistent=true
 Unit=%i.service
 
 [Install]
-WantedBy=default.target
+WantedBy=timers.target
