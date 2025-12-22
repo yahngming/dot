@@ -7,7 +7,7 @@ setup() {
 		ICON_THEME="Chicago95"
 		XCURSOR_THEME="Chicago95 Standard Cursors"
 		KBD_BACKLIGHT="0"
-	elif [ "$theme" = "dark" ]; then
+	elif [ "$theme" == "dark" ]; then
 		COLOR_SCHEME="prefer-dark"
 		GTK_THEME="Adwaita-dark"
 		ICON_THEME="Adwaita"
@@ -46,7 +46,7 @@ help() {
 
 config="$HOME/.config/theme"
 theme=$(awk '{print $1; exit}' "$config")
-if [ "$theme" = "auto" ]; then
+if [ "$theme" == "auto" ]; then
 	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
 		theme="dark"
 	else
