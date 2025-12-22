@@ -2,6 +2,5 @@
 Description=Theme setup
 
 [Service]
-Type=oneshot
+Type=forking
 ExecStart=%h/.local/bin/theme setup
-PassEnvironment=DISPLAY WAYLAND_DISPLAY XDG_RUNTIME_DIR
