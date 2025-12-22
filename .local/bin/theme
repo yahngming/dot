@@ -37,7 +37,7 @@ mode() {
 }
 
 help() {
-	echo "Usage: theme [help|mode|setup]"
+	echo "Usage: theme [mode|setup|help]"
 }
 
 config="$HOME/.config/theme"
@@ -51,6 +51,6 @@ if [ "$theme" == "auto" ]; then
 fi
 
 case "$@" in
-	help|setup ) $@ ;;
+	setup|help ) $@ ;;
 	*          ) mode ;;
 esac
