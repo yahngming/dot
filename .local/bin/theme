@@ -51,6 +51,7 @@ if [ "$theme" == "auto" ]; then
 		theme="dark"
 	else
 		theme="light"
+	fi
 fi
 
 case "$@" in
