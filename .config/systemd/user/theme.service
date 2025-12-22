@@ -4,4 +4,3 @@ Description=Theme setup
 [Service]
 Type=oneshot
 ExecStart=%h/.local/bin/theme setup
-Environment=DISPLAY=:0
