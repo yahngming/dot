@@ -1,5 +1,9 @@
 #!/bin/sh
 
+get() {
+	echo "sing-box $(systemctl is-active sing-box.service)"
+}
+
 off() {
 	if [ -f ~/.config/proxy ]; then
 		rm -f ~/.config/proxy
@@ -23,15 +27,11 @@ on() {
 	fi
 }
 
-status() {
-	echo "sing-box $(systemctl is-active sing-box.service)"
-}
-
 help() {
-	echo "Usage: proxy [off|on]"
+	echo "Usage: proxy [get|off|on|help]"
 }
 
 case "$@" in
 	off|on|help ) $@ ;;
-	*           ) status ;;
+	*           ) get ;;
 esac
