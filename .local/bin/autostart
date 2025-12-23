@@ -18,7 +18,6 @@ case "$DESKTOP" in
 		;;
 	*Hyprland*|*niri*)
 		kanshi &
-		steam -silent -system-composer &
 		wl-paste --watch cliphist store &
 		;;
 esac
