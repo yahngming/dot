@@ -2,7 +2,6 @@
 
 case "$DESKTOP" in
 	*dwm*|*xfce*)
-		clipmenud &
 		numlockx &
 		setxkbmap -option ctrl:nocaps,shift:both_capslock &
 		unclutter &
@@ -25,6 +24,7 @@ fcitx5 &
 ollama serve &
 rquickshare &
 udiskie &
+clipmenud
 theme setup
 idler
 locker
