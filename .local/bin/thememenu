@@ -6,20 +6,8 @@ menu="\
  Light mode\n\
 "
 
-config="$HOME/.config/theme"
-theme=$(awk '{print $1; exit}' "$config")
-
-case $(printf "$menu" | menu -p "$theme mode activated" "$@") in
-	*Auto*)
-		echo "auto" > "$config"
-		theme setup
-		;;
-	*Dark*)
-		echo "dark" > "$config"
-		theme setup
-		;;
-	*Light*)
-		echo "light" > "$config"
-		theme setup
-		;;
+case $(printf "$menu" | menu -p "Change theme to:" "$@") in
+	*Auto*  ) theme auto ;;
+	*Dark*  ) theme dark ;;
+	*Light* ) theme light ;;
 esac
