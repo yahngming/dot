@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	wl-paste --watch cliphist store &
+elif [ -n "$DISPLAY" ]; then
+	/usr/bin/clipmenud &
+fi
