@@ -1,6 +1,19 @@
 #!/bin/sh
 
+get() {
+	theme=$(awk '{print $1; exit}' "$config")
+	if [ "$theme" == "auto" ]; then
+		if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
+			theme="dark"
+		else
+			theme="light"
+		fi
+	fi
+	echo "$theme"
+}
+
 setup() {
+	get
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		COLOR_SCHEME="prefer-light"
 		GTK_THEME="Chicago95"
@@ -32,25 +45,28 @@ setup() {
 	wallpaper random
 }
 
-status() {
-	echo "$theme"
+auto() {
+	echo "auto" > "$config"
+	setup
+}
+
+dark() {
+	echo "dark" > "$config"
+	setup
+}
+
+light() {
+	echo "light" > "$config"
+	setup
 }
 
 help() {
-	echo "Usage: theme [setup|status|help]"
+	echo "Usage: theme [get|setup|auto|dark|light|help]"
 }
 
 config="$HOME/.config/theme"
-theme=$(awk '{print $1; exit}' "$config")
-if [ "$theme" == "auto" ]; then
-	if [[ "$(date +%H:%M)" < "06:00" ]] || [[ "$(date +%H:%M)" > "18:00" ]]; then
-		theme="dark"
-	else
-		theme="light"
-	fi
-fi
 
 case "$@" in
-	setup|help ) $@ ;;
-	*          ) status ;;
+	setup|auto|dark|light|help ) $@ ;;
+	*                          ) get ;;
 esac
