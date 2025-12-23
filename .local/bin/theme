@@ -41,7 +41,6 @@ setup() {
 	echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl
 	hyprctl setcursor "$XCURSOR_THEME"
 	pywalfox "${COLOR_SCHEME#*-}"
-	bar
 	wallpaper random
 }
 
