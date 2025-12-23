@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	cliphist list | menu | cliphist decode | wl-copy
+elif [ -n "$DISPLAY" ]; then
+	/usr/bin/clipmenud
+fi
