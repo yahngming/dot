@@ -1,3 +1,5 @@
+#!/bin/sh
+
 case "$DESKTOP" in
 	*dwm*|*xfce*)
 		numlockx &
