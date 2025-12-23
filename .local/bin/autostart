@@ -1,5 +1,6 @@
 #!/bin/sh
 
+bar
 clipmenud
 dispmgr
 fcitx5 &
