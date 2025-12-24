@@ -9,31 +9,4 @@ termcmd="$TERMINAL $opt center -T 'termfilechooser' -e"
 cmd="lf"
 command="$termcmd $cmd"
 
-if [ "$6" -ge 4 ]; then
-	set -x
-else
-	set -e
-fi
-
-multiple="$1"
-directory="$2"
-save="$3"
-path="$4"
-out="$5"
-
-if [ "$save" = "1" ]; then
-	set -- -selection-path "$out" "$path"
-elif [ "$directory" = "1" ]; then
-	set -- -last-dir-path "$out" "$path"
-elif [ "$multiple" = "1" ]; then
-	set -- -selection-path "$out" "$path"
-else
-	set -- -selection-path "$out" "$path"
-fi
-
-for arg in "$@"; do
-	escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
-	command="$command \"$escaped\""
-done
-
 sh -c "$command"
