@@ -1,5 +1,0 @@
-[filechooser]
-cmd=picker
-default_dir=$HOME
-open_mode=suggested
-save_mode=last
