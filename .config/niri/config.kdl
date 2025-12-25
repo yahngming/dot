@@ -13,7 +13,7 @@ input {
 		tap
 		natural-scroll
 	}
-	focus-follows-mouse max-scroll-amount="10%"
+	focus-follows-mouse max-scroll-amount="20%"
 }
 
 layout {
