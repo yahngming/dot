@@ -3,7 +3,6 @@
 case "$1" in
 	https://www.youtube.com/*              ) pkill -f "Picture in picture"; setsid -f mpv --autofit=30% --title="Picture in picture" >/dev/null 2>&1 "$1" ;;
 	http*                                  ) setsid -f browser >/dev/null 2>&1 "$1" ;;
-	telnet*                                ) telnet $(echo "${1#telnet://}" | sed 's/:/ /') ;;
 esac
 
 case $(file --mime-type -Lb "$1") in
