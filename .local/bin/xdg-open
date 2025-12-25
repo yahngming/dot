@@ -1,18 +1,18 @@
 #!/bin/sh
 
 case "$1" in
-	https://www.youtube.com/*              ) pkill -f "Picture in picture"; setsid -f mpv --autofit=30% --title="Picture in picture" >/dev/null 2>&1 "$@" ;;
-	http*                                  ) setsid -f browser >/dev/null 2>&1 "$@" ;;
+	https://www.youtube.com/*              ) pkill -f "Picture in picture"; setsid -f mpv --autofit=30% --title="Picture in picture" >/dev/null 2>&1 "$1" ;;
+	http*                                  ) setsid -f browser >/dev/null 2>&1 "$1" ;;
+	telnet*                                ) telnet $(echo "${1#telnet://}" | sed 's/:/ /') ;;
 esac
 
 case $(file --mime-type -Lb "$1") in
-	*archive*|*compress*|*rar*|*tar*|*zip* ) als --page "$@" ;;
-	*audio*|*video*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$@" ;;
-	*diff*                                 ) delta --paging always < "$@" ;;
-	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$@" ;;
-	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$@" ;;
-	*image*                                ) setsid -f nsxiv -a >/dev/null 2>&1 "$@" * ;;
-	*json*|*text*|*xml*                    ) bat --paging always "$@" ;;
-	*md*|*markdown*                        ) glow --pager "$@" ;;
-	*telnet*                               ) tui "telnet $(echo "${1#telnet://}" | sed 's/:/ /')" ;;
+	*archive*|*compress*|*rar*|*tar*|*zip* ) als --page "$1" ;;
+	*audio*|*video*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$1" ;;
+	*diff*                                 ) delta --paging always < "$1" ;;
+	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$1" ;;
+	*epub*|*pdf*                           ) setsid -f zathura >/dev/null 2>&1 "$1" ;;
+	*image*                                ) setsid -f nsxiv -a >/dev/null 2>&1 "$1" * ;;
+	*json*|*text*|*xml*                    ) bat --paging always "$1" ;;
+	*md*|*markdown*                        ) glow --pager "$1" ;;
 esac
