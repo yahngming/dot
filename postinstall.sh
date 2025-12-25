@@ -65,13 +65,7 @@ chromeos() {
 	ln -s ~/.local/src/fzf/bin/* ~/.local/bin
 }
 
-help() {
-	echo "Usage: postinstall [DISTRO]"
-	echo "  arch            run post install script on Arch"
-	echo "  chromeos        run post install script on ChromeOS"
-}
-
 case "$@" in
 	arch|chromeos ) $@ ;;
-	*             ) help ;;
+	*             ) echo "Usage: postinstall [arch|chromeos|help]" ;;
 esac
