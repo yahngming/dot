@@ -16,11 +16,6 @@
 		"on-click": "activate",
 		"on-click-middle": "close"
 	},
-	"tray": {
-		"icon-size": 16,
-		"spacing": 4,
-		"tooltip": false
-	},
 	"cpu": {
 		"format": "{icon}",
 		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
@@ -32,7 +27,7 @@
 		"tooltip": false
 	},
 	"temperature#cpu": {
-		"hwmon-path": ["/sys/class/hwmon/hwmon3/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+		"hwmon-path": ["/sys/class/hwmon/hwmon3/temp1_input"],
 		"format": "{icon}",
 		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"tooltip": false
@@ -42,6 +37,10 @@
 		"format": "{icon}",
 		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
 		"tooltip": false
+	},
+	"tray": {
+		"icon-size": 16,
+		"spacing": 4
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
