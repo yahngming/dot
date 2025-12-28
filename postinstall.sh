@@ -37,7 +37,6 @@ arch() {
 	echo "exec niri-session" > ~/.config/desktop
 	echo "none" > ~/.config/screensaver
 	echo "dark" > ~/.config/theme
-	systemctl --user enable --now sun@themeauto.timer
 	pywalfox install
 	reboot
 }
