@@ -63,19 +63,13 @@ set wildmenu
 set wrap
 
 map <Space> <Leader>
-map <Down> gj
-map <Left> h
-map <Right> l
-map <Up> gk
-map <C-a> ggVG
 map <Leader>. :set list!<CR>
 map <Leader><Esc> :nohlsearch<CR>
+map <Leader>a ggVG
 map <Leader>o :Files<CR>
 map <Leader>p :NERDTreeToggle<CR>
 map <Leader>q :q!<CR>
 map <Leader>w :w!<CR>
-imap jk <Esc>
-imap kj <Esc>
 imap <C-v> <C-r>+
 imap <C-z> <C-o>u
 
