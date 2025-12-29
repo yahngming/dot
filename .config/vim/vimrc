@@ -68,8 +68,6 @@ map <Left> h
 map <Right> l
 map <Up> gk
 map <C-a> ggVG
-map <C-v> p
-map <C-z> u
 map <Leader>. :set list!<CR>
 map <Leader><Esc> :nohlsearch<CR>
 map <Leader>o :Files<CR>
@@ -80,8 +78,6 @@ imap jk <Esc>
 imap kj <Esc>
 imap <C-v> <C-r>+
 imap <C-z> <C-o>u
-vmap <C-c> y
-vmap <C-x> d
 
 filetype indent on
 filetype plugin on
