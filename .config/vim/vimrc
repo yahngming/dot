@@ -26,6 +26,8 @@ set nobackup
 set nocompatible
 set noemoji
 set noerrorbells
+set noesckeys
+set nomodeline
 set noshowmode
 set noswapfile
 set nowritebackup
