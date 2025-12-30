@@ -1,4 +1,3 @@
-let $LANG='en'
 set autoindent
 set autoread
 set background=dark
@@ -24,16 +23,12 @@ set mat=2
 set mouse=a
 set nobackup
 set nocompatible
-set noemoji
 set noerrorbells
-set noesckeys
 set nomodeline
-set noshowmode
 set noswapfile
 set nowritebackup
 set number
 set omnifunc=syntaxcomplete#Complete
-set regexpengine=0
 set relativenumber
 set ruler
 set runtimepath^=~/.local/share/vim
@@ -52,17 +47,21 @@ set statusline+=%=
 set statusline+=\ %{&fileencoding}\ 
 set statusline+=%#Visual#
 set statusline+=\ %p%%\ %l/%L,%c\ 
-set t_Co=256
-set t_vb=
 set tabstop=8
+set termguicolors
 set tm=500
 set tw=500
 set viminfo='10,<100,:100,%,n~/.local/state/vim/viminfo
-set visualbell
 set whichwrap+=<,>,[,]
 set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
 set wildmenu
 set wrap
+
+let $LANG='en'
+
+filetype indent on
+filetype plugin on
+syntax on
 
 map <Space> <Leader>
 map <Leader>. :set list!<CR>
@@ -75,16 +74,6 @@ map <Leader>w :w!<CR>
 imap <C-v> <C-r>+
 imap <C-z> <C-o>u
 
-filetype indent on
-filetype plugin on
-syntax on
-
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-autocmd FocusGained,BufEnter * silent! checktime
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | source $MYVIMRC | endif
-autocmd VimLeave * mksession! ~/.local/state/vim/vimsession
-
 if empty(glob('~/.local/state/vim'))
 	silent !mkdir -p ~/.local/state/vim
 endif
@@ -92,6 +81,12 @@ endif
 if empty(glob('~/.local/share/vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.local/share/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
+
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+autocmd FocusGained,BufEnter * silent! checktime
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | source $MYVIMRC | endif
+autocmd VimLeave * mksession! ~/.local/state/vim/vimsession
 
 call plug#begin()
 Plug 'ap/vim-css-color'
