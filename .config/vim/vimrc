@@ -9,7 +9,6 @@ set incsearch
 set laststatus=2
 set listchars=space:·,tab:>·
 set mouse=a
-set noerrorbells
 set nomodeline
 set noswapfile
 set nowritebackup
