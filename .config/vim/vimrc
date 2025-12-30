@@ -30,7 +30,6 @@ set termguicolors
 set title
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 set viminfo='10,<100,:100,%,n~/.local/state/vim/viminfo
-set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
 set wildmenu
 
 let $LANG='en'
