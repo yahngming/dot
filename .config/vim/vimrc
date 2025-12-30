@@ -16,8 +16,6 @@ set runtimepath^=~/.local/share/vim
 set shiftwidth=8
 set showmatch
 set smartcase
-set smartindent
-set smarttab
 set statusline=
 set statusline+=%#Visual#
 set statusline+=\ %{mode()}\ 
