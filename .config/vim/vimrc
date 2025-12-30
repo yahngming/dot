@@ -3,8 +3,6 @@ set backspace=indent,eol,start
 set clipboard=unnamedplus
 set complete+=kspell
 set encoding=utf8
-set ffs=unix,dos,mac
-set foldcolumn=0
 set hidden
 set hlsearch
 set history=500
