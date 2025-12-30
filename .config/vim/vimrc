@@ -6,7 +6,6 @@ set encoding=utf8
 set hlsearch
 set ignorecase
 set incsearch
-set langmenu=en
 set laststatus=2
 set lazyredraw
 set linebreak
@@ -17,6 +16,7 @@ set mouse=a
 set nobackup
 set noerrorbells
 set nomodeline
+set noshowmode
 set noswapfile
 set nowritebackup
 set number
