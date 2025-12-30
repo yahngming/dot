@@ -1,5 +1,4 @@
 set autoindent
-set autoread
 set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamedplus
@@ -22,7 +21,6 @@ set magic
 set mat=2
 set mouse=a
 set nobackup
-set nocompatible
 set noerrorbells
 set nomodeline
 set noswapfile
