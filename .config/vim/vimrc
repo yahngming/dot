@@ -16,15 +16,7 @@ set runtimepath^=~/.local/share/vim
 set shiftwidth=8
 set showmatch
 set smartcase
-set statusline=
-set statusline+=%#Visual#
-set statusline+=\ %{mode()}\ 
-set statusline+=%#Nontext#
-set statusline+=\ %F%y%r%m\ 
-set statusline+=%=
-set statusline+=\ %{&fileencoding}\ 
-set statusline+=%#Visual#
-set statusline+=\ %p%%\ %l/%L,%c\ 
+set statusline=%#Visual#\ %{mode()}\ %#Nontext#\ %F%y%r%m\ %=\ %{&fileencoding}\ %#Visual#\ %p%%\ %l/%L,%c\ 
 set tabstop=8
 set termguicolors
 set title
