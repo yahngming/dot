@@ -3,9 +3,7 @@ set backspace=indent,eol,start
 set clipboard=unnamedplus
 set complete+=kspell
 set encoding=utf8
-set hidden
 set hlsearch
-set history=500
 set ignorecase
 set incsearch
 set langmenu=en
