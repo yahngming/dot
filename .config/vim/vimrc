@@ -27,8 +27,8 @@ set statusline+=%#Visual#
 set statusline+=\ %p%%\ %l/%L,%c\ 
 set tabstop=8
 set termguicolors
-set tm=500
-set tw=500
+set title
+set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 set viminfo='10,<100,:100,%,n~/.local/state/vim/viminfo
 set whichwrap+=<,>,[,]
 set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
