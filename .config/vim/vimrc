@@ -7,7 +7,6 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
-set linebreak
 set listchars=space:·,tab:>·
 set magic
 set mat=2
@@ -45,7 +44,6 @@ set viminfo='10,<100,:100,%,n~/.local/state/vim/viminfo
 set whichwrap+=<,>,[,]
 set wildignore=*.docx,*.gif,*.img,*.jpg,*.png,*.pdf,*.pyc,*.o,*.xlsx
 set wildmenu
-set wrap
 
 let $LANG='en'
 
