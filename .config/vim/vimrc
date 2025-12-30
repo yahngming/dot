@@ -1,7 +1,9 @@
 set autoindent
 set backspace=indent,eol,start
+set backupdir=/tmp//
 set clipboard=unnamedplus
 set complete+=kspell
+set directory=/tmp//
 set encoding=utf8
 set hlsearch
 set ignorecase
@@ -21,10 +23,9 @@ set tabstop=8
 set termguicolors
 set title
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
+set undodir=/tmp//
 set viminfo='10,<100,:100,%,n~/.local/state/vim/viminfo
 set wildmenu
-
-let $LANG='en'
 
 filetype indent on
 filetype plugin on
@@ -38,8 +39,6 @@ map <Leader>o :Files<CR>
 map <Leader>p :NERDTreeToggle<CR>
 map <Leader>q :q!<CR>
 map <Leader>w :w!<CR>
-imap <C-v> <C-r>+
-imap <C-z> <C-o>u
 
 if empty(glob('~/.local/state/vim'))
 	silent !mkdir -p ~/.local/state/vim
