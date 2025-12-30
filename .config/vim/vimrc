@@ -7,7 +7,6 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
-set lazyredraw
 set linebreak
 set listchars=space:·,tab:>·
 set magic
@@ -16,7 +15,6 @@ set mouse=a
 set nobackup
 set noerrorbells
 set nomodeline
-set noshowmode
 set noswapfile
 set nowritebackup
 set number
