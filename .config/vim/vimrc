@@ -8,7 +8,6 @@ set ignorecase
 set incsearch
 set laststatus=2
 set listchars=space:·,tab:>·
-set magic
 set mat=2
 set mouse=a
 set nobackup
