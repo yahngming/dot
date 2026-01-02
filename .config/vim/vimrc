@@ -33,8 +33,8 @@ filetype plugin on
 syntax on
 
 map <Space> <Leader>
-map <Leader>. :set list!<CR>
 map <Leader><Esc> :nohlsearch<CR>
+map <Leader>. :set list!<CR>
 map <Leader>a ggVG
 map <Leader>o :Files<CR>
 map <Leader>p :NERDTreeToggle<CR>
