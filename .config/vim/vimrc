@@ -9,7 +9,7 @@ set encoding=utf8
 set hlsearch
 set ignorecase
 set incsearch
-set laststatus=2
+set laststatus=1
 set listchars=space:·,tab:>·
 set mouse=a
 set number
@@ -33,13 +33,13 @@ filetype plugin on
 syntax on
 
 map <Space> <Leader>
-map <Leader><Esc> :nohlsearch<CR>
 map <Leader>. :set list!<CR>
+map <Leader>/ :nohlsearch<CR>
 map <Leader>a ggVG
-map <leader>f :LF<cr>
+map <leader>f :LF<CR>
 map <Leader>o :Files<CR>
-map <Leader>p :NERDTreeToggle<CR>
 map <Leader>q :q!<CR>
+map <Leader>t :NERDTreeToggle<CR>
 map <Leader>w :w!<CR>
 
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
