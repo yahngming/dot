@@ -9,7 +9,7 @@ set encoding=utf8
 set hlsearch
 set ignorecase
 set incsearch
-set laststatus=1
+set laststatus=2
 set listchars=space:·,tab:>·
 set mouse=a
 set number
