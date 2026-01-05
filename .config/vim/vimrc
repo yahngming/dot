@@ -36,6 +36,7 @@ map <Space> <Leader>
 map <Leader><Esc> :nohlsearch<CR>
 map <Leader>. :set list!<CR>
 map <Leader>a ggVG
+map <leader>f :LF<cr>
 map <Leader>o :Files<CR>
 map <Leader>p :NERDTreeToggle<CR>
 map <Leader>q :q!<CR>
@@ -55,8 +56,29 @@ autocmd FocusGained,BufEnter * silent! checktime
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | source $MYVIMRC | endif
 autocmd VimLeave * mksession! ~/.local/state/vim/vimsession
 
+function! LF()
+    let temp = tempname()
+    exec 'silent !lf -selection-path=' . shellescape(temp)
+    if !filereadable(temp)
+        redraw!
+        return
+    endif
+    let names = readfile(temp)
+    if empty(names)
+        redraw!
+        return
+    endif
+    exec 'edit ' . fnameescape(names[0])
+    for name in names[1:]
+        exec 'argadd ' . fnameescape(name)
+    endfor
+    redraw!
+endfunction
+command! -bar LF call LF()
+
 call plug#begin()
 Plug 'ap/vim-css-color'
+Plug 'itchyny/vim-cursorword'
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
