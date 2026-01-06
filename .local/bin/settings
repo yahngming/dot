@@ -9,13 +9,13 @@ esac
 
 menu="\
 󱡫 Audio\n\
- Bar\n\
+ Bar\n\
 󰂳 Bluetooth\n\
  Cloud\n\
- Desktop\n\
+ Desktop\n\
 󰍹 Display\n\
  Docker\n\
- Dotfiles\n\
+ Dotfiles\n\
  Fetch\n\
  IME\n\
  Password\n\
