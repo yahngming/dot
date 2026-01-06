@@ -16,10 +16,10 @@
       <property name="&lt;Super&gt;l" type="string" value="powermenu"/>
       <property name="&lt;Super&gt;m" type="string" value="mail"/>
       <property name="&lt;Super&gt;n" type="string" value="news"/>
-      <property name="&lt;Super&gt;p" type="string" value="music"/>
       <property name="&lt;Super&gt;r" type="string" value="launcher"/>
       <property name="&lt;Super&gt;s" type="string" value="screenshot"/>
       <property name="&lt;Super&gt;t" type="string" value="topper"/>
+      <property name="&lt;Super&gt;u" type="string" value="music"/>
       <property name="&lt;Super&gt;v" type="string" value="clipmenu"/>
       <property name="&lt;Super&gt;z" type="string" value="terminal"/>
     </property>
