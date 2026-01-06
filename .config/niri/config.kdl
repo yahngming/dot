@@ -79,11 +79,11 @@ binds {
 	Mod+M                 { spawn "mail"; }
 	Mod+N                 { spawn "news"; }
 	Mod+O                 { toggle-overview; }
-	Mod+P                 { spawn "music"; }
 	Mod+Q                 { close-window; }
 	Mod+R                 { spawn "launcher"; }
 	Mod+S                 { spawn "screenshot"; }
 	Mod+T                 { spawn "topper"; }
+	Mod+U                 { spawn "music"; }
 	Mod+V                 { spawn "clipmenu"; }
 	Mod+Z                 { spawn "terminal"; }
 	Mod+Delete            { maximize-column; }
