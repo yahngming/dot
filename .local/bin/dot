@@ -4,5 +4,5 @@ cd ~/.local/src/dot
 git pull
 cp -a ~/.local/src/dot/. ~/
 chmod +x ~/.local/bin/* ~/.config/nsxiv/exec/*
-rm -rf ~/.bash_history ~/.bash_logout ~/.git ~/.lesshst ~/postinstall.sh ~/README.md
+rm -rf ~/.bash_history ~/.bash_logout ~/.git ~/.lesshst ~/postinstall.sh ~/.python_history ~/.viminfo ~/README.md
 cd - >/dev/null 2>&1
