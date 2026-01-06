@@ -1,1 +1,1 @@
-gtk-im-module="fcitx"
+gtk-im-module = "fcitx"
