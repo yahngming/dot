@@ -1,7 +1,7 @@
 [Unit]
-Description=Theme setup
+Description = Theme setup
 
 [Service]
-Type=oneshot
-KillMode=none
-ExecStart=%h/.local/bin/theme setup
+Type = oneshot
+KillMode = none
+ExecStart = %h/.local/bin/theme setup
