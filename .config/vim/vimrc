@@ -9,7 +9,7 @@ set encoding=utf8
 set hlsearch
 set ignorecase
 set incsearch
-set laststatus=1
+set laststatus=2
 set listchars=space:·,tab:>·
 set mouse=a
 set number
@@ -19,6 +19,8 @@ set runtimepath^=~/.local/share/vim
 set shiftwidth=8
 set showmatch
 set smartcase
+set splitbelow
+set splitright
 set statusline=%#StatusLine#\ %{mode()}\ %#ModeMsg#\ %F%y%r%m\ %=\ %{&fileencoding}\ %#StatusLine#\ %p%%\ %l/%L,%c/%{col('$')-1}\ 
 set tabstop=8
 set termguicolors
