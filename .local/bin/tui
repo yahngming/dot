@@ -13,7 +13,7 @@ case "$@" in
 esac
 
 if [ "$opt" == "-a screensaver" ]; then
-	opt="$opt -o main.initial-color-theme=2 -o colors.background=000000"
+	opt="$opt -o initial-color-theme=2"
 fi
 
 $TERMINAL $opt -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "$@"
