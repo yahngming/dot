@@ -22,7 +22,7 @@ set showmatch
 set smartcase
 set splitbelow
 set splitright
-set statusline=%#PmenuShadow#-%{mode()}-\ %F%y%r%m\ %=\ %{&fileencoding}\ %#PmenuShadow#\ %p%%\ %l/%L,%c/%{col('$')-1}\ 
+set statusline=%#PmenuShadow#%F[%{&fileencoding}]%r%m%=%l/%L,%c/%{col('$')-1}%p%%
 set tabstop=8
 set termguicolors
 set title
