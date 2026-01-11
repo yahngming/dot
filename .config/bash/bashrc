@@ -62,7 +62,6 @@ export FZF_ALT_C_OPTS="--preview 'eza --color=always --tree {} | head -200'"
 export GDK_DEBUG="portals"
 export GTK_USE_PORTAL=1
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc"
-export GOPROXY="direct"
 export HISTCONTROL="ignoreboth:erasedups"
 export HISTFILE="$HOME/.local/state/bash_history"
 export HISTSIZE=10000
