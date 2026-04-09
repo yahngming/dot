@@ -22,18 +22,6 @@ pull() {
 	fi
 }
 
-stop() {
-	if [ -z "$name" ]; then
-		for f in $folder/*.yaml
-		do
-			name=$(basename "$f" .yaml)
-			docker compose -f "$f" -p "$name" stop
-		done
-	else
-		docker compose -f "$folder/$name.yaml" -p "$name" stop
-	fi
-}
-
 up() {
 	if [ -z "$name" ]; then
 		for f in $folder/*.yaml
@@ -46,15 +34,27 @@ up() {
 	fi
 }
 
+stop() {
+	if [ -z "$name" ]; then
+		for f in $folder/*.yaml
+		do
+			name=$(basename "$f" .yaml)
+			docker compose -f "$f" -p "$name" stop
+		done
+	else
+		docker compose -f "$folder/$name.yaml" -p "$name" stop
+	fi
+}
+
 help() {
-	echo "Usage:"
-	echo "  dockers [COMMAND] [NAME]"
+	echo "Usage: dockers [COMMAND] [NAME]"
 	echo ""
 	echo "Commands:"
-	echo "  ls          List running compose projects"
-	echo "  pull        Pull service images"
-	echo "  stop        Stop services"
-	echo "  up          Create and start containers"
+	echo "  ls          list running compose projects"
+	echo "  pull        pull images"
+	echo "  up          create and start containers"
+	echo "  stop        stop containers"
+	echo "  help        display help"
 }
 
 folder="$HOME/.config/dockers"
