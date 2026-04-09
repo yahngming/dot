@@ -29,8 +29,7 @@ toggle() {
 }
 
 help() {
-	echo "Usage:"
-	echo "  volume [COMMAND] [ID]"
+	echo "Usage: volume [COMMAND] [ID]"
 	echo ""
 	echo "Commands:"
 	echo "  get           show volume"
