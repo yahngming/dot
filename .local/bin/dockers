@@ -1,5 +1,15 @@
 #!/bin/sh
 
+ls() {
+	if [ -z "$name" ]; then
+		docker compose ls
+	elif [ -z "$id" ]; then
+		echo "$name stopped"
+	else
+		echo "$name running"
+	fi
+}
+
 pull() {
 	if [ -z "$name" ]; then
 		for f in $folder/*.yaml
@@ -9,28 +19,6 @@ pull() {
 		done
 	else
 		docker compose -f "$folder/$name.yaml" pull
-	fi
-}
-
-ps() {
-	if [ -z "$name" ]; then
-		docker ps
-	elif [ -z "$id" ]; then
-		echo "$name stopped"
-	else
-		echo "$name running"
-	fi
-}
-
-start() {
-	if [ -z "$name" ]; then
-		for f in $folder/*.yaml
-		do
-			name=$(basename "$f" .yaml)
-			docker compose -f "$f" -p "$name" up -d
-		done
-	else
-		docker compose -f "$folder/$name.yaml" -p "$name" up -d
 	fi
 }
 
@@ -46,18 +34,27 @@ stop() {
 	fi
 }
 
+up() {
+	if [ -z "$name" ]; then
+		for f in $folder/*.yaml
+		do
+			name=$(basename "$f" .yaml)
+			docker compose -f "$f" -p "$name" up -d
+		done
+	else
+		docker compose -f "$folder/$name.yaml" -p "$name" up -d
+	fi
+}
+
 help() {
 	echo "Usage:"
 	echo "  dockers [COMMAND] [NAME]"
 	echo ""
 	echo "Commands:"
-	echo "  pull         pull image(s)"
-	echo "  ps           list container(s)"
-	echo "  start        start container(s)"
-	echo "  stop         stop container(s)"
-	echo "  help         display help"
-	echo ""
-	echo "All compose configurations will be applied if NAME is omitted."
+	echo "  ls          List running compose projects"
+	echo "  pull        Pull service images"
+	echo "  stop        Stop services"
+	echo "  up          Create and start containers"
 }
 
 folder="$HOME/.config/dockers"
@@ -65,6 +62,6 @@ name=$2
 id=$(docker ps -qf "name=$name")
 
 case "$1" in
-	pull|ps|start|stop ) $1 ;;
-	*                  ) help ;;
+	ls|pull|stop|up ) $1 ;;
+	*               ) help ;;
 esac
