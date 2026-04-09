@@ -1,5 +1,17 @@
 #!/bin/sh
 
+pull() {
+	if [ -z "$name" ]; then
+		for f in $folder/*.yaml
+		do
+			name=$(basename "$f" .yaml)
+			docker compose -f "$f" pull
+		done
+	else
+		docker compose -f "$folder/$name.yaml" pull
+	fi
+}
+
 ps() {
 	if [ -z "$name" ]; then
 		docker ps
@@ -39,12 +51,13 @@ help() {
 	echo "  dockers [COMMAND] [NAME]"
 	echo ""
 	echo "Commands:"
+	echo "  pull         pull image(s)"
 	echo "  ps           list container(s)"
 	echo "  start        start container(s)"
 	echo "  stop         stop container(s)"
 	echo "  help         display help"
 	echo ""
-	echo "All containers will be applied if NAME is omitted."
+	echo "All compose configurations will be applied if NAME is omitted."
 }
 
 folder="$HOME/.config/dockers"
@@ -52,6 +65,6 @@ name=$2
 id=$(docker ps -qf "name=$name")
 
 case "$1" in
-	ps|start|stop ) $1 ;;
-	*             ) help ;;
+	pull|ps|start|stop ) $1 ;;
+	*                  ) help ;;
 esac
