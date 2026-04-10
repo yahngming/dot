@@ -138,6 +138,7 @@ window-rule {
 	match app-id="freecad"
 	match app-id="krita"
 	match app-id="resolve"
+	match app-id="tsukimi"
 	match title="RedmoonJS"
 	match title="- YouTube"
 	opacity 1.0
