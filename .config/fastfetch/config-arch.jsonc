@@ -14,10 +14,7 @@
 		"break",
 		"break",
 		"break",
-		{
-			"type": "title",
-			"keyWidth": 10
-		},
+		"colors",
 		"break",
 		{
 			"type": "os",
