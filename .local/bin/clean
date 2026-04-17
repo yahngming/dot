@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo pacman -Rns --noconfirm $(pacman -Qtdq)
+yay -Scc --noconfirm
