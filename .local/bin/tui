@@ -6,10 +6,10 @@ case "$TERMINAL" in
 esac
 
 case "$@" in
-	bc*                                                                       ) opt="$opt bottomright" ;;
-	about*|bat*|dockers*|dot|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) opt="$opt center" ;;
-	asciiquarium*|lavat*|*matrix*|*svr                                        ) opt="$opt screensaver" ;;
-	*                                                                         ) opt="$opt tui" ;;
+	bc*                                                                             ) opt="$opt bottomright" ;;
+	about*|bat*|clean|dockers*|dot|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) opt="$opt center" ;;
+	asciiquarium*|lavat*|*matrix*|*svr                                              ) opt="$opt screensaver" ;;
+	*                                                                               ) opt="$opt tui" ;;
 esac
 
 if [ "$opt" == "-a screensaver" ]; then
