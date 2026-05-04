@@ -13,3 +13,9 @@ window-rule {{
 		color "{color7}"
 	}}
 }}
+
+recent-windows {{
+	highlight {{
+		active-color "{color7}"
+	}}
+}}
