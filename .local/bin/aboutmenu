@@ -8,15 +8,16 @@ menu="\
 󰄌 Battery\n\
  CPU\n\
 󰢮 GPU\n\
+ PCI\n\
  RAM\n\
  ROM\n\
- PCI\n\
 󰊚 Sensors\n\
  Time\n\
 󱊟 USB\n\
 "
 
 case $(printf "$menu" | menu "$@") in
+	*System*  ) item="system" ;;
 	*Battery* ) item="battery" ;;
 	*CPU*     ) item="cpu" ;;
 	*GPU*     ) item="gpu" ;;
@@ -24,7 +25,6 @@ case $(printf "$menu" | menu "$@") in
 	*RAM*     ) item="ram" ;;
 	*ROM*     ) item="rom" ;;
 	*Sensors* ) item="sensors" ;;
-	*System*  ) item="system" ;;
 	*Time*    ) item="time" ;;
 	*USB*     ) item="usb" ;;
 esac
