@@ -12,6 +12,15 @@ window, button, tooltip, tooltip label {
 	color: @color8;
 }
 
+button {
+	padding: 0px 6px;
+}
+
+tooltip {
+	border: 1px solid @color1;
+	border-radius: 6px;
+}
+
 #workspaces .active {
 	border-bottom: 1px solid @color7;
 }
@@ -23,10 +32,6 @@ window, button, tooltip, tooltip label {
 
 #battery.critical {
 	color: red;
-}
-
-button {
-	padding: 0px 6px;
 }
 
 #tray, #clock {
