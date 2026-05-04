@@ -126,13 +126,6 @@ window-rule {
 
 window-rule {
 	match app-id="blender"
-	match app-id="Darktable"
-	match app-id="freecad"
-	match app-id="krita"
-	match app-id="resolve"
-	match app-id="Slicer"
-	match app-id="tsukimi"
-	match title="RedmoonJS"
 	match title="- YouTube"
 	opacity 1.00
 }
