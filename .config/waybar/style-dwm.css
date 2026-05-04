@@ -21,11 +21,11 @@ tooltip {
 	border-radius: 6px;
 }
 
-#workspaces .active {
+#workspaces.active {
 	border-bottom: 1px solid @color7;
 }
 
-#workspaces .active, #taskbar .active {
+#workspaces.active, #taskbar.active {
 	background: @color1;
 	color: @color7;
 }
