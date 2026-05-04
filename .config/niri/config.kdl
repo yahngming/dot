@@ -90,7 +90,6 @@ binds {
 layout {
 	gaps 6
 	default-column-width {}
-	background-color "transparent"
 	focus-ring {
 		off
 	}
