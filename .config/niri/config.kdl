@@ -135,7 +135,7 @@ window-rule {
 	match app-id="tsukimi"
 	match title="RedmoonJS"
 	match title="- YouTube"
-	opacity 1.0
+	opacity 1.00
 }
 
 window-rule {
@@ -167,14 +167,24 @@ window-rule {
 
 layer-rule {
 	match namespace="^launcher$"
+	opacity 0.95
+	shadow {
+		on
+	}
+	geometry-corner-radius 10
+	background-effect {
+		blur true
+	}
+}
+
+layer-rule {
 	match namespace="^waybar$"
 	opacity 0.95
-	geometry-corner-radius 12
 	background-effect {
 		blur true
 	}
 	popups {
-		opacity 0.9
+		opacity 0.90
 		geometry-corner-radius 6
 		background-effect {
 			blur true
