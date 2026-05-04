@@ -13,25 +13,29 @@ off() {
 }
 
 on() {
+	if [ ! -f ~/.config/proxy ]; then
+		touch -f ~/.config/proxy
+		gsettings set org.gnome.system.proxy mode "manual"
+		sudo systemctl enable --now sing-box.service
+	fi
+}
+
+up() {
 	cd ~/.local/src/sub
 	git pull
 	cd - >/dev/null 2>&1
 	sudo cp ~/.local/src/sub/sing-box /etc/sing-box/config.json
 	sudo cp ~/.local/src/sub/sing-box /etc/sing-box/config.yaml
-	if [ ! -f ~/.config/proxy ]; then
-		touch -f ~/.config/proxy
-		gsettings set org.gnome.system.proxy mode "manual"
-		sudo systemctl enable --now sing-box.service
-	else
+	if [ -f ~/.config/proxy ]; then
 		sudo systemctl restart sing-box.service
 	fi
 }
 
 help() {
-	echo "Usage: proxy [get|off|on|help]"
+	echo "Usage: proxy [get|off|on|up|help]"
 }
 
 case "$@" in
-	off|on|help ) $@ ;;
-	*           ) get ;;
+	off|on|up|help ) $@ ;;
+	*              ) get ;;
 esac
