@@ -1,9 +1,18 @@
 include "../../.cache/wal/colors-niri.kdl"
 include "cursor.kdl"
 
+spawn-at-startup "autostart"
+
 prefer-no-csd
 
-spawn-at-startup "autostart"
+cursor {
+	hide-when-typing
+	hide-after-inactive-ms 5000
+}
+
+hotkey-overlay {
+	skip-at-startup
+}
 
 input {
 	keyboard {
@@ -14,37 +23,6 @@ input {
 		natural-scroll
 	}
 	focus-follows-mouse max-scroll-amount="20%"
-}
-
-layout {
-	gaps 6
-	default-column-width {}
-	background-color "transparent"
-	focus-ring {
-		off
-	}
-	border {
-		on
-		width 1
-	}
-	shadow {
-		on
-	}
-	struts {
-		top 4
-		right 8
-		bottom 4
-		left 8
-	}
-}
-
-cursor {
-	hide-when-typing
-	hide-after-inactive-ms 5000
-}
-
-hotkey-overlay {
-	skip-at-startup
 }
 
 binds {
@@ -109,14 +87,26 @@ binds {
 	XF86MonBrightnessUp   { spawn "brightnessctl" "s" "5%+"; }
 }
 
-layer-rule {
-    match namespace="^wallpaper$"
-    place-within-backdrop true
-}
-
-layer-rule {
-	match namespace="waybar"
-	opacity 0.95
+layout {
+	gaps 6
+	default-column-width {}
+	background-color "transparent"
+	focus-ring {
+		off
+	}
+	border {
+		on
+		width 1
+	}
+	shadow {
+		on
+	}
+	struts {
+		top 4
+		right 8
+		bottom 4
+		left 8
+	}
 }
 
 window-rule {
@@ -124,6 +114,9 @@ window-rule {
 	geometry-corner-radius 4
 	clip-to-geometry true
 	draw-border-with-background false
+	background-effect {
+		blur true
+	}
 }
 
 window-rule {
@@ -170,4 +163,18 @@ window-rule {
 	match app-id="screensaver"
 	match app-id="steam_app"
 	open-fullscreen true
+}
+
+layer-rule {
+	match namespace="^launcher$"
+	match namespace="^waybar$"
+	opacity 0.95
+	background-effect {
+		blur true
+	}
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
 }
