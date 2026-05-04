@@ -130,7 +130,6 @@ window-rule {
 	match app-id="freecad"
 	match app-id="krita"
 	match app-id="resolve"
-	match app-id="Slicer"
 	match title="- YouTube"
 	opacity 1.00
 }
