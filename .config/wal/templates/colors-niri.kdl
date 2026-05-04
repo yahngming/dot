@@ -1,4 +1,5 @@
 layout {{
+	background-color "transparent"
 	border {{
 		on
 		active-color "{color7}"
