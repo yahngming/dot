@@ -169,8 +169,16 @@ layer-rule {
 	match namespace="^launcher$"
 	match namespace="^waybar$"
 	opacity 0.95
+	geometry-corner-radius 12
 	background-effect {
 		blur true
+	}
+	popups {
+		opacity 0.9
+		geometry-corner-radius 6
+		background-effect {
+			blur true
+		}
 	}
 }
 
