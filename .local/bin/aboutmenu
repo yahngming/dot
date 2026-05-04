@@ -7,9 +7,9 @@ menu="\
   ----\n\
 󰄌 Battery\n\
  CPU\n\
- Drive\n\
 󰢮 GPU\n\
- Memory\n\
+ RAM\n\
+ ROM\n\
  PCI\n\
 󰊚 Sensors\n\
  Time\n\
@@ -19,10 +19,10 @@ menu="\
 case $(printf "$menu" | menu "$@") in
 	*Battery* ) item="battery" ;;
 	*CPU*     ) item="cpu" ;;
-	*Drive*   ) item="drive" ;;
 	*GPU*     ) item="gpu" ;;
-	*Memory*  ) item="memory" ;;
 	*PCI*     ) item="pci" ;;
+	*RAM*     ) item="ram" ;;
+	*ROM*     ) item="rom" ;;
 	*Sensors* ) item="sensors" ;;
 	*System*  ) item="system" ;;
 	*Time*    ) item="time" ;;
