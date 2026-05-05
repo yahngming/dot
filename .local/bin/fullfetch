@@ -1,6 +1,5 @@
 #!/bin/sh
 
-echo ""
 echo "CPU"
 echo "---"
 lscpu | grep -E 'Model|MHz' | bat -fpPl cpuinfo
