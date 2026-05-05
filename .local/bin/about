@@ -1,15 +1,13 @@
 #!/bin/sh
 
 case "$@" in
-	battery ) upower -i $(upower -e | grep BAT) | bat -fpPl cpuinfo ;;
-	cpu     ) lscpu | bat -fpPl cpuinfo ;;
-	gpu     ) lspci | grep VGA | cut -d" " -f 1 | xargs -i lspci -v -s {} | bat -fpPl cpuinfo ;;
-	pci     ) lspci | bat -fpPl cpuinfo ;;
-	ram     ) free -h | bat -fpPl c ;;
-	rom     ) df -h | bat -fpPl c ;;
+	bat ) upower -i $(upower -e | grep BAT) | bat -fpPl cpuinfo ;;
+	cpu ) lscpu | bat -fpPl cpuinfo ;;
+	gpu ) lspci | grep VGA | cut -d" " -f 1 | xargs -i lspci -v -s {} | bat -fpPl cpuinfo ;;
+	ram ) free -h | bat -fpPl c ;;
+	rom ) df -h | bat -fpPl c ;;
 	sensors ) sensors | bat -fpPl cpuinfo ;;
-	system  ) fastfetch | lolcat ;;
-	time    ) timedatectl | bat -fpPl cpuinfo ;;
-	usb     ) lsusb | bat -fpPl cpuinfo ;;
-	*       ) echo "Usage: about [battery|cpu|gpu|pci|ram|rom|sensors|system|time|usb]" ;;
+	sys ) fastfetch | lolcat ;;
+	usb ) lsusb | bat -fpPl cpuinfo ;;
+	*   ) echo "Usage: about [bat|cpu|gpu|ram|rom|sensors|sys|usb]" ;;
 esac
