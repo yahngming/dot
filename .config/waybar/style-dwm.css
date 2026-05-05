@@ -7,7 +7,7 @@
 	font-size: 16px;
 }
 
-window, button, tooltip, tooltip label {
+window, button, menu, tooltip, tooltip label {
 	background: @color0;
 	color: @color8;
 }
@@ -16,7 +16,7 @@ button {
 	padding: 0px 6px;
 }
 
-tooltip {
+menu, tooltip {
 	border: 1px solid @color1;
 	border-radius: 6px;
 }
