@@ -7,7 +7,7 @@ esac
 
 case "$@" in
 	bc*                                                                             ) opt="$opt bottomright" ;;
-	about*|bat*|clean|dockers*|dot|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) opt="$opt center" ;;
+	bat*|clean|dockers*|dot|*fetch|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) opt="$opt center" ;;
 	asciiquarium*|lavat*|*matrix*|*svr                                              ) opt="$opt screensaver" ;;
 	*                                                                               ) opt="$opt tui" ;;
 esac
