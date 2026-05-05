@@ -20,11 +20,6 @@ echo "Video Card"
 echo "----------"
 lspci | grep VGA | bat -fpPl cpuinfo
 
-echo ""
-echo "USB"
-echo "---"
-lsusb | bat -fpPl cpuinfo
-
 bat=$(upower -e | grep BAT)
 if [ -n "$bat" ]; then
 	echo ""
