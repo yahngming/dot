@@ -11,7 +11,6 @@
       <property name="&lt;Super&gt;e" type="string" value="editor"/>
       <property name="&lt;Super&gt;f" type="string" value="explorer"/>
       <property name="&lt;Super&gt;g" type="string" value="game"/>
-      <property name="&lt;Super&gt;h" type="string" value="aboutmenu"/>
       <property name="&lt;Super&gt;i" type="string" value="settings"/>
       <property name="&lt;Super&gt;l" type="string" value="powermenu"/>
       <property name="&lt;Super&gt;m" type="string" value="mail"/>
