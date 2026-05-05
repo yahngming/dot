@@ -33,6 +33,7 @@ menu="\
 "
 
 case $(printf "$menu" | menu $opt "$@") in
+	*About*       ) pkill -f "read -n 1 -s"; tui "fastfetch | lolcat; read -n 1 -s" ;;
 	*Audio*       ) audiomenu ;;
 	*Bar*         ) barmenu ;;
 	*Bluetooth*   ) btmenu ;;
