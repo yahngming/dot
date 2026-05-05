@@ -63,7 +63,7 @@
 			"exec": "echo 'Help'",
 			"interval": 60,
 			"return-type": "plain",
-			"on-click": "aboutmenu"
+			"on-click": "about"
 		},
 		"keyboard-state": {
 			"numlock": true,
