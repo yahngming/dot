@@ -29,4 +29,7 @@ echo ""
 echo "Battery"
 echo "-------"
 bat=$(upower -e | grep BAT)
-upower -i $bat | bat -fpPl cpuinfo
+if [ -n "$bat" ]; then
+	upower -i $bat | bat -fpPl cpuinfo
+else
+	echo "Not found."
