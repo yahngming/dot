@@ -51,7 +51,6 @@ binds {
 	Mod+E                 { spawn "editor"; }
 	Mod+F                 { spawn "explorer"; }
 	Mod+G                 { spawn "game"; }
-	Mod+H                 { spawn "aboutmenu"; }
 	Mod+I                 { spawn "settings"; }
 	Mod+L                 { spawn "powermenu"; }
 	Mod+M                 { spawn "mail"; }
