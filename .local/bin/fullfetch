@@ -24,3 +24,8 @@ echo ""
 echo "USB"
 echo "---"
 lsusb | bat -fpPl cpuinfo
+
+echo ""
+echo "Battery"
+echo "-------"
+upower -i $(upower -e | grep BAT) | bat -fpPl cpuinfo
