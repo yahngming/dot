@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pkill -f "read -n 1 -s"; tui "fastfetch | lolcat; read -n 1 -s" ;;
+pkill -f "read -n 1 -s"; tui "fastfetch | lolcat; read -n 1 -s"
