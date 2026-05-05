@@ -33,3 +33,4 @@ if [ -n "$bat" ]; then
 	upower -i $bat | bat -fpPl cpuinfo
 else
 	echo "Not found."
+fi
