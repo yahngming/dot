@@ -17,5 +17,10 @@ df -h | bat -fpPl c
 
 echo ""
 echo "Video Card"
-echo "---"
+echo "----------"
 lspci | grep VGA | bat -fpPl cpuinfo
+
+echo ""
+echo "USB"
+echo "---"
+lsusb | bat -fpPl cpuinfo
