@@ -4,6 +4,14 @@ echo "CPU"
 echo "---"
 lscpu | grep -E 'Model|MHz' | bat -fpPl cpuinfo
 
-echo "GPU"
+echo "Memory"
+echo "------"
+free -h | bat -fpPl c ;;
+
+echo "Storage"
+echo "-------"
+df -h | bat -fpPl c ;;
+
+echo "Video Card"
 echo "---"
-lspic | grep VGA | bat -fpPl cpuinfo
+lspci | grep VGA | bat -fpPl cpuinfo
