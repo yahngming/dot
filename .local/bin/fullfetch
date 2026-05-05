@@ -1,5 +1,9 @@
 #!/bin/sh
 
 echo "CPU"
-echo "----"
-lscpu | grep -E 'Model name|MHz' | bat -fpPl cpuinfo
+echo "---"
+lscpu | grep -E 'Model|MHz' | bat -fpPl cpuinfo
+
+echo "GPU"
+echo "---"
+lspic | grep VGA | bat -fpPl cpuinfo
