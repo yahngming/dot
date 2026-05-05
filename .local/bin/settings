@@ -8,6 +8,8 @@ case "$LAUNCHER" in
 esac
 
 menu="\
+󰕮 About\n\
+  ----
 󱡫 Audio\n\
  Bar\n\
 󰂳 Bluetooth\n\
