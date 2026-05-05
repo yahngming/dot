@@ -8,12 +8,12 @@ lscpu | grep -E 'Model|MHz' | bat -fpPl cpuinfo
 echo ""
 echo "Memory"
 echo "------"
-free -h | bat -fpPl c ;;
+free -h | bat -fpPl c
 
 echo ""
 echo "Storage"
 echo "-------"
-df -h | bat -fpPl c ;;
+df -h | bat -fpPl c
 
 echo ""
 echo "Video Card"
