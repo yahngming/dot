@@ -1,17 +1,21 @@
 #!/bin/sh
 
+echo ""
 echo "CPU"
 echo "---"
 lscpu | grep -E 'Model|MHz' | bat -fpPl cpuinfo
 
+echo ""
 echo "Memory"
 echo "------"
 free -h | bat -fpPl c ;;
 
+echo ""
 echo "Storage"
 echo "-------"
 df -h | bat -fpPl c ;;
 
+echo ""
 echo "Video Card"
 echo "---"
 lspci | grep VGA | bat -fpPl cpuinfo
