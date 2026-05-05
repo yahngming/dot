@@ -25,12 +25,10 @@ echo "USB"
 echo "---"
 lsusb | bat -fpPl cpuinfo
 
-echo ""
-echo "Battery"
-echo "-------"
 bat=$(upower -e | grep BAT)
 if [ -n "$bat" ]; then
+	echo ""
+	echo "Battery"
+	echo "-------"
 	upower -i $bat | bat -fpPl cpuinfo
-else
-	echo "Not found."
 fi
