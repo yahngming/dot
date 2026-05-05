@@ -35,7 +35,7 @@
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
-			"about": "aboutmenu",
+			"about": "about",
 			"programs": "launcher",
 			"documents": "explorer",
 			"settings": "settings",
