@@ -18,8 +18,8 @@
 			"noiseBlankerEnabled": false,
 			"noiseBlankerLevel": 1.0,
 			"snapInterval": 10.0,
-			"squelchEnabled": false,
-			"squelchLevel": -100.0
+			"squelchEnabled": true,
+			"squelchLevel": -17.0
 		},
 		"DSB": {
 			"FMIFNREnabled": false,
@@ -28,8 +28,8 @@
 			"noiseBlankerEnabled": false,
 			"noiseBlankerLevel": 1.0,
 			"snapInterval": 100.0,
-			"squelchEnabled": false,
-			"squelchLevel": -100.0
+			"squelchEnabled": true,
+			"squelchLevel": -17.0
 		},
 		"FM": {
 			"FMIFNREnabled": true,
@@ -38,8 +38,8 @@
 			"noiseBlankerEnabled": false,
 			"noiseBlankerLevel": 1.0,
 			"snapInterval": 2500.0,
-			"squelchEnabled": false,
-			"squelchLevel": -100.0
+			"squelchEnabled": true,
+			"squelchLevel": -17.0
 		},
 		"LSB": {
 			"FMIFNREnabled": false,
@@ -49,7 +49,7 @@
 			"noiseBlankerLevel": 1.0,
 			"snapInterval": 1000.0,
 			"squelchEnabled": true,
-			"squelchLevel": -100.0
+			"squelchLevel": -17.0
 		},
 		"RAW": {
 			"FMIFNREnabled": false,
@@ -68,7 +68,7 @@
 			"noiseBlankerLevel": 1.0,
 			"snapInterval": 1000.0,
 			"squelchEnabled": true,
-			"squelchLevel": -100.0
+			"squelchLevel": -17.0
 		},
 		"WFM": {
 			"FMIFNREnabled": true,
