@@ -133,14 +133,29 @@
 					"frequency": 93000000.0,
 					"mode": 1
 				},
+				"FM 93.9": {
+					"bandwidth": 200000.0,
+					"frequency": 93900000.0,
+					"mode": 1
+				},
 				"FM 95.7": {
 					"bandwidth": 200000.0,
 					"frequency": 95700000.0,
 					"mode": 1
 				},
+				"FM 96.3": {
+					"bandwidth": 200000.0,
+					"frequency": 96300000.0,
+					"mode": 1
+				},
 				"FM 99.4": {
 					"bandwidth": 200000.0,
 					"frequency": 99400000.0,
+					"mode": 1
+				},
+				"FM 107.4": {
+					"bandwidth": 200000.0,
+					"frequency": 107400000.0,
 					"mode": 1
 				}
 			},
