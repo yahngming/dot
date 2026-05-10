@@ -3,7 +3,7 @@
 	"lists": {
 		"ADS-B": {
 			"bookmarks": {
-				"1090": {
+				"ADS-B": {
 					"bandwidth": 2000000.0,
 					"frequency": 1090000000.0,
 					"mode": 1
@@ -13,9 +13,49 @@
 		},
 		"AIR": {
 			"bookmarks": {
+				"ZSHC:AP05": {
+					"bandwidth": 10000.0,
+					"frequency": 119425000.0,
+					"mode": 2
+				},
+				"ZSNB:AP02": {
+					"bandwidth": 10000.0,
+					"frequency": 119825000.0,
+					"mode": 2
+				},
+				"ZSPD:AP12": {
+					"bandwidth": 10000.0,
+					"frequency": 119975000.0,
+					"mode": 2
+				},
 				"ZSHC:AP01": {
 					"bandwidth": 10000.0,
 					"frequency": 120050000.0,
+					"mode": 2
+				},
+				"ZSHC:AP04": {
+					"bandwidth": 10000.0,
+					"frequency": 120400000.0,
+					"mode": 2
+				},
+				"ZSPD:AR21": {
+					"bandwidth": 10000.0,
+					"frequency": 120700000.0,
+					"mode": 2
+				},
+				"ZSPD:AR03": {
+					"bandwidth": 10000.0,
+					"frequency": 120950000.0,
+					"mode": 2
+				},
+				"ZSPD:AR19": {
+					"bandwidth": 10000.0,
+					"frequency": 124950000.0,
+					"mode": 2
+				},
+				"ZSNB:AP01": {
+					"bandwidth": 10000.0,
+					"frequency": 125450000.0,
 					"mode": 2
 				},
 				"ZSHC:AP02": {
@@ -28,39 +68,14 @@
 					"frequency": 126050000.0,
 					"mode": 2
 				},
-				"ZSHC:AP04": {
-					"bandwidth": 10000.0,
-					"frequency": 120400000.0,
-					"mode": 2
-				},
-				"ZSHC:AP05": {
-					"bandwidth": 10000.0,
-					"frequency": 119425000.0,
-					"mode": 2
-				},
-				"ZSHC:ATIS": {
-					"bandwidth": 10000.0,
-					"frequency": 127250000.0,
-					"mode": 2
-				},
-				"ZSNB:AP01": {
-					"bandwidth": 10000.0,
-					"frequency": 125450000.0,
-					"mode": 2
-				},
-				"ZSNB:AP02": {
-					"bandwidth": 10000.0,
-					"frequency": 119825000.0,
-					"mode": 2
-				},
 				"ZSNB:ATIS": {
 					"bandwidth": 10000.0,
 					"frequency": 126450000.0,
 					"mode": 2
 				},
-				"ZSPD:AP12": {
+				"ZSHC:ATIS": {
 					"bandwidth": 10000.0,
-					"frequency": 119975000.0,
+					"frequency": 127250000.0,
 					"mode": 2
 				},
 				"ZSPD:AR01": {
@@ -73,24 +88,9 @@
 					"frequency": 128750000.0,
 					"mode": 2
 				},
-				"ZSPD:AR03": {
-					"bandwidth": 10000.0,
-					"frequency": 120950000.0,
-					"mode": 2
-				},
 				"ZSPD:AR18": {
 					"bandwidth": 10000.0,
 					"frequency": 132625000.0,
-					"mode": 2
-				},
-				"ZSPD:AR19": {
-					"bandwidth": 10000.0,
-					"frequency": 124950000.0,
-					"mode": 2
-				},
-				"ZSPD:AR21": {
-					"bandwidth": 10000.0,
-					"frequency": 120700000.0,
 					"mode": 2
 				}
 			},
@@ -98,6 +98,11 @@
 		},
 		"APT": {
 			"bookmarks": {
+				"NOAA 19": {
+					"bandwidth": 40000.0,
+					"frequency": 137100000.0,
+					"mode": 1
+				},
 				"NOAA 15": {
 					"bandwidth": 40000.0,
 					"frequency": 137620000.0,
@@ -106,11 +111,6 @@
 				"NOAA 18": {
 					"bandwidth": 40000.0,
 					"frequency": 137912500.0,
-					"mode": 1
-				},
-				"NOAA 19": {
-					"bandwidth": 40000.0,
-					"frequency": 137100000.0,
 					"mode": 1
 				}
 			},
@@ -148,15 +148,20 @@
 		},
 		"HAM": {
 			"bookmarks": {
+				"7.050": {
+					"bandwidth": 3000.0,
+					"frequency": 7050000.0,
+					"mode": 6
+				},
 				"14.270": {
 					"bandwidth": 3000.0,
 					"frequency": 14270000.0,
 					"mode": 4
 				},
-				"7.050": {
-					"bandwidth": 3000.0,
-					"frequency": 7050000.0,
-					"mode": 6
+				"ISS": {
+					"bandwidth": 200000.0,
+					"frequency": 145800000.0,
+					"mode": 1
 				}
 			},
 			"showOnWaterfall": true
