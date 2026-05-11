@@ -173,9 +173,14 @@
 					"frequency": 14270000.0,
 					"mode": 4
 				},
-				"ISS": {
+				"ISS Voice": {
 					"bandwidth": 200000.0,
 					"frequency": 145800000.0,
+					"mode": 1
+				},
+				"ISS Packet": {
+					"bandwidth": 200000.0,
+					"frequency": 437550000.0,
 					"mode": 1
 				}
 			},
