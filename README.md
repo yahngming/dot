@@ -27,7 +27,7 @@ password: $PASSWORD
 ```
 other packages
 ```sh
-yay android-tools blender darktable doomrunner freecad gyroflow hugin krita minecraft-launcher openrgb orca-slicer-bin rpi-imager tsukimi-git uzdoom
+yay android-tools blender darktable doomrunner freecad google-chrome gyroflow hugin krita minecraft-launcher openrgb orca-slicer-bin rpi-imager tsukimi-git uzdoom
 yay bolt intel-compute-runtime-legacy-bin tlp # for Thinkpad X1C 2018
 yay brother-hl2140 # for Brother HL2140
 yay game-devices-udev # for 8BitDo Pro 2
