@@ -147,7 +147,6 @@ window-rule {
 
 window-rule {
 	match app-id="center"
-	match app-id="config"
 	match app-id="Pinentry"
 	match app-id="xdg-desktop-portal"
 	open-floating true
