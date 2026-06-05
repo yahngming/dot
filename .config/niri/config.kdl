@@ -108,7 +108,7 @@ layout {
 }
 
 window-rule {
-	opacity 0.90
+	opacity 0.8
 	geometry-corner-radius 4
 	clip-to-geometry true
 	draw-border-with-background false
@@ -120,7 +120,7 @@ window-rule {
 window-rule {
 	match is-focused=true
 	match is-floating=true
-	opacity 0.95
+	opacity 0.9
 }
 
 window-rule {
@@ -130,12 +130,12 @@ window-rule {
 	match app-id="krita"
 	match app-id="resolve"
 	match title="- YouTube"
-	opacity 1.00
+	opacity 1.0
 }
 
 window-rule {
 	match app-id="tui"
-	default-column-width { proportion 0.75; }
+	default-column-width { proportion 0.8; }
 }
 
 window-rule {
@@ -159,9 +159,14 @@ window-rule {
 	open-fullscreen true
 }
 
+window-rule {
+	match app-id="libreoffice"
+	open-floating false
+}
+
 layer-rule {
 	match namespace="^launcher$"
-	opacity 0.95
+	opacity 0.9
 	shadow {
 		on
 	}
@@ -173,12 +178,12 @@ layer-rule {
 
 layer-rule {
 	match namespace="^waybar$"
-	opacity 0.95
+	opacity 0.9
 	background-effect {
 		blur true
 	}
 	popups {
-		opacity 0.90
+		opacity 0.8
 		geometry-corner-radius 6
 		background-effect {
 			blur true
