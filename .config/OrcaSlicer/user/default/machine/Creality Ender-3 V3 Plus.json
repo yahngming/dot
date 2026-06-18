@@ -1,0 +1,16 @@
+{
+	"from": "User",
+	"host_type": "crealityprint",
+	"inherits": "Creality Ender-3 V3 Plus 0.4 nozzle",
+	"name": "Creality Ender-3 V3 Plus",
+	"print_host": "3DPRINTER",
+	"printer_extruder_id": [
+		"1"
+	],
+	"printer_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"printer_settings_id": "Creality Ender-3 V3 Plus",
+	"thumbnails": "80x80/PNG, 320x320/PNG",
+	"version": "2.3.2.60"
+}
