@@ -1,15 +1,16 @@
 #!/bin/sh
 
-case "$TERMINAL" in
-	foot ) opt="-a" ;;
-	st   ) opt="-c" ;;
-esac
-
 case "$@" in
 	bc*                                                                              ) opt="$opt bottomright" ;;
 	bat*|clean|dockers*|dot|*fetch*|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) opt="$opt center" ;;
 	asciiquarium*|lavat*|*matrix*|*svr                                               ) opt="$opt screensaver" ;;
 	*                                                                                ) opt="$opt tui" ;;
+esac
+
+case "$TERMINAL" in
+	foot ) opt="-a $opt" ;;
+	st   ) opt="-c $opt" ;;
+	xfce ) opt="--hide-menubar --hide-borders --hide-toolbar --hide-scrollbar --class=$opt" ;;
 esac
 
 if [ "$opt" == "-a screensaver" ]; then
