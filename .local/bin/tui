@@ -1,20 +1,21 @@
 #!/bin/sh
 
 case "$@" in
-	bc*                                                                              ) opt="$opt bottomright" ;;
-	bat*|clean|dockers*|dot|*fetch*|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) opt="$opt center" ;;
-	asciiquarium*|lavat*|*matrix*|*svr                                               ) opt="$opt screensaver" ;;
-	*                                                                                ) opt="$opt tui" ;;
+	bc*                                                                              ) class="bottomright" ;;
+	bat*|clean|dockers*|dot|*fetch*|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) class="center" ;;
+	asciiquarium*|lavat*|*matrix*|*svr                                               ) class="screensaver" ;;
+	*                                                                                ) class="tui" ;;
 esac
+title=$(echo "$@" | cut -d ' ' -f 1)
 
 case "$TERMINAL" in
-	foot ) opt="-a $opt" ;;
-	st   ) opt="-c $opt" ;;
-	xfce ) opt="--hide-menubar --hide-borders --hide-toolbar --hide-scrollbar --class=$opt" ;;
+	foot           ) opt="-a $class -T $title -e $SHELL -c" ;;
+	st             ) opt="-c $class -T $title -e $SHELL -c" ;;
+	xfce4-terminal ) opt="--hide-menubar --hide-borders --hide-toolbar --hide-scrollbar --class=$class --title=$title -e" ;;
 esac
 
-if [ "$opt" == "-a screensaver" ]; then
-	opt="$opt -o initial-color-theme=2"
+if [ "$opt" =~ "-a screensaver" ]; then
+	opt="-o initial-color-theme=2 $opt"
 fi
 
-$TERMINAL $opt -T $(echo "$@" | cut -d ' ' -f 1) -e $SHELL -c "$@"
+$TERMINAL $opt "$@"
