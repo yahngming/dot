@@ -15,7 +15,11 @@ case "$TERMINAL" in
 esac
 
 if [ "$opt" == *"-a screensaver" ]; then
-	opt="-o initial-color-theme=2 $opt"
+	opt="-o initial-color-theme=2 -F $opt"
+elif [ "$opt" == *"-c screensaver" ]; then
+	opt="-F $opt"
+elif [ "$opt" == *"--class=screensaver" ]; then
+	opt="--fullscreen $opt"
 fi
 
 $TERMINAL $opt "$@"
