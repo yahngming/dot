@@ -45,7 +45,7 @@
 			"exec": "echo 'File'",
 			"interval": 60,
 			"return-type": "plain",
-			"on-click": "explorer"
+			"on-click": "files"
 		},
 		"custom/textthree": {
 			"exec": "echo 'Edit'",
