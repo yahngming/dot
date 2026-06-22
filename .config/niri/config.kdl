@@ -49,7 +49,7 @@ binds {
 	Mod+C                 { spawn "calculator"; }
 	Mod+D                 { spawn "transmenu"; }
 	Mod+E                 { spawn "editor"; }
-	Mod+F                 { spawn "explorer"; }
+	Mod+F                 { spawn "file"; }
 	Mod+G                 { spawn "game"; }
 	Mod+I                 { spawn "settings"; }
 	Mod+L                 { spawn "powermenu"; }
