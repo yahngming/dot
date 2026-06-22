@@ -1,25 +1,23 @@
 #!/bin/sh
 
+title=$(echo "$@" | cut -d ' ' -f 1)
 case "$@" in
 	bc*                                                                              ) class="bottomright" ;;
 	bat*|clean|dockers*|dot|*fetch*|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) class="center" ;;
 	asciiquarium*|lavat*|*matrix*|*svr                                               ) class="screensaver" ;;
 	*                                                                                ) class="tui" ;;
 esac
-title=$(echo "$@" | cut -d ' ' -f 1)
-
-case "$TERMINAL" in
-	foot           ) opt="-a $class -T $title -e $SHELL -c" ;;
-	st             ) opt="-c $class -T $title -e $SHELL -c" ;;
-	xfce4-terminal ) opt="--hide-menubar --hide-borders --hide-toolbar --hide-scrollbar --class=$class --title=$title -e" ;;
-esac
-
-if [ "$opt" == *"-a screensaver" ]; then
-	opt="-o initial-color-theme=2 -F $opt"
-elif [ "$opt" == *"-c screensaver" ]; then
-	opt="-F $opt"
-elif [ "$opt" == *"--class=screensaver" ]; then
-	opt="--fullscreen $opt"
+if [ "$class" = "screensaver" ]; then
+	case "$TERMINAL" in
+		foot           ) theme="-o initial-color-theme=2 -F" ;;
+		st             ) theme="-F" ;;
+		xfce4-terminal ) theme="--fullscreen" ;;
+	esac
 fi
+case "$TERMINAL" in
+	foot           ) opt="-T $title -a $class $theme -e $SHELL -c" ;;
+	st             ) opt="-T $title -c $class $theme -e $SHELL -c" ;;
+	xfce4-terminal ) opt="--title=$title --class=$class $theme --hide-menubar --hide-borders --hide-toolbar --hide-scrollbar -e" ;;
+esac
 
 $TERMINAL $opt "$@"
