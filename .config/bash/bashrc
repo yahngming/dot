@@ -29,17 +29,17 @@ help() {
 start() {
 	case "$DESKTOP" in
 		*dwm*)
-			export FILE="lf"
+			export FILES="lf"
 			export LAUNCHER="dmenu"
 			export TERMINAL="st"
 			;;
 		*Hyprland*|*niri*)
-			export FILE="yazi"
+			export FILES="yazi"
 			export LAUNCHER="fuzzel"
 			export TERMINAL="foot"
 			;;
 		*xfce*)
-			export FILE="thunar"
+			export FILES="thunar"
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
 			export TERMINAL="xfce4-terminal"
