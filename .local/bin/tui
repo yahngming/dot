@@ -14,7 +14,7 @@ case "$TERMINAL" in
 	xfce4-terminal ) opt="--hide-menubar --hide-borders --hide-toolbar --hide-scrollbar --class=$class --title=$title -e" ;;
 esac
 
-if [ "$opt" =~ "-a screensaver" ]; then
+if [ "$opt" == *"-a screensaver" ]; then
 	opt="-o initial-color-theme=2 $opt"
 fi
 
