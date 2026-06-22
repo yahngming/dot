@@ -1,6 +1,0 @@
-#!/bin/sh
-
-case "$FILE" in
-	*thunar* ) $FILE "$@" ;;
-	*        ) tui "$FILE $@" ;;
-esac
