@@ -28,7 +28,7 @@ help() {
 
 start() {
 	case "$DESKTOP" in
-		*dwm*|*xfce*)
+		*dwm*)
 			export LAUNCHER="dmenu"
 			export TERMINAL="st"
 			;;
@@ -36,10 +36,10 @@ start() {
 			export LAUNCHER="fuzzel"
 			export TERMINAL="foot"
 			;;
-	esac
-	case "$DESKTOP" in
 		*xfce*)
+			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
+			export TERMINAL="xfce4-terminal"
 			;;
 	esac
 	if [ -f ~/.config/proxy ]; then
@@ -54,6 +54,7 @@ start() {
 
 export BROWSER="firefox"
 export DESKTOP="$(head -n 1 ~/.config/desktop)"
+export EDITOR="vim"
 export FZF_DEFAULT_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix"
 export FZF_CTRL_T_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type file"
 export FZF_ALT_C_COMMAND="fd --exclude .git --follow --hidden --strip-cwd-prefix --type directory"
