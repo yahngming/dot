@@ -37,7 +37,7 @@
 		"menu-actions": {
 			"about": "about",
 			"programs": "launcher",
-			"documents": "explorer",
+			"documents": "files",
 			"settings": "settings",
 			"shell": "terminal",
 			"shutdown": "powermenu"
