@@ -1,8 +1,6 @@
 [mgr]
 prepend_keymap = [
-	{ on = [ "g", "c" ], run = "cd $HOME/.config", desc = "Go to configs" },
-	{ on = [ "g", "d" ], run = "cd $HOME/Downloads", desc = "Go to downloads" },
-	{ on = [ "g", "m" ], run = "cd $XDG_RUNTIME_DIR/gvfs", desc = "Go to mounts" },
-	{ on = [ "g", "t" ], run = "cd $HOME/.local/share/Trash/files", desc = "Go to trash" },
-	{ on = [ "g", "u" ], run = "cd /run/media/$USER", desc = "Go to usb" },
+	{ on = [ "g", "m" ], run = "cd $XDG_RUNTIME_DIR/gvfs", desc = "Go mounts" },
+	{ on = [ "g", "t" ], run = "cd $HOME/.local/share/Trash/files", desc = "Go trash" },
+	{ on = [ "g", "u" ], run = "cd /run/media/$USER", desc = "Go USB" },
 ]
