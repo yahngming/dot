@@ -22,8 +22,8 @@ case "${1##*.}" in
 		exit 1
 		;;
 	docx|odg|odp|ods|odt|pptx|xlsx)
-		[ ! -f "${cachefile}.jpg" ] && libreoffice --headless --convert-to jpg --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').jpg" "$cachefile.jpg"
-		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
+		[ ! -f "${cachefile}.png" ] && libreoffice --headless --convert-to png --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').png" "$cachefile.png"
+		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 	htm|html|xhtml)
@@ -44,13 +44,13 @@ case "${1##*.}" in
 		exit 1
 		;;
 	pdf)
-		[ ! -f "${cachefile}.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$cachefile"
-		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
+		[ ! -f "${cachefile}.png" ] && pdftoppm -png -f 1 -singlefile "$1" "$cachefile"
+		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 	svg)
-		[ ! -f "${cachefile}" ] && convert "$1" "jpg:$cachefile"
-		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
+		[ ! -f "${cachefile}.png" ] && convert "$1" "png:$cachefile"
+		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 esac
@@ -70,8 +70,8 @@ case "$(file -Lb --mime-type -- "$1")" in
 		exit 1
 		;;
 	video/*)
-		[ ! -f "${cachefile}.png" ] && ffmpegthumbnailer -i "$1" -o "$cachefile.png" -s 0 -t 50% 2>/dev/null
-		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
+		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$1" -o "$cachefile.jpg" -s 0 -t 50% 2>/dev/null
+		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 esac
