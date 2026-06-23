@@ -13,7 +13,7 @@ if [ "$debug" = 1 ]; then
 fi
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	term="foot -a"
+	termcmd="foot -a"
 	files="yazi"
 	if [ "$save" = "1" ]; then
 		set -- --chooser-file="$out" "$path"
@@ -25,7 +25,7 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 		set -- --chooser-file="$out" "$path"
 	fi
 elif [ -n "$DISPLAY" ]; then
-	term="st -c"
+	termcmd="st -c"
 	files="lf"
 	if [ "$save" = "1" ]; then
 		set -- -selection-path "$out" "$path"
@@ -38,7 +38,7 @@ elif [ -n "$DISPLAY" ]; then
 	fi
 fi
 
-command="$term center -T termfilechooser -e $files"
+command="$termcmd center -T termfilechooser -e $files"
 for arg in "$@"; do
 	escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
 	command="$command \"$escaped\""
