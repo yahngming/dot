@@ -1,23 +1,18 @@
 #!/bin/sh
 
-title=$(echo "$@" | cut -d ' ' -f 1)
 case "$@" in
 	bc*                                                                              ) class="bottomright" ;;
 	bat*|clean|dockers*|dot|*fetch*|impala|proxy*|rclone*|timezone*|*tui*|up|wiremix ) class="center" ;;
 	asciiquarium*|lavat*|*matrix*|*svr                                               ) class="screensaver" ;;
 	*                                                                                ) class="tui" ;;
 esac
-if [ "$class" = "screensaver" ]; then
-	case "$TERMINAL" in
-		foot           ) theme="-o initial-color-theme=2 -F" ;;
-		st             ) theme="-F" ;;
-		xfce4-terminal ) theme="--fullscreen" ;;
-	esac
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	if [ "$class" = "screensaver" ]; then
+		theme="-o initial-color-theme=2"
+	command="foot $theme -a"
+elif [ -n "$DISPLAY" ]; then
+	command="st -c"
 fi
-case "$TERMINAL" in
-	foot           ) opt="-T $title -a $class $theme -e $SHELL -c" ;;
-	st             ) opt="-T $title -c $class $theme -e $SHELL -c" ;;
-	xfce4-terminal ) opt="--title=$title --class=$class $theme --hide-menubar --hide-borders --hide-toolbar --hide-scrollbar -e" ;;
-esac
+title="-T $(echo "$@" | cut -d ' ' -f 1)"
 
-$TERMINAL $opt "$@"
+$command $class -T $title -e $SHELL -c "$@"
