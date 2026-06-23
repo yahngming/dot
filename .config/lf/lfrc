@@ -41,8 +41,8 @@ map <c-s> :fzf_search
 map <c-v> paste
 map <c-x> cut
 map <c-z> trash-restore
-map <m-2> visual-accept
 map <m-3> %dragon-drop -a -x $fx
+map <s-m-1> visual
 
 cmd archive ${{
 	set -f
