@@ -7,7 +7,7 @@ set ifs "\n"
 set info size
 set mouse
 set period 1
-set previewer ctpv
+set previewer scope
 set scrolloff 0
 set shell sh
 set shellopts '-eu'
