@@ -42,7 +42,7 @@ map <c-v> paste
 map <c-x> cut
 map <c-z> trash-restore
 map <m-3> %dragon-drop -a -x $fx
-map <s-m-1> visual
+map <c-m-1> visual
 
 cmd archive ${{
 	set -f
