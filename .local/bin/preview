@@ -13,6 +13,10 @@ cachefile="$cachedir/thumbnail.$(sha256sum "$1" | awk '{print $1}').jpg"
 mkdir -p "$cachedir"
 
 case "${1##*.}" in
+	diff)
+		delta < "$1" && exit 0
+		exit 1
+		;;
 	docx|pptx|xlsx)
 		[ ! -f "${cachefile}" ] && libreoffice --headless --convert-to jpg --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').jpg" "$cachefile"
 		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
