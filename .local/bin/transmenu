@@ -30,7 +30,6 @@ clip_menu() {
 
 lang_menu() {
 	echo "$TRANS_LANGS" | sed 's/\s\+/\n/g' | sed '/:/!s/^/:/'
-	echo ":define"
 }
 
 save_file() (
@@ -66,9 +65,5 @@ text="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
 text="$(get_text "$text" "$clip_menu")"
 if [ -n "$text" ]; then
 	target="$(lang_menu | eval "menu -p 'Into:'" '$@')" || exit 0
-	if [ "$target" = ":define" ]; then
-		open_term "$(trans -dictionary "$text")"
-	else
-		open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
-	fi
+	open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
 fi
