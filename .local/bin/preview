@@ -15,7 +15,7 @@ image() {
 }
 
 cachedir="$HOME/.cache/lf"
-cachefile="$cachedir/thumbnail.$(sha256sum "$1" | awk '{print $1}')"
+cachefile="$cachedir/thumbnail.$(sha256sum "$1" | awk '{print $1}').jpg"
 mkdir -p "$cachedir"
 
 case "${1##*.}" in
@@ -37,8 +37,8 @@ case "${1##*.}" in
 		exit 1
 		;;
 	pdf)
-		[ ! -f "${cachefile}.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$cachefile"
-		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
+		[ ! -f "${cachefile}" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$cachefile"
+		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 	rar)
@@ -46,8 +46,8 @@ case "${1##*.}" in
 		exit 1
 		;;
 	docx|pptx|xlsx)
-		[ ! -f "${cachefile}.jpg" ] && libreoffice --headless --convert-to jpg --outdir "$cachedir" "$1" && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').jpg" "$cachefile"
-		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
+		[ ! -f "${cachefile}" ] && libreoffice --headless --convert-to jpg --outdir "$cachedir" "$1" && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').jpg" "$cachefile"
+		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 esac
