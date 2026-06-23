@@ -14,6 +14,6 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 elif [ -n "$DISPLAY" ]; then
 	command="st -c"
 fi
-title="-T $(echo "$@" | cut -d ' ' -f 1)"
+title="$(echo "$@" | cut -d ' ' -f 1)"
 
 $command $class -T $title -e $SHELL -c "$@"
