@@ -1,6 +1,6 @@
 #!/bin/sh
 
 case "$FILES" in
-	*thunar* ) $FILES "$@" ;;
-	*        ) tui "$FILES $@" ;;
+	thunar ) $FILES "$@" ;;
+	*      ) tui "$FILES $@" ;;
 esac
