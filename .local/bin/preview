@@ -52,7 +52,7 @@ case "$(file -Lb --mime-type -- "$1")" in
 		exit 1
 		;;
 	audio/*)
-		exiftool "$1" && exit 0
+		[ ! -f "${cachefile}" ] && ffmpegthumbnailer -i "$1" -s 0 -q 50% -t 10 -o "$cachefile" 2>/dev/null
 		exit 1
 		;;
 	image/*)
