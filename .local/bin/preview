@@ -17,7 +17,7 @@ image() {
 cachedir="$HOME/.cache/lf"
 cachefile="$cachedir/thumbnail.$(sha256sum "$1" | awk '{print $1}')"
 
-case "${${1##*/##*.},,}" in
+case "${1##*.}" in
 	7z)
 		7z l -p -- "$1" && exit 0
 		exit 1
