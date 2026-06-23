@@ -1,5 +1,8 @@
 #!/bin/sh
 
+pkill $LAUNCHER && exit
+pkill dmenu && exit
+
 case "$LAUNCHER" in
 	fuzzel ) $LAUNCHER --dmenu "$@" ;;
 	*      ) dmenu "$@" ;;
