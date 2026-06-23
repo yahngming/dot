@@ -1,4 +1,3 @@
-set cleaner ctpvclear
 set cursorpreviewfmt ""
 set dircounts
 set drawbox
@@ -11,8 +10,6 @@ set previewer preview
 set scrolloff 0
 set shell sh
 set shellopts '-eu'
-&ctpv -s $id
-&ctpvquit $id
 
 map ` !true
 map . set hidden!
