@@ -1,7 +1,5 @@
 #!/bin/sh
 
-pkill $LAUNCHER && exit
-
 load_config() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		: "${CLIP_COPY:=wl-copy -n}"
