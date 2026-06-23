@@ -2,7 +2,6 @@
 
 case "$LAUNCHER" in
 	fuzzel ) opt="--password --prompt-only=[sudo]password:" ;;
-	walker ) opt="--password --placeholder [sudo]password:" ;;
 	*      ) opt="-P -p [sudo]password:" ;;
 esac
 
