@@ -53,6 +53,7 @@ case "$(file -Lb --mime-type -- "$1")" in
 		;;
 	audio/*)
 		[ ! -f "${cachefile}" ] && ffmpegthumbnailer -i "$1" -s 0 -q 50% -t 10 -o "$cachefile" 2>/dev/null
+		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 	image/*)
