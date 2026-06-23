@@ -33,7 +33,7 @@ map zd push %mkdir<space>
 map zf push %touch<space>
 map zu unarchive
 map <enter> open
-map <esc> :clear; setfilter; unselect
+map <esc> :clear; setfilter; unselect; visual-discard
 map <c-a> :unselect; invert
 map <c-c> copy
 map <c-f> :fzf_jump
@@ -42,7 +42,7 @@ map <c-v> paste
 map <c-x> cut
 map <c-z> trash-restore
 map <m-2> %dragon-drop -a -x $fx
-map <c-m-1> invert-below
+map <c-m-1> visual-accept
 
 cmd archive ${{
 	set -f
