@@ -13,13 +13,9 @@ cachefile="$cachedir/thumbnail.$(sha256sum "$1" | awk '{print $1}').jpg"
 mkdir -p "$cachedir"
 
 case "${1##*.}" in
-	7z)
-		7z l -p -- "$1" && exit 0
-		exit 1
-		;;
-	a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
-	rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
-		atool --list -- "$1" && exit 0
+	docx|pptx|xlsx)
+		[ ! -f "${cachefile}" ] && libreoffice --headless --convert-to jpg --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').jpg" "$cachefile"
+		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 	htm|html|xhtml)
@@ -30,23 +26,22 @@ case "${1##*.}" in
 		jq --color-output . "$1" && exit 0
 		exit 1
 		;;
+	md)
+		glow "$1" && exit 0
+		exit 1
+		;;
 	pdf)
 		[ ! -f "${cachefile}" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$cachefile" && mv "$cachefile.jpg" "$cachefile"
-		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
-		exit 1
-		;;
-	rar)
-		unrar lt -p- -- "$1" && exit 0
-		exit 1
-		;;
-	docx|pptx|xlsx)
-		[ ! -f "${cachefile}" ] && libreoffice --headless --convert-to jpg --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').jpg" "$cachefile"
 		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 esac
 
 case "$(file -Lb --mime-type -- "$1")" in
+	archive/*)
+		atool --list -- "$1" && exit 0
+		exit 1
+		;;
 	audio/*)
 		exiftool "$1" && exit 0
 		exit 1
