@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$FILES" in
-	thunar ) $FILES "$@" ;;
-	*      ) tui "$FILES $@" ;;
+case "$DESKTOP" in
+	*xfce* ) thunar "$@" ;;
+	*      ) tui "lf $@" ;;
 esac
