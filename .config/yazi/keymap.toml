@@ -1,6 +1,0 @@
-[mgr]
-prepend_keymap = [
-	{ on = [ "g", "m" ], run = "cd $XDG_RUNTIME_DIR/gvfs", desc = "Go mounts" },
-	{ on = [ "g", "t" ], run = "cd $HOME/.local/share/Trash/files", desc = "Go trash" },
-	{ on = [ "g", "u" ], run = "cd /run/media/$USER", desc = "Go USB" },
-]
