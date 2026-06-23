@@ -10,7 +10,7 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 	if [ "$class" = "screensaver" ]; then
 		theme="-o initial-color-theme=light"
 	fi
-	command="foot -a"
+	command="foot $theme -a"
 elif [ -n "$DISPLAY" ]; then
 	command="st -c"
 fi
