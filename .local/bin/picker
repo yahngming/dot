@@ -1,10 +1,56 @@
 #!/bin/sh
 
-if [ -n "$WAYLAND_DISPLAY" ]; then
-	term="foot -a"
-elif [ -n "$DISPLAY" ]; then
-	term="st -c"
+multiple="$1"
+directory="$2"
+save="$3"
+path="$4"
+out="$5"
+debug="$6"
+
+set -e
+if [ "$debug" = 1 ]; then
+	set -x
 fi
 
-command="$term center -T termfilechooser -e $FILES"
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	term="foot -a"
+	files="yazi"
+	if [ "$save" = "1" ]; then
+		set -- --chooser-file="$out" "$path"
+	elif [ "$directory" = "1" ]; then
+		set -- --chooser-file="$out" --cwd-file="$out"".1" "$path"
+	elif [ "$multiple" = "1" ]; then
+		set -- --chooser-file="$out" "$path"
+	else
+		set -- --chooser-file="$out" "$path"
+	fi
+elif [ -n "$DISPLAY" ]; then
+	term="st -c"
+	files="lf"
+	if [ "$save" = "1" ]; then
+		set -- -selection-path "$out" "$path"
+	elif [ "$directory" = "1" ]; then
+		set -- -last-dir-path "$out" "$path"
+	elif [ "$multiple" = "1" ]; then
+		set -- -selection-path "$out" "$path"
+	else
+		set -- -selection-path "$out" "$path"
+	fi
+fi
+
+command="$term center -T termfilechooser -e $files"
+for arg in "$@"; do
+	escaped=$(printf "%s" "$arg" | sed 's/"/\\"/g')
+	command="$command \"$escaped\""
+done
+
 sh -c "$command"
+
+if [ "$directory" = "1" ]; then
+	if [ ! -s "$out" ] && [ -s "$out"".1" ]; then
+		cat "$out"".1" > "$out"
+		rm "$out"".1"
+	else
+		rm "$out"".1"
+	fi
+fi
