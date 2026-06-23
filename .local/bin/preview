@@ -13,6 +13,10 @@ cachefile="$cachedir/thumbnail.$(sha256sum "$1" | awk '{print $1}').jpg"
 mkdir -p "$cachedir"
 
 case "${1##*.}" in
+	7z|gz|rar|tar|zip)
+		atool --list -- "$1" && exit 0
+		exit 1
+		;;
 	diff)
 		delta < "$1" && exit 0
 		exit 1
@@ -47,10 +51,6 @@ case "${1##*.}" in
 esac
 
 case "$(file -Lb --mime-type -- "$1")" in
-	archive/*)
-		atool --list -- "$1" && exit 0
-		exit 1
-		;;
 	audio/*)
 		[ ! -f "${cachefile}" ] && ffmpegthumbnailer -i "$1" -s 0 -q 50% -t 10 -o "$cachefile" 2>/dev/null
 		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
@@ -70,3 +70,5 @@ case "$(file -Lb --mime-type -- "$1")" in
 		exit 1
 		;;
 esac
+
+exiftool -- "$1" && exit 0
