@@ -31,7 +31,7 @@ case "${1##*.}" in
 		exit 1
 		;;
 	pdf)
-		[ ! -f "${cachefile}" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$cachefile"
+		[ ! -f "${cachefile}" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$cachefile" && mv "$cachefile.jpg" "$cachefile"
 		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
@@ -40,7 +40,7 @@ case "${1##*.}" in
 		exit 1
 		;;
 	docx|pptx|xlsx)
-		[ ! -f "${cachefile}" ] && libreoffice --headless --convert-to jpg --outdir "$cachedir" "$1" && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').jpg" "$cachefile"
+		[ ! -f "${cachefile}" ] && libreoffice --headless --convert-to jpg --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').jpg" "$cachefile"
 		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
@@ -56,7 +56,7 @@ case "$(file -Lb --mime-type -- "$1")" in
 		exit 1
 		;;
 	video/*)
-		[ ! -f "${cachefile}" ] && ffmpegthumbnailer -i "$1" -o "$cachefile" -s 0 -t 50%
+		[ ! -f "${cachefile}" ] && ffmpegthumbnailer -i "$1" -o "$cachefile" -s 0 -t 50% 2>/dev/null
 		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
