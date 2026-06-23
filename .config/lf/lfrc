@@ -16,12 +16,12 @@ set shellopts '-eu'
 
 map ` !true
 map . set hidden!
-map d trash
-map D delete
 map e edit
 map f filter
 map i pager
 map r bulk-rename
+map x trash
+map X delete
 map gc ${{lf -remote "send $id cd $HOME/.config"}}
 map gd ${{lf -remote "send $id cd $HOME/Downloads"}}
 map gm ${{lf -remote "send $id cd $XDG_RUNTIME_DIR/gvfs"}}
