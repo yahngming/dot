@@ -10,10 +10,10 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
 	if [ "$class" = "screensaver" ]; then
 		theme="-o initial-color-theme=light"
 	fi
-	termcmd="foot $theme -a"
+	command="foot $theme -a"
 elif [ -n "$DISPLAY" ]; then
-	termcmd="st -c"
+	command="st -c"
 fi
 title="$(echo "$@" | cut -d ' ' -f 1)"
 
-$termcmd $class -T $title -e $SHELL -c "$@"
+$command $class -T $title -e $SHELL -c "$@"
