@@ -1,7 +1,5 @@
 #!/bin/sh
 
-pkill $LAUNCHER && exit
-
 menu="\
  Lock\n\
 󰗽 Logout\n\
