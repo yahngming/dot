@@ -1,17 +1,11 @@
 #!/bin/sh
 
-text() {
-	file="$1"
-	shift
-	if command -v bat >/dev/null 2>&1; then
-		bat --color=always --style=plain --pager=never "$file" "$@"
-	else
-		cat "$file"
-	fi
-}
-
 image() {
 	chafa -f sixels -s "$2x$3" --animate off --polite on "$1"
+}
+
+text() {
+	bat --color=always --style=plain --pager=never "$1"
 }
 
 cachedir="$HOME/.cache/lf"
@@ -62,8 +56,8 @@ case "$(file -Lb --mime-type -- "$1")" in
 		exit 1
 		;;
 	video/*)
-		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$1" -o "$cachefile" -s 0 -t 50%
-		image "$1" "$2" "$3" "$4" "$5" && exit 0
+		[ ! -f "${cachefile}" ] && ffmpegthumbnailer -i "$1" -o "$cachefile" -s 0 -t 50%
+		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
 esac
