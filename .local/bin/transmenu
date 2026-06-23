@@ -64,7 +64,9 @@ clipboard="$(get_selection clip)"
 clip_menu="$(clip_menu "$primary" "$clipboard")"
 text="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
 text="$(get_text "$text" "$clip_menu")"
-target="$(lang_menu | eval "menu -p 'Into:'" '$@')" || exit 0
+if [ -n "$text" ]; then
+	target="$(lang_menu | eval "menu -p 'Into:'" '$@')" || exit 0
+fi
 
 if [ "$target" = ":define" ]; then
 	open_term "$(trans -dictionary "$text")"
