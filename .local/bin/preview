@@ -39,6 +39,11 @@ case "${1##*.}" in
 		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
 		exit 1
 		;;
+	svg)
+		[ ! -f "${cachefile}" ] && convert "$1" "jpg:$cachefile"
+		image "${cachefile}" "$2" "$3" "$4" "$5" && exit 0
+		exit 1
+		;;
 esac
 
 case "$(file -Lb --mime-type -- "$1")" in
