@@ -22,32 +22,17 @@ _fzf_comprun() {
 	esac
 }
 
-cwd() {
-	local tmp="$(mktemp -t "cwd.XXXXXX")" cwd
-	command $FILES "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
-	command rm -f -- "$tmp"
-}
-
-help() {
-	"$@" --help 2>&1 | bat --plain --language=help
-}
-
 start() {
 	case "$DESKTOP" in
 		*dwm*)
-			export FILES="lf"
 			export LAUNCHER="dmenu"
 			export TERMINAL="st"
 			;;
 		*Hyprland*|*niri*)
-			export FILES="yazi"
 			export LAUNCHER="fuzzel"
 			export TERMINAL="foot"
 			;;
 		*xfce*)
-			export FILES="thunar"
 			export LAUNCHER="xfce4-appfinder"
 			export QT_STYLE_OVERRIDE="Windows"
 			export TERMINAL="xfce4-terminal"
