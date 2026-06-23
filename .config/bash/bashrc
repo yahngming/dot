@@ -22,7 +22,7 @@ _fzf_comprun() {
 	esac
 }
 
-f() {
+cwd() {
 	local tmp="$(mktemp -t "cwd.XXXXXX")" cwd
 	command $FILES "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"
