@@ -5,13 +5,18 @@ case "$1" in
 	http*                            ) setsid -f browser >/dev/null 2>&1 "$1" ;;
 esac
 
+case "${1##*.}" in
+	diff                             ) delta --paging always < "$1" ;;
+	epub|pdf                         ) setsid -f zathura >/dev/null 2>&1 "$1" ;;
+	htm|html|xhtml                   ) w3m "$1" ;;
+	json                             ) jq --color-output . "$1" ;;
+	md                               ) glow --pager "$1" ;;
+esac
+
 case $(file --mime-type -Lb "$1") in
 	*archive*|*compress*|*rar*|*tar* ) als --page "$1" ;;
 	*audio*|*video*                  ) setsid -f mpv --force-window >/dev/null 2>&1 "$1" ;;
-	*diff*                           ) delta --paging always < "$1" ;;
 	*document*                       ) setsid -f libreoffice >/dev/null 2>&1 "$1" ;;
-	*epub*|*pdf*                     ) setsid -f zathura >/dev/null 2>&1 "$1" ;;
 	*image*                          ) setsid -f nsxiv -a >/dev/null 2>&1 "$1" * ;;
-	*json*|*text*|*xml*              ) bat --paging always "$1" ;;
-	*md*|*markdown*                  ) glow --pager "$1" ;;
+	*text*|*xml*                     ) bat --paging always "$1" ;;
 esac
