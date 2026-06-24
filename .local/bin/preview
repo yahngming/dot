@@ -14,7 +14,7 @@ mkdir -p "$cachedir"
 
 case "${1##*.}" in
 	1)
-		groff -mandoc -Tutf8 "$1" | col -bx && exit 0
+		GROFF_NO_SGR=1 groff -mandoc -Tutf8 "$1" | col -b && exit 0
 		;;
 	7z|gz|rar|tar|zip)
 		atool --list -- "$1" && exit 0
