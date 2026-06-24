@@ -3,24 +3,24 @@
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'
 
-file="${1}"
-width="${2:-80}"
-height="${3:-40}"
-ext="${file##*.}"
-extlower="$(printf "%s" "${ext}" | tr '[:upper:]' '[:lower:]')"
+file="$1"
+width="$2"
+height="$3"
+extension="$(printf "%s" "${file##*.}" | tr '[:upper:]' '[:lower:]')"
+type="$(file -Lb --mime-type -- "$file")"
 cachedir="$HOME/.cache/thumbnails/preview"
 cachefile="$cachedir/$(sha256sum "$file" | awk '{print $1}')"
 mkdir -p "$cachedir"
 
 image() {
-	chafa -f sixels -s "$width"x"$height" --clear --animate off --polite on "$1" && exit 0 || exit 1
+	chafa -f sixels -s "$width"x"$height" --clear --animate off --polite on "$1" && exit 0
 }
 
 text() {
 	bat --color=always --style=plain --pager=never "$1" && exit 0
 }
 
-case "${1##*.}" in
+case "$extension" in
 	1)
 		man --local-file "$file" && exit 0
 		;;
