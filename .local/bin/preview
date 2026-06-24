@@ -8,8 +8,8 @@ text() {
 	bat --color=always --style=plain --pager=never "$1"
 }
 
-cachedir="$HOME/.cache/lf"
-cachefile="$cachedir/thumbnail.$(sha256sum "$1" | awk '{print $1}')"
+cachedir="$HOME/.cache/thumbnails/preview"
+cachefile="$cachedir/$(sha256sum "$1" | awk '{print $1}')"
 mkdir -p "$cachedir"
 
 case "${1##*.}" in
