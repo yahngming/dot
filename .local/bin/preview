@@ -44,7 +44,7 @@ case "${1##*.}" in
 		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
 		;;
 	stl)
-		[ ! -f "${cachefile}.png" ] && f3d --no-background --max-size=512 "$1" --output="${cachefile}.png" 2>/dev/null
+		[ ! -f "${cachefile}.png" ] && f3d --no-background --max-size 512 --input "$1" --output "${cachefile}.png" 2>/dev/null
 		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
 		;;
 	svg)
