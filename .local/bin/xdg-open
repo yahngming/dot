@@ -10,7 +10,7 @@ case "${1##*.}" in
 	diff                             ) delta --paging always < "$1" && exit ;;
 	epub|pdf                         ) setsid -f zathura >/dev/null 2>&1 "$1" && exit ;;
 	htm|html|xhtml                   ) w3m "$1" && exit ;;
-	json                             ) jq --color-output . "$1" | less -R && exit ;;
+	json                             ) jq --color-output . "$1" | $PAGER && exit ;;
 	md                               ) glow --pager "$1" && exit ;;
 esac
 
