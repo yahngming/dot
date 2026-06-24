@@ -15,47 +15,37 @@ mkdir -p "$cachedir"
 case "${1##*.}" in
 	1)
 		man --local-file "$1" && exit 0
-		exit 1
 		;;
 	7z|gz|rar|tar|zip)
 		atool --list -- "$1" && exit 0
-		exit 1
 		;;
 	dff|diff)
 		delta < "$1" && exit 0
-		exit 1
 		;;
 	docx|odg|odp|ods|odt|pptx|xlsx)
 		[ ! -f "${cachefile}.png" ] && libreoffice --headless --convert-to png --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').png" "$cachefile.png"
 		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
-		exit 1
 		;;
 	htm|html|xhtml)
 		w3m -dump "$1" && exit 0
-		exit 1
 		;;
 	json)
 		jq --color-output . "$1" && exit 0
-		exit 1
 		;;
 	md)
-		CLICOLOR_FORCE=1 glow "$1" && exit 0
-		exit 1
+		CLICOLOR_FORCE=1 glow --style dark "$1" && exit 0
 		;;
 	otf|ttf)
 		[ ! -f "${cachefile}.png" ] && fontimage -o "$cachefile.png" "$1" 2>/dev/null
 		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
-		exit 1
 		;;
 	pdf)
 		[ ! -f "${cachefile}.png" ] && pdftoppm -png -f 1 -singlefile "$1" "$cachefile"
 		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
-		exit 1
 		;;
 	svg)
 		[ ! -f "${cachefile}.png" ] && convert "$1" "png:$cachefile"
 		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
-		exit 1
 		;;
 esac
 
@@ -63,20 +53,16 @@ case "$(file -Lb --mime-type -- "$1")" in
 	audio/*)
 		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$1" -s 0 -q 50% -t 10 -o "$cachefile.jpg" 2>/dev/null
 		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
-		exit 1
 		;;
 	image/*)
 		image "$1" "$2" "$3" "$4" "$5" && exit 0
-		exit 1
 		;;
 	text/*)
 		text "$1" && exit 0
-		exit 1
 		;;
 	video/*)
 		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$1" -o "$cachefile.jpg" -s 0 -t 50% 2>/dev/null
 		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
-		exit 1
 		;;
 esac
 
