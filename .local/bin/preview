@@ -7,7 +7,7 @@ file="$1"
 width="$2"
 height="$3"
 extension="$(printf "%s" "${file##*.}" | tr '[:upper:]' '[:lower:]')"
-type="$(file -Lb --mime-type -- "$file")"
+mimetype="$(file -Lb --mime-type -- "$file")"
 cachedir="$HOME/.cache/thumbnails/preview"
 cachefile="$cachedir/$(sha256sum "$file" | awk '{print $1}')"
 mkdir -p "$cachedir"
@@ -61,7 +61,7 @@ case "$extension" in
 		;;
 esac
 
-case "$(file -Lb --mime-type -- "$file")" in
+case "$mimetype" in
 	audio/*)
 		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$file" -s 0 -q 50% -t 10 -o "${cachefile}.jpg" 2>/dev/null
 		image "${cachefile}.jpg"
