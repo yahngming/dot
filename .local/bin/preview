@@ -9,7 +9,7 @@ height="${3:-40}"
 ext="${file##*.}"
 extlower="$(printf "%s" "${ext}" | tr '[:upper:]' '[:lower:]')"
 cachedir="$HOME/.cache/thumbnails/preview"
-cachefile="$cachedir/$(sha256sum "$file" | awk '{print $file}')"
+cachefile="$cachedir/$(sha256sum "$file" | awk '{print $1}')"
 mkdir -p "$cachedir"
 
 image() {
