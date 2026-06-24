@@ -1,73 +1,81 @@
 #!/bin/sh
 
+set -o noclobber -o noglob -o nounset -o pipefail
+IFS=$'\n'
+
+file="${1}"
+width="${2:-80}"
+height="${3:-40}"
+ext="${file##*.}"
+extlower="$(printf "%s" "${ext}" | tr '[:upper:]' '[:lower:]')"
+cachedir="$HOME/.cache/thumbnails/preview"
+cachefile="$cachedir/$(sha256sum "$file" | awk '{print $file}')"
+mkdir -p "$cachedir"
+
 image() {
-	chafa -f sixels -s "$2x$3" --clear --animate off --polite on "$1" && exit 0
+	chafa -f sixels -s "$width"x"$height" --clear --animate off --polite on "$file" && exit 0
 }
 
 text() {
-	bat --color=always --style=plain --pager=never "$1" && exit 0
+	bat --color=always --style=plain --pager=never "$file" && exit 0
 }
-
-cachedir="$HOME/.cache/thumbnails/preview"
-cachefile="$cachedir/$(sha256sum "$1" | awk '{print $1}')"
-mkdir -p "$cachedir"
 
 case "${1##*.}" in
 	1)
-		man --local-file "$1" && exit 0
+		man --local-file "$file" && exit 0
 		;;
 	3mf|stl)
-		[ ! -f "${cachefile}.png" ] && f3d --max-size 512 --input "$1" --output "${cachefile}.png" 2>/dev/null
+		[ ! -f "${cachefile}.png" ] && f3d --max-size 512 --input "$file" --output "${cachefile}.png" 2>/dev/null
 		image "${cachefile}.png"
 		;;
 	7z|gz|rar|tar|zip)
-		atool --list -- "$1" && exit 0
+		atool --list -- "$file" && exit 0
 		;;
 	dff|diff)
-		delta < "$1" && exit 0
+		delta < "$file" && exit 0
 		;;
 	doc|docx|odg|odp|ods|odt|ppt|pptx|xls|xlsx)
-		[ ! -f "${cachefile}.png" ] && libreoffice --headless --convert-to png --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').png" "$cachefile.png"
+		[ ! -f "${cachefile}.png" ] && libreoffice --headless --convert-to png --outdir "$cachedir" "$file" >/dev/null && mv "$cachedir/$(printf '%s\n' "$file" | sed 's|^.*/||; s|\..*$||').png" "${cachefile}.png"
 		image "${cachefile}.png"
 		;;
 	htm|html|xhtml)
-		w3m -dump "$1" && exit 0
+		w3m -dump "$file" && exit 0
 		;;
 	json)
-		jq --color-output . "$1" && exit 0
+		jq --color-output . "$file" && exit 0
 		;;
 	md)
-		CLICOLOR_FORCE=1 glow --style dark "$1" && exit 0
+		CLICOLOR_FORCE=1 glow --style dark "$file" && exit 0
 		;;
 	otf|ttf)
-		[ ! -f "${cachefile}.png" ] && fontimage -o "$cachefile.png" "$1" 2>/dev/null
+		[ ! -f "${cachefile}.png" ] && fontimage -o "${cachefile}.png" "$file" 2>/dev/null
 		image "${cachefile}.png"
 		;;
 	pdf)
-		[ ! -f "${cachefile}.png" ] && pdftoppm -png -f 1 -singlefile "$1" "$cachefile"
+		[ ! -f "${cachefile}.png" ] && pdftoppm -png -f 1 -singlefile "$file" "$cachefile"
 		image "${cachefile}.png"
 		;;
 	svg)
-		[ ! -f "${cachefile}.png" ] && convert "$1" "png:$cachefile"
+		[ ! -f "${cachefile}.png" ] && convert "$file" "png:$cachefile"
 		image "${cachefile}.png"
 		;;
 esac
 
-case "$(file -Lb --mime-type -- "$1")" in
+case "$(file -Lb --mime-type -- "$file")" in
 	audio/*)
-		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$1" -s 0 -q 50% -t 10 -o "$cachefile.jpg" 2>/dev/null
+		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$file" -s 0 -q 50% -t 10 -o "${cachefile}.jpg" 2>/dev/null
 		image "${cachefile}.jpg"
 		;;
 	image/*)
-		image "$1"
+		image "$file"
 		;;
 	text/*)
-		text "$1"
+		text "$file"
 		;;
 	video/*)
-		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$1" -o "$cachefile.jpg" -s 0 -t 50% 2>/dev/null
+		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$file" -o "${cachefile}.jpg" -s 0 -t 50% 2>/dev/null
 		image "${cachefile}.jpg"
 		;;
 esac
 
-exiftool -- "$1" && exit 0
+exiftool -- "$file" && exit 0
