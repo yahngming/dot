@@ -6,6 +6,7 @@ case "$1" in
 esac
 
 case "${1##*.}" in
+	1                                ) man --local-file "$1" && exit ;;
 	diff                             ) delta --paging always < "$1" && exit ;;
 	epub|pdf                         ) setsid -f zathura >/dev/null 2>&1 "$1" && exit ;;
 	htm|html|xhtml                   ) w3m "$1" && exit ;;
