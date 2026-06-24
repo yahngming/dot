@@ -1,11 +1,11 @@
 #!/bin/sh
 
 image() {
-	chafa -f sixels -s "$2x$3" --clear --animate off --polite on "$1"
+	chafa -f sixels -s "$2x$3" --clear --animate off --polite on "$1" && exit 0
 }
 
 text() {
-	bat --color=always --style=plain --pager=never "$1"
+	bat --color=always --style=plain --pager=never "$1" && exit 0
 }
 
 cachedir="$HOME/.cache/thumbnails/preview"
@@ -18,7 +18,7 @@ case "${1##*.}" in
 		;;
 	3mf|stl)
 		[ ! -f "${cachefile}.png" ] && f3d --max-size 512 --input "$1" --output "${cachefile}.png" 2>/dev/null
-		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
+		image "${cachefile}.png"
 		;;
 	7z|gz|rar|tar|zip)
 		atool --list -- "$1" && exit 0
@@ -26,9 +26,9 @@ case "${1##*.}" in
 	dff|diff)
 		delta < "$1" && exit 0
 		;;
-	docx|odg|odp|ods|odt|pptx|xlsx)
+	doc|docx|odg|odp|ods|odt|ppt|pptx|xls|xlsx)
 		[ ! -f "${cachefile}.png" ] && libreoffice --headless --convert-to png --outdir "$cachedir" "$1" >/dev/null && mv "$cachedir/$(printf '%s\n' "$1" | sed 's|^.*/||; s|\..*$||').png" "$cachefile.png"
-		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
+		image "${cachefile}.png"
 		;;
 	htm|html|xhtml)
 		w3m -dump "$1" && exit 0
@@ -41,32 +41,32 @@ case "${1##*.}" in
 		;;
 	otf|ttf)
 		[ ! -f "${cachefile}.png" ] && fontimage -o "$cachefile.png" "$1" 2>/dev/null
-		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
+		image "${cachefile}.png"
 		;;
 	pdf)
 		[ ! -f "${cachefile}.png" ] && pdftoppm -png -f 1 -singlefile "$1" "$cachefile"
-		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
+		image "${cachefile}.png"
 		;;
 	svg)
 		[ ! -f "${cachefile}.png" ] && convert "$1" "png:$cachefile"
-		image "${cachefile}.png" "$2" "$3" "$4" "$5" && exit 0
+		image "${cachefile}.png"
 		;;
 esac
 
 case "$(file -Lb --mime-type -- "$1")" in
 	audio/*)
 		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$1" -s 0 -q 50% -t 10 -o "$cachefile.jpg" 2>/dev/null
-		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
+		image "${cachefile}.jpg"
 		;;
 	image/*)
-		image "$1" "$2" "$3" "$4" "$5" && exit 0
+		image "$1"
 		;;
 	text/*)
-		text "$1" && exit 0
+		text "$1"
 		;;
 	video/*)
 		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$1" -o "$cachefile.jpg" -s 0 -t 50% 2>/dev/null
-		image "${cachefile}.jpg" "$2" "$3" "$4" "$5" && exit 0
+		image "${cachefile}.jpg"
 		;;
 esac
 
