@@ -6,7 +6,7 @@ image() {
 }
 
 text() {
-	printf "\033[H\033[J"
+	printf "\033%%G"
 	bat --color=always --style=plain --pager=never "$1"
 }
 
