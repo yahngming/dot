@@ -74,6 +74,11 @@ cmd bulk-rename ${{
 	fi
 }}
 
+cmd clear-preview ${{
+	printf "\033[H\033[J"
+	printf "\033[%%G" 
+}}
+
 cmd edit ${{
 	editor $fx
 }}
