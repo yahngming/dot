@@ -1,22 +1,22 @@
 #!/bin/sh
 
 case "$1" in
-	https://www.youtube.com/*        ) pkill -f "Picture in picture"; setsid -f mpv --autofit=30% --title="Picture in picture" >/dev/null 2>&1 "$1" ;;
-	http*                            ) setsid -f browser >/dev/null 2>&1 "$1" ;;
+	https://www.youtube.com/*        ) pkill -f "Picture in picture"; setsid -f mpv --autofit=30% --title="Picture in picture" >/dev/null 2>&1 "$1" && exit ;;
+	http*                            ) setsid -f browser >/dev/null 2>&1 "$1" && exit ;;
 esac
 
 case "${1##*.}" in
-	diff                             ) delta --paging always < "$1" ;;
-	epub|pdf                         ) setsid -f zathura >/dev/null 2>&1 "$1" ;;
-	htm|html|xhtml                   ) w3m "$1" ;;
-	json                             ) jq --color-output . "$1" ;;
-	md                               ) glow --pager "$1" ;;
+	diff                             ) delta --paging always < "$1" && exit ;;
+	epub|pdf                         ) setsid -f zathura >/dev/null 2>&1 "$1" && exit ;;
+	htm|html|xhtml                   ) w3m "$1" && exit ;;
+	json                             ) jq --color-output . "$1" && exit ;;
+	md                               ) glow --pager "$1" && exit ;;
 esac
 
 case $(file --mime-type -Lb "$1") in
-	*archive*|*compress*|*rar*|*tar* ) als --page "$1" ;;
-	*audio*|*video*                  ) setsid -f mpv --force-window >/dev/null 2>&1 "$1" ;;
-	*document*                       ) setsid -f libreoffice >/dev/null 2>&1 "$1" ;;
-	*image*                          ) setsid -f nsxiv -a >/dev/null 2>&1 "$1" * ;;
-	*text*|*xml*                     ) bat --paging always "$1" ;;
+	*archive*|*compress*|*rar*|*tar* ) als --page "$1" && exit ;;
+	*audio*|*video*                  ) setsid -f mpv --force-window >/dev/null 2>&1 "$1" && exit ;;
+	*document*                       ) setsid -f libreoffice >/dev/null 2>&1 "$1" && exit ;;
+	*image*                          ) setsid -f nsxiv -a >/dev/null 2>&1 "$1" * && exit ;;
+	*text*|*xml*                     ) bat --paging always "$1" && exit ;;
 esac
