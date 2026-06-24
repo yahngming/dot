@@ -21,7 +21,7 @@ case "${1##*.}" in
 		atool --list -- "$1" && exit 0
 		exit 1
 		;;
-	diff)
+	dff|diff)
 		delta < "$1" && exit 0
 		exit 1
 		;;
