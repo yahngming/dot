@@ -1,8 +1,5 @@
 #!/bin/sh
 
-set -o noclobber -o noglob -o nounset -o pipefail
-IFS=$'\n'
-
 file="$1"
 width="$2"
 height="$3"
