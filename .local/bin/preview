@@ -1,7 +1,7 @@
 #!/bin/sh
 
 image() {
-	printf "\033[H\033[J"
+	printf "\033%%G"
 	chafa -f sixels -s "$2x$3" --clear --animate off --polite on "$1"
 }
 
