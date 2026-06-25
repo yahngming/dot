@@ -21,7 +21,7 @@ case "$extension" in
 	1)
 		man --local-file "$file" && exit 0
 		;;
-	3mf|stl)
+	3mf|step|stl|stp)
 		[ ! -f "${cachefile}.png" ] && f3d --max-size 512 --input "$file" --output "${cachefile}.png" 2>/dev/null
 		image "${cachefile}.png"
 		;;
