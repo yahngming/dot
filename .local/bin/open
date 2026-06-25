@@ -1,11 +1,14 @@
 #!/bin/sh
 
+extension="$(printf "%s" "${1##*.}" | tr '[:upper:]' '[:lower:]')"
+mimetype="$(file -Lb --mime-type -- "$1")"
+
 case "$1" in
 	https://www.youtube.com/*        ) pkill -f "Picture in picture"; setsid -f mpv --autofit=30% --title="Picture in picture" >/dev/null 2>&1 "$1" && exit ;;
 	http*                            ) setsid -f browser >/dev/null 2>&1 "$1" && exit ;;
 esac
 
-case "${1##*.}" in
+case "$extension" in
 	1                                ) man --local-file "$1" && exit ;;
 	dff|diff                         ) delta --paging always < "$1" && exit ;;
 	epub|pdf                         ) setsid -f zathura >/dev/null 2>&1 "$1" && exit ;;
@@ -14,7 +17,7 @@ case "${1##*.}" in
 	md                               ) glow --pager "$1" && exit ;;
 esac
 
-case $(file --mime-type -Lb "$1") in
+case "$mimetype" in
 	*archive*|*compress*|*rar*|*tar* ) als --page "$1" && exit ;;
 	*audio*|*video*                  ) setsid -f mpv --force-window >/dev/null 2>&1 "$1" && exit ;;
 	*document*                       ) setsid -f libreoffice >/dev/null 2>&1 "$1" && exit ;;
