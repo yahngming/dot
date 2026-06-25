@@ -10,7 +10,7 @@ cachefile="$cachedir/$(sha256sum "$file" | awk '{print $1}')"
 mkdir -p "$cachedir"
 
 image() {
-	chafa -f sixels -s "$width"x"$height" --clear --animate off --polite on "$1" && exit 0
+	chafa --format=sixels --polite=on --clear --size="$width"x"$height" "$1" && exit 0
 }
 
 text() {
