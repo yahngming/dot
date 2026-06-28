@@ -72,7 +72,7 @@ iwd_dmenu() {
 	}
 
 	portal() {
-		xdg-open http://http.badssl.com
+		open http://http.badssl.com
 	}
 
 	# get network column separately
