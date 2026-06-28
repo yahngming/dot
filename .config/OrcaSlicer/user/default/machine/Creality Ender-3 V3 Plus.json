@@ -3,7 +3,7 @@
 	"host_type": "crealityprint",
 	"inherits": "Creality Ender-3 V3 Plus 0.4 nozzle",
 	"name": "Creality Ender-3 V3 Plus",
-	"print_host": "3DPRINTER",
+	"print_host": "3dprinter.local",
 	"printer_extruder_id": [
 		"1"
 	],
