@@ -3,23 +3,20 @@
 menu="\
 󰨇 Dashboard\n\
 󱂇 Service\n\
+󰿨 Subscription\n\
   ----\n\
 󰌘 Config local proxy\n\
 󰌙 Disable/stop local proxy\n\
 󱊪 Enable/start local proxy\n\
 󰌚 Update/restart local proxy\n\
-  ----\n\
-󰿨 Sub-Store\n\
- Subconverter\n\
 "
 
 case $(printf "$menu" | menu -p "$(proxy)" "$@") in
 	*Dashboard*    ) open http://192.168.1.1:9090/ui/metacubexd/#/proxies ;;
 	*Service*      ) open http://192.168.1.1/cgi-bin/luci/admin/services/openclash ;;
+	*Subscription* ) open http://127.0.0.1:3001/?api=http://127.0.0.1:3001/12345678910987654321 ;;
 	*Config*       ) open http://127.0.0.1:9090/ui/#/proxies ;;
 	*Disable*      ) tui "proxy off" ;;
 	*Enable*       ) tui "proxy on" ;;
 	*Update*       ) tui "proxy up" ;;
-	*Sub-Store*    ) open http://127.0.0.1:3001/?api=http://127.0.0.1:3001/12345678910987654321 ;;
-	*Subconverter* ) open http://127.0.0.1:25500/sub?url=http%3A%2F%2F127.0.0.1%3A3001%2F12345678910987654321%2Fdownload%2Fcollection%2Feverything\&config=https%3A%2F%2Fraw.githubusercontent.com%2Fyahngming%2Frules%2Fmaster%2Fsubconverter.ini\&upload=true\&target=clash ;;
 esac
