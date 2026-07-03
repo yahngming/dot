@@ -66,6 +66,10 @@ case "$mimetype" in
 	image/*)
 		image "$file"
 		;;
+	*sqlite3)
+		[ ! -f "${cachefile}.txt" ] && sqlite3 "$file" ".schema" >> "$cachefile" 2>/dev/null
+		text "$cachefile.txt"
+		;;
 	text/*)
 		text "$file"
 		;;
