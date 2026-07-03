@@ -67,7 +67,7 @@ case "$mimetype" in
 		image "$file"
 		;;
 	*sqlite3)
-		sqlite3 "$file" "SELECT name FROM sqlite_master WHERE type='table' AND name != 'sqlite_sequence';" 2>/dev/null | while read -r table; do
+		sqlite3 "$file" "SELECT name FROM sqlite_master WHERE type='table';" 2>/dev/null | while read -r table; do
 			sqlite3 -box "$file" "SELECT * FROM \`$table\` LIMIT \`$height\`;" 2>/dev/null
 		done && exit 0
 		;;
