@@ -67,8 +67,7 @@ case "$mimetype" in
 		image "$file"
 		;;
 	*sqlite3)
-		[ ! -f "${cachefile}.txt" ] && sqlite3 "$file" "SELECT type, tbl_name, sql FROM sqlite_master WHERE sql IS NOT NULL;" >> "$cachefile.txt" 2>/dev/null
-		text "$cachefile.txt"
+		sqlite3 "$file" "SELECT type, tbl_name, sql FROM sqlite_master WHERE sql IS NOT NULL;" 2>/dev/null && exit 0
 		;;
 	text/*)
 		text "$file"
