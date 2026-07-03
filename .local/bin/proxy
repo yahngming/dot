@@ -1,6 +1,7 @@
 #!/bin/sh
 
 proxy="sing-box"
+format="json"
 
 get() {
 	echo "$proxy $(systemctl is-active $proxy.service)"
@@ -26,8 +27,7 @@ up() {
 	cd ~/.local/src/sub
 	git pull
 	cd - >/dev/null 2>&1
-	sudo cp ~/.local/src/sub/mihomo /etc/mihomo/config.yaml
-	sudo cp ~/.local/src/sub/sing-box /etc/sing-box/config.json
+	sudo cp ~/.local/src/sub/$proxy /etc/$proxy/config.$format
 	if [ -f ~/.config/proxy ]; then
 		sudo systemctl restart $proxy.service
 	fi
