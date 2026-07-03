@@ -56,17 +56,17 @@ case "$extension" in
 esac
 
 case "$mimetype" in
-	audio/*)
+	*audio*)
 		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$file" -s 0 -q 50% -t 10 -o "${cachefile}.jpg" 2>/dev/null
 		image "${cachefile}.jpg"
 		;;
-	image/*)
+	*image*)
 		image "$file"
 		;;
-	*json)
+	*json*)
 		jq --color-output . "$file" && exit 0
 		;;
-	*sqlite3)
+	*sqlite*)
 		row="${height:-18}"
 		(
 			sqlite3 "$file" "SELECT name FROM sqlite_master WHERE type='table' AND name != 'sqlite_sequence';" 2>/dev/null | while read -r table; do
@@ -74,10 +74,10 @@ case "$mimetype" in
 			done
 		) | text - && exit 0
 		;;
-	text/*)
+	*text*)
 		text "$file"
 		;;
-	video/*)
+	*video*)
 		[ ! -f "${cachefile}.jpg" ] && ffmpegthumbnailer -i "$file" -o "${cachefile}.jpg" -s 0 -t 50% 2>/dev/null
 		image "${cachefile}.jpg"
 		;;
