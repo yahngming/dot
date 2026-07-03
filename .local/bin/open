@@ -15,7 +15,7 @@ case "$extension" in
 	htm|html|xhtml                         ) w3m "$1" && exit ;;
 	json                                   ) jq --color-output . "$1" | $PAGER && exit ;;
 	md                                     ) glow --pager "$1" && exit ;;
-esacb
+esac
 
 case "$mimetype" in
 	*archive*|*compress*|*rar*|*tar*|*zip* ) als --page "$1" && exit ;;
