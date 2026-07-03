@@ -22,6 +22,6 @@ case "$mimetype" in
 	*audio*|*video*                        ) setsid -f mpv --force-window >/dev/null 2>&1 "$1" && exit ;;
 	*document*                             ) setsid -f libreoffice >/dev/null 2>&1 "$1" && exit ;;
 	*image*                                ) setsid -f nsxiv -a >/dev/null 2>&1 "$1" * && exit ;;
-	*sqlite*                               ) sqlite3 "$file" "SELECT name FROM sqlite_master WHERE type='table' AND name != 'sqlite_sequence';" 2>/dev/null | while read -r table; do sqlite3 -box "$file" "SELECT * FROM \`$table\`;" 2>/dev/null; done | bat --color=always --style=plain --pager=always && exit ;;
+	*sqlite*                               ) sqlite3 "$1" "SELECT name FROM sqlite_master WHERE type='table' AND name != 'sqlite_sequence';" 2>/dev/null | while read -r table; do sqlite3 -box "$1" "SELECT * FROM \`$table\`;" 2>/dev/null; done | bat --color=always --style=plain --pager=always && exit ;;
 	*text*|*xml*                           ) bat --paging always "$1" && exit ;;
 esac
