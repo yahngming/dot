@@ -8,19 +8,11 @@ get() {
 }
 
 off() {
-	if [ -f ~/.config/proxy ]; then
-		rm -f ~/.config/proxy
-		gsettings set org.gnome.system.proxy mode "none"
-		sudo systemctl disable --now $proxy.service
-	fi
+	sudo systemctl disable --now $proxy.service
 }
 
 on() {
-	if [ ! -f ~/.config/proxy ]; then
-		touch -f ~/.config/proxy
-		gsettings set org.gnome.system.proxy mode "manual"
-		sudo systemctl enable --now $proxy.service
-	fi
+	sudo systemctl enable --now $proxy.service
 }
 
 up() {
@@ -28,9 +20,7 @@ up() {
 	git pull
 	cd - >/dev/null 2>&1
 	sudo cp ~/.local/src/sub/$proxy /etc/$proxy/config.$format
-	if [ -f ~/.config/proxy ]; then
-		sudo systemctl restart $proxy.service
-	fi
+	sudo systemctl restart $proxy.service
 }
 
 help() {
