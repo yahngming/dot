@@ -38,13 +38,6 @@ start() {
 			export TERMINAL="xfce4-terminal"
 			;;
 	esac
-	if [ -f ~/.config/proxy ]; then
-		PROXY_ENV="all_proxy ALL_PROXY ftp_proxy FTP_PROXY GOPROXY http_proxy HTTP_PROXY https_proxy HTTPS_PROXY"
-		for envar in $PROXY_ENV; do
-			export $envar="http://127.0.0.1:7890"
-		done
-		gsettings set org.gnome.system.proxy mode "manual"
-	fi
 	eval "$DESKTOP"
 }
 
