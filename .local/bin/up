@@ -4,14 +4,18 @@ sudo pacman -Sy --needed --noconfirm archlinux-keyring
 yay --noconfirm
 
 dot
+
+cd ~/.config/firefox
+./updater.sh -us
+./prefsCleaner.sh -s
+cd - >/dev/null 2>&1
+cd ~/.local/src/sub
+git pull
+cd - >/dev/null 2>&1
 fc-cache -fv
 sudo cp -r ~/.config/udev/ /etc/
 sudo cp -r ~/.config/systemd/ /etc/
+sudo cp ~/.local/src/sub/mihomo /etc/mihomo/config.yaml
+sudo cp ~/.local/src/sub/sing-box /etc/sing-box/config.json
 sudo systemd-hwdb update
 sudo udevadm trigger
-if [ "$BROWSER" == "firefox" ]; then
-	cd ~/.config/firefox
-	./updater.sh -us
-	./prefsCleaner.sh -s
-	cd - >/dev/null 2>&1
-fi
