@@ -11,7 +11,6 @@ menu="\
  Bar\n\
 󰂳 Bluetooth\n\
 󰃢 Clean\n\
- Cloud\n\
  Desktop\n\
 󰍹 Display\n\
  Docker\n\
@@ -23,6 +22,7 @@ menu="\
 󰌘 Proxy\n\
  Screensaver\n\
 󰲁 SMB\n\
+ Sync\n\
 󰔎 Theme\n\
 󱢃 Timezone\n\
 󰚰 Update\n\
