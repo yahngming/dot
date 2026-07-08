@@ -38,7 +38,6 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Bluetooth*   ) btmenu ;;
 	*Caffeine*    ) caffeinemenu ;;
 	*Clean*       ) tui clean ;;
-	*Cloud*       ) cloudmenu ;;
 	*Desktop*     ) desktopmenu ;;
 	*Display*     ) dispmenu ;;
 	*Docker*      ) dockersmenu ;;
@@ -50,6 +49,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Proxy*       ) proxymenu ;;
 	*Screensaver* ) screensavermenu ;;
 	*SMB*         ) smbmenu ;;
+	*Sync*        ) syncmenu ;;
 	*Theme*       ) thememenu ;;
 	*Timezone*    ) timezonemenu ;;
 	*Update*      ) tui up ;;
