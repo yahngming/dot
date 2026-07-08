@@ -6,9 +6,9 @@ menu="\
 󰿨 Subscription\n\
   ----\n\
 󰌘 Config local proxy\n\
-󰌙 Disable/stop local proxy\n\
-󱊪 Enable/start local proxy\n\
-󰌚 Update/restart local proxy\n\
+󰌙 Disable local proxy\n\
+󱊪 Enable local proxy\n\
+󰌚 Restart local proxy\n\
 "
 
 case $(printf "$menu" | menu -p "$(proxy)" "$@") in
@@ -16,7 +16,7 @@ case $(printf "$menu" | menu -p "$(proxy)" "$@") in
 	*Service*      ) open http://192.168.1.1/cgi-bin/luci/admin/services/openclash ;;
 	*Subscription* ) open http://127.0.0.1:3001/?api=http://127.0.0.1:3001/12345678910987654321 ;;
 	*Config*       ) open http://127.0.0.1:9090/ui/#/proxies ;;
-	*Disable*      ) tui "proxy off" ;;
-	*Enable*       ) tui "proxy on" ;;
-	*Update*       ) tui "proxy up" ;;
+	*Disable*      ) tui "proxy disable" ;;
+	*Enable*       ) tui "proxy enable" ;;
+	*Restart*      ) tui "proxy restart" ;;
 esac
