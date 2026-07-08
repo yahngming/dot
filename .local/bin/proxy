@@ -1,33 +1,11 @@
 #!/bin/sh
 
 proxy="mihomo"
-format="yaml"
-
-get() {
-	echo "$proxy $(systemctl is-active $proxy.service)"
-}
-
-off() {
-	sudo systemctl disable --now $proxy.service
-}
-
-on() {
-	sudo systemctl enable --now $proxy.service
-}
-
-up() {
-	cd ~/.local/src/sub
-	git pull
-	cd - >/dev/null 2>&1
-	sudo cp ~/.local/src/sub/$proxy /etc/$proxy/config.$format
-	sudo systemctl restart $proxy.service
-}
-
-help() {
-	echo "Usage: proxy [get|off|on|up|help]"
-}
 
 case "$@" in
-	off|on|up|help ) $@ ;;
-	*              ) get ;;
+	disable ) sudo systemctl disable --now $proxy.service ;;
+	enable  ) sudo systemctl enable --now $proxy.service ;;
+	restart ) sudo systemctl restart $proxy.service ;;
+	help    ) echo "Usage: proxy [disable|enable|restart|help]" ;;
+	*       ) echo "$proxy $(systemctl is-active $proxy.service)" ;;
 esac
