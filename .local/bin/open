@@ -23,5 +23,5 @@ case "$mimetype" in
 	*image*                                ) setsid -f nsxiv -a >/dev/null 2>&1 "$1" * && exit ;;
 	*json*                                 ) jq --color-output . "$1" | $PAGER && exit ;;
 	*sqlite*                               ) (sqlite3 "$1" "SELECT name FROM sqlite_master WHERE type='table' AND name != 'sqlite_sequence';" 2>/dev/null | while read -r table; do sqlite3 -box "$1" "SELECT * FROM \`$table\`;" 2>/dev/null; done) | bat --color=always --style=plain --paging=always --language=ts && exit ;;
-	*text*|*xml*                           ) bat --paging always "$1" && exit ;;
+	*text*|*xml*                           ) bat --paging always --language ts "$1" && exit ;;
 esac
