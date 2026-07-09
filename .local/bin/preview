@@ -14,7 +14,7 @@ image() {
 }
 
 text() {
-	bat --color=always --style=plain --pager=never --theme=ansi --language=ts "$1" && exit 0
+	bat --color=always --style=plain --pager=never --theme=ansi --language=ts "$1" && echo "" && exit 0
 }
 
 case "$extension" in
