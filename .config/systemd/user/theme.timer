@@ -2,8 +2,7 @@
 Description = Theme setup periodically
 
 [Timer]
-OnStartupSec = 6h
-OnUnitActiveSec = 6h
+OnCalendar = 00/6:00:00
 Persistent = true
 
 [Install]
