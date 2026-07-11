@@ -38,6 +38,7 @@ setup() {
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
+	echo -e "cursor_theme=$XCURSOR_THEME" > ~/.config/mango/cursor.conf
 	echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl
 	hyprctl setcursor "$XCURSOR_THEME"
 	pywalfox "${COLOR_SCHEME#*-}"
