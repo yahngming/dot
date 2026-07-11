@@ -1,7 +1,7 @@
 include "../../.cache/wal/colors-niri.kdl"
 include "cursor.kdl"
 
-spawn-at-startup "autostart"
+spawn-at-startup "autoexec"
 
 prefer-no-csd
 
