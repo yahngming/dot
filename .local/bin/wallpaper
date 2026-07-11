@@ -11,6 +11,7 @@ setpaper() {
 	cp "$wallpaper" "$paperfolder/wallpaper"
 	convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
 	if [ -n "$WAYLAND_DISPLAY" ]; then
+		pgrep awww-daemon || awww-daemon &
 		awww img "$wallpaper"
 		pkill swaybg
 		swaybg -i "$paperfolder/backdrop" -m fill &
