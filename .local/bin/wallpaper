@@ -11,15 +11,9 @@ setpaper() {
 	cp "$wallpaper" "$paperfolder/wallpaper"
 	convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
 	if [ -n "$WAYLAND_DISPLAY" ]; then
-		pkill hyprpaper
+		awww img "$wallpaper"
 		pkill swaybg
-		hyprpaper &
-		sleep 0.2
-		if pgrep hyprpaper > /dev/null; then
-			swaybg -i "$paperfolder/backdrop" -m fill &
-		else
-			swaybg -i "$paperfolder/wallpaper" -m fill &
-		fi
+		swaybg -i "$paperfolder/backdrop" -m fill &
 		cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/
 		makoctl reload
 	elif [ -n "$DISPLAY" ]; then
