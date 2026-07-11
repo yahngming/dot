@@ -4,4 +4,7 @@ Description = Theme setup
 [Service]
 Type = oneshot
 Environment = PATH=%h/.local/bin:%h/.bin:/usr/local/bin:/usr/bin:/bin
-ExecStart=/bin/sh -c "systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP DBUS_SESSION_BUS_ADDRESS; %h/.local/bin/theme setup"
+ExecStart = /bin/sh -c "systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP DBUS_SESSION_BUS_ADDRESS; %h/.local/bin/theme setup"
+
+[Install]
+WantedBy = default.target
