@@ -1,20 +1,13 @@
 * {
 	font-family: graphical;
 }
-#main-window {
-	--pywalfox-background: var(--lwt-accent-color);
-	--pywalfox-background-focus: var(--arrowpanel-background);
-	--pywalfox-text0: var(--lwt-text-color);
-	--pywalfox-text: var(--arrowpanel-color);
-	--pywalfox-text-focus: var(--toolbar-color);
-}
 button, menu, menuitem, menupopup, menuseparator, notification, search-textbox, #statuspanel-label {
 	-moz-appearance: none !important;
-	background-color: var(--pywalfox-background) !important;
-	color: var(--pywalfox-text) !important;
+	background-color: var(--lwt-accent-color) !important;
+	color: var(--lwt-text-color) !important;
 }
 menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"] {
 	-moz-appearance: none !important;
-	background-color: var(--pywalfox-background-focus) !important;
-	color: var(--pywalfox-text-focus) !important;
+	background-color: var(--lwt-text-color) !important;
+	color: var(--lwt-accent-color) !important;
 }
