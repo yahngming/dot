@@ -13,8 +13,10 @@ setpaper() {
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		pgrep awww-daemon || awww-daemon &
 		awww img "$wallpaper"
-		pkill swaybg
-		swaybg -i "$paperfolder/backdrop" -m fill &
+		if [ "$XDG_CURRENT_DESKTOP" = "niri" ]; then
+			pkill swaybg
+			swaybg -i "$paperfolder/backdrop" -m fill &
+		fi
 		cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/
 		makoctl reload
 	elif [ -n "$DISPLAY" ]; then
