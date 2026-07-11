@@ -3,7 +3,8 @@
 }
 #main-window {
 	--pywalfox-background: var(--lwt-accent-color);
-	--pywalfox-background-light: var(--arrowpanel-background);
+	--pywalfox-background-focus: var(--arrowpanel-background);
+	--pywalfox-text0: var(--lwt-text-color);
 	--pywalfox-text: var(--arrowpanel-color);
 	--pywalfox-text-focus: var(--toolbar-color);
 }
@@ -14,6 +15,6 @@ button, menu, menuitem, menupopup, menuseparator, notification, search-textbox, 
 }
 menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"] {
 	-moz-appearance: none !important;
-	background-color: var(--pywalfox-background-light) !important;
+	background-color: var(--pywalfox-background-focus) !important;
 	color: var(--pywalfox-text-focus) !important;
 }
