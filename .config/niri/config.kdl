@@ -142,6 +142,7 @@ window-rule {
 	match app-id="bottomright"
 	match title="^Picture.?in.?[Pp]icture$"
 	open-floating true
+	default-column-width { proportion 0.3; }
 	default-floating-position x=20 y=16 relative-to="bottom-right"
 }
 
