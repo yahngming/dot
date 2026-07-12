@@ -143,7 +143,7 @@ window-rule {
 	match title="^Picture.?in.?[Pp]icture$"
 	open-floating true
 	default-column-width { proportion 0.3; }
-	default-window-height { proportion 0.3; }
+	default-window-height { proportion 0.4; }
 	default-floating-position x=20 y=16 relative-to="bottom-right"
 }
 
