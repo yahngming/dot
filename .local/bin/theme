@@ -34,13 +34,15 @@ setup() {
 		KBD_BACKLIGHT="0"
 	fi
 	gsettings set org.gnome.desktop.interface color-scheme "$COLOR_SCHEME"
-	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
+	case "$DESKTOP" in
+		*Hyprland* ) hyprctl setcursor "$XCURSOR_THEME" ;;
+		*mango*    ) echo -e "cursor_theme=$XCURSOR_THEME" > ~/.config/mango/cursor.conf ;;
+		*niri*     ) echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl ;;
+	esac
 	brightnessctl -sd *:kbd_backlight set "$KBD_BACKLIGHT"
-	echo -e "cursor_theme=$XCURSOR_THEME" > ~/.config/mango/cursor.conf
-	echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl
-	hyprctl setcursor "$XCURSOR_THEME"
 	pywalfox "${COLOR_SCHEME#*-}"
 	wallpaper random
 }
