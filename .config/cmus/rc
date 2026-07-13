@@ -1,2 +1,2 @@
 bind -f common q quit
-bind -f common w push run mid3v2 {} --
+bind -f common w push run mid3v2 {} --artist=
