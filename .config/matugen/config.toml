@@ -1,0 +1,3 @@
+[templates.waybar]
+input_path = '~/.config/matugen/colors.css'
+output_path = '~/.cache/wal/colors-waybar.css'
