@@ -1,4 +1,4 @@
-config.source('../../.cache/wal/colors-qutebrowser.py')
+config.source('colors.py')
 
 c.auto_save.session = True
 c.content.blocking.adblock.lists = [
