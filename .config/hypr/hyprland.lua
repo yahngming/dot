@@ -125,6 +125,13 @@ hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl s 5%+"), { locked 
 
 hl.window_rule({
 	match = {
+		class = "^(bottomright)$",
+	},
+	tag = "+bottomright",
+})
+
+hl.window_rule({
+	match = {
 		title = "^(Picture.?in.?[Pp]icture)$",
 	},
 	tag = "+bottomright",
@@ -188,16 +195,18 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		tag = "center",
+		tag = "bottomright",
 	},
-	center = true,
 	float = true,
+	move = { "monitor_w - window_w - 20", "monitor_h - window_h - 20" }
+	pin = true,
 })
 
 hl.window_rule({
 	match = {
-		tag = "bottomright",
+		tag = "center",
 	},
+	center = true,
 	float = true,
 })
 
@@ -217,20 +226,6 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		tag = "bottomright",
-	},
-	move = { "monitor_w - window_w", "monitor_h - window_h" }
-})
-
-hl.window_rule({
-	match = {
-		tag = "secret",
-	},
-	no_screen_share = true,
-})
-
-hl.window_rule({
-	match = {
 		tag = "opaque",
 	},
 	opacity = "1.0 override",
@@ -238,9 +233,9 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		tag = "bottomright",
+		tag = "secret",
 	},
-	pin = true,
+	no_screen_share = true,
 })
 
 hl.window_rule({
