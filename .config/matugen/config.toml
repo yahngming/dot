@@ -17,8 +17,12 @@ output_path = '~/.config/foot/colors.ini'
 input_path = '~/.config/matugen/fuzzel.ini'
 output_path = '~/.config/fuzzel/colors.ini'
 
-[templates.hypr]
-input_path = '~/.config/matugen/hypr.conf'
+[templates.hyprland]
+input_path = '~/.config/matugen/hyprland.lua'
+output_path = '~/.config/hypr/colors.lua'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/hyprlock.conf'
 output_path = '~/.config/hypr/colors.conf'
 
 [templates.mako]
