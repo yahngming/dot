@@ -1,4 +1,4 @@
-include=~/.cache/wal/colors-mako
+include=colors
 font=terminal
 outer-margin=20,20
 border-size=1
