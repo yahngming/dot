@@ -9,6 +9,10 @@ post_hook = 'dunstctl reload'
 input_path = '~/.config/matugen/fuzzel.ini'
 output_path = '~/.config/fuzzel/colors.ini'
 
+[templates.hypr]
+input_path = '~/.config/matugen/hypr.conf'
+output_path = '~/.config/hypr/colors.conf'
+
 [templates.mako]
 input_path = '~/.config/matugen/mako'
 output_path = '~/.config/mako/colors'
