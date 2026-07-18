@@ -1,4 +1,4 @@
-include "../../.cache/wal/colors-niri.kdl"
+include "colors.kdl"
 include "cursor.kdl"
 
 spawn-at-startup "autoexec"
