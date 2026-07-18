@@ -47,8 +47,8 @@ output_path = '~/.config/qutebrowser/colors.py'
 post_hook = 'qutebrowser :config-source'
 
 [templates.sequences]
-input_path = '~/.config/matugen/sequences'
-output_path = '~/.cache/wal/sequences'
+input_path = '~/.config/matugen/sequences.sh'
+output_path = '~/.cache/wal/sequences.sh'
 
 [templates.waybar]
 input_path = '~/.config/matugen/waybar.css'
