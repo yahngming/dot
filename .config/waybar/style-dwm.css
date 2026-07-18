@@ -1,5 +1,4 @@
 @import "colors.css";
-@import "colors-waybar.css";
 
 * {
 	border: none;
@@ -9,8 +8,8 @@
 }
 
 window, button, menu, tooltip, tooltip label {
-	background: @color0;
-	color: @color8;
+	background: @background;
+	color: @primary;
 }
 
 button {
@@ -18,17 +17,13 @@ button {
 }
 
 menu, tooltip {
-	border: 1px solid @color1;
+	border: 1px solid;
 	border-radius: 6px;
 }
 
-#workspaces .active {
-	border-bottom: 1px solid @color7;
-}
-
 #workspaces .active, #taskbar .active {
-	background: @color1;
-	color: @color7;
+	background: @primary;
+	color: @background;
 }
 
 #battery.critical {
