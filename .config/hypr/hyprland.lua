@@ -1,4 +1,4 @@
-require("colors.lua")
+require("colors")
 
 hl.monitor({
     output = "",
