@@ -38,7 +38,7 @@ setup() {
 	gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 	gsettings set org.gnome.desktop.interface cursor-theme "$XCURSOR_THEME"
 	case "$DESKTOP" in
-		*hyprland* ) hyprctl setcursor "$XCURSOR_THEME" ;;
+		*hyprland* ) hyprctl setcursor "$XCURSOR_THEME" 24 ;;
 		*mango*    ) echo -e "cursor_theme=$XCURSOR_THEME" > ~/.config/mango/cursor.conf ;;
 		*niri*     ) echo -e "cursor {\n\txcursor-theme \"$XCURSOR_THEME\"\n}" > ~/.config/niri/cursor.kdl ;;
 	esac
