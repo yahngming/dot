@@ -1,4 +1,4 @@
-require("colors")
+local colors = require("colors")
 
 hl.monitor({
 	output = "",
