@@ -21,7 +21,6 @@ setpaper() {
 		xwallpaper --zoom "$wallpaper"
 		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
 	fi
-	pgrep qutebrowser && qutebrowser :config-source
 }
 
 manual() {
