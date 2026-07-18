@@ -5,11 +5,11 @@
 }
 button, menu, menuitem, menupopup, menuseparator, notification, search-textbox, #statuspanel-label {
 	-moz-appearance: none !important;
-	background-color: var(--lwt-accent-color) !important;
-	color: var(--lwt-text-color) !important;
+	background-color: var(--background) !important;
+	color: var(--primary) !important;
 }
 menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"] {
 	-moz-appearance: none !important;
-	background-color: var(--lwt-text-color) !important;
-	color: var(--lwt-accent-color) !important;
+	background-color: var(--primary) !important;
+	color: var(--background) !important;
 }
