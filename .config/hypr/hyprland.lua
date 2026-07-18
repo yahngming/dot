@@ -17,8 +17,8 @@ hl.config({
 		gaps_out = 8,
 		border_size = 1,
 		col = {
-			inactive_border = "$outline",
-			active_border = "$primary",
+			inactive_border = colors.outline,
+			active_border = colors.primary,
 		},
 		resize_on_border = true,
 		layout = "scrolling",
@@ -35,8 +35,8 @@ hl.config({
 		shadow = {
 			range = 16,
 			render_power = 2,
-			color_inactive = "$outline",
-			color = "$shadow",
+			color_inactive = colors.outline,
+			color = colors.shadow,
 		},
 	},
 	input = {
