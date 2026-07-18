@@ -4,10 +4,6 @@
 input_path = '~/.config/matugen/dunst'
 output_path = '~/.config/dunst/dunstrc.d/colors'
 post_hook = 'dunstctl reload'
-
-[templates.firefox]
-input_path = "~/.config/matugen/firefox.css"
-output_path = "~/.config/firefox/chrome/colors.css"
  
 [templates.foot]
 input_path = '~/.config/matugen/foot.ini'
