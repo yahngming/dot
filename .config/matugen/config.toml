@@ -5,6 +5,10 @@ input_path = '~/.config/matugen/dunst'
 output_path = '~/.config/dunst/dunstrc.d/colors'
 post_hook = 'dunstctl reload'
 
+[templates.foot]
+input_path = '~/.config/matugen/foot.ini'
+output_path = '~/.config/foot/colors.ini'
+
 [templates.fuzzel]
 input_path = '~/.config/matugen/fuzzel.ini'
 output_path = '~/.config/fuzzel/colors.ini'
