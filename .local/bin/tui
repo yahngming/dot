@@ -8,7 +8,7 @@ case "$@" in
 esac
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	if [ "$class" = "screensaver" ]; then
-		theme="-o colors-dark.background=000000"
+		theme="-o initial-color-theme=light"
 	fi
 	command="$TERMINAL $theme -a"
 elif [ -n "$DISPLAY" ]; then
