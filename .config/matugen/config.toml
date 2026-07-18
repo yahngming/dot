@@ -1,5 +1,9 @@
 [config]
 
+[templates.dmenu]
+input_path = '~/.config/matugen/dmenu.sh'
+output_path = '~/.cache/wal/colors.sh'
+
 [templates.dunst]
 input_path = '~/.config/matugen/dunst'
 output_path = '~/.config/dunst/dunstrc.d/colors'
