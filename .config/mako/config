@@ -1,4 +1,4 @@
-include=~/.config/mako/colors
+include=./colors
 font=terminal
 outer-margin=20,20
 border-size=1
