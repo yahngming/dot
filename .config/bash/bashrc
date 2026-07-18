@@ -28,7 +28,7 @@ start() {
 			export LAUNCHER="dmenu"
 			export TERMINAL="st"
 			;;
-		*Hyprland*|*mango*|*niri*)
+		*hyprland*|*mango*|*niri*)
 			export LAUNCHER="fuzzel"
 			export TERMINAL="foot"
 			;;
