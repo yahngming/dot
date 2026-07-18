@@ -132,14 +132,14 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		class = "class:^(center|.*config.*|rquickshare|xdg-desktop-portal-gtk)$",
+		class = "^(center|.*config.*|rquickshare|xdg-desktop-portal-gtk)$",
 	},
 	tag = "+center",
 })
 
 hl.window_rule({
 	match = {
-		class = "title:^(center)$",
+		title = "^(center)$",
 	},
 	tag = "+center",
 })
