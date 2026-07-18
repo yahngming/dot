@@ -25,6 +25,7 @@ hl.config({
 	},
 	scrolling = {
 		fullscreen_on_one_column = false,
+		column_width = 0.8,
 	},
 	decoration = {
 		rounding = 4,
