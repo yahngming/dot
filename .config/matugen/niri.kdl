@@ -31,10 +31,10 @@ recent-windows {
 	}
 }
 
-window-rule {{
+window-rule {
 	match is-focused=true
-	shadow {{
+	shadow {
 		on
 		color "{{colors.shadow.default.hex}}70"
-	}}
-}}
+	}
+}
