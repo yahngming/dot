@@ -54,3 +54,8 @@ post_hook = 'tee /dev/pts/[0-9]* < ~/.cache/wal/sequences'
 input_path = '~/.config/matugen/waybar.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.xresources]
+input_path = '~/.config/matugen/xorg'
+output_path = '~/.config/xorg/colors'
+post_hook = 'xrdb -merge ~/.config/xorg/colors'
