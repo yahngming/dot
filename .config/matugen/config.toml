@@ -40,3 +40,4 @@ post_hook = 'pywalfox update'
 [templates.waybar]
 input_path = '~/.config/matugen/waybar.css'
 output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
