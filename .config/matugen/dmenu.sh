@@ -13,4 +13,4 @@ color11={{colors.on_error_container.default.hex}}
 color12={{colors.on_primary_fixed_variant.default.hex}}
 color13={{colors.secondary.dark.hex}}
 color14={{colors.inverse_primary.default.hex}}
-color15={{colors.on_surface.dark.hex}}"
+color15={{colors.on_surface.dark.hex}}
