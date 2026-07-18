@@ -15,7 +15,7 @@ bat() {
 		$((bat <= 99)) ) icon="󰂂" ;;
 		$((bat >= 99)) ) icon="󰁹" ;;
 	esac
-	[ "$bat" ] && printf "$icon"
+	[ "$icon" ] && printf "$icon"
 }
 
 clk() {
@@ -46,7 +46,7 @@ cpu() {
 		$((cpu <= 80)) ) icon="󰔏" ;;
 		$((cpu <= 99)) ) icon="󱃂" ;;
 	esac
-	[ "$cpu" ] && printf "$icon"
+	[ "$icon" ] && printf "$icon"
 }
 
 cut() {
@@ -69,7 +69,7 @@ ime() {
 		*hangul*                   ) icon="🇰🇷" ;;
 		*                          ) icon="🇺🇸" ;;
 	esac
-	[ "$ime" ] && printf "$icon"
+	[ "$icon" ] && printf "$icon"
 }
 
 net() {
@@ -108,7 +108,7 @@ vol() {
 	case "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" in
 		*MUTED* ) icon="󰝟" ;;
 	esac
-	[ "$vol" ] && printf "$icon"
+	[ "$icon" ] && printf "$icon"
 }
 
 case "$DESKTOP" in
