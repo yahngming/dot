@@ -188,7 +188,7 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		class = "tag:center",
+		tag = "center",
 	},
 	center = true,
 	float = true,
