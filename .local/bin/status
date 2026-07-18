@@ -40,7 +40,7 @@ clk() {
 }
 
 cpu() {
-	cpu="$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000))"
+	cpu="$(($(cat /sys/class/hwmon/hwmon3/temp1_input)/1000))"
 	case 1 in
 		$((cpu <= 40)) ) icon="󱃃" ;;
 		$((cpu <= 80)) ) icon="󰔏" ;;
@@ -59,6 +59,16 @@ dpm() {
 	case "$(xset q | grep '^\s*DPMS is' | awk '{print $3}')" in
 		Disabled ) printf "" ;;
 	esac
+}
+
+gpu() {
+	cpu="$(($(cat /sys/class/hwmon/hwmon1/temp1_input)/1000))"
+	case 1 in
+		$((cpu <= 40)) ) icon="󱃃" ;;
+		$((cpu <= 80)) ) icon="󰔏" ;;
+		$((cpu <= 99)) ) icon="󱃂" ;;
+	esac
+	[ "$icon" ] && printf "$icon"
 }
 
 ime() {
@@ -114,7 +124,7 @@ vol() {
 case "$DESKTOP" in
 	*dwm*)
 		while true; do
-			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb) $(dpm) $(cpu) $(bat) $(net) $(vol) $(clk) "
+			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb) $(dpm) $(cpu) $(gpu) $(bat) $(net) $(vol) $(clk) "
 		done
 		;;
 	*)
