@@ -12,6 +12,5 @@ elif [ -n "$DISPLAY" ]; then
 	xinput set-prop "Synaptics TM3289-021" 324 1
 	xinput set-prop "Synaptics TM3289-021" 328 1
 	xinput set-prop "Synaptics TM3289-021" 340 1
-	xrdb -merge ~/.config/xorg/xresources
 	xset r rate 300 30 s 600
 fi
