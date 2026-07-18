@@ -29,7 +29,7 @@ output_path = '~/.config/niri/colors.kdl'
 post_hook = 'niri msg action load-config-file'
 
 [templates.pywalfox]
-input_path = '~/.config/matugen/pywalfox.json'
+input_path = '~/.config/matugen/colors.json'
 output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
 
