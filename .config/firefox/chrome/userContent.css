@@ -1,7 +1,46 @@
 @import url("/home/yahngming/.config/firefox/chrome/colors.css");
 
-@-moz-document domain("youtube.com") {
+@-moz-document domain("github.com") {
+    :root {
+        --bgColor-default: var(--background) !important;
+        --bgColor-muted: var(--surface_container_low) !important;
+        --bgColor-inset: var(--surface_container_lowest) !important;
+        --bgColor-emphasis: var(--surface_bright) !important;
+        --borderColor-default: var(--outline_variant) !important;
+        --borderColor-muted: var(--outline_variant) !important;
+        --borderColor-emphasis: var(--outline) !important;
+        --fgColor-default: var(--on_surface) !important;
+        --fgColor-muted: var(--on_surface_variant) !important;
+        --fgColor-accent: var(--primary) !important;
+        --button-primary-bgColor-rest: var(--primary) !important;
+        --button-primary-fgColor-rest: var(--on_primary) !important;
+        --button-primary-bgColor-hover: var(--primary_fixed_dim) !important;
+        --button-primary-bgColor-active: var(--primary_fixed) !important;
+        --button-primary-borderColor-rest: var(--outline_variant) !important;
+        --button-default-bgColor-rest: var(--surface_container_high) !important;
+        --button-default-fgColor-rest: var(--on_surface) !important;
+        --button-default-bgColor-hover: var(--surface_bright) !important;
+        --buttonCounter-default-bgColor-rest: var(--surface_container_highest) !important;
+        --bgColor-accent-emphasis: var(--primary) !important;
+        --borderColor-accent-emphasis: var(--primary) !important;
+        --bgColor-accent-muted: var(--primary_container) !important;
+        --borderColor-accent-muted: var(--primary_container) !important;
+        --bgColor-danger-emphasis: var(--error) !important;
+        --fgColor-danger: var(--error) !important;
+        --button-danger-fgColor-rest: var(--error) !important;
+        --button-danger-bgColor-hover: var(--error_container) !important;
+        --bgColor-attention-emphasis: var(--secondary) !important;
+        --borderColor-attention-muted: var(--secondary_container) !important;
+        --control-checked-bgColor-rest: var(--primary) !important;
+        --control-checked-bgColor-hover: var(--primary_fixed_dim) !important;
+        --control-checked-bgColor-active: var(--primary_fixed) !important;
+        --button-star-iconColor: var(--primary) !important;
+        --control-bgColor-active: var(--surface_container_highest) !important;
+        --overlay-bgColor: var(--surface_container) !important;
+    }
+}
 
+@-moz-document domain("youtube.com") {
 	:root, [dark], [light] {
 		--yt-spec-base-background: var(--background) !important;
 		--yt-spec-raised-background: var(--surface_container) !important;
@@ -30,8 +69,6 @@
 		--t617db776af0de196: var(--primary) !important;
 		--t08a7c6c176cbc5c2: var(--surface_container) !important;
 	}
-
-	/* Sidebar / Navigation */
 	#guide-content.ytd-app,
 	ytd-guide-renderer,
 	#contentContainer.app-drawer,
@@ -40,20 +77,15 @@
 	.style-scope ytd-feed-filter-chip-bar-renderer {
 		background-color: var(--background) !important;
 	}
-
-	/* Progress bar */
 	.ytp-play-progress.ytp-swatch-background-color,
 	.ytp-play-progress,
 	.yt-play-progress {
 		background-image: linear-gradient(to right, var(--primary) 80%, var(--primary) 100%) !important;
 		background-color: transparent !important;
 	}
-
 	.ytp-scrubber-button.ytp-swatch-background-color {
 		background-color: var(--secondary) !important;
 	}
-
-	/* YouTube Logo Color */
 	#logo-icon svg g path[fill^="#ff"],
 	#logo-icon svg g path[fill^="#FF"],
 	ytd-logo svg g path[fill^="#ff"],
@@ -62,45 +94,33 @@
 	#logo-icon path.style-scope.ytd-logo[fill="#ff0000"] {
 		fill: var(--primary) !important;
 	}
-
 	#logo-icon [fill="white"],
 	.ytd-logo [fill="white"] {
 		fill: var(--on_primary) !important;
 	}
-
 	#logo-icon path[fill="#212121"],
 	#logo-icon path[fill="#fff"],
 	.yt-icon-shape path[fill="#fff"] {
 		fill: var(--on_surface) !important;
 	}
-
 	.ytp-volume-slider-handle:before {
 		background: var(--primary) !important;
 	}
-
-	/* Notification Badges */
 	.yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
 		background-color: var(--primary) !important;
 		color: var(--on_primary) !important;
 	}
-
-
-	/* Search Bar */
 	.ytSearchboxComponentInputBox {
 		background-color: var(--surface_container) !important;
 		color: var(--on_surface_container) !important;
 	}
-
 	.ytSearchboxComponentInputBox.ytSearchboxComponentInputBoxHasFocus {
 		border-color: var(--primary) !important;
 	}
-
 	.ytSearchboxComponentSearchButton {
 		background-color: var(--primary) !important;
 		color: var(--on_primary) !important;
 	}
-
-	/* Header + Top Bar + Chip background */
 	#masthead-container.ytd-app,
 	#background.ytd-masthead,
 	ytd-feed-filter-chip-bar-renderer[frosted-glass-mode="with-chipbar"] #chips-wrapper.ytd-feed-filter-chip-bar-renderer,
@@ -109,69 +129,41 @@
 		background-color: var(--background) !important;
 		color: var(--on_background) !important
 	}
-
-
-	/* Buttons */
 	ytd-button-renderer.style-primary {
 		--yt-spec-button-chip-background-hover: var(--primary_container) !important;
 	}
-
-	/* Live Chat + Comments */
 	ytd-live-chat-frame#chat {
 		border: 1px solid var(--outline_variant) !important;
 		border-radius: 12px !important;
 	}
-
-	/* Primary Buttons */
 	ytd-button-renderer.style-primary .yt-spec-button-shape-next--filled {
 		background-color: var(--primary) !important;
 		color: var(--on_primary) !important;
 	}
-
 	ytd-button-renderer.style-primary:hover .yt-spec-button-shape-next--filled {
 		background-color: var(--primary_fixed_dim) !important;
 	}
-
-	/* Tonal/Secondary Buttons */
 	.yt-spec-button-shape-next--tonal,
 	.yt-spec-touch-feedback-shape--touch-response .yt-spec-touch-feedback-shape__fill {
 		background-color: var(--secondary_container) !important;
 		color: var(--on_secondary_container) !important;
 	}
-
 	.yt-spec-button-shape-next--tonal:hover,
 	.yt-spec-touch-feedback-shape--touch-response .yt-spec-touch-feedback-shape__fill:hover {
 		background-color: var(--secondary_fixed_dim) !important;
 		color: var(--on_secondary_fixed_variant) !important;
 	}
-
-	/* Community posts */
 	ytd-post-renderer {
 		background-color: var(--surface_container) !important;
 		border: 1px solid var(--outline_variant) !important;
 		color: var(--on_surface_container) !important;
 	}
-
-	/* Dropdowns */
 	ytd-multi-page-menu-renderer {
 		background: var(--surface_container) !important;
 		color: var(--on_surface_container) !important;
 	}
-
-	/* Search box */
 	.ytSearchboxComponentSuggestionsContainer {
 		background-color: var(--surface_container) !important;
 		color: var(--on_surface_container) !important;
 	}
-
-	/* The "Subscribe" button */
-	/* Disabled because it looks kinda bad to me */
-	/* #subscribe-button .yt-spec-button-shape-next--filled {
-		background-color: var(--primary) !important;
-	} */
-
-	/* #subscribe-button:hover .yt-spec-button-shape-next--filled {
-		background-color: var(--primary_fixed) !important;
-		filter: brightness(1.1) !important;
-	} */
 }
