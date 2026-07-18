@@ -198,8 +198,9 @@ hl.window_rule({
 		tag = "bottomright",
 	},
 	float = true,
-	move = { "monitor_w - window_w - 20", "monitor_h - window_h - 20" },
 	pin = true,
+	size = { "monitor_w * 0.30", "monitor_h * 0.25" },
+	move = { "monitor_w - window_w - 20", "monitor_h - window_h - 20" },
 })
 
 hl.window_rule({
