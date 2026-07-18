@@ -23,6 +23,9 @@ hl.config({
 		resize_on_border = true,
 		layout = "scrolling",
 	},
+	scrolling = {
+		fullscreen_on_one_column = false,
+	},
 	decoration = {
 		rounding = 4,
 		active_opacity = 0.9,
