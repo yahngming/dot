@@ -125,7 +125,7 @@ hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl s 5%+"), { locked 
 
 hl.window_rule({
 	match = {
-		class = "title:^(Picture.?in.?[Pp]icture)$",
+		title = "^(Picture.?in.?[Pp]icture)$",
 	},
 	tag = "+bottomright",
 })
@@ -146,42 +146,42 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		class = "class:^(fullscreen|steam_app_.*)$",
+		class = "^(fullscreen|steam_app_.*)$",
 	},
 	tag = "+fullscreen",
 })
 
 hl.window_rule({
 	match = {
-		class = "title:^(fullscreen)$",
+		title = "^(fullscreen)$",
 	},
 	tag = "+fullscreen",
 })
 
 hl.window_rule({
 	match = {
-		class = "class:^(steam_app_.*)$",
+		class = "^(steam_app_.*)$",
 	},
 	tag = "+idleinhibit",
 })
 
 hl.window_rule({
 	match = {
-		class = "class:^(blender|Darktable|krita|mpv|.*freecad.*|resolve)$",
+		class = "^(blender|Darktable|krita|mpv|.*freecad.*|resolve)$",
 	},
 	tag = "+opaque",
 })
 
 hl.window_rule({
 	match = {
-		class = "title:^(.*YouTube -.*|Picture.?in.?[Pp]icture)$",
+		title = "^(.*YouTube -.*|Picture.?in.?[Pp]icture)$",
 	},
 	tag = "+opaque",
 })
 
 hl.window_rule({
 	match = {
-		class = "class:^(KeePassXC)$",
+		class = "^(KeePassXC)$",
 	},
 	tag = "+secret",
 })
@@ -196,56 +196,56 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
-		class = "tag:bottomright",
+		tag = "bottomright",
 	},
 	float = true,
 })
 
 hl.window_rule({
 	match = {
-		class = "tag:fullscreen",
+		tag = "fullscreen",
 	},
 	fullscreen = true,
 })
 
 hl.window_rule({
 	match = {
-		class = "tag:idleinhibit",
+		tag = "idleinhibit",
 	},
 	idle_inhibit = always,
 })
 
 hl.window_rule({
 	match = {
-		class = "tag:bottomright",
+		tag = "bottomright",
 	},
 	move = { "monitor_w - window_w", "monitor_h - window_h" }
 })
 
 hl.window_rule({
 	match = {
-		class = "tag:secret",
+		tag = "secret",
 	},
 	no_screen_share = true,
 })
 
 hl.window_rule({
 	match = {
-		class = "tag:opaque",
+		tag = "opaque",
 	},
 	opacity = "1.0 override",
 })
 
 hl.window_rule({
 	match = {
-		class = "tag:bottomright",
+		tag = "bottomright",
 	},
 	pin = true,
 })
 
 hl.window_rule({
 	match = {
-		class = "class:.*",
+		class = ".*",
 	},
 	suppress_event = "maximize",
 })
