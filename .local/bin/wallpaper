@@ -4,20 +4,19 @@ setpaper() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 		exit
 	elif [ "$(theme)" == "dark" ]; then
-		wal -ni "$wallpaper"
+		matugen --mode dark --source-color-index 0 image "$wallpaper"
 	else
-		wal -lni "$wallpaper"
+		matugen --mode light --source-color-index 0 image "$wallpaper"
 	fi
 	cp "$wallpaper" "$paperfolder/wallpaper"
-	convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
 	if [ -n "$WAYLAND_DISPLAY" ]; then
 		pgrep awww-daemon || awww-daemon &
 		awww img "$wallpaper"
 		if [ "$XDG_CURRENT_DESKTOP" = "niri" ]; then
+			convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
 			pkill swaybg
 			swaybg -i "$paperfolder/backdrop" -m fill &
 		fi
-		cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/
 		makoctl reload
 	elif [ -n "$DISPLAY" ]; then
 		xwallpaper --zoom "$wallpaper"
