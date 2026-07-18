@@ -62,11 +62,11 @@ dpm() {
 }
 
 gpu() {
-	cpu="$(($(cat /sys/class/hwmon/hwmon1/temp1_input)/1000))"
+	gpu="$(($(cat /sys/class/hwmon/hwmon1/temp1_input)/1000))"
 	case 1 in
-		$((cpu <= 40)) ) icon="󱃃" ;;
-		$((cpu <= 80)) ) icon="󰔏" ;;
-		$((cpu <= 99)) ) icon="󱃂" ;;
+		$((gpu <= 40)) ) icon="󱃃" ;;
+		$((gpu <= 80)) ) icon="󰔏" ;;
+		$((gpu <= 99)) ) icon="󱃂" ;;
 	esac
 	[ "$icon" ] && printf "$icon"
 }
@@ -124,7 +124,7 @@ vol() {
 case "$DESKTOP" in
 	*dwm*)
 		while true; do
-			sleep 0.5 && xprop -root -set WM_NAME " $(ime) $(usb) $(dpm) $(cpu) $(gpu) $(bat) $(net) $(vol) $(clk) "
+			sleep 1 && xprop -root -set WM_NAME " $(ime) $(usb) $(dpm) $(cpu) $(gpu) $(bat) $(net) $(vol) $(clk) "
 		done
 		;;
 	*)
