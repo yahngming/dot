@@ -16,4 +16,4 @@ elif [ -n "$DISPLAY" ]; then
 fi
 title="$(echo "$@" | cut -d ' ' -f 1)"
 
-$command $class -T $title -e $SHELL -lc "$@"
+$command $class -T $title -e $SHELL -ic "$@"
