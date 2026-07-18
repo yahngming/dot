@@ -87,7 +87,7 @@ net() {
 	case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
 		*up* ) icon="󰈀" ;;
 	esac
-	[ "$net" ] && printf "$icon"
+	[ "$icon" ] && printf "$icon"
 }
 
 usb() {
