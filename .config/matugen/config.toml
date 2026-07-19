@@ -45,11 +45,6 @@ input_path = '~/.config/matugen/pywalfox.json'
 output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
 
-[templates.sequences]
-input_path = '~/.config/matugen/sequences'
-output_path = '~/.cache/wal/sequences'
-post_hook = 'tee /dev/pts/[0-9]* < ~/.cache/wal/sequences'
-
 [templates.waybar]
 input_path = '~/.config/matugen/waybar.css'
 output_path = '~/.config/waybar/colors.css'
