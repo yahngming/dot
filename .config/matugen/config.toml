@@ -50,7 +50,7 @@ input_path = '~/.config/matugen/waybar.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
-[templates.xresources]
+[templates.xorg]
 input_path = '~/.config/matugen/xorg'
 output_path = '~/.config/xorg/colors'
 post_hook = 'xrdb -merge ~/.config/xorg/colors'
