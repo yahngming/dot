@@ -10,7 +10,7 @@ xfce\n\
 
 config="$HOME/.config/desktop"
 
-case $(printf "$menu" | menu -p "current desktop is $XDG_CURRENT_DESKTOP" "$@") in
+case $(printf "$menu" | menu -p "current:$XDG_CURRENT_DESKTOP" "$@") in
 	dwm      ) echo "startx ~/.config/xorg/xinitrc dwm" > "$config" ;;
 	hyprland ) echo "start-hyprland" > "$config" ;;
 	mango    ) echo "exec mango" > "$config" ;;
