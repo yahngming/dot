@@ -9,6 +9,7 @@ xfce\n\
 "
 
 config="$HOME/.config/desktop"
+desktop=$(awk '{print $NF; exit}' "$config")
 
 case $(printf "$menu" | menu "$@") in
 	dwm      ) echo "startx ~/.config/xorg/xinitrc dwm" > "$config" ;;
