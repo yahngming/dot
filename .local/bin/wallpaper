@@ -1,6 +1,6 @@
 #!/bin/sh
 
-setpaper() {
+setup() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 		exit
 	elif [ "$(theme)" == "dark" ]; then
@@ -26,23 +26,23 @@ setpaper() {
 
 manual() {
 	wallpaper="$arg"
-	setpaper
+	setup
 }
 
 picker() {
 	wallpaper="$(nsxiv -ot $themefolder/* | shuf -n 1)"
-	setpaper
+	setup
 }
 
 random() {
 	wallpaper="$(find $themefolder/* | shuf -n 1)"
-	setpaper
+	setup
 }
 
 weather() {
 	wallpaper="$paperfolder/wallpaper"
 	convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +200+200 -composite "$wallpaper"
-	setpaper
+	setup
 }
 
 help() {
