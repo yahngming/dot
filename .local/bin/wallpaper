@@ -3,7 +3,7 @@
 setup() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 		exit
-	elif [ "$(theme current)" == "dark" ]; then
+	elif [ "$(theme)" == "dark" ]; then
 		matugen --mode dark --source-color-index 0 image "$wallpaper"
 	else
 		matugen --mode light --source-color-index 0 image "$wallpaper"
@@ -55,7 +55,7 @@ help() {
 }
 
 paperfolder="$HOME/Pictures/wallpapers"
-themefolder="$paperfolder/$(theme current)"
+themefolder="$paperfolder/$(theme)"
 arg=${1:-help}
 
 case "$arg" in
