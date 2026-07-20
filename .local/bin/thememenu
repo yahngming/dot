@@ -6,10 +6,7 @@ menu="\
  light\n\
 "
 
-config="$HOME/.config/theme"
-theme=$(awk '{print $1; exit}' "$config")
-
-case $(printf "$menu" | menu -p "current:$theme" "$@") in
+case $(printf "$menu" | menu -p "current:$(theme)" "$@") in
 	*auto*  ) theme auto ;;
 	*dark*  ) theme dark ;;
 	*light* ) theme light ;;
