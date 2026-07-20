@@ -13,7 +13,6 @@ windows\n\
 "
 
 choice=$(printf "$menu" | menu "$@")
-fetchfolder="$HOME/.config/fastfetch"
 if [ "$choice" == "auto" ]; then
 	case "$(cat /sys/devices/virtual/dmi/id/product_family)" in
 		*ThinkPad* ) choice="thinkpad" ;;
@@ -23,5 +22,6 @@ if [ "$choice" == "auto" ]; then
 		*          ) choice="arch" ;;
 	esac
 fi
+fetchfolder="$HOME/.config/fastfetch"
 
 [[ -f $fetchfolder/config-$choice.jsonc ]] && cp $fetchfolder/config-$choice.jsonc $fetchfolder/config.jsonc
