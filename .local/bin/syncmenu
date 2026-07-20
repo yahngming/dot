@@ -5,7 +5,7 @@ menu="\
  Upload to remote\n\
 "
 
-case $(printf "$menu" | menu -p "Sync with remote" "$@") in
+case $(printf "$menu" | menu -p "Sync with remote:" "$@") in
 	*Download* ) tui "rclone --ignore-existing --progress copy disroot:/Documents ~/Documents" ;;
 	*Upload*   ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
 esac
