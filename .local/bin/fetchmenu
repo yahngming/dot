@@ -24,4 +24,4 @@ if [ "$choice" == "auto" ]; then
 	esac
 fi
 
-[ -f $fetchfolder/config-$choice.jsonc ] &&	cp $fetchfolder/config-$choice.jsonc $fetchfolder/config.jsonc
+[[ -f $fetchfolder/config-$choice.jsonc ]] && cp $fetchfolder/config-$choice.jsonc $fetchfolder/config.jsonc
