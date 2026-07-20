@@ -1,14 +1,5 @@
 #!/bin/sh
 
-file="$1"
-width="$2"
-height="$3"
-extension="$(printf "%s" "${file##*.}" | tr '[:upper:]' '[:lower:]')"
-mimetype="$(file -Lb --mime-type -- "$file")"
-cachedir="$HOME/.cache/thumbnails/preview"
-cachefile="$cachedir/$(sha256sum "$file" | awk '{print $1}')"
-mkdir -p "$cachedir"
-
 image() {
 	chafa --format=sixels --polite=on --clear --size="$width"x"$height" "$1" && exit 0
 }
@@ -16,6 +7,15 @@ image() {
 text() {
 	bat --color=always --style=plain --pager=never --theme=ansi --language=ts "$1" && echo "" && exit 0
 }
+
+file="$1"
+width="$2"
+height="$3"
+extension="$(printf "%s" "${file##*.}" | tr '[:upper:]' '[:lower:]')"
+mimetype="$(file -Lb --mime-type -- "$file")"
+cachedir="$HOME/.cache/thumbnails/preview"
+cachefile="$cachedir/$(sha256sum "$file" | awk '{print $1}')"
+mkdir -p $cachedir
 
 case "$extension" in
 	1)
