@@ -307,7 +307,7 @@ show_menu() {
 # dmenu command to pipe into. Extra arguments to dmenu-bluetooth are passed through to dmenu. This
 # allows the user to set fonts, sizes, colours, etc.
 run_dmenu() {
-	menu -p Bluetooth "${dmenu_args[@]}"
+	menu -p "Bluetooth" "${dmenu_args[@]}"
 }
 
 print_help() {
