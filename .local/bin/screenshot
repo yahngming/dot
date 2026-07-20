@@ -1,10 +1,11 @@
 #!/bin/sh
 
-mkdir -p ~/Pictures/screenshots
-screenshot=~/Pictures/screenshots/$(date '+%Y-%m-%d@%H:%M:%S').png
+folder=$HOME/Pictures/screenshots
+file=$folder/$(date '+%Y-%m-%d@%H:%M:%S').png
 
+mkdir -p $folder
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	pkill slurp || grim -g "$(slurp)" -t ppm - | satty --filename - --output-filename "$screenshot" --early-exit --copy-command "wl-copy"
+	pkill slurp || grim -g "$(slurp)" -t ppm - | satty --filename - --output-filename "$file" --early-exit --copy-command "wl-copy"
 elif [ -n "$DISPLAY" ]; then
-	maim --hidecursor --select "$screenshot" | xclip -selection clipboard -target image/png
+	maim --hidecursor --select "$file" | xclip -selection clipboard -target image/png
 fi
