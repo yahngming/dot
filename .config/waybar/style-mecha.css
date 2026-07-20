@@ -1,4 +1,4 @@
-@import "colors-waybar.css";
+@import "colors.css";
 
 /* Main Colors */
 
@@ -29,8 +29,8 @@
 @define-color mantle          #181825;
 @define-color crust           #11111b;
 
-@define-color main-fg         @color8;
-@define-color main-bg         @color0;
+@define-color main-fg         @primary;
+@define-color main-bg         @background;
 @define-color main-br         @color8;
 @define-color active-bg       @overlay2;
 @define-color active-fg       @color0;
