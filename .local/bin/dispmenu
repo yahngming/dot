@@ -73,7 +73,7 @@ menu="\
 󰍹 Single monitor\n\
 "
 
-case $(printf "$menu" | menu -p "Display output:" "$@") in
+case $(printf "$menu" | menu -p "Display" "$@") in
 	*Extend* ) extend ;;
 	*Mirror* ) mirror ;;
 	*Single* ) single ;;
