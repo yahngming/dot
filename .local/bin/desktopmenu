@@ -9,9 +9,8 @@ xfce\n\
 "
 
 config="$HOME/.config/desktop"
-desktop=$(awk '{print $NF; exit}' "$config")
 
-case $(printf "$menu" | menu -p "$desktop in use" "$@") in
+case $(printf "$menu" | menu -p "current desktop is $XDG_CURRENT_DESKTOP" "$@") in
 	dwm      ) echo "startx ~/.config/xorg/xinitrc dwm" > "$config" ;;
 	hyprland ) echo "start-hyprland" > "$config" ;;
 	mango    ) echo "exec mango" > "$config" ;;
