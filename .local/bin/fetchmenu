@@ -24,4 +24,4 @@ if [ "$choice" == "auto" ]; then
 fi
 folder="$HOME/.config/fastfetch"
 
-[[ -f $folder/config-$choice.jsonc ]] && cp $folder/config-$choice.jsonc $fetchfolder/config.jsonc
+[[ -f $folder/config-$choice.jsonc ]] && cp $folder/config-$choice.jsonc $folder/config.jsonc
