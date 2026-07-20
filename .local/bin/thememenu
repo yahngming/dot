@@ -6,7 +6,8 @@ menu="\
  Light mode\n\
 "
 
-case $(printf "$menu" | menu -p "Change theme to:" "$@") in
+config="$HOME/.config/theme"
+case $(printf "$menu" | menu -p "current:" "$@") in
 	*Auto*  ) theme auto ;;
 	*Dark*  ) theme dark ;;
 	*Light* ) theme light ;;
