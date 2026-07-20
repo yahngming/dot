@@ -24,7 +24,6 @@ if [ "$choice" == "auto" ]; then
 	esac
 fi
 
-if [ -f ~/.config/fastfetch/config-$choice.jsonc ] && [ -f ~/.config/fastfetch/logo-$choice.txt ]; then
+if [ -f ~/.config/fastfetch/config-$choice.jsonc ]; then
 	cp ~/.config/fastfetch/config-$choice.jsonc ~/.config/fastfetch/config.jsonc
-	cp ~/.config/fastfetch/logo-$choice.txt ~/.config/fastfetch/logo.txt
 fi
