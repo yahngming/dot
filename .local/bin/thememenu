@@ -1,14 +1,16 @@
 #!/bin/sh
 
 menu="\
-󰔎 Auto switch\n\
- Dark mode\n\
- Light mode\n\
+󰔎 auto\n\
+ dark\n\
+ light\n\
 "
 
 config="$HOME/.config/theme"
-case $(printf "$menu" | menu -p "current:" "$@") in
-	*Auto*  ) theme auto ;;
-	*Dark*  ) theme dark ;;
-	*Light* ) theme light ;;
+theme=$(awk '{print $1; exit}' "$config")
+
+case $(printf "$menu" | menu -p "current:$theme" "$@") in
+	*auto*  ) theme auto ;;
+	*dark*  ) theme dark ;;
+	*light* ) theme light ;;
 esac
