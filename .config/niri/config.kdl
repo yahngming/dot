@@ -52,10 +52,10 @@ binds {
 	Mod+F                 { spawn "files"; }
 	Mod+G                 { spawn "game"; }
 	Mod+I                 { spawn "settings"; }
-	Mod+L                 { spawn "powermenu"; }
 	Mod+M                 { spawn "mail"; }
 	Mod+N                 { spawn "news"; }
 	Mod+O                 { toggle-overview; }
+	Mod+P                 { spawn "powermenu"; }
 	Mod+Q                 { close-window; }
 	Mod+R                 { spawn "launcher"; }
 	Mod+S                 { spawn "screenshot"; }
