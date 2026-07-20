@@ -22,6 +22,6 @@ if [ "$choice" == "auto" ]; then
 		*          ) choice="arch" ;;
 	esac
 fi
-fetchfolder="$HOME/.config/fastfetch"
+folder="$HOME/.config/fastfetch"
 
-[[ -f $fetchfolder/config-$choice.jsonc ]] && cp $fetchfolder/config-$choice.jsonc $fetchfolder/config.jsonc
+[[ -f $folder/config-$choice.jsonc ]] && cp $folder/config-$choice.jsonc $fetchfolder/config.jsonc
