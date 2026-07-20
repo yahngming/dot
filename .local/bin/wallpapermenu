@@ -6,7 +6,7 @@ menu="\
 󱗺 Overlay weather forcast\n\
 "
 
-case $(printf "$menu" | menu -p "Set wallpaper:" "$@") in
+case $(printf "$menu" | menu -p "Wallpaper" "$@") in
 	*random*  ) wallpaper random ;;
 	*picker*  ) wallpaper picker ;;
 	*weather* ) wallpaper weather ;;
