@@ -35,7 +35,7 @@ tooltip {
 }
 
 #clock {
-	color: @color4;
+	color: @primary;
 }
 
 #battery,
@@ -56,7 +56,7 @@ tooltip {
 #tray menu separator {
 	padding: 0px 5px;
 	transition: all .3s ease; 
-	color: @color7;
+	color: @primary;
 }
 
 #battery:hover,
@@ -76,7 +76,7 @@ tooltip {
 #tray:hover,
 #tray menu *:hover,
 #tray menu separator:hover {
-	color: @primary;
+	color: @surface;
 }
 
 #workspaces {
