@@ -1,4 +1,4 @@
-@import "colors-waybar.css";
+@import "colors.css";
 
 * {
 	font-family: graphical;
@@ -76,7 +76,7 @@ tooltip {
 #tray:hover,
 #tray menu *:hover,
 #tray menu separator:hover {
-	color: @color9;
+	color: @primary;
 }
 
 #workspaces {
@@ -95,7 +95,7 @@ tooltip {
 	text-shadow: 0px 0px 1px rgba(0, 0, 0, .8);
 }
 #workspaces button.active {
-	color: @color9;
+	color: @primary;
 	border: none;
 	transition: all .5s ease;
 }
@@ -110,7 +110,7 @@ tooltip {
 	text-shadow: 0px 0px 1px rgba(0, 0, 0, .5);
 }
 #workspaces button.empty.active {
-	color: @color9;
+	color: @primary;
 	border: none;
 	transition: all .5s ease;
 }
