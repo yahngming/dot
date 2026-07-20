@@ -1,4 +1,4 @@
-@import "colors-waybar.css";
+@import "colors.css";
 
 * {
 	font-family: graphical;
@@ -37,22 +37,22 @@ window#waybar {
 #pulseaudio,
 #custom-powermenu,
 #clock {
-	color: @foreground;
+	color: @primary;
 	padding: 6px 0;
 }
 
 tooltip {
 	background: @background;
-	border: 1px solid @foreground;
+	border: 1px solid @primary;
 }
 tooltip * {
-	color: @foreground;
+	color: @primary;
 	margin: 2px;
 	background: @background;
 }
 
 #workspaces button {
-	color: @foreground;
+	color: @primary;
 	padding: 0;
 }
 #workspaces button.active {
