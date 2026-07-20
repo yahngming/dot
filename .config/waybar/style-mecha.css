@@ -31,7 +31,7 @@
 
 @define-color main-fg         @primary;
 @define-color main-bg         @background;
-@define-color main-br         @color8;
+@define-color main-br         @surface;
 @define-color active-bg       @overlay2;
 @define-color active-fg       @color0;
 @define-color hover-bg        @surface0;
@@ -40,7 +40,7 @@
 
 /* Module Colors */
 
-@define-color module-fg       @color8;
+@define-color module-fg       @surface;
 @define-color workspaces      @mantle;
 @define-color temperature     @mantle;
 @define-color memory          @base;
