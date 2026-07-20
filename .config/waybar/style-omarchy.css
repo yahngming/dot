@@ -1,8 +1,8 @@
-@import "colors-waybar.css";
+@import "colors.css";
 
 * {
 	background-color: @background;
-	color: @foreground;
+	color: @primary;
 
 	border: none;
 	border-radius: 0;
