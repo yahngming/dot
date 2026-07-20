@@ -2,8 +2,8 @@
 
 folder="$HOME/Pictures/screenshots"
 file="$folder/$(date '+%Y-%m-%d@%H:%M:%S').png"
-
 mkdir -p $folder
+
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	pkill slurp || grim -g "$(slurp)" -t ppm - | satty --filename - --output-filename "$file" --early-exit --copy-command "wl-copy"
 elif [ -n "$DISPLAY" ]; then
