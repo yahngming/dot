@@ -1,7 +1,7 @@
 #!/bin/sh
 
-folder=$HOME/Pictures/screenshots
-file=$folder/$(date '+%Y-%m-%d@%H:%M:%S').png
+folder="$HOME/Pictures/screenshots"
+file="$folder/$(date '+%Y-%m-%d@%H:%M:%S').png"
 
 mkdir -p $folder
 if [ -n "$WAYLAND_DISPLAY" ]; then
