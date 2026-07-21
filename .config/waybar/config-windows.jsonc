@@ -46,7 +46,7 @@
 		"on-click-middle": "close",
 		"tooltip-format": "{title}",
 		"ignore-list": [],
-		"on-click": "activate"
+		"on-click": "minimize-raise"
 	},
 
 	"tray": {
