@@ -2,12 +2,8 @@
 
 	"layer": "bottom",
 	"position": "bottom",
-	"mod": "dock",
-	"exclusive": true,
-	"gtk-layer-shell": true,
-	"margin-bottom": -1,
-	"passthrough": false,
 	"height": 41,
+	"margin-bottom": -1,
 
 	"modules-left": [
 		"custom/start",
