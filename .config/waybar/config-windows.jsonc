@@ -28,7 +28,7 @@
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
-		"on-scroll-down": "logo",
+		"interval": 1,
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
