@@ -12,7 +12,7 @@
 		"format": "{icon} {title:.20}",
 		"icon-size": 14,
 		"tooltip": false,
-		"on-click": "activate",
+		"on-click": "minimize-raise",
 		"on-click-middle": "close"
 	},
 	"cpu": {
