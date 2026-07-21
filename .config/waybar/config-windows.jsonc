@@ -127,8 +127,8 @@
 		"on-click": "wlanmenu"
 	},
 	"pulseaudio": {
-		"max-volume": 150,
-		"scroll-step": 10,
+		"max-volume": 100,
+		"scroll-step": 5,
 		"format": "{icon}",
 		"tooltip-format": "{volume}%",
 		"format-muted": "",
