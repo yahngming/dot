@@ -1,20 +1,22 @@
 ! X colors.
-*foreground:        {{colors.on_surface.default.hex}}
+*.background:       {{colors.surface.default.hex}}
 *background:        {{colors.surface.default.hex}}
 *.foreground:       {{colors.on_surface.default.hex}}
-*.background:       {{colors.surface.default.hex}}
-emacs*foreground:   {{colors.on_surface.default.hex}}
+*foreground:        {{colors.on_surface.default.hex}}
+*.selbackground:    {{colors.primary.default.hex}}
+*.selforeground:    {{colors.primary_container.default.hex}}
 emacs*background:   {{colors.surface.default.hex}}
-URxvt*foreground:   {{colors.on_surface.default.hex}}
-XTerm*foreground:   {{colors.on_surface.default.hex}}
-UXTerm*foreground:  {{colors.on_surface.default.hex}}
+emacs*foreground:   {{colors.on_surface.default.hex}}
 URxvt*background:   [100]{{colors.surface.default.hex}}
-XTerm*background:   {{colors.surface.default.hex}}
-UXTerm*background:  {{colors.surface.default.hex}}
-URxvt*cursorColor:  {{colors.on_surface.default.hex}}
-XTerm*cursorColor:  {{colors.on_surface.default.hex}}
-UXTerm*cursorColor: {{colors.on_surface.default.hex}}
+URxvt*foreground:   {{colors.on_surface.default.hex}}
 URxvt*borderColor:  [100]{{colors.surface.default.hex}}
+URxvt*cursorColor:  {{colors.on_surface.default.hex}}
+UXTerm*background:  {{colors.surface.default.hex}}
+UXTerm*foreground:  {{colors.on_surface.default.hex}}
+UXTerm*cursorColor: {{colors.on_surface.default.hex}}
+XTerm*background:   {{colors.surface.default.hex}}
+XTerm*foreground:   {{colors.on_surface.default.hex}}
+XTerm*cursorColor:  {{colors.on_surface.default.hex}}
 
 ! Colors 0-15.
 *.color0:  {{colors.surface.default.hex}}
