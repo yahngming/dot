@@ -6,6 +6,7 @@ dispmgr
 fcitx5 &
 idler
 keyboard
+notifyd
 ollama serve &
 rquickshare &
 theme setup
