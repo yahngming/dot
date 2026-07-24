@@ -7,15 +7,16 @@ arch() {
 	sudo pacman -S --noconfirm bluez lib32-mesa lib32-vulkan-icd-loader mesa pipewire pipewire-alsa pipewire-jack pipewire-pulse vulkan-icd-loader # driver
 	sudo pacman -S --noconfirm lib32-vulkan-radeon ollama-rocm rocm-hip-runtime vulkan-radeon # amd
 	sudo pacman -S --noconfirm intel-media-driver lib32-vulkan-intel libvpl vpl-gpu-rt vulkan-intel # intel
-	sudo pacman -S --noconfirm 7zip aerc atool base-devel bat bc bluetui bluez-utils brightnessctl btop chafa cmus cups dante docker docker-compose evtest eza f3d fastfetch fd ffmpegthumbnailer fontforge fortune-mod fuse fzf git git-delta glow imagemagick impala jq lazydocker less lf libnotify lolcat man-db matugen mpv ollama openssh pass perl-image-exiftool polkit poppler python-mutagen rclone ripgrep smbclient translate-shell udiskie unrar unzip w3m wiremix wireplumber yt-dlp zathura-pdf-poppler zoxide # base
+	sudo pacman -S --noconfirm 7zip aerc atool base-devel bat bc bluetui bluez-utils brightnessctl btop chafa cmus cups dante docker docker-compose evtest eza f3d fastfetch fd ffmpegthumbnailer fontforge fortune-mod fuse fzf git git-delta glow imagemagick impala jq keyd lazydocker less lf libnotify lolcat man-db matugen mpv ollama openssh pass perl-image-exiftool polkit poppler python-mutagen rclone ripgrep smbclient translate-shell udiskie unrar unzip w3m wiremix wireplumber yt-dlp zathura-pdf-poppler zoxide # base
 	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-noto-nerd ttf-terminus-nerd # font
 	sudo pacman -S --noconfirm firefox gamescope gvim keepassxc libreoffice-fresh steam # gui
 	sudo pacman -S --noconfirm fcitx5-chinese-addons fcitx5-im fcitx5-mozc # ime
 	sudo pacman -S --noconfirm awww cliphist foot fuzzel grim hypridle hyprland hyprlock kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xwayland-satellite # wayland
-	sudo pacman -S --noconfirm clipmenu dunst maim nsxiv numlockx unclutter xcape xclip xcompmgr xdg-desktop-portal-gtk xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xscreensaver xwallpaper # xorg
+	sudo pacman -S --noconfirm clipmenu dunst maim nsxiv numlockx unclutter xclip xcompmgr xdg-desktop-portal-gtk xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xscreensaver xwallpaper # xorg
 	sudo systemctl enable bluetooth.service
 	sudo systemctl enable cups.service
 	sudo systemctl enable docker.service
+	sudo systemctl enable keyd.service
 	sudo gpasswd -a $USER uucp
 	sudo usermod -aG docker $USER
 	mkdir -p ~/.local/src
@@ -26,17 +27,14 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
 	yay -S --noconfirm bibata-cursor-git chicago95-theme dragon-drop mangowm newsraft python-pywalfox r-quick-share sing-box #base
 	yay -S --noconfirm asciiquarium-transparent-git lavat-git neo-matrix python-terminaltexteffects ttysvr # screensaver
-	sudo cp -r ~/.config/udev/ /etc/
+	sudo cp -r ~/.config/keyd/ /etc/
 	sudo cp -r ~/.config/systemd/ /etc/
-	sudo systemd-hwdb update
-	sudo udevadm trigger
 	cp ~/.config/fastfetch/config-arch.jsonc ~/.config/fastfetch/config.jsonc
-	cp ~/.config/fastfetch/logo-arch.txt ~/.config/fastfetch/logo.txt
 	cp ~/.config/waybar/config-dwm.jsonc ~/.config/waybar/config.jsonc
 	cp ~/.config/waybar/style-dwm.css ~/.config/waybar/style.css
 	echo "exec niri-session" > ~/.config/desktop
 	echo "none" > ~/.config/screensaver
-	echo "dark" > ~/.config/theme
+	echo "auto" > ~/.config/theme
 	pywalfox install
 	reboot
 }
