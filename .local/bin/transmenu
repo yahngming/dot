@@ -15,7 +15,7 @@ load_config() {
 		: "${CLIP_TYPE_CLIP:=xclip -selection clipboard -target TARGETS -o}"
 	fi
 	: "${TRANS_ENGINE:=bing}"
-	: "${TRANS_LANGS:=:zh :en :ja :ko}"
+	: "${TRANS_LANGS:=:zh :en :ja}"
 	: "${OCR_LANG:=eng+jpn+kor}"
 }
 
