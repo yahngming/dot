@@ -16,6 +16,7 @@ map . set hidden!
 map e edit
 map f filter
 map i pager
+map Q %lf -remote "send $id :cd \"$OLDPWD\"; quit"
 map r bulk-rename
 map x trash
 map X delete
