@@ -82,7 +82,7 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
 	hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("ai"))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("aimenu"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("browser"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("calculator"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("transmenu"))
