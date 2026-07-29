@@ -15,8 +15,8 @@ load_config() {
 		: "${CLIP_TYPE_CLIP:=xclip -selection clipboard -target TARGETS -o}"
 	fi
 	: "${TRANS_ENGINE:=google}"
-	: "${TRANS_LANGS:=:zh :en :ja :ko}"
-	: "${OCR_LANG:=kor+eng+jpn}"  # Tesseract language models
+	: "${TRANS_LANGS:=zh en ja ko}"  # Removed colons from definition to avoid menu parsing errors
+	: "${OCR_LANG:=kor+eng+jpn}"     # Tesseract language models
 }
 
 formatmenu() {
@@ -38,16 +38,17 @@ get_selection() {
 }
 
 clip_menu() {
-	if [ -n "$1" ]; then
-		printf 'Primary: %s\n' "$(formatmenu "$1")"
-	fi
-	if [ -n "$2" ]; then
-		printf 'Clipboard: %s\n' "$(formatmenu "$2")"
-	fi
+	[ -n "$1" ] && printf 'Primary: %s\n' "$(formatmenu "$1")"
+	[ -n "$2" ] && printf 'Clipboard: %s\n' "$(formatmenu "$2")"
 }
 
 lang_menu() {
-	echo "$TRANS_LANGS" | tr ' ' '\n' | sed '/^$/d; /:/!s/^/:/'
+	for lang in $TRANS_LANGS; do
+		case "$lang" in
+			:*) echo "$lang" ;;
+			*)  echo ":$lang" ;;
+		esac
+	done
 }
 
 save_file() (
@@ -83,18 +84,41 @@ get_text() {
 	esac
 }
 
+run_menu() {
+	prompt="$1"
+	shift
+	if command -v menu >/dev/null 2>&1; then
+		menu -p "$prompt" "$@"
+	elif command -v fuzzel >/dev/null 2>&1; then
+		fuzzel --dmenu -p "$prompt "
+	elif command -v dmenu >/dev/null 2>&1; then
+		dmenu -p "$prompt" "$@"
+	elif command -v rofi >/dev/null 2>&1; then
+		rofi -dmenu -p "$prompt" "$@"
+	else
+		cat
+	fi
+}
+
 load_config
 
 primary="$(get_selection prim)"
 is_image && clipboard="[IMAGE CLIPBOARD]" || clipboard="$(get_selection clip)"
 
 clip_menu="$(clip_menu "$primary" "$clipboard")"
-selection="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
+
+# Fallback: if clip_menu is empty, default to reading clipboard directly
+if [ -z "$clip_menu" ]; then
+	clip_menu="Clipboard: $(formatmenu "$clipboard")"
+fi
+
+selection="$(printf '%s\n' "$clip_menu" | run_menu "Translate:" "$@")" || exit 0
 
 text="$(get_text "$selection")"
 
 if [ -n "$text" ]; then
-	langs="$(lang_menu)"
-	target="$(printf '%s\n' "$langs" | eval "menu -p 'Into:'" '$@')" || exit 0
-	open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
+	target="$(lang_menu | run_menu "Into:" "$@")" || exit 0
+	if [ -n "$target" ]; then
+		open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
+	fi
 fi
