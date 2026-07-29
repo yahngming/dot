@@ -65,7 +65,7 @@ get_text() {
 
 	case "$selected" in
 		Primary:*)
-			echo "$primary"
+			get_selection prim
 			;;
 		Clipboard:*)
 			if is_image; then
@@ -74,7 +74,7 @@ get_text() {
 				tesseract "$tmp_img" stdout -l "$OCR_LANG" 2>/dev/null
 				rm -f "$tmp_img"
 			else
-				echo "$clipboard"
+				get_selection clip
 			fi
 			;;
 		*)
@@ -85,7 +85,7 @@ get_text() {
 
 load_config
 
-primary="$(get_selection)"
+primary="$(get_selection prim)"
 is_image && clipboard="[IMAGE CLIPBOARD]" || clipboard="$(get_selection clip)"
 
 clip_menu="$(clip_menu "$primary" "$clipboard")"
@@ -93,10 +93,7 @@ selection="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || ex
 
 text="$(get_text "$selection")"
 
-# Remove leading/trailing blank lines/spaces before testing
-text_clean="$(printf '%s' "$text" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
-
-if [ -n "$text_clean" ]; then
+if [ -n "$text" ]; then
 	langs="$(lang_menu)"
 	target="$(printf '%s\n' "$langs" | eval "menu -p 'Into:'" '$@')" || exit 0
 	open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
