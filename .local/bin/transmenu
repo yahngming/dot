@@ -16,29 +16,30 @@ load_config() {
 	fi
 	: "${TRANS_ENGINE:=google}"
 	: "${TRANS_LANGS:=:zh :en :ja :ko}"
-	: "${OCR_LANG:=eng+jpn+kor}"
+	: "${OCR_LANG:=kor+eng+jpn}"  # Tesseract language models
 }
 
-format_menu() {
-	echo "$1" | tr '\n' ' ' | sed 's/\s\{3,\}//g; s/^\(.\{30\}\).\+/\1.../; s/$/\n/'
+formatmenu() {
+	echo "$1" | tr '\n' ' ' | sed 's/\s\{3,\}//g; s/^\(.\{30\}\).\+/\1.../'
 }
 
+# Checks if Clipboard contains image data (returns exit code 0 if found)
 is_image() {
 	eval "$CLIP_TYPE_CLIP" 2>/dev/null | grep -qiE 'image/(png|jpeg|bmp)'
 }
 
+# Unified selection retrieval (handles 'img', 'clip', or primary)
 get_selection() {
 	case "$1" in
-		img  ) eval "$CLIP_PASTE_IMG" 2>/dev/null ;;
-		clip ) eval "$CLIP_PASTE_CLIP" 2>/dev/null ;;
-		*    ) eval "$CLIP_PASTE_PRIM" 2>/dev/null ;;
+		img)  eval "$CLIP_PASTE_IMG" 2>/dev/null ;;
+		clip) eval "$CLIP_PASTE_CLIP" 2>/dev/null ;;
+		*)    eval "$CLIP_PASTE_PRIM" 2>/dev/null ;;
 	esac
 }
 
 clip_menu() {
-	{ format_menu "$1"; format_menu "$2"; } |
-		sed 's/^\s*$//; 1s/^./Primary: &/; 2s/^./Clipboard: &/' |
-		sed '/^$/d'
+	[ -n "$1" ] && echo "Primary: $(formatmenu "$1")"
+	[ -n "$2" ] && echo "Clipboard: $(formatmenu "$2")"
 }
 
 lang_menu() {
@@ -55,11 +56,11 @@ open_term() {
 	tui "bat --paging always -pl man '$(save_file "$1")'"
 }
 
+# Extracts raw text or runs OCR if given binary image data
 get_text() {
-	selected_item="$1"
-	case "$selected_item" in
+	case "$1" in
 		Primary:*)
-			echo "$primary"
+			get_selection
 			;;
 		Clipboard:*)
 			if is_image; then
@@ -72,17 +73,26 @@ get_text() {
 			fi
 			;;
 		*)
-			echo "$selected_item"
+			echo "$1"
 			;;
 	esac
 }
 
 load_config
+
 primary="$(get_selection)"
-is_image && clipboard_preview="[IMAGE CLIPBOARD]" || clipboard_preview="$(get_selection clip)"
-clip_menu="$(clip_menu "$primary" "$clipboard_preview")"
+
+if is_image; then
+	clipboard="[IMAGE CLIPBOARD]"
+else
+	clipboard="$(get_selection clip)"
+fi
+
+clip_menu="$(clip_menu "$primary" "$clipboard")"
 selection="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
+
 text="$(get_text "$selection")"
+
 if [ -n "$text" ]; then
 	target="$(lang_menu | eval "menu -p 'Into:'" '$@')" || exit 0
 	open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
