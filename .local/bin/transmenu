@@ -20,6 +20,104 @@ load_config() {
 }
 
 formatmenu() {
+	printf '%s' "$1" | tr '\n' ' ' | sed 's/\s\{3,\}//g; s/^\(.\{30\}\).\+/\1.../'
+}
+
+# Checks if Clipboard contains image data
+is_image() {
+	eval "$CLIP_TYPE_CLIP" 2>/dev/null | grep -qiE 'image/(png|jpeg|bmp)'
+}
+
+# Unified selection retrieval
+get_selection() {
+	case "$1" in
+		img)  eval "$CLIP_PASTE_IMG" 2>/dev/null ;;
+		clip) eval "$CLIP_PASTE_CLIP" 2>/dev/null ;;
+		*)    eval "$CLIP_PASTE_PRIM" 2>/dev/null ;;
+	esac
+}
+
+clip_menu() {
+	if [ -n "$1" ]; then
+		printf 'Primary: %s\n' "$(formatmenu "$1")"
+	fi
+	if [ -n "$2" ]; then
+		printf 'Clipboard: %s\n' "$(formatmenu "$2")"
+	fi
+}
+
+lang_menu() {
+	printf '%s\n' $TRANS_LANGS | sed '/^$/d; /:/!s/^/:/'
+}
+
+save_file() (
+	tmp="$(mktemp --tmpdir 'transmenu.XXXXXX')"
+	echo "$1" > "$tmp"
+	echo "$tmp"
+)
+
+open_term() {
+	tui "bat --paging always -pl man '$(save_file "$1")'"
+}
+
+get_text() {
+	selected="$1"
+
+	case "$selected" in
+		Primary:*)
+			echo "$primary"
+			;;
+		Clipboard:*)
+			if is_image; then
+				tmp_img="$(mktemp --tmpdir 'trans_ocr.XXXXXX.png')"
+				get_selection img > "$tmp_img"
+				tesseract "$tmp_img" stdout -l "$OCR_LANG" 2>/dev/null
+				rm -f "$tmp_img"
+			else
+				echo "$clipboard"
+			fi
+			;;
+		*)
+			echo "$selected"
+			;;
+	esac
+}
+
+load_config
+
+primary="$(get_selection)"
+is_image && clipboard="[IMAGE CLIPBOARD]" || clipboard="$(get_selection clip)"
+
+clip_menu="$(clip_menu "$primary" "$clipboard")"
+selection="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
+
+text="$(get_text "$selection")"
+
+if [ -n "$text" ]; then
+	target="$(lang_menu | eval "menu -p 'Into:'" '$@')" || exit 0
+	open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
+fi#!/bin/sh
+
+load_config() {
+	if [ -n "$WAYLAND_DISPLAY" ]; then
+		: "${CLIP_COPY:=wl-copy -n}"
+		: "${CLIP_PASTE_CLIP:=wl-paste}"
+		: "${CLIP_PASTE_PRIM:=wl-paste -p}"
+		: "${CLIP_PASTE_IMG:=wl-paste -t image/png}"
+		: "${CLIP_TYPE_CLIP:=wl-paste --list-types}"
+	else
+		: "${CLIP_COPY:=xclip -i -r -selection clipboard}"
+		: "${CLIP_PASTE_CLIP:=xclip -o -selection clipboard}"
+		: "${CLIP_PASTE_PRIM:=xclip -o -selection primary}"
+		: "${CLIP_PASTE_IMG:=xclip -selection clipboard -t image/png -o}"
+		: "${CLIP_TYPE_CLIP:=xclip -selection clipboard -target TARGETS -o}"
+	fi
+	: "${TRANS_ENGINE:=google}"
+	: "${TRANS_LANGS:=:zh :en :ja :ko}"
+	: "${OCR_LANG:=kor+eng+jpn}"  # Tesseract language models
+}
+
+formatmenu() {
 	echo "$1" | tr '\n' ' ' | sed 's/\s\{3,\}//g; s/^\(.\{30\}\).\+/\1.../'
 }
 
