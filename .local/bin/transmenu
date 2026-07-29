@@ -14,41 +14,34 @@ load_config() {
 		: "${CLIP_PASTE_IMG:=xclip -selection clipboard -t image/png -o}"
 		: "${CLIP_TYPE_CLIP:=xclip -selection clipboard -target TARGETS -o}"
 	fi
-	: "${TRANS_ENGINE:=google}"
-	: "${TRANS_LANGS:=zh en ja ko}"  # Removed colons from definition to avoid menu parsing errors
-	: "${OCR_LANG:=kor+eng+jpn}"     # Tesseract language models
+	: "${TRANS_ENGINE:=bing}"
+	: "${TRANS_LANGS:=:zh :en :ja :ko}"
+	: "${OCR_LANG:=eng+jpn+kor}"
 }
 
-formatmenu() {
+format_menu() {
 	printf '%s' "$1" | tr '\n' ' ' | sed 's/\s\{3,\}//g; s/^\(.\{30\}\).\+/\1.../'
 }
 
-# Checks if Clipboard contains image data
 is_image() {
 	eval "$CLIP_TYPE_CLIP" 2>/dev/null | grep -qiE 'image/(png|jpeg|bmp)'
 }
 
-# Unified selection retrieval
 get_selection() {
 	case "$1" in
-		img)  eval "$CLIP_PASTE_IMG" 2>/dev/null ;;
-		clip) eval "$CLIP_PASTE_CLIP" 2>/dev/null ;;
-		*)    eval "$CLIP_PASTE_PRIM" 2>/dev/null ;;
+		img  ) eval "$CLIP_PASTE_IMG" 2>/dev/null ;;
+		clip ) eval "$CLIP_PASTE_CLIP" 2>/dev/null ;;
+		*    ) eval "$CLIP_PASTE_PRIM" 2>/dev/null ;;
 	esac
 }
 
 clip_menu() {
-	[ -n "$1" ] && printf 'Primary: %s\n' "$(formatmenu "$1")"
-	[ -n "$2" ] && printf 'Clipboard: %s\n' "$(formatmenu "$2")"
+	[ -n "$1" ] && printf 'Primary: %s\n' "$(format_menu "$1")"
+	[ -n "$2" ] && printf 'Clipboard: %s\n' "$(format_menu "$2")"
 }
 
 lang_menu() {
-	for lang in $TRANS_LANGS; do
-		case "$lang" in
-			:*) echo "$lang" ;;
-			*)  echo ":$lang" ;;
-		esac
-	done
+	printf '%s\n' $TRANS_LANGS | sed '/^$/d; /:/!s/^/:/'
 }
 
 save_file() (
@@ -63,7 +56,6 @@ open_term() {
 
 get_text() {
 	selected="$1"
-
 	case "$selected" in
 		Primary:*)
 			get_selection prim
@@ -84,41 +76,13 @@ get_text() {
 	esac
 }
 
-run_menu() {
-	prompt="$1"
-	shift
-	if command -v menu >/dev/null 2>&1; then
-		menu -p "$prompt" "$@"
-	elif command -v fuzzel >/dev/null 2>&1; then
-		fuzzel --dmenu -p "$prompt "
-	elif command -v dmenu >/dev/null 2>&1; then
-		dmenu -p "$prompt" "$@"
-	elif command -v rofi >/dev/null 2>&1; then
-		rofi -dmenu -p "$prompt" "$@"
-	else
-		cat
-	fi
-}
-
 load_config
-
 primary="$(get_selection prim)"
 is_image && clipboard="[IMAGE CLIPBOARD]" || clipboard="$(get_selection clip)"
-
 clip_menu="$(clip_menu "$primary" "$clipboard")"
-
-# Fallback: if clip_menu is empty, default to reading clipboard directly
-if [ -z "$clip_menu" ]; then
-	clip_menu="Clipboard: $(formatmenu "$clipboard")"
-fi
-
-selection="$(printf '%s\n' "$clip_menu" | run_menu "Translate:" "$@")" || exit 0
-
+selection="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
 text="$(get_text "$selection")"
-
 if [ -n "$text" ]; then
-	target="$(lang_menu | run_menu "Into:" "$@")" || exit 0
-	if [ -n "$target" ]; then
-		open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
-	fi
+	target="$(lang_menu | eval "menu -p 'Into:'" '$@')" || exit 0
+	open_term "$(trans -e "$TRANS_ENGINE" "$target" "$text")"
 fi
