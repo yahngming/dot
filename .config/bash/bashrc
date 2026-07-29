@@ -21,6 +21,10 @@ _fzf_comprun() {
 	esac
 }
 
+lf () {
+	cd "$(command lf -print-last-dir "$@")"
+}
+
 start() {
 	case "$DESKTOP" in
 		*dwm*)
