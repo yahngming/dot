@@ -4,7 +4,7 @@
   <property name="commands" type="empty">
     <property name="custom" type="empty">
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;a" type="string" value="ai"/>
+      <property name="&lt;Super&gt;a" type="string" value="aimenu"/>
       <property name="&lt;Super&gt;b" type="string" value="browser"/>
       <property name="&lt;Super&gt;c" type="string" value="calculator"/>
       <property name="&lt;Super&gt;d" type="string" value="transmenu"/>
