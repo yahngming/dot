@@ -20,7 +20,7 @@ load_config() {
 }
 
 format_menu() {
-	echo "$1" | tr '\n' '  ' | sed 's/\s\{3,\}//g; s/^\(.\{30\}\).\+/\1.../; s/$/\n/'
+	echo "$1" | tr '\n' ' ' | sed 's/\s\{3,\}//g; s/^\(.\{30\}\).\+/\1.../; s/$/\n/'
 }
 
 is_image() {
@@ -57,26 +57,30 @@ open_term() {
 
 get_text() {
 	selected_item="$1"
-	if [ "$selected_item" = "$(formatmenu "$primary" | sed '1s/^./Primary: &/')" ]; then
-		echo "$primary"
-	elif [ "$selected_item" = "$(formatmenu "$clipboard" | sed '1s/^./Clipboard: &/')" ]; then
-		if is_image; then
-			tmp_img="$(mktemp --tmpdir 'trans_ocr.XXXXXX.png')"
-			get_selection img > "$tmp_img"
-			tesseract "$tmp_img" stdout -l "$OCR_LANG" 2>/dev/null
-			rm -f "$tmp_img"
-		else
-			echo "$clipboard"
-		fi
-	else
-		echo "$selected_item"
-	fi
+	case "$selected_item" in
+		Primary:*)
+			echo "$primary"
+			;;
+		Clipboard:*)
+			if is_image; then
+				tmp_img="$(mktemp --tmpdir 'trans_ocr.XXXXXX.png')"
+				get_selection img > "$tmp_img"
+				tesseract "$tmp_img" stdout -l "$OCR_LANG" 2>/dev/null
+				rm -f "$tmp_img"
+			else
+				get_selection clip
+			fi
+			;;
+		*)
+			echo "$selected_item"
+			;;
+	esac
 }
 
 load_config
 primary="$(get_selection)"
-is_image && clipboard="[IMAGE CLIPBOARD]" || clipboard="$(get_selection clip)"
-clip_menu="$(clip_menu "$primary" "$clipboard")"
+is_image && clipboard_preview="[IMAGE CLIPBOARD]" || clipboard_preview="$(get_selection clip)"
+clip_menu="$(clip_menu "$primary" "$clipboard_preview")"
 selection="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
 text="$(get_text "$selection")"
 if [ -n "$text" ]; then
