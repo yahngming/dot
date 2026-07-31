@@ -80,7 +80,7 @@ load_config
 primary="$(get_selection prim)"
 is_image && clipboard="[IMAGE]" || clipboard="$(get_selection clip)"
 clip_menu="$(clip_menu "$primary" "$clipboard")"
-selection="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate:'" '$@')" || exit 0
+selection="$(printf '%s' "$clip_menu" | eval "menu -p 'Translate(by $TRANS_ENGINE):'" '$@')" || exit 0
 text="$(get_text "$selection")"
 if [ -n "$text" ]; then
 	target="$(lang_menu | eval "menu -p 'Into:'" '$@')" || exit 0
