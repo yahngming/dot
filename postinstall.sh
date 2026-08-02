@@ -6,7 +6,7 @@ arch() {
 	sudo pacman -Syu --needed --noconfirm archlinux-keyring
 	sudo pacman -S --noconfirm bluez lib32-mesa lib32-vulkan-icd-loader mesa pipewire pipewire-alsa pipewire-jack pipewire-pulse vulkan-icd-loader # driver
 	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-noto-nerd ttf-terminus-nerd # font
-	sudo pacman -S --noconfirm lib32-vulkan-radeon ollama-rocm rocm-hip-runtime vulkan-radeon # amd
+	sudo pacman -S --noconfirm lib32-vulkan-radeon rocm-hip-runtime vulkan-radeon # amd
 	sudo pacman -S --noconfirm intel-media-driver lib32-vulkan-intel libvpl vpl-gpu-rt vulkan-intel # intel
 	sudo pacman -S --noconfirm awww cliphist foot fuzzel grim hypridle hyprland hyprlock kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xwayland-satellite # wayland
 	sudo pacman -S --noconfirm clipmenu dunst maim nsxiv numlockx unclutter xclip xcompmgr xdg-desktop-portal-gtk xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xscreensaver xwallpaper # xorg
@@ -23,7 +23,7 @@ arch() {
 	sudo pacman -S --noconfirm keepassxc keyd
 	sudo pacman -S --noconfirm lazydocker less lf libnotify libreoffice-fresh lolcat
 	sudo pacman -S --noconfirm man-db matugen mpv
-	sudo pacman -S --noconfirm ollama openssh
+	sudo pacman -S --noconfirm openssh
 	sudo pacman -S --noconfirm pass perl-image-exiftool polkit poppler python-mutagen
 	sudo pacman -S --noconfirm rclone ripgrep
 	sudo pacman -S --noconfirm smbclient steam
