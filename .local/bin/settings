@@ -11,6 +11,7 @@ menu="\
  Bar\n\
 󰂳 Bluetooth\n\
 󰃢 Clean\n\
+ Cloud\n\
  Desktop\n\
 󰍹 Display\n\
  Docker\n\
@@ -22,7 +23,6 @@ menu="\
 󰌘 Proxy\n\
  Screensaver\n\
 󰲁 SMB\n\
- Sync\n\
 󰔎 Theme\n\
 󱢃 Timezone\n\
 󰚰 Update\n\
@@ -37,6 +37,7 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Bar*         ) barmenu ;;
 	*Bluetooth*   ) btmenu ;;
 	*Clean*       ) tui clean ;;
+	*Cloud*       ) cloudmenu ;;
 	*Desktop*     ) desktopmenu ;;
 	*Display*     ) dispmenu ;;
 	*Docker*      ) dockersmenu ;;
@@ -48,7 +49,6 @@ case $(printf "$menu" | menu $opt "$@") in
 	*Proxy*       ) proxymenu ;;
 	*Screensaver* ) screensavermenu ;;
 	*SMB*         ) smbmenu ;;
-	*Sync*        ) syncmenu ;;
 	*Theme*       ) thememenu ;;
 	*Timezone*    ) timezonemenu ;;
 	*Update*      ) tui up ;;
