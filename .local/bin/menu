@@ -1,6 +1,5 @@
 #!/bin/sh
 
-pkill $LAUNCHER && exit
 pkill dmenu && exit
 
 case "$LAUNCHER" in
