@@ -1,11 +1,11 @@
 #!/bin/sh
 
 menu="\
- Download from remote\n\
- Upload to remote\n\
+ Download from cloud\n\
+ Upload to cloud\n\
 "
 
-case $(printf "$menu" | menu -p "Sync" "$@") in
+case $(printf "$menu" | menu -p "Cloud" "$@") in
 	*Download* ) tui "rclone --ignore-existing --progress copy disroot:/Documents ~/Documents" ;;
 	*Upload*   ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
 esac
