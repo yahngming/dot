@@ -1,6 +1,7 @@
 #!/bin/sh
 
-pkill dmenu && exit
+pkill -x $LAUNCHER && exit
+pkill -x dmenu && exit
 
 case "$LAUNCHER" in
 	fuzzel ) $LAUNCHER --dmenu "$@" ;;
