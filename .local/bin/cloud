@@ -2,10 +2,10 @@
 
 remote="disroot"
 syncpaths="
-~/Documents|$remote:/Documents
+$HOME/Documents|$remote:/Documents
 "
 copypaths="
-~/.local/share/Steam/steamapps/common/RetroArch/saves|$remote:/RetroArch/saves
+$HOME/.local/share/Steam/steamapps/common/RetroArch/saves|$remote:/RetroArch/saves
 "
 
 clone() {
