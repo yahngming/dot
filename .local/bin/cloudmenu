@@ -6,6 +6,6 @@ menu="\
 "
 
 case $(printf "$menu" | menu -p "Cloud" "$@") in
-	*Disroot* ) tui "rclone bisync disroot:/Documents ~/Documents --progress" ;;
+	*Disroot* ) tui "rclone bisync disroot:/Documents ~/Documents --progress --size-only" ;;
 	*Google * ) open https://drive.google.com/ ;;
 esac
