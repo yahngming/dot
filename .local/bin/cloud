@@ -16,7 +16,7 @@ clone() {
 		localpath="${path%%|*}"
 		remotepath="${path#*|}"
 		case "$mode" in
-			sync     ) rclone bisync "$localpath" "$remotepath" --progress --size-only ;;
+			sync     ) rclone bisync "$remotepath" "$localpath" --progress --size-only ;;
 			upload   ) rclone copy "$localpath" "$remotepath" --progress ;;
 			download ) rclone copy "$remotepath" "$localpath" --progress ;;
 		esac
