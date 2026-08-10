@@ -24,7 +24,7 @@ Storage> webdav
 url> https://cloud.disroot.org/remote.php/dav/files/myang
 user> myang
 password: $PASSWORD
-rclone bisync disroot:/Documents ~/Documents --progress --size-only --resync
+cloud resync
 ```
 other packages
 ```sh
