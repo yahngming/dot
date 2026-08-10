@@ -1,1 +1,3 @@
+#!/bin/sh
+
 rclone bisync disroot:/Documents ~/Documents --progress --size-only
