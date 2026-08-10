@@ -1,13 +1,16 @@
 #!/bin/sh
 
 menu="\
+󰘿 Sync\n\
+----\n\
 󰬋 Disroot\n\
 󰊶 Google Drive\n\
 󰏊 Microsoft OneDrive\n\
 "
 
 case $(printf "$menu" | menu -p "Cloud" "$@") in
-	*Disroot*   ) tui "rclone bisync disroot:/Documents ~/Documents --progress --size-only" ;;
+	*Sync*      ) tui "rclone bisync disroot:/Documents ~/Documents --progress --size-only" ;;
+	*Disroot*   ) open https://cloud.disroot.org ;;
 	*Google*    ) open https://drive.google.com ;;
 	*Microsoft* ) open https://onedrive.live.com ;;
 esac
