@@ -1,11 +1,11 @@
 #!/bin/sh
 
 menu="\
- Download from cloud\n\
- Upload to cloud\n\
+󰬋 Disroot\n\
+󰊶 Google Drive\n\
 "
 
 case $(printf "$menu" | menu -p "Cloud" "$@") in
-	*Download* ) tui "rclone --ignore-existing --progress copy disroot:/Documents ~/Documents" ;;
-	*Upload*   ) tui "rclone --progress copy ~/Documents disroot:/Documents" ;;
+	*Disroot* ) tui "rclone bisync disroot:/Documents ~/Documents --progress" ;;
+	*Google * ) open https://drive.google.com/ ;;
 esac
