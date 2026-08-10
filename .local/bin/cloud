@@ -1,3 +1,10 @@
 #!/bin/sh
 
-rclone bisync disroot:/Documents ~/Documents --progress --size-only
+remote="disroot"
+
+case "$@" in
+	sync     ) rclone bisync $remote:/Documents ~/Documents --progress --size-only ;;
+	upload   ) rclone copy ~/.local/share/Steam/steamapps/common/RetroArch/saves $remote:/RetroArch/saves --progress ;;
+	download ) rclone copy $remote:/RetroArch/saves ~/.local/share/Steam/steamapps/common/RetroArch/saves --progress ;;
+	*        ) echo "Usage: cloud [sync|upload|download]" ;;
+esac
