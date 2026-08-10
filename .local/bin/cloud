@@ -1,10 +1,31 @@
 #!/bin/sh
 
 remote="disroot"
+syncpaths="
+~/Documents|$remote:/Documents
+"
+copypaths="
+~/.local/share/Steam/steamapps/common/RetroArch/saves|$remote:/RetroArch/saves
+"
 
-case "$@" in
-	sync     ) rclone bisync $remote:/Documents ~/Documents --progress --size-only ;;
-	upload   ) rclone copy ~/.local/share/Steam/steamapps/common/RetroArch/saves $remote:/RetroArch/saves --progress ;;
-	download ) rclone copy $remote:/RetroArch/saves ~/.local/share/Steam/steamapps/common/RetroArch/saves --progress ;;
+clone() {
+	mode="$1"
+	paths="$2"
+	echo "$paths" | while IFS= read -r path; do
+		[ -z "$path" ] && continue
+		localpath="${path%%|*}"
+		remotepath="${path#*|}"
+		case "$mode" in
+			sync     ) rclone bisync "$localpath" "$remotepath" --progress --size-only ;;
+			upload   ) rclone copy "$localpath" "$remotepath" --progress ;;
+			download ) rclone copy "$remotepath" "$localpath" --progress ;;
+		esac
+	done
+}
+
+case "$1" in
+	sync     ) clone "sync" "$syncpaths";;
+	upload   ) clone "upload" "$copypaths";;
+	download ) clone "download" "$copypaths";;
 	*        ) echo "Usage: cloud [sync|upload|download]" ;;
 esac
