@@ -9,7 +9,7 @@ menu="\
 "
 
 case $(printf "$menu" | menu -p "Cloud" "$@") in
-	*Sync*      ) tui "rclone bisync disroot:/Documents ~/Documents --progress --size-only" ;;
+	*Sync*      ) tui cloudsync ;;
 	*Disroot*   ) open https://cloud.disroot.org ;;
 	*Google*    ) open https://drive.google.com ;;
 	*Microsoft* ) open https://onedrive.live.com ;;
