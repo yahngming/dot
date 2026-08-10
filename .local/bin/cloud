@@ -17,6 +17,7 @@ clone() {
 		remotepath="${path#*|}"
 		case "$mode" in
 			sync     ) rclone bisync "$remotepath" "$localpath" --progress --size-only ;;
+			resync   ) rclone bisync "$remotepath" "$localpath" --progress --size-only --resync;;
 			upload   ) rclone copy "$localpath" "$remotepath" --progress ;;
 			download ) rclone copy "$remotepath" "$localpath" --progress ;;
 		esac
@@ -25,7 +26,8 @@ clone() {
 
 case "$1" in
 	sync     ) clone "sync" "$syncpaths";;
+	resync   ) clone "resync" "$syncpaths";;
 	upload   ) clone "upload" "$copypaths";;
 	download ) clone "download" "$copypaths";;
-	*        ) echo "Usage: cloud [sync|upload|download]" ;;
+	*        ) echo "Usage: cloud [sync|resync|upload|download]" ;;
 esac
