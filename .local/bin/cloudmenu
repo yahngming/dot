@@ -1,9 +1,9 @@
 #!/bin/sh
 
 menu="\
-󰘿 Sync documents\n\
-󰘿 Upload gamesaves\n\
-󰘿 Download gamesaves\n\
+󱋖 Sync documents\n\
+ Upload gamesaves\n\
+ Download gamesaves\n\
   ----\n\
 󰬋 Disroot\n\
 󰊶 Google Drive\n\
