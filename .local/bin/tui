@@ -1,10 +1,10 @@
 #!/bin/sh
 
 case "$@" in
-	bc*                                                                            ) class="bottomright" ;;
+	bc*                                                                             ) class="bottomright" ;;
 	bat*|clean|cloud*|dockers*|dot|*fetch*|impala|proxy*|timezone*|*tui*|up|wiremix ) class="center" ;;
-	asciiquarium*|lavat*|*matrix*|*svr                                             ) class="screensaver" ;;
-	*                                                                              ) class="tui" ;;
+	asciiquarium*|lavat*|*matrix*|*svr                                              ) class="screensaver" ;;
+	*                                                                               ) class="tui" ;;
 esac
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	if [ "$class" = "screensaver" ]; then
