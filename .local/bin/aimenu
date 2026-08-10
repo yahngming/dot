@@ -8,6 +8,6 @@ menu="\
 
 case $(printf "$menu" | menu -p "AI" "$@") in
 	*ComfyUI* ) open http://127.0.0.1:8188 ;;
-	*Gemini*  ) open https://gemini.google.com/ ;;
+	*Gemini*  ) open https://gemini.google.com ;;
 	*WebUI*   ) open http://127.0.0.1:8080 ;;
 esac
