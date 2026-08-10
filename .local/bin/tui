@@ -2,7 +2,7 @@
 
 case "$@" in
 	bc*                                                                            ) class="bottomright" ;;
-	bat*|clean|dockers*|dot|*fetch*|impala|proxy*|*sync|timezone*|*tui*|up|wiremix ) class="center" ;;
+	bat*|clean|cloud*|dockers*|dot|*fetch*|impala|proxy*|timezone*|*tui*|up|wiremix ) class="center" ;;
 	asciiquarium*|lavat*|*matrix*|*svr                                             ) class="screensaver" ;;
 	*                                                                              ) class="tui" ;;
 esac
