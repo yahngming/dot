@@ -1,7 +1,9 @@
 #!/bin/sh
 
 menu="\
-󰘿 Sync\n\
+󰘿 Sync documents\n\
+󰘿 Upload gamesaves\n\
+󰘿 Download gamesaves\n\
   ----\n\
 󰬋 Disroot\n\
 󰊶 Google Drive\n\
@@ -10,6 +12,8 @@ menu="\
 
 case $(printf "$menu" | menu -p "Cloud" "$@") in
 	*Sync*      ) tui "cloud sync" ;;
+	*Upload*    ) tui "cloud upload" ;;
+	*Download*  ) tui "cloud download" ;;
 	*Disroot*   ) open https://cloud.disroot.org ;;
 	*Google*    ) open https://drive.google.com ;;
 	*Microsoft* ) open https://onedrive.live.com ;;
