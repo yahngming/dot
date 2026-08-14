@@ -124,10 +124,8 @@ cmd on-select &{{
 }}
 
 cmd open ${{
-	sleep 0.05
+	sleep 0.15
 	open $fx
-	printf '\033[?1000l\033[?1006l\033[?1000h\033[?1006h'
-	tcflush 0 0 2>/dev/null || true
 }}
 
 cmd pager ${{
