@@ -58,7 +58,7 @@ cmd bulk-rename ${{
 		new="$(mktemp)"
 		printf '%s\n' "$fs" > "$old"
 		printf '%s\n' "$fs" > "$new"
-		edit "$new"
+		editor "$new"
 		[ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
 		paste "$old" "$new" | while IFS= read -r names; do
 			src="$(printf '%s' "$names" | cut -f1)"
@@ -76,7 +76,7 @@ cmd bulk-rename ${{
 }}
 
 cmd edit ${{
-	edit $fx
+	editor $fx
 }}
 cmd fzf_jump ${{
 	res="$(find . | fzf --reverse --header="Jump to location")"
