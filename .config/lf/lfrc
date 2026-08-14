@@ -124,7 +124,7 @@ cmd on-select &{{
 }}
 
 cmd open ${{
-	open $fx
+	$open $fx
 }}
 
 cmd pager ${{
