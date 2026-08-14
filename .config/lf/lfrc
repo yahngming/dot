@@ -125,8 +125,6 @@ cmd on-select &{{
 
 cmd open ${{
 	open $fx
-	stty sane
-	printf '\033[!p'
 }}
 
 cmd pager ${{
