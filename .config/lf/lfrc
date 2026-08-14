@@ -39,7 +39,6 @@ map <c-s> :fzf_search
 map <c-v> paste
 map <c-x> cut
 map <c-z> trash-restore
-map <m-2> open
 map <m-3> %dragon-drop -a -x $fx
 map <c-m-1> visual
 vmap <c-m-1> visual-accept
@@ -127,6 +126,7 @@ cmd on-select &{{
 cmd open ${{
 	sleep 0.05
 	open $fx
+	printf '\033[?1000l\033[?1006l\033[?1000h\033[?1006h'
 	tcflush 0 0 2>/dev/null || true
 }}
 
