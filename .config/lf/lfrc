@@ -124,8 +124,9 @@ cmd on-select &{{
 }}
 
 cmd open ${{
-	sleep 0.15
 	open $fx
+	stty sane
+	printf '\033[!p'
 }}
 
 cmd pager ${{
