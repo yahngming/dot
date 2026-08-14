@@ -159,6 +159,7 @@ window-rule {
 	match app-id="retroarch"
 	match app-id="screensaver"
 	match app-id="steam_app"
+	open-focused true
 	open-fullscreen true
 }
 
