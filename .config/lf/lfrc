@@ -123,11 +123,7 @@ cmd on-select &{{
 	lf -remote "send $id set user_statfmt \"$(eza -ld --color=always "$f" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
 }}
 
-cmd open &{{
-	open $fx
-	lf -remote "send $id clear"
-	lf -remote "send $id draw"
-}}
+cmd open $open $fx; lf -remote "send $id clear"
 
 cmd pager ${{
 	if [ -f "$f" ]; then
