@@ -39,7 +39,6 @@ map <c-s> :fzf_search
 map <c-v> paste
 map <c-x> cut
 map <c-z> trash-restore
-map <m-2> $open $fx
 map <m-3> %dragon-drop -a -x $fx
 map <c-m-1> visual
 vmap <c-m-1> visual-accept
@@ -126,8 +125,6 @@ cmd on-select &{{
 
 cmd open ${{
 	open $fx
-	printf '\033[<2;1;1m'
-	lf -remote "send $id draw"
 }}
 
 cmd pager ${{
