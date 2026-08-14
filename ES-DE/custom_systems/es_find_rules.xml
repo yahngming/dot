@@ -1,12 +1,12 @@
 <ruleList>
 	<emulator name="retroarch-standalone">
 		<rule platform="unix">
-			<entry>$HOME/.local/share/Steam/steamapps/common/RetroArch/retroarch</entry>
+			<entry>/home/yahngming/.local/share/Steam/steamapps/common/RetroArch/retroarch</entry>
 		</rule>
 	</emulator>
 	<core name="retroarch-standalone">
 		<rule platform="unix">
-			<entry>$HOME/.local/share/Steam/steamapps/common/RetroArch/cores</entry>
+			<entry>/home/yahngming/.local/share/Steam/steamapps/common/RetroArch/cores</entry>
 		</rule>
 	</core>
 </ruleList>
