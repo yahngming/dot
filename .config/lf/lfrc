@@ -39,6 +39,7 @@ map <c-s> :fzf_search
 map <c-v> paste
 map <c-x> cut
 map <c-z> trash-restore
+map <m-2> select
 map <m-3> %dragon-drop -a -x $fx
 map <c-m-1> visual
 vmap <c-m-1> visual-accept
