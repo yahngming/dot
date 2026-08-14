@@ -126,7 +126,7 @@ cmd on-select &{{
 cmd open ${{
 	sleep 0.05
 	open $fx
-	printf '\e[?1000l\e[?1006l\e[?1000h\e[?1006h'
+	tcflush 0 0 2>/dev/null || true
 }}
 
 cmd pager ${{
