@@ -156,6 +156,7 @@ window-rule {
 
 window-rule {
 	match app-id="fullscreen"
+	match app-id="retroarch"
 	match app-id="screensaver"
 	match app-id="steam_app"
 	open-fullscreen true
