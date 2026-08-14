@@ -1,0 +1,7 @@
+<findRules>
+	<emulator name="RETROARCH">
+		<rule platform="unix">
+			<entry>~/.local/share/Steam/steamapps/common/RetroArch/retroarch</entry>
+		</rule>
+	</emulator>
+</findRules>
