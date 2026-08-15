@@ -81,6 +81,7 @@
 		"tooltip-format":  "Available {free} of {total}"
 	},
 	"battery": {
+		"bat": "BAT0",
 		"states": {
 			"good": 95,
 			"warning": 30,
