@@ -1,13 +1,18 @@
 #!/bin/sh
 
 menu="\
-󰯲 ComfyUI\n\
-󰫢 Google Gemini\n\
  Open WebUI\n\
+󰯲 ComfyUI\n\
+  ----
+ ChatGPT\n\
+󰫢 Gemini\n\
+ Grok\n\
 "
 
 case $(printf "$menu" | menu -p "AI" "$@") in
-	*ComfyUI* ) open http://127.0.0.1:8188 ;;
-	*Gemini*  ) open https://gemini.google.com ;;
 	*WebUI*   ) open http://127.0.0.1:8080 ;;
+	*ComfyUI* ) open http://127.0.0.1:8188 ;;
+	*ChatGPT* ) open https://chatgpt.com ;;
+	*Gemini*  ) open https://gemini.google.com ;;
+	*Grok*    ) open https://grok.com ;;
 esac
