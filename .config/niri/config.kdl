@@ -159,6 +159,7 @@ window-rule {
 	match app-id="RetroArch"
 	match app-id="screensaver"
 	match app-id="steam_app"
+	match title="Big Picture"
 	open-focused true
 	open-fullscreen true
 }
