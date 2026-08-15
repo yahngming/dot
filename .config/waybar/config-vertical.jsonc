@@ -141,6 +141,7 @@
 		"device": "intel_backlight"
 	},
 	"battery": {
+		"bat": "BAT0",
 		"states": {
 			"critical": 10
 		},
