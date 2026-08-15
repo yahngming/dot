@@ -16,7 +16,7 @@ load_config() {
 	fi
 	: "${TRANS_ENGINE:=bing}"
 	: "${TRANS_LANGS:=:zh :en :ja}"
-	: "${OCR_LANG:=eng+jpn+kor}"
+	: "${OCR_LANGS:=eng+jpn+kor}"
 }
 
 format_menu() {
@@ -64,7 +64,7 @@ get_text() {
 			if is_image; then
 				tmp_img="$(mktemp --tmpdir 'trans_ocr.XXXXXX.png')"
 				get_selection img > "$tmp_img"
-				tesseract "$tmp_img" stdout -l "$OCR_LANG" 2>/dev/null
+				tesseract "$tmp_img" stdout -l "$OCR_LANGS" 2>/dev/null
 				rm -f "$tmp_img"
 			else
 				get_selection clip
