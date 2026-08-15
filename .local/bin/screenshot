@@ -7,8 +7,8 @@ mkdir -p $folder
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
 	pkill slurp || grim -g "$(slurp)" -t ppm - | satty --filename - --output-filename "$file" --early-exit --copy-command "wl-copy"
-	[ -f "$file" ] && tesseract "$file" stdout -l "$langs" 2>/dev/null | wl-copy -p
+	wl-paste -t image/png 2>/dev/null | tesseract stdin stdout -l "$langs" 2>/dev/null | wl-copy -p
 elif [ -n "$DISPLAY" ]; then
 	pkill maim || maim --hidecursor --select "$file" | xclip -selection clipboard -target image/png
-	[ -f "$file" ] && tesseract "$file" stdout -l "$langs" 2>/dev/null | xclip -selection primary
+	xclip -selection clipboard -t image/png -o 2>/dev/null | tesseract stdin stdout -l "$langs" 2>/dev/null | xclip -selection primary
 fi
