@@ -2,6 +2,7 @@
 
 sudo curl -o /etc/pacman.d/mirrorlist "https://archlinux.org/mirrorlist/?country=US&use_mirror_status=on"
 sudo sed -i 's/^# *Server/Server/' /etc/pacman.d/mirrorlist
+grep -m 1 '^Server' /etc/pacman.d/mirrorlist
 sudo pacman -Sy --needed --noconfirm archlinux-keyring
 yay --noconfirm
 
