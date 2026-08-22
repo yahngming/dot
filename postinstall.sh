@@ -4,12 +4,6 @@ arch() {
 	sudo sed -i 's/LOGIN_TIMEOUT.*/LOGIN_TIMEOUT 0/' /etc/login.defs
 	sudo sed -i '/#\[multilib\]/,+1s/^#//' /etc/pacman.conf
 	sudo pacman -Syu --needed --noconfirm archlinux-keyring
-	sudo pacman -S --noconfirm bluez lib32-mesa lib32-vulkan-icd-loader mesa pipewire pipewire-alsa pipewire-jack pipewire-pulse vulkan-icd-loader # driver
-	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-noto-nerd ttf-terminus-nerd # font
-	sudo pacman -S --noconfirm lib32-vulkan-radeon rocm-hip-runtime vulkan-radeon # amd
-	sudo pacman -S --noconfirm intel-media-driver lib32-vulkan-intel libvpl vpl-gpu-rt vulkan-intel # intel
-	sudo pacman -S --noconfirm awww cliphist foot fuzzel grim hypridle hyprland hyprlock kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xwayland-satellite # wayland
-	sudo pacman -S --noconfirm clipmenu dunst maim nsxiv numlockx unclutter xclip xcompmgr xdg-desktop-portal-gtk xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xscreensaver xwallpaper # xorg
 	sudo pacman -S --noconfirm 7zip
 	sudo pacman -S --noconfirm aerc atool
 	sudo pacman -S --noconfirm base-devel bat bc bluetui bluez-utils brightnessctl btop
@@ -32,6 +26,12 @@ arch() {
 	sudo pacman -S --noconfirm w3m wiremix wireplumber
 	sudo pacman -S --noconfirm yt-dlp
 	sudo pacman -S --noconfirm zathura-pdf-poppler zoxide
+	sudo pacman -S --noconfirm bluez lib32-mesa lib32-vulkan-icd-loader mesa pipewire pipewire-alsa pipewire-jack pipewire-pulse vulkan-icd-loader # driver
+	sudo pacman -S --noconfirm noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-noto-nerd ttf-terminus-nerd # font
+	sudo pacman -S --noconfirm lib32-vulkan-radeon rocm-hip-runtime vulkan-radeon # amd
+	sudo pacman -S --noconfirm intel-media-driver lib32-vulkan-intel libvpl vpl-gpu-rt vulkan-intel # intel
+	sudo pacman -S --noconfirm awww cliphist foot fuzzel grim hypridle hyprland hyprlock kanshi mako niri qt6-wayland satty slurp swaybg waybar wl-clipboard wl-mirror wlr-randr xwayland-satellite # wayland
+	sudo pacman -S --noconfirm clipmenu dunst maim nsxiv numlockx unclutter xclip xcompmgr xdg-desktop-portal-gtk xdo xfce4 xorg-server xorg-xinit xorg-xinput xorg-xrandr xscreensaver xwallpaper # xorg
 	sudo systemctl enable bluetooth.service
 	sudo systemctl enable cups.service
 	sudo systemctl enable docker.service
