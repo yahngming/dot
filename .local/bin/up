@@ -9,6 +9,7 @@ yay --noconfirm
 dot
 
 fc-cache -fv
+pkill -SIGUSR2 waybar
 
 sudo cp -r ~/.config/keyd/ /etc/
 sudo cp -r ~/.config/systemd/ /etc/
