@@ -1,20 +1,25 @@
 #!/bin/sh
 
+sudo curl -o /etc/pacman.d/mirrorlist "https://archlinux.org/mirrorlist/?country=US&use_mirror_status=on"
+sudo sed -i 's/^# *Server/Server/' /etc/pacman.d/mirrorlist
 sudo pacman -Sy --needed --noconfirm archlinux-keyring
 yay --noconfirm
 
 dot
 
+fc-cache -fv
+
+sudo cp -r ~/.config/keyd/ /etc/
+sudo cp -r ~/.config/systemd/ /etc/
+sudo systemctl restart keyd
+
 cd ~/.config/firefox
 ./updater.sh -us
 ./prefsCleaner.sh -s
 cd - >/dev/null 2>&1
+
 cd ~/.local/src/sub
 git pull
-cd - >/dev/null 2>&1
-fc-cache -fv
-sudo cp -r ~/.config/keyd/ /etc/
-sudo cp -r ~/.config/systemd/ /etc/
 sudo cp ~/.local/src/sub/mihomo /etc/mihomo/config.yaml
 sudo cp ~/.local/src/sub/sing-box /etc/sing-box/config.json
-sudo systemctl restart keyd
+cd - >/dev/null 2>&1
