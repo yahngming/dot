@@ -1,3 +1,6 @@
 #!/bin/sh
 
-pkill -f "read -n 1 -s"; tui "fastfetch | lolcat; read -n 1 -s"
+case "$DESKTOP" in
+	*xfce* ) xfce4-about ;;
+	*      ) pkill -f "read -n 1 -s"; tui "fastfetch | lolcat; read -n 1 -s" ;;
+esac
