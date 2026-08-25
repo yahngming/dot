@@ -7,27 +7,12 @@ case "$@" in
 	*                                                                               ) class="tui" ;;
 esac
 title="$(echo "$@" | cut -d ' ' -f 1)"
-command="$SHELL -ic $@"
+if [ "$class" = "screensaver" ]; then
+	theme="initial-color-theme=light"
+fi
 
 case "$TERMINAL" in
-	*foot*)
-		if [ "$class" = "screensaver" ]; then
-			theme="-o initial-color-theme=light"
-		fi
-		class="-a $class"
-		title="-T $title"
-		command="-e $command"
-		;;
-	*st*)
-		class="-c $class"
-		title="-T $title"
-		command="-e $command"
-		;;
-	*xfce*)
-		class="--class=$class"
-		title="--title=$title"
-		command="--command=$command"
-		;;
+	*foot* )$TERMINAL -a "$class" -T "$title" -o $theme -e $SHELL -ic "$@" ;;
+	*st*   )$TERMINAL -c "$class" -T "$title" -e $SHELL -ic "$@" ;;
+	*xfce* )$TERMINAL --class="$class" --title="$title" --command="$SHELL -ic \"$@\"" ;;
 esac
-
-$TERMINAL $theme $class $title $command
