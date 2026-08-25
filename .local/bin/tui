@@ -7,6 +7,7 @@ case "$@" in
 	*                                                                               ) class="tui" ;;
 esac
 title="$(echo "$@" | cut -d ' ' -f 1)"
+command="$SHELL -ic $@"
 
 case "$TERMINAL" in
 	*foot*)
@@ -15,15 +16,18 @@ case "$TERMINAL" in
 		fi
 		class="-a $class"
 		title="-T $title"
+		command="-e $command"
 		;;
 	*st*)
 		class="-c $class"
 		title="-T $title"
+		command="-e $command"
 		;;
 	*xfce*)
 		class="--class=$class"
 		title="--title=$title"
+		command="--command=$command"
 		;;
 esac
 
-$TERMINAL $theme $class $title -e $SHELL -ic "$@"
+$TERMINAL $theme $class $title $command
