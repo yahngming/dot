@@ -12,7 +12,7 @@ if [ "$class" = "screensaver" ]; then
 fi
 
 case "$TERMINAL" in
-	*foot* )$TERMINAL -a "$class" -T "$title" -o $theme -e $SHELL -ic "$@" ;;
-	*st*   )$TERMINAL -c "$class" -T "$title" -e $SHELL -ic "$@" ;;
-	*xfce* )$TERMINAL --class="$class" --title="$title" --command="$SHELL -ic \"$@\"" ;;
+	*foot* ) $TERMINAL -a "$class" -T "$title" -o $theme -e $SHELL -ic "$@" ;;
+	*st*   ) $TERMINAL -c "$class" -T "$title" -e $SHELL -ic "$@" ;;
+	*xfce* ) $TERMINAL --class="$class" --title="$title" --command="$SHELL -ic \"$@\"" ;;
 esac
