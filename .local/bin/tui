@@ -9,7 +9,7 @@ esac
 title="$(echo "$@" | cut -d ' ' -f 1)"
 
 case "$TERMINAL" in
-	*foot* ) $TERMINAL -a "$class" -T "$title" -o $theme -e $SHELL -ic "$@" ;;
+	*foot* ) $TERMINAL -a "$class" -T "$title" -o "$theme" -e $SHELL -ic "$@" ;;
 	*st*   ) $TERMINAL -c "$class" -T "$title" -e $SHELL -ic "$@" ;;
 	*xfce* ) $TERMINAL --class="$class" --title="$title" --command="$SHELL -ic \"$@\"" ;;
 esac
