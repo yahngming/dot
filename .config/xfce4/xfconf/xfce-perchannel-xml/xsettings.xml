@@ -8,4 +8,7 @@
   <property name="Gtk" type="empty">
     <property name="CursorThemeName" type="string" value="Chicago95 Standard Cursors"/>
   </property>
+  <property name="Gdk" type="empty">
+    <property name="WindowScalingFactor" type="int" value="2"/>
+  </property>
 </channel>
