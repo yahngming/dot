@@ -1,0 +1,96 @@
+{
+	"layer": "top",
+	"position": "bottom",
+	"reload_style_on_change": true,
+	"modules-left": ["ext/workspaces", "wlr/taskbar"],
+	"modules-center": [],
+	"modules-right": ["cpu", "memory", "temperature#cpu", "temperature#gpu", "tray", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
+	"ext/workspaces": {
+		"on-click": "activate"
+	},
+	"wlr/taskbar": {
+		"format": "{icon} {title:.20}",
+		"icon-size": 14,
+		"tooltip": false,
+		"on-click": "minimize-raise",
+		"on-click-middle": "close"
+	},
+	"cpu": {
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"tooltip": false
+	},
+	"memory": {
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"tooltip": false
+	},
+	"temperature#cpu": {
+		"hwmon-path": ["/sys/class/hwmon/hwmon3/temp1_input"],
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"tooltip": false
+	},
+	"temperature#gpu": {
+		"hwmon-path": ["/sys/class/hwmon/hwmon1/temp1_input"],
+		"format": "{icon}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"tooltip": false
+	},
+	"tray": {
+		"icon-size": 16,
+		"spacing": 4
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "󰈈",
+			"deactivated": "󰈉"
+		},
+		"tooltip": false,
+		"timeout": 240
+	},
+	"battery": {
+		"bat": "BAT0",
+		"format": "{icon}",
+		"format-charging": "{icon}",
+		"format-icons": {
+			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+			"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		},
+		"states": {
+			"critical": 10
+		},
+		"tooltip": false
+	},
+	"network": {
+		"format": "{icon}",
+		"format-disconnected": "󰤮",
+		"format-ethernet": "󰈀",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"tooltip": false
+	},
+	"wireplumber": {
+		"format": "{icon}",
+		"format-muted": "󰸈",
+		"format-icons": {
+			"default": ["󰕿", "󰖀", "󰕾"]
+		},
+		"tooltip": false,
+		"on-click": "volume toggle",
+		"on-scroll-down": "volume down",
+		"on-scroll-up": "volume up"
+	},
+	"clock": {
+		"format": "{:%R}",
+		"tooltip-format": "{calendar}",
+		"calendar": {
+			"format": {
+				"months": "<b>{}</b>",
+				"weekdays": "<b>{}</b>",
+				"days": "{}",
+				"today": "<span color='tomato'><b>{}</b></span>"
+			}
+		}
+	}
+}
