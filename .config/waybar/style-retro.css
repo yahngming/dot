@@ -55,7 +55,7 @@ button.active {
 	background: #e0e0e0;
 }
 
-#tray, #idle_inhibitor, #battery, #network, #wireplumber {
+#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
 	padding: 0px 3px;
 }
 
