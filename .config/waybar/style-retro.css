@@ -3,7 +3,7 @@
 	border-radius: 0;
 	color: #000000;
 	font-family: graphical;
-	font-size: 11px;
+	font-size: 14px;
 	font-weight: bold;
 	min-height: 0;
 }
@@ -15,6 +15,16 @@ window, button, menu, .modules-right {
 window {
 	border-top: 1px solid #ffffff;
 	border-bottom: 1px solid #000000;
+}
+
+button label, menu label {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+tooltip {
+	background: #ffffe1;
+	border: 1px solid #000000;
 }
 
 button, menu {
@@ -45,20 +55,10 @@ button.active {
 	background: #e0e0e0;
 }
 
-button label {
-	font-family: sans-serif;
-}
-
 #tray, #idle_inhibitor, #battery, #network, #wireplumber {
-	font-size: 14px;
 	padding: 0px 3px;
 }
 
 #clock {
 	padding-left: 9px;
-}
-
-tooltip {
-	background: #ffffe1;
-	border: 1px solid #000000;
 }
