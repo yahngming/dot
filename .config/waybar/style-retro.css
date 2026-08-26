@@ -49,6 +49,14 @@ button.active {
 	padding: 0px 3px;
 }
 
+#idle_inhibitor, #battery, #network, #wireplumber {
+	font-size: 14px;
+}
+
+#cpu, #memory, #temperature {
+	font-size: 9px;
+}
+
 tooltip {
 	background: #ffffe1;
 	border: 1px solid #000000;
