@@ -7,7 +7,7 @@
 	min-height: 0;
 }
 
-window, button, .modules-right, menu, tooltip label {
+window, button, menu, .modules-right {
 	background: #c0c0c0;
 	color: #000000;
 }
