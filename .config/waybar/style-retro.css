@@ -1,17 +1,32 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: graphical;
-	font-size: 16px;
+	font-family: sans-serif;
+	font-size: 11px;
+	font-weight: bold;
 }
 
 window, button, menu, tooltip, tooltip label {
-	background: @background;
-	color: @primary;
+	background: @c0c0c0;
+	color: @000000;
+}
+
+window {
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #000000;
 }
 
 button {
-	padding: 0px 6px;
+	border-top: 1px solid #ffffff;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #ffffff;
+	box-shadow: inset 1px 1px 0px #dfdfdf, inset -1px -1px 0px #808080;
+	margin-top: 3px;
+	margin-right: 2px;
+	margin-bottom: 3px;
+	margin-left: 2px;
+	padding: 2px 6px;
 }
 
 menu, tooltip {
@@ -20,12 +35,16 @@ menu, tooltip {
 }
 
 #workspaces .active, #taskbar .active {
-	background: @primary;
-	color: @background;
+	background: #e0e0e0;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #dfdfdf;
 }
 
-#battery.critical {
-	color: red;
+#workspaces .hover, #taskbar .hover {
+	background: #d4d4d4;
 }
 
 #tray, #clock {
