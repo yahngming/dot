@@ -1,0 +1,41 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: graphical;
+	font-size: 16px;
+}
+
+window, button, menu, tooltip, tooltip label {
+	background: @background;
+	color: @primary;
+}
+
+button {
+	padding: 0px 6px;
+}
+
+menu, tooltip {
+	border: 1px solid;
+	border-radius: 6px;
+}
+
+#workspaces .active, #taskbar .active {
+	background: @primary;
+	color: @background;
+}
+
+#battery.critical {
+	color: red;
+}
+
+#tray, #clock {
+	padding: 0px 12px;
+}
+
+#idle_inhibitor, #battery, #network, #wireplumber {
+	padding: 0px 3px;
+}
+
+#cpu, #memory, #temperature {
+	font-size: 12px;
+}
