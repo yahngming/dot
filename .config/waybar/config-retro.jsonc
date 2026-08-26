@@ -2,24 +2,9 @@
 	"layer": "top",
 	"position": "bottom",
 	"reload_style_on_change": true,
-	"modules-left": ["custom/start", "ext/workspaces", "wlr/taskbar"],
+	"modules-left": ["ext/workspaces", "wlr/taskbar"],
 	"modules-center": [],
 	"modules-right": ["cpu", "memory", "temperature#cpu", "temperature#gpu", "tray", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
-	"custom/start": {
-		"format": "{text}Start",
-		"tooltip": false,
-		"exec": "logo",
-		"menu": "on-click",
-		"menu-file": "~/.config/waybar/startmenu.xml",
-		"menu-actions": {
-			"about": "about",
-			"programs": "launcher",
-			"documents": "files",
-			"settings": "settings",
-			"shell": "terminal",
-			"shutdown": "powermenu"
-		}
-	},
 	"ext/workspaces": {
 		"on-click": "activate"
 	},
