@@ -29,11 +29,6 @@ button {
 	padding: 2px 6px;
 }
 
-menu, tooltip {
-	border: 1px solid;
-	border-radius: 6px;
-}
-
 #workspaces .active, #taskbar .active {
 	background: #e0e0e0;
 	border-top: 1px solid #000000;
@@ -45,6 +40,20 @@ menu, tooltip {
 
 #workspaces .hover, #taskbar .hover {
 	background: #d4d4d4;
+}
+
+.modules-right {
+	background: #c0c0c0;
+	color: #000000;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 2px;
+	padding: 1px 4px;
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	box-shadow: inset 1px 1px 0px #000000, inset -1px -1px 0px #dfdfdf;
 }
 
 #tray, #clock {
