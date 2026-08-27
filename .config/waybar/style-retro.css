@@ -50,12 +50,12 @@ button label {
 	font-size: 11px;
 }
 
-menu label {
-	font-family: monospace;
-}
-
 menu {
 	padding: 3px;
+}
+
+menu label {
+	font-family: monospace;
 }
 
 menu menuitem:hover {
