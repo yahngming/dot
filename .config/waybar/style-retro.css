@@ -45,7 +45,7 @@ button.active {
 	background: #e0e0e0;
 }
 
-label {
+button label, tooltip label {
 	font-size: 11px;
 }
 
