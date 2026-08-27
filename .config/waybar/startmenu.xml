@@ -26,7 +26,7 @@
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="settings">
-				<property name="label"> Settings         󰍟</property>
+				<property name="label"> Settings         󰍟</property>
 			</object>
 		</child>
 		<child>
