@@ -9,6 +9,7 @@
 		"format": "{text}",
 		"tooltip": false,
 		"exec": "logo",
+		"interval": 3600,
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
