@@ -84,6 +84,10 @@ menu {
 	padding-left: 9px;
 }
 
+#taskbar button {
+	min-width: 150px;
+}
+
 button label, tooltip label {
 	font-family: sans-serif;
 	font-size: 11px;
