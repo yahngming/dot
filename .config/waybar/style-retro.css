@@ -22,7 +22,7 @@ window {
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;
 	border-left: 1px solid #ffffff;
-	box-shadow: inset 1px 1px 0px #dfdfdf, inset -1px -1px 0px #808080;
+	box-shadow: inset 1px 1px 0px #c0c0c0, inset -1px -1px 0px #808080;
 }
 
 #custom-start, button, .modules-right {
@@ -38,7 +38,7 @@ button.active, .modules-right {
 	border-right: 1px solid #ffffff;
 	border-bottom: 1px solid #ffffff;
 	border-left: 1px solid #000000;
-	box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #dfdfdf;
+	box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #c0c0c0;
 }
 
 button.active {
