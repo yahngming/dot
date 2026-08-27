@@ -2,6 +2,19 @@
 <interface>
 	<object class="GtkMenu" id="menu">
 		<child>
+			<object class="GtkMenuItem" id="browser">
+				<property name="label"> Internet Explorer</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="game">
+				<property name="label"> Steam</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkSeparatorMenuItem" />
+		</child>
+		<child>
 			<object class="GtkMenuItem" id="programs">
 				<property name="label">󰣆 Programs         󰍟</property>
 			</object>
