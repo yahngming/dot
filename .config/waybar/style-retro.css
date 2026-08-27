@@ -30,26 +30,6 @@ tooltip {
 	border: 1px solid #000000;
 }
 
-button label, tooltip label {
-	font-family: sans-serif;
-}
-
-menu label {
-	font-family: monospace;
-}
-
-button label {
-	font-size: 11px;
-}
-
-menu label {
-	font-size: 12px;
-}
-
-tooltip label {
-	font-size: 10px;
-}
-
 window {
 	border-top: 1px solid #ffffff;
 	border-bottom: 1px solid #000000;
@@ -101,10 +81,30 @@ tooltip label {
 	padding-left: 9px;
 }
 
-#temperature-cpu {
+#temperature.cpu {
 	color: #0071c5;
 }
 
-#temperature-gpu {
+#temperature.gpu {
 	color: #00a859;
+}
+
+button label, tooltip label {
+	font-family: sans-serif;
+}
+
+menu label {
+	font-family: monospace;
+}
+
+button label {
+	font-size: 11px;
+}
+
+menu label {
+	font-size: 12px;
+}
+
+tooltip label {
+	font-size: 10px;
 }
