@@ -5,6 +5,7 @@
 	border-radius: 0;
 	font-family: graphical;
 	font-size: 16px;
+	text-shadow: none;
 }
 
 window, button, menu, tooltip, tooltip label {
@@ -19,7 +20,6 @@ button {
 menu, tooltip {
 	border: 1px solid;
 	border-radius: 6px;
-	text-shadow: none;
 }
 
 #workspaces .active, #taskbar .active {
