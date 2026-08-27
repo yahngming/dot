@@ -45,9 +45,13 @@ button.active {
 	background: #e0e0e0;
 }
 
-button label, menu label {
+button label {
 	font-family: sans-serif;
 	font-size: 11px;
+}
+
+menu label {
+	font-family: monospace;
 }
 
 menu {
