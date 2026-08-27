@@ -78,6 +78,10 @@ tooltip {
 	text-shadow: none;
 }
 
+tooltip label {
+	padding: 0px;
+}
+
 #temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
 	padding: 0px 3px;
 }
