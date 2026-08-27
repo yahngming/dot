@@ -2,31 +2,28 @@
 <interface>
 	<object class="GtkMenu" id="menu">
 		<child>
-			<object class="GtkMenuItem" id="about">
-				<property name="label">About</property>
-			</object>
-		</child>
-		<child>
-			<object class="GtkSeparatorMenuItem" />
-		</child>
-		<child>
 			<object class="GtkMenuItem" id="programs">
-				<property name="label">Programs</property>
+				<property name="label">󰣆 Programs  󰍟</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="documents">
-				<property name="label">Documents</property>
+				<property name="label">󰝰 Documents  󰍟</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="settings">
-				<property name="label">Settings</property>
+				<property name="label"> Settings  󰍟</property>
+			</object>
+		</child>
+		<child>
+			<object class="GtkMenuItem" id="about">
+				<property name="label">󰡯 Help</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="shell">
-				<property name="label">Shell...</property>
+				<property name="label"> Run...</property>
 			</object>
 		</child>
 		<child>
@@ -34,7 +31,7 @@
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="shutdown">
-				<property name="label">Shut Down...</property>
+				<property name="label">⏻ Shut Down...</property>
 			</object>
 		</child>
 	</object>
