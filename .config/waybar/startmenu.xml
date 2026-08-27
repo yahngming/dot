@@ -3,17 +3,17 @@
 	<object class="GtkMenu" id="menu">
 		<child>
 			<object class="GtkMenuItem" id="programs">
-				<property name="label">󰣆 Programs  󰍟</property>
+				<property name="label">󰣆 Programs         󰍟</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="documents">
-				<property name="label">󰝰 Documents  󰍟</property>
+				<property name="label">󰝰 Documents        󰍟</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="settings">
-				<property name="label"> Settings  󰍟</property>
+				<property name="label"> Settings         󰍟</property>
 			</object>
 		</child>
 		<child>
