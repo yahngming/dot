@@ -8,7 +8,7 @@
 	min-height: 0;
 }
 
-window, button, menu, .modules-right {
+window, #custom-start, button, menu, .modules-right {
 	background: #c0c0c0;
 }
 
@@ -27,7 +27,7 @@ tooltip {
 	border: 1px solid #000000;
 }
 
-button, menu {
+#custom-start, button, menu {
 	border-top: 1px solid #ffffff;
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;
@@ -35,7 +35,7 @@ button, menu {
 	box-shadow: inset 1px 1px 0px #dfdfdf, inset -1px -1px 0px #808080;
 }
 
-button, menu, .modules-right {
+#custom-start, button, menu, .modules-right {
 	margin-top: 3px;
 	margin-right: 2px;
 	margin-bottom: 3px;
@@ -43,7 +43,7 @@ button, menu, .modules-right {
 	padding: 2px 6px;
 }
 
-button.active, .modules-right {
+#custom-start:active, button.active, .modules-right {
 	border-top: 1px solid #000000;
 	border-right: 1px solid #ffffff;
 	border-bottom: 1px solid #ffffff;
@@ -51,7 +51,7 @@ button.active, .modules-right {
 	box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #dfdfdf;
 }
 
-button.active {
+#custom-start:active, button.active {
 	background: #e0e0e0;
 }
 
