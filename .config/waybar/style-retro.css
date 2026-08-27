@@ -17,16 +17,6 @@ window {
 	border-bottom: 1px solid #000000;
 }
 
-button label, menu label {
-	font-family: sans-serif;
-	font-size: 11px;
-}
-
-tooltip {
-	background: #ffffe1;
-	border: 1px solid #000000;
-}
-
 #custom-start, button, menu {
 	border-top: 1px solid #ffffff;
 	border-right: 1px solid #000000;
@@ -43,7 +33,7 @@ tooltip {
 	padding: 2px 6px;
 }
 
-#custom-start:active, button.active, .modules-right {
+button.active, .modules-right {
 	border-top: 1px solid #000000;
 	border-right: 1px solid #ffffff;
 	border-bottom: 1px solid #ffffff;
@@ -51,8 +41,32 @@ tooltip {
 	box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #dfdfdf;
 }
 
-#custom-start:active, button.active {
+button.active {
 	background: #e0e0e0;
+}
+
+button label, menu label {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+menu menuitem:hover {
+	background: #000080;
+}
+
+menu menuitem:hover label {
+	color: #ffffff;
+}
+
+menu separator {
+	border-top: 1px solid #808080;
+	border-bottom: 1px solid #ffffff;
+	margin: 3px 2px;
+}
+
+tooltip {
+	background: #ffffe1;
+	border: 1px solid #000000;
 }
 
 #temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
