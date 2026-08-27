@@ -26,7 +26,7 @@
 		"on-click": "activate"
 	},
 	"wlr/taskbar": {
-		"format": "{icon} {title:.25}",
+		"format": "{icon} {title:.20}",
 		"icon-size": 14,
 		"on-click": "minimize-raise",
 		"on-click-middle": "close"
