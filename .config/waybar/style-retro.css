@@ -30,11 +30,11 @@ tooltip {
 	border: 1px solid #000000;
 }
 
-button label {
+button label, tooltip label {
 	font-family: sans-serif;
 }
 
-menu label, tooltip label {
+menu label {
 	font-family: monospace;
 }
 
