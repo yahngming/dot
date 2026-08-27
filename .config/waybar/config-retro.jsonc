@@ -95,6 +95,9 @@
 				"days": "{}",
 				"today": "<span color='tomato'><b>{}</b></span>"
 			}
+		},
+		"actions": {
+			"on-click": "mode"
 		}
 	}
 }
