@@ -12,11 +12,11 @@
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
-			"about": "about",
 			"programs": "launcher",
 			"documents": "files",
 			"settings": "settings",
-			"shell": "terminal",
+			"help": "about",
+			"run": "terminal",
 			"shutdown": "powermenu"
 		}
 	},
