@@ -54,7 +54,7 @@ menu {
 	padding: 3px;
 }
 
-menu label {
+menu label, tooltip label {
 	font-family: monospace;
 }
 
@@ -79,6 +79,8 @@ tooltip {
 }
 
 tooltip label {
+	font-size: 11px;
+	font-weight: normal;
 	padding: 0px;
 }
 
