@@ -53,7 +53,7 @@ arch() {
 	cp ~/.config/waybar/style-retro.css ~/.config/waybar/style.css
 	echo "exec niri-session" > ~/.config/desktop
 	echo "none" > ~/.config/screensaver
-	echo "auto" > ~/.config/theme
+	echo "light" > ~/.config/theme
 	pywalfox install
 	reboot
 }
