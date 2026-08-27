@@ -6,7 +6,7 @@
 	"modules-center": [],
 	"modules-right": ["temperature#cpu", "temperature#gpu", "tray", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
 	"custom/start": {
-		"format": "{text} 󰬀󰬁󰫮󰫿󰬁",
+		"format": "{text} Start",
 		"tooltip": false,
 		"exec": "logo",
 		"menu": "on-click",
