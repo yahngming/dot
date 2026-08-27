@@ -7,7 +7,6 @@
 	"modules-right": ["temperature#cpu", "temperature#gpu", "tray", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
 	"custom/start": {
 		"format": "{text} Start",
-		"tooltip": false,
 		"exec": "logo",
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
@@ -28,19 +27,16 @@
 	"wlr/taskbar": {
 		"format": "{icon} {title:.20}",
 		"icon-size": 14,
-		"tooltip": false,
 		"on-click": "minimize-raise",
 		"on-click-middle": "close"
 	},
 	"temperature#cpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon3/temp1_input"],
-		"format": "{temperatureC}",
-		"tooltip": false
+		"format": "{temperatureC}"
 	},
 	"temperature#gpu": {
 		"hwmon-path": ["/sys/class/hwmon/hwmon1/temp1_input"],
-		"format": "{temperatureC}",
-		"tooltip": false
+		"format": "{temperatureC}"
 	},
 	"tray": {
 		"icon-size": 16,
@@ -52,7 +48,6 @@
 			"activated": "󰈈",
 			"deactivated": "󰈉"
 		},
-		"tooltip": false,
 		"timeout": 240
 	},
 	"battery": {
@@ -65,15 +60,13 @@
 		},
 		"states": {
 			"critical": 10
-		},
-		"tooltip": false
+		}
 	},
 	"network": {
 		"format": "{icon}",
 		"format-disconnected": "󰤮",
 		"format-ethernet": "󰈀",
-		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-		"tooltip": false
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
 	},
 	"wireplumber": {
 		"format": "{icon}",
@@ -81,7 +74,6 @@
 		"format-icons": {
 			"default": ["󰕿", "󰖀", "󰕾"]
 		},
-		"tooltip": false,
 		"on-click": "volume toggle",
 		"on-scroll-down": "volume down",
 		"on-scroll-up": "volume up"
