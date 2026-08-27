@@ -48,9 +48,9 @@ arch() {
 	yay -S --noconfirm asciiquarium-transparent-git lavat-git neo-matrix python-terminaltexteffects ttysvr # screensaver
 	sudo cp -r ~/.config/keyd/ /etc/
 	sudo cp -r ~/.config/systemd/ /etc/
-	cp ~/.config/fastfetch/config-arch.jsonc ~/.config/fastfetch/config.jsonc
-	cp ~/.config/waybar/config-dwm.jsonc ~/.config/waybar/config.jsonc
-	cp ~/.config/waybar/style-dwm.css ~/.config/waybar/style.css
+	cp ~/.config/fastfetch/config-retro.jsonc ~/.config/fastfetch/config.jsonc
+	cp ~/.config/waybar/config-retro.jsonc ~/.config/waybar/config.jsonc
+	cp ~/.config/waybar/style-retro.css ~/.config/waybar/style.css
 	echo "exec niri-session" > ~/.config/desktop
 	echo "none" > ~/.config/screensaver
 	echo "auto" > ~/.config/theme
