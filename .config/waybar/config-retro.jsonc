@@ -12,8 +12,8 @@
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
-			"browser": "browser",
-			"game": "game",
+			"internetexplorer": "browser",
+			"steam": "game",
 			"programs": "launcher",
 			"documents": "files",
 			"settings": "settings",
