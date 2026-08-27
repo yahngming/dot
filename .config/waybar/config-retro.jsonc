@@ -88,7 +88,7 @@
 	"clock": {
 		"format": "{:%R}",
 		"format-alt": "{:%I:%M %p}",
-		"tooltip-format": "<tt>{calendar}</tt>",
+		"tooltip-format": "<tt><big>{calendar}</big></tt>",
 		"calendar": {
 			"format": {
 				"months": "<b>{}</b>",
