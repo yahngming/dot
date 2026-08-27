@@ -72,7 +72,7 @@
 		"format-disconnected": "󰤮",
 		"format-ethernet": "󰈀",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-		"tooltip-format": "({bandwidthUpBits}) ({bandwidthDownBits})"
+		"tooltip-format": "󰕒{bandwidthUpBits} 󰇚{bandwidthDownBits}"
 	},
 	"wireplumber": {
 		"format": "{icon}",
