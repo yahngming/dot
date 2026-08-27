@@ -6,10 +6,48 @@
 	font-size: 14px;
 	font-weight: bold;
 	min-height: 0;
+	text-shadow: none;
 }
 
 window, #custom-start, button, menu, .modules-right {
 	background: #c0c0c0;
+}
+
+button.active {
+	background: #e0e0e0;
+}
+
+menu menuitem:hover {
+	background: #000080;
+}
+
+menu menuitem:hover label {
+	color: #ffffff;
+}
+
+tooltip {
+	background: #ffffe1;
+	border: 1px solid #000000;
+}
+
+button label {
+	font-family: sans-serif;
+}
+
+menu label, tooltip label {
+	font-family: monospace;
+}
+
+button label {
+	font-size: 11px;
+}
+
+menu label {
+	font-size: 12px;
+}
+
+tooltip label {
+	font-size: 10px;
 }
 
 window {
@@ -41,44 +79,14 @@ button.active, .modules-right {
 	box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #c0c0c0;
 }
 
-button.active {
-	background: #e0e0e0;
-}
-
-button label, tooltip label {
-	font-size: 11px;
-}
-
-button label {
-	font-family: sans-serif;
-}
-
-menu {
-	padding: 3px;
-}
-
-menu label, tooltip label {
-	font-family: monospace;
-}
-
-menu menuitem:hover {
-	background: #000080;
-}
-
-menu menuitem:hover label {
-	color: #ffffff;
-}
-
 menu separator {
 	border-top: 1px solid #808080;
 	border-bottom: 1px solid #ffffff;
 	margin: 3px 2px;
 }
 
-tooltip {
-	background: #ffffe1;
-	border: 1px solid #000000;
-	text-shadow: none;
+menu {
+	padding: 3px;
 }
 
 tooltip label {
