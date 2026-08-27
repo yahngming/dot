@@ -87,7 +87,7 @@
 	},
 	"clock": {
 		"format": "{:%R}",
-		"tooltip-format": "{calendar}",
+		"tooltip-format": "<tt>{calendar}</tt>",
 		"calendar": {
 			"format": {
 				"months": "<b>{}</b>",
@@ -95,9 +95,6 @@
 				"days": "{}",
 				"today": "<span color='tomato'><b>{}</b></span>"
 			}
-		},
-		"actions": {
-			"on-click": "mode"
 		}
 	}
 }
