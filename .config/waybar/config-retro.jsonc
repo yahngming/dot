@@ -8,6 +8,7 @@
 	"custom/start": {
 		"format": "{text} Start",
 		"exec": "logo",
+		"tooltip-format": "Click here to begin.",
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
 		"menu-actions": {
