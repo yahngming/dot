@@ -4,7 +4,6 @@
 	color: #000000;
 	font-family: graphical;
 	font-size: 14px;
-	font-weight: bold;
 	min-height: 0;
 	text-shadow: none;
 }
@@ -25,9 +24,12 @@ menu menuitem:hover label {
 	color: #ffffff;
 }
 
-tooltip {
-	background: #ffffe1;
-	border: 1px solid #000000;
+#temperature.cpu {
+	color: #0071c5;
+}
+
+#temperature.gpu {
+	color: #00a859;
 }
 
 window {
@@ -41,14 +43,6 @@ window {
 	border-bottom: 1px solid #000000;
 	border-left: 1px solid #ffffff;
 	box-shadow: inset 1px 1px 0px #c0c0c0, inset -1px -1px 0px #808080;
-}
-
-#custom-start, button, .modules-right {
-	margin-top: 3px;
-	margin-right: 2px;
-	margin-bottom: 3px;
-	margin-left: 2px;
-	padding: 2px 6px;
 }
 
 button.active, .modules-right {
@@ -65,12 +59,21 @@ menu separator {
 	margin: 3px 2px;
 }
 
-menu {
-	padding: 3px;
+tooltip {
+	background: #ffffe1;
+	border: 1px solid #000000;
 }
 
-tooltip label {
-	padding: 0px;
+#custom-start, button, .modules-right {
+	margin-top: 3px;
+	margin-right: 2px;
+	margin-bottom: 3px;
+	margin-left: 2px;
+	padding: 2px 6px;
+}
+
+menu {
+	padding: 3px;
 }
 
 #temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
@@ -81,30 +84,25 @@ tooltip label {
 	padding-left: 9px;
 }
 
-#temperature.cpu {
-	color: #0071c5;
-}
-
-#temperature.gpu {
-	color: #00a859;
-}
-
 button label, tooltip label {
 	font-family: sans-serif;
-}
-
-menu label {
-	font-family: monospace;
 }
 
 button label {
 	font-size: 11px;
 }
 
+button.active label {
+	font-size: 10.5px;
+	font-weight: bold;
+}
+
 menu label {
+	font-family: monospace;
 	font-size: 12px;
 }
 
 tooltip label {
 	font-size: 10px;
+	padding: 0px;
 }
