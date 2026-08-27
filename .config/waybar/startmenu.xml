@@ -17,12 +17,12 @@
 			</object>
 		</child>
 		<child>
-			<object class="GtkMenuItem" id="about">
+			<object class="GtkMenuItem" id="help">
 				<property name="label">󰡯 Help</property>
 			</object>
 		</child>
 		<child>
-			<object class="GtkMenuItem" id="shell">
+			<object class="GtkMenuItem" id="run">
 				<property name="label"> Run...</property>
 			</object>
 		</child>
