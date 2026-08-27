@@ -75,6 +75,7 @@ menu separator {
 tooltip {
 	background: #ffffe1;
 	border: 1px solid #000000;
+	text-shadow: none;
 }
 
 #temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
