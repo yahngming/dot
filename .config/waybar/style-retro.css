@@ -100,3 +100,11 @@ tooltip label {
 #clock {
 	padding-left: 9px;
 }
+
+#temperature-cpu {
+	color: #0071c5;
+}
+
+#temperature-gpu {
+	color: #00a859;
+}
