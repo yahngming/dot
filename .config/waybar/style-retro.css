@@ -101,7 +101,7 @@ menu label {
 	font-size: 12px;
 }
 
-#custom-start, #temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
+#custom-start, #idle_inhibitor, #battery, #network, #wireplumber {
 	background-repeat: no-repeat;
 }
 
@@ -110,9 +110,9 @@ menu label {
 	background-size: 18px;
 }
 
-#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
+#idle_inhibitor, #battery, #network, #wireplumber {
 	background-position: 1px center;
-	background-size: 12px;
+	background-size: 14px;
 }
 
 #custom-start {
