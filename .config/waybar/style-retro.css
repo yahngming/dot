@@ -113,15 +113,15 @@ menu label {
 }
 
 #custom-start {
-	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
+	background-image: url("/usr/share/icons/Chicago95/places/scalable/start-here.svg");
 }
 
 #idle_inhibitor.activated {
-	background-image: url("/usr/share/icons/Chicago95/devices/scalable/computer.svg");
+	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-lock-screen.svg");
 }
 
 #idle_inhibitor.deactivated {
-	background-image: url("/usr/share/icons/Chicago95/apps/scalable/screensaver.svg");
+	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-reboot.svg");
 }
 
 #battery.100 {
