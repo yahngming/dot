@@ -116,6 +116,14 @@ menu label {
 	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
 }
 
+#idle_inhibitor.activated {
+	background-image: url("/usr/share/icons/Chicago95/apps/scalable/sleep.svg");
+}
+
+#idle_inhibitor.deactivated {
+	background-image: url("/usr/share/icons/Chicago95/apps/scalable/system-shutdown.svg");
+}
+
 #battery.100 {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100.svg");
 }
