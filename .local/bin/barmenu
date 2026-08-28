@@ -1,6 +1,7 @@
 #!/bin/sh
 
 menu="\
+chicago\n\
 dwm\n\
 float\n\
 icononly\n\
@@ -8,7 +9,6 @@ macos\n\
 mecha\n\
 omarchy\n\
 powerline\n\
-retro\n\
 vertical\n\
 windows\n\
 "
