@@ -77,9 +77,9 @@
 		"format": " ",
 		"tooltip-format": "{node_name} {volume}%",
 		"states": {
-			"low": 10,
+			"high": 100
 			"medium": 50,
-			"high": 90
+			"low": 0
 		},
 		"on-click": "volume toggle",
 		"on-scroll-down": "volume down",
