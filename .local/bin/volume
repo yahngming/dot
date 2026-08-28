@@ -1,7 +1,8 @@
 #!/bin/sh
 
 bar() {
-	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:$(echo "(" "`wpctl get-volume $id | sed 's/.* //'`" "*100+0.5)/1" | bc) " "
+	vol=$(wpctl get-volume $id | awk '{print int($2 * 100 + 0.5)}')
+	notify-send -h string:x-canonical-private-synchronous:volume -h int:value:"$vol" " "
 }
 
 get() {
