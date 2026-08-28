@@ -110,12 +110,6 @@ menu label {
 	background-repeat: no-repeat;
 }
 
-#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
-	background-position: center;
-	background-size: 24px;
-	min-width: 24px;
-}
-
 #custom-start {
 	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
 	background-position: 0.15em center;
