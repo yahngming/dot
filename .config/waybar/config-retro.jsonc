@@ -76,7 +76,7 @@
 	"wireplumber": {
 		"format": " ",
 		"tooltip-format": "{node_name} {volume}%",
-		"state": {
+		"states": {
 			"muted": 0,
 			"low": 10,
 			"medium": 50,
