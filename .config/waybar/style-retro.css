@@ -221,11 +221,15 @@ menu label {
 }
 
 #network.ethernet {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wired.svg");
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-idle.svg");
 }
 
 #network.disconnected {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-offline.svg");
+}
+
+#network.disabled {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-error.svg");
 }
 
 #wireplumber.low {
