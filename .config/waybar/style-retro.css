@@ -3,7 +3,7 @@
 	border-radius: 0;
 	color: #000000;
 	font-family: sans-serif;
-	font-size: 14px;
+	font-size: 11px;
 	min-height: 0;
 	text-shadow: none;
 }
@@ -72,6 +72,10 @@ tooltip {
 	padding: 2px 6px;
 }
 
+button label, tooltip label {
+	padding: 0px;
+}
+
 menu {
 	padding: 3px;
 }
@@ -86,11 +90,6 @@ menu {
 
 #taskbar button {
 	min-width: 150px;
-}
-
-button label, tooltip label {
-	font-size: 11px;
-	padding: 0px;
 }
 
 button.active label {
