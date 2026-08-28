@@ -65,11 +65,8 @@ tooltip {
 }
 
 #custom-start, button, .modules-right {
-	margin-top: 3px;
-	margin-right: 2px;
-	margin-bottom: 3px;
-	margin-left: 2px;
-	padding: 2px 6px;
+	margin: 3px 2px;
+	padding: 2px 3px;
 }
 
 button label, tooltip label {
@@ -85,7 +82,7 @@ menu {
 }
 
 #clock {
-	padding-left: 9px;
+	padding: 0px 9px;
 }
 
 #taskbar button {
@@ -108,6 +105,6 @@ menu label {
 
 #custom-start {
 	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
-	background-position: 0.15em center;
-	background-size: 1.4em;
+	background-position: 3px center;
+	background-size: 18px;
 }
