@@ -1,5 +1,4 @@
 * {
-	background-repeat: no-repeat;
 	border: none;
 	border-radius: 0;
 	color: #000000;
@@ -105,6 +104,10 @@ button.active label {
 menu label {
 	font-family: monospace;
 	font-size: 12px;
+}
+
+#custom-start, #temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
+	background-repeat: no-repeat;
 }
 
 #temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
