@@ -80,7 +80,7 @@
 			"muted": 0,
 			"low": 10,
 			"medium": 50,
-			"high": 90,
+			"high": 90
 		},
 		"on-click": "volume toggle",
 		"on-scroll-down": "volume down",
