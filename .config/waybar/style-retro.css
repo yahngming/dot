@@ -79,12 +79,8 @@ menu {
 	padding: 3px;
 }
 
-#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber, #clock {
+#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
 	padding: 0px 3px;
-}
-
-#clock {
-	padding-left: 6px;
 }
 
 #taskbar button {
