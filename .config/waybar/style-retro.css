@@ -116,6 +116,10 @@ menu label {
 	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
 }
 
+#battery.100 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100.png");
+}
+
 #network.disconnected {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-offline.svg");
 }
