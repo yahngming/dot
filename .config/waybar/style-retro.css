@@ -117,11 +117,11 @@ menu label {
 }
 
 #idle_inhibitor.activated {
-	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-lock-screen.svg");
+	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-reboot.svg");
 }
 
 #idle_inhibitor.deactivated {
-	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-reboot.svg");
+	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-lock-screen.svg");
 }
 
 #battery.100 {
