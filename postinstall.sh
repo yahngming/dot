@@ -49,11 +49,11 @@ arch() {
 	sudo cp -r ~/.config/keyd/ /etc/
 	sudo cp -r ~/.config/systemd/ /etc/
 	cp ~/.config/fastfetch/config-ibm.jsonc ~/.config/fastfetch/config.jsonc
-	cp ~/.config/waybar/config-retro.jsonc ~/.config/waybar/config.jsonc
-	cp ~/.config/waybar/style-retro.css ~/.config/waybar/style.css
+	cp ~/.config/waybar/config-chicago.jsonc ~/.config/waybar/config.jsonc
+	cp ~/.config/waybar/style-chicago.css ~/.config/waybar/style.css
 	echo "exec niri-session" > ~/.config/desktop
 	echo "none" > ~/.config/screensaver
-	echo "light" > ~/.config/theme
+	echo "auto" > ~/.config/theme
 	pywalfox install
 	reboot
 }
