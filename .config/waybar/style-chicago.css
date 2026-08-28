@@ -45,7 +45,7 @@ window {
 	box-shadow: inset 1px 1px 0px #c0c0c0, inset -1px -1px 0px #808080;
 }
 
-button.active, .modules-right {
+#custom-start:hover, button.active, .modules-right {
 	border-top: 1px solid #000000;
 	border-right: 1px solid #ffffff;
 	border-bottom: 1px solid #ffffff;
