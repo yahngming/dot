@@ -113,10 +113,31 @@ menu label {
 #idle_inhibitor, #battery, #network, #wireplumber {
 	background-position: 1px center;
 	background-size: 14px;
+	min-width: 10px;
 }
 
 #custom-start {
 	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
+}
+
+#network.disconnected {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-offline.svg");
+}
+
+#network.ethernet {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wired.svg");
+}
+
+#network.wifi.quality-low {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-0.svg");
+}
+
+#network.wifi.quality-medium {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-50.svg");
+}
+
+#network.wifi.quality-high {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-100.svg");
 }
 
 #wireplumber.high {
