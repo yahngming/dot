@@ -105,7 +105,7 @@ menu label {
 #battery, #idle_inhibitor, #network, #wireplumber {
 	background-position: 1px center;
 	background-size: 14px;
-	min-width: 10px;
+	min-width: 12px;
 }
 
 #custom-start {
