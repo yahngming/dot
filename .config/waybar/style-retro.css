@@ -67,16 +67,12 @@ tooltip {
 	margin: 3px 2px;
 }
 
-#custom-start, button, .modules-right {
+#custom-start, button, menu, .modules-right {
 	padding: 2px 3px;
 }
 
 button label, tooltip label {
 	padding: 0px;
-}
-
-menu {
-	padding: 3px;
 }
 
 #temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber, #clock {
@@ -148,16 +144,16 @@ menu label {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-100.svg");
 }
 
-#wireplumber.high {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-high.svg");
+#wireplumber.low {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-low.svg");
 }
 
 #wireplumber.medium {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-medium.svg");
 }
 
-#wireplumber.low {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-low.svg");
+#wireplumber.high {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-high.svg");
 }
 
 #wireplumber.muted {
