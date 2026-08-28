@@ -106,7 +106,31 @@ menu label {
 }
 
 #custom-start {
-	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
 	background-position: 3px center;
 	background-size: 18px;
+}
+
+#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
+	background-position: 1px center;
+	background-size: 12px;
+}
+
+#custom-start {
+	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
+}
+
+#wireplumber.muted {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-muted.svg");
+}
+
+#wireplumber.low {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-low.svg");
+}
+
+#wireplumber.medium {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-medium.svg");
+}
+
+#wireplumber.high {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-high.svg");
 }
