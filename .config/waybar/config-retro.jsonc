@@ -56,13 +56,13 @@
 	},
 	"battery": {
 		"bat": "BAT0",
-		"format": "{icon}",
-		"format-charging": "{icon}",
-		"format-icons": {
-			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-			"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-		},
+		"format": " ",
 		"states": {
+			"full": 100,
+			"good": 80,
+			"medium": 50,
+			"low": 30,
+			"warning": 20,
 			"critical": 10
 		}
 	},
@@ -74,12 +74,14 @@
 		"tooltip-format": "󰕒({bandwidthUpBits}) 󰇚({bandwidthDownBits})"
 	},
 	"wireplumber": {
-		"format": "{icon}",
-		"format-muted": "󰸈",
-		"format-icons": {
-			"default": ["󰕿", "󰖀", "󰕾"]
-		},
+		"format": " ",
 		"tooltip-format": "{node_name} {volume}%",
+		"state": {
+			"muted": 0,
+			"low": 10,
+			"medium": 50,
+			"high": 90,
+		},
 		"on-click": "volume toggle",
 		"on-scroll-down": "volume down",
 		"on-scroll-up": "volume up"
