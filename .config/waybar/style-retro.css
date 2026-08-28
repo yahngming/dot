@@ -75,7 +75,7 @@ button label, tooltip label {
 	padding: 0px;
 }
 
-#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber, #clock {
+#temperature, #tray, #battery, #idle_inhibitor, #network, #wireplumber, #clock {
 	padding: 0px 3px;
 }
 
@@ -93,7 +93,7 @@ menu label {
 	font-size: 12px;
 }
 
-#custom-start, #idle_inhibitor, #battery, #network, #wireplumber {
+#custom-start, #battery, #idle_inhibitor, #network, #wireplumber {
 	background-repeat: no-repeat;
 }
 
@@ -102,7 +102,7 @@ menu label {
 	background-size: 18px;
 }
 
-#idle_inhibitor, #battery, #network, #wireplumber {
+#battery, #idle_inhibitor, #network, #wireplumber {
 	background-position: 1px center;
 	background-size: 14px;
 	min-width: 10px;
@@ -110,14 +110,6 @@ menu label {
 
 #custom-start {
 	background-image: url("/usr/share/icons/Chicago95/places/scalable/start-here.svg");
-}
-
-#idle_inhibitor.activated {
-	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-reboot.svg");
-}
-
-#idle_inhibitor.deactivated {
-	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-lock-screen.svg");
 }
 
 #battery.0 {
@@ -206,6 +198,14 @@ menu label {
 
 #battery.charging.100 {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100-charging.svg");
+}
+
+#idle_inhibitor.activated {
+	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-reboot.svg");
+}
+
+#idle_inhibitor.deactivated {
+	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-lock-screen.svg");
 }
 
 #network.wifi.quality-low {
