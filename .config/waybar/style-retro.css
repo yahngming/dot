@@ -120,16 +120,92 @@ menu label {
 	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-lock-screen.svg");
 }
 
+#battery.0 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-0.svg");
+}
+
+#battery.10 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-10.svg");
+}
+
+#battery.20 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-20.svg");
+}
+
+#battery.30 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-30.svg");
+}
+
+#battery.40 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-40.svg");
+}
+
+#battery.50 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-50.svg");
+}
+
+#battery.60 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-60.svg");
+}
+
+#battery.70 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-70.svg");
+}
+
+#battery.80 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-80.svg");
+}
+
+#battery.90 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-90.svg");
+}
+
 #battery.100 {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100.svg");
 }
 
-#network.disconnected {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-offline.svg");
+#battery.charging.0 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-0-charging.svg");
 }
 
-#network.ethernet {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wired.svg");
+#battery.charging.10 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-10-charging.svg");
+}
+
+#battery.charging.20 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-20-charging.svg");
+}
+
+#battery.charging.30 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-30-charging.svg");
+}
+
+#battery.charging.40 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-40-charging.svg");
+}
+
+#battery.charging.50 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-50-charging.svg");
+}
+
+#battery.charging.60 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-60-charging.svg");
+}
+
+#battery.charging.70 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-70-charging.svg");
+}
+
+#battery.charging.80 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-80-charging.svg");
+}
+
+#battery.charging.90 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-90-charging.svg");
+}
+
+#battery.charging.100 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100-charging.svg");
 }
 
 #network.wifi.quality-low {
@@ -142,6 +218,14 @@ menu label {
 
 #network.wifi.quality-high {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-100.svg");
+}
+
+#network.ethernet {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wired.svg");
+}
+
+#network.disconnected {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-offline.svg");
 }
 
 #wireplumber.low {
