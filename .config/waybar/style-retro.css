@@ -119,18 +119,18 @@ menu label {
 	background-image: url("/usr/share/icons/Chicago95/categories/scalable/xfdesktop-menu.svg");
 }
 
-#wireplumber.muted {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-muted.svg");
-}
-
-#wireplumber.low {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-low.svg");
+#wireplumber.high {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-high.svg");
 }
 
 #wireplumber.medium {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-medium.svg");
 }
 
-#wireplumber.high {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-high.svg");
+#wireplumber.low {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-low.svg");
+}
+
+#wireplumber.muted {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/audio-volume-muted.svg");
 }
