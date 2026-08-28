@@ -79,7 +79,7 @@ menu {
 	padding: 3px;
 }
 
-#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
+#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber, #clock {
 	padding: 0px 3px;
 }
 
