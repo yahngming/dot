@@ -117,7 +117,7 @@ menu label {
 }
 
 #battery.100 {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100.png");
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100.svg");
 }
 
 #network.disconnected {
