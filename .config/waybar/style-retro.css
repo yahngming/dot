@@ -56,7 +56,6 @@ button.active, .modules-right {
 menu separator {
 	border-top: 1px solid #808080;
 	border-bottom: 1px solid #ffffff;
-	margin: 3px 2px;
 }
 
 tooltip {
@@ -64,8 +63,11 @@ tooltip {
 	border: 1px solid #000000;
 }
 
-#custom-start, button, .modules-right {
+#custom-start, button, menu separator, .modules-right {
 	margin: 3px 2px;
+}
+
+#custom-start, button, .modules-right {
 	padding: 2px 3px;
 }
 
@@ -77,12 +79,12 @@ menu {
 	padding: 3px;
 }
 
-#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber {
+#temperature, #tray, #idle_inhibitor, #battery, #network, #wireplumber, #clock {
 	padding: 0px 3px;
 }
 
 #clock {
-	padding: 0px 9px;
+	padding-left: 6px;
 }
 
 #taskbar button {
