@@ -67,10 +67,7 @@
 		}
 	},
 	"network": {
-		"format": "{icon}",
-		"format-disconnected": "󰤮",
-		"format-ethernet": "󰈀",
-		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"format": " ",
 		"tooltip-format": "󰕒({bandwidthUpBits}) 󰇚({bandwidthDownBits})"
 	},
 	"wireplumber": {
