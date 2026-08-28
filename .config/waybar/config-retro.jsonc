@@ -6,7 +6,7 @@
 	"modules-center": [],
 	"modules-right": ["temperature#cpu", "temperature#gpu", "tray", "idle_inhibitor", "battery", "network", "wireplumber", "clock"],
 	"custom/start": {
-		"format": " Start",
+		"format": "     Start",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "~/.config/waybar/startmenu.xml",
