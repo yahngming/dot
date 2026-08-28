@@ -77,7 +77,6 @@
 		"format": " ",
 		"tooltip-format": "{node_name} {volume}%",
 		"states": {
-			"muted": 0,
 			"low": 10,
 			"medium": 50,
 			"high": 90
