@@ -42,7 +42,7 @@ window {
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;
 	border-left: 1px solid #ffffff;
-	box-shadow: inset 1px 1px 0px #c0c0c0, inset -1px -1px 0px #808080;
+	box-shadow: inset 1px 1px 0px #e0e0e0, inset -1px -1px 0px #808080;
 }
 
 #custom-start:hover, button.active, .modules-right {
