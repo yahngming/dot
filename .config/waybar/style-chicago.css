@@ -12,6 +12,10 @@ window, #custom-start, button, menu, .modules-right {
 	background: #c0c0c0;
 }
 
+tooltip {
+	background: #ffffe1;
+}
+
 button.active {
 	background: #e0e0e0;
 }
@@ -42,7 +46,6 @@ window {
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;
 	border-left: 1px solid #ffffff;
-	box-shadow: inset 1px 1px 0px #e0e0e0, inset -1px -1px 0px #808080;
 }
 
 #custom-start:hover, button.active, .modules-right {
@@ -50,7 +53,6 @@ window {
 	border-right: 1px solid #ffffff;
 	border-bottom: 1px solid #ffffff;
 	border-left: 1px solid #000000;
-	box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #c0c0c0;
 }
 
 menu separator {
@@ -59,8 +61,15 @@ menu separator {
 }
 
 tooltip {
-	background: #ffffe1;
 	border: 1px solid #000000;
+}
+
+#custom-start, button, menu {
+	box-shadow: inset 1px 1px 0px #e0e0e0, inset -1px -1px 0px #808080;
+}
+
+#custom-start:hover, button.active {
+	box-shadow: inset 1px 1px 0px #808080, inset -1px -1px 0px #c0c0c0;
 }
 
 #custom-start, button, menu separator, .modules-right {
