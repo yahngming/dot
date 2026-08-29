@@ -64,6 +64,10 @@ tooltip {
 	border: 1px solid #000000;
 }
 
+window {
+	box-shadow: inset 1px 1px 0px #e0e0e0;
+}
+
 #custom-start, button, menu {
 	box-shadow: inset 1px 1px 0px #e0e0e0, inset -1px -1px 0px #808080;
 }
