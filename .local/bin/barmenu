@@ -20,3 +20,7 @@ if [ -n "$WAYLAND_DISPLAY" ] && [ -f ~/.config/waybar/config-$choice.jsonc ] && 
  	cp ~/.config/waybar/style-$choice.css ~/.config/waybar/style.css
  	bar
 fi
+
+if [ "$choice" == "chicago" ]; then
+	wallpaper color 008080
+fi
