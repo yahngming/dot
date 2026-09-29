@@ -210,7 +210,7 @@ menu label {
 }
 
 #battery.charging.100 {
-	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100-charging.svg");
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/battery-level-100-charged.svg");
 }
 
 #idle_inhibitor.activated {
