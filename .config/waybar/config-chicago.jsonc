@@ -69,7 +69,12 @@
 	},
 	"network": {
 		"format": " ",
-		"tooltip-format": "󰕒({bandwidthUpBits}) 󰇚({bandwidthDownBits})"
+		"tooltip-format": "󰕒({bandwidthUpBits}) 󰇚({bandwidthDownBits})",
+		"states": {
+			"0": 0,
+			"50": 50,
+			"100": 100
+		}
 	},
 	"wireplumber": {
 		"format": " ",
