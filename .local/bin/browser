@@ -1,5 +1,7 @@
 #!/bin/sh
 
+pgrep "$BROWSER" && exit
+
 case "$BROWSER" in
 	*chrome*     ) google-chrome-stable --new-tab "$@" ;;
 	*fox*|*wolf* ) $BROWSER --new-tab --profile "$HOME/.config/$BROWSER" "$@" ;;
