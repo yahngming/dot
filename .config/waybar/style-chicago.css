@@ -221,15 +221,15 @@ menu label {
 	background-image: url("/usr/share/icons/Chicago95/actions/scalable/system-lock-screen.svg");
 }
 
-#network.wifi.quality-low {
+#network.wifi.0 {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-0.svg");
 }
 
-#network.wifi.quality-medium {
+#network.wifi.50 {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-50.svg");
 }
 
-#network.wifi.quality-high {
+#network.wifi.100 {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-100.svg");
 }
 
