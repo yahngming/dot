@@ -50,7 +50,7 @@ case "$extension" in
 		image "${cachefile}.png"
 		;;
 	svg)
-		[ ! -f "${cachefile}.png" ] && convert "$file" "png:$cachefile"
+		[ ! -f "${cachefile}.png" ] && magick "$file" "png:$cachefile"
 		image "${cachefile}.png"
 		;;
 esac
