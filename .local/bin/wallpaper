@@ -52,7 +52,7 @@ random() {
 
 weather() {
 	wallpaper="$paperfolder/wallpaper"
-	convert "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +200+200 -composite "$wallpaper"
+	magick "$wallpaper" <( curl wttr.in/_tqp0.png ) -geometry +200+200 -composite "$wallpaper"
 	setup
 }
 
