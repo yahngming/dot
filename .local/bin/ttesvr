@@ -10,7 +10,7 @@ trap killme SIGINT SIGTERM SIGHUP SIGQUIT
 printf '\033]11;rgb:00/00/00\007'
 tty=$(tty 2>/dev/null)
 while true; do
-	ttfx --input-file "$(find ~/.config/ttesvr -type f | shuf -n 1)" --random-effect --exclude-effects matrix --frame-rate 0 --canvas-width 0 --canvas-height 0 --anchor-canvas c --anchor-text c --reuse-canvas --no-eol --no-restore-cursor &
+	ttfx --input-file "$(find ~/.config/ttesvr -type f | shuf -n 1)" --random-effect --frame-rate 120 --canvas-width 0 --canvas-height 0 --anchor-canvas c --anchor-text c --reuse-canvas --no-eol --no-restore-cursor &
 	while pgrep -t "${tty#/dev/}" -x ttfx >/dev/null; do
 		if read -n1 -t 1; then
 			killme
