@@ -225,8 +225,16 @@ menu label {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-0.svg");
 }
 
+#network.wifi.25 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-25.svg");
+}
+
 #network.wifi.50 {
 	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-50.svg");
+}
+
+#network.wifi.75 {
+	background-image: url("/usr/share/icons/Chicago95/status/scalable/network-wireless-75.svg");
 }
 
 #network.wifi.100 {
