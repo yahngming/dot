@@ -31,12 +31,12 @@
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="help">
-				<property name="label">󰡯 Help</property>
+				<property name="label">󱧊 Help</property>
 			</object>
 		</child>
 		<child>
 			<object class="GtkMenuItem" id="run">
-				<property name="label"> Run...</property>
+				<property name="label"> Run...</property>
 			</object>
 		</child>
 		<child>
