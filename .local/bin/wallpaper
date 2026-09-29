@@ -52,7 +52,7 @@ weather() {
 help() {
 	echo "Usage: wallpaper [ARG]"
 	echo "  color                     fill with color"
-	echo "  directory/filename        set wallpaper manually"
+	echo "  directory/filename        set manually"
 	echo "  picker                    choose from a picker"
 	echo "  random                    random picture"
 	echo "  weather                   overlay weather forecast"
