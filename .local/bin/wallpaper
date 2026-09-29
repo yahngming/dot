@@ -1,5 +1,9 @@
 #!/bin/sh
 
+color() {
+	awww clear $2
+}
+
 setup() {
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
 		exit
@@ -59,6 +63,6 @@ themefolder="$paperfolder/$(theme)"
 arg=${1:-help}
 
 case "$arg" in
-	picker|random|weather|help ) $arg ;;
-	*                          ) manual ;;
+	color|picker|random|weather|help ) $arg ;;
+	*                                ) manual ;;
 esac
