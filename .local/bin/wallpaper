@@ -1,6 +1,11 @@
 #!/bin/sh
 
 setup() {
+	if [ -n "$color" ]; then
+		matugen --mode $(theme) --source-color-index 0 color hex "$color"
+	elif [ -f "$wallpaper" ]; then
+		matugen --mode $(theme) --source-color-index 0 image "$wallpaper"
+	fi
 	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		exit
 	elif [ -n "$WAYLAND_DISPLAY" ]; then
@@ -22,11 +27,6 @@ setup() {
 		fi
 		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
 		pidof st | xargs kill -s USR1
-	fi
-	if [ -n "$color" ]; then
-		matugen --mode $(theme) --source-color-index 0 color hex "$color"
-	elif [ -f "$wallpaper" ]; then
-		matugen --mode $(theme) --source-color-index 0 image "$wallpaper"
 	fi
 }
 
