@@ -11,7 +11,7 @@ setup() {
 		elif [ -f "$wallpaper" ]; then
 			awww img "$wallpaper"
 			cp "$wallpaper" "$paperfolder/wallpaper"
-			magick "$paperfolder/wallpaper" -scale 2.5% -sample 4000% "$paperfolder/backdrop"
+			magick "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
 			swaybg -i "$paperfolder/backdrop" -m fill &
 		fi
 	elif [ -n "$DISPLAY" ]; then
