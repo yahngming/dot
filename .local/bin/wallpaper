@@ -1,31 +1,38 @@
 #!/bin/sh
 
-color() {
-	awww clear $1
-}
-
 setup() {
-	if [ "$QT_STYLE_OVERRIDE" == "Windows" ] || [ ! -f "$wallpaper" ]; then
+	if [ "$QT_STYLE_OVERRIDE" == "Windows" ]; then
 		exit
-	elif [ "$(theme)" == "dark" ]; then
-		matugen --mode dark --source-color-index 0 image "$wallpaper"
-	else
-		matugen --mode light --source-color-index 0 image "$wallpaper"
-	fi
-	cp "$wallpaper" "$paperfolder/wallpaper"
-	if [ -n "$WAYLAND_DISPLAY" ]; then
+	elif [ -n "$WAYLAND_DISPLAY" ]; then
 		pgrep awww-daemon || awww-daemon &
-		awww img "$wallpaper"
-		if [ "$XDG_CURRENT_DESKTOP" = "niri" ]; then
-			convert "$paperfolder/wallpaper" -scale 2.5% -resize 4000% "$paperfolder/backdrop"
-			pkill swaybg
+		if [ -n "$color" ]; then
+			awww clear "$color"
+			swaybg -c "$color" &
+		elif [ -f "$wallpaper" ]; then
+			awww img "$wallpaper"
+			cp "$wallpaper" "$paperfolder/wallpaper"
+			magick "$paperfolder/wallpaper" -scale 2.5% -sample 4000% "$paperfolder/backdrop"
 			swaybg -i "$paperfolder/backdrop" -m fill &
 		fi
 	elif [ -n "$DISPLAY" ]; then
-		xwallpaper --zoom "$wallpaper"
+		if [ -n "$color" ]; then
+			magick -size 1x1 xc:"$1" png:- | xwallpaper --zoom -
+		elif [ -f "$wallpaper" ]; then
+			xwallpaper --zoom "$wallpaper"
+		fi
 		xdo key_press -k 133; xdo key_press -k 71; sleep 0.2; xdo key_release -k 71; xdo key_release -k 133
 		pidof st | xargs kill -s USR1
 	fi
+	if [ -n "$color" ]; then
+		matugen --mode $(theme) --source-color-index 0 color hex "$color"
+	elif [ -f "$wallpaper" ]; then
+		matugen --mode $(theme) --source-color-index 0 image "$wallpaper"
+	fi
+}
+
+color() {
+	color="$1"
+	setup
 }
 
 manual() {
