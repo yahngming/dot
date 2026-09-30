@@ -44,7 +44,7 @@ arch() {
 	cd ~/.local/src && git clone https://github.com/yahngming/dwm && cd dwm && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/dmenu && cd dmenu && sudo make clean install
 	cd ~/.local/src && git clone https://github.com/yahngming/st && cd st && sudo make clean install
-	yay -S --noconfirm bibata-cursor-git chicago95-theme dragon-drop mangowm newsraft python-pywalfox r-quick-share sing-box #base
+	yay -S --noconfirm bibata-cursor-git chicago95-theme dragon-drop mangowm newsraft python-pywalfox r-quick-share sing-box wlrctl #base
 	yay -S --noconfirm asciiquarium-transparent-git lavat-git neo-matrix ttfx ttysvr # screensaver
 	sudo cp -r ~/.config/keyd/ /etc/
 	sudo cp -r ~/.config/systemd/ /etc/
