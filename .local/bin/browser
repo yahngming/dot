@@ -2,7 +2,7 @@
 
 if pgrep -x "$BROWSER" && [ -z "$*" ]; then
 	case "$DESKTOP" in
-		*dwm*|*xfce* ) xdotool search --onlyvisible --class "$BROWSER" windowactivate ;;
+		*dwm*|*xfce* ) xdo activate -N "$BROWSER" ;;
 		*hyprland*   ) hyprctl dispatch focuswindow "$BROWSER" ;;
 		*niri*       ) niri msg action focus-window --id "$(niri msg -j windows | jq -r --arg app "$BROWSER" '.[] | select(.app_id == $app) | .id' | head -n1)" ;;
 	esac
