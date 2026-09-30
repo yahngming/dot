@@ -18,8 +18,8 @@ clone() {
 		case "$mode" in
 			sync     ) rclone bisync "$remotepath" "$localpath" --progress --size-only ;;
 			resync   ) rclone bisync "$remotepath" "$localpath" --progress --size-only --resync;;
-			upload   ) rclone copy "$localpath" "$remotepath" --progress ;;
-			download ) rclone copy "$remotepath" "$localpath" --progress ;;
+			upload   ) rclone copy "$localpath" "$remotepath" --progress --ignore-times ;;
+			download ) rclone copy "$remotepath" "$localpath" --progress --ignore-times ;;
 		esac
 	done
 }
