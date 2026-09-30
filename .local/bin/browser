@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if pgrep -x "$BROWSER"; then
+if pgrep -x "$BROWSER" && [ -z "$*" ]; then
 	case "$DESKTOP" in
 		*dwm*|*xfce* ) xdotool search --onlyvisible --class "$BROWSER" windowactivate ;;
 		*hyprland*   ) hyprctl dispatch focuswindow "$BROWSER" ;;
