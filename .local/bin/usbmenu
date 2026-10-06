@@ -2,14 +2,10 @@
 
 pgrep udiskie || udiskie
 
-if [ -n "$(df | grep '/media/')" ] ; then
-	device=$(udiskie-info -a -o "{ui_label}" | menu -p "Select a drive:" | cut -d":" -f1)
-else
-	notify-send "No device found."
-fi
+device=$(udiskie-info -a -o "{ui_label}" | grep -E '^/dev/[^:]*[0-9]' | awk 'NR==FNR {m[$1]=1; next} {dev=$1; sub(/:$/, "", dev); print $0 (dev in m ? "[Mounted]" : "")}' /proc/mounts - | menu -p "(U)mount a drive:" | awk '{gsub(/:$/, "", $1); print $1}')
 
 if [ -n "$device" ] ; then
-	if mount | grep "$device" ; then
+	if findmnt -n "$device" ; then
 		udisksctl unmount -b "${device}"
 	else
 		udisksctl mount -b "${device}"
