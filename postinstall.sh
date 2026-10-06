@@ -9,7 +9,7 @@ arch() {
 	sudo pacman -S --noconfirm base-devel bat bc bluetui bluez-utils brightnessctl btop
 	sudo pacman -S --noconfirm chafa cmus cups
 	sudo pacman -S --noconfirm dante docker docker-compose
-	sudo pacman -S --noconfirm evtest eza
+	sudo pacman -S --noconfirm evtest exfatprogs eza
 	sudo pacman -S --noconfirm f3d fastfetch fcitx5-chinese-addons fcitx5-im fcitx5-mozc fd ffmpegthumbnailer firefox fontforge fortune-mod fuse fzf
 	sudo pacman -S --noconfirm gamescope git git-delta glow gvim
 	sudo pacman -S --noconfirm imagemagick impala
