@@ -52,8 +52,8 @@ arch() {
 	cp ~/.config/waybar/config-chicago.jsonc ~/.config/waybar/config.jsonc
 	cp ~/.config/waybar/style-chicago.css ~/.config/waybar/style.css
 	echo "exec niri-session" > ~/.config/desktop
-	echo "none" > ~/.config/screensaver
-	echo "auto" > ~/.config/theme
+	echo "ttesvr" > ~/.config/screensaver
+	echo "light" > ~/.config/theme
 	pywalfox install
 	reboot
 }
