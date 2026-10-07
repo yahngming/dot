@@ -2,7 +2,7 @@
 
 pgrep udiskie || udiskie
 
-device=$(udiskie-info -a -o "{ui_label}" | grep -E '^/dev/[^:]*[0-9]' | awk 'NR==FNR {m[$1]=1; next} {dev=$1; sub(/:$/, "", dev); print $0 (dev in m ? "[Mounted]" : "")}' /proc/mounts - | menu -p "(U)mount a drive:" | awk '{gsub(/:$/, "", $1); print $1}')
+device=$(udiskie-info -a -o "{ui_label}" | grep -E '^/dev/[^:]*[0-9]' | awk 'NR==FNR {m[$1]=1; next} {dev=$1; sub(/:$/, "", dev); print $0 (dev in m ? " [Mounted]" : "")}' /proc/mounts - | menu -p "(U)mount a drive:" | awk '{gsub(/:$/, "", $1); print $1}')
 
 if [ -n "$device" ] ; then
 	if findmnt -n "$device" ; then
