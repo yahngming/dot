@@ -21,7 +21,7 @@ setup() {
 		fi
 	elif [ -n "$DISPLAY" ]; then
 		if [ -n "$color" ]; then
-			magick -size 1x1 xc:"$1" png:- | xwallpaper --zoom -
+			magick -size 1x1 xc:"$color" png:- | xwallpaper --zoom -
 		elif [ -f "$wallpaper" ]; then
 			xwallpaper --zoom "$wallpaper"
 		fi
