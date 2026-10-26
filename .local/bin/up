@@ -7,12 +7,11 @@ sudo pacman -Sy --needed --noconfirm archlinux-keyring
 yay --noconfirm
 
 dot
+sudo cp -r ~/.config/keyd/ /etc/
+sudo cp -r ~/.config/systemd/ /etc/
 
 fc-cache -fv
 pkill -SIGUSR2 waybar
-
-sudo cp -r ~/.config/keyd/ /etc/
-sudo cp -r ~/.config/systemd/ /etc/
 sudo systemctl restart keyd
 
 cd ~/.config/firefox
