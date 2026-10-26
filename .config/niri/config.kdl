@@ -167,6 +167,7 @@ window-rule {
 window-rule {
 	match app-id="libreoffice"
 	match app-id="steam"
+	match title="auncher"
 	open-floating false
 }
 
