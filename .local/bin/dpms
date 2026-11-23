@@ -1,7 +1,7 @@
 #!/bin/sh
 
 case "$@" in
-	off  ) hyprctl dispatch dpms off; niri msg action power-off-monitors ;;
-	on   ) hyprctl dispatch dpms on; niri msg action power-on-monitors; brightnessctl -r; brightnessctl -rd *:kbd_backlight ;;
-	help ) echo "Usage: dpms [off|on|help]" ;;
+	off ) hyprctl dispatch dpms off; niri msg action power-off-monitors ;;
+	on  ) hyprctl dispatch dpms on; niri msg action power-on-monitors; brightnessctl -r; brightnessctl -rd *:kbd_backlight ;;
+	*   ) echo "Usage: dpms [off|on]" ;;
 esac
