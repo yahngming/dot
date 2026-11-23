@@ -2,6 +2,6 @@
 
 case "$@" in
 	off  ) sudo systemctl disable --now $proxy.service ;;
-	on   ) sudo systemctl enable --now $proxy.service ;;
+	on   ) niri msg action power-on-monitors; hyprctl dispatch dpms on; brightnessctl -r; brightnessctl -rd *:kbd_backlight ;;
 	help ) echo "Usage: dpms [off|on|help]" ;;
 esac
